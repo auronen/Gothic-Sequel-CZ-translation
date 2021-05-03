@@ -1,0 +1,67 @@
+
+func void b_usemobitems(var C_Npc user,var string mobname)
+{
+	PrintDebugNpc(PD_TA_DETAIL,"B_UseMobItems");
+	if(Hlp_StrCmp(mobname,SCEMENAME_LAB))
+	{
+		PrintDebugNpc(PD_TA_DETAIL,"B_UseMobItems...Lab");
+		ai_createiteminslot(self,"ZS_RIGHTHAND",4701);
+	};
+	if(Hlp_StrCmp(mobname,SCEMENAME_STONE))
+	{
+		PrintDebugNpc(PD_TA_DETAIL,"B_UseMobItems...StoneMason");
+		ai_createiteminslot(self,"ZS_RIGHTHAND",4699);
+	};
+	if(Hlp_StrCmp(mobname,SCEMENAME_FLETCHER))
+	{
+		PrintDebugNpc(PD_TA_DETAIL,"B_UseMobItems...Fletcher");
+		ai_createiteminslot(self,"ZS_RIGHTHAND",4678);
+		ai_createiteminslot(self,"ZS_LEFTHAND",4677);
+	};
+	if(Hlp_StrCmp(mobname,SCEMENAME_BOW))
+	{
+		PrintDebugNpc(PD_TA_DETAIL,"B_UseMobItems...Bow");
+		ai_createiteminslot(self,"ZS_RIGHTHAND",4679);
+	};
+	if(Hlp_StrCmp(mobname,SCEMENAME_RUNEMAKER))
+	{
+		PrintDebugNpc(PD_TA_DETAIL,"B_UseMobItems...Runemaker");
+		ai_createiteminslot(self,"ZS_RIGHTHAND",4692);
+	};
+	if(Hlp_StrCmp(mobname,SCEMENAME_RUNEMELTER))
+	{
+		PrintDebugNpc(PD_TA_DETAIL,"B_UseMobItems...Runemelter");
+		ai_createiteminslot(self,"ZS_RIGHTHAND",4701);
+	};
+	if(Hlp_StrCmp(mobname,SCEMENAME_REPAIR))
+	{
+		PrintDebugNpc(PD_TA_DETAIL,"B_UseMobItems...Repair");
+		ai_createiteminslot(self,"ZS_RIGHTHAND",4699);
+	};
+	if(Hlp_StrCmp(mobname,SCEMENAME_ORE))
+	{
+		PrintDebugNpc(PD_TA_DETAIL,"B_UseMobItems...Ore");
+		ai_createiteminslot(self,"ZS_RIGHTHAND",4413);
+	};
+	if(Hlp_StrCmp(mobname,SCEMENAME_SAW))
+	{
+		PrintDebugNpc(PD_TA_DETAIL,"B_UseMobItems...Saw");
+		ai_createiteminslot(self,"ZS_RIGHTHAND",4721);
+	};
+	if(Hlp_StrCmp(mobname,SCEMENAME_ANVIL))
+	{
+		PrintDebugNpc(PD_TA_DETAIL,"B_UseMobItems...Smith_Anvil");
+		ai_createiteminslot(self,"ZS_RIGHTHAND",4415);
+	};
+	if(Hlp_StrCmp(mobname,SCEMENAME_FIRE))
+	{
+		PrintDebugNpc(PD_TA_DETAIL,"B_UseMobItems...Smith_Fire");
+		ai_createiteminslot(self,"ZS_LEFTHAND",4473);
+	};
+	if(Hlp_StrCmp(mobname,SCEMENAME_CAULDRON))
+	{
+		PrintDebugNpc(PD_TA_DETAIL,"B_UseMobItems...Cook");
+		ai_createiteminslot(self,"ZS_LEFTHAND",4700);
+	};
+};
+
