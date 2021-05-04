@@ -3,10 +3,10 @@ Německé skripty byly dekompilovány z `GOTHIC.DAT`, pomocí [GothicSourcer 3.1
 
 
 ##Kde co je
-Protože nemáme k dispozici oficiální skripty, ale pouze ty deompilované, je v nich trošku čurbes. Dialogy jsou v adresáři `content\Story\MISSIONS` a všechno ostatní, jako jsou hlášky v aréně, předměty a ostatní věci k přeložení jsou v adresáři `content\_misk_`.
+Protože nemáme k dispozici oficiální skripty, ale pouze ty dekompilované, je v nich trošku čurbes. Dialogy se nachází v adresáři `content\Story\MISSIONS` a všechno ostatní, jako jsou hlášky v aréně, předměty a ostatní věci k přeložení se nachází v adresáři `content\_misk_`.
 
 ##Překlad 
-Protože překládáme z originálu, tedy z němčiny, doporučil bych zachovat ve skritpech původní německé texty v komentářích. Úkázka:
+Protože překládáme z originálu, tedy z němčiny :de:, doporučil bych zachovat ve skritpech původní německé texty pro kontrolu. A to tak, že se původní řádek zkopíruje a zakomentuje - na začátek řádku se vloží `//`. Ukázka:
 ```c++
 func void pc_psionic_halloagain_info()
 {
