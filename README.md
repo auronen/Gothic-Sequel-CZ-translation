@@ -45,9 +45,10 @@ instance PC_PSIONIC_FORTRESS(C_Info)
 
 ## Snímky ze hry
 ### Menu
-Původní menu v německém jazyce
+* _Původní menu v německém jazyce_
 ![původní menu](https://github.com/auronen/Gothic-Sequel-CZ-translation/blob/main/screenshots/Sequel_menu_de_closeup.png?raw=true)
-Přeložené menu (dočasně používáme font s diakritikou z G1)
+
+* _Přeložené menu (dočasně používáme font s diakritikou z G1)_
 ![přeložené menu](https://github.com/auronen/Gothic-Sequel-CZ-translation/blob/main/screenshots/Sequel_menu_cz_closeup.png?raw=true)
 
 ## Předpokládaný čas vydání
