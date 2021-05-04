@@ -39,8 +39,8 @@ instance MENUITEM_MAIN_NEWGAME(C_MENU_ITEM_DEF)
 instance MENUITEM_MAIN_SAVEGAME_LOAD(C_MENU_ITEM_DEF)
 {
 	backpic = MENU_ITEM_BACK_PIC;
-	text[0] = "Spiel laden";
-	text[1] = "Einen gespeicherten Spielstand laden.";
+	text[0] = "Nahrát hru";
+	text[1] = "Nahrát uloženou hru";
 	posx = 0;
 	posy = MENU_MAIN_Y + (MENU_MAIN_DY * 1);
 	dimx = 8100;
