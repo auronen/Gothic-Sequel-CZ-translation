@@ -9,7 +9,8 @@ func void B_Kapitelwechsel(var int new_chapter)
 	if(new_chapter == 1)
 	{
 		PrintDebugNpc(PD_MISSION,"---=== DAS ERSTE KAPITEL ===---");
-		IntroduceChapter("Kapitel 1","Die Rückkehr","chapter1.tga","levelup.wav",5000);
+		//IntroduceChapter("Kapitel 1","Die Rückkehr","chapter1.tga","levelup.wav",5000);
+		IntroduceChapter("Kapitola 1","Návrat","chapter1.tga","levelup.wav",5000);
 		SUBCHAPTER = CH1_START;
 		b_give_agon_chapteritems(new_chapter);
 		b_give_gerion_chapteritems(new_chapter);
@@ -21,7 +22,7 @@ func void B_Kapitelwechsel(var int new_chapter)
 	if(new_chapter == 2)
 	{
 		PrintDebugNpc(PD_MISSION,"---=== DAS ZWEITE KAPITEL ===---");
-		IntroduceChapter("Kapitel 2","Der Aufbruch","chapter2.tga","levelup.wav",5000);
+		IntroduceChapter("Kapitola 2","Odchod","chapter2.tga","levelup.wav",5000);
 		SUBCHAPTER = CH2_START;
 		b_give_agon_chapteritems(new_chapter);
 		b_give_gerion_chapteritems(new_chapter);
