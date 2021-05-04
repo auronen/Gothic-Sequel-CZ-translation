@@ -41,6 +41,14 @@ instance PC_PSIONIC_FORTRESS(C_Info)
 - [ ] Dialogy - `content\Story\MISSIONS`
 - [ ] Předměty - `content\_misk_\*`
 - [ ] Ostatní - soubor `content\Story\Text.d` a `content\_misk_\*` 
+- [ ] Fonty
+
+## Snímky ze hry
+### Menu
+Původní menu v německém jazyce
+![původní menu](https://github.com/auronen/Gothic-Sequel-CZ-translation/blob/main/screenshots/Sequel_menu_de_closeup.png?raw=true)
+Přeložené menu (dočasně používáme font s diakritikou z G1)
+![přeložené menu](https://github.com/auronen/Gothic-Sequel-CZ-translation/blob/main/screenshots/Sequel_menu_cz_closeup.png?raw=true)
 
 ## Předpokládaný čas vydání
 Až to bude, tak to bude™
