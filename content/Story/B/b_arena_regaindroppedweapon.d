@@ -1,12 +1,26 @@
-
-func void b_arena_regaindroppedweapon(var int npcInstance)
+//////////////////////////////////////////////////////////////////////////
+//	B_Arena_RegainDroppedWeapon
+//	======================
+//	Sollte der Gladiator seine persönliche Waffe NICHT haben, dann
+//	sucht er sie im Umkreis und (falls gefunden) hebt sie auf.
+//////////////////////////////////////////////////////////////////////////
+func void B_Arena_RegainDroppedWeapon (var int npcInstance)
 {
-	var C_Npc npc;
-	PrintDebugNpc(PD_TA_FRAME,"B_Arena_RegainDroppedWeapon");
+	PrintDebugNpc			(PD_TA_FRAME,	"B_Arena_RegainDroppedWeapon");
+
+	var C_NPC npc;
 	npc = Hlp_GetNpc(npcInstance);
-	if(((npcInstance == min_306_grim) && !Npc_HasItems(npc,itmw_grim_pickaxe)) || ((npcInstance == wrk_216_goliath) && !Npc_HasItems(npc,itmw_goliath_sledgehammer)) || ((npcInstance == mil_121_brutus) && !Npc_HasItems(npc,itmw_brutus_longsword)) || ((npcInstance == dmh_1302_malgar) && !Npc_HasItems(npc,itmw_malgar_broadsword)) || ((npcInstance == amz_900_thora) && !Npc_HasItems(npc,itmw_thora_battlestaff)))
+
+	//---- Fallengelassene Waffe aufheben ----
+	if	( (npcInstance == MIN_306_Grim		)	&&	!Npc_HasItems(npc, ItMw_Grim_Pickaxe		)	)
+	||	( (npcInstance == WRK_216_Goliath	)	&&	!Npc_HasItems(npc, ItMw_Goliath_Sledgehammer) 	)
+	||	( (npcInstance == MIL_121_Brutus	)	&&	!Npc_HasItems(npc, ItMw_Brutus_Longsword	)  	)
+	||	( (npcInstance == DMH_1302_Malgar	)	&&	!Npc_HasItems(npc, ItMw_Malgar_Broadsword	)  	)
+	||	( (npcInstance == AMZ_900_Thora		)	&&	!Npc_HasItems(npc, ItMw_Thora_Battlestaff	)  	)
 	{
 		B_RegainDroppedWeapon(npc);
 	};
 };
+
+
 

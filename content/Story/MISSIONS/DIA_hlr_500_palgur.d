@@ -1,105 +1,111 @@
-
-instance HLR_500_PALGUR_EXIT(C_Info)
+///////////////////////////////////////////////////////////////////////
+//	Info EXIT
+///////////////////////////////////////////////////////////////////////
+INSTANCE HLR_500_Palgur_EXIT   (C_INFO)
 {
-	npc = hlr_500_palgur;
-	nr = 999;
-	condition = hlr_500_palgur_exit_condition;
-	information = hlr_500_palgur_exit_info;
-	permanent = TRUE;
+	npc         = HLR_500_Palgur;
+	nr          = 999;
+	condition   = HLR_500_Palgur_EXIT_Condition;
+	information = HLR_500_Palgur_EXIT_Info;
+	permanent   = TRUE;
 	description = DIALOG_ENDE;
 };
 
-
-func int hlr_500_palgur_exit_condition()
+FUNC INT HLR_500_Palgur_EXIT_Condition()
 {
 	return TRUE;
 };
 
-func void hlr_500_palgur_exit_info()
+FUNC VOID HLR_500_Palgur_EXIT_Info()
 {
-	AI_StopProcessInfos(self);
+	AI_StopProcessInfos (self);
 };
 
-
-instance HLR_500_PALGUR_POS(C_Info)
+///////////////////////////////////////////////////////////////////////
+//	Info _POS
+///////////////////////////////////////////////////////////////////////
+instance HLR_500_Palgur_POS		(C_INFO)
 {
-	npc = hlr_500_palgur;
-	nr = 1;
-	condition = hlr_500_palgur_pos_condition;
-	information = hlr_500_palgur_pos_info;
-	important = FALSE;
-	permanent = FALSE;
-	description = "Was für eine Krankheit haben diese Leute?";
+	npc		 = 	HLR_500_Palgur;
+	nr		 = 	1;
+	condition	 = 	HLR_500_Palgur_POS_Condition;
+	information	 = 	HLR_500_Palgur_POS_Info;
+	important	 = 	FALSE;
+	permanent	 = 	FALSE;
+
+	description	 = 	"Was für eine Krankheit haben diese Leute?";
 };
 
-
-func int hlr_500_palgur_pos_condition()
+func int HLR_500_Palgur_POS_Condition ()
 {
-	if(!Npc_KnowsInfo(hero,hlr_501_talamon_hasrecipe))
+	if	!Npc_KnowsInfo (hero,HLR_501_Talamon_HASRECIPE)
 	{
 		return TRUE;
 	};
 };
-
-func int hlr_500_palgur_pos_info()
+func int HLR_500_Palgur_POS_Info ()
 {
-	AI_Output(hero,self,"HLR_500__POS_15_01");	//Was für eine Krankheit haben diese Gestalten?
-	AI_Output(self,hero,"HLR_500__POS_08_02");	//Die Kranken verlieren ihren Verstand und ihr Körper geht jämmerlich zugrunde.
-	AI_Output(self,hero,"HLR_500__POS_08_03");	//Wir haben bisher noch keine Aufzeichnungen darüber gefunden.
+	AI_Output			(hero, self, "HLR_500__POS_15_01"); //Was für eine Krankheit haben diese Gestalten?
+	AI_Output			(self, hero, "HLR_500__POS_08_02"); //Die Kranken verlieren ihren Verstand und ihr Körper geht jämmerlich zugrunde.
+	AI_Output			(self, hero, "HLR_500__POS_08_03"); //Wir haben bisher noch keine Aufzeichnungen darüber gefunden.
+
+};
+///////////////////////////////////////////////////////////////////////
+//	Info JOB
+///////////////////////////////////////////////////////////////////////
+instance HLR_500_Palgur_JOB		(C_INFO)
+{
+	npc		 = 	HLR_500_Palgur;
+	nr		 = 	1;
+	condition	 = 	HLR_500_Palgur_JOB_Condition;
+	information	 = 	HLR_500_Palgur_JOB_Info;
+	important	 = 	FALSE;
+	permanent	 = 	TRUE;
+
+	description	 = 	"Was ist deine Aufgabe hier?";
 };
 
-
-instance HLR_500_PALGUR_JOB(C_Info)
-{
-	npc = hlr_500_palgur;
-	nr = 1;
-	condition = hlr_500_palgur_job_condition;
-	information = hlr_500_palgur_job_info;
-	important = FALSE;
-	permanent = TRUE;
-	description = "Was ist deine Aufgabe hier?";
-};
-
-
-func int hlr_500_palgur_job_condition()
+func int HLR_500_Palgur_JOB_Condition ()
 {
 	return TRUE;
 };
 
-func int hlr_500_palgur_job_info()
+func int HLR_500_Palgur_JOB_Info ()
 {
-	AI_Output(hero,self,"HLR_500_JOB_15_01");	//Was ist deine Aufgabe hier?
-	AI_Output(self,hero,"HLR_500_JOB_08_02");	//Ich erforsche verschiedene Rezepturen, um ein Heilmittel zu finden
-	AI_Output(self,hero,"HLR_500_JOB_08_03");	//Wir haben herausgefunden, daß die Kranken durch SUMPFKRAUT beruhigt werden.
-	AI_Output(hero,self,"HLR_500_JOB_15_04");	//Das ist alles?
-	AI_Output(self,hero,"HLR_500_JOB_08_05");	//... alles? Wir verzeichnen das als den ersten großen Fortschritt.
+	AI_Output			(hero, self, "HLR_500_JOB_15_01"); //Was ist deine Aufgabe hier?
+	AI_Output			(self, hero, "HLR_500_JOB_08_02"); //Ich erforsche verschiedene Rezepturen, um ein Heilmittel zu finden
+	AI_Output			(self, hero, "HLR_500_JOB_08_03"); //Wir haben herausgefunden, daß die Kranken durch SUMPFKRAUT beruhigt werden.
+	AI_Output			(hero, self, "HLR_500_JOB_15_04"); //Das ist alles?
+	AI_Output			(self, hero, "HLR_500_JOB_08_05"); //... alles? Wir verzeichnen das als den ersten großen Fortschritt.
+};
+///////////////////////////////////////////////////////////////////////
+//	Info _POS
+///////////////////////////////////////////////////////////////////////
+instance HLR_500_Palgur_RECIPE		(C_INFO)
+{
+	npc		 	 = 	HLR_500_Palgur;
+	nr		 	 = 	1;
+	condition	 = 	HLR_500_Palgur_RECIPE_Condition;
+	information	 = 	HLR_500_Palgur_RECIPE_Info;
+	important	 = 	FALSE;
+	permanent	 = 	FALSE;
+
+	description	 = 	"Wie geht die Arbeit voran?";
 };
 
-
-instance HLR_500_PALGUR_RECIPE(C_Info)
+func int HLR_500_Palgur_RECIPE_Condition ()
 {
-	npc = hlr_500_palgur;
-	nr = 1;
-	condition = hlr_500_palgur_recipe_condition;
-	information = hlr_500_palgur_recipe_info;
-	important = FALSE;
-	permanent = FALSE;
-	description = "Wie geht die Arbeit voran?";
-};
-
-
-func int hlr_500_palgur_recipe_condition()
-{
-	if(Npc_KnowsInfo(hero,hlr_501_talamon_hasrecipe))
+	if	Npc_KnowsInfo (hero,HLR_501_Talamon_HASRECIPE)
 	{
 		return TRUE;
 	};
 };
-
-func int hlr_500_palgur_recipe_info()
+func int HLR_500_Palgur_RECIPE_Info ()
 {
-	AI_Output(hero,self,"HLR_500_RECIPE_15_01");	//Wie geht die Arbeit voran?
-	AI_Output(self,hero,"HLR_500_RECIPE_08_02");	//Dank der Rezeptur, die du uns besorgt hast, können wir unsere Forschungen gezielter durchführen.
-	AI_Output(self,hero,"HLR_500_RECIPE_08_03");	//Trotzdem ist es noch ein langer Weg, bis wir ein Heilmittel gefunden haben.
+	AI_Output			(hero, self, "HLR_500_RECIPE_15_01"); //Wie geht die Arbeit voran?
+	AI_Output			(self, hero, "HLR_500_RECIPE_08_02"); //Dank der Rezeptur, die du uns besorgt hast, können wir unsere Forschungen gezielter durchführen.
+	AI_Output			(self, hero, "HLR_500_RECIPE_08_03"); //Trotzdem ist es noch ein langer Weg, bis wir ein Heilmittel gefunden haben.
+
 };
+
 

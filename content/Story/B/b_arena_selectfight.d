@@ -1,132 +1,162 @@
-
-func void b_arena_selectfight()
+//////////////////////////////////////////////////////////////////////////
+//	B_Arena_SelectFight
+//	===================
+//	Wählt die Gladiatoren für den heutigen Arenakampf aus und schickt
+//	sie in die Arena
+//	Schickt die Zuschauer in die Arena.
+//////////////////////////////////////////////////////////////////////////
+func void B_Arena_SelectFight()
 {
-	var C_Npc npc1;
-	var C_Npc npc2;
+	PrintDebugNpc		(PD_TA_FRAME,	"B_Arena_SelectFight");
+
+	var	C_NPC	npc1;
+	var C_NPC	npc2;
+
+	//-------- heute schon selected? --------
+	if	Arena_FightSelected
+	{
+		PrintDebugNpc	(PD_TA_FRAME,	"...für heute wurde bereits ein Kampf angesetzt!");
+		return;
+	};
+
 	var int today;
-	var int thisday;
-	var int moduloday;
-	PrintDebugNpc(PD_TA_FRAME,"B_Arena_SelectFight");
-	if(ARENA_FIGHTSELECTED)
+	today = B_GetDay();
+	if	(Arena_SelectDay == today)
 	{
-		PrintDebugNpc(PD_TA_FRAME,"...für heute wurde bereits ein Kampf angesetzt!");
+		PrintDebugNpc	(PD_TA_FRAME,	"...heute gab es bereits einen Kampf!");
 		return;
 	};
-	today = b_getday();
-	if(ARENA_SELECTDAY == today)
+
+	//-------- Spielerkampf vorbereiten --------
+	if	Arena_PlayerFight
 	{
-		PrintDebugNpc(PD_TA_FRAME,"...heute gab es bereits einen Kampf!");
-		return;
-	};
-	if(ARENA_PLAYERFIGHT)
-	{
-		if(GRIM_CHALLENGED)
+		if		Grim_Challenged
 		{
-			B_ExchangeRoutine(min_306_grim,"PreChamber");
-			npc1 = Hlp_GetNpc(min_306_grim);
-			npc1.aivar[39] = 0;
+			B_ExchangeRoutine	(MIN_306_Grim,		"PreChamber");
+			npc1 = Hlp_GetNpc	(MIN_306_Grim);
+			npc1.aivar[AIV_ARENA_POINTS] = 0;
 		};
-		if(GOLIATH_CHALLENGED)
+		if		Goliath_Challenged
 		{
-			B_ExchangeRoutine(wrk_216_goliath,"PreChamber");
-			npc1 = Hlp_GetNpc(wrk_216_goliath);
-			npc1.aivar[39] = 0;
+			B_ExchangeRoutine	(WRK_216_Goliath,	"PreChamber");
+			npc1 = Hlp_GetNpc	(WRK_216_Goliath);
+			npc1.aivar[AIV_ARENA_POINTS] = 0;
 		};
-		if(BRUTUS_CHALLENGED)
+
+		if		Brutus_Challenged
 		{
-			B_ExchangeRoutine(mil_121_brutus,"PreChamber");
-			npc1 = Hlp_GetNpc(mil_121_brutus);
-			npc1.aivar[39] = 0;
+			B_ExchangeRoutine	(MIL_121_Brutus,	"PreChamber");
+			npc1 = Hlp_GetNpc	(MIL_121_Brutus);
+			npc1.aivar[AIV_ARENA_POINTS] = 0;
 		};
-		if(MALGAR_CHALLENGED)
+
+		if		Malgar_Challenged
 		{
-			B_ExchangeRoutine(dmh_1302_malgar,"PreChamber");
-			npc1 = Hlp_GetNpc(dmh_1302_malgar);
-			npc1.aivar[39] = 0;
+			B_ExchangeRoutine	(DMH_1302_Malgar,	"PreChamber");
+			npc1 = Hlp_GetNpc	(DMH_1302_Malgar);
+			npc1.aivar[AIV_ARENA_POINTS] = 0;
 		};
-		if(THORA_CHALLENGED)
+
+		if		Thora_Challenged
 		{
-			B_ExchangeRoutine(amz_900_thora,"PreChamber");
-			npc1 = Hlp_GetNpc(amz_900_thora);
-			npc1.aivar[39] = 0;
+			B_ExchangeRoutine	(AMZ_900_Thora,		"PreChamber");
+			npc1 = Hlp_GetNpc	(AMZ_900_Thora);
+			npc1.aivar[AIV_ARENA_POINTS] = 0;
 		};
-		hero.aivar[39] = 0;
+
+		hero.aivar[AIV_ARENA_POINTS] = 0;
 	}
+
+	//-------- NSC-Kampf vorbereiten --------
 	else
 	{
-		thisday = Wld_GetDay();
-		moduloday = thisday % 4;
-		PrintDebugInt(PD_TA_DETAIL,"thisDay = ",thisday);
-		PrintDebugInt(PD_TA_DETAIL,"moduloDay = ",moduloday);
-		if(moduloday == 0)
+		// Arenakämfper in die Arena schicken
+		var int thisDay;
+		var int moduloDay;
+		thisDay = Wld_GetDay();
+		moduloDay = thisDay % 4;
+		PrintDebugInt	(PD_TA_DETAIL, "thisDay = ", 	thisDay);
+		PrintDebugInt	(PD_TA_DETAIL, "moduloDay = ",	moduloDay);
+
+		if		(moduloDay == 0)					// jeder 0te Tag?
 		{
-			npc1 = Hlp_GetNpc(min_306_grim);
-			npc2 = Hlp_GetNpc(wrk_216_goliath);
-			if(Npc_IsDead(npc1) || Npc_IsDead(npc2) || GOTMAR_GOLIATHRETURNED)
-			{
-				return;
-			};
-			B_ExchangeRoutine(min_306_grim,"PreChamber");
-			npc1.aivar[39] = 0;
-			B_ExchangeRoutine(wrk_216_goliath,"PreChamber");
-			npc2.aivar[39] = 0;
-			ARENA_NPCCOMBO = AC_GRIM_GOLIATH;
+			npc1 = Hlp_GetNpc(MIN_306_Grim);
+			npc2 = Hlp_GetNpc(WRK_216_Goliath);
+			if	(Npc_IsDead(npc1) || Npc_IsDead(npc2) || Gotmar_GoliathReturned)	{return;};
+
+			B_ExchangeRoutine	(MIN_306_Grim,		"PreChamber");
+			npc1.aivar[AIV_ARENA_POINTS] = 0;
+
+			B_ExchangeRoutine	(WRK_216_Goliath,	"PreChamber");
+			npc2.aivar[AIV_ARENA_POINTS] = 0;
+
+			Arena_NpcCombo 		= AC_GRIM_GOLIATH;
 		}
-		else if(moduloday == 1)
+		else if	(moduloDay == 1)					// jeder 1te Tag?
 		{
-			npc1 = Hlp_GetNpc(wrk_216_goliath);
-			npc2 = Hlp_GetNpc(mil_121_brutus);
-			if(Npc_IsDead(npc1) || Npc_IsDead(npc2) || GOTMAR_GOLIATHRETURNED)
-			{
-				return;
-			};
-			B_ExchangeRoutine(wrk_216_goliath,"PreChamber");
-			npc1.aivar[39] = 0;
-			B_ExchangeRoutine(mil_121_brutus,"PreChamber");
-			npc2.aivar[39] = 0;
-			ARENA_NPCCOMBO = AC_GOLIATH_BRUTUS;
+			npc1 = Hlp_GetNpc(WRK_216_Goliath);
+			npc2 = Hlp_GetNpc(MIL_121_Brutus);
+			if	(Npc_IsDead(npc1) || Npc_IsDead(npc2) || Gotmar_GoliathReturned)	{return;};
+
+			B_ExchangeRoutine	(WRK_216_Goliath,	"PreChamber");
+			npc1.aivar[AIV_ARENA_POINTS] = 0;
+
+			B_ExchangeRoutine	(MIL_121_Brutus,	"PreChamber");
+			npc2.aivar[AIV_ARENA_POINTS] = 0;
+
+			Arena_NpcCombo 		= AC_GOLIATH_BRUTUS;
 		}
-		else if(moduloday == 2)
+		else if	(moduloDay == 2)					// jeder 2te Tag?
 		{
-			npc1 = Hlp_GetNpc(mil_121_brutus);
-			npc2 = Hlp_GetNpc(dmh_1302_malgar);
-			if(Npc_IsDead(npc1) || Npc_IsDead(npc2))
-			{
-				return;
-			};
-			B_ExchangeRoutine(mil_121_brutus,"PreChamber");
-			npc1.aivar[39] = 0;
-			B_ExchangeRoutine(dmh_1302_malgar,"PreChamber");
-			npc2.aivar[39] = 0;
-			ARENA_NPCCOMBO = AC_BRUTUS_MALGAR;
+			npc1 = Hlp_GetNpc(MIL_121_Brutus);
+			npc2 = Hlp_GetNpc(DMH_1302_Malgar);
+			if	(Npc_IsDead(npc1) || Npc_IsDead(npc2))	{return;};
+
+			B_ExchangeRoutine	(MIL_121_Brutus,	"PreChamber");
+			npc1.aivar[AIV_ARENA_POINTS] = 0;
+
+			B_ExchangeRoutine	(DMH_1302_Malgar,	"PreChamber");
+			npc2.aivar[AIV_ARENA_POINTS] = 0;
+
+			Arena_NpcCombo 		= AC_BRUTUS_MALGAR;
 		}
-		else if(moduloday == 3)
+		else if	(moduloDay == 3)					// jeder 3te Tag?
 		{
-			npc1 = Hlp_GetNpc(dmh_1302_malgar);
-			npc2 = Hlp_GetNpc(amz_900_thora);
-			if(Npc_IsDead(npc1) || Npc_IsDead(npc2) || (SUBCHAPTER < CH2_THORA_CONVINCED))
-			{
-				return;
-			};
-			B_ExchangeRoutine(dmh_1302_malgar,"PreChamber");
-			npc1.aivar[39] = 0;
-			B_ExchangeRoutine(amz_900_thora,"PreChamber");
-			npc2.aivar[39] = 0;
-			ARENA_NPCCOMBO = AC_MALGAR_THORA;
+			npc1 = Hlp_GetNpc(DMH_1302_Malgar);
+			npc2 = Hlp_GetNpc(AMZ_900_Thora);
+			if	(Npc_IsDead(npc1) || Npc_IsDead(npc2) || (subChapter < CH2_THORA_CONVINCED)) {return;};
+
+			B_ExchangeRoutine	(DMH_1302_Malgar,	"PreChamber");
+			npc1.aivar[AIV_ARENA_POINTS] = 0;
+
+			B_ExchangeRoutine	(AMZ_900_Thora,		"PreChamber");
+			npc2.aivar[AIV_ARENA_POINTS] = 0;
+
+			Arena_NpcCombo 		= AC_MALGAR_THORA;
 		};
-		ARENA_NPCFIGHT = TRUE;
+
+		Arena_NpcFight = TRUE;
 	};
-	B_ExchangeRoutine(thf_405_thief,"ArenaSpectator");
-	B_ExchangeRoutine(thf_407_thief,"ArenaSpectator");
-	B_ExchangeRoutine(thf_408_thief,"ArenaSpectator");
-	B_ExchangeRoutine(thf_409_pyro,"ArenaSpectator");
-	B_ExchangeRoutine(wrk_206_nicolos,"ArenaSpectator");
-	B_ExchangeRoutine(thf_402_karras,"ArenaSpectator");
-	B_ExchangeRoutine(thf_406_thief,"ArenaSpectator");
-	B_ExchangeRoutine(beg_705_beggar,"ArenaSpectator");
-	PrintDebugNpc(PD_TA_CHECK,"...Gladiatoren und Zuschauer in die Arena geschickt!");
-	ARENA_PLAYERHASCOME = FALSE;
-	ARENA_FIGHTSELECTED = TRUE;
-	ARENA_SELECTDAY = b_getday();
+
+	//-------- Zuschauer in die Arena schicken --------
+	// VORSICHT: nur bei NSCs, die auch "Start" als Standard-TA haben (siehe B_Arena_UnselectFight.d) !!!
+	B_ExchangeRoutine	(THF_405_Thief	,	"ArenaSpectator");
+	B_ExchangeRoutine	(THF_407_Thief	,	"ArenaSpectator");
+	B_ExchangeRoutine	(THF_408_Thief	,	"ArenaSpectator");
+	B_ExchangeRoutine	(THF_409_Pyro	,	"ArenaSpectator");
+
+	B_ExchangeRoutine	(WRK_206_Nicolos,	"ArenaSpectator");
+
+	B_ExchangeRoutine	(THF_402_Karras,	"ArenaSpectator");
+	B_ExchangeRoutine	(THF_406_Thief,		"ArenaSpectator");
+	B_ExchangeRoutine	(BEG_705_Beggar,	"ArenaSpectator");
+
+	PrintDebugNpc	(PD_TA_CHECK,	"...Gladiatoren und Zuschauer in die Arena geschickt!");
+
+	//-------- Flags setzen --------
+	Arena_PlayerHasCome = FALSE;
+
+	Arena_FightSelected = TRUE;
+	Arena_SelectDay		= B_GetDay();
 };
 

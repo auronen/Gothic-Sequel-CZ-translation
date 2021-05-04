@@ -1,138 +1,80 @@
-
-func void B_GiveDeathInv()
+func void B_GiveDeathInv ()
 {
-	if(self.aivar[24])
+	//-------- Abfragen, ob die Trophy schon mal verteilt wurde --------
+	if	(self.aivar[AIV_MM_DEATHINVGIVEN])
 	{
 		return;
 	};
-	if(Knows_GetTeeth == TRUE)
+
+	//-------- Trophy ins Inventory packen --------
+	if (Knows_GetTeeth == TRUE)
 	{
-		if(self.aivar[22] == ID_WOLF)
-		{
-			CreateInvItems(self,itat_teeth,2);
-		};
-		if(self.aivar[22] == ID_BLACKWOLF)
-		{
-			CreateInvItems(self,itat_teeth,2);
-		};
-		if(self.aivar[22] == ID_SNAPPER)
-		{
-			CreateInvItems(self,itat_teeth,4);
-		};
-		if(self.aivar[22] == ID_ORCBITER)
-		{
-			CreateInvItems(self,itat_teeth,2);
-		};
-		if(self.aivar[22] == ID_SHADOWBEAST)
-		{
-			CreateInvItems(self,itat_teeth,4);
-		};
-		if(self.aivar[22] == ID_BLOODHOUND)
-		{
-			CreateInvItems(self,itat_teeth,4);
-		};
+		if (self.aivar[AIV_MM_REAL_ID]==ID_WOLF)				{	CreateInvItems(self,ItAt_Teeth,2);	};
+		if (self.aivar[AIV_MM_REAL_ID]==ID_BLACKWOLF)  			{	CreateInvItems(self,ItAt_Teeth,2);	};
+		if (self.aivar[AIV_MM_REAL_ID]==ID_SNAPPER)     		{	CreateInvItems(self,ItAt_Teeth,4);	};
+		if (self.aivar[AIV_MM_REAL_ID]==ID_ORCBITER)   			{	CreateInvItems(self,ItAt_Teeth,2);	};
+		if (self.aivar[AIV_MM_REAL_ID]==ID_SHADOWBEAST)			{	CreateInvItems(self,ItAt_Teeth,4);	};
+		if (self.aivar[AIV_MM_REAL_ID]==ID_BLOODHOUND)			{	CreateInvItems(self,ItAt_Teeth,4);	};
 	};
-	if(Knows_GetClaws == TRUE)
+
+	if (Knows_GetClaws == TRUE)
 	{
-		if(self.aivar[22] == ID_WARAN)
-		{
-			CreateInvItems(self,itat_claws,4);
-		};
-		if(self.aivar[22] == ID_FIREWARAN)
-		{
-			CreateInvItems(self,itat_claws,4);
-		};
-		if(self.aivar[22] == ID_SNAPPER)
-		{
-			CreateInvItems(self,itat_claws,1);
-		};
-		if(self.aivar[22] == ID_RAZOR)
-		{
-			CreateInvItems(self,itat_claws,3);
-		};
-		if(self.aivar[22] == ID_ORCBITER)
-		{
-			CreateInvItems(self,itat_claws,2);
-		};
-		if(self.aivar[22] == ID_LURKER)
-		{
-			CreateInvItems(self,itat_lurkerclaw,2);
-		};
+		if (self.aivar[AIV_MM_REAL_ID]==ID_WARAN)				{	CreateInvItems(self,ItAt_Claws,4);	};
+		if (self.aivar[AIV_MM_REAL_ID]==ID_FIREWARAN)			{	CreateInvItems(self,ItAt_Claws,4);	};
+		if (self.aivar[AIV_MM_REAL_ID]==ID_SNAPPER)   			{	CreateInvItems(self,ItAt_Claws,1);	};
+		if (self.aivar[AIV_MM_REAL_ID]==ID_RAZOR)				{	CreateInvItems(self,ItAt_Claws,3);	};
+		if (self.aivar[AIV_MM_REAL_ID]==ID_ORCBITER)    		{	CreateInvItems(self,ItAt_Claws,2);	};
+		if (self.aivar[AIV_MM_REAL_ID]==ID_LURKER)				{	CreateInvItems(self,ItAt_LurkerClaw,2);	};
 	};
-	if(Knows_GetFur == TRUE)
+
+	if (Knows_GetFur == TRUE)
 	{
-		if(self.aivar[22] == ID_WOLF)
-		{
-			CreateInvItems(self,itat_wolf,1);
-		};
-		if(self.aivar[22] == ID_BLACKWOLF)
-		{
-			CreateInvItems(self,ItAt_Wolf_02,1);
-		};
-		if(self.aivar[22] == ID_SHADOWBEAST)
-		{
-			CreateInvItems(self,itat_shadowfur,1);
-		};
-		if(self.aivar[22] == ID_TROLL)
-		{
-			CreateInvItems(self,itat_trollfur,1);
-		};
+		if (self.aivar[AIV_MM_REAL_ID]==ID_WOLF)				{	CreateInvItems(self,ItAt_Wolf,1);	};
+		if (self.aivar[AIV_MM_REAL_ID]==ID_BLACKWOLF)			{	CreateInvItems(self,ItAt_Wolf_02,1);	};
+		if (self.aivar[AIV_MM_REAL_ID]==ID_SHADOWBEAST)			{	CreateInvItems(self,ItAt_ShadowFur,1);	};
+		if (self.aivar[AIV_MM_REAL_ID]==ID_TROLL)				{	CreateInvItems(self,ItAt_TrollFur,1);	};
 	};
-	if(Knows_GetHide == TRUE)
+
+	if (Knows_GetHide == TRUE)
 	{
-		if(self.aivar[22] == ID_LURKER)
-		{
-			CreateInvItems(self,itat_lurkerskin,1);
-		};
-		if(self.aivar[22] == ID_SWAMPSHARK)
-		{
-			CreateInvItems(self,itat_swampsharkskin,1);
-		};
+		if (self.aivar[AIV_MM_REAL_ID]==ID_LURKER)				{	CreateInvItems(self,ItAt_LurkerSkin,1);	};
+		if (self.aivar[AIV_MM_REAL_ID]==ID_SWAMPSHARK)			{	CreateInvItems(self,ItAt_SwampsharkSkin,1);	};
 	};
-	if(Knows_GetMCMandibles == TRUE)
+
+	if (Knows_GetMCMandibles == TRUE)
 	{
-		if(self.aivar[22] == ID_MINECRAWLER)
-		{
-			CreateInvItems(self,itat_mandiblescrawler,1);
-		};
-		if(self.aivar[22] == ID_MINECRAWLERWARRIOR)
-		{
-			CreateInvItems(self,itat_mandiblescrawler,1);
-		};
+		if (self.aivar[AIV_MM_REAL_ID]==ID_MINECRAWLER)			{	CreateInvItems(self,ItAt_MandiblesCrawler,1);	};
+		if (self.aivar[AIV_MM_REAL_ID]==ID_MINECRAWLERWARRIOR)	{	CreateInvItems(self,ItAt_MandiblesCrawler,1);	};
 	};
-	if(Knows_GetMCPlates == TRUE)
+
+	if (Knows_GetMCPlates == TRUE)
 	{
-		if(self.aivar[22] == ID_MINECRAWLERWARRIOR)
-		{
-			CreateInvItems(self,itat_platescrawler,2);
-		};
+		if (self.aivar[AIV_MM_REAL_ID]==ID_MINECRAWLERWARRIOR)	{	CreateInvItems(self,ItAt_PlatesCrawler,2);	};
 	};
-	if(Knows_GetBFSting == TRUE)
+
+	if (Knows_GetBFSting == TRUE)
 	{
-		if(self.aivar[22] == ID_BLOODFLY)
-		{
-			CreateInvItems(self,itat_bloodflysting,1);
-		};
+		if (self.aivar[AIV_MM_REAL_ID]==ID_BLOODFLY)			{	CreateInvItems(self,ItAt_BloodflySting,1);};
 	};
-	if(Knows_GetUluMulu == TRUE)
+
+	if (Knows_GetUluMulu == TRUE)
 	{
-		if(self.aivar[22] == ID_FIREWARAN)
-		{
-			CreateInvItems(self,itat_waran,1);
-		};
-		if(self.aivar[22] == ID_SHADOWBEAST)
-		{
-			CreateInvItems(self,itat_shadowhorn,1);
-		};
-		if(self.aivar[22] == ID_SWAMPSHARK)
-		{
-			CreateInvItems(self,itat_swampsharkteeth,3);
-		};
-		if(self.aivar[22] == ID_TROLL)
-		{
-			CreateInvItems(self,itat_trolltheeth,2);
-		};
+		if (self.aivar[AIV_MM_REAL_ID]==ID_FIREWARAN)			{	CreateInvItems(self,ItAt_Waran,		1);	};	//Zunge eines Feuerwarans
+		if (self.aivar[AIV_MM_REAL_ID]==ID_SHADOWBEAST)			{	CreateInvItems(self,ItAt_ShadowHorn,		1); };	//Horn eines Shadowbeasts
+		if (self.aivar[AIV_MM_REAL_ID]==ID_SWAMPSHARK)			{	CreateInvItems(self,ItAt_SwampsharkTeeth,	3); };	//Zähne eines Sumpfhais
+		if (self.aivar[AIV_MM_REAL_ID]==ID_TROLL)				{	CreateInvItems(self,ItAt_TrollTheeth,		2);	};	//Hauer eines Trolls
 	};
-	self.aivar[24] = TRUE;
+
+	//-------- Merken --------
+	self.aivar[AIV_MM_DEATHINVGIVEN] = TRUE;
 };
+
+
+
+
+
+
+
+
+
 

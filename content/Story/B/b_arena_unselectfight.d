@@ -1,68 +1,81 @@
-
-func void b_arena_unselectfight()
+//////////////////////////////////////////////////////////////////////////
+//	B_Arena_UnselectFight
+//	=====================
+//	Macht alle mit B_Arena_SelectFight getätigten Aktionen wieder
+//	rückgängig!
+//////////////////////////////////////////////////////////////////////////
+func void B_Arena_UnselectFight ()
 {
-	var C_Npc arenamaster;
-	PrintDebugNpc(PD_TA_FRAME,"B_Arena_UnselectFight");
-	arenamaster = Hlp_GetNpc(mil_122_arenamaster);
-	if(ARENA_FIGHTRUNNING)
+	PrintDebugNpc		(PD_TA_FRAME,	"B_Arena_UnselectFight");
+
+	var C_NPC	arenamaster;
+	arenamaster = Hlp_GetNpc(MIL_122_Arenamaster);
+
+	//-------- Muss kampf erst beendet werden? --------
+	if	Arena_FightRunning
 	{
-		PrintDebugNpc(PD_TA_CHECK,"...Kampf muss erst beendet werden!");
+		PrintDebugNpc	(PD_TA_CHECK,	"...Kampf muss erst beendet werden!");
 		return;
 	};
-	if(!ARENA_FIGHTSELECTED)
+
+	//-------- wurde ein Kampf ausgewählt? --------
+	if	!Arena_FightSelected						// es wurde garkein Kampf ausgewählt
 	{
-		PrintDebugNpc(PD_TA_CHECK,"...es wurde garkein Kampf ausgewählt!");
+		PrintDebugNpc	(PD_TA_CHECK,	"...es wurde garkein Kampf ausgewählt!");
 		return;
 	};
-	if((ARENA_SELECTDAY == b_getday()) && ((ARENA_FIGHTDAY < b_getday()) || ARENA_FIGHTRUNNING))
+
+	//-------- wurde der Kampf heute ausgewählt? --------
+	if	(Arena_SelectDay == B_GetDay())
+	&&	((Arena_FightDay  <  B_GetDay()) ||	Arena_FightRunning)
 	{
-		PrintDebugNpc(PD_TA_CHECK,"...der Kampf ist für heute ausgewählt!");
+		PrintDebugNpc	(PD_TA_CHECK,	"...der Kampf ist für heute ausgewählt!");
 		return;
 	};
-	B_ExchangeRoutine(thf_405_thief,"Start");
-	B_ExchangeRoutine(thf_407_thief,"Start");
-	B_ExchangeRoutine(thf_408_thief,"Start");
-	B_ExchangeRoutine(thf_409_pyro,"Start");
-	B_ExchangeRoutine(wrk_206_nicolos,"Start");
-	B_ExchangeRoutine(thf_402_karras,"Start");
-	B_ExchangeRoutine(thf_406_thief,"Start");
-	B_ExchangeRoutine(beg_705_beggar,"Start");
-	PrintDebugNpc(PD_TA_CHECK,"...Zuschauer nach Hause geschickt!");
-	ARENA_FIGHTSELECTED = FALSE;
-	if(ARENA_PLAYERFIGHT)
+
+	//-------- Zuschauer nach Hause schicken --------
+	// VORSICHT: nur bei NSCs, die auch "Start" als Standard-TA haben!!!
+	B_ExchangeRoutine	(THF_405_Thief	,	"Start");
+	B_ExchangeRoutine	(THF_407_Thief	,	"Start");
+	B_ExchangeRoutine	(THF_408_Thief	,	"Start");
+	B_ExchangeRoutine	(THF_409_Pyro	,	"Start");
+	
+	B_ExchangeRoutine	(WRK_206_Nicolos,	"Start");
+	
+	B_ExchangeRoutine	(THF_402_Karras,	"Start");
+	B_ExchangeRoutine	(THF_406_Thief,		"Start");
+	B_ExchangeRoutine	(BEG_705_Beggar,	"Start");
+
+
+	PrintDebugNpc	(PD_TA_CHECK,	"...Zuschauer nach Hause geschickt!");
+
+	//-------- Flags bereinigen --------
+	Arena_FightSelected			= FALSE;
+
+	if	Arena_PlayerFight
 	{
-		ARENA_PLAYERFIGHT = FALSE;
-		GRIM_CHALLENGED = FALSE;
-		GOLIATH_CHALLENGED = FALSE;
-		BRUTUS_CHALLENGED = FALSE;
-		MALGAR_CHALLENGED = FALSE;
-		THORA_CHALLENGED = FALSE;
-		if(!ARENA_PLAYERHASCOME)
+		Arena_PlayerFight		= FALSE;
+
+		Grim_Challenged			= FALSE;
+		Goliath_Challenged		= FALSE;
+		Brutus_Challenged		= FALSE;
+		Malgar_Challenged		= FALSE;
+		Thora_Challenged		= FALSE;
+
+		if	!Arena_PlayerHasCome
 		{
-			ARENA_PLAYERSHIRKED = TRUE;
+			Arena_PlayerShirked	= TRUE;		// merken, daß sich der Spieler vor dem Arenakampf gedrückt hat
 		};
 	}
-	else if(ARENA_NPCFIGHT)
+	else if	Arena_NpcFight
 	{
-		if(ARENA_NPCCOMBO == AC_GRIM_GOLIATH)
-		{
-			b_arena_npcscore(7790,7978);
-		};
-		if(ARENA_NPCCOMBO == AC_GOLIATH_BRUTUS)
-		{
-			b_arena_npcscore(7717,7978);
-		};
-		if(ARENA_NPCCOMBO == AC_BRUTUS_MALGAR)
-		{
-			b_arena_npcscore(7648,7717);
-		};
-		if(ARENA_NPCCOMBO == AC_MALGAR_THORA)
-		{
-			b_arena_npcscore(7618,7648);
-		};
-		ARENA_NPCFIGHT = FALSE;
-		ARENA_NPCCOMBOLAST = ARENA_NPCCOMBO;
-		ARENA_NPCCOMBO = AC_NONE;
+		if	(Arena_NpcCombo == AC_GRIM_GOLIATH	)	{	B_Arena_NpcScore(MIN_306_Grim,		WRK_216_Goliath	);	};
+		if	(Arena_NpcCombo == AC_GOLIATH_BRUTUS)	{	B_Arena_NpcScore(MIL_121_Brutus,	WRK_216_Goliath	);	};
+		if	(Arena_NpcCombo == AC_BRUTUS_MALGAR	)	{	B_Arena_NpcScore(DMH_1302_Malgar,	MIL_121_Brutus	);	};
+		if	(Arena_NpcCombo == AC_MALGAR_THORA	)	{	B_Arena_NpcScore(AMZ_900_Thora,		DMH_1302_Malgar	);	};
+
+		Arena_NpcFight 		= FALSE;
+		Arena_NpcComboLast	= Arena_NpcCombo;
+		Arena_NpcCombo 		= AC_NONE;
 	};
 };
-

@@ -1,71 +1,80 @@
-
-func void b_guildassigntheft()
+/////////////////////////////////////////////////////////////////////////
+//	B_GuildAssignTheft	(JP)
+//	==================
+//	Wird von allen Funktionen aufgerufen, in denen ein Diebstahl festge+
+//	stellt wird, um pro Gilde einen Zähler für die Anzahl der begangenen
+// 	und nicht wieder vergoltenen Diebstähle zu führen
+//	Zur Zeit ruft ZS_CatchThief diese Funktion auf, da nur persönlicher
+//	Diebstahl relevant ist
+////////////////////////////////////////////////////////////////////////
+func void B_GuildAssignTheft ()
 {
-	PrintDebugNpc(PD_ZS_Check,"B_GuildAssignTheft");
-	if(self.guild == GIL_MILITIA)
+	PrintDebugNpc		( PD_ZS_CHECK, "B_GuildAssignTheft" );
+	if ( self.guild == GIL_MILITIA)
 	{
-		INT_THEFT_GIL_MILITIA = INT_THEFT_GIL_MILITIA + 1;
+		int_Theft_Gil_Militia = int_Theft_Gil_Militia +1;
 	};
-	if(self.guild == GIL_WORKER)
+	if ( self.guild == GIL_WORKER)
 	{
-		INT_THEFT_GIL_WORKER = INT_THEFT_GIL_WORKER + 1;
+		int_Theft_Gil_Worker = int_Theft_Gil_Worker +1;
 	};
-	if(self.guild == GIL_MINER)
+	if ( self.guild == GIL_MINER)
 	{
-		INT_THEFT_GIL_MINER = INT_THEFT_GIL_MINER + 1;
+		int_Theft_Gil_Miner = int_Theft_Gil_Miner +1;
 	};
-	if(self.guild == GIL_HEALER)
+	if ( self.guild == GIL_HEALER)
 	{
-		INT_THEFT_GIL_HEALER = INT_THEFT_GIL_HEALER + 1;
+		int_Theft_Gil_Healer = int_Theft_Gil_Healer +1;
 	};
-	if(self.guild == GIL_THIEF)
+	if ( self.guild == GIL_THIEF)
 	{
-		INT_THEFT_GIL_THIEF = INT_THEFT_GIL_THIEF + 1;
+		int_Theft_Gil_Thief = int_Theft_Gil_Thief +1;
 	};
-	if(self.guild == GIL_POSSESSED)
+	if ( self.guild == GIL_POSSESSED)
 	{
-		INT_THEFT_GIL_POSSESSED = INT_THEFT_GIL_POSSESSED + 1;
+		int_Theft_Gil_Possessed = int_Theft_Gil_Possessed +1;
 	};
-	if(self.guild == GIL_BEGGAR)
+	if ( self.guild == GIL_BEGGAR)
 	{
-		INT_THEFT_GIL_BEGGAR = INT_THEFT_GIL_BEGGAR + 1;
+		int_Theft_Gil_Beggar = int_Theft_Gil_Beggar +1;
 	};
-	if(self.guild == GIL_DEMONIC)
+	if ( self.guild == GIL_DEMONIC)
 	{
-		INT_THEFT_GIL_DEMONIC = INT_THEFT_GIL_DEMONIC + 1;
+		int_Theft_Gil_Demonic = int_Theft_Gil_Demonic +1;
 	};
-	if(self.guild == GIL_AMAZON)
+	if ( self.guild == GIL_AMAZON)
 	{
-		INT_THEFT_GIL_AMAZON = INT_THEFT_GIL_AMAZON + 1;
+		int_Theft_Gil_Amazon = int_Theft_Gil_Amazon +1;
 	};
-	if(self.guild == GIL_PALADIN)
+	if ( self.guild == GIL_PALADIN)
 	{
-		INT_THEFT_GIL_PALADIN = INT_THEFT_GIL_PALADIN + 1;
+		int_Theft_Gil_Paladin = int_Theft_Gil_Paladin +1;
 	};
-	if(self.guild == GIL_KDF)
+	if ( self.guild == GIL_KDF)
 	{
-		INT_THEFT_GIL_KDF = INT_THEFT_GIL_KDF + 1;
+		int_Theft_Gil_kdf = int_Theft_Gil_kdf +1;
 	};
-	if(self.guild == GIL_BLOODEARTH)
+	if ( self.guild == GIL_BLOODEARTH)
 	{
-		INT_THEFT_GIL_BLOODEARTH = INT_THEFT_GIL_BLOODEARTH + 1;
+		int_Theft_Gil_Bloodearth = int_Theft_Gil_Bloodearth +1;
 	};
-	if(self.guild == GIL_DEMONHUNTER)
+	if ( self.guild == GIL_DEMONHUNTER)
 	{
-		INT_THEFT_GIL_DEMONHUNTER = INT_THEFT_GIL_DEMONHUNTER + 1;
+		int_Theft_Gil_Demonhunter = int_Theft_Gil_Demonhunter +1;
 	};
-	if(self.guild == GIL_RSVD_2)
+	if ( self.guild == GIL_RSVD_2)
 	{
-		INT_THEFT_GIL_RSVD2 = INT_THEFT_GIL_RSVD2 + 1;
+		int_Theft_Gil_Rsvd2 = int_Theft_Gil_Rsvd2 +1;
 	};
-	if(self.guild == GIL_RSVD_3)
+	if ( self.guild == GIL_Rsvd_3)
 	{
-		INT_THEFT_GIL_RSVD3 = INT_THEFT_GIL_RSVD3 + 1;
+		int_Theft_Gil_Rsvd3 = int_Theft_Gil_Rsvd3 +1;
 	};
-	if(Npc_GetPermAttitude(self,other) != ATT_HOSTILE)
-	{
-		b_setattitude(self,ATT_ANGRY);
-	};
-	self.aivar[36] = self.aivar[36] + 1;
-};
 
+	if (Npc_GetPermAttitude	( self, other) != ATT_HOSTILE)
+	{
+		B_SetAttitude	(self, ATT_ANGRY);
+	};
+	self.aivar[AIV_THEFTWITTNESS]	=	self.aivar[AIV_THEFTWITTNESS] +1;
+
+} ;

@@ -1,77 +1,77 @@
-
-func void b_arena_printscore()
+func void B_Arena_PrintScore()
 {
-	var string msg;
-	var C_Npc npc1;
-	var C_Npc npc2;
-	PrintDebugNpc(PD_ZS_FRAME,"B_Arena_PrintScore");
-	if(ARENA_PLAYERFIGHT)
+	PrintDebugNpc	(PD_ZS_FRAME,	"B_Arena_PrintScore");
+
+	var	string	msg;
+	var C_NPC	npc1;
+	var	C_NPC	npc2;
+
+	if	Arena_PlayerFight
 	{
-		if(GRIM_CHALLENGED)
-		{
-			npc2 = Hlp_GetNpc(min_306_grim);
-		};
-		if(GOLIATH_CHALLENGED)
-		{
-			npc2 = Hlp_GetNpc(wrk_216_goliath);
-		};
-		if(BRUTUS_CHALLENGED)
-		{
-			npc2 = Hlp_GetNpc(mil_121_brutus);
-		};
-		if(MALGAR_CHALLENGED)
-		{
-			npc2 = Hlp_GetNpc(dmh_1302_malgar);
-		};
-		if(THORA_CHALLENGED)
-		{
-			npc2 = Hlp_GetNpc(amz_900_thora);
-		};
-		msg = ConcatStrings(hero.name," : ");
-		msg = ConcatStrings(msg,IntToString(hero.aivar[39]));
-		msg = ConcatStrings(msg,"     -     ");
-		msg = ConcatStrings(msg,npc2.name);
-		msg = ConcatStrings(msg," : ");
-		msg = ConcatStrings(msg,IntToString(npc2.aivar[39]));
+		if	Grim_Challenged		{	npc2 = Hlp_GetNpc(MIN_306_Grim);	};
+		if	Goliath_Challenged	{	npc2 = Hlp_GetNpc(WRK_216_Goliath);	};
+		if	Brutus_Challenged	{	npc2 = Hlp_GetNpc(MIL_121_Brutus);	};
+		if	Malgar_Challenged	{	npc2 = Hlp_GetNpc(DMH_1302_Malgar);	};
+		if	Thora_Challenged	{	npc2 = Hlp_GetNpc(AMZ_900_Thora);	};
+
+		msg	= ConcatStrings(hero.name,	" : ");
+		msg = ConcatStrings(msg,		IntToString(hero.aivar[AIV_ARENA_POINTS]));
+		msg = ConcatStrings(msg,		"     -     ");
+		msg	= ConcatStrings(msg,		npc2.name);
+		msg = ConcatStrings(msg,		" : ");
+		msg = ConcatStrings(msg,		IntToString(npc2.aivar[AIV_ARENA_POINTS]) );
 	}
-	else if(ARENA_NPCFIGHT)
+
+	else if	Arena_NpcFight
 	{
-		if(Npc_GetDistToWP(hero,ARENA_WP_CENTER) > 1000)
+		//-------- kann der Spieler die Gladiatoren sehen ? --------
+		if	(Npc_GetDistToWP(hero, ARENA_WP_CENTER) > 1000)
 		{
 			return;
 		};
-		if(ARENA_NPCCOMBO == AC_GRIM_GOLIATH)
-		{
-			npc1 = Hlp_GetNpc(wrk_216_goliath);
-			npc2 = Hlp_GetNpc(min_306_grim);
-		};
-		if(ARENA_NPCCOMBO == AC_GOLIATH_BRUTUS)
-		{
-			npc1 = Hlp_GetNpc(mil_121_brutus);
-			npc2 = Hlp_GetNpc(wrk_216_goliath);
-		};
-		if(ARENA_NPCCOMBO == AC_BRUTUS_MALGAR)
-		{
-			npc1 = Hlp_GetNpc(dmh_1302_malgar);
-			npc2 = Hlp_GetNpc(mil_121_brutus);
-		};
-		if(ARENA_NPCCOMBO == AC_MALGAR_THORA)
-		{
-			npc1 = Hlp_GetNpc(amz_900_thora);
-			npc2 = Hlp_GetNpc(dmh_1302_malgar);
-		};
-		msg = ConcatStrings(npc1.name," : ");
-		msg = ConcatStrings(msg,IntToString(npc1.aivar[39]));
-		msg = ConcatStrings(msg,"     -     ");
-		msg = ConcatStrings(msg,npc2.name);
-		msg = ConcatStrings(msg," : ");
-		msg = ConcatStrings(msg,IntToString(npc2.aivar[39]));
+
+		if	(Arena_NpcCombo == AC_GRIM_GOLIATH)		{	npc1 = Hlp_GetNpc(WRK_216_Goliath);	npc2 = Hlp_GetNpc(MIN_306_Grim);	};
+		if	(Arena_NpcCombo == AC_GOLIATH_BRUTUS)	{	npc1 = Hlp_GetNpc(MIL_121_Brutus);	npc2 = Hlp_GetNpc(WRK_216_Goliath);	};
+		if	(Arena_NpcCombo == AC_BRUTUS_MALGAR)	{	npc1 = Hlp_GetNpc(DMH_1302_Malgar);	npc2 = Hlp_GetNpc(MIL_121_Brutus);	};
+		if	(Arena_NpcCombo == AC_MALGAR_THORA)		{	npc1 = Hlp_GetNpc(AMZ_900_Thora);	npc2 = Hlp_GetNpc(DMH_1302_Malgar);	};
+
+		msg	= ConcatStrings(npc1.name,	" : ");
+		msg = ConcatStrings(msg,		IntToString(npc1.aivar[AIV_ARENA_POINTS]));
+		msg = ConcatStrings(msg,		"     -     ");
+		msg	= ConcatStrings(msg,		npc2.name);
+		msg = ConcatStrings(msg,		" : ");
+		msg = ConcatStrings(msg,		IntToString(npc2.aivar[AIV_ARENA_POINTS]) );
 	}
+
 	else
 	{
-		PrintDebugNpc(PD_ZS_Check,"...kein laufender Arenakampf!");
+		PrintDebugNpc	(PD_ZS_CHECK,	"...kein laufender Arenakampf!");
 		return;
 	};
-	ai_printscreen(self,msg,-1,-1,FONT_OLD_BIG,3,TEXT_COLOR_WHITE);
+
+	//-------- Textmeldung nun ausgeben --------
+	AI_PrintScreen	(self, msg, -1, -1, FONT_OLD_BIG, 3, TEXT_COLOR_WHITE);
 };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

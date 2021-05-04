@@ -1,5 +1,5 @@
-
-func void b_assignambientinfos_mine_mil_8(var C_Npc slf)
+FUNC VOID B_AssignAmbientInfos_Mine_Mil_8(var c_NPC slf)
 {
+	
+	
 };
-

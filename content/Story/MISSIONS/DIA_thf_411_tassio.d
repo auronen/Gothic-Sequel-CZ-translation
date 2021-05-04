@@ -1,79 +1,93 @@
-
-instance THF_411_TASSIO_EXIT(C_Info)
+///////////////////////////////////////////////////////////////////////
+//	Info EXIT
+///////////////////////////////////////////////////////////////////////
+INSTANCE THF_411_Tassio_EXIT   (C_INFO)
 {
-	npc = thf_411_tassio;
-	nr = 999;
-	condition = thf_411_tassio_exit_condition;
-	information = thf_411_tassio_exit_info;
-	permanent = TRUE;
+	npc         = THF_411_Tassio;
+	nr          = 999;
+	condition   = THF_411_Tassio_EXIT_Condition;
+	information = THF_411_Tassio_EXIT_Info;
+	permanent   = TRUE;
 	description = DIALOG_ENDE;
 };
 
-
-func int thf_411_tassio_exit_condition()
+FUNC INT THF_411_Tassio_EXIT_Condition()
 {
 	return TRUE;
 };
 
-func void thf_411_tassio_exit_info()
+FUNC VOID THF_411_Tassio_EXIT_Info()
 {
-	AI_StopProcessInfos(self);
+	AI_StopProcessInfos (self);
 };
 
-
-instance THF_411_TASSIO_YOURJOB(C_Info)
+///////////////////////////////////////////////////////////////////////
+//	Info YOURJOB
+///////////////////////////////////////////////////////////////////////
+instance THF_411_Tassio_YOURJOB		(C_INFO)
 {
-	npc = thf_411_tassio;
-	condition = thf_411_tassio_yourjob_condition;
-	information = thf_411_tassio_yourjob_info;
-	important = FALSE;
-	permanent = FALSE;
-	description = "Warum bist du hier draussen?";
+	npc		 	 = 	THF_411_Tassio;
+	condition	 = 	THF_411_Tassio_YOURJOB_Condition;
+	information	 = 	THF_411_Tassio_YOURJOB_Info;
+	important	 = 	FALSE;
+	permanent	 = 	FALSE;
+
+	description	 = 	"Warum bist du hier draussen?";
 };
 
-
-func int thf_411_tassio_yourjob_condition()
+func int THF_411_Tassio_YOURJOB_Condition ()
 {
 	return TRUE;
 };
 
-func void thf_411_tassio_yourjob_info()
+func void THF_411_Tassio_YOURJOB_Info ()
 {
-	AI_Output(hero,self,"THF_411_YOURJOB_15_01");	//Warum bist du hier draussen?
-	AI_Output(self,hero,"THF_411_YOURJOB_10_02");	//Iii...Iicc....Iiicchhhh... ICH!
-	AI_Output(self,hero,"THF_411_YOURJOB_10_03");	//Ww... www... wwwi... wwwiiil... WILL.
-	AI_Output(self,hero,"THF_411_YOURJOB_10_04");	//Ss... sss... sssool... sssoldddd. ddd. ddd... (schnauf)
-	AI_Output(self,hero,"THF_411_YOURJOB_10_05");	//Soooooldaaat... SOLDAT werden.
-	AI_StopProcessInfos(self);
+	AI_Output			(hero, self, "THF_411_YOURJOB_15_01"); //Warum bist du hier draussen?
+	AI_Output			(self, hero, "THF_411_YOURJOB_10_02"); //Iii...Iicc....Iiicchhhh... ICH!
+	AI_Output			(self, hero, "THF_411_YOURJOB_10_03"); //Ww... www... wwwi... wwwiiil... WILL.
+	AI_Output			(self, hero, "THF_411_YOURJOB_10_04"); //Ss... sss... sssool... sssoldddd. ddd. ddd... (schnauf)
+	AI_Output			(self, hero, "THF_411_YOURJOB_10_05"); //Soooooldaaat... SOLDAT werden.
+	AI_StopProcessInfos	(self);
 };
 
-
-instance THF_411_TASSIO_HOWDY(C_Info)
+///////////////////////////////////////////////////////////////////////
+//	Info HOWDY
+///////////////////////////////////////////////////////////////////////
+instance THF_411_Tassio_HOWDY		(C_INFO)
 {
-	npc = thf_411_tassio;
-	condition = thf_411_tassio_howdy_condition;
-	information = thf_411_tassio_howdy_info;
-	important = FALSE;
-	permanent = TRUE;
-	description = "Wie geht es dir?";
+	npc		 	 = 	THF_411_Tassio;
+	condition	 = 	THF_411_Tassio_HOWDY_Condition;
+	information	 = 	THF_411_Tassio_HOWDY_Info;
+	important	 = 	FALSE;
+	permanent	 = 	TRUE;
+
+	description	 = 	"Wie geht es dir?";
 };
 
-
-func int thf_411_tassio_howdy_condition()
+func int THF_411_Tassio_HOWDY_Condition ()
 {
-	if(Npc_KnowsInfo(hero,thf_411_tassio_yourjob))
+	if	Npc_KnowsInfo(hero, THF_411_Tassio_YOURJOB)
 	{
 		return TRUE;
 	};
 };
 
-func void thf_411_tassio_howdy_info()
+func void THF_411_Tassio_HOWDY_Info ()
 {
-	AI_Output(hero,self,"THF_411_HOWDY_15_01");	//Wie geht es dir?
-	AI_Output(self,hero,"THF_411_HOWDY_10_02");	//Daa... daaann... daannnkk... daaannnnkkkee... DANKE!
-	AI_Output(self,hero,"THF_411_HOWDY_10_03");	//Gg.. ggg... ggguu... gguuuhh... GUT!
-	AI_Output(self,hero,"THF_411_HOWDY_10_04");	//Ww... www... wwwiii... wwwiiieeee... WIE!
-	AI_Output(self,hero,"THF_411_HOWDY_10_05");	//Gg... ggg...
-	AI_Output(hero,self,"THF_411_HOWDY_15_06");	//(voreilig) Äh! Oh danke, mir geht es auch gut!
+	AI_Output			(hero, self, "THF_411_HOWDY_15_01"); //Wie geht es dir?
+	AI_Output			(self, hero, "THF_411_HOWDY_10_02"); //Daa... daaann... daannnkk... daaannnnkkkee... DANKE!
+	AI_Output			(self, hero, "THF_411_HOWDY_10_03"); //Gg.. ggg... ggguu... gguuuhh... GUT!
+	AI_Output			(self, hero, "THF_411_HOWDY_10_04"); //Ww... www... wwwiii... wwwiiieeee... WIE!
+	AI_Output			(self, hero, "THF_411_HOWDY_10_05"); //Gg... ggg...
+	AI_Output			(hero, self, "THF_411_HOWDY_15_06"); //(voreilig) Äh! Oh danke, mir geht es auch gut!
 };
+
+
+
+
+
+
+
+
+
 

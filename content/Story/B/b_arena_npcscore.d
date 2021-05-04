@@ -1,18 +1,26 @@
-
-func int b_arena_npcscore(var int npcinstance1,var int npcinstance2)
+//////////////////////////////////////////////////////////////////////////
+//	B_Arena_NpcScore
+//	===================
+//	Unterroutine für B_Arena_FinishFight. Ermittelt, ob 'npcInstance1'
+//	oder 'npcInstance2' gewonnen hat und zählt den Punktezähler des
+//	Siegers um eins nach oben.
+//////////////////////////////////////////////////////////////////////////
+func int	B_Arena_NpcScore(var int npcInstance1, var int npcInstance2)
 {
-	var C_Npc npc1;
-	var C_Npc npc2;
-	PrintDebugNpc(PD_TA_DETAIL,"B_Arena_NpcScore");
-	npc1 = Hlp_GetNpc(npcinstance1);
-	npc2 = Hlp_GetNpc(npcinstance2);
-	if(npc1.aivar[39] > npc2.aivar[39])
+	PrintDebugNpc		(PD_TA_DETAIL,	"B_Arena_NpcScore");
+
+	var C_NPC npc1;
+	var C_NPC npc2;
+
+	npc1 = Hlp_GetNpc(npcInstance1);
+	npc2 = Hlp_GetNpc(npcInstance2);
+
+	if	(npc1.aivar[AIV_ARENA_POINTS] > npc2.aivar[AIV_ARENA_POINTS])
 	{
-		npc1.aivar[40] = npc1.aivar[40] + 1;
+		npc1.aivar[AIV_ARENA_VICTORIES] = npc1.aivar[AIV_ARENA_VICTORIES] + 1;
 	};
-	if(npc2.aivar[39] > npc1.aivar[39])
+	if	(npc2.aivar[AIV_ARENA_POINTS] > npc1.aivar[AIV_ARENA_POINTS])
 	{
-		npc2.aivar[40] = npc2.aivar[40] + 1;
+		npc2.aivar[AIV_ARENA_VICTORIES] = npc2.aivar[AIV_ARENA_VICTORIES] + 1;
 	};
 };
-

@@ -1,101 +1,115 @@
-
-instance HLR_504_OTMAR_EXIT(C_Info)
+///////////////////////////////////////////////////////////////////////
+//	Info EXIT
+///////////////////////////////////////////////////////////////////////
+INSTANCE HLR_504_Otmar_EXIT   (C_INFO)
 {
-	npc = hlr_504_otmar;
-	nr = 999;
-	condition = hlr_504_otmar_exit_condition;
-	information = hlr_504_otmar_exit_info;
-	permanent = TRUE;
+	npc         = HLR_504_Otmar;
+	nr          = 999;
+	condition   = HLR_504_Otmar_EXIT_Condition;
+	information = HLR_504_Otmar_EXIT_Info;
+	permanent   = TRUE;
 	description = DIALOG_ENDE;
 };
 
-
-func int hlr_504_otmar_exit_condition()
+FUNC INT HLR_504_Otmar_EXIT_Condition()
 {
 	return TRUE;
 };
 
-func void hlr_504_otmar_exit_info()
+FUNC VOID HLR_504_Otmar_EXIT_Info()
 {
-	AI_StopProcessInfos(self);
+	AI_StopProcessInfos (self);
 };
 
 
-instance HLR_504_OTMAR_JOB(C_Info)
+
+///////////////////////////////////////////////////////////////////////
+//	Info JOB
+///////////////////////////////////////////////////////////////////////
+instance HLR_504_Otmar_JOB		(C_INFO)
 {
-	npc = hlr_504_otmar;
-	nr = 1;
-	condition = hlr_504_otmar_job_condition;
-	information = hlr_504_otmar_job_info;
-	important = FALSE;
-	permanent = FALSE;
-	description = "Was ist deine Aufgabe hier?";
+	npc		 = 	HLR_504_Otmar;
+	nr		 = 	1;
+	condition	 = 	HLR_504_Otmar_JOB_Condition;
+	information	 = 	HLR_504_Otmar_JOB_Info;
+	important	 = 	FALSE;
+	permanent	 = 	FALSE;
+
+	description	 = 	"Was ist deine Aufgabe hier?";
 };
 
-
-func int hlr_504_otmar_job_condition()
+func int HLR_504_Otmar_JOB_Condition ()
 {
 	return TRUE;
 };
 
-func int hlr_504_otmar_job_info()
+func int HLR_504_Otmar_JOB_Info ()
 {
-	AI_Output(hero,self,"HLR_504_JOB_15_01");	//Was ist deine Aufgabe hier?
-	AI_Output(self,hero,"HLR_504_JOB_00_02");	//Ich sorge dafür, daß die Bekloppten ruhig bleiben.
+	AI_Output			(hero, self, "HLR_504_JOB_15_01"); //Was ist deine Aufgabe hier?
+	AI_Output			(self, hero, "HLR_504_JOB_00_02"); //Ich sorge dafür, daß die Bekloppten ruhig bleiben.
+
 };
 
 
-instance HLR_504_OTMAR_CALM(C_Info)
+///////////////////////////////////////////////////////////////////////
+//	Info CALM
+///////////////////////////////////////////////////////////////////////
+instance HLR_504_Otmar_CALM		(C_INFO)
 {
-	npc = hlr_504_otmar;
-	nr = 1;
-	condition = hlr_504_otmar_calm_condition;
-	information = hlr_504_otmar_calm_info;
-	important = FALSE;
-	permanent = FALSE;
-	description = "Wie bekommt man sie ruhig?";
+	npc		 = 	HLR_504_Otmar;
+	nr		 = 	1;
+	condition	 = 	HLR_504_Otmar_CALM_Condition;
+	information	 = 	HLR_504_Otmar_CALM_Info;
+	important	 = 	FALSE;
+	permanent	 = 	FALSE;
+
+	description	 = 	"Wie bekommt man sie ruhig?";
 };
 
-
-func int hlr_504_otmar_calm_condition()
+func int HLR_504_Otmar_CALM_Condition ()
 {
-	if(Npc_KnowsInfo(hero,hlr_504_otmar_job))
+	if Npc_KnowsInfo (hero,HLR_504_Otmar_JOB)
 	{
 		return TRUE;
 	};
 };
-
-func int hlr_504_otmar_calm_info()
+func int HLR_504_Otmar_CALM_Info ()
 {
-	AI_Output(hero,self,"HLR_504_CALM_15_01");	//Wie bekommt man sie ruhig?
-	AI_Output(self,hero,"HLR_504_CALM_00_02");	//Die Heiler haben schon alles mögliche ausprobiert, ohne Erfolg. Jetzt geben wir ihnen Sumpfkraut. Das beruhigt sie.
-	AI_Output(self,hero,"HLR_504_CALM_00_03");	//Macht mir auch die Arbeit leichter. Das Sumpfkraut ist wirklich gut Mann, wirklich gut!
+	AI_Output			(hero, self, "HLR_504_CALM_15_01"); //Wie bekommt man sie ruhig?
+	AI_Output			(self, hero, "HLR_504_CALM_00_02"); //Die Heiler haben schon alles mögliche ausprobiert, ohne Erfolg. Jetzt geben wir ihnen Sumpfkraut. Das beruhigt sie.
+	AI_Output			(self, hero, "HLR_504_CALM_00_03"); //Macht mir auch die Arbeit leichter. Das Sumpfkraut ist wirklich gut Mann, wirklich gut!
 };
 
-
-instance HLR_504_OTMAR_HOWCALM(C_Info)
+///////////////////////////////////////////////////////////////////////
+//	Info HOWCALM
+///////////////////////////////////////////////////////////////////////
+instance HLR_504_Otmar_HOWCALM		(C_INFO)
 {
-	npc = hlr_504_otmar;
-	nr = 1;
-	condition = hlr_504_otmar_howcalm_condition;
-	information = hlr_504_otmar_howcalm_info;
-	important = FALSE;
-	permanent = TRUE;
-	description = "Kann man mit den Kranken reden?";
+	npc		 = 	HLR_504_Otmar;
+	nr		 = 	1;
+	condition	 = 	HLR_504_Otmar_HOWCALM_Condition;
+	information	 = 	HLR_504_Otmar_HOWCALM_Info;
+	important	 = 	FALSE;
+	permanent	 = 	TRUE;
+
+	description	 = 	"Kann man mit den Kranken reden?";
 };
 
-
-func int hlr_504_otmar_howcalm_condition()
+func int HLR_504_Otmar_HOWCALM_Condition ()
 {
-	if(Npc_KnowsInfo(hero,hlr_504_otmar_calm))
+	if Npc_KnowsInfo (hero,HLR_504_Otmar_CALM)
 	{
 		return TRUE;
 	};
 };
-
-func int hlr_504_otmar_howcalm_info()
+func int HLR_504_Otmar_HOWCALM_Info ()
 {
-	AI_Output(hero,self,"HLR_504_HOWCALM_15_01");	//Kann man mit den Kranken reden?
-	AI_Output(self,hero,"HLR_504_HOWCALM_00_02");	//Wozu? Die reden nur wirres Zeug. Arme Irre.
+	AI_Output			(hero, self, "HLR_504_HOWCALM_15_01"); //Kann man mit den Kranken reden?
+	AI_Output			(self, hero, "HLR_504_HOWCALM_00_02"); //Wozu? Die reden nur wirres Zeug. Arme Irre.
+
 };
+
+
+
+
 

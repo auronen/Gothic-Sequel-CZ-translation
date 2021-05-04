@@ -1,80 +1,121 @@
-
-func void b_arena_proclaimfinish(var C_Npc arenamaster)
+//////////////////////////////////////////////////////////////////////////
+//	B_Arena_ProclaimFinish
+//	======================
+//	Gibt die Eröffnungssätze des Arenameisters am beginn eines Arena-
+//	kampfes aus!
+//	'arenamaster' enthält die Instanz des Verkündenden
+//////////////////////////////////////////////////////////////////////////
+func void B_Arena_ProclaimFinish (var C_NPC arenamaster)
 {
-	var C_Npc target;
-	var C_Npc npc;
-	var int grimpoints;
-	var int goliathpoints;
-	var int brutuspoints;
-	var int malgarpoints;
-	var int thorapoints;
-	PrintDebugNpc(PD_TA_FRAME,"B_Arena_ProclaimFinish");
-	if(!Wld_IsTime(ARENABEGIN_H,ARENABEGIN_M,ARENAEND_H + 1,ARENAEND_M))
+	PrintDebugNpc	(PD_TA_FRAME,	"B_Arena_ProclaimFinish");
+
+	//-------- zu spät? --------
+	if	!Wld_IsTime(ARENABEGIN_H, ARENABEGIN_M, ARENAEND_H+1, ARENAEND_M)
 	{
-		PrintDebugNpc(PD_ZS_Check,"...zu spät!");
+		PrintDebugNpc(PD_ZS_CHECK, "...zu spät!");
 		return;
 	};
-	npc = Hlp_GetNpc(min_306_grim);
-	grimpoints = npc.aivar[39];
-	npc = Hlp_GetNpc(wrk_216_goliath);
-	goliathpoints = npc.aivar[39];
-	npc = Hlp_GetNpc(mil_121_brutus);
-	brutuspoints = npc.aivar[39];
-	npc = Hlp_GetNpc(dmh_1302_malgar);
-	malgarpoints = npc.aivar[39];
-	npc = Hlp_GetNpc(amz_900_thora);
-	thorapoints = npc.aivar[39];
-	if(ARENA_PLAYERFIGHT)
+
+	//-------- lokale Variablen --------
+	var	C_NPC	target;
+	var	C_NPC	npc;
+	var	int		GrimPoints;
+	var	int		GoliathPoints;
+	var	int		BrutusPoints;
+	var	int		MalgarPoints;
+	var	int		ThoraPoints;
+
+	//-------- Punkte ermitteln --------
+	npc = Hlp_GetNpc(MIN_306_Grim	);	GrimPoints		= npc.aivar[AIV_ARENA_POINTS];
+	npc = Hlp_GetNpc(WRK_216_Goliath);	GoliathPoints	= npc.aivar[AIV_ARENA_POINTS];
+	npc = Hlp_GetNpc(MIL_121_Brutus	);	BrutusPoints	= npc.aivar[AIV_ARENA_POINTS];
+	npc = Hlp_GetNpc(DMH_1302_Malgar);	MalgarPoints	= npc.aivar[AIV_ARENA_POINTS];
+	npc = Hlp_GetNpc(AMZ_900_Thora	);	ThoraPoints		= npc.aivar[AIV_ARENA_POINTS];
+
+	//-------- Ziel-Instanz ermitteln --------
+	if	(Arena_PlayerFight)
 	{
 		target = Hlp_GetNpc(PC_Hero);
-		PrintDebugString(PD_ZS_Check,"...target: ",target.name);
+		PrintDebugString(PD_ZS_CHECK, "...target: ", target.name);
 	};
-	AI_Output(arenamaster,target,"MIL_122_ProclaimFinish_12_01");	//(theatralisch) DIE WÜRFEL SIND GEFALLEN.
-	if(ARENA_PLAYERFIGHT && ARENA_PLAYERHASWONTODAY)
+
+	//-------- Siegsätze ermitteln ermitteln --------
+	AI_Output			(arenamaster, target, "MIL_122_ProclaimFinish_12_01"); //(theatralisch) DIE WÜRFEL SIND GEFALLEN.
+
+	if	(Arena_PlayerFight && Arena_PlayerHasWonToday)
 	{
-		if((ARENA_PCRANKING == 1) && (ARENA_LASTPCRANKING == 2))
+		if	(Arena_PCRanking == 1)
+		&&	(Arena_LastPCRanking == 2)
 		{
-			AI_Output(arenamaster,target,"MIL_122_ProclaimFinish_12_02");	//WIR ABEN EINEN NEUEN CHAMPION !!!
-			AI_Output(arenamaster,target,"MIL_122_ProclaimFinish_12_03");	//!!! DU !!! ...BIST DER NEUE CHAMPION DIESER ARENA!
-			AI_Output(arenamaster,target,"MIL_122_ProclaimFinish_12_04");	//!!! DU !!! ...BIST DER BESTE KÄMPFER WEIT UND BREIT!
-			AI_Output(arenamaster,target,"MIL_122_ProclaimFinish_12_05");	//WIR VERNEIGEN UNS VOR DIR!
+			AI_Output	(arenamaster, target, "MIL_122_ProclaimFinish_12_02"); //WIR ABEN EINEN NEUEN CHAMPION !!!
+			AI_Output	(arenamaster, target, "MIL_122_ProclaimFinish_12_03"); //!!! DU !!! ...BIST DER NEUE CHAMPION DIESER ARENA!
+			AI_Output	(arenamaster, target, "MIL_122_ProclaimFinish_12_04"); //!!! DU !!! ...BIST DER BESTE KÄMPFER WEIT UND BREIT!
+			AI_Output	(arenamaster, target, "MIL_122_ProclaimFinish_12_05"); //WIR VERNEIGEN UNS VOR DIR!
 		}
 		else
 		{
-			AI_Output(arenamaster,target,"MIL_122_ProclaimFinish_12_06");	//DER SIEGER DES HEUTIGEN KAMPFES...
-			AI_TurnToNPC(arenamaster,hero);
-			AI_Output(arenamaster,hero,"MIL_122_ProclaimFinish_12_07");	//...bist DU !!!
+			AI_Output	(arenamaster, target, "MIL_122_ProclaimFinish_12_06"); //DER SIEGER DES HEUTIGEN KAMPFES...
+			AI_TurnToNpc(arenamaster, hero);
+			AI_Output	(arenamaster, hero, "MIL_122_ProclaimFinish_12_07"); //...bist DU !!!
 		};
 	}
 	else
 	{
-		AI_Output(arenamaster,target,"MIL_122_ProclaimFinish_12_08");	//DER SIEGER DES HEUTIGEN KAMPFES IST...
-		if(ARENA_PLAYERFIGHT && !ARENA_PLAYERHASWONTODAY && ((GRIM_CHALLENGED && (grimpoints < ARENA_POINTSFORVICTORY)) || (GOLIATH_CHALLENGED && (goliathpoints < ARENA_POINTSFORVICTORY)) || (BRUTUS_CHALLENGED && (brutuspoints < ARENA_POINTSFORVICTORY)) || (MALGAR_CHALLENGED && (malgarpoints < ARENA_POINTSFORVICTORY)) || (THORA_CHALLENGED && (thorapoints < ARENA_POINTSFORVICTORY))) && !ARENA_PLAYERBANNED)
+		AI_Output		(arenamaster, target, "MIL_122_ProclaimFinish_12_08"); //DER SIEGER DES HEUTIGEN KAMPFES IST...
+
+		if	Arena_PlayerFight
+		&&	!Arena_PlayerHasWonToday
+		&&	(	(Grim_Challenged	&& (GrimPoints		< ARENA_POINTSFORVICTORY))
+			||	(Goliath_Challenged	&& (GoliathPoints	< ARENA_POINTSFORVICTORY))
+			||	(Brutus_Challenged	&& (BrutusPoints	< ARENA_POINTSFORVICTORY))
+			||	(Malgar_Challenged	&& (MalgarPoints	< ARENA_POINTSFORVICTORY))
+			||	(Thora_Challenged	&& (ThoraPoints		< ARENA_POINTSFORVICTORY))	)
+		&&	!Arena_PlayerBanned
 		{
-			AI_Output(arenamaster,target,"MIL_122_ProclaimFinish_12_09");	//NIEMAND !!!
-			AI_Output(arenamaster,target,"MIL_122_ProclaimFinish_12_10");	//Kein Gladiator hat 10 Punkte erringen können.
-			AI_Output(arenamaster,target,"MIL_122_ProclaimFinish_12_11");	//Somit ist der heutige Kampf unentschieden!
+			AI_Output	(arenamaster, target, "MIL_122_ProclaimFinish_12_09"); //NIEMAND !!!
+			AI_Output	(arenamaster, target, "MIL_122_ProclaimFinish_12_10"); //Kein Gladiator hat 10 Punkte erringen können.
+			AI_Output	(arenamaster, target, "MIL_122_ProclaimFinish_12_11"); //Somit ist der heutige Kampf unentschieden!
 		};
-		if((ARENA_PLAYERFIGHT && GRIM_CHALLENGED && !ARENA_PLAYERHASWONTODAY && (grimpoints >= ARENA_POINTSFORVICTORY)) || (ARENA_PLAYERFIGHT && GRIM_CHALLENGED && ARENA_PLAYERBANNED) || (ARENA_NPCFIGHT && (ARENA_NPCCOMBO == AC_GRIM_GOLIATH) && (grimpoints > goliathpoints)))
+
+		if	(Arena_PlayerFight && Grim_Challenged && !Arena_PlayerHasWonToday && (GrimPoints >= ARENA_POINTSFORVICTORY))
+		||	(Arena_PlayerFight && Grim_Challenged && Arena_PlayerBanned)
+		||	(Arena_NpcFight	&& (Arena_NpcCombo == AC_GRIM_GOLIATH) && (GrimPoints > GoliathPoints))
 		{
-			AI_Output(arenamaster,target,"MIL_122_ProclaimFinish_12_12");	//!!!   G R I M   !!!!
+			AI_Output	(arenamaster, target, "MIL_122_ProclaimFinish_12_12"); //!!!   G R I M   !!!!
 		};
-		if((ARENA_PLAYERFIGHT && GOLIATH_CHALLENGED && !ARENA_PLAYERHASWONTODAY && (goliathpoints >= ARENA_POINTSFORVICTORY)) || (ARENA_PLAYERFIGHT && GOLIATH_CHALLENGED && ARENA_PLAYERBANNED) || (ARENA_NPCFIGHT && (ARENA_NPCCOMBO == AC_GRIM_GOLIATH) && (grimpoints <= goliathpoints)) || (ARENA_NPCFIGHT && (ARENA_NPCCOMBO == AC_GOLIATH_BRUTUS) && (goliathpoints > brutuspoints)))
+
+		if	(Arena_PlayerFight && Goliath_Challenged && !Arena_PlayerHasWonToday && (GoliathPoints >= ARENA_POINTSFORVICTORY))
+		||	(Arena_PlayerFight && Goliath_Challenged && Arena_PlayerBanned)
+		||	(Arena_NpcFight	&& (Arena_NpcCombo == AC_GRIM_GOLIATH)   && (GrimPoints <= GoliathPoints))
+		||	(Arena_NpcFight	&& (Arena_NpcCombo == AC_GOLIATH_BRUTUS) && (GoliathPoints > BrutusPoints))
 		{
-			AI_Output(arenamaster,target,"MIL_122_ProclaimFinish_12_13");	//!!!   G O L I A T H   !!!!
+			AI_Output	(arenamaster, target, "MIL_122_ProclaimFinish_12_13"); //!!!   G O L I A T H   !!!!
 		};
-		if((ARENA_PLAYERFIGHT && BRUTUS_CHALLENGED && !ARENA_PLAYERHASWONTODAY && (brutuspoints >= ARENA_POINTSFORVICTORY)) || (ARENA_PLAYERFIGHT && BRUTUS_CHALLENGED && ARENA_PLAYERBANNED) || (ARENA_NPCFIGHT && (ARENA_NPCCOMBO == AC_GOLIATH_BRUTUS) && (goliathpoints <= brutuspoints)) || (ARENA_NPCFIGHT && (ARENA_NPCCOMBO == AC_BRUTUS_MALGAR) && (brutuspoints > malgarpoints)))
+
+		if	(Arena_PlayerFight && Brutus_Challenged && !Arena_PlayerHasWonToday && (BrutusPoints >= ARENA_POINTSFORVICTORY))
+		||	(Arena_PlayerFight && Brutus_Challenged && Arena_PlayerBanned)
+		||	(Arena_NpcFight	&& (Arena_NpcCombo == AC_GOLIATH_BRUTUS) && (GoliathPoints <= BrutusPoints))
+		||	(Arena_NpcFight	&& (Arena_NpcCombo == AC_BRUTUS_MALGAR) && (BrutusPoints > MalgarPoints))
 		{
-			AI_Output(arenamaster,target,"MIL_122_ProclaimFinish_12_14");	//!!!   B R U T U S   !!!!
+			AI_Output	(arenamaster, target, "MIL_122_ProclaimFinish_12_14"); //!!!   B R U T U S   !!!!
 		};
-		if((ARENA_PLAYERFIGHT && MALGAR_CHALLENGED && !ARENA_PLAYERHASWONTODAY && (malgarpoints >= ARENA_POINTSFORVICTORY)) || (ARENA_PLAYERFIGHT && MALGAR_CHALLENGED && ARENA_PLAYERBANNED) || (ARENA_NPCFIGHT && (ARENA_NPCCOMBO == AC_BRUTUS_MALGAR) && (brutuspoints <= malgarpoints)) || (ARENA_NPCFIGHT && (ARENA_NPCCOMBO == AC_MALGAR_THORA) && (malgarpoints > thorapoints)))
+
+		if	(Arena_PlayerFight && Malgar_Challenged && !Arena_PlayerHasWonToday && (MalgarPoints >= ARENA_POINTSFORVICTORY))
+		||	(Arena_PlayerFight && Malgar_Challenged && Arena_PlayerBanned)
+		||	(Arena_NpcFight	&& (Arena_NpcCombo == AC_BRUTUS_MALGAR) && (BrutusPoints <= MalgarPoints))
+		||	(Arena_NpcFight	&& (Arena_NpcCombo == AC_MALGAR_THORA) && (MalgarPoints > ThoraPoints))
 		{
-			AI_Output(arenamaster,target,"MIL_122_ProclaimFinish_12_15");	//!!!   M A L G A R   !!!!
+			AI_Output	(arenamaster, target, "MIL_122_ProclaimFinish_12_15"); //!!!   M A L G A R   !!!!
 		};
-		if((ARENA_PLAYERFIGHT && THORA_CHALLENGED && !ARENA_PLAYERHASWONTODAY && (thorapoints >= ARENA_POINTSFORVICTORY)) || (ARENA_PLAYERFIGHT && THORA_CHALLENGED && ARENA_PLAYERBANNED) || (ARENA_NPCFIGHT && (ARENA_NPCCOMBO == AC_MALGAR_THORA) && (malgarpoints <= thorapoints)))
+
+		if	(Arena_PlayerFight && Thora_Challenged && !Arena_PlayerHasWonToday && (ThoraPoints >= ARENA_POINTSFORVICTORY))
+		||	(Arena_PlayerFight && Thora_Challenged && Arena_PlayerBanned)
+		||	(Arena_NpcFight	&& (Arena_NpcCombo == AC_MALGAR_THORA) && (MalgarPoints <= ThoraPoints))
 		{
-			AI_Output(arenamaster,target,"MIL_122_ProclaimFinish_12_16");	//!!!   T H O R A   !!!!
+			AI_Output	(arenamaster, target, "MIL_122_ProclaimFinish_12_16"); //!!!   T H O R A   !!!!
 		};
 	};
 };
+
+
 

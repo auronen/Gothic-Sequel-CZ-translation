@@ -1,31 +1,39 @@
-
-func void B_CombatReactToDamage()
+func void B_CombatReactToDamage ()
 {
-	PrintDebugNpc(PD_ZS_FRAME,"B_CombatReactToDamage");
-	PrintGlobals(PD_ZS_Check);
-	if(Npc_IsPlayer(other) && ((self.npcType == npctype_friend) || (Npc_GetPermAttitude(self,other) == ATT_FRIENDLY)))
+	PrintDebugNpc		(PD_ZS_FRAME, "B_CombatReactToDamage" );	
+	
+	PrintGlobals 		(PD_ZS_CHECK);
+	
+	//-------- friendly NSC wird von Spieler attackiert --------
+	if (Npc_IsPlayer(other) && ((self.npctype == NPCTYPE_FRIEND)||(Npc_GetPermAttitude(self,other)==ATT_FRIENDLY)))
 	{
 		return;
 	};
-	if(Npc_IsInFightMode(other,FMODE_FAR) || Npc_IsInFightMode(other,FMODE_MAGIC))
+
+	//-------- Merken ob Schaden durch Fernkampfwaffe/Magie verursacht wurde --------
+	if (Npc_IsInFightMode(other,FMODE_FAR) || Npc_IsInFightMode(other,FMODE_MAGIC))
 	{
-		self.aivar[5] = TRUE;
+		self.aivar[AIV_LASTHITBYRANGEDWEAPON] = TRUE;
 	}
 	else
 	{
-		self.aivar[5] = FALSE;
+		self.aivar[AIV_LASTHITBYRANGEDWEAPON] = FALSE;
 	};
-	if(Npc_IsPlayer(other))
+
+	//-------- ! --------
+	if ( Npc_IsPlayer( other ) )
 	{
-		Npc_SetTempAttitude(self,ATT_HOSTILE);
-		if((Npc_GetAttitude(self,other) == ATT_HOSTILE) || (Npc_GetAttitude(self,other) == ATT_ANGRY))
+		Npc_SetTempAttitude	(self,	ATT_HOSTILE);
+
+		if ( (Npc_GetAttitude( self, other ) == ATT_HOSTILE) || (Npc_GetAttitude( self, other ) == ATT_ANGRY) )
 		{
-			Npc_SetTarget(self,other);
+			Npc_SetTarget	(self,	other);
 		};
 	};
-	if(self.aivar[28])
+
+	//-------- spezielle Reaktionen im Kampf --------
+	if (self.aivar[AIV_SPECIALCOMBATDAMAGEREACTION])
 	{
 		B_SpecialCombatDamageReaction();
 	};
 };
-

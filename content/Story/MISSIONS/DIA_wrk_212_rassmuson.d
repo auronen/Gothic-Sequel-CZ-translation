@@ -1,107 +1,120 @@
-
-instance WRK_212_RASSMUSON_EXIT(C_Info)
+///////////////////////////////////////////////////////////////////////
+//	Info EXIT
+///////////////////////////////////////////////////////////////////////
+INSTANCE Wrk_212_Rassmuson_EXIT   (C_INFO)
 {
-	npc = wrk_212_rassmuson;
-	nr = 999;
-	condition = wrk_212_rassmuson_exit_condition;
-	information = wrk_212_rassmuson_exit_info;
-	permanent = TRUE;
+	npc         = Wrk_212_Rassmuson;
+	nr          = 999;
+	condition   = Wrk_212_Rassmuson_EXIT_Condition;
+	information = Wrk_212_Rassmuson_EXIT_Info;
+	permanent   = TRUE;
 	description = DIALOG_ENDE;
 };
 
-
-func int wrk_212_rassmuson_exit_condition()
+FUNC INT Wrk_212_Rassmuson_EXIT_Condition()
 {
 	return TRUE;
 };
 
-func void wrk_212_rassmuson_exit_info()
+FUNC VOID Wrk_212_Rassmuson_EXIT_Info()
 {
-	AI_StopProcessInfos(self);
+	AI_StopProcessInfos (self);
 };
 
-
-instance WRK_212_RASSMUSON_HI(C_Info)
+///////////////////////////////////////////////////////////////////////
+//	Info HI
+///////////////////////////////////////////////////////////////////////
+instance Wrk_212_Rassmuson_HI		(C_INFO)
 {
-	npc = wrk_212_rassmuson;
-	nr = 12;
-	condition = wrk_212_rassmuson_hi_condition;
-	information = wrk_212_rassmuson_hi_info;
-	important = FALSE;
-	permanent = FALSE;
-	description = "Was machst du hier?";
+	npc		 = 	Wrk_212_Rassmuson;
+	nr		 = 	12;
+	condition	 = 	Wrk_212_Rassmuson_HI_Condition;
+	information	 = 	Wrk_212_Rassmuson_HI_Info;
+	important	 = 	FALSE;
+	permanent	 = 	FALSE;
+
+	description	 = 	"Was machst du hier?";
 };
 
-
-func int wrk_212_rassmuson_hi_condition()
+func int Wrk_212_Rassmuson_HI_Condition ()
 {
 	return TRUE;
 };
 
-func void wrk_212_rassmuson_hi_info()
+func void Wrk_212_Rassmuson_HI_Info ()
 {
-	AI_Output(hero,self,"WRK_212_HI_15_01");	//Was machst du hier?
-	AI_Output(self,hero,"WRK_212_HI_01_02");	//Mir reicht's. Diese ewige Plockerei, die Orks, einfach alles.
-	AI_Output(self,hero,"WRK_212_HI_01_03");	//Jeden Tag schuften wir uns den Arsch ab,und wofür? Wenn die Orks kommen, sind wir eh Futter!
-	AI_Output(self,hero,"WRK_212_HI_01_04");	//Ich kann nicht mehr und ich will nicht mehr.
-	AI_Output(hero,self,"WRK_212_HI_15_05");	//Und was willst du tun?
-	AI_Output(self,hero,"WRK_212_HI_01_06");	//Ich werde mich absetzen,... aber wenn du das weitererzählst, mache ich dich fertig!
+	AI_Output			(hero, self, "WRK_212_HI_15_01"); //Was machst du hier?
+	AI_Output			(self, hero, "WRK_212_HI_01_02"); //Mir reicht's. Diese ewige Plockerei, die Orks, einfach alles.
+	AI_Output			(self, hero, "WRK_212_HI_01_03"); //Jeden Tag schuften wir uns den Arsch ab,und wofür? Wenn die Orks kommen, sind wir eh Futter!
+	AI_Output			(self, hero, "WRK_212_HI_01_04"); //Ich kann nicht mehr und ich will nicht mehr.
+	AI_Output			(hero, self, "WRK_212_HI_15_05"); //Und was willst du tun?
+	AI_Output			(self, hero, "WRK_212_HI_01_06"); //Ich werde mich absetzen,... aber wenn du das weitererzählst, mache ich dich fertig!
 };
 
-
-instance WRK_212_RASSMUSON_WHERE(C_Info)
+///////////////////////////////////////////////////////////////////////
+//	Info WHERE
+///////////////////////////////////////////////////////////////////////
+instance Wrk_212_Rassmuson_WHERE		(C_INFO)
 {
-	npc = wrk_212_rassmuson;
-	nr = 23;
-	condition = wrk_212_rassmuson_where_condition;
-	information = wrk_212_rassmuson_where_info;
-	important = FALSE;
-	permanent = FALSE;
-	description = "Wo willst du denn hin?";
+	npc		 = 	Wrk_212_Rassmuson;
+	nr		 = 	23;
+	condition	 = 	Wrk_212_Rassmuson_WHERE_Condition;
+	information	 = 	Wrk_212_Rassmuson_WHERE_Info;
+	important	 = 	FALSE;
+	permanent	 = 	FALSE;
+
+	description	 = 	"Wo willst du denn hin?";
 };
 
-
-func int wrk_212_rassmuson_where_condition()
+func int Wrk_212_Rassmuson_WHERE_Condition ()
 {
-	if(Npc_KnowsInfo(hero,wrk_212_rassmuson_hi))
+	if Npc_KnowsInfo (hero,Wrk_212_Rassmuson_HI)
 	{
 		return TRUE;
 	};
 };
-
-func void wrk_212_rassmuson_where_info()
+func void Wrk_212_Rassmuson_WHERE_Info ()
 {
-	AI_Output(hero,self,"WRK_212_WHERE_15_01");	//Wo willst du denn hin?
-	AI_Output(self,hero,"WRK_212_WHERE_01_02");	//Keine Ahnung. Ich werde mir ein paar Vorräte und einen Bogen mitnehmen und mich den Jägern anschliessen.
-	AI_Output(self,hero,"WRK_212_WHERE_01_03");	//Irgendwo finde ich schon eine Höhle wo ich unterkommen kann, bis der ganze Scheiss hier vorbei ist!
-	AI_Output(self,hero,"WRK_212_WHERE_01_04");	//Ich warte nur noch auf einen günstigen Augenblick...
-	AI_StopProcessInfos(self);
+	AI_Output			(hero, self, "WRK_212_WHERE_15_01"); //Wo willst du denn hin?
+	AI_Output			(self, hero, "WRK_212_WHERE_01_02"); //Keine Ahnung. Ich werde mir ein paar Vorräte und einen Bogen mitnehmen und mich den Jägern anschliessen.
+	AI_Output			(self, hero, "WRK_212_WHERE_01_03"); //Irgendwo finde ich schon eine Höhle wo ich unterkommen kann, bis der ganze Scheiss hier vorbei ist!
+	AI_Output			(self, hero, "WRK_212_WHERE_01_04"); //Ich warte nur noch auf einen günstigen Augenblick...
+	AI_StopProcessInfos (self);
 };
 
-
-instance WRK_212_RASSMUSON_AGAIN(C_Info)
+///////////////////////////////////////////////////////////////////////
+//	Info AGAIN
+///////////////////////////////////////////////////////////////////////
+instance Wrk_212_Rassmuson_AGAIN		(C_INFO)
 {
-	npc = wrk_212_rassmuson;
-	nr = 33;
-	condition = wrk_212_rassmuson_again_condition;
-	information = wrk_212_rassmuson_again_info;
-	important = FALSE;
-	permanent = TRUE;
-	description = "Na, immer noch da?";
+	npc		 = 	Wrk_212_Rassmuson;
+	nr		 = 	33;
+	condition	 = 	Wrk_212_Rassmuson_AGAIN_Condition;
+	information	 = 	Wrk_212_Rassmuson_AGAIN_Info;
+	important	 = 	FALSE;
+	permanent	 = 	TRUE;
+
+	description	 = 	"Na, immer noch da?";
 };
 
-
-func int wrk_212_rassmuson_again_condition()
+func int Wrk_212_Rassmuson_AGAIN_Condition ()
 {
-	if(Npc_KnowsInfo(hero,wrk_212_rassmuson_where))
+	if Npc_KnowsInfo (hero,Wrk_212_Rassmuson_WHERE)
 	{
 		return TRUE;
 	};
 };
-
-func void wrk_212_rassmuson_again_info()
+func void Wrk_212_Rassmuson_AGAIN_Info ()
 {
-	AI_Output(hero,self,"WRK_212_AGAIN_15_01");	//Na, immer noch da?
-	AI_Output(self,hero,"WRK_212_AGAIN_01_02");	//Ja, gute Vorbereitungen brauchen ihre Zeit.
+	AI_Output			(hero, self, "WRK_212_AGAIN_15_01"); //Na, immer noch da?
+	AI_Output			(self, hero, "WRK_212_AGAIN_01_02"); //Ja, gute Vorbereitungen brauchen ihre Zeit.
 };
+
+
+
+
+
+
+
+
 

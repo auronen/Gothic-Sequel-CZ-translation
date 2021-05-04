@@ -1,106 +1,132 @@
-
-instance MIL_123_OSBERT_EXIT(C_Info)
+///////////////////////////////////////////////////////////////////////
+//	Info EXIT
+///////////////////////////////////////////////////////////////////////
+INSTANCE MIL_123_Osbert_EXIT   (C_INFO)
 {
-	npc = mil_123_osbert;
-	nr = 999;
-	condition = mil_123_osbert_exit_condition;
-	information = mil_123_osbert_exit_info;
-	permanent = TRUE;
+	npc         = MIL_123_Osbert;
+	nr          = 999;
+	condition   = MIL_123_Osbert_EXIT_Condition;
+	information = MIL_123_Osbert_EXIT_Info;
+	permanent   = TRUE;
 	description = DIALOG_ENDE;
 };
 
-
-func int mil_123_osbert_exit_condition()
+FUNC INT MIL_123_Osbert_EXIT_Condition()
 {
 	return TRUE;
 };
 
-func void mil_123_osbert_exit_info()
+FUNC VOID MIL_123_Osbert_EXIT_Info()
 {
-	AI_StopProcessInfos(self);
+	AI_StopProcessInfos (self);
+};
+///////////////////////////////////////////////////////////////////////
+//	Info GOTCHA
+///////////////////////////////////////////////////////////////////////
+instance MIL_123_Osbert_GOTCHA		(C_INFO)
+{
+	npc		 = 	MIL_123_Osbert;
+	condition	 = 	MIL_123_Osbert_GOTCHA_Condition;
+	information	 = 	MIL_123_Osbert_GOTCHA_Info;
+	important	 = 	TRUE;
+	permanent	 = 	FALSE;
 };
 
-
-instance MIL_123_OSBERT_GOTCHA(C_Info)
+func int MIL_123_Osbert_GOTCHA_Condition ()
 {
-	npc = mil_123_osbert;
-	condition = mil_123_osbert_gotcha_condition;
-	information = mil_123_osbert_gotcha_info;
-	important = TRUE;
-	permanent = FALSE;
+	if (!Npc_HasItems (hero, ItKe_Jail)>=1)
+	&& ! Npc_KnowsInfo (hero,MIL_123_Osbert_THIEF)
+	&&  Npc_KnowsInfo (hero,PC_Thief_STARTRAINING_THIEF)
+	{
+			return TRUE;
+	};
+};
+func void MIL_123_Osbert_GOTCHA_Info ()
+{
+
+	AI_Output			(self, hero, "MIL_123_GOTCHA_00_01"); //Halt! Was hast du hier zu suchen?
+	AI_Output			(hero, self, "MIL_123_GOTCHA_15_02"); //Ich seh mich nur mal um.
+	AI_Output			(self, hero, "MIL_123_GOTCHA_00_03"); //Umsehen- okay. Aber halt die Flossen still. Wenn du versuchst irgendwas mitgehen zu lassen, dann bekommst du Ärger.
+	AI_Output			(hero, self, "MIL_123_GOTCHA_15_04"); //Kein Problem, ich steck schon nichts ein...
+	AI_TurnAway 		(hero,self);
+	AI_Output			(hero, self, "MIL_123_GOTCHA_15_05"); //(halblaut) ...und wenn, dann würdest du es sowieso nicht mitkriegen...
+
+	AI_StopProcessInfos (self);
 };
 
-
-func int mil_123_osbert_gotcha_condition()
+///////////////////////////////////////////////////////////////////////
+//	Info THIEF
+///////////////////////////////////////////////////////////////////////
+instance MIL_123_Osbert_THIEF		(C_INFO)
 {
-	if((!Npc_HasItems(hero,itke_jail) >= 1) && !Npc_KnowsInfo(hero,mil_123_osbert_thief) && Npc_KnowsInfo(hero,pc_thief_startraining_thief))
+	npc		 = 	MIL_123_Osbert;
+	condition	 = 	MIL_123_Osbert_THIEF_Condition;
+	information	 = 	MIL_123_Osbert_THIEF_Info;
+	important	 = 	TRUE;
+	permanent	 = 	FALSE;
+
+
+};
+
+func int MIL_123_Osbert_THIEF_Condition ()
+{
+	if Npc_HasItems (hero, ItKe_Jail)
 	{
 		return TRUE;
 	};
 };
-
-func void mil_123_osbert_gotcha_info()
+func void MIL_123_Osbert_THIEF_Info ()
 {
-	AI_Output(self,hero,"MIL_123_GOTCHA_00_01");	//Halt! Was hast du hier zu suchen?
-	AI_Output(hero,self,"MIL_123_GOTCHA_15_02");	//Ich seh mich nur mal um.
-	AI_Output(self,hero,"MIL_123_GOTCHA_00_03");	//Umsehen- okay. Aber halt die Flossen still. Wenn du versuchst irgendwas mitgehen zu lassen, dann bekommst du Ärger.
-	AI_Output(hero,self,"MIL_123_GOTCHA_15_04");	//Kein Problem, ich steck schon nichts ein...
-	AI_TurnAway(hero,self);
-	AI_Output(hero,self,"MIL_123_GOTCHA_15_05");	//(halblaut) ...und wenn, dann würdest du es sowieso nicht mitkriegen...
-	AI_StopProcessInfos(self);
+	AI_GotoNpc 			(self, hero);
+	AI_Output			(self, hero, "MIL_123_THIEF_00_01"); //Hab ich dich erwischt! Du hast doch bestimmt was mitgenommen!
+	B_GiveInvItems		(hero, self,Itke_Jail,1);
+	AI_Output			(self, hero, "MIL_123_THIEF_00_02"); //Aha! Der Kerkerschlüssel, wußte ich es doch! Der bleibt hier! Und du verschwindest jetzt besser!
+
+	B_LogEntry			(CH1_TrainSneak,"Verdammt, jetzt hat Osbert den Schlüssel. Ich sollte Gerion darüber informieren.");
+
+	AI_StopProcessInfos (self);
 };
 
-
-instance MIL_123_OSBERT_THIEF(C_Info)
+///////////////////////////////////////////////////////////////////////
+//	Info HI
+///////////////////////////////////////////////////////////////////////
+instance MIL_123_Osbert_HI		(C_INFO)
 {
-	npc = mil_123_osbert;
-	condition = mil_123_osbert_thief_condition;
-	information = mil_123_osbert_thief_info;
-	important = TRUE;
-	permanent = FALSE;
+	npc		 = 	MIL_123_Osbert;
+	nr		 = 	23;
+	condition	 = 	MIL_123_Osbert_HI_Condition;
+	information	 = 	MIL_123_Osbert_HI_Info;
+	important	 = 	FALSE;
+	permanent	 = 	TRUE;
+
+	description	 = 	"Was gibt's Neues?";
 };
 
-
-func int mil_123_osbert_thief_condition()
-{
-	if(Npc_HasItems(hero,itke_jail))
-	{
-		return TRUE;
-	};
-};
-
-func void mil_123_osbert_thief_info()
-{
-	AI_GotoNpc(self,hero);
-	AI_Output(self,hero,"MIL_123_THIEF_00_01");	//Hab ich dich erwischt! Du hast doch bestimmt was mitgenommen!
-	B_GiveInvItems(hero,self,itke_jail,1);
-	AI_Output(self,hero,"MIL_123_THIEF_00_02");	//Aha! Der Kerkerschlüssel, wußte ich es doch! Der bleibt hier! Und du verschwindest jetzt besser!
-	B_LogEntry(CH1_TRAINSNEAK,"Verdammt, jetzt hat Osbert den Schlüssel. Ich sollte Gerion darüber informieren.");
-	AI_StopProcessInfos(self);
-};
-
-
-instance MIL_123_OSBERT_HI(C_Info)
-{
-	npc = mil_123_osbert;
-	nr = 23;
-	condition = mil_123_osbert_hi_condition;
-	information = mil_123_osbert_hi_info;
-	important = FALSE;
-	permanent = TRUE;
-	description = "Was gibt's Neues?";
-};
-
-
-func int mil_123_osbert_hi_condition()
+func int MIL_123_Osbert_HI_Condition ()
 {
 	return TRUE;
 };
 
-func void mil_123_osbert_hi_info()
+func void MIL_123_Osbert_HI_Info ()
 {
-	AI_Output(hero,self,"MIL_123_HI_15_01");	//Was gibt's Neues?
-	AI_Output(self,hero,"MIL_123_HI_07_02");	//Pass auf Bürschchen, mag ja sein das du ein Freund von Diego bist,...
-	AI_Output(self,hero,"MIL_123_HI_07_03");	//...aber wenn ich dich beim Rumschnüffeln erwische, dann bist du dran!
+	AI_Output			(hero, self, "MIL_123_HI_15_01"); //Was gibt's Neues?
+	AI_Output			(self, hero, "MIL_123_HI_07_02"); //Pass auf Bürschchen, mag ja sein das du ein Freund von Diego bist,...
+	AI_Output			(self, hero, "MIL_123_HI_07_03"); //...aber wenn ich dich beim Rumschnüffeln erwische, dann bist du dran!
 };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

@@ -1,5 +1,5 @@
-
-func void b_assignambientinfos_mine_min_4(var C_Npc slf)
+FUNC VOID B_AssignAmbientInfos_Mine_Min_4(var c_NPC slf)
 {
+	
+	
 };
-

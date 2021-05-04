@@ -1,258 +1,286 @@
-
-instance PC_MAGE_EXIT(C_Info)
+///////////////////////////////////////////////////////////////////////
+//	Info EXIT 
+///////////////////////////////////////////////////////////////////////
+INSTANCE PC_Mage_EXIT   (C_INFO)
 {
-	npc = PC_Mage;
-	nr = 999;
-	condition = pc_mage_exit_condition;
-	information = pc_mage_exit_info;
-	permanent = TRUE;
+	npc         = PC_Mage;
+	nr          = 999;
+	condition   = PC_Mage_EXIT_Condition;
+	information = PC_Mage_EXIT_Info;
+	permanent   = TRUE;
 	description = DIALOG_ENDE;
 };
 
-
-func int pc_mage_exit_condition()
+FUNC INT PC_Mage_EXIT_Condition()
 {
 	return TRUE;
 };
 
-func void pc_mage_exit_info()
+FUNC VOID PC_Mage_EXIT_Info()
 {
-	AI_StopProcessInfos(self);
+	AI_StopProcessInfos (self);
 };
 
+ 
 
-instance PC_MAGE_WELCOME(C_Info)
+///////////////////////////////////////////////////////////////////////
+//	Info WELCOME
+///////////////////////////////////////////////////////////////////////
+instance PC_Mage_WELCOME		(C_INFO)
 {
-	npc = PC_Mage;
-	nr = 1;
-	condition = pc_mage_welcome_condition;
-	information = pc_mage_welcome_info;
-	important = TRUE;
-	permanent = FALSE;
+	npc		 = 	PC_Mage;
+	nr		 = 	1;
+	condition	 = 	PC_Mage_WELCOME_Condition;
+	information	 = 	PC_Mage_WELCOME_Info;
+	important	 = 	TRUE;
+	permanent	 = 	FALSE;
 };
 
-
-func int pc_mage_welcome_condition()
+func int PC_Mage_WELCOME_Condition ()
 {
 	return TRUE;
 };
 
-func void pc_mage_welcome_info()
+func void PC_Mage_WELCOME_Info ()
 {
-	AI_Output(self,hero,"PC_Mage_WELCOME_15_01");	//
-	AI_Output(hero,self,"PC_Mage_WELCOME_15_02");	//
-	AI_Output(self,hero,"PC_Mage_WELCOME_02_03");	//
-	AI_Output(hero,self,"PC_Mage_WELCOME_15_04");	//
-	AI_Output(hero,self,"PC_Mage_WELCOME_15_05");	//
-	AI_Output(self,hero,"PC_Mage_WELCOME_02_06");	//
-	AI_Output(hero,self,"PC_Mage_WELCOME_15_07");	//
-	AI_Output(self,hero,"PC_Mage_WELCOME_02_08");	//
+	
+	AI_Output			(self, hero, "PC_Mage_WELCOME_15_01"); //Hey, ich dachte du wärst tot!
+	AI_Output			(hero, self, "PC_Mage_WELCOME_15_02"); //Da bist du nicht der einzige. 
+	AI_Output			(self, hero, "PC_Mage_WELCOME_02_03"); //Wie ist es dir seit unserem letzten Treffen ergangen? 
+	AI_Output			(hero, self, "PC_Mage_WELCOME_15_04"); //Naja, ich hab den Schläfer verbannt, lag ein halbes Jahr unter Felstrümmern begraben, 
+ 	AI_Output			(hero, self, "PC_Mage_WELCOME_15_05"); //und als ich schliesslich gerettet werde, erfahre ich, das wir von Orks umzingelt sind und Dämonen unterwegs sind. 
+	AI_Output			(self, hero, "PC_Mage_WELCOME_02_06"); //Du steckst mal wieder mittendrin. 
+	AI_Output			(hero, self, "PC_Mage_WELCOME_15_07"); //So sieht's aus. Und jetzt brauche ich deine Hilfe.
+	AI_Output			(self, hero, "PC_Mage_WELCOME_02_08"); //Was kann ich für dich tun? 
+	
 };
 
-
-instance PC_MAGE_DEMONS(C_Info)
+///////////////////////////////////////////////////////////////////////
+//	Info DEMONS
+///////////////////////////////////////////////////////////////////////
+instance PC_Mage_DEMONS		(C_INFO)
 {
-	npc = PC_Mage;
-	nr = 2;
-	condition = pc_mage_demons_condition;
-	information = pc_mage_demons_info;
-	important = FALSE;
-	permanent = FALSE;
-	description = "Was weißt du über die Dämonen? ";
+	npc		 = 	PC_Mage;
+	nr		 = 	2;
+	condition	 = 	PC_Mage_DEMONS_Condition;
+	information	 = 	PC_Mage_DEMONS_Info;
+	important	 = 	FALSE;
+	permanent	 = 	FALSE;
+
+	description	 = 	"Was weißt du über die Dämonen? ";
 };
 
-
-func int pc_mage_demons_condition()
+func int PC_Mage_DEMONS_Condition ()
 {
-	if(Npc_KnowsInfo(hero,pc_mage_welcome))
+	if Npc_KnowsInfo (hero,PC_Mage_WELCOME)
 	{
 		return TRUE;
 	};
 };
-
-func void pc_mage_demons_info()
+func void PC_Mage_DEMONS_Info ()
 {
-	AI_Output(hero,self,"PC_Mage_DEMONS_15_01");	//
-	AI_Output(self,hero,"PC_Mage_DEMONS_02_02");	//
-	AI_Output(hero,self,"PC_Mage_DEMONS_15_03");	//
-	AI_Output(self,hero,"PC_Mage_DEMONS_02_04");	//
-	AI_Output(hero,self,"PC_Mage_DEMONS_15_05");	//
-	AI_Output(self,hero,"PC_Mage_DEMONS_02_06");	//
-	AI_Output(hero,self,"PC_Mage_DEMONS_15_07");	//
+	AI_Output			(hero, self, "PC_Mage_DEMONS_15_01"); //Was weißt du über die Dämonen?
+	AI_Output			(self, hero, "PC_Mage_DEMONS_02_02"); //Nun, sie können sich an jedem Ort im Tal manifestieren. 
+	AI_Output			(hero, self, "PC_Mage_DEMONS_15_03"); //Was noch?
+	AI_Output			(self, hero, "PC_Mage_DEMONS_02_04"); //Hmmm... sie sind weitaus stärker als ihre natürlichen Abbilder.  
+	AI_Output			(hero, self, "PC_Mage_DEMONS_15_05"); //Aber wir können sie mit unseren Waffen töten. 
+	AI_Output			(self, hero, "PC_Mage_DEMONS_02_06"); //Und es werden mehr. Das ist alles was ich weiß. 
+	AI_Output			(hero, self, "PC_Mage_DEMONS_15_07"); //Immerhin ein Anfang.
 };
 
-
-instance PC_MAGE_KDF(C_Info)
+///////////////////////////////////////////////////////////////////////
+//	Info KDF
+///////////////////////////////////////////////////////////////////////
+instance PC_Mage_KDF		(C_INFO)
 {
-	npc = PC_Mage;
-	nr = 2;
-	condition = pc_mage_kdf_condition;
-	information = pc_mage_kdf_info;
-	important = FALSE;
-	permanent = FALSE;
-	description = "Ich muss mit den Feuermagiern sprechen";
+	npc		 	 = 	PC_Mage;
+	nr		 	 = 	2;
+	condition	 = 	PC_Mage_KDF_Condition;
+	information	 = 	PC_Mage_KDF_Info;
+	important	 = 	FALSE;
+	permanent	 = 	FALSE;
+
+	description	 = 	"Ich muss mit den Feuermagiern sprechen";
 };
 
-
-func int pc_mage_kdf_condition()
+func int PC_Mage_KDF_Condition ()
 {
-	if(Npc_KnowsInfo(hero,pc_mage_welcome))
+	if Npc_KnowsInfo (hero,PC_Mage_WELCOME)
 	{
 		return TRUE;
 	};
 };
-
-func void pc_mage_kdf_info()
+func void PC_Mage_KDF_Info ()
 {
-	AI_Output(hero,self,"PC_Mage_KDF_15_01");	//
-	AI_Output(self,hero,"PC_Mage_KDF_02_02");	//
-	AI_Output(hero,self,"PC_Mage_KDF_15_03");	//
-	AI_Output(self,hero,"PC_Mage_KDF_02_04");	//
-	AI_Output(hero,self,"PC_Mage_KDF_15_05");	//
-	AI_Output(self,hero,"PC_Mage_KDF_02_06");	//
-	AI_Output(self,hero,"PC_Mage_KDF_02_07");	//
+	AI_Output			(hero, self, "PC_Mage_KDF_15_01"); //Ich muss mit den Feuermagiern sprechen.
+	AI_Output			(self, hero, "PC_Mage_KDF_02_02"); //Was willst du von ihnen?
+	AI_Output			(hero, self, "PC_Mage_KDF_15_03"); //Ich muss herausfinden was sie vorhaben.
+	AI_Output			(self, hero, "PC_Mage_KDF_02_04"); //Sie forschen zur Zeit nach einer Möglichkeit die Dämonen aufzuhalten.
+	AI_Output			(hero, self, "PC_Mage_KDF_15_05"); //Genau deshalb will ich mit ihnen sprechen. Ich muss wissen was sie planen.
+	AI_Output			(self, hero, "PC_Mage_KDF_02_06"); //Dann solltest du mit Catmaol sprechen, dem Berater des Königs. Er hält sich im Thronsaal auf. 
+	AI_Output			(self, hero, "PC_Mage_KDF_02_07"); //Aber nur wer sich als loyal und fähig erwiesen hat, bekommt das Recht den Thronsaal zu betreten. 
+
 };
 
-
-instance PC_MAGE_TODO(C_Info)
+///////////////////////////////////////////////////////////////////////
+//	Info TODO
+///////////////////////////////////////////////////////////////////////
+instance PC_Mage_TODO		(C_INFO)
 {
-	npc = PC_Mage;
-	nr = 3;
-	condition = pc_mage_todo_condition;
-	information = pc_mage_todo_info;
-	important = FALSE;
-	permanent = FALSE;
-	description = "Dann werde ich mir dieses Recht verschaffen";
+	npc		 = 	PC_Mage;
+	nr		 = 	3;
+	condition	 = 	PC_Mage_TODO_Condition;
+	information	 = 	PC_Mage_TODO_Info;
+	important	 = 	FALSE;
+	permanent	 = 	FALSE;
+
+	description	 = 	"Dann werde ich mir dieses Recht verschaffen";
 };
 
-
-func int pc_mage_todo_condition()
+func int PC_Mage_TODO_Condition ()
 {
-	if(Npc_KnowsInfo(hero,pc_mage_kdf))
+	if Npc_KnowsInfo (hero,PC_Mage_KDF)
 	{
 		return TRUE;
 	};
 };
-
-func void pc_mage_todo_info()
+func void PC_Mage_TODO_Info ()
 {
-	AI_Output(hero,self,"PC_Mage_TODO_15_01");	//
-	AI_Output(self,hero,"PC_Mage_TODO_02_02");	//
-	AI_Output(self,hero,"PC_Mage_TODO_02_03");	//
-	AI_Output(self,hero,"PC_Mage_TODO_02_04");	//
-	AI_Output(self,hero,"PC_Mage_TODO_02_05");	//
-	Info_ClearChoices(pc_mage_todo);
-	if(Npc_GetTalentSkill(hero,NPC_TALENT_MAGE) == 1)
-	{
-		Info_AddChoice(pc_mage_todo,"Erster Kreis der Magie",pc_mage_todo_mage_1);
+	AI_Output			(hero, self, "PC_Mage_TODO_15_01"); //Dann werde ich mir dieses Recht wohl verschaffen müssen.
+	AI_Output			(self, hero, "PC_Mage_TODO_02_02"); //Gut. Wenn du die anderen Magier von deinen Fähigkeiten überzeugen kannst, wirst du Zugang zum Thronsaal bekommen.  
+	AI_Output			(self, hero, "PC_Mage_TODO_02_03"); //Ich werde dich dabei unterstützen.
+	AI_Output			(self, hero, "PC_Mage_TODO_02_04"); //Um das Vertrauen der Magier zu gewinnen, ist es hilfreich das ich weiß, was du bisher gelernt hast. 
+	AI_Output			(self, hero, "PC_Mage_TODO_02_05"); //Verschwenden wir keine Zeit. Also, was hast du aus dem Bereich der Magie gelernt?
+	Info_ClearChoices (PC_Mage_TODO);
+	
+	if (Npc_GetTalentSkill (hero, NPC_TALENT_MAGE) == 1)
+	{ 
+		Info_AddChoice (PC_Mage_TODO,"Erster Kreis der Magie",PC_Mage_TODO_Mage_1);
 	};
-	if(Npc_GetTalentSkill(hero,NPC_TALENT_MAGE) == 2)
-	{
-		Info_AddChoice(pc_mage_todo,"Zweiter Kreis der Magie",pc_mage_todo_mage_2);
+	if (Npc_GetTalentSkill (hero, NPC_TALENT_MAGE) == 2)
+	{ 
+		Info_AddChoice (PC_Mage_TODO,"Zweiter Kreis der Magie",PC_Mage_TODO_Mage_2);
 	};
-	if(Npc_GetTalentSkill(hero,NPC_TALENT_ALCHEMY) >= 1)
+	if (Npc_GetTalentSkill (hero, NPC_TALENT_ALCHEMY) >= 1 )
 	{
-		Info_AddChoice(pc_mage_todo,"Alchimie",pc_mage_todo_alchemy);
+		Info_AddChoice (PC_Mage_TODO,"Alchimie",PC_Mage_TODO_Alchemy);
 	};
-	if(Npc_GetTalentSkill(hero,NPC_TALENT_THAUMATURGY) >= 1)
+	if (Npc_GetTalentSkill (hero, NPC_TALENT_THAUMATURGY) >= 1 )
 	{
-		Info_AddChoice(pc_mage_todo,"Runen herstellen",pc_mage_todo_thaumaturgy);
+		Info_AddChoice (PC_Mage_TODO,"Runen herstellen",PC_Mage_TODO_THAUMATURGY);
 	};
-	if(!(Npc_GetTalentSkill(hero,NPC_TALENT_THAUMATURGY) >= 1) && !(Npc_GetTalentSkill(hero,NPC_TALENT_ALCHEMY) >= 1) && !(Npc_GetTalentSkill(hero,NPC_TALENT_MAGE) >= 1))
+	if !(Npc_GetTalentSkill (hero, NPC_TALENT_THAUMATURGY) >= 1 )
+	&& !(Npc_GetTalentSkill (hero, NPC_TALENT_ALCHEMY) >= 1 )
+	&& !(Npc_GetTalentSkill (hero, NPC_TALENT_MAGE) >= 1)
 	{
-		Info_AddChoice(pc_mage_todo,"Kein magisches Talent",pc_mage_todo_nothing);
+		Info_AddChoice (PC_Mage_TODO,"Kein magisches Talent",PC_Mage_TODO_Nothing);
 	};
 };
 
-func void pc_mage_todo_mage_1()
+FUNC VOID PC_Mage_TODO_Mage_1 ()
 {
-	AI_Output(hero,self,"PC_Mage_TODO_Mage_1_15_01");	//
-	AI_Output(self,hero,"PC_Mage_TODO_Mage_1_02_02");	//
-	MAGE_TRUST = MAGE_TRUST + 1;
+	AI_Output			(hero, self, "PC_Mage_TODO_Mage_1_15_01"); //Ich beherrsche den ersten Kreis der Magie.
+	AI_Output			(self, hero, "PC_Mage_TODO_Mage_1_02_02"); //Der erste Schritt auf einem lohnenden Weg. Ja, das ist nützlich. 
+	
+	Mage_Trust = Mage_Trust + 1;
+};
+FUNC VOID PC_Mage_TODO_Mage_2 ()
+{
+	AI_Output			(hero, self, "PC_Mage_TODO_Mage_2_15_01"); //Ich beherrsche den zweiten Kreis der Magie.
+	AI_Output			(self, hero, "PC_Mage_TODO_Mage_2_02_02"); //Sehr gut, du hast die wenige Zeit bisher sinnvoll genutzt.
+	
+	Mage_Trust = Mage_Trust + 2;
+};
+FUNC VOID PC_Mage_TODO_Alchemy ()
+{
+	AI_Output			(hero, self, "PC_Mage_TODO_Alchemy_15_01"); //Ich besitze alchimistische Kenntnisse.
+	AI_Output			(self, hero, "PC_Mage_TODO_Alchemy_02_02"); //Gut, das wird Morogh unser Alchimist zu schätzen wissen. 
+	
+	Mage_Trust = Mage_Trust + 1;
+};
+FUNC VOID PC_Mage_TODO_THAUMATURGY ()
+{
+	AI_Output			(hero, self, "PC_Mage_TODO_THAUMATURGY_15_01"); //Ich kann Runen herstellen. 
+	AI_Output			(self, hero, "PC_Mage_TODO_THAUMATURGY_02_02"); //Ausgezeichnet. Damit verdienst du ihren Respekt.  
+	
+	Mage_Trust = Mage_Trust + 1;
+	
+};
+FUNC VOID PC_Mage_TODO_Nothing ()
+{
+	AI_Output			(hero, self, "PC_Mage_TODO_Nothing_15_01"); //Ich beherrsche kein magisches Talent. 
+	AI_Output			(self, hero, "PC_Mage_TODO_Nothing_02_02"); //Das ist keine gute Voraussetzung.
+};
+///////////////////////////////////////////////////////////////////////
+//	Info ABOUT
+///////////////////////////////////////////////////////////////////////
+instance PC_Mage_ABOUT		(C_INFO)
+{
+	npc		 = 	PC_Mage;
+	nr		 = 	2;
+	condition	 = 	PC_Mage_ABOUT_Condition;
+	information	 = 	PC_Mage_ABOUT_Info;
+	important	 = 	FALSE;
+	permanent	 = 	FALSE;
+
+	description	 = 	"Und, wie geht's jetzt weiter? (WORKINPROGRESS)";
 };
 
-func void pc_mage_todo_mage_2()
-{
-	AI_Output(hero,self,"PC_Mage_TODO_Mage_2_15_01");	//
-	AI_Output(self,hero,"PC_Mage_TODO_Mage_2_02_02");	//
-	MAGE_TRUST = MAGE_TRUST + 2;
-};
-
-func void pc_mage_todo_alchemy()
-{
-	AI_Output(hero,self,"PC_Mage_TODO_Alchemy_15_01");	//
-	AI_Output(self,hero,"PC_Mage_TODO_Alchemy_02_02");	//
-	MAGE_TRUST = MAGE_TRUST + 1;
-};
-
-func void pc_mage_todo_thaumaturgy()
-{
-	AI_Output(hero,self,"PC_Mage_TODO_THAUMATURGY_15_01");	//
-	AI_Output(self,hero,"PC_Mage_TODO_THAUMATURGY_02_02");	//
-	MAGE_TRUST = MAGE_TRUST + 1;
-};
-
-func void pc_mage_todo_nothing()
-{
-	AI_Output(hero,self,"PC_Mage_TODO_Nothing_15_01");	//
-	AI_Output(self,hero,"PC_Mage_TODO_Nothing_02_02");	//
-};
-
-
-instance PC_MAGE_ABOUT(C_Info)
-{
-	npc = PC_Mage;
-	nr = 2;
-	condition = pc_mage_about_condition;
-	information = pc_mage_about_info;
-	important = FALSE;
-	permanent = FALSE;
-	description = "Und, wie geht's jetzt weiter? (WORKINPROGRESS)";
-};
-
-
-func int pc_mage_about_condition()
-{
-	if(Npc_KnowsInfo(hero,pc_mage_todo))
+func int PC_Mage_ABOUT_Condition ()
+{	
+	if Npc_KnowsInfo (hero,PC_Mage_TODO)
 	{
 		return TRUE;
 	};
 };
-
-func void pc_mage_about_info()
+func void PC_Mage_ABOUT_Info ()
 {
-	AI_Output(hero,self,"PC_Mage_ABOUT_15_01");	//
-	AI_Output(self,hero,"PC_Mage_ABOUT_02_02");	//
-	Info_ClearChoices(pc_mage_about);
-	Info_AddChoice(pc_mage_about,"Morogh (Alchimist)",pc_mage_about_morogh);
-	Info_AddChoice(pc_mage_about,"Nereus (Magietheoretiker)",pc_mage_about_nereus);
-	Info_AddChoice(pc_mage_about,"Feoras (Runen Hersteller)",pc_mage_about_feoras);
-	Info_AddChoice(pc_mage_about,DIALOG_BACK,pc_mage_about_back);
+	AI_Output			(hero, self, "PC_Mage_ABOUT_15_01"); //Und, wie geht's jetzt weiter? (WORKINPROGRESS)
+	AI_Output			(self, hero, "PC_Mage_ABOUT_02_02"); //Das kommt darauf an. Wen willst du überzeugen?
+	
+	Info_ClearChoices (PC_Mage_ABOUT);
+	
+	Info_AddChoice	(PC_Mage_ABOUT,"Morogh (Alchimist)",PC_Mage_ABOUT_Morogh);
+	Info_AddChoice	(PC_Mage_ABOUT,"Nereus (Magietheoretiker)",PC_Mage_ABOUT_Nereus);
+	Info_AddChoice	(PC_Mage_ABOUT,"Feoras (Runen Hersteller)",PC_Mage_ABOUT_Feoras);
+	Info_AddChoice	(PC_Mage_ABOUT,DIALOG_BACK,PC_Mage_ABOUT_BACK);
+};
+FUNC VOID PC_Mage_ABOUT_BACK ()
+{
+	Info_ClearChoices (PC_Mage_ABOUT);
 };
 
-func void pc_mage_about_back()
+FUNC VOID PC_Mage_ABOUT_Morogh()
 {
-	Info_ClearChoices(pc_mage_about);
+	AI_Output			(hero, self, "PC_Mage_ABOUT_Morogh_15_01"); //Morogh den Alchimisten.
+	AI_Output			(self, hero, "PC_Mage_ABOUT_Morogh_02_02"); //Er untersucht die Konzentrationen von magischen Tränken. 
+	AI_Output			(self, hero, "PC_Mage_ABOUT_Morogh_02_03"); //Vielleicht kann er deine Hilfe gebrauchen. 
 };
 
-func void pc_mage_about_morogh()
+FUNC VOID PC_Mage_ABOUT_Nereus()
 {
-	AI_Output(hero,self,"PC_Mage_ABOUT_Morogh_15_01");	//
-	AI_Output(self,hero,"PC_Mage_ABOUT_Morogh_02_02");	//
-	AI_Output(self,hero,"PC_Mage_ABOUT_Morogh_02_03");	//
+	AI_Output			(hero, self, "PC_Mage_ABOUT_Nerues_15_01"); //Nerues den Magietheoretiker.
+	AI_Output			(self, hero, "PC_Mage_ABOUT_Nerues_02_02"); //Er beschäftigt sich mit der Manipulation des magischen Gefüges.
+	AI_Output			(self, hero, "PC_Mage_ABOUT_Nerues_02_03"); //Vielleicht kann er deine Hilfe gebrauchen. 
+};
+FUNC VOID PC_Mage_ABOUT_Feoras()
+{
+	AI_Output			(hero, self, "PC_Mage_ABOUT_Feoras_15_01"); //Feoras den Runenhersteller.
+	AI_Output			(self, hero, "PC_Mage_ABOUT_Feoras_02_02"); //Er sucht nach Artefakten udn Reliquien verschiedenster Art.
+	AI_Output			(self, hero, "PC_Mage_ABOUT_Feoras_02_03"); //Vielleicht kann er deine Hilfe gebrauchen. 
 };
 
-func void pc_mage_about_nereus()
-{
-	AI_Output(hero,self,"PC_Mage_ABOUT_Nerues_15_01");	//
-	AI_Output(self,hero,"PC_Mage_ABOUT_Nerues_02_02");	//
-	AI_Output(self,hero,"PC_Mage_ABOUT_Nerues_02_03");	//
-};
 
-func void pc_mage_about_feoras()
-{
-	AI_Output(hero,self,"PC_Mage_ABOUT_Feoras_15_01");	//
-	AI_Output(self,hero,"PC_Mage_ABOUT_Feoras_02_02");	//
-	AI_Output(self,hero,"PC_Mage_ABOUT_Feoras_02_03");	//
-};
+
+
+
+
+
+
+
+
+
+
+
+
 

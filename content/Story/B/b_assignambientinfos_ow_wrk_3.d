@@ -1,5 +1,5 @@
-
-func void b_assignambientinfos_ow_wrk_3(var C_Npc slf)
+FUNC VOID B_AssignAmbientInfos_OW_Wrk_3(var c_NPC slf)
 {
+	
+	
 };
-

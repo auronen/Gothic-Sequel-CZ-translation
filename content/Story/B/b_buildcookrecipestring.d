@@ -1,29 +1,31 @@
-
-func string b_buildcookrecipestring(var string string_prefix,var string regname)
+func string B_BuildCookRecipeString ( 	var string 	string_prefix, var string 	regName)
 {
 	var string string_recipe;
-	string_recipe = ConcatStrings(string_prefix,"  -=Suppe=- ");
-	string_recipe = ConcatStrings(string_recipe,"1x ");
-	string_recipe = ConcatStrings(string_recipe,regname);
-	string_recipe = ConcatStrings(string_recipe,", 1x ");
-	string_recipe = ConcatStrings(string_recipe,NAME_LOAF);
-	string_recipe = ConcatStrings(string_recipe,", 1x ");
-	string_recipe = ConcatStrings(string_recipe,NAME_SALT);
-	string_recipe = ConcatStrings(string_recipe,".  -=Eintopf=- ");
-	string_recipe = ConcatStrings(string_recipe,"1x ");
-	string_recipe = ConcatStrings(string_recipe,regname);
-	string_recipe = ConcatStrings(string_recipe,", 1x ");
-	string_recipe = ConcatStrings(string_recipe,NAME_CHEESE);
-	string_recipe = ConcatStrings(string_recipe,", 1x ");
-	string_recipe = ConcatStrings(string_recipe,NAME_SALT);
-	string_recipe = ConcatStrings(string_recipe,".  -=Ragout=- ");
-	string_recipe = ConcatStrings(string_recipe,"1x ");
-	string_recipe = ConcatStrings(string_recipe,regname);
-	string_recipe = ConcatStrings(string_recipe,", 1x ");
-	string_recipe = ConcatStrings(string_recipe,NAME_HAM);
-	string_recipe = ConcatStrings(string_recipe,", 1x ");
-	string_recipe = ConcatStrings(string_recipe,NAME_SALT);
-	string_recipe = ConcatStrings(string_recipe,".");
+
+	string_recipe = ConcatStrings (string_prefix, "  -=Suppe=- ");
+	string_recipe = ConcatStrings (string_recipe, "1x ");
+	string_recipe = ConcatStrings (string_recipe, regName);
+	string_recipe = ConcatStrings (string_recipe, ", 1x ");
+	string_recipe = ConcatStrings (string_recipe, NAME_Loaf);
+	string_recipe = ConcatStrings (string_recipe, ", 1x ");
+	string_recipe = ConcatStrings (string_recipe, NAME_Salt);
+
+	string_recipe = ConcatStrings (string_recipe, ".  -=Eintopf=- ");
+	string_recipe = ConcatStrings (string_recipe, "1x ");
+	string_recipe = ConcatStrings (string_recipe, regName);
+	string_recipe = ConcatStrings (string_recipe, ", 1x ");
+	string_recipe = ConcatStrings (string_recipe, NAME_Cheese);
+	string_recipe = ConcatStrings (string_recipe, ", 1x ");
+	string_recipe = ConcatStrings (string_recipe, NAME_Salt);
+
+	string_recipe = ConcatStrings (string_recipe, ".  -=Ragout=- ");
+	string_recipe = ConcatStrings (string_recipe, "1x ");
+	string_recipe = ConcatStrings (string_recipe, regName);
+	string_recipe = ConcatStrings (string_recipe, ", 1x ");
+	string_recipe = ConcatStrings (string_recipe, NAME_Ham);
+	string_recipe = ConcatStrings (string_recipe, ", 1x ");
+	string_recipe = ConcatStrings (string_recipe, NAME_Salt);
+	string_recipe = ConcatStrings (string_recipe, ".");
+
 	return string_recipe;
 };
-

@@ -1,164 +1,257 @@
-
-func void b_produceitem(var int productamount,var int productinstance,var string productname,var int rawamount,var int rawinstance)
+///////////////////////////////////////////////////////////////////////////////////
+//	Jeder Arbeitsschritt an einem Produktions-MOBSI führt zur Veränderung
+//	eines Item im SC-Inventory:
+//	- Rohstoffe aus Inventory entfernen
+//	- produziertes Item ins Inventory legen
+//	- entsprechende Bildschirmausgabe
+///////////////////////////////////////////////////////////////////////////////////
+func void	B_ProduceItem(	var int		productAmount,		// Anzahl Produkt
+							var int		productInstance,	// Art Produkt
+							var string	productName,		// Produkt-Name
+							var int		rawAmount,			// Anzahl Rohstoff
+							var int		rawInstance)		// Art Rohstoff
 {
+	//-------- Gegenstände transferieren --------
+	if	(rawAmount > 0)
+	{
+		Npc_RemoveInvItems	(hero,	rawInstance,		rawAmount);
+	};
+
+	if	(productAmount > 0)
+	{
+		CreateInvItems		(hero,	productInstance,	productAmount);
+	};
+
+	//-------- Ani spielen & Meldung zusammenbauen --------
 	var string msg;
-	var string prefix;
-	if(rawamount > 0)
+
+	//-------- MOB_ORE --------
+	if		(hero.aivar[AIV_ACTIVEMOBSI] == AIV_AM_ORE)
 	{
-		Npc_RemoveInvItems(hero,rawinstance,rawamount);
-	};
-	if(productamount > 0)
-	{
-		CreateInvItems(hero,productinstance,productamount);
-	};
-	if(hero.aivar[33] == AIV_AM_ORE)
-	{
-		msg = ConcatStrings(productname,NAME_SMITH_ORE_DONE);
-		mob_ore_reduceore(productamount);
+		msg = ConcatStrings	(productName, NAME_Smith_Ore_Done);
+
+		//Erzzähler für das entsprechende Mobsi runterzählen
+		MOB_Ore_ReduceOre(productAmount);
 	}
-	else if(hero.aivar[33] == AIV_AM_MELTER)
+
+	//-------- MOB_MELTER --------
+	else if	(hero.aivar[AIV_ACTIVEMOBSI] == AIV_AM_MELTER)
 	{
-		msg = ConcatStrings(productname,NAME_SMITH_MELTER_DONE);
-		ai_createiteminslot(self,"ZS_RIGHTHAND",rawinstance);
+		msg = ConcatStrings	(productName, NAME_Smith_Melter_Done);
+
+		//Tat-Animation abspielen
+		AI_CreateItemInSlot(self,"ZS_RIGHTHAND", rawInstance);
 		AI_PlayAni(self,"T_BSMELTER_MELT_1");
-		ai_removeitemfromslot(self,"ZS_RIGHTHAND");
-		ai_createiteminslot(self,"ZS_RIGHTHAND",productinstance);
+		AI_RemoveItemFromSlot(self,"ZS_RIGHTHAND");
+		AI_CreateItemInSlot(self,"ZS_RIGHTHAND", productInstance);
 		AI_PlayAni(self,"T_BSMELTER_MELT_2");
-		ai_removeitemfromslot(self,"ZS_RIGHTHAND");
+		AI_RemoveItemFromSlot(self,"ZS_RIGHTHAND");
 	}
-	else if(hero.aivar[33] == AIV_AM_FIRE)
+
+	//-------- MOB_FIRE --------
+	else if	(hero.aivar[AIV_ACTIVEMOBSI] == AIV_AM_FIRE)
 	{
-		msg = ConcatStrings(productname,NAME_SMITH_FIRE_DONE);
-		ai_createiteminslot(self,"ZS_LEFTHAND",rawinstance);
-		AI_PlayAni(self,"T_BSFIRE_RANDOM_1");
-		ai_removeitemfromslot(self,"ZS_LEFTHAND");
-		ai_createiteminslot(self,"ZS_LEFTHAND",productinstance);
-		AI_PlayAni(self,"T_BSFIRE_RANDOM_2");
-		ai_removeitemfromslot(self,"ZS_LEFTHAND");
+		msg = ConcatStrings	(productName, NAME_Smith_Fire_Done);
+
+		AI_CreateItemInSlot		(self,	"ZS_LEFTHAND", rawInstance);
+		AI_PlayAni				(self,	"T_BSFIRE_RANDOM_1");
+		AI_RemoveItemFromSlot	(self,	"ZS_LEFTHAND");
+		AI_CreateItemInSlot		(self,	"ZS_LEFTHAND", productInstance);
+		AI_PlayAni				(self,	"T_BSFIRE_RANDOM_2");
+		AI_RemoveItemFromSlot	(self,	"ZS_LEFTHAND");
 	}
-	else if(hero.aivar[33] == AIV_AM_ANVIL)
+
+	//-------- MOB_ANVIL --------
+	else if	(hero.aivar[AIV_ACTIVEMOBSI] == AIV_AM_ANVIL)
 	{
-		msg = ConcatStrings(productname,NAME_SMITH_ANVIL_DONE);
-		ai_createiteminslot(self,"ZS_LEFTHAND",rawinstance);
-		AI_PlayAni(self,"T_BSANVIL_RANDOM_1");
-		ai_removeitemfromslot(self,"ZS_LEFTHAND");
-		ai_createiteminslot(self,"ZS_LEFTHAND",productinstance);
-		AI_PlayAni(self,"T_BSANVIL_RANDOM_2");
-		ai_removeitemfromslot(self,"ZS_LEFTHAND");
+		msg = ConcatStrings	(productName, NAME_Smith_Anvil_Done);
+
+		//Tat-Animation abspielen
+		AI_CreateItemInSlot		(self,	"ZS_LEFTHAND",rawInstance);
+		AI_PlayAni				(self,	"T_BSANVIL_RANDOM_1");
+		AI_RemoveItemFromSlot	(self,	"ZS_LEFTHAND");
+		AI_CreateItemInSlot		(self,	"ZS_LEFTHAND",productInstance);
+		AI_PlayAni				(self,	"T_BSANVIL_RANDOM_2");
+		AI_RemoveItemFromSlot	(self,	"ZS_LEFTHAND");
 	}
-	else if(hero.aivar[33] == AIV_AM_COOL)
+
+	//-------- MOB_COOL --------
+	else if	(hero.aivar[AIV_ACTIVEMOBSI] == AIV_AM_COOL)
 	{
-		msg = ConcatStrings(productname,NAME_SMITH_COOL_DONE);
-		ai_createiteminslot(self,"ZS_LEFTHAND",rawinstance);
-		AI_PlayAni(self,"T_BSCOOL_RANDOM_1");
-		ai_removeitemfromslot(self,"ZS_LEFTHAND");
-		ai_createiteminslot(self,"ZS_LEFTHAND",productinstance);
-		AI_PlayAni(self,"T_BSCOOL_RANDOM_2");
-		ai_removeitemfromslot(self,"ZS_LEFTHAND");
+		msg = ConcatStrings	(productName, NAME_Smith_Cool_Done);
+
+		//Tat-Animation abspielen
+		AI_CreateItemInSlot		(self,	"ZS_LEFTHAND",rawInstance);
+		AI_PlayAni				(self,	"T_BSCOOL_RANDOM_1");
+		AI_RemoveItemFromSlot	(self,	"ZS_LEFTHAND");
+		AI_CreateItemInSlot		(self,	"ZS_LEFTHAND",productInstance);
+		AI_PlayAni				(self,	"T_BSCOOL_RANDOM_2");
+		AI_RemoveItemFromSlot	(self,	"ZS_LEFTHAND");
 	}
-	else if(hero.aivar[33] == AIV_AM_SHARP)
+
+	//-------- MOB_SHARP --------
+	else if	(hero.aivar[AIV_ACTIVEMOBSI] == AIV_AM_SHARP)
 	{
-		msg = ConcatStrings(productname,NAME_SMITH_SHARP_DONE);
-		ai_createiteminslot(self,"ZS_LEFTHAND",rawinstance);
-		AI_PlayAni(self,"T_BSSHARP_RANDOM_1");
-		ai_removeitemfromslot(self,"ZS_LEFTHAND");
-		ai_createiteminslot(self,"ZS_LEFTHAND",productinstance);
-		AI_PlayAni(self,"T_BSSHARP_RANDOM_2");
-		ai_removeitemfromslot(self,"ZS_LEFTHAND");
+		msg = ConcatStrings	(productName, NAME_Smith_Sharp_Done);
+
+		//Tat-Animation abspielen
+		AI_CreateItemInSlot		(self,	"ZS_LEFTHAND",rawInstance);
+		AI_PlayAni				(self,	"T_BSSHARP_RANDOM_1");
+		AI_RemoveItemFromSlot	(self,	"ZS_LEFTHAND");
+		AI_CreateItemInSlot		(self,	"ZS_LEFTHAND",productInstance);
+		AI_PlayAni				(self,	"T_BSSHARP_RANDOM_2");
+		AI_RemoveItemFromSlot	(self,	"ZS_LEFTHAND");
 	}
-	else if(hero.aivar[33] == AIV_AM_LAB)
+
+	//-------- MOB_LAB --------
+	else if (hero.aivar[AIV_ACTIVEMOBSI] == AIV_AM_LAB)
 	{
-		msg = ConcatStrings(productname,NAME_LAB_DONE);
-		ai_createiteminslot(self,"ZS_RIGHTHAND",4701);
-		AI_PlayAni(self,"T_LAB_RANDOM_1");
-		ai_removeitemfromslot(self,"ZS_RIGHTHAND");
+		msg = ConcatStrings	(productName, NAME_LAB_Done);
+		AI_CreateItemInSlot		(self,	"ZS_RIGHTHAND",ItMi_Flask);
+		AI_PlayAni				(self,	"T_LAB_RANDOM_1");
+		AI_RemoveItemFromSlot	(self,	"ZS_RIGHTHAND");
 	}
-	else if(hero.aivar[33] == AIV_AM_CAULDRON)
+
+	//-------- MOB_CAULDRON --------
+	else if (hero.aivar[AIV_ACTIVEMOBSI] == AIV_AM_CAULDRON)
 	{
-		msg = ConcatStrings(productname,NAME_CAULDRON_DONE);
-		ai_createiteminslot(self,"ZS_LEFTHAND",rawinstance);
+		msg = ConcatStrings	(productName, NAME_CAULDRON_Done);
+		// Rohstoff in Kessel werfen
+		AI_CreateItemInSlot(self,"ZS_LEFTHAND",rawInstance);
 		AI_PlayAni(self,"T_CAULDRON_DROP_1");
-		ai_removeitemfromslot(self,"ZS_LEFTHAND");
+		AI_RemoveItemFromSlot(self,"ZS_LEFTHAND");
 		AI_PlayAni(self,"T_CAULDRON_DROP_2");
+
+		// Einmal umrühren
 		AI_PlayAni(self,"T_CAULDRON_MIX_1");
-		ai_createiteminslot(self,"ZS_LEFTHAND",productinstance);
+
+		// und teller vollmachen :)
+		AI_CreateItemInSlot(self,"ZS_LEFTHAND",productInstance);
 		AI_PlayAni(self,"T_CAULDRON_FILL_1");
-		ai_removeitemfromslot(self,"ZS_LEFTHAND");
+		AI_RemoveItemFromSlot(self,"ZS_LEFTHAND");
 		AI_PlayAni(self,"T_CAULDRON_FILL_2");
+		// Ani-ENDE
 	}
-	else if(hero.aivar[33] == AIV_AM_WOOD)
+	else if (hero.aivar[AIV_ACTIVEMOBSI] == AIV_AM_WOOD)
 	{
-		msg = ConcatStrings(productname,NAME_WOOD_DONE);
-		mob_wood_reducewood(productamount);
+		msg = ConcatStrings (productName, NAME_WOOD_Done);
+
+		//Zähler für das entsprechende Mobsi runterzählen
+		MOB_Wood_ReduceWood(productAmount);
 	}
-	else if(hero.aivar[33] == AIV_AM_BOW)
+	//-------- MOB_BOW --------
+	else if (hero.aivar[AIV_ACTIVEMOBSI] == AIV_AM_BOW)
 	{
-		msg = ConcatStrings(productname,NAME_BOW_DONE);
-		ai_createiteminslot(self,"ZS_RIGHTHAND",4679);
-		AI_PlayAni(self,"T_BOGENMACHER_RANDOM_1");
-		ai_removeitemfromslot(self,"ZS_RIGHTHAND");
+		msg = ConcatStrings	(productName, NAME_BOW_Done);
+		//AI_CreateItemInSlot(self,"ZS_LEFTHAND",ItMi_BowMachine);
+		AI_CreateItemInSlot(self,"ZS_RIGHTHAND",ItMi_BowWood);
+
+		AI_PlayAni(self, "T_BOGENMACHER_RANDOM_1");
+		AI_RemoveItemFromSlot(self,"ZS_RIGHTHAND");
 	}
-	else if(hero.aivar[33] == AIV_AM_RUNEMAKER)
+
+	//-------- MOB_RUNEMAKER --------
+	else if (hero.aivar[AIV_ACTIVEMOBSI] == AIV_AM_RUNEMAKER)
 	{
-		msg = ConcatStrings(productname,NAME_RUNEMAKER_DONE);
-		ai_createiteminslot(self,"ZS_LEFTHAND",rawinstance);
+		msg = ConcatStrings	(productName, NAME_RUNEMAKER_Done);
+		AI_CreateItemInSlot(self,"ZS_LEFTHAND",rawInstance);
 		AI_PlayAni(self,"T_RMAKER_RANDOM_1");
-		ai_removeitemfromslot(self,"ZS_LEFTHAND");
-		ai_createiteminslot(self,"ZS_LEFTHAND",productinstance);
+		AI_RemoveItemFromSlot(self,"ZS_LEFTHAND");
+		AI_CreateItemInSlot(self,"ZS_LEFTHAND", productInstance);
 		AI_PlayAni(self,"T_RMAKER_RANDOM_2");
-		ai_removeitemfromslot(self,"ZS_LEFTHAND");
+		AI_RemoveItemFromSlot(self,"ZS_LEFTHAND");
 	}
-	else if(hero.aivar[33] == AIV_AM_RUNEMELTER)
+
+	//-------- MOB_RUNEMELTER --------
+	else if (hero.aivar[AIV_ACTIVEMOBSI] == AIV_AM_RUNEMELTER)
 	{
-		msg = ConcatStrings(productname,NAME_RUNEMELTER_DONE);
-		ai_createiteminslot(self,"ZS_LEFTHAND",rawinstance);
+		msg = ConcatStrings	(productName, NAME_RUNEMELTER_Done);
+		AI_CreateItemInSlot(self,"ZS_LEFTHAND",rawInstance);
 		AI_PlayAni(self,"T_RMELTER_RANDOM_1");
-		ai_removeitemfromslot(self,"ZS_LEFTHAND");
-		ai_createiteminslot(self,"ZS_LEFTHAND",productinstance);
+		AI_RemoveItemFromSlot(self,"ZS_LEFTHAND");
+		AI_CreateItemInSlot(self,"ZS_LEFTHAND",productInstance);
 		AI_PlayAni(self,"T_RMELTER_RANDOM_2");
-		ai_removeitemfromslot(self,"ZS_LEFTHAND");
+		AI_RemoveItemFromSlot(self,"ZS_LEFTHAND");
 	}
-	else if(hero.aivar[33] == AIV_AM_STOMPER)
+
+	//-------- MOB_STOMPER --------
+	else if (hero.aivar[AIV_ACTIVEMOBSI] == AIV_AM_STOMPER)
 	{
-		msg = ConcatStrings(productname,NAME_STOMPER_DONE);
-		ai_createiteminslot(self,"ZS_LEFTHAND",4698);
+		msg = ConcatStrings	(productName, NAME_STOMPER_Done);
+		AI_CreateItemInSlot(self,"ZS_LEFTHAND",ItMi_Stomper);
 		AI_PlayAni(self,"T_HERB_RANDOM_1");
-		ai_removeitemfromslot(self,"ZS_LEFTHAND");
+		AI_RemoveItemFromSlot(self,"ZS_LEFTHAND");
 	}
-	else if(hero.aivar[33] == AIV_AM_FLETCHER)
+
+	//-------- MOB_FLETCHER --------
+	else if (hero.aivar[AIV_ACTIVEMOBSI] == AIV_AM_Fletcher)
 	{
-		printdebugmobsi("MOB_fletcher Produce");
-		msg = ConcatStrings(productname,NAME_FLETCHER_DONE);
-		ai_createiteminslot(self,"ZS_LEFTHAND",4678);
-		ai_createiteminslot(self,"ZS_RIGHTHAND",4677);
+		PrintDebugMobsi			("MOB_fletcher Produce");
+		msg = ConcatStrings	(productName, NAME_Fletcher_Done);
+		AI_CreateItemInSlot(self,"ZS_LEFTHAND",ITMI_FletcherKnife);
+		AI_CreateItemInSlot(self,"ZS_RIGHTHAND",ItMi_FletcherWood);
 		AI_PlayAni(self,"T_SCHNITZER_RANDOM_1");
-		ai_removeitemfromslot(self,"ZS_LEFTHAND");
-		ai_removeitemfromslot(self,"ZS_RIGHTHAND");
+		AI_RemoveItemFromSlot(self,"ZS_LEFTHAND");
+		AI_RemoveItemFromSlot(self,"ZS_RIGHTHAND");
 	};
-	if(productamount > 1)
+
+
+	if	(productAmount > 1)
 	{
-		prefix = IntToString(productamount);
-		prefix = ConcatStrings(prefix," ");
-		msg = ConcatStrings(prefix,msg);
+		var string prefix;
+
+		prefix = IntToString	(productAmount);
+		prefix = ConcatStrings	(prefix, " ");
+		msg = ConcatStrings		(prefix, msg);
 	};
-	ai_printscreen(self,msg,-1,_YPOS_MESSAGE_PRODUCE,FONT_OLD_SMALL,_TIME_MESSAGE_PRODUCE,TEXT_COLOR_WHITE);
+
+	AI_PrintScreen			(self, msg, -1, _YPOS_MESSAGE_PRODUCE, FONT_OLD_SMALL, _TIME_MESSAGE_PRODUCE, TEXT_COLOR_WHITE);
 };
 
-func void b_produceitem2(var int productamount,var int productinstance,var string productname,var int rawamount1,var int rawinstance1,var int rawamount2,var int rawinstance2)
+func void	B_ProduceItem2(	var int		productAmount,		// Anzahl Produkt
+							var int		productInstance,	// Art Produkt
+							var string	productName,		// Produkt-Name
+							var int		rawAmount1,			// Anzahl Rohstoff 1
+							var int		rawInstance1,		// Art Rohstoff 1
+							var int		rawAmount2,			// Anzahl Rohstoff 2
+							var int		rawInstance2)		// Art Rohstoff 2
 {
-	if(rawamount2 > 0)
+	//-------- 2. Rohstoff entfernen --------
+	if	(rawAmount2 > 0)
 	{
-		Npc_RemoveInvItems(hero,rawinstance2,rawamount2);
+		Npc_RemoveInvItems	(hero,	rawInstance2,	rawAmount2);
 	};
-	b_produceitem(productamount,productinstance,productname,rawamount1,rawinstance1);
+
+	//-------- für den Rest die normale Funktion aufrufen --------
+	B_ProduceItem		(productAmount,
+						 productInstance,
+                         productName,
+                         rawAmount1,
+                         rawInstance1);
 };
 
-func void b_produceitem3(var int productamount,var int productinstance,var string productname,var int rawamount1,var int rawinstance1,var int rawamount2,var int rawinstance2,var int rawamount3,var int rawinstance3)
+func void	B_ProduceItem3(	var int		productAmount,		// Anzahl Produkt
+							var int		productInstance,	// Art Produkt
+							var string	productName,		// Produkt-Name
+							var int		rawAmount1,			// Anzahl Rohstoff 1
+							var int		rawInstance1,		// Art Rohstoff 1
+							var int		rawAmount2,			// Anzahl Rohstoff 2
+							var int		rawInstance2,		// Art Rohstoff 2
+							var int 	rawAmount3,			// Anzahl Rohstoff 3
+							var int		rawInstance3)		// Art Rohstoff 3
 {
-	if(rawamount3 > 0)
+	//-------- 3. Rohstoff entfernen --------
+	if	(rawAmount3 > 0)
 	{
-		Npc_RemoveInvItems(hero,rawinstance3,rawamount3);
+		Npc_RemoveInvItems	(hero,	rawInstance3,	rawAmount3);
 	};
-	b_produceitem2(productamount,productinstance,productname,rawamount1,rawinstance1,rawamount2,rawinstance2);
-};
 
+	//-------- für den Rest die normale Funktion aufrufen --------
+	B_ProduceItem2		(productAmount,
+						 productInstance,
+                         productName,
+                         rawAmount1,
+                         rawInstance1,
+                         rawAmount2,
+                         rawInstance2);
+};	

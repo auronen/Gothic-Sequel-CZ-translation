@@ -1,28 +1,34 @@
-
-func void ZS_WakeUp()
-{
-	var int portalguild;
-	PrintDebugNpc(PD_ZS_FRAME,"ZS_WakeUp");
+func void ZS_WakeUp ()
+{	
+	PrintDebugNpc		(PD_ZS_FRAME, "ZS_WakeUp" );				
 	C_ZSInit();
-	B_SetPerception(self);
-	Npc_PercDisable(self,PERC_OBSERVEINTRUDER);
-	Npc_PercEnable(self,PERC_ASSESSENTERROOM,B_ClearRoomEnterRoom);
-	Npc_PercEnable(self,PERC_ASSESSUSEMOB,B_ClearRoomUseMob);
-	AI_UseMob(self,SCEMENAME_BEDHIGH,-1);
-	AI_UseMob(self,SCEMENAME_BEDLOW,-1);
-	AI_UseMob(self,SCEMENAME_BED,-1);
+
+	//-------- Wahrnehmungen --------
+	B_SetPerception		(self);
+	Npc_PercDisable		(self,	PERC_OBSERVEINTRUDER);
+	Npc_PercEnable  	(self, 	PERC_ASSESSENTERROOM	,	B_ClearRoomEnterRoom);
+	Npc_PercEnable  	(self, 	PERC_ASSESSUSEMOB 		,	B_ClearRoomUseMob);
+
+	//######## WORKAROUND: da ZS_Sleep_End nicht angesprungen wird ########
+	AI_UseMob			(self,	SCEMENAME_BEDHIGH,	-1);
+	AI_UseMob			(self,	SCEMENAME_BEDLOW,	-1);
+	AI_UseMob			(self,	SCEMENAME_BED,		-1);
+	//######## WORKAROUND: Ende ########
+
+	//-------- SC im unerlaubten Raum? --------
+	var int portalguild;
 	portalguild = Wld_GetPlayerPortalGuild();
-	if(((self.guild == portalguild) || (Wld_GetGuildAttitude(self.guild,portalguild) == ATT_FRIENDLY)) && (Npc_GetAttitude(self,other) != ATT_FRIENDLY))
+	if	((self.guild==portalguild) || (Wld_GetGuildAttitude(self.guild, portalguild)==ATT_FRIENDLY))
+	&&	(Npc_GetAttitude(self, other) != ATT_FRIENDLY)
 	{
-		PrintDebugNpc(PD_ZS_Check,"...Spieler im Raum des NSCs!");
+		PrintDebugNpc	(PD_ZS_CHECK, "...Spieler im Raum des NSCs!");				
 		B_AssessEnterRoom();
 	}
 	else
 	{
-		AI_TurnToNPC(self,other);
-		B_Say(self,other,"$YOUDISTURBEDMYSLUMBER");
-		AI_Wait(self,3);
+		AI_TurnToNpc	(self,	other);
+		B_Say			(self,	other,	"$YOUDISTURBEDMYSLUMBER");
+		AI_Wait			(self,	3);
 		B_ObserveIntruder();
 	};
 };
-

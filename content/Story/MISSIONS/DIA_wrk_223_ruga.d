@@ -1,341 +1,421 @@
-
-instance WRK_223_RUGA_EXIT(C_Info)
+///////////////////////////////////////////////////////////////////////
+//	Info EXIT
+///////////////////////////////////////////////////////////////////////
+INSTANCE WRK_223_Ruga_EXIT   (C_INFO)
 {
-	npc = wrk_223_ruga;
-	nr = 999;
-	condition = wrk_223_ruga_exit_condition;
-	information = wrk_223_ruga_exit_info;
-	permanent = TRUE;
+	npc         = WRK_223_Ruga;
+	nr          = 999;
+	condition   = WRK_223_Ruga_EXIT_Condition;
+	information = WRK_223_Ruga_EXIT_Info;
+	permanent   = TRUE;
 	description = DIALOG_ENDE;
 };
 
-
-func int wrk_223_ruga_exit_condition()
+FUNC INT WRK_223_Ruga_EXIT_Condition()
 {
 	return TRUE;
 };
 
-func void wrk_223_ruga_exit_info()
+FUNC VOID WRK_223_Ruga_EXIT_Info()
 {
-	AI_StopProcessInfos(self);
+	AI_StopProcessInfos (self);
 };
 
-
-instance WRK_223_RUGA_START(C_Info)
+///////////////////////////////////////////////////////////////////////
+//	Info Start
+///////////////////////////////////////////////////////////////////////
+instance WRK_223_Ruga_START		(C_INFO)
 {
-	npc = wrk_223_ruga;
-	nr = 12;
-	condition = wrk_223_ruga_start_condition;
-	information = wrk_223_ruga_start_info;
-	important = FALSE;
-	permanent = FALSE;
-	description = "Wer bist Du?";
+	npc		 = 	WRK_223_Ruga;
+	nr		 = 	12;
+	condition	 = 	WRK_223_Ruga_START_Condition;
+	information	 = 	WRK_223_Ruga_START_Info;
+	important	 = 	FALSE;
+	permanent	 = 	FALSE;
+
+	description	 = 	"Wer bist Du?";
 };
 
-
-func int wrk_223_ruga_start_condition()
+func int WRK_223_Ruga_START_Condition ()
 {
-	if(!Npc_KnowsInfo(hero,wrk_223_ruga_armorprice))
+	if (!Npc_KnowsInfo	(hero, WRK_223_Ruga_ARMORPRICE))
 	{
 		return TRUE;
 	};
 	return FALSE;
 };
 
-func void wrk_223_ruga_start_info()
+func void WRK_223_Ruga_START_Info ()
 {
-	AI_Output(hero,self,"WRK_223_START_15_01");	//Wer bist Du?
-	AI_Output(self,hero,"WRK_223_START_09_02");	//Man nennt mich Ruga. Ich bin der Rüstungsmacher.
-	Log_CreateTopic(GE_TraderOC,LOG_NOTE);
-	B_LogEntry(GE_TraderOC,"Ruga verkauft RÜSTUNGEN. Er hat sein Geschäft im Händlerviertel.");
+	AI_Output			(hero, self, "WRK_223_START_15_01"); //Wer bist Du?
+	AI_Output			(self, hero, "WRK_223_START_09_02"); //Man nennt mich Ruga. Ich bin der Rüstungsmacher.
+	Log_CreateTopic		(GE_TraderOC, LOG_NOTE);
+	B_LogEntry			(GE_TraderOC,"Ruga verkauft RÜSTUNGEN. Er hat sein Geschäft im Händlerviertel.");
 };
 
 
-instance WRK_223_RUGA_ARMORPRICE(C_Info)
+///////////////////////////////////////////////////////////////////////
+//	Info ARMORPRICE
+///////////////////////////////////////////////////////////////////////
+instance WRK_223_Ruga_ARMORPRICE		(C_INFO)
 {
-	npc = wrk_223_ruga;
-	nr = 5;
-	condition = wrk_223_ruga_armorprice_condition;
-	information = wrk_223_ruga_armorprice_info;
-	important = FALSE;
-	permanent = FALSE;
-	description = "Wie teuer sind deine Rüstungen?";
+	npc		 = 	WRK_223_Ruga;
+	nr		 = 	5;
+	condition	 = 	WRK_223_Ruga_ARMORPRICE_Condition;
+	information	 = 	WRK_223_Ruga_ARMORPRICE_Info;
+	important	 = 	FALSE;
+	permanent	 = 	FALSE;
+
+	description	 = 	"Wie teuer sind deine Rüstungen?";
 };
 
-
-func int wrk_223_ruga_armorprice_condition()
+func int WRK_223_Ruga_ARMORPRICE_Condition ()
 {
-	if(Npc_KnowsInfo(hero,wrk_223_ruga_start))
+	if (Npc_KnowsInfo	(hero, WRK_223_Ruga_START))
 	{
 		return TRUE;
 	};
 	return FALSE;
 };
 
-func void wrk_223_ruga_armorprice_info()
+func void WRK_223_Ruga_ARMORPRICE_Info ()
 {
-	AI_Output(hero,self,"WRK_223_ARMORPRICE_15_01");	//Wie teuer sind deine Rüstungen?
-	AI_Output(self,hero,"WRK_223_ARMORPRICE_09_02");	//Kommt darauf an welche du haben willst!
+	AI_Output			(hero, self, "WRK_223_ARMORPRICE_15_01"); //Wie teuer sind deine Rüstungen?
+	AI_Output			(self, hero, "WRK_223_ARMORPRICE_09_02"); //Kommt darauf an welche du haben willst!
 };
 
 
-instance WRK_223_RUGA_ARMORSELECTION(C_Info)
+///////////////////////////////////////////////////////////////////////
+//	Info ARMORSELECTION
+///////////////////////////////////////////////////////////////////////
+instance WRK_223_Ruga_ARMORSELECTION		(C_INFO)
 {
-	npc = wrk_223_ruga;
-	nr = 5;
-	condition = wrk_223_ruga_armorselection_condition;
-	information = wrk_223_ruga_armorselection_info;
-	important = FALSE;
-	permanent = FALSE;
-	description = "Welche Rüstungen verkaufst du?";
+	npc		 = 	WRK_223_Ruga;
+	nr		 = 	5;
+	condition	 = 	WRK_223_Ruga_ARMORSELECTION_Condition;
+	information	 = 	WRK_223_Ruga_ARMORSELECTION_Info;
+	important	 = 	FALSE;
+	permanent	 = 	FALSE;
+
+	description	 = 	"Welche Rüstungen verkaufst du?";
 };
 
-
-func int wrk_223_ruga_armorselection_condition()
+func int WRK_223_Ruga_ARMORSELECTION_Condition ()
 {
-	if(Npc_KnowsInfo(hero,wrk_223_ruga_start))
+	if (Npc_KnowsInfo	(hero, WRK_223_Ruga_START))
 	{
 		return TRUE;
 	};
 	return FALSE;
 };
 
-func void wrk_223_ruga_armorselection_info()
+func void WRK_223_Ruga_ARMORSELECTION_Info ()
 {
-	AI_Output(hero,self,"WRK_223_ARMORSELECTION_15_01");	//Welche Rüstungen verkaufst du?
-	AI_Output(self,hero,"WRK_223_ARMORSELECTION_09_02");	//Kommt darauf an, wieviel du ausgeben willst!
+	AI_Output			(hero, self, "WRK_223_ARMORSELECTION_15_01"); //Welche Rüstungen verkaufst du?
+	AI_Output			(self, hero, "WRK_223_ARMORSELECTION_09_02"); //Kommt darauf an, wieviel du ausgeben willst!
 };
 
 
-instance WRK_223_RUGA_NOANSWER(C_Info)
+
+///////////////////////////////////////////////////////////////////////
+//	Info NOANSWER
+///////////////////////////////////////////////////////////////////////
+instance WRK_223_Ruga_NOANSWER		(C_INFO)
 {
-	npc = wrk_223_ruga;
-	nr = 6;
-	condition = wrk_223_ruga_noanswer_condition;
-	information = wrk_223_ruga_noanswer_info;
-	important = FALSE;
-	permanent = FALSE;
-	description = "Irgendwie kommen wir so nicht weiter!";
+	npc		 = 	WRK_223_Ruga;
+	nr		 = 	6;
+	condition	 = 	WRK_223_Ruga_NOANSWER_Condition;
+	information	 = 	WRK_223_Ruga_NOANSWER_Info;
+	important	 = 	FALSE;
+	permanent	 = 	FALSE;
+
+	description	 = 	"Irgendwie kommen wir so nicht weiter!";
 };
 
-
-func int wrk_223_ruga_noanswer_condition()
+func int WRK_223_Ruga_NOANSWER_Condition ()
 {
-	if(Npc_KnowsInfo(hero,wrk_223_ruga_armorprice) && Npc_KnowsInfo(hero,wrk_223_ruga_armorselection))
+	if (Npc_KnowsInfo	(hero,WRK_223_Ruga_ARMORPRICE)
+	&& (Npc_KnowsInfo	(hero,WRK_223_Ruga_ARMORSELECTION)))
 	{
 		return TRUE;
 	};
 	return FALSE;
 };
 
-func void wrk_223_ruga_noanswer_info()
+func void WRK_223_Ruga_NOANSWER_Info ()
 {
-	AI_Output(hero,self,"WRK_223_NOANSWER_15_01");	//Irgendwie kommen wir so nicht weiter!
-	AI_Output(self,hero,"WRK_223_NOANSWER_09_02");	//Irgendwie glaube ich auch nicht, daß du genug Silber hast, um dir ne Rüstung zu kaufen!
-	Info_AddChoice(wrk_223_ruga_noanswer,"Wenn das so ist, steck dir die Rüstungen doch sonstwohin!",wrk_223_ruga_noanswer_end);
-	Info_AddChoice(wrk_223_ruga_noanswer,"Sag mir doch einfach, was die Dinger kosten.",wrk_223_ruga_noanswer_ok);
+	AI_Output			(hero, self, "WRK_223_NOANSWER_15_01"); //Irgendwie kommen wir so nicht weiter!
+	AI_Output			(self, hero, "WRK_223_NOANSWER_09_02"); //Irgendwie glaube ich auch nicht, daß du genug Silber hast, um dir ne Rüstung zu kaufen!
+	Info_AddChoice	(WRK_223_Ruga_NOANSWER, "Wenn das so ist, steck dir die Rüstungen doch sonstwohin!", WRK_223_Ruga_NOANSWER_End );
+	Info_AddChoice	(WRK_223_Ruga_NOANSWER, "Sag mir doch einfach, was die Dinger kosten.", WRK_223_Ruga_NOANSWER_Ok );
 };
 
-func void wrk_223_ruga_noanswer_ok()
+func void WRK_223_Ruga_NOANSWER_Ok ()
 {
-	AI_Output(hero,self,"WRK_223_NOANSWER_Ok_15_01");	//Sag mir doch einfach, was die Dinger kosten.
-	AI_Output(self,hero,"WRK_223_NOANSWER_Ok_09_02");	//Na gut, du scheinst ja wirklich interessiert zu sein.
-	AI_Output(self,hero,"WRK_223_NOANSWER_Ok_09_03");	//Ich hasse es, stundenlang zu reden, wenn dann doch nichts gekauft wird!
-	Info_ClearChoices(wrk_223_ruga_noanswer);
-	INT_RUGACALM = TRUE;
+	AI_Output			(hero, self, "WRK_223_NOANSWER_Ok_15_01"); //Sag mir doch einfach, was die Dinger kosten.
+	AI_Output			(self, hero, "WRK_223_NOANSWER_Ok_09_02"); //Na gut, du scheinst ja wirklich interessiert zu sein.
+	AI_Output			(self, hero, "WRK_223_NOANSWER_Ok_09_03"); //Ich hasse es, stundenlang zu reden, wenn dann doch nichts gekauft wird!
+	Info_ClearChoices	(WRK_223_Ruga_NOANSWER);
+	int_RugaCalm	=	TRUE;
 };
 
-func void wrk_223_ruga_noanswer_end()
+func void WRK_223_Ruga_NOANSWER_End ()
 {
-	AI_Output(hero,self,"WRK_223_NOANSWER_End_15_01");	//Wenn das so ist, steck dir die Rüstungen doch sonstwohin!
-	AI_Output(self,hero,"WRK_223_NOANSWER_End_09_02");	//Hab ich erwähnt, daß ich hier der EINZIGE Rüstungsmacher bin, Klugscheisser?
-	INT_RUGAANGRY = TRUE;
-	AI_StopProcessInfos(self);
-};
-
-
-instance WRK_223_RUGA_NOTRADE(C_Info)
-{
-	npc = wrk_223_ruga;
-	nr = 1;
-	condition = wrk_223_ruga_notrade_condition;
-	information = wrk_223_ruga_notrade_info;
-	important = FALSE;
-	permanent = TRUE;
-	description = "Ich möchte doch gerne ne Rüstung kaufen!";
+	AI_Output			(hero, self, "WRK_223_NOANSWER_End_15_01"); //Wenn das so ist, steck dir die Rüstungen doch sonstwohin!
+	AI_Output			(self, hero, "WRK_223_NOANSWER_End_09_02"); //Hab ich erwähnt, daß ich hier der EINZIGE Rüstungsmacher bin, Klugscheisser?
+	int_RugaAngry		= 	TRUE;
+	AI_StopProcessInfos	(self);
 };
 
 
-func int wrk_223_ruga_notrade_condition()
+///////////////////////////////////////////////////////////////////////
+//	Info NoTrade
+///////////////////////////////////////////////////////////////////////
+instance WRK_223_Ruga_NOTRADE		(C_INFO)
 {
-	if(INT_RUGAANGRY && !INT_RUGAWANTSMEAL)
+	npc		 = 	WRK_223_Ruga;
+	nr		 = 	1;
+	condition	 = 	WRK_223_Ruga_NOTRADE_Condition;
+	information	 = 	WRK_223_Ruga_NOTRADE_Info;
+	important	 = 	FALSE;
+	permanent	 = 	TRUE;
+
+	description	 = 	"Ich möchte doch gerne ne Rüstung kaufen!";
+};
+
+func int WRK_223_Ruga_NOTRADE_Condition ()
+{
+	if int_RugaAngry
+	&&	(!int_RugaWantsMeal)
 	{
 		return TRUE;
 	};
 	return FALSE;
 };
 
-func void wrk_223_ruga_notrade_info()
+func void WRK_223_Ruga_NOTRADE_Info ()
 {
-	Info_ClearChoices(wrk_223_ruga_notrade);
-	AI_Output(hero,self,"WRK_223_NOTRADE_15_01");	//Ich möchte doch gerne ne Rüstung kaufen!
-	AI_Output(self,hero,"WRK_223_NOTRADE_09_02");	//Ach ja? Dann musst du mir einen kleinen Gefallen tun.
-	AI_Output(self,hero,"WRK_223_NOTRADE_09_03");	//Ich hätte gerne was warmes zu essen. Aber ich lasse mein Geschäft ungern allein.
-	AI_Output(self,hero,"WRK_223_NOTRADE_09_04");	//Wenn du mir ne Meatbugsuppe bringst, sind wir wieder im Geschäft!
-	Info_AddChoice(wrk_223_ruga_notrade,"Ich bin doch nicht dein Laufbursche!",wrk_223_ruga_notrade_whatcanido_bring1);
-	Info_AddChoice(wrk_223_ruga_notrade,"Ich bring dir die Suppe.",wrk_223_ruga_notrade_whatcanido_meal);
-};
-
-func void wrk_223_ruga_notrade_whatcanido_meal()
-{
-	AI_Output(hero,self,"WRK_223_NOTRADE_WhatCanIDo_Meal_15_01");	//Ich bring dir die Suppe.
-	AI_Output(self,hero,"WRK_223_NOTRADE_WhatCanIDo_Meal_09_02");	//Das klingt doch vernünftig.
-	INT_RUGAWANTSMEAL = TRUE;
-	Log_CreateTopic(CH1_RUGAWANTSMEAL,LOG_MISSION);
-	Log_SetTopicStatus(CH1_RUGAWANTSMEAL,LOG_RUNNING);
-	B_LogEntry(CH1_RUGAWANTSMEAL,"Wenn ich Ruga eine Meatbugsuppe besorge, handelt er wieder mit mir.");
-	AI_StopProcessInfos(self);
-};
-
-func void wrk_223_ruga_notrade_whatcanido_bring1()
-{
-	Info_ClearChoices(wrk_223_ruga_notrade);
-	AI_Output(hero,self,"WRK_223_NOTRADE_WhatCanIDo_Bring1_15_01");	//Ich bin doch nicht dein Laufbursche!
-	AI_Output(self,hero,"WRK_223_NOTRADE_WhatCanIDo_Bring1_09_02");	//So bekommst Du nie eine Rüstung von mir!
-	AI_StopProcessInfos(self);
+	Info_ClearChoices	(WRK_223_Ruga_NOTRADE);
+	AI_Output			(hero, self, "WRK_223_NOTRADE_15_01"); //Ich möchte doch gerne ne Rüstung kaufen!
+	AI_Output			(self, hero, "WRK_223_NOTRADE_09_02"); //Ach ja? Dann musst du mir einen kleinen Gefallen tun.
+	AI_Output			(self, hero, "WRK_223_NOTRADE_09_03"); //Ich hätte gerne was warmes zu essen. Aber ich lasse mein Geschäft ungern allein.
+	AI_Output			(self, hero, "WRK_223_NOTRADE_09_04"); //Wenn du mir ne Meatbugsuppe bringst, sind wir wieder im Geschäft!
+	Info_AddChoice	(WRK_223_Ruga_NOTRADE, "Ich bin doch nicht dein Laufbursche!", WRK_223_Ruga_NOTRADE_WhatCanIDo_Bring1 );
+	Info_AddChoice	(WRK_223_Ruga_NOTRADE, "Ich bring dir die Suppe.", WRK_223_Ruga_NOTRADE_WhatCanIDo_Meal );
 };
 
 
-instance WRK_223_RUGA_TRADEARMOR(C_Info)
+func void WRK_223_Ruga_NOTRADE_WhatCanIDo_Meal ()
 {
-	npc = wrk_223_ruga;
-	nr = 2;
-	condition = wrk_223_ruga_tradearmor_condition;
-	information = wrk_223_ruga_tradearmor_info;
-	important = FALSE;
-	permanent = TRUE;
-	description = "Welche Rüstungen hast du?";
+	AI_Output			(hero, self, "WRK_223_NOTRADE_WhatCanIDo_Meal_15_01"); //Ich bring dir die Suppe.
+	AI_Output			(self, hero, "WRK_223_NOTRADE_WhatCanIDo_Meal_09_02"); //Das klingt doch vernünftig.
+	int_RugaWantsMeal	=	TRUE;
+	Log_CreateTopic		(CH1_RugaWantsMeal, LOG_MISSION);
+	Log_SetTopicStatus	(CH1_RugaWantsMeal, LOG_RUNNING);
+	B_LogEntry			(CH1_RugaWantsMeal,"Wenn ich Ruga eine Meatbugsuppe besorge, handelt er wieder mit mir.");
+	AI_StopProcessInfos	(self);
 };
 
 
-func int wrk_223_ruga_tradearmor_condition()
+func void WRK_223_Ruga_NOTRADE_WhatCanIDo_Bring1 ()
 {
-	if(INT_RUGACALM)
+	Info_ClearChoices	(WRK_223_Ruga_NOTRADE);
+	AI_Output			(hero, self, "WRK_223_NOTRADE_WhatCanIDo_Bring1_15_01"); //Ich bin doch nicht dein Laufbursche!
+	AI_Output			(self, hero, "WRK_223_NOTRADE_WhatCanIDo_Bring1_09_02"); //So bekommst Du nie eine Rüstung von mir!
+	AI_StopProcessInfos	(self);
+};
+
+
+
+///////////////////////////////////////////////////////////////////////
+//	Info TradeArmor
+///////////////////////////////////////////////////////////////////////
+instance WRK_223_Ruga_TRADEARMOR		(C_INFO)
+{
+	npc		 = 	WRK_223_Ruga;
+	nr		 = 	2;
+	condition	 = 	WRK_223_Ruga_TRADEARMOR_Condition;
+	information	 = 	WRK_223_Ruga_TRADEARMOR_Info;
+	important	 = 	FALSE;
+	permanent	 = 	TRUE;
+
+	description	 = 	"Welche Rüstungen hast du?";
+};
+
+func int WRK_223_Ruga_TRADEARMOR_Condition ()
+{
+	if int_RugaCalm
 	{
 		return TRUE;
 	};
 	return FALSE;
 };
 
-func void wrk_223_ruga_tradearmor_info()
+func void WRK_223_Ruga_TRADEARMOR_Info ()
 {
-	Info_ClearChoices(wrk_223_ruga_tradearmor);
-	AI_Output(hero,self,"WRK_223_TRADEARMOR_15_01");	//Welche Rüstungen hast du?
-	if(Npc_HasItems(hero,itmi_silver) < 250)
+	Info_ClearChoices	(WRK_223_Ruga_TradeArmor);
+	AI_Output			(hero, self, "WRK_223_TRADEARMOR_15_01"); //Welche Rüstungen hast du?
+//	AI_Output			(self, hero, "WRK_223_TRADEARMOR_09_04"); //Welche willst du?
+
+	if (Npc_HasItems	(hero, ItMi_Silver) <250)
 	{
-		AI_Output(self,hero,"WRK_223_TRADEARMOR_09_02");	//Für 250 Silber bekommst du ne leichte Buddlerhose oder Schürferklamotten. Für 500 eine vernünftige Buddlerhose.
-		AI_Output(self,hero,"WRK_223_TRADEARMOR_09_03");	//Komm wieder, wenn Du genug Silber hast.
-		AI_StopProcessInfos(self);
+		AI_Output			(self, hero, "WRK_223_TRADEARMOR_09_02"); //Für 250 Silber bekommst du ne leichte Buddlerhose oder Schürferklamotten. Für 500 eine vernünftige Buddlerhose.
+		AI_Output			(self, hero, "WRK_223_TRADEARMOR_09_03"); //Komm wieder, wenn Du genug Silber hast.
+
+		AI_StopProcessInfos (self);
 	};
-	Info_AddChoice(wrk_223_ruga_tradearmor,DIALOG_ENDE,wrk_223_ruga_exit_info);
-	if(Npc_HasItems(hero,itmi_silver) >= 250)
+	Info_AddChoice	(WRK_223_Ruga_TRADEARMOR, DIALOG_ENDE, WRK_223_Ruga_EXIT_Info);
+
+	if (Npc_HasItems	(hero, ItMi_Silver) >= 250)
 	{
-		Info_AddChoice(wrk_223_ruga_tradearmor,B_BuildBuyArmorString(vlk_armor_l),wrk_223_ruga_tradearmor_armorvlk_l);
+		Info_AddChoice	(WRK_223_Ruga_TRADEARMOR, B_BuildBuyArmorString (VLK_ARMOR_L), WRK_223_Ruga_TRADEARMOR_ArmorVlk_L );
 	};
-	if(Npc_HasItems(hero,itmi_silver) >= 500)
+	if (Npc_HasItems	(hero, ItMi_Silver) >= 500)
 	{
-		Info_AddChoice(wrk_223_ruga_tradearmor,B_BuildBuyArmorString(vlk_armor_m),wrk_223_ruga_tradearmor_vlkarmor_m);
+		Info_AddChoice	(WRK_223_Ruga_TRADEARMOR, B_BuildBuyArmorString (VLK_ARMOR_M), WRK_223_Ruga_TRADEARMOR_VlkArmor_M );
 	};
-	if(Npc_HasItems(hero,itmi_silver) >= 250)
+	if (Npc_HasItems	(hero, ItMi_Silver) >= 250)
 	{
-		Info_AddChoice(wrk_223_ruga_tradearmor,B_BuildBuyArmorString(sfb_armor_l),wrk_223_ruga_tradearmor_sfbarmor_l);
+		Info_AddChoice	(WRK_223_Ruga_TRADEARMOR, B_BuildBuyArmorString (SFB_ARMOR_L), WRK_223_Ruga_TRADEARMOR_SfbArmor_L );
 	};
 };
 
-func void wrk_223_ruga_tradearmor_sfbarmor_l()
+
+func void WRK_223_Ruga_TRADEARMOR_SfbArmor_L ()
 {
-	B_GiveInvItems(hero,self,itmi_silver,sfb_armor_l.value);
-	AI_Output(self,hero,"WRK_223_TRADEARMOR_SfbArmor_L_09_01");	//Hier ist deine Ware.
-	B_GiveInvItems(self,hero,sfb_armor_l,1);
-	AI_StopProcessInfos(self);
+	B_GiveInvItems		(hero, self, ItMi_Silver, SFB_ARMOR_L.value);
+	AI_Output			(self, hero, "WRK_223_TRADEARMOR_SfbArmor_L_09_01"); //Hier ist deine Ware.
+	B_GiveInvItems		(self, hero, SFB_ARMOR_L, 1);
+	AI_StopProcessInfos	(self);
+
 };
 
-func void wrk_223_ruga_tradearmor_vlkarmor_m()
+func void WRK_223_Ruga_TRADEARMOR_VlkArmor_M ()
 {
-	B_GiveInvItems(hero,self,itmi_silver,vlk_armor_m.value);
-	AI_Output(self,hero,"WRK_223_TRADEARMOR_VlkArmor_M_09_01");	//Ich hoffe, du wirst glücklich damit.
-	B_GiveInvItems(self,hero,vlk_armor_m,1);
-	AI_StopProcessInfos(self);
+	B_GiveInvItems		(hero, self, ItMi_Silver, VLK_ARMOR_M.value);
+	AI_Output			(self, hero, "WRK_223_TRADEARMOR_VlkArmor_M_09_01"); //Ich hoffe, du wirst glücklich damit.
+	B_GiveInvItems		(self, hero, VLK_ARMOR_M, 1);
+	AI_StopProcessInfos	(self);
 };
 
-func void wrk_223_ruga_tradearmor_armorvlk_l()
+func void WRK_223_Ruga_TRADEARMOR_ArmorVlk_L ()
 {
-	B_GiveInvItems(hero,self,itmi_silver,vlk_armor_l.value);
-	AI_Output(self,hero,"WRK_223_TRADEARMOR_ArmorVlk_L_09_01");	//Eine gute Wahl.
-	B_GiveInvItems(self,hero,vlk_armor_l,1);
-	AI_StopProcessInfos(self);
-};
-
-
-instance WRK_223_RUGA_BRINGMEAL(C_Info)
-{
-	npc = wrk_223_ruga;
-	nr = 6;
-	condition = wrk_223_ruga_bringmeal_condition;
-	information = wrk_223_ruga_bringmeal_info;
-	important = FALSE;
-	permanent = TRUE;
-	description = "Ich hab deine Suppe.";
+	B_GiveInvItems		(hero, self, ItMi_Silver, VLK_ARMOR_L.value);
+	AI_Output			(self, hero, "WRK_223_TRADEARMOR_ArmorVlk_L_09_01"); //Eine gute Wahl.
+	B_GiveInvItems		(self, hero, VLK_ARMOR_L, 1);
+	AI_StopProcessInfos	(self);
 };
 
 
-func int wrk_223_ruga_bringmeal_condition()
+///////////////////////////////////////////////////////////////////////
+//	Info BringMeal
+///////////////////////////////////////////////////////////////////////
+instance WRK_223_Ruga_BRINGMEAL		(C_INFO)
 {
-	if(INT_RUGAWANTSMEAL && (Npc_HasItems(hero,itfo_meatbugsoup) >= 1))
-	{
-		return TRUE;
-	};
-	return FALSE;
+	npc		 = 	WRK_223_Ruga;
+	nr		 = 	6;
+	condition	 = 	WRK_223_Ruga_BRINGMEAL_Condition;
+	information	 = 	WRK_223_Ruga_BRINGMEAL_Info;
+	important	 = 	FALSE;
+	permanent	 = 	TRUE;
+
+	description	 = 	"Ich hab deine Suppe.";
 };
 
-func void wrk_223_ruga_bringmeal_info()
+func int WRK_223_Ruga_BRINGMEAL_Condition ()
 {
-	AI_Output(hero,self,"WRK_223_BRINGMEAL_15_01");	//Ich hab deine Suppe.
-	B_GiveInvItems(self,hero,itfo_meatbugsoup,1);
-	AI_Output(self,hero,"WRK_223_BRINGMEAL_09_02");	//Immer her damit!
-	INT_RUGAWANTSMEAL = FALSE;
-	INT_RUGAANGRY = FALSE;
-	INT_RUGACALM = TRUE;
-	Log_SetTopicStatus(CH1_RUGAWANTSMEAL,LOG_SUCCESS);
-	B_LogEntry(CH1_RUGAWANTSMEAL,"Ruga hat sich beruhigt, nachdem ich Ihm die Suppe gebracht habe.");
-};
-
-
-instance WRK_223_RUGA_BRINGMEALNOTREADY(C_Info)
-{
-	npc = wrk_223_ruga;
-	nr = 7;
-	condition = wrk_223_ruga_bringmealnotready_condition;
-	information = wrk_223_ruga_bringmealnotready_info;
-	important = FALSE;
-	permanent = FALSE;
-	description = "Welches Essen soll ich dir bringen?";
-};
-
-
-func int wrk_223_ruga_bringmealnotready_condition()
-{
-	if(INT_RUGAWANTSMEAL && (Npc_HasItems(hero,itfo_meatbugsoup) < 1))
+	if int_RugaWantsMeal
+	&&	(Npc_HasItems	(hero, ItFo_MeatBugSoup) >= 1)
 	{
 		return TRUE;
 	};
 	return FALSE;
 };
 
-func void wrk_223_ruga_bringmealnotready_info()
+func void WRK_223_Ruga_BRINGMEAL_Info ()
 {
-	AI_Output(hero,self,"WRK_223_BRINGMEALNOTREADY_15_01");	//Welches Essen soll ich dir bringen?
-	AI_Output(self,hero,"WRK_223_BRINGMEALNOTREADY_09_02");	//Meatbugsuppe! Das solltest selbst du dir merken können!
-	AI_StopProcessInfos(self);
+	AI_Output			(hero, self, "WRK_223_BRINGMEAL_15_01"); //Ich hab deine Suppe.
+	B_GiveInvItems		(self, hero, ItFo_MeatBugSoup, 1);
+	AI_Output			(self, hero, "WRK_223_BRINGMEAL_09_02"); //Immer her damit!
+
+	int_RugaWantsMeal = FALSE;
+	int_RugaAngry	= FALSE;
+	int_RugaCalm	= TRUE;
+	Log_SetTopicStatus	(CH1_RugaWantsMeal, LOG_SUCCESS);
+	B_LogEntry			(CH1_RugaWantsMeal,"Ruga hat sich beruhigt, nachdem ich Ihm die Suppe gebracht habe.");
 };
+
+///////////////////////////////////////////////////////////////////////
+//	Info BringMealNotReady
+///////////////////////////////////////////////////////////////////////
+instance WRK_223_Ruga_BRINGMEALNOTREADY		(C_INFO)
+{
+	npc		 = 	WRK_223_Ruga;
+	nr		 = 	7;
+	condition	 = 	WRK_223_Ruga_BRINGMEALNOTREADY_Condition;
+	information	 = 	WRK_223_Ruga_BRINGMEALNOTREADY_Info;
+	important	 = 	FALSE;
+	permanent	 = 	FALSE;
+
+	description	 = 	"Welches Essen soll ich dir bringen?";
+};
+
+func int WRK_223_Ruga_BRINGMEALNOTREADY_Condition ()
+{
+	if int_RugaWantsMeal
+	&&	(Npc_HasItems	(hero, ItFo_MeatBugSoup) < 1)
+	{
+		return TRUE;
+	};
+	return FALSE;
+};
+
+func void WRK_223_Ruga_BRINGMEALNOTREADY_Info ()
+{
+	AI_Output			(hero, self, "WRK_223_BRINGMEALNOTREADY_15_01"); //Welches Essen soll ich dir bringen?
+	AI_Output			(self, hero, "WRK_223_BRINGMEALNOTREADY_09_02"); //Meatbugsuppe! Das solltest selbst du dir merken können!
+	AI_StopProcessInfos	(self);
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

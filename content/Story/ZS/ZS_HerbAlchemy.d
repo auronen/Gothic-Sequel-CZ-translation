@@ -1,50 +1,75 @@
+/*******************************************
+*          NSC benutzt Herbstomper         *
+*******************************************/
 
 func void ZS_HerbAlchemy()
 {
-	PrintDebugNpc(PD_TA_FRAME,"ZS_HerbAlchemy");
-	B_SetPerception(self);
-	if(self.aivar[25] == 1)
-	{
-		self.aivar[25] = 0;
-	}
-	else
-	{
-		B_StartUseMob(self,SCEMENAME_HERB);
-		ai_removeitemfromslot(self,"ZS_LEFTHAND");
-		PrintDebugNpc(PD_ZS_Check,"Hier sollte Item in Hand gehen");
-		ai_createiteminslot(self,"ZS_LEFTHAND",4698);
+    PrintDebugNpc (PD_TA_FRAME,"ZS_HerbAlchemy");
+    
+	B_SetPerception (self);	
+	
+	if (self.aivar[AIV_DONTUSEMOB] == 1)
+    {
+    	self.aivar[AIV_DONTUSEMOB] = 0;
+    }
+    else
+    {
+		B_StartUseMob	(self,	SCEMENAME_HERB);
+		AI_RemoveItemFromSlot	(self,	"ZS_LEFTHAND");
+		PrintDebugNpc	(PD_ZS_CHECK, "Hier sollte Item in Hand gehen");
+		// Arbeitsmaterial für den Nsc in die Hand geben
+		AI_CreateItemInSlot(self,	"ZS_LEFTHAND",	ItMi_Stomper);
 	};
+	/*
+	if (!C_BodyStateContains(self, BS_MOBINTERACT))
+	{
+		AI_SetWalkmode (self,NPC_WALK);		// Walkmode für den Zustand
+		if ((Hlp_StrCmp(Npc_GetNearestWp (self),self.wp)== 0))
+		{
+			AI_GotoWP		(self, self.wp);
+		};
+
+		AI_RemoveItemFromSlot	(self,	"ZS_RIGHTHAND");
+		AI_RemoveItemFromSlot	(self,  "ZS_LEFTHAND");
+
+		AI_UseMob(self,SCEMENAME_HERB,1);		// Benutze den Mob einmal bis zum angegebenen State
+
+		AI_CreateItemInSlot	(self,	"ZS_LEFTHAND",	ItMi_Stomper);
+	};
+	*/
 };
 
-func int ZS_HerbAlchemy_Loop()
+func int ZS_HerbAlchemy_Loop ()
 {
-	var int int_helprandom;
-	var int randomizer;
-	PrintDebugNpc(PD_TA_LOOP,"ZS_HerbAlchemy_Loop");
-	if(wld_getinteractmobstate(self,SCEMENAME_HERB) == 1)
-	{
-		int_helprandom = Hlp_Random(11);
-		if(int_helprandom < 8)
-		{
-			AI_PlayAni(self,"T_HERB_RANDOM_1");
+    PrintDebugNpc (PD_TA_LOOP,"ZS_HerbAlchemy_Loop");
+    if (Wld_GetInteractMobState 	(self,SCEMENAME_HERB) == 1)
+    {
+    	// Zwei Anis abspielen, stampfen(Random_1) ist häufiger, weil es dann besser aussieht
+    	var int int_helprandom;
+    	int_helprandom = Hlp_Random	(11);
+    	if (int_helprandom < 8)
+    	{
+			AI_PlayAni	(self,"T_HERB_RANDOM_1");
 		};
-		if(int_helprandom > 8)
+		if (int_helprandom > 8)
 		{
-			AI_PlayAni(self,"T_HERB_RANDOM_2");
+			AI_PlayAni	(self,"T_HERB_RANDOM_2");
 		};
 	};
-	randomizer = Hlp_Random(20);
-	if(Npc_GetStateTime(self) >= (100 + randomizer))
-	{
-		B_InterruptMob(SCEMENAME_STOMPER);
-	};
+ 	var int randomizer;
+ 	randomizer = Hlp_Random (20);
+ 	// Von Zeit zu Zeit mal auflockern
+    if (Npc_GetStateTime ( self ) >= 100 + randomizer)
+    {
+    	B_InterruptMob (SCEMENAME_STOMPER);
+    };
 	AI_Wait(self,1);
 	return LOOP_CONTINUE;
 };
 
-func void ZS_HerbAlchemy_End()
+func void ZS_HerbAlchemy_End ()
 {
-	PrintDebugNpc(PD_TA_FRAME,"ZS_HerbAlchemy_End");
-	B_StopUseMob(self,SCEMENAME_HERB);
+	PrintDebugNpc (PD_TA_FRAME,"ZS_HerbAlchemy_End");
+	B_StopUseMob	(self,SCEMENAME_HERB);
 };
 

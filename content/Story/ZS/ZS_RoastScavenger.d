@@ -1,32 +1,38 @@
+/*******************************************
+*         NSC dreht Scavengergrill         *
+*******************************************/
 
-func void ZS_RoastScavenger()
+FUNC VOID ZS_RoastScavenger ()
 {
-	PrintDebugNpc(PD_TA_FRAME,"ZS_RoastScavenger");
-	B_SetPerception(self);
-	if(!C_BodyStateContains(self,BS_MOBINTERACT))
+	PrintDebugNpc (PD_TA_FRAME,"ZS_RoastScavenger");
+	
+	B_SetPerception (self);    
+
+	if !(C_BodyStateContains(self,BS_MOBINTERACT))
 	{
-		AI_SetWalkMode(self,NPC_WALK);
-		AI_GotoWP(self,self.wp);
+		AI_SetWalkmode (self,NPC_WALK);		// Walkmode für den Zustand
+		AI_GotoWP		(self, self.wp);
 		B_StartUseMob(self,"BARBQ");
 	};
 };
 
-func int ZS_RoastScavenger_Loop()
-{
+FUNC int ZS_RoastScavenger_Loop()
+{	
+	PrintDebugNpc (PD_TA_LOOP,"ZS_RoastScavenger_Loop"); // Da hier nur eine Ani geloopt wird reicht es diese in Begin und End zu benutzen
+	
 	var int randomizer;
-	PrintDebugNpc(PD_TA_LOOP,"ZS_RoastScavenger_Loop");
-	randomizer = Hlp_Random(20);
-	if(Npc_GetStateTime(self) >= (100 + randomizer))
-	{
-		B_InterruptMob("BARBQ");
-	};
+ 	randomizer = Hlp_Random	(20);
+    if (Npc_GetStateTime ( self ) >= 100 + randomizer)
+    {
+    	B_InterruptMob ("BARBQ");
+    };
 	AI_Wait(self,1);
 	return LOOP_CONTINUE;
 };
 
-func void ZS_RoastScavenger_End()
+FUNC VOID ZS_RoastScavenger_End()
 {
-	PrintDebugNpc(PD_TA_FRAME,"ZS_RoastScavenger_End");
-	AI_UseMob(self,"BARBQ",-1);
+	PrintDebugNpc (PD_TA_FRAME,"ZS_RoastScavenger_End");
+	AI_UseMob (self,"BARBQ",-1);		//Verlassen sie bitte ihr Mobsi
 };
 

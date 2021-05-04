@@ -1,1062 +1,1398 @@
+///////////////////////////////////////////////
 
-instance AMZ_900_THORA_EXIT(C_Info)
+instance  AMZ_900_Thora_Exit (C_INFO)
 {
-	npc = amz_900_thora;
-	nr = 999;
-	condition = amz_900_thora_exit_condition;
-	information = amz_900_thora_exit_info;
-	important = FALSE;
-	permanent = TRUE;
-	description = DIALOG_ENDE;
+	npc			=	AMZ_900_Thora;
+	nr			=	999;
+	condition	=	AMZ_900_Thora_Exit_Condition;
+	information	=	AMZ_900_Thora_Exit_Info;
+	important	=	FALSE;
+	permanent	=	TRUE;
+	description =	DIALOG_ENDE;
 };
 
-
-func int amz_900_thora_exit_condition()
+FUNC int  AMZ_900_Thora_Exit_Condition()
 {
 	return TRUE;
 };
 
-func void amz_900_thora_exit_info()
+FUNC VOID  AMZ_900_Thora_Exit_Info()
 {
-	AI_StopProcessInfos(self);
+	AI_StopProcessInfos	( self );
 };
 
 
-instance AMZ_900_THORA_GREETING(C_Info)
+
+
+
+
+
+
+
+//#####################################################################
+//##
+//##
+//##					KAPITEL 1 (Erste Begegnung)
+//##
+//##
+//#####################################################################
+
+instance AMZ_900_Thora_GREETING (C_INFO)
 {
-	npc = amz_900_thora;
-	condition = amz_900_thora_greeting_condition;
-	information = amz_900_thora_greeting_info;
-	important = TRUE;
-	permanent = FALSE;
+	npc				= AMZ_900_Thora;
+	condition		= AMZ_900_Thora_GREETING_Condition;
+	information		= AMZ_900_Thora_GREETING_Info;
+	important		= TRUE;
+	permanent		= FALSE;
+	//description		= "(Startsatz)";
 };
 
-
-func int amz_900_thora_greeting_condition()
+FUNC int  AMZ_900_Thora_GREETING_Condition()
 {
-	if(SUBCHAPTER < CH1_ARRIVED_AT_OC)
+	if	(subChapter < CH1_ARRIVED_AT_OC)
 	{
 		return TRUE;
 	};
 };
 
-func void amz_900_thora_greeting_info()
+func void  AMZ_900_Thora_GREETING_Info()
 {
-	AI_Output(self,hero,"AMZ_900_GREETING_16_01");	//Verdammt, woher kommst du so plötzlich? Wer bist du?
-	AI_Output(self,hero,"AMZ_900_GREETING_16_02");	//Beinahe hätte ich Dich niedergeschlagen!
-	Npc_ExchangeRoutine(self,"ArenaWait");
+	AI_Output 			(self, hero, "AMZ_900_GREETING_16_01"); //Verdammt, woher kommst du so plötzlich? Wer bist du?
+	AI_Output 			(self, hero, "AMZ_900_GREETING_16_02"); //Beinahe hätte ich Dich niedergeschlagen!
+	Npc_ExchangeRoutine (self,"ArenaWait");
 };
 
 
-instance AMZ_900_THORA_WHO(C_Info)
+instance  AMZ_900_Thora_WHO (C_INFO)
 {
-	npc = amz_900_thora;
-	condition = amz_900_thora_who_condition;
-	information = amz_900_thora_who_info;
-	important = FALSE;
-	permanent = FALSE;
-	description = "Immer langsam! Sag mir doch erstmal wer du bist.";
+	npc				= AMZ_900_Thora;
+	condition		= AMZ_900_Thora_WHO_Condition;
+	information		= AMZ_900_Thora_WHO_Info;
+	important		= FALSE;
+	permanent		= FALSE;
+	description		= "Immer langsam! Sag mir doch erstmal wer du bist.";
 };
 
-
-func int amz_900_thora_who_condition()
+FUNC int  AMZ_900_Thora_WHO_Condition()
 {
-	if(!Npc_KnowsInfo(hero,amz_900_thora_training) && (SUBCHAPTER < CH1_ARRIVED_AT_OC))
+	if	!Npc_KnowsInfo (hero, AMZ_900_Thora_TRAINING)
+	&&	(subChapter < CH1_ARRIVED_AT_OC)
 	{
 		return TRUE;
 	};
 };
 
-func void amz_900_thora_who_info()
+FUNC void  AMZ_900_Thora_WHO_Info()
 {
-	AI_Output(hero,self,"AMZ_900_Thora_WHO_Info_15_01");	//Immer langsam! Sag mir doch erstmal wer du bist.
-	AI_Output(self,hero,"AMZ_900_Thora_WHO_Info_16_02");	//Ich bin Thora. Und ich frage mich, wo du so plötzlich herkommst!
-	Info_AddChoice(amz_900_thora_who,"Ich bin vom Himmel gefallen!",amz_900_thora_who_sky);
-	Info_AddChoice(amz_900_thora_who,"Das kann ich dir leider nicht sagen.",amz_900_thora_who_cantsay);
+	AI_Output (hero, self,"AMZ_900_Thora_WHO_Info_15_01"); //Immer langsam! Sag mir doch erstmal wer du bist.
+	AI_Output (self, hero,"AMZ_900_Thora_WHO_Info_16_02"); //Ich bin Thora. Und ich frage mich, wo du so plötzlich herkommst!
+	Info_AddChoice		(AMZ_900_Thora_WHO,	"Ich bin vom Himmel gefallen!",				AMZ_900_Thora_WHO_SKY);
+	Info_AddChoice		(AMZ_900_Thora_WHO,	"Das kann ich dir leider nicht sagen.",		AMZ_900_Thora_WHO_CANTSAY);
 };
 
-func void amz_900_thora_who_sky()
+FUNC VOID AMZ_900_Thora_WHO_SKY()
 {
-	AI_Output(hero,self,"AMZ_900_Thora_WHO_SKY_Info_15_01");	//Ich bin vom Himmel gefallen!
-	AI_Output(self,hero,"AMZ_900_Thora_WHO_SKY_Info_16_02");	//Wirklich wahr? Dann sieh mal zu, daß du wieder heil nach oben kommst, mein Vögelchen!
-	AI_Output(self,hero,"AMZ_900_Thora_WHO_SKY_Info_16_03");	//Und falls du mal wieder landest, solltest du etwas freundlicher sein!
-	Info_ClearChoices(amz_900_thora_who);
-	AI_StopProcessInfos(self);
+	AI_Output (hero, self,"AMZ_900_Thora_WHO_SKY_Info_15_01"); //Ich bin vom Himmel gefallen!
+	AI_Output (self, hero,"AMZ_900_Thora_WHO_SKY_Info_16_02"); //Wirklich wahr? Dann sieh mal zu, daß du wieder heil nach oben kommst, mein Vögelchen!
+	AI_Output (self, hero,"AMZ_900_Thora_WHO_SKY_Info_16_03"); //Und falls du mal wieder landest, solltest du etwas freundlicher sein!
+
+	Info_ClearChoices	(AMZ_900_Thora_WHO);
+	AI_StopProcessInfos (self);
 };
 
-func void amz_900_thora_who_cantsay()
+FUNC VOID AMZ_900_Thora_WHO_CANTSAY()
 {
-	AI_Output(hero,self,"AMZ_900_Thora_WHO_CANTSAY_Info_15_01");	//Das kann ich dir leider nicht sagen.
-	AI_Output(self,hero,"AMZ_900_Thora_WHO_CANTSAY_Info_16_02");	//Das war doch ein Teleport-Zauber, aber wie ein Magier siehst du nicht gerade aus.
-	Info_ClearChoices(amz_900_thora_who);
-	Info_AddChoice(amz_900_thora_who,"Beurteilst du jeden nach dem Äusseren?",amz_900_thora_who_judge);
+	AI_Output (hero, self,"AMZ_900_Thora_WHO_CANTSAY_Info_15_01"); //Das kann ich dir leider nicht sagen.
+	AI_Output (self, hero,"AMZ_900_Thora_WHO_CANTSAY_Info_16_02"); //Das war doch ein Teleport-Zauber, aber wie ein Magier siehst du nicht gerade aus.
+
+	Info_ClearChoices	(AMZ_900_Thora_WHO);
+	Info_AddChoice 		(AMZ_900_Thora_WHO,	"Beurteilst du jeden nach dem Äusseren?",					AMZ_900_Thora_WHO_JUDGE);
 };
 
-func void amz_900_thora_who_judge()
+FUNC VOID AMZ_900_Thora_WHO_JUDGE()
 {
-	AI_Output(other,self,"AMZ_900_Thora_WHO_JUDGE_Info_15_01");	//Beurteilst du jeden nach dem Äusseren?
-	AI_Output(self,other,"AMZ_900_Thora_WHO_JUDGE_Info_16_02");	//Nicht jeden. Nur die, die nichts zu sagen haben!
-	AI_Output(self,other,"AMZ_900_Thora_WHO_JUDGE_Info_16_03");	//Was hast du denn hier vor?
-	Info_AddChoice(amz_900_thora_who,"Sagst du mir auch, was Du hier machst?",amz_900_thora_who_what);
-	Info_AddChoice(amz_900_thora_who,"Was ich hier vorhabe, kann ich dir nicht erzählen.",amz_900_thora_who_secret);
-	Info_AddChoice(amz_900_thora_who,"Ich will ins Lager.",amz_900_thora_who_whatelse);
+	AI_Output (other, self,"AMZ_900_Thora_WHO_JUDGE_Info_15_01"); //Beurteilst du jeden nach dem Äusseren?
+	AI_Output (self, other,"AMZ_900_Thora_WHO_JUDGE_Info_16_02"); //Nicht jeden. Nur die, die nichts zu sagen haben!
+	AI_Output (self, other,"AMZ_900_Thora_WHO_JUDGE_Info_16_03"); //Was hast du denn hier vor?
+
+	Info_AddChoice 		(AMZ_900_Thora_WHO,	"Sagst du mir auch, was Du hier machst?",					AMZ_900_Thora_WHO_WHAT);
+	Info_AddChoice 		(AMZ_900_Thora_WHO,	"Was ich hier vorhabe, kann ich dir nicht erzählen.",		AMZ_900_Thora_WHO_SECRET);
+	Info_AddChoice 		(AMZ_900_Thora_WHO,	"Ich will ins Lager.",										AMZ_900_Thora_WHO_WHATELSE);
 };
 
-func void amz_900_thora_who_what()
+FUNC VOID AMZ_900_Thora_WHO_WHAT()
 {
-	AI_Output(other,self,"AMZ_900_Thora_WHO_WHAT_Info_15_01");	//Sagst du mir auch, was Du hier machst?
-	AI_Output(self,other,"AMZ_900_Thora_WHO_WHAT_Info_16_02");	//...also gerade versuche ich etwas über dich zu erfahren.
-	AI_Output(other,self,"AMZ_900_Thora_WHO_WHAT_Info_15_03");	//und sonst?
-	AI_Output(self,other,"AMZ_900_Thora_WHO_WHAT_Info_16_04");	//Ich bin Kämpferin.
-	Info_AddChoice(amz_900_thora_who,"Eine Frau als Kämpferin?",amz_900_thora_who_fighter);
+	AI_Output (other, self,"AMZ_900_Thora_WHO_WHAT_Info_15_01"); //Sagst du mir auch, was Du hier machst?
+	AI_Output (self, other,"AMZ_900_Thora_WHO_WHAT_Info_16_02"); //...also gerade versuche ich etwas über dich zu erfahren.
+	AI_Output (other, self,"AMZ_900_Thora_WHO_WHAT_Info_15_03"); //und sonst?
+	AI_Output (self, other,"AMZ_900_Thora_WHO_WHAT_Info_16_04"); //Ich bin Kämpferin.
+
+//	Info_ClearChoices	(AMZ_900_Thora_WHO);
+	Info_AddChoice 		(AMZ_900_Thora_WHO,	"Eine Frau als Kämpferin?",		AMZ_900_Thora_WHO_FIGHTER);
+
 };
 
-func void amz_900_thora_who_secret()
+FUNC VOID AMZ_900_Thora_WHO_SECRET()
 {
-	AI_Output(hero,self,"AMZ_900_Thora_WHO_SECRET_Info_15_01");	//Was ich hier vorhabe, kann ich dir nicht erzählen.
-	AI_Output(self,hero,"AMZ_900_Thora_WHO_SECRET_Info_16_02");	//Na dann!
-	Info_ClearChoices(amz_900_thora_who);
-	AI_StopProcessInfos(self);
+	AI_Output (hero, self,"AMZ_900_Thora_WHO_SECRET_Info_15_01"); //Was ich hier vorhabe, kann ich dir nicht erzählen.
+	AI_Output (self, hero,"AMZ_900_Thora_WHO_SECRET_Info_16_02"); //Na dann!
+
+	Info_ClearChoices	(AMZ_900_Thora_WHO);
+	AI_StopProcessInfos (self);
 };
 
-func void amz_900_thora_who_whatelse()
+FUNC VOID AMZ_900_Thora_WHO_WHATELSE()
 {
-	AI_Output(other,self,"AMZ_900_Thora_WHO_WHATELSE_Info_15_01");	//Ich will ins Lager.
-	AI_Output(self,other,"AMZ_900_Thora_WHO_WHATELSE_Info_16_02");	//Das hast du schon fast geschafft. Da hinten ist es.
-	Info_ClearChoices(amz_900_thora_who);
+	AI_Output (other, self,"AMZ_900_Thora_WHO_WHATELSE_Info_15_01"); //Ich will ins Lager.
+	AI_Output (self, other,"AMZ_900_Thora_WHO_WHATELSE_Info_16_02"); //Das hast du schon fast geschafft. Da hinten ist es.
+	Info_ClearChoices	(AMZ_900_Thora_WHO);
 };
 
-func void amz_900_thora_who_fighter()
+FUNC VOID AMZ_900_Thora_WHO_FIGHTER()
 {
-	AI_Output(other,self,"AMZ_900_Thora_WHO_FIGHTER_Info_15_01");	//Eine Frau als Kämpferin?
-	AI_Output(self,other,"AMZ_900_Thora_WHO_FIGHTER_Info_16_02");	//Auch Du solltest nicht nach dem Äusseren urteilen.
-	AI_Output(self,other,"AMZ_900_Thora_WHO_FIGHTER_Info_16_03");	//Einige hier mussten das erst schmerzvoll lernen!
+	AI_Output (other, self,"AMZ_900_Thora_WHO_FIGHTER_Info_15_01"); //Eine Frau als Kämpferin?
+	AI_Output (self, other,"AMZ_900_Thora_WHO_FIGHTER_Info_16_02"); //Auch Du solltest nicht nach dem Äusseren urteilen.
+	AI_Output (self, other,"AMZ_900_Thora_WHO_FIGHTER_Info_16_03"); //Einige hier mussten das erst schmerzvoll lernen!
+//	Info_ClearChoices	(AMZ_900_Thora_WHO);
 };
 
-
-instance AMZ_900_THORA_TRAINING(C_Info)
+////////////////////////////////////////////////
+instance  AMZ_900_Thora_TRAINING (C_INFO)
 {
-	npc = amz_900_thora;
-	condition = amz_900_thora_training_condition;
-	information = amz_900_thora_training_info;
-	important = FALSE;
-	permanent = FALSE;
-	description = "Ich bin hier um zu trainieren und zu lernen.";
+	npc				= AMZ_900_Thora;
+	condition		= AMZ_900_Thora_TRAINING_Condition;
+	information		= AMZ_900_Thora_TRAINING_Info;
+	important		= FALSE;
+	permanent		= FALSE;
+	description		= "Ich bin hier um zu trainieren und zu lernen.";
 };
 
-
-func int amz_900_thora_training_condition()
+FUNC int  AMZ_900_Thora_TRAINING_Condition()
 {
-	if(Npc_KnowsInfo(hero,amz_900_thora_who) && (Npc_GetDistToWP(self,THORA_WP_OUT) < 300) && !Wld_IsTime(THORA_OUT_H,THORA_OUT_M + 30,THORA_IN_H,THORA_IN_M))
+	if	Npc_KnowsInfo (hero, AMZ_900_Thora_WHO)
+	&&	(Npc_GetDistToWP(self, THORA_WP_OUT) < 300)
+	&&	!Wld_IsTime(THORA_OUT_H, THORA_OUT_M+30, THORA_IN_H, THORA_IN_M)
 	{
 		return TRUE;
 	};
 };
 
-func void amz_900_thora_training_info()
+FUNC void  AMZ_900_Thora_TRAINING_Info()
 {
-	AI_Output(other,self,"AMZ_900_Thora_TRAINING_Info_15_01");	//Ich bin hier um zu trainieren und zu lernen.
-	AI_Output(self,other,"AMZ_900_Thora_TRAINING_Info_16_02");	//Sieht so aus, als ob du das auch nötig hast!
-	Info_ClearChoices(amz_900_thora_training);
-	Info_AddChoice(amz_900_thora_training,"Mit dir werde ich auch ohne Training fertig!",amz_900_thora_training_hostile);
-	Info_AddChoice(amz_900_thora_training,"Wer hat dich denn um deine Meinung gefragt?",amz_900_thora_training_angry);
-	Info_AddChoice(amz_900_thora_training,"Ich war wirklich schon mal besser in Form.",amz_900_thora_training_friendly);
+	AI_Output (other, self,"AMZ_900_Thora_TRAINING_Info_15_01"); //Ich bin hier um zu trainieren und zu lernen.
+	AI_Output (self, other,"AMZ_900_Thora_TRAINING_Info_16_02"); //Sieht so aus, als ob du das auch nötig hast!
+
+	Info_ClearChoices 	(AMZ_900_Thora_TRAINING);
+	Info_AddChoice 		(AMZ_900_Thora_TRAINING,	"Mit dir werde ich auch ohne Training fertig!",	AMZ_900_Thora_TRAINING_HOSTILE);
+	Info_AddChoice 		(AMZ_900_Thora_TRAINING,	"Wer hat dich denn um deine Meinung gefragt?",	AMZ_900_Thora_TRAINING_ANGRY);
+	Info_AddChoice 		(AMZ_900_Thora_TRAINING,	"Ich war wirklich schon mal besser in Form.",	AMZ_900_Thora_TRAINING_FRIENDLY);
 };
 
-func void amz_900_thora_training_friendly()
+FUNC VOID AMZ_900_Thora_TRAINING_FRIENDLY()
 {
-	AI_Output(other,self,"AMZ_900_Thora_TRAINING_FRIENDLY_Info_15_01");	//Ich war wirklich schon mal besser in Form.
-	AI_Output(self,other,"AMZ_900_Thora_TRAINING_FRIENDLY_Info_16_02");	//Im Lager gibt es viel zu lernen. Du kannst dich sicher irgendwo nützlich machen!
-	AI_Output(self,other,"AMZ_900_Thora_TRAINING_FRIENDLY_Info_16_03");	//Ich muß los, wir sehen uns bestimmt später noch.
-	AI_StopProcessInfos(self);
+	AI_Output (other, self,"AMZ_900_Thora_TRAINING_FRIENDLY_Info_15_01"); //Ich war wirklich schon mal besser in Form.
+	AI_Output (self, other,"AMZ_900_Thora_TRAINING_FRIENDLY_Info_16_02"); //Im Lager gibt es viel zu lernen. Du kannst dich sicher irgendwo nützlich machen!
+	AI_Output (self, other,"AMZ_900_Thora_TRAINING_FRIENDLY_Info_16_03"); //Ich muß los, wir sehen uns bestimmt später noch.
+
+	AI_StopProcessInfos (self);
 };
 
-func void amz_900_thora_training_angry()
+FUNC VOID AMZ_900_Thora_TRAINING_ANGRY()
 {
-	AI_Output(other,self,"AMZ_900_Thora_TRAINING_ANGRY_Info_15_01");	//Wer hat dich denn um deine Meinung gefragt?
-	AI_Output(self,other,"AMZ_900_Thora_TRAINING_ANGRY_Info_16_02");	//Du scheinst einen schlechten Tag zu haben.
-	AI_Output(self,other,"AMZ_900_Thora_TRAINING_ANGRY_Info_16_03");	//Wenn du mal Hilfe brauchst, solltest du etwas freundlicher sein!
-	AI_StopProcessInfos(self);
+	AI_Output (other, self,"AMZ_900_Thora_TRAINING_ANGRY_Info_15_01"); //Wer hat dich denn um deine Meinung gefragt?
+	AI_Output (self, other,"AMZ_900_Thora_TRAINING_ANGRY_Info_16_02"); //Du scheinst einen schlechten Tag zu haben.
+	AI_Output (self, other,"AMZ_900_Thora_TRAINING_ANGRY_Info_16_03"); //Wenn du mal Hilfe brauchst, solltest du etwas freundlicher sein!
+
+	AI_StopProcessInfos (self);
 };
 
-func void amz_900_thora_training_hostile()
+FUNC VOID AMZ_900_Thora_TRAINING_HOSTILE()
 {
-	AI_Output(other,self,"AMZ_900_Thora_TRAINING_HOSTILE_Info_15_01");	//Mit dir werde ich auch ohne Training fertig!
-	AI_Output(self,other,"AMZ_900_Thora_TRAINING_HOSTILE_Info_16_02");	//Tatsächlich? Dann zeig doch mal, was du kannst!
-	AI_StopProcessInfos(self);
-	Npc_SetTarget(self,other);
-	AI_StartState(self,ZS_Attack,1,"");
+	AI_Output (other, self,"AMZ_900_Thora_TRAINING_HOSTILE_Info_15_01"); //Mit dir werde ich auch ohne Training fertig!
+	AI_Output (self, other,"AMZ_900_Thora_TRAINING_HOSTILE_Info_16_02"); //Tatsächlich? Dann zeig doch mal, was du kannst!
+
+	AI_StopProcessInfos (self);
+
+	Npc_SetTarget		(self,other);
+	AI_StartState		(self,ZS_ATTACK,1,"");
 };
 
-
-instance AMZ_900_THORA_NOTENOUGH(C_Info)
+///////////////////////////////////////////////////////////////////////
+//	Info NOTENOUGH
+///////////////////////////////////////////////////////////////////////
+instance AMZ_900_Thora_NOTENOUGH		(C_INFO)
 {
-	npc = amz_900_thora;
-	condition = amz_900_thora_notenough_condition;
-	information = amz_900_thora_notenough_info;
-	important = TRUE;
-	permanent = TRUE;
+	npc		 = 	AMZ_900_Thora;
+	condition	 = 	AMZ_900_Thora_NOTENOUGH_Condition;
+	information	 = 	AMZ_900_Thora_NOTENOUGH_Info;
+	important	 = 	TRUE;
+	permanent	 = 	TRUE;
 };
 
-
-func int amz_900_thora_notenough_condition()
+func int AMZ_900_Thora_NOTENOUGH_Condition ()
 {
-	if(self.aivar[13] && (Npc_GetDistToWP(self,"OCR_ARENABATTLE_BENCH") >= 500) && !Npc_KnowsInfo(hero,amz_900_thora_gladiator) && c_npcisinvincible(hero) && (SUBCHAPTER < CH1_ARRIVED_AT_OC))
+	if	self.aivar[AIV_HASDEFEATEDSC]
+	&&	(Npc_GetDistToWP(self, "OCR_ARENABATTLE_BENCH") >= 500)
+	&&	!Npc_KnowsInfo(hero, AMZ_900_Thora_GLADIATOR)
+	&&	C_NpcIsInvincible(hero)
+	&&	(subChapter < CH1_ARRIVED_AT_OC)
 	{
 		return TRUE;
 	};
 };
 
-func void amz_900_thora_notenough_info()
+func void AMZ_900_Thora_NOTENOUGH_Info ()
 {
-	AI_Output(self,hero,"AMZ_900_NOTENOUGH_16_01");	//(fröhlich) Na, ich kämpfe nicht so schlecht, oder?
-	Info_AddChoice(amz_900_thora_notenough,"Ich hab dich gewinnen lassen. Hab garnicht richtig zugeschlagen!",amz_900_thora_notenough_yes);
-	Info_AddChoice(amz_900_thora_notenough,"Stimmt. Wirklich nicht so schlecht!",amz_900_thora_notenough_no);
+	AI_Output			(self, hero, "AMZ_900_NOTENOUGH_16_01"); //(fröhlich) Na, ich kämpfe nicht so schlecht, oder?
+	Info_AddChoice	(AMZ_900_Thora_NOTENOUGH, "Ich hab dich gewinnen lassen. Hab garnicht richtig zugeschlagen!", AMZ_900_Thora_NOTENOUGH_YES );
+	Info_AddChoice	(AMZ_900_Thora_NOTENOUGH, "Stimmt. Wirklich nicht so schlecht!", AMZ_900_Thora_NOTENOUGH_NO );
 };
 
-func void amz_900_thora_notenough_no()
+func void AMZ_900_Thora_NOTENOUGH_NO ()
 {
-	AI_Output(hero,self,"AMZ_900_NOTENOUGH_NO_15_01");	//Stimmt. Wirklich nicht so schlecht!
-	AI_Output(self,hero,"AMZ_900_NOTENOUGH_NO_16_02");	//(freundlich) Na dann, bis später!
-	Info_ClearChoices(amz_900_thora_notenough);
-	amz_900_thora_notenough.permanent = FALSE;
-	AI_StopProcessInfos(self);
+	AI_Output			(hero, self, "AMZ_900_NOTENOUGH_NO_15_01"); //Stimmt. Wirklich nicht so schlecht!
+	AI_Output			(self, hero, "AMZ_900_NOTENOUGH_NO_16_02"); //(freundlich) Na dann, bis später!
+
+	Info_ClearChoices 	(AMZ_900_Thora_NOTENOUGH);
+	AMZ_900_Thora_NOTENOUGH.permanent = FALSE;
+	AI_StopProcessInfos (self);
 };
 
-func void amz_900_thora_notenough_yes()
+func void AMZ_900_Thora_NOTENOUGH_YES ()
 {
-	AI_Output(hero,self,"AMZ_900_NOTENOUGH_YES_15_01");	//Ich hab dich gewinnen lassen. Hab garnicht richtig zugeschlagen!
-	AI_Output(self,hero,"AMZ_900_NOTENOUGH_YES_16_02");	//Na wenn das so ist... tu das besser jetzt, sonst schluckst du nochmal Staub!
-	Info_ClearChoices(amz_900_thora_notenough);
-	AI_StopProcessInfos(self);
-	Npc_SetTarget(self,hero);
-	AI_StartState(self,ZS_Attack,1,"");
+	AI_Output			(hero, self, "AMZ_900_NOTENOUGH_YES_15_01"); //Ich hab dich gewinnen lassen. Hab garnicht richtig zugeschlagen!
+	AI_Output			(self, hero, "AMZ_900_NOTENOUGH_YES_16_02"); //Na wenn das so ist... tu das besser jetzt, sonst schluckst du nochmal Staub!
+
+	Info_ClearChoices 	(AMZ_900_Thora_NOTENOUGH);
+	AI_StopProcessInfos (self);
+
+	Npc_SetTarget		(self,hero);
+	AI_StartState		(self,ZS_ATTACK,1,"");
 };
 
-
-instance AMZ_900_THORA_SEEYA(C_Info)
+///////////////////////////////////////////////////////////////////////
+//	Info SEEYA
+///////////////////////////////////////////////////////////////////////
+instance AMZ_900_Thora_SEEYA		(C_INFO)
 {
-	npc = amz_900_thora;
-	condition = amz_900_thora_seeya_condition;
-	information = amz_900_thora_seeya_info;
-	important = FALSE;
-	permanent = FALSE;
-	description = "Wohin gehst du?";
+	npc		 	 = 	AMZ_900_Thora;
+	condition	 = 	AMZ_900_Thora_SEEYA_Condition;
+	information	 = 	AMZ_900_Thora_SEEYA_Info;
+	important	 = 	FALSE;
+	permanent	 = 	FALSE;
+
+	description	 = 	"Wohin gehst du?";
 };
 
-
-func int amz_900_thora_seeya_condition()
+func int AMZ_900_Thora_SEEYA_Condition ()
 {
-	if(Npc_IsInRoutine(self,ZS_SitAround) && (Npc_GetDistToWP(self,"OCR_ARENABATTLE_BENCH") >= 500) && (Npc_GetDistToWP(self,THORA_WP_OUT) >= 500) && !Npc_KnowsInfo(hero,amz_900_thora_gladiator) && Npc_KnowsInfo(hero,amz_900_thora_who))
+	if	Npc_IsInRoutine(self, ZS_SitAround)
+	&&	(Npc_GetDistToWP(self, "OCR_ARENABATTLE_BENCH") >= 500)
+	&&	(Npc_GetDistToWP(self, THORA_WP_OUT) >= 500)
+	&&	!Npc_KnowsInfo(hero, AMZ_900_Thora_GLADIATOR)
+	&&	Npc_KnowsInfo(hero, AMZ_900_Thora_WHO)
 	{
 		return TRUE;
 	};
 };
 
-func void amz_900_thora_seeya_info()
+func void AMZ_900_Thora_SEEYA_Info ()
 {
-	AI_Output(hero,self,"AMZ_900_SEEYA_15_01");	//Wohin gehst du?
-	AI_Output(self,hero,"AMZ_900_SEEYA_16_02");	//Zur Arena. Ich kämpfe dort. Tagsüber bin ich meistens da.
+	AI_Output			(hero, self, "AMZ_900_SEEYA_15_01"); //Wohin gehst du?
+	AI_Output			(self, hero, "AMZ_900_SEEYA_16_02"); //Zur Arena. Ich kämpfe dort. Tagsüber bin ich meistens da.
 };
 
-
-instance AMZ_900_THORA_WHERENIGHT(C_Info)
+///////////////////////////////////////////////////////////////////////
+//	Info WHERENIGHT
+///////////////////////////////////////////////////////////////////////
+instance AMZ_900_Thora_WHERENIGHT		(C_INFO)
 {
-	npc = amz_900_thora;
-	condition = amz_900_thora_wherenight_condition;
-	information = amz_900_thora_wherenight_info;
-	important = FALSE;
-	permanent = FALSE;
-	description = "Und wo bist du... nachts?";
+	npc		 = 	AMZ_900_Thora;
+	condition	 = 	AMZ_900_Thora_WHERENIGHT_Condition;
+	information	 = 	AMZ_900_Thora_WHERENIGHT_Info;
+	important	 = 	FALSE;
+	permanent	 = 	FALSE;
+
+	description	 = 	"Und wo bist du... nachts?";
 };
 
-
-func int amz_900_thora_wherenight_condition()
+func int AMZ_900_Thora_WHERENIGHT_Condition ()
 {
-	if(Npc_KnowsInfo(hero,amz_900_thora_seeya))
+	if	Npc_KnowsInfo(hero, AMZ_900_Thora_SEEYA)
 	{
 		return TRUE;
 	};
 };
 
-func void amz_900_thora_wherenight_info()
+func void AMZ_900_Thora_WHERENIGHT_Info ()
 {
-	AI_Output(hero,self,"AMZ_900_WHERENIGHT_15_01");	//Und wo bist du... nachts?
-	AI_Output(self,hero,"AMZ_900_WHERENIGHT_16_02");	//(Lacht) Du bist zwar schlecht in Form, aber dafür ganz schön dreist!
-	AI_StopProcessInfos(self);
+	AI_Output			(hero, self, "AMZ_900_WHERENIGHT_15_01"); //Und wo bist du... nachts?
+	AI_Output			(self, hero, "AMZ_900_WHERENIGHT_16_02"); //(Lacht) Du bist zwar schlecht in Form, aber dafür ganz schön dreist!
+
+	AI_StopProcessInfos		(self);
 };
 
-
-instance AMZ_900_THORA_HEYWAIT(C_Info)
+///////////////////////////////////////////////////////////////////////
+//	Info HEYWAIT
+///////////////////////////////////////////////////////////////////////
+instance AMZ_900_Thora_HEYWAIT		(C_INFO)
 {
-	npc = amz_900_thora;
-	condition = amz_900_thora_heywait_condition;
-	information = amz_900_thora_heywait_info;
-	important = FALSE;
-	permanent = TRUE;
-	description = "Warte mal!";
+	npc		 	 = 	AMZ_900_Thora;
+	condition	 = 	AMZ_900_Thora_HEYWAIT_Condition;
+	information	 = 	AMZ_900_Thora_HEYWAIT_Info;
+	important	 = 	FALSE;
+	permanent	 = 	TRUE;
+
+	description	 = 	"Warte mal!";
 };
 
-
-func int amz_900_thora_heywait_condition()
+func int AMZ_900_Thora_HEYWAIT_Condition ()
 {
-	if(Npc_KnowsInfo(hero,amz_900_thora_wherenight) && (Npc_GetDistToWP(self,"OCR_ARENABATTLE_BENCH") >= 500) && (Npc_GetDistToWP(self,THORA_WP_OUT) >= 500))
+	if	Npc_KnowsInfo(hero, AMZ_900_Thora_WHERENIGHT)
+	&&	(Npc_GetDistToWP(self, "OCR_ARENABATTLE_BENCH") >= 500)
+	&&	(Npc_GetDistToWP(self, THORA_WP_OUT) >= 500)
 	{
 		return TRUE;
 	};
 };
 
-func void amz_900_thora_heywait_info()
+func void AMZ_900_Thora_HEYWAIT_Info ()
 {
-	AI_Output(hero,self,"AMZ_900_HEYWAIT_15_01");	//Warte mal!
-	AI_Output(self,hero,"AMZ_900_HEYWAIT_16_02");	//(fröhlich) Wir sehen uns später!
-	AI_StopProcessInfos(self);
+	AI_Output			(hero, self, "AMZ_900_HEYWAIT_15_01"); //Warte mal!
+	AI_Output			(self, hero, "AMZ_900_HEYWAIT_16_02"); //(fröhlich) Wir sehen uns später!
+
+	AI_StopProcessInfos		(self);
 };
 
 
-instance AMZ_900_THORA_NIGHT(C_Info)
+
+
+
+
+
+
+
+
+//#####################################################################
+//##
+//##
+//##						STERNENGUCKEREI
+//##
+//##
+//#####################################################################
+
+///////////////////////////////////////////////////////////////////////
+//	Info NIGHT
+///////////////////////////////////////////////////////////////////////
+instance AMZ_900_Thora_NIGHT		(C_INFO)
 {
-	npc = amz_900_thora;
-	condition = amz_900_thora_night_condition;
-	information = amz_900_thora_night_info;
-	important = FALSE;
-	permanent = FALSE;
-	description = "Was tust du hier draussen?";
+	npc		 = 	AMZ_900_Thora;
+	condition	 = 	AMZ_900_Thora_NIGHT_Condition;
+	information	 = 	AMZ_900_Thora_NIGHT_Info;
+	important	 = 	FALSE;
+	permanent	 = 	FALSE;
+
+	description	 = 	"Was tust du hier draussen?";
 };
 
-
-func int amz_900_thora_night_condition()
+func int AMZ_900_Thora_NIGHT_Condition ()
 {
-	if(Wld_IsTime(THORA_OUT_H,THORA_OUT_M + 30,THORA_IN_H,THORA_IN_M) && (SUBCHAPTER < CH2_THORA_CONVINCED))
+	if	Wld_IsTime(THORA_OUT_H, THORA_OUT_M+30, THORA_IN_H, THORA_IN_M)
+	&&	(subChapter < CH2_THORA_CONVINCED)
 	{
 		return TRUE;
 	};
 };
 
-func void amz_900_thora_night_info()
+func void AMZ_900_Thora_NIGHT_Info ()
 {
-	AI_Output(hero,self,"AMZ_900_NIGHT_15_01");	//Was tust du hier draussen?
-	AI_Output(self,hero,"AMZ_900_NIGHT_16_02");	//Ich betrachte die Sterne. Sie sind erfüllt von der Macht des Feuers.
-	AI_Output(self,hero,"AMZ_900_NIGHT_16_03");	//Das Feuer bestimmt mein Schicksal, so wie es das der Sterne bestimmt.
-	AI_StopProcessInfos(self);
+	AI_Output			(hero, self, "AMZ_900_NIGHT_15_01"); //Was tust du hier draussen?
+	AI_Output			(self, hero, "AMZ_900_NIGHT_16_02"); //Ich betrachte die Sterne. Sie sind erfüllt von der Macht des Feuers.
+	AI_Output			(self, hero, "AMZ_900_NIGHT_16_03"); //Das Feuer bestimmt mein Schicksal, so wie es das der Sterne bestimmt.
+	AI_StopProcessInfos	(self);
 };
 
-
-instance AMZ_900_THORA_NIGHTAGAIN(C_Info)
+///////////////////////////////////////////////////////////////////////
+//	Info NIGHTAGAIN
+///////////////////////////////////////////////////////////////////////
+instance AMZ_900_Thora_NIGHTAGAIN		(C_INFO)
 {
-	npc = amz_900_thora;
-	condition = amz_900_thora_nightagain_condition;
-	information = amz_900_thora_nightagain_info;
-	important = FALSE;
-	permanent = TRUE;
-	description = "Betrachtest du immer noch die Sterne?";
+	npc		 = 	AMZ_900_Thora;
+	condition	 = 	AMZ_900_Thora_NIGHTAGAIN_Condition;
+	information	 = 	AMZ_900_Thora_NIGHTAGAIN_Info;
+	important	 = 	FALSE;
+	permanent	 = 	TRUE;
+
+	description	 = 	"Betrachtest du immer noch die Sterne?";
 };
 
-
-func int amz_900_thora_nightagain_condition()
+func int AMZ_900_Thora_NIGHTAGAIN_Condition ()
 {
-	if(amz_900_thora_night_condition() && Npc_KnowsInfo(hero,amz_900_thora_night) && (SUBCHAPTER < CH2_THORA_CONVINCED))
+	if	AMZ_900_Thora_NIGHT_Condition()
+	&&	Npc_KnowsInfo(hero, AMZ_900_Thora_NIGHT)
+	&&	(subChapter < CH2_THORA_CONVINCED)
 	{
 		return TRUE;
 	};
 };
 
-func void amz_900_thora_nightagain_info()
+func void AMZ_900_Thora_NIGHTAGAIN_Info ()
 {
-	AI_Output(hero,self,"AMZ_900_NIGHTAGAIN_15_01");	//Betrachtest du immer noch die Sterne?
-	AI_Output(self,hero,"AMZ_900_NIGHTAGAIN_16_02");	//Die Sterne reflektieren das Feuer in mir. Ich liebe die Sterne.
-	AI_StopProcessInfos(self);
+	AI_Output			(hero, self, "AMZ_900_NIGHTAGAIN_15_01"); //Betrachtest du immer noch die Sterne?
+	AI_Output			(self, hero, "AMZ_900_NIGHTAGAIN_16_02"); //Die Sterne reflektieren das Feuer in mir. Ich liebe die Sterne.
+	AI_StopProcessInfos	(self);
 };
 
 
-instance AMZ_900_THORA_MYWEAPON(C_Info)
+
+
+
+
+
+//#####################################################################
+//##
+//##
+//##						ARENA-KAMPF
+//##
+//##
+//#####################################################################
+
+///////////////////////////////////////////////////////////////////////
+//	Info MYWEAPON
+///////////////////////////////////////////////////////////////////////
+instance AMZ_900_Thora_MYWEAPON		(C_INFO)
 {
-	npc = amz_900_thora;
-	nr = 1;
-	condition = amz_900_thora_myweapon_condition;
-	information = amz_900_thora_myweapon_info;
-	important = TRUE;
-	permanent = TRUE;
+	npc			= AMZ_900_Thora;
+	nr			= 1;
+	condition	= AMZ_900_Thora_MYWEAPON_Condition;
+	information	= AMZ_900_Thora_MYWEAPON_Info;
+	important	= TRUE;
+	permanent	= TRUE;
 };
 
-
-func int amz_900_thora_myweapon_condition()
+func int AMZ_900_Thora_MYWEAPON_Condition ()
 {
-	if(Npc_HasItems(hero,itmw_thora_battlestaff))
+	if	Npc_HasItems(hero, ItMw_Thora_Battlestaff)
 	{
-		if(ARENA_FIGHTRUNNING && ARENA_PLAYERFIGHT && THORA_CHALLENGED && !ARENA_PLAYERSTOLEWEAPON)
+		if	Arena_FightRunning
+		&&	Arena_PlayerFight
+		&&	Thora_Challenged
+		&&	!Arena_PlayerStoleWeapon
 		{
-			return TRUE;
+			return			TRUE;
 		}
 		else
 		{
-			return FALSE;
+			//self.aivar		[AIV_PLAYERHASMYWEAPON]	=	TRUE;
+			return 			FALSE;
 		};
 	};
 };
 
-func int amz_900_thora_myweapon_info()
+func int AMZ_900_Thora_MYWEAPON_Info ()
 {
-	AI_SetWalkMode(self,NPC_RUN);
-	AI_GotoNpc(self,hero);
-	AI_Output(self,hero,"AMZ_900_MYWEAPON_Info_16_01");	//(wütend) Gib mir den Kampfstab!
-	Info_ClearChoices(amz_900_thora_myweapon);
-	Info_AddChoice(amz_900_thora_myweapon,"Ich glaube, ich behalte ihn lieber.",amz_900_thora_myweapon_taken);
-	Info_AddChoice(amz_900_thora_myweapon,"Hier hast du das Ding zurück!",amz_900_thora_myweapon_giveback);
+	AI_SetWalkmode			(self, NPC_RUN);
+	AI_GotoNpc				(self, hero);
+	AI_Output				(self, hero, "AMZ_900_MYWEAPON_Info_16_01"); //(wütend) Gib mir den Kampfstab!
+
+	Info_ClearChoices		(AMZ_900_Thora_MYWEAPON);
+	Info_AddChoice			(AMZ_900_Thora_MYWEAPON, "Ich glaube, ich behalte ihn lieber.",	AMZ_900_Thora_MYWEAPON_TAKEN );
+	Info_AddChoice			(AMZ_900_Thora_MYWEAPON, "Hier hast du das Ding zurück!",	AMZ_900_Thora_MYWEAPON_GIVEBACK );
 };
 
-func void amz_900_thora_myweapon_giveback()
+func void AMZ_900_Thora_MYWEAPON_GIVEBACK ()
 {
-	Info_ClearChoices(amz_900_thora_myweapon);
-	AI_Output(hero,self,"AMZ_900_MYWEAPON_GIVEBACK_15_01");	//Hier hast du das Ding zurück!
-	B_GiveInvItems(hero,self,itmw_thora_battlestaff,1);
-	AI_Output(self,hero,"AMZ_900_MYWEAPON_GIVEBACK_16_02");	//Dann zeig mal, ob du noch was anderes drauf hast, ausser Waffenstehlen.
-	AI_StopProcessInfos(self);
+	Info_ClearChoices		(AMZ_900_Thora_MYWEAPON);
+	AI_Output				(hero, self, "AMZ_900_MYWEAPON_GIVEBACK_15_01"); //Hier hast du das Ding zurück!
+	B_GiveInvItems			(hero, self, ItMw_Thora_Battlestaff, 1);
+	AI_Output				(self, hero, "AMZ_900_MYWEAPON_GIVEBACK_16_02"); //Dann zeig mal, ob du noch was anderes drauf hast, ausser Waffenstehlen.
+
+	AI_StopProcessInfos		(self);
+
 };
 
-func void amz_900_thora_myweapon_taken()
+func void AMZ_900_Thora_MYWEAPON_TAKEN ()
 {
-	Info_ClearChoices(amz_900_thora_myweapon);
-	AI_Output(hero,self,"AMZ_900_MYWEAPON_TAKEN_15_01");	//Ich glaube, ich behalte ihn lieber.
-	AI_Output(self,hero,"AMZ_900_MYWEAPON_TAKEN_16_02");	//(wütender) Du kannst dich nicht mal in der Arena an die Regeln halten!
-	AI_StopProcessInfos(self);
-	b_arena_abortfight(AF_PLAYERSTOLEWEAPON);
+	Info_ClearChoices		(AMZ_900_Thora_MYWEAPON);
+	AI_Output				(hero, self, "AMZ_900_MYWEAPON_TAKEN_15_01"); //Ich glaube, ich behalte ihn lieber.
+	AI_Output				(self, hero, "AMZ_900_MYWEAPON_TAKEN_16_02"); //(wütender) Du kannst dich nicht mal in der Arena an die Regeln halten!
+	AI_StopProcessInfos		(self);
+
+	B_Arena_AbortFight		(AF_PLAYERSTOLEWEAPON);
 };
 
-
-instance AMZ_900_THORA_CHALLENGED(C_Info)
+///////////////////////////////////////////////////////////////////////
+//	Info CHALLENGED
+///////////////////////////////////////////////////////////////////////
+instance	AMZ_900_Thora_CHALLENGED (C_INFO)
 {
-	npc = amz_900_thora;
-	nr = 2;
-	condition = amz_900_thora_challenged_condition;
-	information = amz_900_thora_challenged_info;
-	important = TRUE;
-	permanent = TRUE;
+	npc				= AMZ_900_Thora;
+	nr				= 2;
+	condition		= AMZ_900_Thora_CHALLENGED_Condition;
+	information		= AMZ_900_Thora_CHALLENGED_Info;
+	important		= TRUE;
+	permanent		= TRUE;
 };
 
-
-func int amz_900_thora_challenged_condition()
+func int	AMZ_900_Thora_CHALLENGED_Condition()
 {
-	if(THORA_CHALLENGED && ARENA_PLAYERFIGHT && c_npcisinvincible(self))
+	if	Thora_Challenged
+	&&	Arena_PlayerFight
+	&&	C_NpcIsInvincible(self)
 	{
 		return TRUE;
 	};
 };
 
-func void amz_900_thora_challenged_info()
+func void	AMZ_900_Thora_CHALLENGED_Info()
 {
-	if(Wld_IsTime(0,0,ARENABEGIN_H,ARENABEGIN_M))
+	if	Wld_IsTime(0,0,	ARENABEGIN_H, ARENABEGIN_M)
 	{
-		if(Npc_GetDistToWP(self,ARENA_WP_RIGHT_CHAMBER) > ARENA_DIST_PRECHAMBER)
+		if	(Npc_GetDistToWP	(self, ARENA_WP_RIGHT_CHAMBER) > ARENA_DIST_PRECHAMBER)
 		{
-			AI_Output(self,hero,"AMZ_900_CHALLENGED_16_01");	//Bin gespannt, was du draufhast.
-			AI_Output(self,hero,"AMZ_900_CHALLENGED_16_02");	//Wir sehen uns heute Abend in der Arena!
+			AI_Output			(self, hero,"AMZ_900_CHALLENGED_16_01"); //Bin gespannt, was du draufhast.
+			AI_Output			(self, hero,"AMZ_900_CHALLENGED_16_02"); //Wir sehen uns heute Abend in der Arena!
 		}
 		else
 		{
-			AI_Output(self,hero,"AMZ_900_CHALLENGED_16_03");	//Das ist MEINE Vorbereitungskammer.
-			b_attackproper(self,hero);
+			AI_Output			(self, hero,"AMZ_900_CHALLENGED_16_03"); //Das ist MEINE Vorbereitungskammer.
+			B_AttackProper		(self, hero);
 		};
-		AI_StopProcessInfos(self);
+
+		AI_StopProcessInfos		(self);
 		return;
 	};
-	if(Npc_IsInRoutine(self,zs_arenafight))
+
+	if	Npc_IsInRoutine(self, ZS_ArenaFight)
 	{
-		AI_Output(self,hero,"AMZ_900_CHALLENGED_16_04");	//Bist du nervös, oder warum redest du soviel?
-		AI_StopProcessInfos(self);
+		AI_Output				(self, hero,"AMZ_900_CHALLENGED_16_04"); //Bist du nervös, oder warum redest du soviel?
+		AI_StopProcessInfos		(self);
 		return;
 	}
 	else
 	{
-		AI_Output(self,hero,"MIL_121_CHALLENGED_16_05");	//Wir sehen uns in der Arena. Morgen Abend!
-		AI_StopProcessInfos(self);
+		AI_Output				(self, hero,"MIL_121_CHALLENGED_16_05"); //Wir sehen uns in der Arena. Morgen Abend!
+		AI_StopProcessInfos		(self);
 		return;
 	};
 };
 
-
-instance AMZ_900_THORA_PRENPC(C_Info)
+///////////////////////////////////////////////////////////////////////
+//	Info PRENPC
+///////////////////////////////////////////////////////////////////////
+instance	AMZ_900_Thora_PRENPC (C_INFO)
 {
-	npc = amz_900_thora;
-	condition = amz_900_thora_prenpc_condition;
-	information = amz_900_thora_prenpc_info;
-	important = TRUE;
-	permanent = TRUE;
+	npc				= AMZ_900_Thora;
+	condition		= AMZ_900_Thora_PRENPC_Condition;
+	information		= AMZ_900_Thora_PRENPC_Info;
+	important		= TRUE;
+	permanent		= TRUE;
 };
 
-
-func int amz_900_thora_prenpc_condition()
+func int	AMZ_900_Thora_PRENPC_Condition()
 {
-	if(ARENA_NPCFIGHT && (ARENA_NPCCOMBO == AC_MALGAR_THORA) && Wld_IsTime(ARENAPRE_H,ARENAPRE_M,ARENABEGIN_H,ARENABEGIN_M) && c_npcisinvincible(self))
+	if	Arena_NpcFight
+	&&	(Arena_NpcCombo == AC_MALGAR_THORA)
+	&&	Wld_IsTime(ARENAPRE_H, ARENAPRE_M, ARENABEGIN_H, ARENABEGIN_M)
+	&&	C_NpcIsInvincible(self)
 	{
 		return TRUE;
 	};
 };
 
-func void amz_900_thora_prenpc_info()
+func void	AMZ_900_Thora_PRENPC_Info()
 {
-	AI_Output(self,hero,"AMZ_900_PRENPC_16_01");	//Du hast in meiner Vorbereitungskammer nichts zu suchen. Verschwinde!
-	AI_StopProcessInfos(self);
+	AI_Output			(self, hero,"AMZ_900_PRENPC_16_01"); //Du hast in meiner Vorbereitungskammer nichts zu suchen. Verschwinde!
+	AI_StopProcessInfos	(self);
 };
 
-
-instance AMZ_900_THORA_GLADIATOR(C_Info)
+///////////////////////////////////////////////////////////////////////
+//	Info GLADIATOR
+///////////////////////////////////////////////////////////////////////
+instance AMZ_900_Thora_GLADIATOR		(C_INFO)
 {
-	npc = amz_900_thora;
-	nr = 5;
-	condition = amz_900_thora_gladiator_condition;
-	information = amz_900_thora_gladiator_info;
-	important = FALSE;
-	permanent = FALSE;
-	description = "Du kämpfst in der Arena?";
+	npc		 	= 	AMZ_900_Thora;
+	nr			=	5;
+	condition	= 	AMZ_900_Thora_GLADIATOR_Condition;
+	information	= 	AMZ_900_Thora_GLADIATOR_Info;
+	important	=	FALSE;
+	permanent	=	FALSE;
+
+	description	=	"Du kämpfst in der Arena?";
 };
 
-
-func int amz_900_thora_gladiator_condition()
+func int AMZ_900_Thora_GLADIATOR_Condition ()
 {
-	if((Npc_GetDistToWP(self,"OCR_ARENABATTLE_BENCH") < 500) && (SUBCHAPTER < CH2_THORA_CONVINCED))
+	if	(Npc_GetDistToWP(self, "OCR_ARENABATTLE_BENCH") < 500)
+	&&	(subChapter < CH2_THORA_CONVINCED)
 	{
 		return TRUE;
 	};
 };
 
-func int amz_900_thora_gladiator_info()
+func int AMZ_900_Thora_GLADIATOR_Info ()
 {
-	AI_Output(hero,self,"AMZ_900_GLADIATOR_15_01");	//(ungläubig) Du kämpfst in der Arena?
-	if(self.aivar[13])
+	AI_Output			(hero, self, "AMZ_900_GLADIATOR_15_01"); //(ungläubig) Du kämpfst in der Arena?
+
+	if	self.aivar[AIV_HASDEFEATEDSC]
 	{
-		AI_Output(self,hero,"AMZ_900_GLADIATOR_16_02");	//(spöttisch)Du solltest wissen, daß ich mit Waffen umgehen kann.
-		AI_Output(hero,self,"AMZ_900_GLADIATOR_15_03");	//ja... ich erinnere mich!
+		AI_Output		(self, hero, "AMZ_900_GLADIATOR_16_02"); //(spöttisch)Du solltest wissen, daß ich mit Waffen umgehen kann.
+		AI_Output		(hero, self, "AMZ_900_GLADIATOR_15_03"); //ja... ich erinnere mich!
+
 	}
 	else
 	{
-		AI_Output(self,hero,"AMZ_900_GLADIATOR_16_04");	//Du glaubst wohl immer noch, daß nur Männer mit Waffen umgehen können!
+		AI_Output		(self, hero, "AMZ_900_GLADIATOR_16_04"); //Du glaubst wohl immer noch, daß nur Männer mit Waffen umgehen können!
+//		AI_Output		(self, hero, "AMZ_900_GLADIATOR_16_05"); //Ich kann dir beweisen, daß das nicht stimmt!
 	};
+
 };
 
-
-instance AMZ_900_THORA_WEAPON(C_Info)
+///////////////////////////////////////////////////////////////////////
+//	Info WEAPON
+///////////////////////////////////////////////////////////////////////
+instance	AMZ_900_Thora_WEAPON (C_INFO)
 {
-	npc = amz_900_thora;
-	nr = 5;
-	condition = amz_900_thora_weapon_condition;
-	information = amz_900_thora_weapon_info;
-	important = FALSE;
-	permanent = FALSE;
-	description = "Was hast du da für eine seltsame Waffe?";
+	npc				= AMZ_900_Thora;
+	nr				= 5;
+	condition		= AMZ_900_Thora_WEAPON_Condition;
+	information		= AMZ_900_Thora_WEAPON_Info;
+	important		= FALSE;
+	permanent		= FALSE;
+	description		= "Was hast du da für eine seltsame Waffe?";
 };
 
-
-func int amz_900_thora_weapon_condition()
+func int	AMZ_900_Thora_WEAPON_Condition()
 {
-	if(Npc_KnowsInfo(hero,amz_900_thora_gladiator) && Npc_HasItems(self,itmw_thora_battlestaff))
+	if	Npc_KnowsInfo(hero, AMZ_900_Thora_GLADIATOR)
+	&&	Npc_HasItems (self, ItMw_Thora_Battlestaff)
 	{
 		return TRUE;
 	};
 };
 
-func void amz_900_thora_weapon_info()
+func void	AMZ_900_Thora_WEAPON_Info()
 {
-	AI_Output(hero,self,"AMZ_900_WEAPON_15_01");	//Was hast du da für eine seltsame Waffe?
-	AI_ReadyMeleeWeapon(self);
-	AI_TurnToNPC(self,hero);
-	AI_Wait(self,0.5);
-	AI_Output(self,hero,"AMZ_900_WEAPON_16_02");	//Einen thyrianischer Kampfstab.
-	AI_Output(self,hero,"AMZ_900_WEAPON_16_03");	//Ist schnell wie ein Pfeil und hat eine grosse Reichweite.
-	AI_Output(self,hero,"AMZ_900_WEAPON_16_04");	//Diese Waffe zu meistern ist sehr schwierig.
-	AI_RemoveWeapon(self);
-	AI_StopProcessInfos(self);
+	AI_Output			(hero, self, "AMZ_900_WEAPON_15_01"); //Was hast du da für eine seltsame Waffe?
+
+	AI_ReadyMeleeWeapon	(self);
+	AI_TurnToNpc		(self, hero);
+
+	AI_Wait				(self, 0.5);
+	AI_Output			(self, hero, "AMZ_900_WEAPON_16_02"); //Einen thyrianischer Kampfstab.
+	AI_Output			(self, hero, "AMZ_900_WEAPON_16_03"); //Ist schnell wie ein Pfeil und hat eine grosse Reichweite.
+	AI_Output			(self, hero, "AMZ_900_WEAPON_16_04"); //Diese Waffe zu meistern ist sehr schwierig.
+
+	AI_RemoveWeapon		(self);
+	AI_StopProcessInfos	(self);
 };
 
-
-instance AMZ_900_THORA_VICTORIES(C_Info)
+///////////////////////////////////////////////////////////////////////
+//	Info VICTORIES
+///////////////////////////////////////////////////////////////////////
+instance	AMZ_900_Thora_VICTORIES (C_INFO)
 {
-	npc = amz_900_thora;
-	nr = 5;
-	condition = amz_900_thora_victories_condition;
-	information = amz_900_thora_victories_info;
-	important = FALSE;
-	permanent = FALSE;
-	description = "Wieviele Arenakämpfe hast du gewonnen?";
+	npc				= AMZ_900_Thora;
+	nr				= 5;
+	condition		= AMZ_900_Thora_VICTORIES_Condition;
+	information		= AMZ_900_Thora_VICTORIES_Info;
+	important		= FALSE;
+	permanent		= FALSE;
+	description		= "Wieviele Arenakämpfe hast du gewonnen?";
 };
 
-
-func int amz_900_thora_victories_condition()
+func int	AMZ_900_Thora_VICTORIES_Condition()
 {
-	if(Npc_KnowsInfo(hero,amz_900_thora_gladiator) && (SUBCHAPTER < CH2_THORA_CONVINCED))
+	if	Npc_KnowsInfo(hero, AMZ_900_Thora_GLADIATOR)
+	&&	(subChapter < CH2_THORA_CONVINCED)
 	{
 		return TRUE;
 	};
 };
 
-func void amz_900_thora_victories_info()
+func void	AMZ_900_Thora_VICTORIES_Info()
 {
-	AI_Output(hero,self,"AMZ_900_VICTORIES_15_01");	//Wieviele Arenakämpfe hast du gewonnen?
-	AI_Output(self,hero,"AMZ_900_VICTORIES_16_02");	//Also bis jetzt... Alle.
-	AI_Output(self,hero,"AMZ_900_VICTORIES_16_03");	//(gelangweilt) Die Kämpfer hier sind wirklich keine Gegner für mich!
+	AI_Output			(hero, self, "AMZ_900_VICTORIES_15_01"); //Wieviele Arenakämpfe hast du gewonnen?
+	AI_Output			(self, hero, "AMZ_900_VICTORIES_16_02"); //Also bis jetzt... Alle.
+	AI_Output			(self, hero, "AMZ_900_VICTORIES_16_03"); //(gelangweilt) Die Kämpfer hier sind wirklich keine Gegner für mich!
 };
 
-
-instance AMZ_900_THORA_CHALLENGE(C_Info)
+///////////////////////////////////////////////////////////////////////
+//	Info CHALLENGE
+///////////////////////////////////////////////////////////////////////
+instance	AMZ_900_Thora_CHALLENGE (C_INFO)
 {
-	npc = amz_900_thora;
-	nr = 5;
-	condition = amz_900_thora_challenge_condition;
-	information = amz_900_thora_challenge_info;
-	important = FALSE;
-	permanent = TRUE;
-	description = "Ich fordere dich zu einem Arenakampf heraus!";
+	npc				= AMZ_900_Thora;
+	nr				= 5;
+	condition		= AMZ_900_Thora_CHALLENGE_Condition;
+	information		= AMZ_900_Thora_CHALLENGE_Info;
+	important		= FALSE;
+	permanent		= TRUE;
+	description		= "Ich fordere dich zu einem Arenakampf heraus!";
 };
 
-
-func int amz_900_thora_challenge_condition()
+func int	AMZ_900_Thora_CHALLENGE_Condition()
 {
-	if(Npc_KnowsInfo(hero,amz_900_thora_victories) && !GRIM_CHALLENGED && !GOLIATH_CHALLENGED && !BRUTUS_CHALLENGED && !MALGAR_CHALLENGED && !THORA_CHALLENGED && ARENAMASTER_ACCEPTED && Wld_IsTime(0,0,ARENAPRE_H,ARENAPRE_M) && (SUBCHAPTER < CH2_THORA_CONVINCED))
+	if	Npc_KnowsInfo(hero, AMZ_900_Thora_VICTORIES)
+	&&	!Grim_Challenged
+	&&	!Goliath_Challenged
+	&&	!Brutus_Challenged
+	&&	!Malgar_Challenged
+	&&	!Thora_Challenged
+	&&	Arenamaster_Accepted
+	&&	Wld_IsTime(0,0, ARENAPRE_H,ARENAPRE_M)
+	&&	(subChapter < CH2_THORA_CONVINCED)
 	{
 		return TRUE;
 	};
 };
 
-func void amz_900_thora_challenge_info()
+func void	AMZ_900_Thora_CHALLENGE_Info()
 {
-	AI_Output(hero,self,"AMZ_900_CHALLENGE_15_01");	//Ich fordere dich zu einem Arenakampf heraus!
-	if(!Npc_HasItems(self,itmw_thora_battlestaff))
+	AI_Output			(hero, self, "AMZ_900_CHALLENGE_15_01"); //Ich fordere dich zu einem Arenakampf heraus!
+
+	if	!Npc_HasItems(self, ItMw_Thora_Battlestaff)
 	{
-		AI_Output(self,hero,"AMZ_900_CHALLENGE_16_02");	//Sobald ich meinen Kampfstab wiederhabe, werde ich gegen dich antreten.
-		if(Npc_HasItems(hero,itmw_thora_battlestaff))
+		AI_Output		(self, hero,"AMZ_900_CHALLENGE_16_02"); //Sobald ich meinen Kampfstab wiederhabe, werde ich gegen dich antreten.
+
+		if	Npc_HasItems(hero, ItMw_Thora_Battlestaff)
 		{
-			Info_ClearChoices(amz_900_thora_challenge);
-			Info_AddChoice(amz_900_thora_challenge,"Ich habe deine Waffe... ähem... gefunden! Hier!",amz_900_thora_challenge_found);
+			Info_ClearChoices	(AMZ_900_Thora_CHALLENGE);
+			Info_AddChoice		(AMZ_900_Thora_CHALLENGE, "Ich habe deine Waffe... ähem... gefunden! Hier!",AMZ_900_Thora_CHALLENGE_FOUND);
 		};
 		return;
 	};
-	if(!THORA_PLAYERWONBEFORE)
+
+	if	!Thora_PlayerWonBefore
 	{
-		AI_Output(hero,self,"AMZ_900_CHALLENGE_15_03");	//Wird doch Zeit, daß du mal einen Kampf verlierst!
+		AI_Output		(hero, self, "AMZ_900_CHALLENGE_15_03"); //Wird doch Zeit, daß du mal einen Kampf verlierst!
 	};
-	if(ARENA_PLAYERBANNED)
+
+	if	Arena_PlayerBanned
 	{
-		AI_Output(self,hero,"AMZ_900_CHALLENGE_16_04");	//Du hast Mist gebaut, in der Arena.
-		AI_Output(self,hero,"AMZ_900_CHALLENGE_16_05");	//Klär das mit dem Arenameister, sonst kann ich nicht gegen dich kämpfen!
-		AI_StopProcessInfos(self);
+		AI_Output		(self, hero, "AMZ_900_CHALLENGE_16_04"); //Du hast Mist gebaut, in der Arena.
+		AI_Output		(self, hero, "AMZ_900_CHALLENGE_16_05"); //Klär das mit dem Arenameister, sonst kann ich nicht gegen dich kämpfen!
+		AI_StopProcessInfos	(self);
 	}
 	else
 	{
-		if(!MALGAR_PLAYERWONBEFORE)
+		if	!Malgar_PlayerWonBefore
 		{
-			AI_Output(self,hero,"AMZ_900_CHALLENGE_16_06");	//Solange du nicht mal Malgar besiegt hast, kämpfe ich nicht gegen dich!
-			AI_Output(self,hero,"AMZ_900_CHALLENGE_16_07");	//Er ist nach mir der zweitbeste Kämpfer hier.
+
+			AI_Output	(self, hero, "AMZ_900_CHALLENGE_16_06"); //Solange du nicht mal Malgar besiegt hast, kämpfe ich nicht gegen dich!
+			AI_Output	(self, hero, "AMZ_900_CHALLENGE_16_07"); //Er ist nach mir der zweitbeste Kämpfer hier.
+
 			return;
 		};
-		AI_Output(self,hero,"AMZ_900_CHALLENGE_16_08");	//Es wird mir eine Freude sein, gegen dich zu kämpfen.
-		AI_Output(self,hero,"AMZ_900_CHALLENGE_16_09");	//Gib dein Preisgeld beim Arenameister ab, dann können wir heute abend zusammen... (neckisch) TANZEN!!!
-		THORA_CHALLENGED = TRUE;
+
+		//else
+		AI_Output		(self, hero, "AMZ_900_CHALLENGE_16_08"); //Es wird mir eine Freude sein, gegen dich zu kämpfen.
+		AI_Output		(self, hero, "AMZ_900_CHALLENGE_16_09"); //Gib dein Preisgeld beim Arenameister ab, dann können wir heute abend zusammen... (neckisch) TANZEN!!!
+
+		Thora_Challenged = TRUE;
 	};
 };
 
-func void amz_900_thora_challenge_found()
+func void AMZ_900_Thora_CHALLENGE_FOUND ()
 {
-	Info_ClearChoices(amz_900_thora_challenge);
-	AI_Output(hero,self,"AMZ_900_CHALLENGE_FOUND_15_01");	//Ich habe deine Waffe... ähem... gefunden! Hier!
-	B_GiveInvItems(hero,self,itmw_thora_battlestaff,1);
-	AI_Output(self,hero,"AMZ_900_CHALLENGE_FOUND_16_02");	//Kann nur für dich hoffen, dass du sie wirklich GEFUNDEN hast.
-	AI_StopProcessInfos(self);
+	Info_ClearChoices	(AMZ_900_Thora_CHALLENGE);
+	AI_Output			(hero, self,"AMZ_900_CHALLENGE_FOUND_15_01"); //Ich habe deine Waffe... ähem... gefunden! Hier!
+	B_GiveInvItems		(hero, self, ItMw_Thora_Battlestaff, 1);
+	AI_Output			(self, hero,"AMZ_900_CHALLENGE_FOUND_16_02"); //Kann nur für dich hoffen, dass du sie wirklich GEFUNDEN hast.
+	AI_StopProcessInfos	(self);
 };
 
 
-instance AMZ_900_THORA_TEACHME(C_Info)
+
+
+
+
+
+//#####################################################################
+//##
+//##
+//##						KAMPF-STAB
+//##
+//##
+//#####################################################################
+
+///////////////////////////////////////////////////////////////////////
+//	Info TEACHME
+///////////////////////////////////////////////////////////////////////
+instance AMZ_900_Thora_TEACHME		(C_INFO)
 {
-	npc = amz_900_thora;
-	nr = 1;
-	condition = amz_900_thora_teachme_condition;
-	information = amz_900_thora_teachme_info;
-	description = "Kannst du mir den Umgang mit dem Kampfstab beibringen?";
+	npc		 	 = 	AMZ_900_Thora;
+	nr		 	 = 	1;
+	condition	 = 	AMZ_900_Thora_TEACHME_Condition;
+	information	 = 	AMZ_900_Thora_TEACHME_Info;
+	description	 = 	"Kannst du mir den Umgang mit dem Kampfstab beibringen?";
 };
 
-
-func int amz_900_thora_teachme_condition()
+func int AMZ_900_Thora_TEACHME_Condition ()
 {
-	if(Npc_KnowsInfo(hero,amz_900_thora_weapon))
+	if	Npc_KnowsInfo(hero, AMZ_900_Thora_WEAPON)
 	{
 		return TRUE;
 	};
 };
 
-func int amz_900_thora_teachme_info()
+func int AMZ_900_Thora_TEACHME_Info ()
 {
-	AI_Output(hero,self,"AMZ_900_TEACHME_15_01");	//Kannst du mir den Umgang mit dem Kampfstab beibringen?
-	AI_Output(self,hero,"AMZ_900_TEACHME_16_02");	//Ich könnte schon. Aber die Waffe ist schwer zu führen, nichts für Anfänger!
-	AI_Output(self,hero,"AMZ_900_TEACHME_16_03");	//Solange Du kein gleichwertiger Gegner für mich bist, wäre das reine Zeitverschwendung!
+	AI_Output			(hero, self, "AMZ_900_TEACHME_15_01"); //Kannst du mir den Umgang mit dem Kampfstab beibringen?
+	AI_Output			(self, hero, "AMZ_900_TEACHME_16_02"); //Ich könnte schon. Aber die Waffe ist schwer zu führen, nichts für Anfänger!
+	AI_Output			(self, hero, "AMZ_900_TEACHME_16_03"); //Solange Du kein gleichwertiger Gegner für mich bist, wäre das reine Zeitverschwendung!
 };
 
-
-instance AMZ_900_THORA_TEACHWHAT(C_Info)
+///////////////////////////////////////////////////////////////////////
+//	Info TEACHWHAT
+///////////////////////////////////////////////////////////////////////
+instance AMZ_900_Thora_TEACHWHAT		(C_INFO)
 {
-	npc = amz_900_thora;
-	nr = 1;
-	condition = amz_900_thora_teachwhat_condition;
-	information = amz_900_thora_teachwhat_info;
-	permanent = TRUE;
-	description = "Was muss ich tun, damit du mich am Kampfstab unterrichtest?";
+	npc		 	= 	AMZ_900_Thora;
+	nr		 	= 	1;
+	condition	= 	AMZ_900_Thora_TEACHWHAT_Condition;
+	information	= 	AMZ_900_Thora_TEACHWHAT_Info;
+
+	permanent	=	TRUE;
+	description	= 	"Was muss ich tun, damit du mich am Kampfstab unterrichtest?";
 };
 
-
-func int amz_900_thora_teachwhat_condition()
+func int AMZ_900_Thora_TEACHWHAT_Condition ()
 {
-	if(Npc_KnowsInfo(hero,amz_900_thora_teachme))
+	if	Npc_KnowsInfo(hero, AMZ_900_Thora_TEACHME)
 	{
 		return TRUE;
 	};
 };
 
-func int amz_900_thora_teachwhat_info()
+func int AMZ_900_Thora_TEACHWHAT_Info ()
 {
-	AI_Output(hero,self,"AMZ_900_TEACHWHAT_15_01");	//Was muss ich tun, damit du mich am Kampfstab unterrichtest?
-	AI_Output(self,hero,"AMZ_900_TEACHWHAT_16_02");	//Du musst dir meinen Respekt verdienen! Bisher hat das noch keiner der Gladiatoren hier geschafft.
+	AI_Output			(hero, self, "AMZ_900_TEACHWHAT_15_01"); //Was muss ich tun, damit du mich am Kampfstab unterrichtest?
+	AI_Output			(self, hero, "AMZ_900_TEACHWHAT_16_02"); //Du musst dir meinen Respekt verdienen! Bisher hat das noch keiner der Gladiatoren hier geschafft.
 };
 
-
-instance AMZ_900_THORA_TEACHNOW(C_Info)
+///////////////////////////////////////////////////////////////////////
+//	Info TEACHNOW
+///////////////////////////////////////////////////////////////////////
+instance AMZ_900_Thora_TEACHNOW		(C_INFO)
 {
-	npc = amz_900_thora;
-	nr = 1;
-	condition = amz_900_thora_teachnow_condition;
-	information = amz_900_thora_teachnow_info;
-	description = "Zeigst du mir jetzt den Umgang mit dem Kampfstab?";
+	npc		 	= 	AMZ_900_Thora;
+	nr		 	= 	1;
+	condition	= 	AMZ_900_Thora_TEACHNOW_Condition;
+	information	= 	AMZ_900_Thora_TEACHNOW_Info;
+
+	description	= 	"Zeigst du mir jetzt den Umgang mit dem Kampfstab?";
 };
 
-
-func int amz_900_thora_teachnow_condition()
+func int AMZ_900_Thora_TEACHNOW_Condition ()
 {
-	if(THORA_PLAYERWONBEFORE)
+	if	Thora_PlayerWonBefore
 	{
 		return TRUE;
 	};
 };
 
-func int amz_900_thora_teachnow_info()
+func int AMZ_900_Thora_TEACHNOW_Info ()
 {
-	AI_Output(hero,self,"AMZ_900_TEACHNOW_15_01");	//Zeigst du mir jetzt den Umgang mit dem Kampfstab?
-	if(b_arena_getgladiatorranking(7898) == 1)
+	AI_Output			(hero, self, "AMZ_900_TEACHNOW_15_01"); //Zeigst du mir jetzt den Umgang mit dem Kampfstab?
+	if	(B_Arena_GetGladiatorRanking(PC_Hero) == 1)
 	{
-		AI_Output(self,hero,"AMZ_900_TEACHNOW_16_02");	//Du hast mich in der Arena besiegt, aber vielleicht hast du nur Glück gehabt.
-		AI_Output(self,hero,"AMZ_900_TEACHNOW_16_03");	//Wenn du es schaffst, mich als Champion abzulösen, werde dich in die Kunst des Kampfstabes einführen.
+		AI_Output		(self, hero, "AMZ_900_TEACHNOW_16_02"); //Du hast mich in der Arena besiegt, aber vielleicht hast du nur Glück gehabt.
+		AI_Output		(self, hero, "AMZ_900_TEACHNOW_16_03"); //Wenn du es schaffst, mich als Champion abzulösen, werde dich in die Kunst des Kampfstabes einführen.
 	}
 	else
 	{
-		AI_Output(self,hero,"AMZ_900_TEACHNOW_16_04");	//Du hast es geschafft. Du bist Champion dieser Arena.
-		AI_Output(self,hero,"AMZ_900_TEACHNOW_16_05");	//Wie versprochen werde ich dich nun im Stabkampf unterrichten. Sag mir, wenn du bereit dafür bist.
+		AI_Output		(self, hero, "AMZ_900_TEACHNOW_16_04"); //Du hast es geschafft. Du bist Champion dieser Arena.
+		AI_Output		(self, hero, "AMZ_900_TEACHNOW_16_05"); //Wie versprochen werde ich dich nun im Stabkampf unterrichten. Sag mir, wenn du bereit dafür bist.
 	};
+
 };
 
 
-instance AMZ_900_THORA_NEEDTOFORTRESS(C_Info)
+
+
+
+
+
+
+
+//#####################################################################
+//##
+//##
+//##				KAPITEL 2 (Weg zur Bergfestung)
+//##
+//##
+//#####################################################################
+
+///////////////////////////////////////////////////////////////////////
+//	Info NEEDTOFORTRESS
+///////////////////////////////////////////////////////////////////////
+instance AMZ_900_Thora_NEEDTOFORTRESS		(C_INFO)
 {
-	npc = amz_900_thora;
-	condition = amz_900_thora_needtofortress_condition;
-	information = amz_900_thora_needtofortress_info;
-	important = FALSE;
-	permanent = TRUE;
-	description = "Ich muss mit den Feuermagiern in der Bergfestung sprechen!";
+	npc		 	 = 	AMZ_900_Thora;
+	condition	 = 	AMZ_900_Thora_NEEDTOFORTRESS_Condition;
+	information	 = 	AMZ_900_Thora_NEEDTOFORTRESS_Info;
+	important	 = 	FALSE;
+	permanent	 = 	TRUE;
+
+	description	 = 	"Ich muss mit den Feuermagiern in der Bergfestung sprechen!";
 };
 
-
-func int amz_900_thora_needtofortress_condition()
+func int AMZ_900_Thora_NEEDTOFORTRESS_Condition ()
 {
-	if(Npc_KnowsInfo(hero,pc_thief_problem) && (SUBCHAPTER < CH2_THORA_CONVINCED))
+	if	Npc_KnowsInfo(hero, PC_Thief_PROBLEM)
+	&&	(subChapter < CH2_THORA_CONVINCED)
 	{
 		return TRUE;
 	};
 };
 
-func void amz_900_thora_needtofortress_info()
+func void AMZ_900_Thora_NEEDTOFORTRESS_Info ()
 {
-	AI_Output(hero,self,"AMZ_900_NEEDTOFORTRESS_15_01");	//Ich muss mit den Feuermagiern in der Bergfestung sprechen!
-	AI_Output(self,hero,"AMZ_900_NEEDTOFORTRESS_16_02");	//Du bist ja ein Spassvogel, warum erzählst du mir das?
-	Info_AddChoice(amz_900_thora_needtofortress,"Ich hörte, du bist eine Kundschafterin der Paladine!",amz_900_thora_needtofortress_near);
-	Info_AddChoice(amz_900_thora_needtofortress,"Kein Wort mehr Weib! Du wirst mich dorthinbringen.",amz_900_thora_needtofortress_insult);
-	Info_AddChoice(amz_900_thora_needtofortress,"Diego schickt mich! Du sollst mich dorthinbringen.",amz_900_thora_needtofortress_diego);
+	AI_Output			(hero, self, "AMZ_900_NEEDTOFORTRESS_15_01"); //Ich muss mit den Feuermagiern in der Bergfestung sprechen!
+	AI_Output			(self, hero, "AMZ_900_NEEDTOFORTRESS_16_02"); //Du bist ja ein Spassvogel, warum erzählst du mir das?
+
+	Info_AddChoice		(AMZ_900_Thora_NEEDTOFORTRESS, "Ich hörte, du bist eine Kundschafterin der Paladine!", AMZ_900_Thora_NEEDTOFORTRESS_NEAR );
+	Info_AddChoice		(AMZ_900_Thora_NEEDTOFORTRESS, "Kein Wort mehr Weib! Du wirst mich dorthinbringen.", AMZ_900_Thora_NEEDTOFORTRESS_INSULT );
+	Info_AddChoice		(AMZ_900_Thora_NEEDTOFORTRESS, "Diego schickt mich! Du sollst mich dorthinbringen.", AMZ_900_Thora_NEEDTOFORTRESS_DIEGO );
 };
 
-func void amz_900_thora_needtofortress_near()
+func void AMZ_900_Thora_NEEDTOFORTRESS_NEAR ()
 {
-	Info_ClearChoices(amz_900_thora_needtofortress);
-	AI_Output(hero,self,"AMZ_900_NEEDTOFORTRESS_NEAR_15_01");	//Ich hörte, du bist eine Kundschafterin der Paladine!
-	AI_Output(self,hero,"AMZ_900_NEEDTOFORTRESS_NEAR_16_02");	//Scheint sich ja mittlerweile herumgesprochen zu haben.
-	AI_Output(self,hero,"AMZ_900_NEEDTOFORTRESS_NEAR_16_03");	//Aber warum sollte ich dich zur Bergfestung bringen?
-	AI_Output(hero,self,"AMZ_900_NEEDTOFORTRESS_NEAR_15_04");	//Es ist von grösster Wichtigkeit. Ich habe Informationen über die dämonische Bedrohung nach der die Feuermagier forschen.
-	AI_Standup(self);
-	AI_TurnToNPC(self,hero);
-	AI_TurnToNPC(hero,self);
-	AI_Output(self,hero,"AMZ_900_NEEDTOFORTRESS_NEAR_16_05");	//(überrascht) Was weist DU über die Dämonen?
-	AI_Output(hero,self,"AMZ_900_NEEDTOFORTRESS_NEAR_15_06");	//Bringe mich zur Festung, es ist wichtig.
-	AI_Output(self,hero,"AMZ_900_NEEDTOFORTRESS_NEAR_16_07");	//Nun gut, ich werde dich an den Wachen vorbeibringen, aber ich kann dir nicht alle Türen öffnen. Du wirst allerhand Überzeugungsarbeit leisten müssen.
-	B_LogEntry(CH1_DEMONTHREAT,"Ich konnte Thora dazu bringen, mich zur Bergfestung zu führen. Allerdings wird sie mich nur an den ersten Wachen vorbeibringen. Danach bin ich auf mich allein gestellt.");
-	SUBCHAPTER = CH2_THORA_CONVINCED;
+	Info_ClearChoices	(AMZ_900_Thora_NEEDTOFORTRESS);
+
+	AI_Output			(hero, self, "AMZ_900_NEEDTOFORTRESS_NEAR_15_01"); //Ich hörte, du bist eine Kundschafterin der Paladine!
+	AI_Output			(self, hero, "AMZ_900_NEEDTOFORTRESS_NEAR_16_02"); //Scheint sich ja mittlerweile herumgesprochen zu haben.
+	AI_Output			(self, hero, "AMZ_900_NEEDTOFORTRESS_NEAR_16_03"); //Aber warum sollte ich dich zur Bergfestung bringen?
+	AI_Output			(hero, self, "AMZ_900_NEEDTOFORTRESS_NEAR_15_04"); //Es ist von grösster Wichtigkeit. Ich habe Informationen über die dämonische Bedrohung nach der die Feuermagier forschen.
+	AI_StandUp			(self);
+	AI_TurnToNpc		(self, hero);
+	AI_TurnToNpc		(hero, self);
+	AI_Output			(self, hero, "AMZ_900_NEEDTOFORTRESS_NEAR_16_05"); //(überrascht) Was weist DU über die Dämonen?
+	AI_Output			(hero, self, "AMZ_900_NEEDTOFORTRESS_NEAR_15_06"); //Bringe mich zur Festung, es ist wichtig.
+	AI_Output			(self, hero, "AMZ_900_NEEDTOFORTRESS_NEAR_16_07"); //Nun gut, ich werde dich an den Wachen vorbeibringen, aber ich kann dir nicht alle Türen öffnen. Du wirst allerhand Überzeugungsarbeit leisten müssen.
+	B_LogEntry			(CH1_DemonThreat, "Ich konnte Thora dazu bringen, mich zur Bergfestung zu führen. Allerdings wird sie mich nur an den ersten Wachen vorbeibringen. Danach bin ich auf mich allein gestellt.");
+	subChapter			= CH2_THORA_CONVINCED;
 };
 
-func void amz_900_thora_needtofortress_diego()
+func void AMZ_900_Thora_NEEDTOFORTRESS_DIEGO ()
 {
-	AI_Output(hero,self,"AMZ_900_NEEDTOFORTRESS_DIEGO_15_01");	//Diego schickt mich! Du sollst mich dorthinbringen.
-	AI_Output(self,hero,"AMZ_900_NEEDTOFORTRESS_DIEGO_16_02");	//Ja und?? Diego hat mir garnichts zu sagen!
+	AI_Output			(hero, self, "AMZ_900_NEEDTOFORTRESS_DIEGO_15_01"); //Diego schickt mich! Du sollst mich dorthinbringen.
+	AI_Output			(self, hero, "AMZ_900_NEEDTOFORTRESS_DIEGO_16_02"); //Ja und?? Diego hat mir garnichts zu sagen!
 };
 
-func void amz_900_thora_needtofortress_insult()
+func void AMZ_900_Thora_NEEDTOFORTRESS_INSULT ()
 {
-	Info_ClearChoices(amz_900_thora_needtofortress);
-	AI_Output(hero,self,"AMZ_900_NEEDTOFORTRESS_INSULT_15_01");	//Kein Wort mehr Weib! Du wirst mich dorthinbringen.
-	if(self.aivar[13])
+	Info_ClearChoices	(AMZ_900_Thora_NEEDTOFORTRESS);
+
+	AI_Output			(hero, self, "AMZ_900_NEEDTOFORTRESS_INSULT_15_01"); //Kein Wort mehr Weib! Du wirst mich dorthinbringen.
+
+	if	self.aivar[AIV_HASDEFEATEDSC]
 	{
-		AI_Output(self,hero,"AMZ_900_NEEDTOFORTRESS_INSULT_16_02");	//(seufzt) Sind die blauen Flecken, die ich dir verpasst habe etwa schon wieder verheilt?
-		AI_Output(self,hero,"AMZ_900_NEEDTOFORTRESS_INSULT_16_03");	//Kein Problem, ich kann dir gerne ein paar neue verabreichen.
+		AI_Output		(self, hero, "AMZ_900_NEEDTOFORTRESS_INSULT_16_02"); //(seufzt) Sind die blauen Flecken, die ich dir verpasst habe etwa schon wieder verheilt?
+		AI_Output		(self, hero, "AMZ_900_NEEDTOFORTRESS_INSULT_16_03"); //Kein Problem, ich kann dir gerne ein paar neue verabreichen.
 	}
 	else
 	{
-		AI_Output(self,hero,"AMZ_900_NEEDTOFORTRESS_INSULT_16_04");	//(seufzt) Ich glaube du brauchst eine Lektion in guten Manieren.
+		AI_Output		(self, hero, "AMZ_900_NEEDTOFORTRESS_INSULT_16_04"); //(seufzt) Ich glaube du brauchst eine Lektion in guten Manieren.
 	};
-	AI_StopProcessInfos(self);
-	b_attackproper(self,hero);
+
+	AI_StopProcessInfos	(self);
+	B_AttackProper		(self, hero);
 };
 
-
-instance AMZ_900_THORA_LETSGO(C_Info)
+///////////////////////////////////////////////////////////////////////
+//	Info LETSGO
+///////////////////////////////////////////////////////////////////////
+instance AMZ_900_Thora_LETSGO		(C_INFO)
 {
-	npc = amz_900_thora;
-	condition = amz_900_thora_letsgo_condition;
-	information = amz_900_thora_letsgo_info;
-	important = FALSE;
-	permanent = FALSE;
-	description = "Dann lass uns zur Bergfestung aufbrechen.";
+	npc		 	 = 	AMZ_900_Thora;
+	condition	 = 	AMZ_900_Thora_LETSGO_Condition;
+	information	 = 	AMZ_900_Thora_LETSGO_Info;
+	important	 = 	FALSE;
+	permanent	 = 	FALSE;
+
+	description	 = 	"Dann lass uns zur Bergfestung aufbrechen.";
 };
 
-
-func int amz_900_thora_letsgo_condition()
+func int AMZ_900_Thora_LETSGO_Condition ()
 {
-	if(SUBCHAPTER >= CH2_THORA_CONVINCED)
+	if	(subChapter >= CH2_THORA_CONVINCED)
+
 	{
 		return TRUE;
 	};
 };
 
-func void amz_900_thora_letsgo_info()
+func void AMZ_900_Thora_LETSGO_Info ()
 {
-	AI_Output(hero,self,"AMZ_900_LETSGO_15_01");	//Dann lass uns zur Bergfestung aufbrechen.
-	AI_Output(self,hero,"AMZ_900_LETSGO_16_02");	//Ich bin bereit. Etwas Abwechslung ist mir ohnehin willkommen.
-	AI_Output(self,hero,"AMZ_900_LETSGO_16_03");	//Sollten wir uns unterwegs verlieren, treffen wir uns wieder an der Arena, klar?
-	AI_Output(hero,self,"AMZ_900_LETSGO_15_04");	//An der Arena! Klar!
-	AI_Output(self,hero,"AMZ_900_LETSGO_16_05");	//Dann folge mir, wenn du es schaffst an mir dranzubleiben.
-	B_LogEntry(CH1_DEMONTHREAT,"Sollte wir auf dem Weg in die Bergfestung getrennt werden, treffen wir uns an der Arena im Alten Lager wieder.");
-	AI_StopProcessInfos(self);
-	b_setattitude(self,ATT_FRIENDLY);
-	b_guidepc(self,"GuideToBF",TOBF_SCAV);
-	Wld_InsertNpc(Scavenger,"FP_ROAM_OW_WARAN_OC_PSI1");
-	Wld_InsertNpc(Scavenger,"FP_ROAM_OW_WARAN_OC_PSI3");
-	Wld_InsertNpc(Scavenger,"FP_ROAM_OW_WARAN_OC_PSI5");
+	AI_Output			(hero, self, "AMZ_900_LETSGO_15_01"); //Dann lass uns zur Bergfestung aufbrechen.
+	AI_Output			(self, hero, "AMZ_900_LETSGO_16_02"); //Ich bin bereit. Etwas Abwechslung ist mir ohnehin willkommen.
+	AI_Output			(self, hero, "AMZ_900_LETSGO_16_03"); //Sollten wir uns unterwegs verlieren, treffen wir uns wieder an der Arena, klar?
+	AI_Output			(hero, self, "AMZ_900_LETSGO_15_04"); //An der Arena! Klar!
+	AI_Output			(self, hero, "AMZ_900_LETSGO_16_05"); //Dann folge mir, wenn du es schaffst an mir dranzubleiben.
+	B_LogEntry			(CH1_DemonThreat, "Sollte wir auf dem Weg in die Bergfestung getrennt werden, treffen wir uns an der Arena im Alten Lager wieder.");
+
+	AI_StopProcessInfos	(self);
+	B_SetAttitude		(self, ATT_FRIENDLY);
+
+	// 1. Abschnitt
+	B_GuidePC			(self, "GuideToBF", TOBF_SCAV);
+	Wld_InsertNpc		(Scavenger,			"FP_ROAM_OW_WARAN_OC_PSI1");
+	Wld_InsertNpc		(Scavenger,			"FP_ROAM_OW_WARAN_OC_PSI3");
+	Wld_InsertNpc		(Scavenger,			"FP_ROAM_OW_WARAN_OC_PSI5");
 };
 
-
-instance AMZ_900_THORA_ONWAYTOBF(C_Info)
+///////////////////////////////////////////////////////////////////////
+//	Info ONWAYTOBF
+///////////////////////////////////////////////////////////////////////
+instance AMZ_900_Thora_ONWAYTOBF		(C_INFO)
 {
-	npc = amz_900_thora;
-	condition = amz_900_thora_onwaytobf_condition;
-	information = amz_900_thora_onwaytobf_info;
-	important = FALSE;
-	permanent = TRUE;
-	description = "Von mir aus kanns weiter gehen!";
+	npc		 = 	AMZ_900_Thora;
+	condition	 = 	AMZ_900_Thora_ONWAYTOBF_Condition;
+	information	 = 	AMZ_900_Thora_ONWAYTOBF_Info;
+	important	 = 	FALSE;
+	permanent	 = 	TRUE;
+
+	description	 = 	"Von mir aus kanns weiter gehen!";
 };
 
-
-func int amz_900_thora_onwaytobf_condition()
+func int AMZ_900_Thora_ONWAYTOBF_Condition ()
 {
-	if(Npc_KnowsInfo(hero,amz_900_thora_letsgo) && !Npc_KnowsInfo(hero,amz_900_thora_square))
+	if	Npc_KnowsInfo(hero, AMZ_900_Thora_LETSGO)
+	&&	!Npc_KnowsInfo(hero, AMZ_900_Thora_SQUARE)
 	{
 		return TRUE;
 	};
 };
 
-func void amz_900_thora_onwaytobf_info()
+func void AMZ_900_Thora_ONWAYTOBF_Info ()
 {
-	AI_Output(hero,self,"AMZ_900_ONWAYTOBF_15_01");	//Von mir aus kanns weiter gehen!
-	AI_Output(self,hero,"AMZ_900_ONWAYTOBF_16_02");	//Gut! Wir sind bald da!
-	AI_StopProcessInfos(self);
+	AI_Output			(hero, self, "AMZ_900_ONWAYTOBF_15_01"); //Von mir aus kanns weiter gehen!
+	AI_Output			(self, hero, "AMZ_900_ONWAYTOBF_16_02"); //Gut! Wir sind bald da!
+	AI_StopProcessInfos	(self);
 };
 
-
-instance AMZ_900_THORA_KILLEDSCAV(C_Info)
+///////////////////////////////////////////////////////////////////////
+//	Info KILLEDSCAV
+///////////////////////////////////////////////////////////////////////
+instance AMZ_900_Thora_KILLEDSCAV		(C_INFO)
 {
-	npc = amz_900_thora;
-	condition = amz_900_thora_killedscav_condition;
-	information = amz_900_thora_killedscav_info;
-	important = TRUE;
-	permanent = FALSE;
+	npc		 = 	AMZ_900_Thora;
+	condition	 = 	AMZ_900_Thora_KILLEDSCAV_Condition;
+	information	 = 	AMZ_900_Thora_KILLEDSCAV_Info;
+	important	 = 	TRUE;
+	permanent	 = 	FALSE;
 };
 
-
-func int amz_900_thora_killedscav_condition()
+func int AMZ_900_Thora_KILLEDSCAV_Condition ()
 {
-	if(Npc_KnowsInfo(hero,amz_900_thora_letsgo) && (Npc_GetDistToWP(self,TOBF_SCAV) < 500))
+	if	Npc_KnowsInfo(hero, AMZ_900_Thora_LETSGO)
+	&&	(Npc_GetDistToWP(self, TOBF_SCAV) < 500)
 	{
 		return TRUE;
 	};
 };
 
-func void amz_900_thora_killedscav_info()
+func void AMZ_900_Thora_KILLEDSCAV_Info ()
 {
-	AI_Output(self,hero,"AMZ_900_KILLEDSCAV_16_01");	//Diese Scavanger sind wirklich lästig.
-	AI_Output(self,hero,"AMZ_900_KILLEDSCAV_16_02");	//Die vermehren sich schneller, als man sie zu Essbarem verarbeiten kann.
-	AI_StopProcessInfos(self);
-	b_guidepc(self,"GuideToBF",TOBF_DEMONSCAV);
-	Wld_InsertNpc(scavengerdemon,"SPAWN_OW_SCAVENGER_GOBBOCAVE_03_01");
-	Wld_InsertNpc(scavengerdemon,"SPAWN_OW_SCAVENGER_GOBBOCAVE_03_01");
+	AI_Output			(self, hero, "AMZ_900_KILLEDSCAV_16_01"); //Diese Scavanger sind wirklich lästig.
+	AI_Output			(self, hero, "AMZ_900_KILLEDSCAV_16_02"); //Die vermehren sich schneller, als man sie zu Essbarem verarbeiten kann.
+	AI_StopProcessInfos	(self);
+
+	B_GuidePC			(self, "GuideToBF", TOBF_DEMONSCAV);
+	Wld_InsertNpc		(ScavengerDemon,	"SPAWN_OW_SCAVENGER_GOBBOCAVE_03_01");
+	Wld_InsertNpc		(ScavengerDemon,	"SPAWN_OW_SCAVENGER_GOBBOCAVE_03_01");
 };
 
-
-instance AMZ_900_THORA_KILLEDDEMONSCAV(C_Info)
+///////////////////////////////////////////////////////////////////////
+//	Info KILLEDDEMONSCAV
+///////////////////////////////////////////////////////////////////////
+instance AMZ_900_Thora_KILLEDDEMONSCAV		(C_INFO)
 {
-	npc = amz_900_thora;
-	condition = amz_900_thora_killeddemonscav_condition;
-	information = amz_900_thora_killeddemonscav_info;
-	important = TRUE;
-	permanent = FALSE;
+	npc		 = 	AMZ_900_Thora;
+	condition	 = 	AMZ_900_Thora_KILLEDDEMONSCAV_Condition;
+	information	 = 	AMZ_900_Thora_KILLEDDEMONSCAV_Info;
+	important	 = 	TRUE;
+	permanent	 = 	FALSE;
 };
 
-
-func int amz_900_thora_killeddemonscav_condition()
+func int AMZ_900_Thora_KILLEDDEMONSCAV_Condition ()
 {
-	if(Npc_KnowsInfo(hero,amz_900_thora_killedscav) && (Npc_GetDistToWP(self,TOBF_DEMONSCAV) < 500))
+	if	Npc_KnowsInfo(hero, AMZ_900_Thora_KILLEDSCAV)
+	&&	(Npc_GetDistToWP(self, TOBF_DEMONSCAV) < 500)
 	{
 		return TRUE;
 	};
 };
 
-func void amz_900_thora_killeddemonscav_info()
+func void AMZ_900_Thora_KILLEDDEMONSCAV_Info ()
 {
-	AI_Output(self,hero,"AMZ_900_KILLEDDEMONSCAV_16_01");	//Verdammte dämonische Brut!
-	AI_Output(hero,self,"AMZ_900_KILLEDDEMONSCAV_15_02");	//Was waren das für monströse Scavenger?
-	AI_Output(self,hero,"AMZ_900_KILLEDDEMONSCAV_16_03");	//Die Magier sagen, dies seien von Dämonen besessene Tiere.
-	AI_Output(self,hero,"AMZ_900_KILLEDDEMONSCAV_16_04");	//Viel stärker und widerstandsfähiger als normale Exemplare ihrer Art.
-	AI_Output(self,hero,"AMZ_900_KILLEDDEMONSCAV_16_05");	//Sie sollten bald was dagegen unternehmen, sonst werden sie uns noch überrollen.
-	b_guidepc(self,"GuideToBF",TOBF_RECCETOWER);
+	AI_Output			(self, hero, "AMZ_900_KILLEDDEMONSCAV_16_01"); //Verdammte dämonische Brut!
+	AI_Output			(hero, self, "AMZ_900_KILLEDDEMONSCAV_15_02"); //Was waren das für monströse Scavenger?
+	AI_Output			(self, hero, "AMZ_900_KILLEDDEMONSCAV_16_03"); //Die Magier sagen, dies seien von Dämonen besessene Tiere.
+	AI_Output			(self, hero, "AMZ_900_KILLEDDEMONSCAV_16_04"); //Viel stärker und widerstandsfähiger als normale Exemplare ihrer Art.
+	AI_Output			(self, hero, "AMZ_900_KILLEDDEMONSCAV_16_05"); //Sie sollten bald was dagegen unternehmen, sonst werden sie uns noch überrollen.
+
+	B_GuidePC			(self, "GuideToBF", TOBF_RECCETOWER);
 };
 
-
-instance AMZ_900_THORA_WHATBRIDGE(C_Info)
+///////////////////////////////////////////////////////////////////////
+//	Info WHATBRIDGE
+///////////////////////////////////////////////////////////////////////
+instance AMZ_900_Thora_WHATBRIDGE		(C_INFO)
 {
-	npc = amz_900_thora;
-	condition = amz_900_thora_whatbridge_condition;
-	information = amz_900_thora_whatbridge_info;
-	important = FALSE;
-	permanent = FALSE;
-	description = "Was ist auf der anderen Seite der Brücke dort hinten.";
+	npc		 = 	AMZ_900_Thora;
+	condition	 = 	AMZ_900_Thora_WHATBRIDGE_Condition;
+	information	 = 	AMZ_900_Thora_WHATBRIDGE_Info;
+	important	 = 	FALSE;
+	permanent	 = 	FALSE;
+
+	description	 = 	"Was ist auf der anderen Seite der Brücke dort hinten.";
 };
 
-
-func int amz_900_thora_whatbridge_condition()
+func int AMZ_900_Thora_WHATBRIDGE_Condition ()
 {
-	if(Npc_KnowsInfo(hero,amz_900_thora_killeddemonscav) && (Npc_GetDistToWP(self,TOBF_DEMONSCAV) < 500))
+	if	Npc_KnowsInfo(hero, AMZ_900_Thora_KILLEDDEMONSCAV)
+	&&	(Npc_GetDistToWP(self, TOBF_DEMONSCAV) < 500)
 	{
 		return TRUE;
 	};
 };
 
-func void amz_900_thora_whatbridge_info()
+func void AMZ_900_Thora_WHATBRIDGE_Info ()
 {
-	AI_Output(hero,self,"AMZ_900_WHATBRIDGE_15_01");	//Was ist auf der anderen Seite der Brücke dort hinten.
-	AI_Output(self,hero,"AMZ_900_WHATBRIDGE_16_02");	//Ein kleines Höhlensystem. Dort soll früher eine ganze Horde schwarzer Goblins gehaust haben.
-	AI_Output(self,hero,"AMZ_900_WHATBRIDGE_16_03");	//Aber hüte dich vor der Höhle.
-	AI_Output(hero,self,"AMZ_900_WHATBRIDGE_15_04");	//Warum?
-	AI_Output(self,hero,"AMZ_900_WHATBRIDGE_16_05");	//Die untoten Gebeine dieser heimtückischen Geschöpfe streifen noch immer durch die Höhlenstollen.
-	AI_Output(self,hero,"AMZ_900_WHATBRIDGE_16_06");	//Nun aber weiter.
-	AI_StopProcessInfos(self);
+	AI_Output			(hero, self, "AMZ_900_WHATBRIDGE_15_01"); //Was ist auf der anderen Seite der Brücke dort hinten.
+	AI_Output			(self, hero, "AMZ_900_WHATBRIDGE_16_02"); //Ein kleines Höhlensystem. Dort soll früher eine ganze Horde schwarzer Goblins gehaust haben.
+	AI_Output			(self, hero, "AMZ_900_WHATBRIDGE_16_03"); //Aber hüte dich vor der Höhle.
+	AI_Output			(hero, self, "AMZ_900_WHATBRIDGE_15_04"); //Warum?
+	AI_Output			(self, hero, "AMZ_900_WHATBRIDGE_16_05"); //Die untoten Gebeine dieser heimtückischen Geschöpfe streifen noch immer durch die Höhlenstollen.
+	AI_Output			(self, hero, "AMZ_900_WHATBRIDGE_16_06"); //Nun aber weiter.
+
+	AI_StopProcessInfos	(self);
 };
 
-
-instance AMZ_900_THORA_RECCETOWER(C_Info)
+///////////////////////////////////////////////////////////////////////
+//	Info RECCETOWER
+///////////////////////////////////////////////////////////////////////
+instance AMZ_900_Thora_RECCETOWER		(C_INFO)
 {
-	npc = amz_900_thora;
-	condition = amz_900_thora_reccetower_condition;
-	information = amz_900_thora_reccetower_info;
-	important = TRUE;
-	permanent = FALSE;
+	npc		 	 = 	AMZ_900_Thora;
+	condition	 = 	AMZ_900_Thora_RECCETOWER_Condition;
+	information	 = 	AMZ_900_Thora_RECCETOWER_Info;
+	important	 = 	TRUE;
+	permanent	 = 	FALSE;
 };
 
-
-func int amz_900_thora_reccetower_condition()
+func int AMZ_900_Thora_RECCETOWER_Condition ()
 {
-	if(Npc_KnowsInfo(hero,amz_900_thora_killeddemonscav) && (Npc_GetDistToWP(self,TOBF_RECCETOWER) < 500))
+	if	Npc_KnowsInfo(hero, AMZ_900_Thora_KILLEDDEMONSCAV)
+	&&	(Npc_GetDistToWP(self, TOBF_RECCETOWER) < 500)
 	{
 		return TRUE;
 	};
 };
 
-func void amz_900_thora_reccetower_info()
+func void AMZ_900_Thora_RECCETOWER_Info ()
 {
-	AI_Output(self,hero,"AMZ_900_RECCETOWER_16_01");	//Hier ist einer unserer Aussenposten.
-	AI_Output(self,hero,"AMZ_900_RECCETOWER_16_02");	//Die Kundschafter halten nach Orks Ausschau und melden regelmässig alle Aktivitäten an die Paladine in der Bergfestung.
-	AI_Output(hero,self,"AMZ_900_RECCETOWER_15_03");	//Euch scheint nichts zu entgehen!
-	AI_Output(self,hero,"AMZ_900_RECCETOWER_16_04");	//Garwog hat noch mehr Kundschafter hier im Tal, auch ich bin einer von ihnen.
-	AI_Output(hero,self,"AMZ_900_RECCETOWER_15_05");	//Wer ist Garwog?
-	AI_Output(self,hero,"AMZ_900_RECCETOWER_16_06");	//Er ist der Paladin, der für die Kundschafter und Aussenposten verantwortlich ist.
-	AI_Output(self,hero,"AMZ_900_RECCETOWER_16_07");	//Mein Auftraggeber, wenn du so willst.
-	AI_StopProcessInfos(self);
-	b_guidepc(self,"GuideToBF",TOBF_OUTERGATE);
+	AI_Output			(self, hero, "AMZ_900_RECCETOWER_16_01"); //Hier ist einer unserer Aussenposten.
+	AI_Output			(self, hero, "AMZ_900_RECCETOWER_16_02"); //Die Kundschafter halten nach Orks Ausschau und melden regelmässig alle Aktivitäten an die Paladine in der Bergfestung.
+	AI_Output			(hero, self, "AMZ_900_RECCETOWER_15_03"); //Euch scheint nichts zu entgehen!
+	AI_Output			(self, hero, "AMZ_900_RECCETOWER_16_04"); //Garwog hat noch mehr Kundschafter hier im Tal, auch ich bin einer von ihnen.
+	AI_Output			(hero, self, "AMZ_900_RECCETOWER_15_05"); //Wer ist Garwog?
+	AI_Output			(self, hero, "AMZ_900_RECCETOWER_16_06"); //Er ist der Paladin, der für die Kundschafter und Aussenposten verantwortlich ist.
+	AI_Output			(self, hero, "AMZ_900_RECCETOWER_16_07"); //Mein Auftraggeber, wenn du so willst.
+
+	AI_StopProcessInfos	(self);
+
+	B_GuidePC			(self, "GuideToBF", TOBF_OUTERGATE);
 };
 
-
-instance AMZ_900_THORA_OUTERGATE(C_Info)
+///////////////////////////////////////////////////////////////////////
+//	Info OUTERGATE
+///////////////////////////////////////////////////////////////////////
+instance AMZ_900_Thora_OUTERGATE		(C_INFO)
 {
-	npc = amz_900_thora;
-	condition = amz_900_thora_outergate_condition;
-	information = amz_900_thora_outergate_info;
-	important = TRUE;
-	permanent = FALSE;
+	npc		 = 	AMZ_900_Thora;
+	condition	 = 	AMZ_900_Thora_OUTERGATE_Condition;
+	information	 = 	AMZ_900_Thora_OUTERGATE_Info;
+	important	 = 	TRUE;
+	permanent	 = 	FALSE;
 };
 
-
-func int amz_900_thora_outergate_condition()
+func int AMZ_900_Thora_OUTERGATE_Condition ()
 {
-	if(Npc_KnowsInfo(hero,amz_900_thora_reccetower) && (Npc_GetDistToWP(self,TOBF_OUTERGATE) < 500))
+	if	Npc_KnowsInfo(hero, AMZ_900_Thora_RECCETOWER)
+	&&	(Npc_GetDistToWP(self, TOBF_OUTERGATE) < 500)
 	{
 		return TRUE;
 	};
 };
 
-func void amz_900_thora_outergate_info()
+func void AMZ_900_Thora_OUTERGATE_Info ()
 {
-	AI_Output(self,hero,"AMZ_900_OUTERGATE_16_01");	//Ab hier beginnt das abgeriegelte Gebiet der Felsenfestung. Nur Gefolgsleute des Königs dürfen es betreten.
-	AI_Output(hero,self,"AMZ_900_OUTERGATE_15_02");	//Diese Torwachen dort... sind Soldaten des Königs ???
-	AI_Output(self,hero,"AMZ_900_OUTERGATE_16_03");	//(zögerlich) Nicht wirklich... genau genommen sind es nur Hilfstruppen.
-	AI_Output(self,hero,"AMZ_900_OUTERGATE_16_04");	//Billig angeworben und hastig ausgebildet, um den ersten Ansturm der Orks zu bremsen.
-	AI_Output(self,hero,"AMZ_900_OUTERGATE_16_05");	//Sie wissen das selbst aber sie hören es nicht gerne. Also sprich sie nicht darauf an, wenn du Ärger vermeiden willst.
-	AI_Output(hero,self,"AMZ_900_OUTERGATE_15_06");	//(zu sich selbst, sarkastisch) Das wird ein richtiger Spass werden.
-	AI_StopProcessInfos(self);
-	b_guidepc(self,"GuideToBF",TOBF_SQUARE);
+	AI_Output			(self, hero, "AMZ_900_OUTERGATE_16_01"); //Ab hier beginnt das abgeriegelte Gebiet der Felsenfestung. Nur Gefolgsleute des Königs dürfen es betreten.
+	AI_Output			(hero, self, "AMZ_900_OUTERGATE_15_02"); //Diese Torwachen dort... sind Soldaten des Königs ???
+	AI_Output			(self, hero, "AMZ_900_OUTERGATE_16_03"); //(zögerlich) Nicht wirklich... genau genommen sind es nur Hilfstruppen.
+	AI_Output			(self, hero, "AMZ_900_OUTERGATE_16_04"); //Billig angeworben und hastig ausgebildet, um den ersten Ansturm der Orks zu bremsen.
+	AI_Output			(self, hero, "AMZ_900_OUTERGATE_16_05"); //Sie wissen das selbst aber sie hören es nicht gerne. Also sprich sie nicht darauf an, wenn du Ärger vermeiden willst.
+	AI_Output			(hero, self, "AMZ_900_OUTERGATE_15_06"); //(zu sich selbst, sarkastisch) Das wird ein richtiger Spass werden.
+
+	AI_StopProcessInfos	(self);
+
+	B_GuidePC			(self, "GuideToBF", TOBF_SQUARE);
 };
 
-
-instance AMZ_900_THORA_SQUARE(C_Info)
+///////////////////////////////////////////////////////////////////////
+//	Info SQUARE
+///////////////////////////////////////////////////////////////////////
+instance AMZ_900_Thora_SQUARE		(C_INFO)
 {
-	npc = amz_900_thora;
-	condition = amz_900_thora_square_condition;
-	information = amz_900_thora_square_info;
-	important = TRUE;
-	permanent = FALSE;
+	npc		 = 	AMZ_900_Thora;
+	condition	 = 	AMZ_900_Thora_SQUARE_Condition;
+	information	 = 	AMZ_900_Thora_SQUARE_Info;
+	important	 = 	TRUE;
+	permanent	 = 	FALSE;
 };
 
-
-func int amz_900_thora_square_condition()
+func int AMZ_900_Thora_SQUARE_Condition ()
 {
-	if(Npc_KnowsInfo(hero,amz_900_thora_outergate) && (Npc_GetDistToWP(self,TOBF_SQUARE) < 500))
+	if	Npc_KnowsInfo(hero, AMZ_900_Thora_OUTERGATE)
+	&&	(Npc_GetDistToWP(self, TOBF_SQUARE) < 500)
 	{
 		return TRUE;
 	};
 };
 
-func void amz_900_thora_square_info()
+func void AMZ_900_Thora_SQUARE_Info ()
 {
-	AI_Output(self,hero,"AMZ_900_SQUARE_16_01");	//Hier sind wir. Weiter kann ich dich nicht bringen, ab jetzt bist du auf dich allein gestellt.
-	AI_Output(self,hero,"AMZ_900_SQUARE_16_02");	//Ich bin unten bei Garwog, meinen Bericht erstatten. du kannst mich dort finden, wenn du mich brauchst.
-	b_leavepc(self,"ReportToGarwog");
-	B_ExchangeRoutine(pal_1003_garwog,"ReportFromThora");
+	AI_Output			(self, hero, "AMZ_900_SQUARE_16_01"); //Hier sind wir. Weiter kann ich dich nicht bringen, ab jetzt bist du auf dich allein gestellt.
+	AI_Output			(self, hero, "AMZ_900_SQUARE_16_02"); //Ich bin unten bei Garwog, meinen Bericht erstatten. du kannst mich dort finden, wenn du mich brauchst.
+
+	B_LeavePC			(self, "ReportToGarwog");
+	B_ExchangeRoutine	(PAL_1003_Garwog, "ReportFromThora");
 };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

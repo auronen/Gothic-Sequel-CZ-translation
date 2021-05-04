@@ -1,34 +1,51 @@
-
-func void b_arena_playervictory()
+//////////////////////////////////////////////////////////////////////////
+//	B_Arena_PlayerVictory
+//	=====================
+//	Hat der Spieler den Arenakampf gewonnen, wird diese Funktion hier
+//	ausgeführt.
+//////////////////////////////////////////////////////////////////////////
+func void B_Arena_PlayerVictory ()
 {
-	PrintDebugNpc(PD_TA_FRAME,"B_Arena_PlayerVictory");
-	hero.aivar[40] = hero.aivar[40] + 1;
-	ARENA_PLAYERHASWONTODAY = TRUE;
-	ARENA_ABORTFIGHT = TRUE;
-	if(GRIM_CHALLENGED)
+	PrintDebugNpc				(PD_TA_FRAME,	"B_Arena_PlayerVictory");
+
+	//-------- Rankliste modifizieren --------
+	//Arena_LastPCRanking	= B_GetGladiatorRanking(PC_Hero);
+	hero.aivar[AIV_ARENA_VICTORIES] = hero.aivar[AIV_ARENA_VICTORIES] + 1;
+
+	Arena_PlayerHasWonToday		= TRUE;
+	Arena_AbortFight 			= TRUE;
+
+	if	Grim_Challenged
 	{
-		B_GiveXP(XP_ARENA_WONGRIMFIGHT);
+		B_GiveXP				(XP_Arena_WonGrimFight);
 	};
-	if(GOLIATH_CHALLENGED)
+
+	if	Goliath_Challenged
 	{
-		BRUTUS_PLAYERWONBEFORE = TRUE;
-		B_GiveXP(XP_ARENA_WONGOLIATHFIGHT);
+		Brutus_PlayerWonBefore	= TRUE;
+		B_GiveXP				(XP_Arena_WonGoliathFight);
 	};
-	if(BRUTUS_CHALLENGED)
+
+	if	Brutus_Challenged
 	{
-		BRUTUS_PLAYERWONBEFORE = TRUE;
-		B_GiveXP(XP_ARENA_WONBRUTUSFIGHT);
+		Brutus_PlayerWonBefore	= TRUE;
+		B_GiveXP				(XP_Arena_WonBrutusFight);
 	};
-	if(MALGAR_CHALLENGED)
+
+	if	Malgar_Challenged
 	{
-		MALGAR_PLAYERWONBEFORE = TRUE;
-		B_GiveXP(XP_ARENA_WONMALGARFIGHT);
+		Malgar_PlayerWonBefore	= TRUE;
+		B_GiveXP				(XP_Arena_WonMalgarFight);
 	};
-	if(THORA_CHALLENGED)
+
+	if	Thora_Challenged
 	{
-		THORA_PLAYERWONBEFORE = TRUE;
-		B_GiveXP(XP_ARENA_WONTHORAFIGHT);
+		Thora_PlayerWonBefore	= TRUE;
+		B_GiveXP				(XP_Arena_WonThoraFight);
 	};
-	PrintScreen(_STR_MESSAGE_ARENAPLAYERVICTORY,-1,_YPOS_MESSAGE_ARENARESULT,FONT_OLD_BIG,_TIME_MESSAGE_ARENARESULT);
+
+	PrintScreen	(_STR_MESSAGE_ARENAPLAYERVICTORY, -1, _YPOS_MESSAGE_ARENARESULT, FONT_OLD_BIG, _TIME_MESSAGE_ARENARESULT);
 };
+
+
 

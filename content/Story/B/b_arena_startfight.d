@@ -1,89 +1,111 @@
-
-func void b_arena_startfight()
+//////////////////////////////////////////////////////////////////////////
+//	B_Arena_StartFight
+//	===================
+//	Schließt die Arenatoren, spricht einen Eröffnungssatz und setzt
+//	interne Flags, um den eigentlichen Kampf eröffnen.
+//	- 'self' muß der Arenameister sein!
+//////////////////////////////////////////////////////////////////////////
+func void B_Arena_StartFight ()
 {
-	PrintDebugNpc(PD_TA_FRAME,"B_Arena_StartFight");
-	if(ARENA_FIGHTRUNNING && ARENA_GATESCLOSED)
+	PrintDebugNpc				(PD_TA_FRAME,	"B_Arena_StartFight");
+
+	//-------- läuft der Kampf bereits? --------
+	if	Arena_FightRunning
+	&&	Arena_GatesClosed
 	{
-		PrintDebugNpc(PD_TA_CHECK,"...Kampf läuft bereits!");
+		PrintDebugNpc			(PD_TA_CHECK,	"...Kampf läuft bereits!");
 		return;
 	};
-	if(!ARENA_FIGHTSELECTED)
+
+	//-------- wurde ein Kampf angesetzt? --------
+	if	!Arena_FightSelected
 	{
-		PrintDebugNpc(PD_TA_CHECK,"...garkein Kampf angesetzt!");
+		PrintDebugNpc			(PD_TA_CHECK,	"...garkein Kampf angesetzt!");
 		return;
 	};
-	if(!Hlp_StrCmp(self.wp,ARENA_WP_THRONE))
+
+	//-------- Arenameister schon im richtigen TA? --------
+	if	!Hlp_StrCmp(self.wp, ARENA_WP_THRONE)
 	{
-		PrintDebugNpc(PD_TA_CHECK,"...Exchange Arenamaster-TA to ATTENDANCE!");
-		Npc_ExchangeRoutine(self,"attendance");
-		AI_ContinueRoutine(self);
+		PrintDebugNpc			(PD_TA_CHECK,	"...Exchange Arenamaster-TA to ATTENDANCE!");
+		Npc_ExchangeRoutine		(self, "attendance");
+		AI_ContinueRoutine		(self);
 		return;
 	};
-	if(ARENA_PLAYERFIGHT)
+
+	//-------- Gladiatoren in die Arena schicken --------
+	if	Arena_PlayerFight
 	{
-		if(GRIM_CHALLENGED)
+		if	Grim_Challenged
 		{
-			B_ExchangeRoutine(min_306_grim,"ArenaFight");
-			B_ChangeGuild(min_306_grim,GIL_None);
+			B_ExchangeRoutine		(MIN_306_Grim,		"ArenaFight");
+			B_ChangeGuild			(MIN_306_Grim,		GIL_NONE	);
 		};
-		if(GOLIATH_CHALLENGED)
+		if	Goliath_Challenged
 		{
-			B_ExchangeRoutine(wrk_216_goliath,"ArenaFight");
-			B_ChangeGuild(wrk_216_goliath,GIL_None);
+			B_ExchangeRoutine		(WRK_216_Goliath,	"ArenaFight");
+			B_ChangeGuild			(WRK_216_Goliath,	GIL_NONE	);
 		};
-		if(BRUTUS_CHALLENGED)
+		if	Brutus_Challenged
 		{
-			B_ExchangeRoutine(mil_121_brutus,"ArenaFight");
-			B_ChangeGuild(mil_121_brutus,GIL_None);
+			B_ExchangeRoutine		(MIL_121_Brutus,	"ArenaFight");
+			B_ChangeGuild			(MIL_121_Brutus,	GIL_NONE	);
 		};
-		if(MALGAR_CHALLENGED)
+		if	Malgar_Challenged
 		{
-			B_ExchangeRoutine(dmh_1302_malgar,"ArenaFight");
-			B_ChangeGuild(dmh_1302_malgar,GIL_None);
+			B_ExchangeRoutine		(DMH_1302_Malgar,	"ArenaFight");
+			B_ChangeGuild			(DMH_1302_Malgar,	GIL_NONE	);
 		};
-		if(THORA_CHALLENGED)
+		if	Thora_Challenged
 		{
-			B_ExchangeRoutine(amz_900_thora,"ArenaFight");
-			B_ChangeGuild(amz_900_thora,GIL_None);
+			B_ExchangeRoutine		(AMZ_900_Thora,		"ArenaFight");
+			B_ChangeGuild			(AMZ_900_Thora,		GIL_NONE	);
 		};
 	}
 	else
 	{
-		if(ARENA_NPCCOMBO == AC_GRIM_GOLIATH)
+		if	(Arena_NpcCombo == AC_GRIM_GOLIATH)
 		{
-			B_ExchangeRoutine(min_306_grim,"ArenaNpc");
-			B_ChangeGuild(min_306_grim,GIL_None);
-			B_ExchangeRoutine(wrk_216_goliath,"ArenaNpc");
-			B_ChangeGuild(wrk_216_goliath,GIL_None);
+			B_ExchangeRoutine		(MIN_306_Grim,		"ArenaNpc"	);
+			B_ChangeGuild			(MIN_306_Grim,		GIL_NONE	);
+			B_ExchangeRoutine		(WRK_216_Goliath,	"ArenaNpc"	);
+			B_ChangeGuild			(WRK_216_Goliath,	GIL_NONE	);
 		};
-		if(ARENA_NPCCOMBO == AC_GOLIATH_BRUTUS)
+		if	(Arena_NpcCombo == AC_GOLIATH_BRUTUS)
 		{
-			B_ExchangeRoutine(wrk_216_goliath,"ArenaNpc");
-			B_ChangeGuild(wrk_216_goliath,GIL_None);
-			B_ExchangeRoutine(mil_121_brutus,"ArenaNpc");
-			B_ChangeGuild(mil_121_brutus,GIL_None);
+			B_ExchangeRoutine		(WRK_216_Goliath,	"ArenaNpc"	);
+			B_ChangeGuild			(WRK_216_Goliath,	GIL_NONE	);
+			B_ExchangeRoutine		(MIL_121_Brutus,	"ArenaNpc"	);
+			B_ChangeGuild			(MIL_121_Brutus,	GIL_NONE	);
 		};
-		if(ARENA_NPCCOMBO == AC_BRUTUS_MALGAR)
+		if	(Arena_NpcCombo == AC_BRUTUS_MALGAR)
 		{
-			B_ExchangeRoutine(mil_121_brutus,"ArenaNpc");
-			B_ChangeGuild(mil_121_brutus,GIL_None);
-			B_ExchangeRoutine(dmh_1302_malgar,"ArenaNpc");
-			B_ChangeGuild(dmh_1302_malgar,GIL_None);
+			B_ExchangeRoutine		(MIL_121_Brutus,	"ArenaNpc"	);
+			B_ChangeGuild			(MIL_121_Brutus,	GIL_NONE	);
+			B_ExchangeRoutine		(DMH_1302_Malgar,	"ArenaNpc"	);
+			B_ChangeGuild			(DMH_1302_Malgar,	GIL_NONE	);
 		};
-		if(ARENA_NPCCOMBO == AC_MALGAR_THORA)
+		if	(Arena_NpcCombo == AC_MALGAR_THORA)
 		{
-			B_ExchangeRoutine(dmh_1302_malgar,"ArenaNpc");
-			B_ChangeGuild(dmh_1302_malgar,GIL_None);
-			B_ExchangeRoutine(amz_900_thora,"ArenaNpc");
-			B_ChangeGuild(amz_900_thora,GIL_None);
+			B_ExchangeRoutine		(DMH_1302_Malgar,	"ArenaNpc"	);
+			B_ChangeGuild			(DMH_1302_Malgar,	GIL_NONE	);
+			B_ExchangeRoutine		(AMZ_900_Thora,		"ArenaNpc"	);
+			B_ChangeGuild			(AMZ_900_Thora,		GIL_NONE	);
 		};
 	};
-	if(!ARENA_GATESCLOSED)
+
+	//-------- Arenatore schliessen & Eröffnungssatz --------
+	if	!Arena_GatesClosed
 	{
-		PrintDebugNpc(PD_TA_CHECK,"...close ArenaGates!");
-		AI_StartState(self,zs_arenamasterstartfight,1,"");
+		PrintDebugNpc			(PD_TA_CHECK,	"...close ArenaGates!");
+
+		AI_StartState			(self, ZS_ArenaMasterStartFight, 1, "");
 	};
-	ARENA_FIGHTDAY = b_getday();
-	ARENA_FIGHTRUNNING = TRUE;
+
+	//-------- Flag setzen --------
+	Arena_FightDay				= B_GetDay();
+	Arena_FightRunning 			= TRUE;
 };
+
+
 

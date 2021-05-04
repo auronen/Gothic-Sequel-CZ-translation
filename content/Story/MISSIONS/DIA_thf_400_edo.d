@@ -1,242 +1,296 @@
-
-instance INFO_EDO_EXIT(C_Info)
+///////////////////////////////////////////////////////////////////////
+//	Info EXIT
+///////////////////////////////////////////////////////////////////////
+instance	Info_Edo_Exit (C_INFO)
 {
-	npc = thf_400_edo;
-	nr = 999;
-	condition = info_edo_exit_condition;
-	information = info_edo_exit_info;
-	important = FALSE;
-	permanent = TRUE;
-	description = DIALOG_ENDE;
+	npc			=  THF_400_Edo;
+	nr			=  999;
+	condition	=  Info_Edo_Exit_Condition;
+	information	=  Info_Edo_Exit_Info;
+	important	=  FALSE;
+	permanent	=  TRUE;
+	description =  DIALOG_ENDE;
 };
 
-
-func int info_edo_exit_condition()
+func int	Info_Edo_Exit_Condition()
 {
 	return TRUE;
 };
 
-func void info_edo_exit_info()
+func void	Info_Edo_Exit_Info()
 {
-	AI_StopProcessInfos(self);
+	AI_StopProcessInfos	( self );
 };
 
 
-instance THF_400_EDO_HOWDY(C_Info)
+
+
+
+
+
+
+
+//#####################################################################
+//##
+//##
+//##						KAPITEL 7
+//##
+//##
+//#####################################################################
+
+///////////////////////////////////////////////////////////////////////
+//	Info HOWDY
+///////////////////////////////////////////////////////////////////////
+instance THF_400_Edo_HOWDY		(C_INFO)
 {
-	npc = thf_400_edo;
-	condition = thf_400_edo_howdy_condition;
-	information = thf_400_edo_howdy_info;
-	important = FALSE;
-	permanent = TRUE;
-	description = "Was tust du den ganzen Tag?";
+	npc		 = 	THF_400_Edo;
+	condition	 = 	THF_400_Edo_HOWDY_Condition;
+	information	 = 	THF_400_Edo_HOWDY_Info;
+	important	 = 	FALSE;
+	permanent	 = 	TRUE;
+
+	description	 = 	"Was tust du den ganzen Tag?";
 };
 
-
-func int thf_400_edo_howdy_condition()
+func int THF_400_Edo_HOWDY_Condition ()
 {
-	if(Npc_GetDistToWP(self,EDO_WP_SELL) > 300)
+	if	(Npc_GetDistToWP(self, EDO_WP_SELL) > 300)
 	{
 		return TRUE;
 	};
 };
 
-func void thf_400_edo_howdy_info()
+func void THF_400_Edo_HOWDY_Info ()
 {
-	AI_Output(hero,self,"THF_400_HOWDY_15_01");	//Was tust du den ganzen Tag?
-	AI_Output(self,hero,"THF_400_HOWDY_00_02");	//Ich geniese die Sonne, wenn sie dann mal schient!
-	AI_Output(self,hero,"THF_400_HOWDY_00_03");	//Ansonsten bin ich bemüht, mich nicht zu überanstrengen!
-	AI_Output(hero,self,"THF_400_HOWDY_15_04");	//Ja das sehe ich!
-	AI_StopProcessInfos(self);
+	AI_Output			(hero, self, "THF_400_HOWDY_15_01"); //Was tust du den ganzen Tag?
+	AI_Output			(self, hero, "THF_400_HOWDY_00_02"); //Ich geniese die Sonne, wenn sie dann mal schient!
+	AI_Output			(self, hero, "THF_400_HOWDY_00_03"); //Ansonsten bin ich bemüht, mich nicht zu überanstrengen!
+	AI_Output			(hero, self, "THF_400_HOWDY_15_04"); //Ja das sehe ich!
+	AI_StopProcessInfos	(self);
 };
 
 
-instance INFO_EDO_ORE(C_Info)
+
+///////////////////////////////////////////////////////////////////////
+//	Info ORE
+///////////////////////////////////////////////////////////////////////
+instance	Info_Edo_ORE (C_INFO)
 {
-	npc = thf_400_edo;
-	condition = info_edo_ore_condition;
-	information = info_edo_ore_info;
-	important = FALSE;
-	permanent = FALSE;
-	description = "Ich komme gerade von Gotmar...";
+	npc				= THF_400_Edo;
+	condition		= Info_Edo_ORE_Condition;
+	information		= Info_Edo_ORE_Info;
+	important		= FALSE;
+	permanent		= FALSE;
+	description		= "Ich komme gerade von Gotmar...";
 };
 
-
-func int info_edo_ore_condition()
+func int	Info_Edo_ORE_Condition()
 {
-	if(Npc_KnowsInfo(hero,info_gotmar_whereore))
+	if	Npc_KnowsInfo(hero, Info_Gotmar_WHEREORE)
 	{
 		return TRUE;
 	};
 };
 
-func void info_edo_ore_info()
+func void	Info_Edo_ORE_Info()
 {
-	AI_Output(hero,self,"Info_Edo_ORE_15_01");	//Ich komme gerade von Gotmar...
-	AI_Output(self,hero,"Info_Edo_ORE_00_02");	//So? Was will denn dieser Wichtigtuer von einem Schmied?
-	AI_Output(hero,self,"Info_Edo_ORE_15_03");	//Er sagt, du hättest Erz von ihm gestohlen!
-	AI_Standup(self);
-	B_DrawWeapon(self,hero);
-	AI_TurnToNPC(self,hero);
-	AI_Output(self,hero,"Info_Edo_ORE_00_04");	//WAAAS??? Du nennst mich eine Dieb???
-	Info_ClearChoices(info_edo_ore);
-	Info_AddChoice(info_edo_ore,"Bist Du denn einer?",info_edo_orestolenyou);
-	Info_AddChoice(info_edo_ore,"Nein, Gotmar tut das!",info_edo_orestolenno);
-	Info_AddChoice(info_edo_ore,"Ja! Was dagegen?",info_edo_orestolenyes);
+	AI_Output			(hero, self,"Info_Edo_ORE_15_01"); //Ich komme gerade von Gotmar...
+	AI_Output			(self, hero,"Info_Edo_ORE_00_02"); //So? Was will denn dieser Wichtigtuer von einem Schmied?
+	AI_Output			(hero, self,"Info_Edo_ORE_15_03"); //Er sagt, du hättest Erz von ihm gestohlen!
+	AI_StandUp			(self);
+	B_DrawWeapon		(self, hero);
+	AI_TurnToNpc		(self, hero);
+	AI_Output			(self, hero,"Info_Edo_ORE_00_04"); //WAAAS??? Du nennst mich eine Dieb???
+
+	Info_ClearChoices	(Info_Edo_ORE);
+	Info_AddChoice		(Info_Edo_ORE,	"Bist Du denn einer?",		Info_Edo_ORESTOLENYOU);
+	Info_AddChoice		(Info_Edo_ORE,	"Nein, Gotmar tut das!",	Info_Edo_ORESTOLENNO);
+	Info_AddChoice		(Info_Edo_ORE,	"Ja! Was dagegen?",			Info_Edo_ORESTOLENYES);
 };
 
-func void info_edo_orestolenyou()
+func void Info_Edo_ORESTOLENYOU ()
 {
-	AI_Output(hero,self,"Info_Edo_ORESTOLENYOU_15_01");	//Bist Du denn einer?
-	AI_Output(self,hero,"Info_Edo_ORESTOLENYOU_00_02");	//HUA, HUA, HUA,...... du gefällst mir. Bist nicht auf den Kopf gefallen.
-	B_RemoveWeapon(self);
-	AI_Output(self,hero,"Info_Edo_ORESTOLENYOU_00_03");	//(leiser) So ganz unter uns: Dieb zu sein ist eine Ehre, nur reagieren die anderen hier etwas allergisch auf dieses Thema.
-	AI_Output(self,hero,"Info_Edo_ORESTOLENYOU_00_04");	//Also behalt ich das lieber für mich. Die meisten streberhaften Handwerker hier verstehen einfach nicht, wie man WIRKLICH lebt.
-	AI_Output(self,hero,"Info_Edo_ORESTOLENYOU_00_05");	//Haben immer nur arbeiten im Kopf.
-	AI_Output(self,hero,"Info_Edo_ORESTOLENYOU_00_06");	//Ich verrat dir was: Wenn Du an billige Waren kommen willst, dann frage mich danach. Ich habe eine große Auswahl an Dingen aller Art.
-	AI_Output(self,hero,"Info_Edo_ORESTOLENYOU_00_07");	//(unschuldig) Sind ähem... gebrauchte Dinge. Ihre Vorbesitzter haben sie irgendwann mal... verloren.
-	AI_Output(self,hero,"Info_Edo_ORESTOLENYOU_00_08");	//Also dachte ich mir, bevor sie keiner haben will...
-	Info_ClearChoices(info_edo_ore);
-	EDO_ISDEALER = TRUE;
+	AI_Output			(hero, self,"Info_Edo_ORESTOLENYOU_15_01"); //Bist Du denn einer?
+	AI_Output			(self, hero,"Info_Edo_ORESTOLENYOU_00_02"); //HUA, HUA, HUA,...... du gefällst mir. Bist nicht auf den Kopf gefallen.
+	B_RemoveWeapon		(self);
+	AI_Output			(self, hero,"Info_Edo_ORESTOLENYOU_00_03"); //(leiser) So ganz unter uns: Dieb zu sein ist eine Ehre, nur reagieren die anderen hier etwas allergisch auf dieses Thema.
+	AI_Output			(self, hero,"Info_Edo_ORESTOLENYOU_00_04"); //Also behalt ich das lieber für mich. Die meisten streberhaften Handwerker hier verstehen einfach nicht, wie man WIRKLICH lebt.
+	AI_Output			(self, hero,"Info_Edo_ORESTOLENYOU_00_05"); //Haben immer nur arbeiten im Kopf.
+	AI_Output			(self, hero,"Info_Edo_ORESTOLENYOU_00_06"); //Ich verrat dir was: Wenn Du an billige Waren kommen willst, dann frage mich danach. Ich habe eine große Auswahl an Dingen aller Art.
+	AI_Output			(self, hero,"Info_Edo_ORESTOLENYOU_00_07"); //(unschuldig) Sind ähem... gebrauchte Dinge. Ihre Vorbesitzter haben sie irgendwann mal... verloren.
+	AI_Output			(self, hero,"Info_Edo_ORESTOLENYOU_00_08"); //Also dachte ich mir, bevor sie keiner haben will...
+
+	Info_ClearChoices	(Info_Edo_ORE);
+
+	Edo_IsDealer		= TRUE;
 };
 
-func void info_edo_orestolenno()
+func void Info_Edo_ORESTOLENNO ()
 {
-	Info_ClearChoices(info_edo_ore);
-	AI_Output(hero,self,"Info_Edo_ORESTOLENNO_15_01");	//Nein, Gotmar tut das!
-	AI_Output(self,hero,"Info_Edo_ORESTOLENNO_00_02");	//Sooooo. Dann richte Gotmar aus, dass er besser aufpassen soll, was er herumerzählt. Hier im Lager können schreckliche Unfälle passiere, vor allem nachts...
-	B_RemoveWeapon(self);
-	GOTMAR_SCBETRAYED = TRUE;
+	Info_ClearChoices	(Info_Edo_ORE);
+	AI_Output			(hero, self,"Info_Edo_ORESTOLENNO_15_01"); //Nein, Gotmar tut das!
+	AI_Output			(self, hero,"Info_Edo_ORESTOLENNO_00_02"); //Sooooo. Dann richte Gotmar aus, dass er besser aufpassen soll, was er herumerzählt. Hier im Lager können schreckliche Unfälle passiere, vor allem nachts...
+	B_RemoveWeapon		(self);
+
+	Gotmar_SCBetrayed	= TRUE;
 };
 
-func void info_edo_orestolenyes()
+func void Info_Edo_ORESTOLENYES ()
 {
-	Info_ClearChoices(info_edo_ore);
-	AI_Output(hero,self,"Info_Edo_ORESTOLENYES_15_01");	//Ja! Was dagegen?
-	AI_Output(self,hero,"Info_Edo_ORESTOLENYES_00_02");	//Na warte, dir werde ich deine Beleidigungen aus der Birne prügeln.
-	AI_StopProcessInfos(self);
-	B_ChangeGuild(thf_400_edo,GIL_None);
-	b_attackproper(self,hero);
-	EDO_CALLEDTHIEF = TRUE;
-};
+	Info_ClearChoices	(Info_Edo_ORE);
+	AI_Output			(hero, self,"Info_Edo_ORESTOLENYES_15_01"); //Ja! Was dagegen?
+	AI_Output			(self, hero,"Info_Edo_ORESTOLENYES_00_02"); //Na warte, dir werde ich deine Beleidigungen aus der Birne prügeln.
 
+	AI_StopProcessInfos	(self);
+	B_ChangeGuild		(THF_400_Edo, GIL_NONE);
+	B_AttackProper		(self, hero);
 
-instance INFO_EDO_DEALOUTSIDE(C_Info)
-{
-	npc = thf_400_edo;
-	condition = info_edo_dealoutside_condition;
-	information = info_edo_dealoutside_info;
-	important = FALSE;
-	permanent = TRUE;
-	description = "Ich bin an deinen... gefundenen... Sachen interessiert.";
-	trade = TRUE;
+	Edo_CalledThief		= TRUE;
 };
 
 
-func int info_edo_dealoutside_condition()
+
+
+
+
+///////////////////////////////////////////////////////////////////////
+//	Info DEALOUTSIDE
+///////////////////////////////////////////////////////////////////////
+instance	Info_Edo_DEALOUTSIDE (C_INFO)
 {
-	if(EDO_ISDEALER && (Npc_GetDistToWP(self,EDO_WP_SELL) > 300))
+	npc				= THF_400_Edo;
+	condition		= Info_Edo_DEALOUTSIDE_Condition;
+	information		= Info_Edo_DEALOUTSIDE_Info;
+	important		= FALSE;
+	permanent		= TRUE;
+	description		= "Ich bin an deinen... gefundenen... Sachen interessiert.";
+	trade			= TRUE;
+};
+
+func int	Info_Edo_DEALOUTSIDE_Condition()
+{
+	if	Edo_IsDealer
+	&&	(Npc_GetDistToWP(self, EDO_WP_SELL) > 300)
 	{
 		return TRUE;
 	};
 };
 
-func void info_edo_dealoutside_info()
+func void	Info_Edo_DEALOUTSIDE_Info()
 {
-	AI_Output(hero,self,"Info_Edo_DEALOUTSIDE_15_01");	//Ich bin an deinen... gefundenen... Sachen interessiert.
-	AI_Output(self,hero,"Info_Edo_DEALOUTSIDE_00_02");	//PSSST, nicht so laut!!!
-	AI_Output(self,hero,"Info_Edo_DEALOUTSIDE_00_03");	//Los komm mit!
-	TA_BeginOverlay(self);
-	TA_Stay(0,0,0,15,EDO_WP_SELL);
-	TA_EndOverlay(self);
-	AI_StopProcessInfos(self);
+	AI_Output				(hero, self,"Info_Edo_DEALOUTSIDE_15_01"); //Ich bin an deinen... gefundenen... Sachen interessiert.
+	AI_Output				(self, hero,"Info_Edo_DEALOUTSIDE_00_02"); //PSSST, nicht so laut!!!
+	AI_Output				(self, hero,"Info_Edo_DEALOUTSIDE_00_03"); //Los komm mit!
+
+	TA_BeginOverlay			(self);
+	TA_Stay					(00,00,00,15,EDO_WP_SELL);
+	TA_EndOverlay			(self);
+
+	//Npc_ExchangeRoutine		(self, "DEAL");
+	AI_StopProcessInfos		(self);
 };
 
-
-instance INFO_EDO_DEALINSIDE(C_Info)
+///////////////////////////////////////////////////////////////////////
+//	Info DEALINSIDE
+///////////////////////////////////////////////////////////////////////
+instance	Info_Edo_DEALINSIDE (C_INFO)
 {
-	npc = thf_400_edo;
-	condition = info_edo_dealinside_condition;
-	information = info_edo_dealinside_info;
-	important = FALSE;
-	permanent = TRUE;
-	trade = TRUE;
-	description = "OK, nun zeig mir deine... gefundenen... Sachen.";
+	npc				= THF_400_Edo;
+	condition		= Info_Edo_DEALINSIDE_Condition;
+	information		= Info_Edo_DEALINSIDE_Info;
+	important		= FALSE;
+	permanent		= TRUE;
+	trade			= TRUE;
+	description		= "OK, nun zeig mir deine... gefundenen... Sachen.";
 };
 
-
-func int info_edo_dealinside_condition()
+func int	Info_Edo_DEALINSIDE_Condition()
 {
-	if(EDO_ISDEALER && (Npc_GetDistToWP(self,EDO_WP_SELL) <= 300))
+	if	Edo_IsDealer
+	&&	(Npc_GetDistToWP(self, EDO_WP_SELL) <= 300)
 	{
 		return TRUE;
 	};
 };
 
-func void info_edo_dealinside_info()
+func void	Info_Edo_DEALINSIDE_Info()
 {
-	AI_Output(hero,self,"Info_Edo_DEALINSIDE_15_01");	//OK, nun zeig mir deine... gefundenen... Sachen.
-	AI_Output(self,hero,"Info_Edo_DEALINSIDE_00_02");	//Klar, aber halt da draußen die Klappe darüber!
+	AI_Output				(hero, self,"Info_Edo_DEALINSIDE_15_01"); //OK, nun zeig mir deine... gefundenen... Sachen.
+	AI_Output				(self, hero,"Info_Edo_DEALINSIDE_00_02"); //Klar, aber halt da draußen die Klappe darüber!
+
+	//Npc_ExchangeRoutine		(self, "START");
 };
 
 
-instance INFO_EDO_VICTORY(C_Info)
+///////////////////////////////////////////////////////////////////////
+//	Info VICTORY
+///////////////////////////////////////////////////////////////////////
+instance	Info_Edo_VICTORY (C_INFO)
 {
-	npc = thf_400_edo;
-	condition = info_edo_victory_condition;
-	information = info_edo_victory_info;
-	important = FALSE;
-	permanent = FALSE;
-	description = "JETZT was dagegen, dass ich dich einen Dieb nenne?";
+	npc				= THF_400_Edo;
+	condition		= Info_Edo_VICTORY_Condition;
+	information		= Info_Edo_VICTORY_Info;
+	important		= FALSE;
+	permanent		= FALSE;
+	description		= "JETZT was dagegen, dass ich dich einen Dieb nenne?";
 };
 
-
-func int info_edo_victory_condition()
+func int	Info_Edo_VICTORY_Condition()
 {
-	if(EDO_CALLEDTHIEF && self.aivar[12])
+	if	Edo_CalledThief
+	&&	self.aivar[AIV_WASDEFEATEDBYSC]
 	{
 		return TRUE;
 	};
 };
 
-func void info_edo_victory_info()
+func void	Info_Edo_VICTORY_Info()
 {
-	AI_Output(hero,self,"Info_Edo_VICTORY_15_01");	//JETZT was dagegen, dass ich dich einen Dieb nenne?
-	AI_Output(self,hero,"Info_Edo_VICTORY_00_02");	//(ängstlich) Beruhig dich! Das war doch nur wegen der anderen hier?
-	AI_Output(hero,self,"Info_Edo_VICTORY_15_03");	//Hast du nun Gotmars Erz oder nicht?
-	AI_Output(self,hero,"Info_Edo_VICTORY_00_04");	//(ängstlich) Hier nimm es! Ich wusste von Anfang an, dass es mir Unglück bringen würde.
-	B_ChangeGuild(thf_400_edo,GIL_THIEF);
-	B_GiveInvItems(self,hero,itmi_orenugget,EDO_STOLENORE);
+	AI_Output			(hero, self,"Info_Edo_VICTORY_15_01"); //JETZT was dagegen, dass ich dich einen Dieb nenne?
+	AI_Output			(self, hero,"Info_Edo_VICTORY_00_02"); //(ängstlich) Beruhig dich! Das war doch nur wegen der anderen hier?
+	AI_Output			(hero, self,"Info_Edo_VICTORY_15_03"); //Hast du nun Gotmars Erz oder nicht?
+	AI_Output			(self, hero,"Info_Edo_VICTORY_00_04"); //(ängstlich) Hier nimm es! Ich wusste von Anfang an, dass es mir Unglück bringen würde.
+
+	B_ChangeGuild		(THF_400_Edo, GIL_THIEF);		// Rücksetzen von Info_Edo_ORESTOLENYES()
+	B_GiveInvItems		(self, hero, ItMi_OreNugget, Edo_StolenOre);
 };
 
-
-instance INFO_EDO_DEFEAT(C_Info)
+///////////////////////////////////////////////////////////////////////
+//	Info DEFEAT
+///////////////////////////////////////////////////////////////////////
+instance	Info_Edo_DEFEAT (C_INFO)
 {
-	npc = thf_400_edo;
-	condition = info_edo_defeat_condition;
-	information = info_edo_defeat_info;
-	important = FALSE;
-	permanent = FALSE;
-	description = "Kann ich denn Erz von dir ...KAUFEN?";
+	npc				= THF_400_Edo;
+	condition		= Info_Edo_DEFEAT_Condition;
+	information		= Info_Edo_DEFEAT_Info;
+	important		= FALSE;
+	permanent		= FALSE;
+	description		= "Kann ich denn Erz von dir ...KAUFEN?";
 };
 
-
-func int info_edo_defeat_condition()
+func int	Info_Edo_DEFEAT_Condition()
 {
-	if(EDO_CALLEDTHIEF && self.aivar[13])
+	if	Edo_CalledThief
+	&&	self.aivar[AIV_HASDEFEATEDSC]
 	{
 		return TRUE;
 	};
 };
 
-func void info_edo_defeat_info()
+func void	Info_Edo_DEFEAT_Info()
 {
-	AI_Output(hero,self,"Info_Edo_DEFEAT_15_01");	//Kann ich denn Erz von dir ...KAUFEN?
-	AI_Output(self,hero,"Info_Edo_DEFEAT_00_02");	//Du hast ganz schön Mut mich DA-nach wieder anzusprechen, ha, ha, ha!
-	AI_Output(self,hero,"Info_Edo_DEFEAT_00_03");	//(leiser) Pass auf, ich kann dir alle möglichen Waren verkaufen.
-	AI_Output(self,hero,"Info_Edo_DEFEAT_00_04");	//Hab sozusagen ein gutes Sortiment auf Lager.
-	AI_Output(self,hero,"Info_Edo_DEFEAT_00_05");	//Alles Dinge, die ich irgendwo mal ...gefunden... habe. Deshalb sind sie auch so preiswert.
-	EDO_ISDEALER = TRUE;
-	B_ChangeGuild(thf_400_edo,GIL_THIEF);
+	AI_Output			(hero, self,"Info_Edo_DEFEAT_15_01"); //Kann ich denn Erz von dir ...KAUFEN?
+	AI_Output			(self, hero,"Info_Edo_DEFEAT_00_02"); //Du hast ganz schön Mut mich DA-nach wieder anzusprechen, ha, ha, ha!
+	AI_Output			(self, hero,"Info_Edo_DEFEAT_00_03"); //(leiser) Pass auf, ich kann dir alle möglichen Waren verkaufen.
+	AI_Output			(self, hero,"Info_Edo_DEFEAT_00_04"); //Hab sozusagen ein gutes Sortiment auf Lager.
+	AI_Output			(self, hero,"Info_Edo_DEFEAT_00_05"); //Alles Dinge, die ich irgendwo mal ...gefunden... habe. Deshalb sind sie auch so preiswert.
+
+	Edo_IsDealer = TRUE;
+	B_ChangeGuild		(THF_400_Edo, GIL_THIEF);		// Rücksetzen von Info_Edo_ORESTOLENYES()
 };
+
+
+
+
+
 

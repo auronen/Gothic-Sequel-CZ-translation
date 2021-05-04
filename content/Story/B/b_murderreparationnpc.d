@@ -1,13 +1,11 @@
-
-func int b_murderreparationnpc()
+func int B_MurderReparationNpc ()
 {
-	var C_Npc talamon;
-	PrintDebugNpc(PD_ZS_Check,"ReparationReceiver_Condition");
-	talamon = Hlp_GetNpc(hlr_501_talamon);
-	if(B_CompareNpcInstance(self,talamon))
+	PrintDebugNpc(PD_ZS_CHECK,"ReparationReceiver_Condition");	
+	var C_NPC talamon;
+	talamon	= Hlp_GetNpc	(Hlr_501_talamon);
+	if (B_CompareNpcInstance (self, talamon))
 	{
 		return TRUE;
 	};
 	return FALSE;
 };
-

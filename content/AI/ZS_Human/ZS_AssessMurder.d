@@ -1,67 +1,119 @@
+//////////////////////////////////////////////////////////////////////////
+//	ZS_AssessMurder
+//	===============
+//	Wird ausschließlich durch
+//
+//	- PERC_ASSESSMURDER
+//
+//	angesprungen. Folgende Voraussetzungen müssen erfüllt sein:
+//
+//	- keine!
+//
+//	Macht folgendes:
+//	1.	Mord von Monster
+//		->	ZS_AssessMonster
+//	2.	Mord an Monster
+//		->	ignorieren
+//	3.	Mord ohne Monsterbeteiligung
+//		->	News-Eintrag generieren
+//		->	Wachen, deren Schützlinge besiegt wurden 	-> ZS_ProclaimAndPunish
+//		->	war das Opfer ein Freund					-> B_AssessEnemy
+//		->	Wenn ANGRY/HOSTILE zum Mordopfer 			-> spöttischer Kommentar
+//////////////////////////////////////////////////////////////////////////
+FUNC VOID ZS_AssessMurder ()
+{	
+	PrintDebugNpc			(PD_ZS_FRAME,	"ZS_AssessMurder" );	
 
-func void ZS_AssessMurder()
-{
-	PrintDebugNpc(PD_ZS_FRAME,"ZS_AssessMurder");
-	C_ZSInit();
-	Npc_PercEnable(self,PERC_ASSESSENEMY,B_AssessEnemy);
-	Npc_PercEnable(self,PERC_ASSESSDAMAGE,ZS_ReactToDamage);
-	Npc_PercEnable(self,PERC_ASSESSMAGIC,B_AssessMagic);
-	Npc_PercEnable(self,PERC_ASSESSSURPRISE,ZS_AssessSurprise);
-	PrintGlobals(PD_ZS_Check);
-	PrintAttitudes(PD_ZS_Check);
-	if(Npc_CanSeeNpcFreeLOS(self,other) || Npc_CanSeeNpcFreeLOS(self,victim))
+	C_ZSInit				();
+	
+	Npc_PercEnable  		(self,	PERC_ASSESSENEMY	,	B_AssessEnemy		);
+
+	Npc_PercEnable  		(self,	PERC_ASSESSDAMAGE	,	ZS_ReactToDamage 	);
+	Npc_PercEnable  		(self,	PERC_ASSESSMAGIC	,	B_AssessMagic		);
+	Npc_PercEnable  		(self,	PERC_ASSESSSURPRISE	,  	ZS_AssessSurprise	);
+
+	PrintGlobals			(PD_ZS_CHECK);
+	PrintAttitudes		 	(PD_ZS_CHECK);
+	
+	
+	
+	if (Npc_CanSeeNpcFreeLOS(self,other) 
+	|| Npc_CanSeeNpcFreeLOS(self,victim))
 	{
-		if(!C_NpcIsHuman(victim))
+		//-------- Mord an Monster ! --------
+		if (!C_NpcIsHuman(victim))
 		{
-			PrintDebugNpc(PD_ZS_Check,"...Mord an Monster!");
-			B_WhirlAround(self,victim);
+			PrintDebugNpc		(PD_ZS_CHECK,	"...Mord an Monster!");
+			B_WhirlAround 		(self,	victim);
 			return;
 		};
-		if(!C_NpcIsHuman(other))
+		//-------- Mord von Monster ! --------
+		if (!C_NpcIsHuman(other))
 		{
-			PrintDebugNpc(PD_ZS_Check,"...Mord von Monster!");
-			Npc_SetTarget(self,other);
-			Npc_GetTarget(self);
-			AI_StartState(self,ZS_AssessMonster,0,"");
+			PrintDebugNpc		(PD_ZS_CHECK,	"...Mord von Monster!");
+			Npc_SetTarget		(self,	other);
+			
+			Npc_GetTarget		( self);
+			AI_StartState		(self,	ZS_AssessMonster,	0,	"");
 			return;
 		};
-		if(C_NpcIsHuman(victim) && C_NpcIsHuman(other))
+		if (C_NpcIsHuman	(victim)
+		&& (C_NpcIsHuman	(other)))	// JP: Sollte eigentlich überflüssig sein, weil im Zweig oben die Funktion verlassen wird, 
+										//	ist aber leider vorgekommen, daß Monster als Mörder für den Spieler zählten, deshalb
+										// zur Sicherheit nochmal diese Abfrage
 		{
-			INT_MURDERID1 = Hlp_GetInstanceID(victim);
-			PrintDebugInt(PD_ZS_Check,"MurderID1 ",INT_MURDERID1);
-			PrintDebugInt(PD_ZS_Check,"MurderID2 ",INT_MURDERID2);
-			if(!B_CompareNpcInstance(victim,hero))
+			
+			int_Murderid1 = Hlp_GetInstanceID	(victim);
+	
+			PrintDebugInt	(PD_ZS_CHECK,"MurderID1 ", int_MurderId1);
+			PrintDebugInt	(PD_ZS_CHECK,"MurderID2 ", int_MurderId2);
+			//JP: Wenn ein Nsc getötet worden ist, wird das gemerkt, nicht wenn der Spieler getötet wurde
+			if (!B_CompareNpcInstance (victim, hero))
 			{
-				PrintDebugNpc(PD_ZS_Check,"B_CombatAssessMurder seen // victim is not Hero");
-				B_Say(self,other,"$HEKILLEDHIM");
+				PrintDebugNpc( PD_ZS_CHECK,"B_CombatAssessMurder seen // victim is not Hero");
+				B_Say			(self,	other,	"$HEKILLEDHIM");	//MH: von B_AssessAndMemorize hierhin kopiert, weil sonst IMMER der Spruch kam! JP: Nur bei Mord vom SPieler kommt ein Kommentar
 			};
-			if(INT_MURDERID1 != INT_MURDERID2)
+			if (int_MurderId1 != int_MurderId2)
 			{
-				INT_MURDERID2 = INT_MURDERID1;
-				PrintDebugNpc(PD_ZS_Check,"Anderer Mord");
-				INT_MURDERCOUNT = INT_MURDERCOUNT + 1;
+				int_MurderId2 = int_MurderId1;	
+				PrintDebugNpc			(PD_ZS_CHECK,	"Anderer Mord" );
+				int_Murdercount	= int_Murdercount +1;
+			
 			}
 			else
 			{
-				INT_MURDERID2 = Hlp_GetInstanceID(victim);
-				PrintDebugInt(PD_ZS_Check,"MurderID2 nach Tausch ",INT_MURDERID2);
+				int_Murderid2 = Hlp_GetInstanceID	(victim);
+				PrintDebugInt	(PD_ZS_CHECK,"MurderID2 nach Tausch ", int_MurderId2);
 			};
 		};
-		PrintDebugInt(PD_ZS_Check,"Anzahl Morde Spieler ",INT_MURDERCOUNT);
-		PrintDebugNpc(PD_ZS_Check,"ZS_AssessMurder/Npc_CanSeeNpc");
-		B_WhirlAround(self,other);
-		if(C_ChargeWasAttacked(self,victim,other))
-		{
-			PrintDebugNpc(PD_ZS_Check,"...NSC ist Wache und ein Schützling wurde gemordet!");
-			B_DrawWeapon(self,other);
-			AI_StartState(self,ZS_ProclaimAndPunish,0,"");
+		PrintDebugInt	(PD_ZS_CHECK,"Anzahl Morde Spieler ", int_MurderCount);	
+		
+		
+		
+
+	
+		PrintDebugNpc		(PD_ZS_CHECK,	"ZS_AssessMurder/Npc_CanSeeNpc" );
+
+		//-------- Morden Sehen & Merken ! --------
+		B_WhirlAround 		(self,	other);
+		
+
+		//-------- Schützling einer Wache wurde umgehauen ! --------
+		if (C_ChargeWasAttacked(self, victim, other))
+		{ 
+			PrintDebugNpc	(PD_ZS_CHECK,	"...NSC ist Wache und ein Schützling wurde gemordet!");
+			B_DrawWeapon	(self,	other);
+			AI_StartState 	(self,  ZS_ProclaimAndPunish, 0, "");
 			return;
 		};
-		if(Npc_GetAttitude(self,other) == ATT_HOSTILE)
+	
+		//-------- führte Mordbewertung in B_AssessAndMemorize zu HOSTILE ? --------
+		if (Npc_GetAttitude(self,other) == ATT_HOSTILE )
 		{
-			PrintDebugNpc(PD_ZS_Check,"...hostile zum Mörder!");
-			B_AssessEnemy();
+			PrintDebugNpc	(PD_ZS_CHECK,	"...hostile zum Mörder!");
+			B_AssessEnemy	();
 		};
+		
 	};
 };
 

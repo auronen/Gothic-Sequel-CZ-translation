@@ -1,9 +1,17 @@
-
-func void b_arena_wait(var int npcInstance)
+//////////////////////////////////////////////////////////////////////////
+//	B_Arena_Wait
+//	============
+//	Wartet eine Weile.
+//////////////////////////////////////////////////////////////////////////
+func void B_Arena_Wait (var int npcInstance)
 {
-	var C_Npc npc;
-	PrintDebugNpc(PD_TA_FRAME,"B_Arena_Wait");
+	PrintDebugNpc		(PD_TA_FRAME,	"B_Arena_Wait");
+
+	var C_NPC npc;
 	npc = Hlp_GetNpc(npcInstance);
-	AI_Wait(npc,20);
+
+	AI_Wait				(npc,	20);
 };
+
+
 

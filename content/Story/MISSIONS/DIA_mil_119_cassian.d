@@ -1,491 +1,692 @@
-
-instance MIL_119_CASSIAN_EXIT(C_Info)
+instance  Mil_119_Cassian_Exit (C_INFO)
 {
-	npc = mil_119_cassian;
-	nr = 999;
-	condition = mil_119_cassian_exit_condition;
-	information = mil_119_cassian_exit_info;
-	permanent = 1;
+	npc			=  Mil_119_Cassian;
+	nr			=  999;
+	condition	=  Mil_119_Cassian_Exit_Condition;
+	information	=  Mil_119_Cassian_Exit_Info;
+	permanent	=  1;
 	description = DIALOG_ENDE;
 };
 
+FUNC int  Mil_119_Cassian_Exit_Condition()
+{
+	return TRUE;
+};
+FUNC VOID  Mil_119_Cassian_Exit_Info()
+{
+	AI_StopProcessInfos	( self );
+};
 
-func int mil_119_cassian_exit_condition()
+///////////////////////////////////////////////////////////////////////
+//	Info TRAIN
+///////////////////////////////////////////////////////////////////////
+instance Mil_119_Cassian_HI		(C_INFO)
+{
+	npc		 = 	Mil_119_Cassian;
+	nr		 = 	12;
+	condition	 = 	Mil_119_Cassian_HI_Condition;
+	information	 = 	Mil_119_Cassian_HI_Info;
+	important	 = 	FALSE;
+	permanent	 = 	FALSE;
+
+	description	 = 	"Was machst du hier?";
+};
+
+func int Mil_119_Cassian_HI_Condition ()
 {
 	return TRUE;
 };
 
-func void mil_119_cassian_exit_info()
+func void Mil_119_Cassian_HI_Info ()
 {
-	AI_StopProcessInfos(self);
+	AI_Output			(hero, self, "Mil_119_HI_15_01"); //Was machst du hier?
+	AI_Output			(self, hero, "Mil_119_HI_08_02"); //Ich bin Cassian, erster Leutnant der Miliz.
+	AI_Output			(self, hero, "Mil_119_HI_08_03"); //Ich sorge dafür, das niemand die Reglen des Lagers bricht.
+	AI_Output			(self, hero, "Mil_119_HI_08_04"); //Und ich sorge dafür das die, die es doch tun, es nie wieder tun werden.
+};
+///////////////////////////////////////////////////////////////////////
+//	Info BEGINTRAIN
+///////////////////////////////////////////////////////////////////////
+instance Mil_119_Cassian_BEGINTRAIN		(C_INFO)
+{
+	npc		 = 	Mil_119_Cassian;
+	condition	 = 	Mil_119_Cassian_BEGINTRAIN_Condition;
+	information	 = 	Mil_119_Cassian_BEGINTRAIN_Info;
+	important	 = 	FALSE;
+	permanent	 = 	FALSE;
+
+	description	 = 	"Diego sagte mir, du trainierst Kämpfer?";
 };
 
-
-instance MIL_119_CASSIAN_HI(C_Info)
+func int Mil_119_Cassian_BEGINTRAIN_Condition ()
 {
-	npc = mil_119_cassian;
-	nr = 12;
-	condition = mil_119_cassian_hi_condition;
-	information = mil_119_cassian_hi_info;
-	important = FALSE;
-	permanent = FALSE;
-	description = "Was machst du hier?";
-};
-
-
-func int mil_119_cassian_hi_condition()
-{
-	return TRUE;
-};
-
-func void mil_119_cassian_hi_info()
-{
-	AI_Output(hero,self,"Mil_119_HI_15_01");	//Was machst du hier?
-	AI_Output(self,hero,"Mil_119_HI_08_02");	//Ich bin Cassian, erster Leutnant der Miliz.
-	AI_Output(self,hero,"Mil_119_HI_08_03");	//Ich sorge dafür, das niemand die Reglen des Lagers bricht.
-	AI_Output(self,hero,"Mil_119_HI_08_04");	//Und ich sorge dafür das die, die es doch tun, es nie wieder tun werden.
-};
-
-
-instance MIL_119_CASSIAN_BEGINTRAIN(C_Info)
-{
-	npc = mil_119_cassian;
-	condition = mil_119_cassian_begintrain_condition;
-	information = mil_119_cassian_begintrain_info;
-	important = FALSE;
-	permanent = FALSE;
-	description = "Diego sagte mir, du trainierst Kämpfer?";
-};
-
-
-func int mil_119_cassian_begintrain_condition()
-{
-	if(Npc_KnowsInfo(hero,pc_thief_needtraining) && Npc_KnowsInfo(hero,mil_119_cassian_hi))
+	if	Npc_KnowsInfo(hero,PC_Thief_NEEDTRAINING)
+	&&	Npc_KnowsInfo(hero,Mil_119_Cassian_HI)
 	{
 		return TRUE;
 	};
 };
 
-func void mil_119_cassian_begintrain_info()
+func void Mil_119_Cassian_BEGINTRAIN_Info ()
 {
-	if(Npc_KnowsInfo(hero,mil_103_berengar_about))
+	if	Npc_KnowsInfo(hero, MIL_103_Berengar_ABOUT)
 	{
-		AI_Output(hero,self,"Mil_119_BEGINTRAIN_15_01");	//Hauptmann Berengar sagte mir, du trainierst Kämpfer?
+		AI_Output		(hero, self, "Mil_119_BEGINTRAIN_15_01"); //Hauptmann Berengar sagte mir, du trainierst Kämpfer?
 	}
 	else
 	{
-		AI_Output(hero,self,"Mil_119_BEGINTRAIN_15_02");	//Diego sagte mir, du trainierst Kämpfer?
+		AI_Output		(hero, self, "Mil_119_BEGINTRAIN_15_02"); //Diego sagte mir, du trainierst Kämpfer?
 	};
-	AI_Output(self,hero,"Mil_119_BEGINTRAIN_08_03");	//Das ist richtig. Ich sorge dafür, dass die Milizsoldaten kräftig genug sind, wenn die Orks kommen.
-	AI_Output(self,hero,"Mil_119_BEGINTRAIN_08_04");	//Und sie werden kommen...
-	AI_Output(self,hero,"Mil_119_BEGINTRAIN_08_05");	//Ich kann auch dir zeigen wie du deine Stärke und dein Talent im Umgang mit dem Einhänder verbesserst.
-	AI_Output(self,hero,"Mil_119_BEGINTRAIN_08_06");	//Aber im Gegenzug wirst du einige Aufgaben für mich erledigen. Wenn du einverstanden bist, können wir gleich loslegen.
+	AI_Output			(self, hero, "Mil_119_BEGINTRAIN_08_03"); //Das ist richtig. Ich sorge dafür, dass die Milizsoldaten kräftig genug sind, wenn die Orks kommen.
+	AI_Output			(self, hero, "Mil_119_BEGINTRAIN_08_04"); //Und sie werden kommen...
+	AI_Output			(self, hero, "Mil_119_BEGINTRAIN_08_05"); //Ich kann auch dir zeigen wie du deine Stärke und dein Talent im Umgang mit dem Einhänder verbesserst.
+	AI_Output			(self, hero, "Mil_119_BEGINTRAIN_08_06"); //Aber im Gegenzug wirst du einige Aufgaben für mich erledigen. Wenn du einverstanden bist, können wir gleich loslegen.
 };
 
-
-instance MIL_119_CASSIAN_WHYSTR(C_Info)
+///////////////////////////////////////////////////////////////////////
+//	Info WHYSTR
+///////////////////////////////////////////////////////////////////////
+instance Mil_119_Cassian_WHYSTR		(C_INFO)
 {
-	npc = mil_119_cassian;
-	condition = mil_119_cassian_whystr_condition;
-	information = mil_119_cassian_whystr_info;
-	important = FALSE;
-	permanent = FALSE;
-	description = "Wofür benötige ich Stärke?";
+	npc		 = 	Mil_119_Cassian;
+	condition	 = 	Mil_119_Cassian_WHYSTR_Condition;
+	information	 = 	Mil_119_Cassian_WHYSTR_Info;
+	important	 = 	FALSE;
+	permanent	 = 	FALSE;
+
+	description	 = 	"Wofür benötige ich Stärke?";
 };
 
-
-func int mil_119_cassian_whystr_condition()
+func int Mil_119_Cassian_WHYSTR_Condition ()
 {
-	if(Npc_KnowsInfo(hero,mil_119_cassian_begintrain))
+	if	Npc_KnowsInfo(hero, Mil_119_Cassian_BEGINTRAIN)
 	{
 		return TRUE;
 	};
 };
 
-func void mil_119_cassian_whystr_info()
+func void Mil_119_Cassian_WHYSTR_Info ()
 {
-	AI_Output(hero,self,"Mil_119_WHYSTR_15_01");	//Wofür benötige ich Stärke?
-	AI_Output(self,hero,"Mil_119_WHYSTR_08_02");	//Je stärker du bist, desto tiefere Wunden verursachst du mit Nahkampfwaffen.
-	AI_Output(self,hero,"Mil_119_WHYSTR_08_03");	//Wenn dir erst einmal ein gut gerüsteter Ork gegenübersteht, dann wirst du ihn nur mit grosser Stärke verwunden können.
-	AI_Output(self,hero,"Mil_119_WHYSTR_08_04");	//Dazu kommt, dass vor allem die grösseren Nahkampfwaffen so schwer sind, dass du sie nur mit hoher Stärke schwingen kannst.
+	AI_Output			(hero, self, "Mil_119_WHYSTR_15_01"); //Wofür benötige ich Stärke?
+	AI_Output			(self, hero, "Mil_119_WHYSTR_08_02"); //Je stärker du bist, desto tiefere Wunden verursachst du mit Nahkampfwaffen.
+	AI_Output			(self, hero, "Mil_119_WHYSTR_08_03"); //Wenn dir erst einmal ein gut gerüsteter Ork gegenübersteht, dann wirst du ihn nur mit grosser Stärke verwunden können.
+	AI_Output			(self, hero, "Mil_119_WHYSTR_08_04"); //Dazu kommt, dass vor allem die grösseren Nahkampfwaffen so schwer sind, dass du sie nur mit hoher Stärke schwingen kannst.
 };
 
-
-instance MIL_119_CASSIAN_WHY1HAND(C_Info)
+///////////////////////////////////////////////////////////////////////
+//	Info WHY1HAND
+///////////////////////////////////////////////////////////////////////
+instance Mil_119_Cassian_WHY1HAND		(C_INFO)
 {
-	npc = mil_119_cassian;
-	condition = mil_119_cassian_why1hand_condition;
-	information = mil_119_cassian_why1hand_info;
-	important = FALSE;
-	permanent = FALSE;
-	description = "Was nützt mir Talent im Umgang mit Einhändern?";
+	npc		 = 	Mil_119_Cassian;
+	condition	 = 	Mil_119_Cassian_WHY1HAND_Condition;
+	information	 = 	Mil_119_Cassian_WHY1HAND_Info;
+	important	 = 	FALSE;
+	permanent	 = 	FALSE;
+
+	description	 = 	"Was nützt mir Talent im Umgang mit Einhändern?";
 };
 
-
-func int mil_119_cassian_why1hand_condition()
+func int Mil_119_Cassian_WHY1HAND_Condition ()
 {
-	if(Npc_KnowsInfo(hero,mil_119_cassian_begintrain))
+	if	Npc_KnowsInfo(hero, Mil_119_Cassian_BEGINTRAIN)
 	{
 		return TRUE;
 	};
 };
 
-func void mil_119_cassian_why1hand_info()
+func void Mil_119_Cassian_WHY1HAND_Info ()
 {
-	AI_Output(hero,self,"Mil_119_WHY1HAND_15_01");	//Was nützt mir Talent im Umgang mit Einhändern?
-	AI_Output(self,hero,"Mil_119_WHY1HAND_08_02");	//Je mehr Talent du erlernt hast, desto schneller kannst du mit solchen Waffen zuschlagen.
-	AI_Output(self,hero,"Mil_119_WHY1HAND_08_03");	//Talentierte Kämfper können ihre Gegner mit blitzschnellen Schlagkombinationen derart bedrängen, dass diese nicht mehr mal zum Parrieren geschweige denn zum Angreifen kommen.
-	AI_Output(self,hero,"Mil_119_WHY1HAND_08_04");	//Ausserdem wissen nur talentierte Kämpfer, wie sie ungeschütze stellen des Gegners treffen, und so manchmal viel tiefere Wunden reissen als sonst.
+	AI_Output			(hero, self, "Mil_119_WHY1HAND_15_01"); //Was nützt mir Talent im Umgang mit Einhändern?
+	AI_Output			(self, hero, "Mil_119_WHY1HAND_08_02"); //Je mehr Talent du erlernt hast, desto schneller kannst du mit solchen Waffen zuschlagen.
+	AI_Output			(self, hero, "Mil_119_WHY1HAND_08_03"); //Talentierte Kämfper können ihre Gegner mit blitzschnellen Schlagkombinationen derart bedrängen, dass diese nicht mehr mal zum Parrieren geschweige denn zum Angreifen kommen.
+	AI_Output			(self, hero, "Mil_119_WHY1HAND_08_04"); //Ausserdem wissen nur talentierte Kämpfer, wie sie ungeschütze stellen des Gegners treffen, und so manchmal viel tiefere Wunden reissen als sonst.
 };
 
 
-instance MIL_119_CASSIAN_TEACH(C_Info)
+
+///////////////////////////////////////////////////////////////////////
+//	Info TEACH
+///////////////////////////////////////////////////////////////////////
+INSTANCE Mil_119_Cassian_Teach(C_INFO)
 {
-	npc = mil_119_cassian;
-	nr = 10;
-	condition = mil_119_cassian_teach_condition;
-	information = mil_119_cassian_teach_info;
-	permanent = 1;
+	npc			= Mil_119_Cassian;
+	nr			= 10;
+	condition	= Mil_119_Cassian_Teach_Condition;
+	information	= Mil_119_Cassian_Teach_Info;
+	permanent	= 1;
 	description = "Ich will stärker werden";
 };
 
-
-func int mil_119_cassian_teach_condition()
+FUNC INT Mil_119_Cassian_Teach_Condition()
 {
-	if(Npc_KnowsInfo(other,mil_119_cassian_begintrain))
+	if Npc_KnowsInfo (other,Mil_119_Cassian_BEGINTRAIN)
+	{
+		return TRUE;
+	};
+};
+FUNC VOID Mil_119_Cassian_Teach_Info()
+{
+	AI_Output(other,self,"Mil_119_Cassian_Teach_15_01"); //Ich will stärker werden.
+
+	Info_ClearChoices	(Mil_119_Cassian_Teach);
+	Info_AddChoice		(Mil_119_Cassian_Teach,DIALOG_BACK									,Mil_119_Cassian_Teach_BACK);
+	Info_AddChoice		(Mil_119_Cassian_Teach,B_BuildLearnString(NAME_LearnStrength_5,5*LPCOST_ATTRIBUTE_STRENGTH,0)	,Mil_119_Cassian_Teach_STR_5);
+	Info_AddChoice		(Mil_119_Cassian_Teach,B_BuildLearnString(NAME_LearnStrength_1,LPCOST_ATTRIBUTE_STRENGTH,0)		,Mil_119_Cassian_Teach_STR_1);
+
+};
+func void Mil_119_Cassian_Teach_BACK()
+{
+	Info_ClearChoices	(Mil_119_Cassian_Teach);
+};
+
+func void Mil_119_Cassian_Teach_STR_1()
+{
+	B_BuyAttributePoints(other, ATR_STRENGTH, LPCOST_ATTRIBUTE_STRENGTH);
+	Info_ClearChoices	(Mil_119_Cassian_Teach);
+	Info_AddChoice		(Mil_119_Cassian_Teach,DIALOG_BACK									,Mil_119_Cassian_Teach_BACK);
+	Info_AddChoice		(Mil_119_Cassian_Teach,B_BuildLearnString(NAME_LearnStrength_5,5*LPCOST_ATTRIBUTE_STRENGTH,0)		,Mil_119_Cassian_Teach_STR_5);
+	Info_AddChoice		(Mil_119_Cassian_Teach,B_BuildLearnString(NAME_LearnStrength_1,LPCOST_ATTRIBUTE_STRENGTH,0)		,Mil_119_Cassian_Teach_STR_1);
+
+};
+
+func void Mil_119_Cassian_Teach_STR_5()
+{
+	B_BuyAttributePoints(other, ATR_STRENGTH, 5*LPCOST_ATTRIBUTE_STRENGTH);
+	Info_ClearChoices	(Mil_119_Cassian_Teach);
+	Info_AddChoice		(Mil_119_Cassian_Teach,DIALOG_BACK									,Mil_119_Cassian_Teach_BACK);
+	Info_AddChoice		(Mil_119_Cassian_Teach,B_BuildLearnString(NAME_LearnStrength_5,5*LPCOST_ATTRIBUTE_STRENGTH,0)		,Mil_119_Cassian_Teach_STR_5);
+	Info_AddChoice		(Mil_119_Cassian_Teach,B_BuildLearnString(NAME_LearnStrength_1,LPCOST_ATTRIBUTE_STRENGTH,0)		,Mil_119_Cassian_Teach_STR_1);
+
+};
+
+///////////////////////////////////////////////////////////////////////
+//	Info TRAIN
+///////////////////////////////////////////////////////////////////////
+INSTANCE Mil_119_Cassian_TRAIN (C_INFO)
+{
+	npc			= Mil_119_Cassian;
+	nr			= 10;
+	condition	= Mil_119_Cassian_TRAIN_Condition;
+	information	= Mil_119_Cassian_TRAIN_Info;
+	permanent	= TRUE;
+	description = B_BuildLearnString(NAME_Learn1h_1, LPCOST_TALENT_1H_1,0);
+};
+
+FUNC INT Mil_119_Cassian_TRAIN_Condition()
+{
+	if	Npc_KnowsInfo(hero,Mil_119_Cassian_BEGINTRAIN)
+	&&	(Npc_GetTalentSkill(hero, NPC_TALENT_1H) == 0)
 	{
 		return TRUE;
 	};
 };
 
-func void mil_119_cassian_teach_info()
+FUNC VOID Mil_119_Cassian_TRAIN_Info()
 {
-	AI_Output(other,self,"Mil_119_Cassian_Teach_15_01");	//Ich will stärker werden.
-	Info_ClearChoices(mil_119_cassian_teach);
-	Info_AddChoice(mil_119_cassian_teach,DIALOG_BACK,mil_119_cassian_teach_back);
-	Info_AddChoice(mil_119_cassian_teach,B_BuildLearnString(NAME_LearnStrength_5,5 * LPCOST_ATTRIBUTE_STRENGTH,0),mil_119_cassian_teach_str_5);
-	Info_AddChoice(mil_119_cassian_teach,B_BuildLearnString(NAME_LearnStrength_1,LPCOST_ATTRIBUTE_STRENGTH,0),mil_119_cassian_teach_str_1);
+
+	AI_Output				(other,self,"Mil_119_Cassian_TRAIN_15_01"); //Zeig mir den Kampf mit einhändigen Waffen.
+
+	if (B_GiveSkill(other, NPC_TALENT_1H, 1, LPCOST_TALENT_1H_1))
+	{
+		AI_Output			(self,other,"Mil_119_Cassian_TRAIN_08_02"); //Zunächst halte die Waffe mit einer Hand. Dadurch kannst du schneller zuschlagen.
+		AI_Output			(self,other,"Mil_119_Cassian_TRAIN_08_03"); //Mit weiten Seitenhieben kannst du dir gefährliche Gegner vom Hals halten.
+		AI_Output			(self,other,"Mil_119_Cassian_TRAIN_08_04"); //Und mit einer Kombination von Schlägen kannst du gezielte Attacken durchführen.
+		AI_Output			(self,other,"Mil_119_Cassian_TRAIN_08_05"); //Das wichtigste ist, das du Kampferfahrung sammelst. Da habe ich auch direkt die erste Gelegenheit für dich.
+		AI_Output			(other,self,"Mil_119_Cassian_TRAIN_15_06"); //Lass hören.
+		AI_Output			(self,other,"Mil_119_Cassian_TRAIN_08_07"); //Du mußt wissen, das es hier im Lager einige Herumtreiber gibt. Faule Hunde, die sich einen Dreck um die Gemeinschaft des Lagers scheren.
+		AI_Output			(self,other,"Mil_119_Cassian_TRAIN_08_08"); //Huldrych ist einer von ihnen. Er wurde beobachtet, wie er sich an den Vorräten des Händlers Agon bedient hat.
+		AI_Output			(other,self,"Mil_119_Cassian_TRAIN_15_09"); //Und meine Aufgabe ist ...
+		AI_Output			(self,other,"Mil_119_Cassian_TRAIN_08_10"); //Deine Aufgabe ist es, Huldrych das gestohlene Zeug wieder abzunehmen. Verpass ihm eine Lektion. Aber LASS IHM AM LEBEN!
+
+		Log_CreateTopic		(CH1_Train1h, LOG_MISSION);
+		Log_SetTopicStatus	(CH1_Train1h,LOG_RUNNING);
+		B_LogEntry			(CH1_Train1h,"Huldrych hat den Händler Agon bestohlen. Cassian hat mich nun beauftragt, zum einen Huldrych eine Lektion zu erteilen und zum anderen Agon sein Eigentum wiederzubringen. Dabei wäre es unklug, Huldrych zu töten!");
+
+		Cassian_BeatHudrych = LOG_RUNNING;
+
+		// Diebesgut Huldrych in die Tasche stecken
+		var C_NPC Huldrych;
+		Huldrych = Hlp_GetNpc (THF_401_Huldrych);
+		CreateInvItems (Huldrych,ItMi_Silver,100);
+		Huldrych.guild  = GIL_NONE;
+
+		AI_StopProcessInfos	( self );
+	};
+
+
 };
 
-func void mil_119_cassian_teach_back()
+///////////////////////////////////////////////////////////////////////
+//	Info WHILEHULDRYCH
+///////////////////////////////////////////////////////////////////////
+instance Mil_119_Cassian_WHILEHULDRYCH		(C_INFO)
 {
-	Info_ClearChoices(mil_119_cassian_teach);
+	npc		 = 	Mil_119_Cassian;
+	condition	 = 	Mil_119_Cassian_WHILEHULDRYCH_Condition;
+	information	 = 	Mil_119_Cassian_WHILEHULDRYCH_Info;
+	important	 = 	TRUE;
+	permanent	 = 	TRUE;
 };
 
-func void mil_119_cassian_teach_str_1()
+func int Mil_119_Cassian_WHILEHULDRYCH_Condition ()
 {
-	B_BuyAttributePoints(other,ATR_STRENGTH,LPCOST_ATTRIBUTE_STRENGTH);
-	Info_ClearChoices(mil_119_cassian_teach);
-	Info_AddChoice(mil_119_cassian_teach,DIALOG_BACK,mil_119_cassian_teach_back);
-	Info_AddChoice(mil_119_cassian_teach,B_BuildLearnString(NAME_LearnStrength_5,5 * LPCOST_ATTRIBUTE_STRENGTH,0),mil_119_cassian_teach_str_5);
-	Info_AddChoice(mil_119_cassian_teach,B_BuildLearnString(NAME_LearnStrength_1,LPCOST_ATTRIBUTE_STRENGTH,0),mil_119_cassian_teach_str_1);
+	if Cassian_BeatHudrych == LOG_RUNNING
+	&&  C_NPCisinvincible(hero)
+	&& !Npc_KnowsInfo (hero,WRK_225_Agon_STOLEN)
+	{
+		return TRUE;
+	};
+};
+func void Mil_119_Cassian_WHILEHULDRYCH_Info ()
+{
+	AI_Output			(self, hero, "Mil_119_Cassian_WHILEHULDRYCH_08_01"); //Vielleicht solltest du zuerst mit Agon sprechen, bevor du zu Huldrych gehst.
+
+	B_LogEntry (CH1_Train1h,"Vielleicht ist es besser, erst mit Agon zu reden, bevor ich zu Huldrych gehe, um einen besseren Überblick der Situation zu bekommen.");
+	Info_ClearChoices (Mil_119_Cassian_WHILEHULDRYCH);
 };
 
-func void mil_119_cassian_teach_str_5()
+///////////////////////////////////////////////////////////////////////
+//	Info FIRSTMISSION
+///////////////////////////////////////////////////////////////////////
+instance  Mil_119_Cassian_FIRSTMISSION (C_INFO)
 {
-	B_BuyAttributePoints(other,ATR_STRENGTH,5 * LPCOST_ATTRIBUTE_STRENGTH);
-	Info_ClearChoices(mil_119_cassian_teach);
-	Info_AddChoice(mil_119_cassian_teach,DIALOG_BACK,mil_119_cassian_teach_back);
-	Info_AddChoice(mil_119_cassian_teach,B_BuildLearnString(NAME_LearnStrength_5,5 * LPCOST_ATTRIBUTE_STRENGTH,0),mil_119_cassian_teach_str_5);
-	Info_AddChoice(mil_119_cassian_teach,B_BuildLearnString(NAME_LearnStrength_1,LPCOST_ATTRIBUTE_STRENGTH,0),mil_119_cassian_teach_str_1);
+	npc				= Mil_119_Cassian;
+	condition		= Mil_119_Cassian_FIRSTMISSION_Condition;
+	information		= Mil_119_Cassian_FIRSTMISSION_Info;
+	important		= 0;
+	permanent		= 0;
+	description		= "Huldrych hat seine Lektion erhalten";
 };
 
-
-instance MIL_119_CASSIAN_TRAIN(C_Info)
+FUNC int Mil_119_Cassian_FIRSTMISSION_Condition()
 {
-	npc = mil_119_cassian;
-	nr = 10;
-	condition = mil_119_cassian_train_condition;
-	information = mil_119_cassian_train_info;
-	permanent = TRUE;
-	description = B_BuildLearnString(NAME_Learn1h_1,LPCOST_TALENT_1H_1,0);
+	var C_NPC Huldrych;
+	Huldrych = Hlp_GetNpc (THF_401_Huldrych);
+
+	if (Huldrych.aivar[AIV_WASDEFEATEDBYSC] == TRUE)
+	&& Cassian_BeatHudrych == LOG_RUNNING
+	&& !Npc_IsDead (Huldrych)
+	{
+		return TRUE;
+	};
+};
+FUNC void  Mil_119_Cassian_FIRSTMISSION_Info()
+{
+	AI_Output			(other, self,"Mil_119_Cassian_FIRSTMISSION_Info_15_01"); //Huldrych hat seine Lektion erhalten
+	AI_Output			(self, other,"Mil_119_Cassian_FIRSTMISSION_Info_08_02"); //Saubere Arbeit. Hoffentlich lernt er daraus.
+
+	var C_NPC Huldrych;
+	Huldrych = Hlp_GetNpc (THF_401_Huldrych);
+
+	Cassian_BeatHudrych = LOG_SUCCESS;
+	Huldrych.guild  = GIL_THIEF;
+
+	B_GiveXP			(XP_HuldrychLektion);
+
+	Log_SetTopicStatus	(CH1_Train1h,LOG_SUCCESS);
+	B_LogEntry			(CH1_Train1h,"Ich habe die Aufgabe zu Cassian's Zufriedenheit erledigt. Huldrych hat seine Lektion erhalten.");
+
 };
 
-
-func int mil_119_cassian_train_condition()
+///////////////////////////////////////////////////////////////////////
+//	Info HULDRYCHDEAD
+///////////////////////////////////////////////////////////////////////
+instance  Mil_119_Cassian_HULDRYCHDEAD (C_INFO)
 {
-	if(Npc_KnowsInfo(hero,mil_119_cassian_begintrain) && (Npc_GetTalentSkill(hero,NPC_TALENT_1H) == 0))
+	npc				= Mil_119_Cassian;
+	condition		= Mil_119_Cassian_HULDRYCHDEAD_Condition;
+	information		= Mil_119_Cassian_HULDRYCHDEAD_Info;
+	important		= 0;
+	permanent		= 0;
+	description		= "Huldrych hat...äh seine Lektion endgültig verstanden";
+};
+
+FUNC int Mil_119_Cassian_HULDRYCHDEAD_Condition()
+{
+	var C_NPC Huldrych;
+	Huldrych = Hlp_GetNpc (THF_401_Huldrych);
+
+	if Npc_IsDead (Huldrych)
+	&& Cassian_BeatHudrych == LOG_RUNNING
+	{
+		return TRUE;
+	};
+};
+FUNC void  Mil_119_Cassian_HULDRYCHDEAD_Info()
+{
+	AI_Output			(other, self,"Mil_119_Cassian_HULDRYCHDEAD_Info_15_01"); //Huldrych hat...äh seine Lektion endgültig verstanden.
+	AI_Output			(self, other,"Mil_119_Cassian_HULDRYCHDEAD_Info_08_02"); //Du hast ihn umgebracht. Hatte ich dir nicht gesagt, du sollst ihn nicht umbringen?
+	AI_Output			(self, other,"Mil_119_Cassian_HULDRYCHDEAD_Info_08_03"); //Das oberste Gesetz hier im Lager lautete: KEIN MORD! Ein Mord ist ein Grund jemanden aus dem Lager zu verweisen!
+	AI_Output			(self, other,"Mil_119_Cassian_HULDRYCHDEAD_Info_08_04"); //Wenn du noch einmal jemanden tötest, dann kann dir keiner helfen. Nicht mal Diego, Lester oder ich. Bei aller Freundschaft nicht.
+
+	Cassian_BeatHudrych = LOG_FAILED;
+	Log_SetTopicStatus (CH1_Train1h, LOG_FAILED);
+	B_LogEntry (CH1_Train1h,"Es wäre besser gewesen, ich hätte Huldrych nicht umgebracht. In Zukunft sollte ich vorsichtig sein, Mord wird von allen sehr ernst genommen");
+};
+
+///////////////////////////////////////////////////////////////////////
+//	Info AGONSSILVER
+///////////////////////////////////////////////////////////////////////
+instance  Mil_119_Cassian_AGONSSILVER (C_INFO)
+{
+	npc				= Mil_119_Cassian;
+	condition		= Mil_119_Cassian_AGONSSILVER_Condition;
+	information		= Mil_119_Cassian_AGONSSILVER_Info;
+	important		= 0;
+	permanent		= 0;
+	description		= "Agon hat sein Silber wieder";
+};
+
+FUNC int Mil_119_Cassian_AGONSSILVER_Condition()
+{
+	if Npc_KnowsInfo (hero,WRK_225_Agon_100)
+	{
+		return TRUE;
+	};
+};
+FUNC void  Mil_119_Cassian_AGONSSILVER_Info()
+{
+	AI_Output			(other, self,"Mil_119_Cassian_AGONSSILVER_Info_15_01"); //Agon hat sein Silber wieder.
+	AI_Output			(self, other,"Mil_119_Cassian_AGONSSILVER_Info_08_02"); //Gut gemacht. Da wird der knausrige Kerl sich aber freuen.
+	B_GiveXP			(XP_AgonSilver);
+};
+
+///////////////////////////////////////////////////////////////////////
+//	Info HULDRYCHDEAL
+///////////////////////////////////////////////////////////////////////
+instance Mil_119_Cassian_HULDRYCHDEAL		(C_INFO)
+{
+	npc		 = 	Mil_119_Cassian;
+	nr		 = 	15;
+	condition	 = 	Mil_119_Cassian_HULDRYCHDEAL_Condition;
+	information	 = 	Mil_119_Cassian_HULDRYCHDEAL_Info;
+	important	 = 	FALSE;
+	permanent	 = 	FALSE;
+
+	description	 = 	"Huldrych hat bekommen, was er verdient!";
+};
+
+func int Mil_119_Cassian_HULDRYCHDEAL_Condition ()
+{
+	var C_NPC Huldrych;
+	Huldrych = Hlp_GetNpc (THF_401_Huldrych);
+
+	if	!Huldrych.aivar[AIV_WASDEFEATEDBYSC]
+	&&	(Cassian_BeatHudrych == LOG_RUNNING)
+	&&	!Npc_IsDead (Huldrych)
+	&&	Huldrych_Away
 	{
 		return TRUE;
 	};
 };
 
-func void mil_119_cassian_train_info()
+func void Mil_119_Cassian_HULDRYCHDEAL_Info ()
 {
-	var C_Npc huldrych;
-	AI_Output(other,self,"Mil_119_Cassian_TRAIN_15_01");	//Zeig mir den Kampf mit einhändigen Waffen.
-	if(B_GiveSkill(other,NPC_TALENT_1H,1,LPCOST_TALENT_1H_1))
+	AI_Output			(hero, self, "Mil_119_Cassian_HULDRYCHDEAL_15_01"); //Huldrych hat bekommen, was er verdient!
+	AI_Output			(self, hero, "Mil_119_Cassian_HULDRYCHDEAL_08_02"); //Ich hoffe du hast ihn nicht zu hart rangenommen.
+	AI_Output			(hero, self, "Mil_119_Cassian_HULDRYCHDEAL_15_03"); //Er hat es verstanden.
+	AI_Output			(self, hero, "Mil_119_Cassian_HULDRYCHDEAL_08_04"); //Und du weißt jetzt auch, wie die Dinge hier laufen.
+
+	var C_NPC Huldrych;
+	Huldrych = Hlp_GetNpc (THF_401_Huldrych);
+
+	Cassian_BeatHudrych = LOG_SUCCESS;
+	Huldrych.guild  = GIL_THIEF;
+
+	B_GiveXP			(XP_HuldrychDeal);
+
+	Log_SetTopicStatus	(CH1_Train1h,LOG_SUCCESS);
+	B_LogEntry			(CH1_Train1h,"Ich habe ein gutes Geschäft mit Huldrych gemacht. Und niemand hat etwas davon bemerkt. Vielleicht wird mir das noch einmal nützlich sein.");
+};
+
+///////////////////////////////////////////////////////////////////////
+//	Info LEARN1HST2
+///////////////////////////////////////////////////////////////////////
+instance Mil_119_Cassian_LEARN1HST2		(C_INFO)
+{
+	npc			 = 	Mil_119_Cassian;
+	condition	 = 	Mil_119_Cassian_LEARN1HST2_Condition;
+	information	 = 	Mil_119_Cassian_LEARN1HST2_Info;
+	important	 = 	FALSE;
+	permanent	 = 	TRUE;
+
+	description	 = 	B_BuildLearnString(NAME_Learn1h_2, LPCOST_TALENT_1H_2,0);
+};
+
+func int Mil_119_Cassian_LEARN1HST2_Condition ()
+{
+	if	((Cassian_BeatHudrych == LOG_SUCCESS)	|| (Cassian_BeatHudrych == LOG_FAILED))
+	&&	(Npc_GetTalentSkill(hero, NPC_TALENT_1H) == 1)
 	{
-		AI_Output(self,other,"Mil_119_Cassian_TRAIN_08_02");	//Zunächst halte die Waffe mit einer Hand. Dadurch kannst du schneller zuschlagen.
-		AI_Output(self,other,"Mil_119_Cassian_TRAIN_08_03");	//Mit weiten Seitenhieben kannst du dir gefährliche Gegner vom Hals halten.
-		AI_Output(self,other,"Mil_119_Cassian_TRAIN_08_04");	//Und mit einer Kombination von Schlägen kannst du gezielte Attacken durchführen.
-		AI_Output(self,other,"Mil_119_Cassian_TRAIN_08_05");	//Das wichtigste ist, das du Kampferfahrung sammelst. Da habe ich auch direkt die erste Gelegenheit für dich.
-		AI_Output(other,self,"Mil_119_Cassian_TRAIN_15_06");	//Lass hören.
-		AI_Output(self,other,"Mil_119_Cassian_TRAIN_08_07");	//Du mußt wissen, das es hier im Lager einige Herumtreiber gibt. Faule Hunde, die sich einen Dreck um die Gemeinschaft des Lagers scheren.
-		AI_Output(self,other,"Mil_119_Cassian_TRAIN_08_08");	//Huldrych ist einer von ihnen. Er wurde beobachtet, wie er sich an den Vorräten des Händlers Agon bedient hat.
-		AI_Output(other,self,"Mil_119_Cassian_TRAIN_15_09");	//Und meine Aufgabe ist ...
-		AI_Output(self,other,"Mil_119_Cassian_TRAIN_08_10");	//Deine Aufgabe ist es, Huldrych das gestohlene Zeug wieder abzunehmen. Verpass ihm eine Lektion. Aber LASS IHM AM LEBEN!
-		Log_CreateTopic(CH1_TRAIN1H,LOG_MISSION);
-		Log_SetTopicStatus(CH1_TRAIN1H,LOG_RUNNING);
-		B_LogEntry(CH1_TRAIN1H,"Huldrych hat den Händler Agon bestohlen. Cassian hat mich nun beauftragt, zum einen Huldrych eine Lektion zu erteilen und zum anderen Agon sein Eigentum wiederzubringen. Dabei wäre es unklug, Huldrych zu töten!");
-		CASSIAN_BEATHUDRYCH = LOG_RUNNING;
-		huldrych = Hlp_GetNpc(thf_401_huldrych);
-		CreateInvItems(huldrych,itmi_silver,100);
-		huldrych.guild = GIL_None;
-		AI_StopProcessInfos(self);
+		return TRUE;
+	};
+};
+func void Mil_119_Cassian_LEARN1HST2_Info ()
+{
+	AI_Output			(hero, self, "Mil_119_Cassian_LEARN1HST2_15_01"); //Zeig mir mehr über den Kampf mit einhändigen Waffen.
+
+	if (B_GiveSkill(other, NPC_TALENT_1H, 2, LPCOST_TALENT_1H_2))
+	{
+		AI_Output			(self, hero, "Mil_119_Cassian_LEARN1HST2_08_02"); //Durch die Meisterschaft des einhändigen Kampfes schlägst du schneller und härter zu.
+		AI_Output			(self, hero, "Mil_119_Cassian_LEARN1HST2_08_03"); //Deine Angriffskombinationen werden geschikter und präziser.
+		AI_Output			(self, hero, "Mil_119_Cassian_LEARN1HST2_08_04"); //Und die Chance einen kritischen Treffer zu landen wird größer.
+		AI_Output			(self, hero, "Mil_119_Cassian_LEARN1HST2_08_05"); //Aber es ist der Verstand, der einen guten von einem schlechten Kämpder unterscheidet.
+		AI_Output			(self, hero, "Mil_119_Cassian_LEARN1HST2_08_06"); //Erkenne die Situation, bewahre einen kühlen Kopf und handel umsichtig.
+		AI_Output			(self, hero, "Mil_119_Cassian_LEARN1HST2_08_07"); //Denn nur wer die Situation versteht, kann sie lenken und kontrollieren.
+
+		Mil_119_Cassian_LEARN1HST2.permanent = FALSE;
+		Cassian_Info = TRUE;
 	};
 };
 
 
-instance MIL_119_CASSIAN_WHILEHULDRYCH(C_Info)
+///////////////////////////////////////////////////////////////////////
+//	Info JOB
+///////////////////////////////////////////////////////////////////////
+instance Mil_119_Cassian_JOB		(C_INFO)
 {
-	npc = mil_119_cassian;
-	condition = mil_119_cassian_whilehuldrych_condition;
-	information = mil_119_cassian_whilehuldrych_info;
-	important = TRUE;
-	permanent = TRUE;
+	npc		 	 = 	Mil_119_Cassian;
+	nr		 	 = 	33;
+	condition	 = 	Mil_119_Cassian_JOB_Condition;
+	information	 = 	Mil_119_Cassian_JOB_Info;
+	important	 = 	FALSE;
+	permanent	 = 	FALSE;
+
+	description	 = 	"Hast du noch eine Aufgabe für mich?";
 };
 
-
-func int mil_119_cassian_whilehuldrych_condition()
+func int Mil_119_Cassian_JOB_Condition ()
 {
-	if((CASSIAN_BEATHUDRYCH == LOG_RUNNING) && c_npcisinvincible(hero) && !Npc_KnowsInfo(hero,wrk_225_agon_stolen))
+	if	Cassian_Info
 	{
 		return TRUE;
 	};
 };
 
-func void mil_119_cassian_whilehuldrych_info()
+func void Mil_119_Cassian_JOB_Info ()
 {
-	AI_Output(self,hero,"Mil_119_Cassian_WHILEHULDRYCH_08_01");	//Vielleicht solltest du zuerst mit Agon sprechen, bevor du zu Huldrych gehst.
-	B_LogEntry(CH1_TRAIN1H,"Vielleicht ist es besser, erst mit Agon zu reden, bevor ich zu Huldrych gehe, um einen besseren Überblick der Situation zu bekommen.");
-	Info_ClearChoices(mil_119_cassian_whilehuldrych);
+	AI_Output			(hero, self, "Mil_119_JOB_15_01"); //Hast du noch eine Aufgabe für mich?
+	AI_Output			(self, hero, "Mil_119_JOB_08_02"); //Ich nicht, aber Agon hat braucht einen Kämpfer, der ihn beschützt.
+	AI_Output			(self, hero, "Mil_119_JOB_08_03"); //Wir versuchen das Gebiet um das Lager herum besetzt zu halten, aber es gibt immer wieder Monster die verdammt nah ans Lager heran kommen.
+	AI_Output			(self, hero, "Mil_119_JOB_08_04"); //
 };
 
-
-instance MIL_119_CASSIAN_FIRSTMISSION(C_Info)
+///////////////////////////////////////////////////////////////////////
+//	Info BRUTUS
+///////////////////////////////////////////////////////////////////////
+instance Mil_119_Cassian_BRUTUS		(C_INFO)
 {
-	npc = mil_119_cassian;
-	condition = mil_119_cassian_firstmission_condition;
-	information = mil_119_cassian_firstmission_info;
-	important = 0;
-	permanent = 0;
-	description = "Huldrych hat seine Lektion erhalten";
+	npc		 = 	Mil_119_Cassian;
+	condition	 = 	Mil_119_Cassian_BRUTUS_Condition;
+	information	 = 	Mil_119_Cassian_BRUTUS_Info;
+	important	 = 	FALSE;
+	permanent	 = 	FALSE;
+
+	description	 = 	"Brutus lässt dir was ausrichten...";
 };
 
-
-func int mil_119_cassian_firstmission_condition()
+func int Mil_119_Cassian_BRUTUS_Condition ()
 {
-	var C_Npc huldrych;
-	huldrych = Hlp_GetNpc(thf_401_huldrych);
-	if((huldrych.aivar[12] == TRUE) && (CASSIAN_BEATHUDRYCH == LOG_RUNNING) && !Npc_IsDead(huldrych))
+	if	Npc_KnowsInfo(hero, MIL_121_Brutus_CASSIAN)
 	{
 		return TRUE;
 	};
 };
 
-func void mil_119_cassian_firstmission_info()
+func void Mil_119_Cassian_BRUTUS_Info ()
 {
-	var C_Npc huldrych;
-	AI_Output(other,self,"Mil_119_Cassian_FIRSTMISSION_Info_15_01");	//Huldrych hat seine Lektion erhalten
-	AI_Output(self,other,"Mil_119_Cassian_FIRSTMISSION_Info_08_02");	//Saubere Arbeit. Hoffentlich lernt er daraus.
-	huldrych = Hlp_GetNpc(thf_401_huldrych);
-	CASSIAN_BEATHUDRYCH = LOG_SUCCESS;
-	huldrych.guild = GIL_THIEF;
-	B_GiveXP(XP_HULDRYCHLEKTION);
-	Log_SetTopicStatus(CH1_TRAIN1H,LOG_SUCCESS);
-	B_LogEntry(CH1_TRAIN1H,"Ich habe die Aufgabe zu Cassian's Zufriedenheit erledigt. Huldrych hat seine Lektion erhalten.");
+	AI_Output			(hero, self, "Mil_119_BRUTUS_15_01"); //Brutus lässt dir was ausrichten. Er fordert dich auf, gegen ihn in der Arena zu kämpfen.
+	AI_Output			(self, hero, "Mil_119_BRUTUS_08_02"); //Brutus sollte sich mehr um seine Pflichten als Leutnant der Miliz kümmern.
+	AI_Output			(self, hero, "Mil_119_BRUTUS_08_03"); //Er hängt den ganzen Tag nur vor der Arena herum und reisst grosse Sprüche.
+	AI_Output			(self, hero, "Mil_119_BRUTUS_08_04"); //Er sollte seine Kraft lieber für die Orks aufheben, oder sich um die Milizsoldaten kümmern.
+	AI_Output			(self, hero, "Mil_119_BRUTUS_08_05"); //Wenn er so weiter macht, wird ihn Berengar über kurz oder lang rausschmeissen.
 };
 
 
-instance MIL_119_CASSIAN_HULDRYCHDEAD(C_Info)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+
+
+instance  Mil_119_Cassian_JOIN (C_INFO)
 {
-	npc = mil_119_cassian;
-	condition = mil_119_cassian_huldrychdead_condition;
-	information = mil_119_cassian_huldrychdead_info;
-	important = 0;
-	permanent = 0;
-	description = "Huldrych hat...äh seine Lektion endgültig verstanden";
+	npc				= Mil_119_Cassian;
+	condition		= Mil_119_Cassian_JOIN_Condition;
+	information		= Mil_119_Cassian_JOIN_Info;
+	description		= "Ich will der Miliz beitreten";
+	permanent		= TRUE;
 };
 
-
-func int mil_119_cassian_huldrychdead_condition()
+FUNC int  Mil_119_Cassian_JOIN_Condition()
 {
-	var C_Npc huldrych;
-	huldrych = Hlp_GetNpc(thf_401_huldrych);
-	if(Npc_IsDead(huldrych) && (CASSIAN_BEATHUDRYCH == LOG_RUNNING))
+	if	(Npc_KnowsInfo (hero,Infos_Mil_4_JOIN))
+	||	(Npc_KnowsInfo (hero,Infos_Mil_6_JOIN))
+	||	(Npc_KnowsInfo (hero,Infos_Mil_7_JOIN))
+	||	(Npc_KnowsInfo (hero,Infos_Mil_9_JOIN))
+
+	{
+		return TRUE;
+	};
+
+};
+FUNC void  Mil_119_Cassian_JOIN_Info()
+{
+	AI_Output (other, self,"Mil_119_Cassian_JOIN_Info_15_01"); //Ich will der Miliz beitreten.
+
+	if (other.attribute [ATR_STRENGTH] >= 35)// Spieler erfüllt die Bedingung
+	&& (Npc_GetTalentSkill (other, NPC_TALENT_1H)>= 1)
+	{
+		AI_Output (self, other,"Mil_119_Cassian_JOIN_Info_00_02"); //Gut, deine Fähigkeiten sind ausreichend  für den Eintritt in die Miliz. Aber du musst noch eine Prüfung ablegen. Sag mir Bescheid, wenn du bereit bist.
+		Info_ClearChoices  (Mil_119_Cassian_JOIN);
+		// 1 und nicht True, weil die Variable noch weiter hochgezählt wird
+		Mil_119_Cassian_JOIN.permanent = FALSE;
+	}
+	else if (other.attribute [ATR_STRENGTH] < 35)// Spieler hat weder die erforderliche Stärke, noch das Talent
+	&& (Npc_GetTalentSkill (other, NPC_TALENT_1H)== 0)
+	{
+		AI_Output (self, other,"Mil_119_Cassian_JOIN_Info_00_03"); //Komm wieder, wenn du stärker geworden bist und ein Kampftalent beherrscht.
+	}
+	else if	(other.attribute [ATR_STRENGTH] < 35)// Spieler hat das Talent, aber nicht die Stärke
+	&& (Npc_GetTalentSkill (other, NPC_TALENT_1H)>= 1)
+	{
+		AI_Output (self, other,"Mil_119_Cassian_JOIN_Info_00_04"); //Du beherrscht den Umgang mit Waffen, aber du bist noch nicht stark genug.
+	}
+	else if (other.attribute [ATR_STRENGTH] >= 35)// Spieler hat die Stärke, aber nicht das Talent
+	&& (Npc_GetTalentSkill (other, NPC_TALENT_1H) < 1)
+	{
+		AI_Output (self, other,"Mil_119_Cassian_JOIN_Info_00_05"); //Du bist stark genug, aber du beherrscht noch kein Kampftalent.
+	};
+
+};
+
+instance  Mil_119_Cassian_GUARDTEST (C_INFO)
+{
+	npc				= Mil_119_Cassian;
+	condition		= Mil_119_Cassian_GUARDTEST_Condition;
+	information		= Mil_119_Cassian_GUARDTEST_Info;
+	description		= "Ich bin bereit für die Prüfung";
+};
+
+FUNC int  Mil_119_Cassian_GUARDTEST_Condition()
+{
+	if( Militia_FIRST == TRUE)
 	{
 		return TRUE;
 	};
 };
-
-func void mil_119_cassian_huldrychdead_info()
+FUNC void  Mil_119_Cassian_GUARDTEST_Info()
 {
-	AI_Output(other,self,"Mil_119_Cassian_HULDRYCHDEAD_Info_15_01");	//Huldrych hat...äh seine Lektion endgültig verstanden.
-	AI_Output(self,other,"Mil_119_Cassian_HULDRYCHDEAD_Info_08_02");	//Du hast ihn umgebracht. Hatte ich dir nicht gesagt, du sollst ihn nicht umbringen?
-	AI_Output(self,other,"Mil_119_Cassian_HULDRYCHDEAD_Info_08_03");	//Das oberste Gesetz hier im Lager lautete: KEIN MORD! Ein Mord ist ein Grund jemanden aus dem Lager zu verweisen!
-	AI_Output(self,other,"Mil_119_Cassian_HULDRYCHDEAD_Info_08_04");	//Wenn du noch einmal jemanden tötest, dann kann dir keiner helfen. Nicht mal Diego, Lester oder ich. Bei aller Freundschaft nicht.
-	CASSIAN_BEATHUDRYCH = LOG_FAILED;
-	Log_SetTopicStatus(CH1_TRAIN1H,LOG_FAILED);
-	B_LogEntry(CH1_TRAIN1H,"Es wäre besser gewesen, ich hätte Huldrych nicht umgebracht. In Zukunft sollte ich vorsichtig sein, Mord wird von allen sehr ernst genommen");
+	AI_Output (other, self,"Mil_119_Cassian_GUARDTEST_Info_15_01"); //Ich bin bereit für die Prüfung.
+	AI_Output (self, other,"Mil_119_Cassian_GUARDTEST_Info_00_02"); //Gut. Die Hauptaufgabe der Miliz besteht darin das Lager zu bewachen.
+	AI_Output (self, other,"Mil_119_Cassian_GUARDTEST_Info_00_03"); //Du wirst mit Soldat Osbert eine Nacht Wache am hinteren Tor schieben.
+	AI_Output (self, other,"Mil_119_Cassian_GUARDTEST_Info_00_04"); //Melde dich bei ihm. Er wird dich über alles weitere informieren.
+
 };
 
-
-instance MIL_119_CASSIAN_AGONSSILVER(C_Info)
+instance  Mil_119_Cassian_LASTTEST (C_INFO)
 {
-	npc = mil_119_cassian;
-	condition = mil_119_cassian_agonssilver_condition;
-	information = mil_119_cassian_agonssilver_info;
-	important = 0;
-	permanent = 0;
-	description = "Agon hat sein Silber wieder";
+	npc				= Mil_119_Cassian;
+	condition		= Mil_119_Cassian_LASTTEST_Condition;
+	information		= Mil_119_Cassian_LASTTEST_Info;
+	description		= "Ich habe Wache gehalten";
 };
 
-
-func int mil_119_cassian_agonssilver_condition()
+FUNC int  Mil_119_Cassian_LASTTEST_Condition()
 {
-	if(Npc_KnowsInfo(hero,wrk_225_agon_100))
-	{
-		return TRUE;
-	};
+	return TRUE;
+};
+FUNC void  Mil_119_Cassian_LASTTEST_Info()
+{
+	AI_Output (other, self,"Mil_119_Cassian_LASTTEST_Info_15_01"); //Ich habe Wache gehalten.
+	AI_Output (self, other,"Mil_119_Cassian_LASTTEST_Info_00_02"); //Gut. Osbert hat mir ausrichten lassen, das du deine Sache ganz gut gemacht hast.
+	AI_Output (self, other,"Mil_119_Cassian_LASTTEST_Info_00_03"); //Damit kommen wir dann zu der zweiten Prüfung.(Nachdrücklich) Ein Kampf.
+	AI_Output (self, other,"Mil_119_Cassian_LASTTEST_Info_00_04"); //Gegen wen?
+	AI_Output (self, other,"Mil_119_Cassian_LASTTEST_Info_00_05"); //Du wirst in der Arena gegen Wylfern antreten. Sprich mit ihm, wenn du soweit bist.
+
 };
 
-func void mil_119_cassian_agonssilver_info()
-{
-	AI_Output(other,self,"Mil_119_Cassian_AGONSSILVER_Info_15_01");	//Agon hat sein Silber wieder.
-	AI_Output(self,other,"Mil_119_Cassian_AGONSSILVER_Info_08_02");	//Gut gemacht. Da wird der knausrige Kerl sich aber freuen.
-	B_GiveXP(XP_AGONSILVER);
-};
+*/
 
 
-instance MIL_119_CASSIAN_HULDRYCHDEAL(C_Info)
-{
-	npc = mil_119_cassian;
-	nr = 15;
-	condition = mil_119_cassian_huldrychdeal_condition;
-	information = mil_119_cassian_huldrychdeal_info;
-	important = FALSE;
-	permanent = FALSE;
-	description = "Huldrych hat bekommen, was er verdient!";
-};
 
 
-func int mil_119_cassian_huldrychdeal_condition()
-{
-	var C_Npc huldrych;
-	huldrych = Hlp_GetNpc(thf_401_huldrych);
-	if(!huldrych.aivar[12] && (CASSIAN_BEATHUDRYCH == LOG_RUNNING) && !Npc_IsDead(huldrych) && HULDRYCH_AWAY)
-	{
-		return TRUE;
-	};
-};
-
-func void mil_119_cassian_huldrychdeal_info()
-{
-	var C_Npc huldrych;
-	AI_Output(hero,self,"Mil_119_Cassian_HULDRYCHDEAL_15_01");	//Huldrych hat bekommen, was er verdient!
-	AI_Output(self,hero,"Mil_119_Cassian_HULDRYCHDEAL_08_02");	//Ich hoffe du hast ihn nicht zu hart rangenommen.
-	AI_Output(hero,self,"Mil_119_Cassian_HULDRYCHDEAL_15_03");	//Er hat es verstanden.
-	AI_Output(self,hero,"Mil_119_Cassian_HULDRYCHDEAL_08_04");	//Und du weißt jetzt auch, wie die Dinge hier laufen.
-	huldrych = Hlp_GetNpc(thf_401_huldrych);
-	CASSIAN_BEATHUDRYCH = LOG_SUCCESS;
-	huldrych.guild = GIL_THIEF;
-	B_GiveXP(XP_HULDRYCHDEAL);
-	Log_SetTopicStatus(CH1_TRAIN1H,LOG_SUCCESS);
-	B_LogEntry(CH1_TRAIN1H,"Ich habe ein gutes Geschäft mit Huldrych gemacht. Und niemand hat etwas davon bemerkt. Vielleicht wird mir das noch einmal nützlich sein.");
-};
 
 
-instance MIL_119_CASSIAN_LEARN1HST2(C_Info)
-{
-	npc = mil_119_cassian;
-	condition = mil_119_cassian_learn1hst2_condition;
-	information = mil_119_cassian_learn1hst2_info;
-	important = FALSE;
-	permanent = TRUE;
-	description = B_BuildLearnString(NAME_Learn1h_2,LPCOST_TALENT_1H_2,0);
-};
 
 
-func int mil_119_cassian_learn1hst2_condition()
-{
-	if(((CASSIAN_BEATHUDRYCH == LOG_SUCCESS) || (CASSIAN_BEATHUDRYCH == LOG_FAILED)) && (Npc_GetTalentSkill(hero,NPC_TALENT_1H) == 1))
-	{
-		return TRUE;
-	};
-};
-
-func void mil_119_cassian_learn1hst2_info()
-{
-	AI_Output(hero,self,"Mil_119_Cassian_LEARN1HST2_15_01");	//Zeig mir mehr über den Kampf mit einhändigen Waffen.
-	if(B_GiveSkill(other,NPC_TALENT_1H,2,LPCOST_TALENT_1H_2))
-	{
-		AI_Output(self,hero,"Mil_119_Cassian_LEARN1HST2_08_02");	//Durch die Meisterschaft des einhändigen Kampfes schlägst du schneller und härter zu.
-		AI_Output(self,hero,"Mil_119_Cassian_LEARN1HST2_08_03");	//Deine Angriffskombinationen werden geschikter und präziser.
-		AI_Output(self,hero,"Mil_119_Cassian_LEARN1HST2_08_04");	//Und die Chance einen kritischen Treffer zu landen wird größer.
-		AI_Output(self,hero,"Mil_119_Cassian_LEARN1HST2_08_05");	//Aber es ist der Verstand, der einen guten von einem schlechten Kämpder unterscheidet.
-		AI_Output(self,hero,"Mil_119_Cassian_LEARN1HST2_08_06");	//Erkenne die Situation, bewahre einen kühlen Kopf und handel umsichtig.
-		AI_Output(self,hero,"Mil_119_Cassian_LEARN1HST2_08_07");	//Denn nur wer die Situation versteht, kann sie lenken und kontrollieren.
-		mil_119_cassian_learn1hst2.permanent = FALSE;
-		CASSIAN_INFO = TRUE;
-	};
-};
 
 
-instance MIL_119_CASSIAN_JOB(C_Info)
-{
-	npc = mil_119_cassian;
-	nr = 33;
-	condition = mil_119_cassian_job_condition;
-	information = mil_119_cassian_job_info;
-	important = FALSE;
-	permanent = FALSE;
-	description = "Hast du noch eine Aufgabe für mich?";
-};
 
 
-func int mil_119_cassian_job_condition()
-{
-	if(CASSIAN_INFO)
-	{
-		return TRUE;
-	};
-};
-
-func void mil_119_cassian_job_info()
-{
-	AI_Output(hero,self,"Mil_119_JOB_15_01");	//Hast du noch eine Aufgabe für mich?
-	AI_Output(self,hero,"Mil_119_JOB_08_02");	//Ich nicht, aber Agon hat braucht einen Kämpfer, der ihn beschützt.
-	AI_Output(self,hero,"Mil_119_JOB_08_03");	//Wir versuchen das Gebiet um das Lager herum besetzt zu halten, aber es gibt immer wieder Monster die verdammt nah ans Lager heran kommen.
-	AI_Output(self,hero,"Mil_119_JOB_08_04");	//
-};
 
 
-instance MIL_119_CASSIAN_BRUTUS(C_Info)
-{
-	npc = mil_119_cassian;
-	condition = mil_119_cassian_brutus_condition;
-	information = mil_119_cassian_brutus_info;
-	important = FALSE;
-	permanent = FALSE;
-	description = "Brutus lässt dir was ausrichten...";
-};
 
-
-func int mil_119_cassian_brutus_condition()
-{
-	if(Npc_KnowsInfo(hero,mil_121_brutus_cassian))
-	{
-		return TRUE;
-	};
-};
-
-func void mil_119_cassian_brutus_info()
-{
-	AI_Output(hero,self,"Mil_119_BRUTUS_15_01");	//Brutus lässt dir was ausrichten. Er fordert dich auf, gegen ihn in der Arena zu kämpfen.
-	AI_Output(self,hero,"Mil_119_BRUTUS_08_02");	//Brutus sollte sich mehr um seine Pflichten als Leutnant der Miliz kümmern.
-	AI_Output(self,hero,"Mil_119_BRUTUS_08_03");	//Er hängt den ganzen Tag nur vor der Arena herum und reisst grosse Sprüche.
-	AI_Output(self,hero,"Mil_119_BRUTUS_08_04");	//Er sollte seine Kraft lieber für die Orks aufheben, oder sich um die Milizsoldaten kümmern.
-	AI_Output(self,hero,"Mil_119_BRUTUS_08_05");	//Wenn er so weiter macht, wird ihn Berengar über kurz oder lang rausschmeissen.
-};
 

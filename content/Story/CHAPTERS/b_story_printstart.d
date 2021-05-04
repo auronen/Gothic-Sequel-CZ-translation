@@ -1,6 +1,17 @@
-
-func void b_story_printstart()
+//////////////////////////////////////////////////////////////////////////
+//	B_Story_PrintStart.d
+//	====================
+//	Gibt eine Bildschirmausgabe aus, die den Start des Spieles einleitet.
+//
+//	Verwendung z.B. um spezielle Zwischenreleases und Demo-Versionen
+//	zu kennzeichnen
+//////////////////////////////////////////////////////////////////////////
+func void B_Story_PrintStart ()
 {
-	ai_printscreen(self,_STR_MESSAGE_GAMESTART,-1,-1,FONT_OLD_BIG,_TIME_MESSAGE_GAMESTART,TEXT_COLOR_WHITE);
+	AI_PrintScreen	(self, _STR_MESSAGE_GAMESTART, -1, -1, FONT_OLD_BIG, _TIME_MESSAGE_GAMESTART, TEXT_COLOR_WHITE);
 };
+
+
+
+
 

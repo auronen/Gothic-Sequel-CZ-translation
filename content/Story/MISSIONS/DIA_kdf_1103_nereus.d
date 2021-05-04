@@ -1,47 +1,52 @@
+// 			EXIT
 
-instance KDF_1103_NEREUS_EXIT(C_Info)
+instance  KDF_1103_Nereus_Exit (C_INFO)
 {
-	npc = kdf_1103_nereus;
-	nr = 999;
-	condition = kdf_1103_nereus_exit_condition;
-	information = kdf_1103_nereus_exit_info;
-	permanent = 1;
+	npc			=  KDF_1103_Nereus;
+	nr			=  999;
+	condition	=  KDF_1103_Nereus_Exit_Condition;
+	information	=  KDF_1103_Nereus_Exit_Info;
+	permanent	=  1;
 	description = DIALOG_ENDE;
 };
 
-
-func int kdf_1103_nereus_exit_condition()
+FUNC int  KDF_1103_Nereus_Exit_Condition()
 {
 	return TRUE;
 };
 
-func void kdf_1103_nereus_exit_info()
+FUNC VOID  KDF_1103_Nereus_Exit_Info()
 {
-	AI_StopProcessInfos(self);
+	AI_StopProcessInfos		(self);
+};
+///////////////////////////////////////////////////////////////////////
+//	Info WELCOME
+///////////////////////////////////////////////////////////////////////
+//Die Sphärischen Strömungen müssen neu kalibriert werden. 
+//Die Dichte der magischen Konverter muss konfiguriert werden.
+//Ich muss noch die Symbolik in der Runenmatrix justieren.  
+instance KDF_1103_Nereus_WELCOME		(C_INFO)
+{
+	npc		 	 = 	KDF_1103_Nereus;
+	nr		 	 = 	1;
+	condition	 = 	KDF_1103_Nereus_WELCOME_Condition;
+	information	 = 	KDF_1103_Nereus_WELCOME_Info;
+	important	 = 	TRUE;
+	permanent	 = 	TRUE;
+	
 };
 
-
-instance KDF_1103_NEREUS_WELCOME(C_Info)
-{
-	npc = kdf_1103_nereus;
-	nr = 1;
-	condition = kdf_1103_nereus_welcome_condition;
-	information = kdf_1103_nereus_welcome_info;
-	important = TRUE;
-	permanent = TRUE;
-};
-
-
-func int kdf_1103_nereus_welcome_condition()
-{
-	if(c_npcisinvincible(self))
+func int KDF_1103_Nereus_WELCOME_Condition ()
+{	
+	if C_NPCisinvincible (self)
 	{
 		return TRUE;
 	};
 };
-
-func void kdf_1103_nereus_welcome_info()
+func void KDF_1103_Nereus_WELCOME_Info ()
 {
-	AI_Output(self,hero,"KDF_1103_Nereus_WELCOME_00_01");	//Ich habe keine Zeit für dich. Ich muss mich um wichtige Dinge kümmern!
+	AI_Output			(self, hero, "KDF_1103_Nereus_WELCOME_00_01"); //Störe mich nicht bei meinen Untersuchungen. 
+
 };
 
+	

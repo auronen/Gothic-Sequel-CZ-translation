@@ -1,57 +1,67 @@
-
-func void b_arena_assessscore()
+//////////////////////////////////////////////////////////////////////////
+//	B_Arena_AssessScore
+//	===================
+//	Wird aus ZS_Unconscious() heraus aufgerufen, wenn es sich um einen
+//	Arenakampf handelt. Macht folgendes:
+//	- erhöhte den Punktezähler des DEFEATers
+//	- Gibt den neuen Punktestand auf dem Screen aus
+//	- Wenn SC-Beteiligung: Überprüft den Punktestand des Arenakampfes
+//	  und ruft bei Bedarf die Sieg-/Niederlagefunktion auf.
+//////////////////////////////////////////////////////////////////////////
+func void B_Arena_AssessScore ()
 {
-	var C_Npc npc2;
-	PrintDebugNpc(PD_ZS_FRAME,"B_Arena_AssessScore");
-	if(Npc_WasInState(self,zs_attackarena) || Npc_IsPlayer(self))
+	PrintDebugNpc			(PD_ZS_FRAME,	"B_Arena_AssessScore");
+
+	//-------- Punktezähler des Gewinners eins hochsetzen --------
+	if	Npc_WasInState(self, ZS_AttackArena)
+	||	Npc_IsPlayer(self)
 	{
-		other.aivar[39] = other.aivar[39] + 1;
+		other.aivar[AIV_ARENA_POINTS] = other.aivar[AIV_ARENA_POINTS] + 1;
 	}
 	else
 	{
-		ai_printscreen(self,_STR_MESSAGE_ARENAPENALTY1,-1,_YPOS_MESSAGE_ARENAPENALTY1,FONT_OLD_BIG,_TIME_MESSAGE_ARENAPENALTY,TEXT_COLOR_RED);
-		printscreencolored(_STR_MESSAGE_ARENAPENALTY2,-1,_YPOS_MESSAGE_ARENAPENALTY2,FONT_OLD_SMALL,_TIME_MESSAGE_ARENAPENALTY,TEXT_COLOR_RED);
-		other.aivar[39] = other.aivar[39] - 1;
+		AI_PrintScreen		(self,	_STR_MESSAGE_ARENAPENALTY1, -1, _YPOS_MESSAGE_ARENAPENALTY1, FONT_OLD_BIG,	 _TIME_MESSAGE_ARENAPENALTY, TEXT_COLOR_RED);
+		PrintScreenColored	(		_STR_MESSAGE_ARENAPENALTY2, -1, _YPOS_MESSAGE_ARENAPENALTY2, FONT_OLD_SMALL, _TIME_MESSAGE_ARENAPENALTY, TEXT_COLOR_RED);
+		other.aivar[AIV_ARENA_POINTS] = other.aivar[AIV_ARENA_POINTS] - 1;	//Niederschlag vor Beginn der Runde!
 	};
-	if(ARENA_NPCFIGHT)
+
+	//-------- Kämpfen NSCs untereinander? --------
+	if	Arena_NpcFight
 	{
-		PrintDebugNpc(PD_ZS_Check,"...NSC-Kampf!");
-		b_arena_printscore();
+		PrintDebugNpc		(PD_ZS_CHECK,	"...NSC-Kampf!");
+		B_Arena_PrintScore	();
 		return;
 	};
-	if(GRIM_CHALLENGED)
+
+	//-------- Ermittlung der Punkte --------
+	var	C_NPC npc2;
+
+	if	Grim_Challenged		{	npc2 = Hlp_GetNpc(MIN_306_Grim);	};
+	if	Goliath_Challenged	{	npc2 = Hlp_GetNpc(WRK_216_Goliath);	};
+	if	Brutus_Challenged	{	npc2 = Hlp_GetNpc(MIL_121_Brutus);	};
+	if	Malgar_Challenged	{	npc2 = Hlp_GetNpc(DMH_1302_Malgar);	};
+	if	Thora_Challenged	{	npc2 = Hlp_GetNpc(AMZ_900_Thora);	};
+
+	if	(hero.aivar[AIV_ARENA_POINTS] >= ARENA_POINTSFORVICTORY)
 	{
-		npc2 = Hlp_GetNpc(min_306_grim);
+		B_Arena_PlayerVictory	();
+		B_Arena_FinishFight		();
+		//B_Arena_UnselectFight	();
 	};
-	if(GOLIATH_CHALLENGED)
+
+	if	(npc2.aivar[AIV_ARENA_POINTS] >= ARENA_POINTSFORVICTORY)
 	{
-		npc2 = Hlp_GetNpc(wrk_216_goliath);
+		B_Arena_PlayerDefeat	();
+		B_Arena_FinishFight		();
+		//B_Arena_UnselectFight	();
 	};
-	if(BRUTUS_CHALLENGED)
+
+	if	(hero.aivar[AIV_ARENA_POINTS] < ARENA_POINTSFORVICTORY)
+	&&	(npc2.aivar[AIV_ARENA_POINTS] < ARENA_POINTSFORVICTORY)
 	{
-		npc2 = Hlp_GetNpc(mil_121_brutus);
-	};
-	if(MALGAR_CHALLENGED)
-	{
-		npc2 = Hlp_GetNpc(dmh_1302_malgar);
-	};
-	if(THORA_CHALLENGED)
-	{
-		npc2 = Hlp_GetNpc(amz_900_thora);
-	};
-	if(hero.aivar[39] >= ARENA_POINTSFORVICTORY)
-	{
-		b_arena_playervictory();
-		b_arena_finishfight();
-	};
-	if(npc2.aivar[39] >= ARENA_POINTSFORVICTORY)
-	{
-		b_arena_playerdefeat();
-		b_arena_finishfight();
-	};
-	if((hero.aivar[39] < ARENA_POINTSFORVICTORY) && (npc2.aivar[39] < ARENA_POINTSFORVICTORY))
-	{
-		b_arena_printscore();
+		B_Arena_PrintScore		();
 	};
 };
+
+
 

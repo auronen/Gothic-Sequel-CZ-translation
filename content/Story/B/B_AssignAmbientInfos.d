@@ -1,112 +1,125 @@
+/*( (amb_self.npctype==NPCTYPE_AMBIENT) // Ambient GIL_WORKER (Abhänger), GIL_HEALER, GIL_POS, GIL_BEGGAR, GIL_THF
+	||(amb_self.npctype==NPCTYPE_GUARD)// GIL_MILITIA (Lagerwachen)
+	|| (amb_self.npctype==NPCTYPE_WRK_AMBIENT)) // GIL_WORKER (Arbeiter im Sinne des Wortes)
+	||(amb_self.npctype==NPCTYPE_TRD_AMBIENT) ) // GIL_WORKER (Händler im Lager)
+*/
 
-func void B_AssignAmbientInfos(var C_Npc amb_self)
+
+FUNC VOID B_AssignAmbientInfos(var c_NPC amb_self)
 {
-	if((amb_self.npcType == npctype_ambient) || (amb_self.npcType == npctype_guard))
-	{
-		if(amb_self.guild == GIL_WORKER)
+
+
+	if 	(  (amb_self.npctype == NPCTYPE_AMBIENT)
+		|| (amb_self.npctype == NPCTYPE_GUARD) )
+		{	
+		if (amb_self.guild == GIL_WORKER) 
 		{
-			if(amb_self.voice == 1)
+	   		if (amb_self.voice == 1) 
 			{
-				b_assignambientinfos_wrk_1(amb_self);
+				B_AssignAmbientInfos_Wrk_1(amb_self);// Malocher
 			}
-			else if(amb_self.voice == 2)
+	   		else if (amb_self.voice == 2) 
 			{
-				b_assignambientinfos_wrk_2(amb_self);
+				B_AssignAmbientInfos_Wrk_2(amb_self);// misstrauisch
 			}
-			else if(amb_self.voice == 6)
+			else if (amb_self.voice == 6) 
 			{
-				b_assignambientinfos_wrk_6(amb_self);
+				B_AssignAmbientInfos_Wrk_6(amb_self);// Raufbold
 			}
-			else if(amb_self.voice == 11)
+			else if (amb_self.voice == 11) 
 			{
-				b_assignambientinfos_wrk_11(amb_self);
+				B_AssignAmbientInfos_Wrk_11(amb_self);// Profi // eventuell noch in stimme 8 ändern?
 			};
 		}
-		else if(amb_self.guild == GIL_MILITIA)
+		else if (amb_self.guild == GIL_MILITIA) // Nur die Lager Miliz
 		{
-			if(amb_self.voice == 4)
+			if (amb_self.voice == 4)
 			{
-				b_assignambientinfos_mil_4(amb_self);
+				B_AssignAmbientInfos_Mil_4(amb_self); // alter Sack
 			}
-			else if(amb_self.voice == 7)
+			else if (amb_self.voice == 7)
 			{
-				b_assignambientinfos_mil_7(amb_self);
+				B_AssignAmbientInfos_Mil_7(amb_self);//Sadist
 			}
-			else if(amb_self.voice == 6)
+			else if (amb_self.voice == 6)
 			{
-				b_assignambientinfos_mil_6(amb_self);
+				B_AssignAmbientInfos_Mil_6(amb_self);// Raufbold
 			}
-			else if(amb_self.voice == 9)
+			else if (amb_self.voice == 9)
 			{
-				b_assignambientinfos_mil_9(amb_self);
+				B_AssignAmbientInfos_Mil_9(amb_self);	// brummig
 			};
 		}
-		else if(amb_self.guild == GIL_THIEF)
+		else if (amb_self.guild == GIL_THIEF)
 		{
-			if(amb_self.voice == 5)
+			if (amb_self.voice == 5)
 			{
-				b_assignambientinfos_thf_5(amb_self);
+				B_AssignAmbientInfos_Thf_5(amb_self);// lebenskünstler, offen
 			}
-			else if(amb_self.voice == 10)
+			else if (amb_self.voice == 10)
 			{
-				b_assignambientinfos_thf_10(amb_self);
+				B_AssignAmbientInfos_Thf_10(amb_self); //still und heimlich
 			}
-			else if(amb_self.voice == 11)
+			else if (amb_self.voice == 11)
 			{
-				b_assignambientinfos_thf_11(amb_self);
+				B_AssignAmbientInfos_Thf_11(amb_self);// Profi
 			};
+		
 		};
-	};
-	if((amb_self.npcType == Npctype_MINE_Ambient) || (amb_self.npcType == NpcType_MINE_Guard))
-	{
-		if(amb_self.guild == GIL_MINER)
+	}
+	if ( (amb_self.npctype == NPCTYPE_MINE_AMBIENT)
+	||   (amb_self.npctype == NPCTYPE_MINE_GUARD) ) //Alle Ambient-NPCs in den Minen
+	{	
+		if (amb_self.guild == GIL_MINER)
 		{
-			if(amb_self.voice == 1)
+			if (amb_self.voice == 1)
 			{
-				b_assignambientinfos_mine_min_1(amb_self);
+				B_AssignAmbientInfos_Mine_Min_1(amb_self);
 			}
-			else if(amb_self.voice == 4)
+			else if (amb_self.voice == 4)
 			{
-				b_assignambientinfos_mine_min_4(amb_self);
+				B_AssignAmbientInfos_Mine_Min_4(amb_self);
 			}
-			else if(amb_self.voice == 9)
+			else if (amb_self.voice == 9)
 			{
-				b_assignambientinfos_mine_min_9(amb_self);
+				B_AssignAmbientInfos_Mine_Min_9(amb_self);
 			};
 		}
-		else if(amb_self.guild == GIL_MILITIA)
+		else if (amb_self.guild == GIL_MILITIA) // Die Minen Miliz
 		{
-			if(amb_self.voice == 4)
+			if (amb_self.voice == 4)
 			{
-				b_assignambientinfos_mine_mil_4(amb_self);
+				B_AssignAmbientInfos_Mine_Mil_4(amb_self);
 			}
-			else if(amb_self.voice == 7)
+			else if (amb_self.voice == 7)
 			{
-				b_assignambientinfos_mine_mil_7(amb_self);
+				B_AssignAmbientInfos_Mine_Mil_7(amb_self);
 			}
-			else if(amb_self.voice == 8)
+			else if (amb_self.voice == 8)
 			{
-				b_assignambientinfos_mine_mil_8(amb_self);
+				B_AssignAmbientInfos_Mine_Mil_8(amb_self);
 			};
 		};
-	};
-	if(amb_self.npcType == NPCTYPE_OW_AMBIENT)
-	{
-		if(amb_self.guild == GIL_WORKER)
+	}
+	if  (amb_self.npctype == NPCTYPE_OW_AMBIENT) // versteckte Flüchtlinge in der Oberwelt, bisher nur GIL_WORKER , andere Planung?? M.F.
+	{	
+		if (amb_self.guild == GIL_WORKER)
 		{
-			if(amb_self.voice == 2)
+			if (amb_self.voice == 2)
 			{
-				b_assignambientinfos_ow_wrk_2(amb_self);
+				B_AssignAmbientInfos_OW_Wrk_2(amb_self);
 			}
-			else if(amb_self.voice == 3)
+			else if (amb_self.voice == 3)
 			{
-				b_assignambientinfos_ow_wrk_3(amb_self);
+				B_AssignAmbientInfos_OW_Wrk_3(amb_self);
 			}
-			else if(amb_self.voice == 4)
+			else if (amb_self.voice == 4)
 			{
-				b_assignambientinfos_ow_wrk_4(amb_self);
+				B_AssignAmbientInfos_OW_Wrk_4(amb_self);
 			};
 		};
-	};
+	};	
 };
+
+
 

@@ -1,56 +1,49 @@
-
-func void B_BuyAttributePoints(var C_Npc typ,var int atr,var int AtrPlus)
+func void B_BuyAttributePoints (var C_NPC typ, var int ATR, var int AtrPlus)
 {
+	// --------- Umwandeln von var in const
 	var int Typ_Atr;
-	var string AtrPlusSTRING;
+	if 		(ATR == ATR_STRENGTH)	{	Typ_Atr = typ.attribute[ATR_STRENGTH];	}
+	else if (ATR == ATR_DEXTERITY)	{	Typ_Atr = typ.attribute[ATR_DEXTERITY];	}
+	else if (ATR == ATR_MANA_MAX)	{	Typ_Atr = typ.attribute[ATR_MANA_MAX];	};
+
+	// --------- Steigern oder verbieten
+	var string AtrPlusSTRING; AtrPlusSTRING	= IntToString(AtrPlus);
 	var string PrintSTRING;
-	if(atr == ATR_STRENGTH)
+
+	if (!(typ.lp < AtrPlus))
 	{
-		Typ_Atr = typ.attribute[ATR_STRENGTH];
-	}
-	else if(atr == ATR_DEXTERITY)
-	{
-		Typ_Atr = typ.attribute[ATR_DEXTERITY];
-	}
-	else if(atr == ATR_MANA_MAX)
-	{
-		Typ_Atr = typ.attribute[ATR_MANA_MAX];
-	};
-	AtrPlusSTRING = IntToString(AtrPlus);
-	if(!(typ.lp < AtrPlus))
-	{
-		if((Typ_Atr + AtrPlus) <= 100)
+		if (Typ_Atr + AtrPlus <= 100)
 		{
 			typ.lp = typ.lp - AtrPlus;
-			if(atr == ATR_STRENGTH)
+
+			if (ATR == ATR_STRENGTH)
 			{
 				typ.attribute[ATR_STRENGTH] = typ.attribute[ATR_STRENGTH] + AtrPlus;
-				PrintSTRING = ConcatStrings("Stärke + ",AtrPlusSTRING);
-				PrintScreen(PrintSTRING,-1,-1,FONT_OLD_BIG,1);
+				PrintString = ConcatStrings("Stärke + ", AtrPlusSTRING);
+				PrintScreen	(PrintSTRING, -1,-1,FONT_OLD_BIG,1);
 			}
-			else if(atr == ATR_DEXTERITY)
+			else if (ATR == ATR_DEXTERITY)
 			{
 				typ.attribute[ATR_DEXTERITY] = typ.attribute[ATR_DEXTERITY] + AtrPlus;
-				PrintSTRING = ConcatStrings("Geschicklichkeit + ",AtrPlusSTRING);
-				PrintScreen(PrintSTRING,-1,-1,FONT_OLD_BIG,1);
+				PrintString = ConcatStrings("Geschicklichkeit + ", AtrPlusSTRING);
+				PrintScreen	(PrintSTRING, -1,-1,FONT_OLD_BIG,1);
 			}
-			else if(atr == ATR_MANA_MAX)
+			else if (ATR == ATR_MANA_MAX)
 			{
 				typ.attribute[ATR_MANA_MAX] = typ.attribute[ATR_MANA_MAX] + AtrPlus;
-				PrintSTRING = ConcatStrings("Mana + ",AtrPlusSTRING);
-				PrintScreen(PrintSTRING,-1,-1,FONT_OLD_BIG,1);
+				PrintString = ConcatStrings("Mana + ", AtrPlusSTRING);
+				PrintScreen	(PrintString, -1,-1,FONT_OLD_BIG,1);
 			};
 		}
 		else
 		{
-			PrintScreen("Keine Steigerung über Maximum 100!",-1,-1,FONT_OLD_BIG,1);
-			B_Say(self,other,"$NOLEARNOVERMAX");
+			PrintScreen	("Keine Steigerung über Maximum 100!", -1,-1,FONT_OLD_BIG,1);
+			B_Say (self, other, "$NOLEARNOVERMAX");
 		};
 	}
 	else
 	{
-		PrintScreen("Zu wenig Lernpunkte!",-1,-1,FONT_OLD_BIG,1);
-		B_Say(self,other,"$NOLEARNNOPOINTS");
+		PrintScreen	("Zu wenig Lernpunkte!", -1,-1,FONT_OLD_BIG,1);
+		B_Say (self, other, "$NOLEARNNOPOINTS");
 	};
 };
-

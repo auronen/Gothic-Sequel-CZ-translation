@@ -1,119 +1,194 @@
+/*************************************************************************
+**	Golem Prototype														**
+*************************************************************************/
 
-prototype Mst_Default_Golem(C_Npc)
+PROTOTYPE Mst_Default_Golem(C_Npc)			
 {
-	name[0] = "Golem";
-	guild = GIL_GOLEM;
-	level = 100;
-	attribute[ATR_STRENGTH] = 150;
-	attribute[ATR_DEXTERITY] = 150;
-	attribute[ATR_HITPOINTS_MAX] = 600;
-	attribute[ATR_HITPOINTS] = 600;
-	attribute[ATR_MANA_MAX] = 0;
-	attribute[ATR_MANA] = 0;
-	protection[PROT_BLUNT] = 9999;
-	protection[PROT_EDGE] = 9999;
-	protection[PROT_POINT] = 9999;
-	protection[PROT_FIRE] = 9999;
-	protection[PROT_FLY] = 9999;
-	protection[PROT_MAGIC] = 9999;
-	damagetype = DAM_FLY;
-	fight_tactic = FAI_GOLEM;
-	senses = SENSE_HEAR | SENSE_SEE | SENSE_SMELL;
-	senses_range = 2000;
-	aivar[7] = PASSIVE;
-	aivar[AIV_PCISSTRONGER] = 1500;
-	aivar[AIV_BEENATTACKED] = 1500;
-	aivar[3] = 1500;
-	aivar[4] = 0;
-	aivar[5] = 5;
-	aivar[6] = TRUE;
-	start_aistate = ZS_MM_AllScheduler;
-	aivar[11] = OnlyRoutine;
-};
+	name							=	"Golem";
+	guild							=	GIL_GOLEM;
+	// REAL_ID in Instanzen !!!
+	level							=	100;
+//--------------------------------------------------------------
+	attribute	[ATR_STRENGTH]		=	150;
+	attribute	[ATR_DEXTERITY]		=	150;
+	
+	attribute	[ATR_HITPOINTS_MAX]	=	600;
+	attribute	[ATR_HITPOINTS]		=	600;
 
+	attribute	[ATR_MANA_MAX] 		=	0;
+	attribute	[ATR_MANA] 			=	0;
+//--------------------------------------------------------------
+	protection	[PROT_BLUNT]		=	9999;
+	protection	[PROT_EDGE]			=	9999;
+	protection	[PROT_POINT]		=	9999;	// immun
+	protection	[PROT_FIRE]			=	9999;	// immun
+	protection	[PROT_FLY]			=	9999;	// immun
+	protection	[PROT_MAGIC]		=	9999;
+//--------------------------------------------------------------
+	damagetype 						=	DAM_FLY;
+//	damage		[DAM_INDEX_BLUNT]	=	0;
+//	damage		[DAM_INDEX_EDGE]	=	0;
+//	damage		[DAM_INDEX_POINT]	=	0;
+//	damage		[DAM_INDEX_FIRE]	=	0;
+//	damage		[DAM_INDEX_FLY]		=	0;
+//	damage		[DAM_INDEX_MAGIC]	=	0;
+//--------------------------------------------------------------
+	fight_tactic					=	FAI_GOLEM;
+//--------------------------------------------------------------
+	senses						= SENSE_HEAR | SENSE_SEE | SENSE_SMELL;
+	senses_range				= 2000;
+
+	aivar[AIV_MM_Behaviour]		= PASSIVE;
+	
+	aivar[AIV_MM_PercRange]		= 1500;
+	aivar[AIV_MM_DrohRange]		= 1500;
+	aivar[AIV_MM_AttackRange]	= 1500;
+	aivar[AIV_MM_DrohTime]		= 0;
+	aivar[AIV_MM_FollowTime]	= 5;
+	aivar[AIV_MM_FollowInWater] = TRUE;
+//-------------------------------------------------------------
+	start_aistate				= ZS_MM_AllScheduler;
+
+	aivar[AIV_MM_RestStart] 	= OnlyRoutine;
+};
+//-------------------------------------------------------------
 func void Set_StoneGolem_Visuals()
 {
-	Mdl_SetVisual(self,"Golem.mds");
-	Mdl_SetVisualBody(self,"Gol_Body",DEFAULT,DEFAULT,"",DEFAULT,DEFAULT,-1);
+	Mdl_SetVisual			(self,	"Golem.mds");
+	//								Body-Mesh		Body-Tex	Skin-Color	Head-MMS	Head-Tex	Teeth-Tex	ARMOR
+	Mdl_SetVisualBody		(self,	"Gol_Body",		DEFAULT,	DEFAULT,	"",			DEFAULT,  	DEFAULT,	-1);
 };
-
+//-------------------------------------------------------------
 func void Set_FireGolem_Visuals()
 {
-	Mdl_SetVisual(self,"Golem.mds");
-	Mdl_ApplyOverlayMds(self,"Golem_Firegolem.mds");
-	Mdl_SetVisualBody(self,"Gol_Fire_Body",DEFAULT,DEFAULT,"",DEFAULT,DEFAULT,-1);
+	Mdl_SetVisual			(self,	"Golem.mds");
+	Mdl_ApplyOverlayMds 	(self,	"Golem_Firegolem.mds");
+	//								Body-Mesh		Body-Tex	Skin-Color	Head-MMS	Head-Tex	Teeth-Tex	ARMOR
+	Mdl_SetVisualBody		(self,	"Gol_Fire_Body",DEFAULT,	DEFAULT,	"",			DEFAULT,  	DEFAULT,	-1);
 };
-
+//-------------------------------------------------------------
 func void Set_IceGolem_Visuals()
 {
-	Mdl_SetVisual(self,"Golem.mds");
-	Mdl_ApplyOverlayMds(self,"Golem_Icegolem.mds");
-	Mdl_SetVisualBody(self,"Gol_Ice_Body",DEFAULT,DEFAULT,"",DEFAULT,DEFAULT,-1);
+	Mdl_SetVisual			(self,	"Golem.mds");
+	Mdl_ApplyOverlayMds 	(self,	"Golem_Icegolem.mds");
+	//								Body-Mesh		Body-Tex	Skin-Color	Head-MMS	Head-Tex	Teeth-Tex	ARMOR
+	Mdl_SetVisualBody		(self,	"Gol_Ice_Body",	DEFAULT,	DEFAULT,	"",			DEFAULT,  	DEFAULT,	-1);
 };
 
 
-instance StoneGolem(Mst_Default_Golem)
+/*************************************************************************
+**	Stone Golem   														**
+*************************************************************************/
+
+INSTANCE StoneGolem	(Mst_Default_Golem)
 {
-	name[0] = "Stein Golem";
-	aivar[22] = id_stonegolem;
-	protection[PROT_BLUNT] = 75;
+	name	=	"Stein Golem";
+	aivar[AIV_MM_REAL_ID]			= 	ID_STONEGOLEM;
+	protection	[PROT_BLUNT]		=	75;
+//--------------------------------------------
 	Set_StoneGolem_Visuals();
-	CreateInvItem(self,itat_stonegolemheart);
-	Npc_SetToFistMode(self);
+	CreateInvItem		(self, ItAt_StoneGolemHeart);
+	Npc_SetToFistMode	(self);
 };
 
-instance SummonedByPC_StoneGolem(Mst_Default_Golem)
+
+/*************************************************************************
+**	Summoned Stone Golem    											**
+*************************************************************************/
+
+INSTANCE SummonedByPC_StoneGolem (Mst_Default_Golem)
 {
-	name[0] = "Golem";
-	aivar[22] = ID_STONEGOLEM;
+	//-------- general --------
+	name	=	"Golem";
+	aivar[AIV_MM_REAL_ID]			= 	ID_STONEGOLEM;
+
+	//-------- visual --------
 	Set_StoneGolem_Visuals();
 	Npc_SetToFistMode(self);
-	protection[PROT_EDGE] = 100;
-	protection[PROT_BLUNT] = 75;
-	senses = SENSE_HEAR | SENSE_SEE;
-	start_aistate = ZS_MM_SummonedByPC;
-	aivar[20] = 400;
-	aivar[21] = 2;
-	aivar[23] = TRUE;
+
+	//-------- attributes --------
+	protection	[PROT_EDGE]			=	100;
+	protection	[PROT_BLUNT]		=	75;
+
+	//-------- ai --------
+	senses 							= SENSE_HEAR | SENSE_SEE;
+	start_aistate					= ZS_MM_SummonedByPC;
+	self.aivar[AIV_MM_DistToMaster] = 400;
+	self.aivar[AIV_MM_TimeLooseHP] 	= 2;
+	self.aivar[AIV_MM_PARTYMEMBER]  = TRUE;
 };
 
-instance SummonedByNPC_StoneGolem(Mst_Default_Golem)
+INSTANCE SummonedByNPC_StoneGolem (Mst_Default_Golem)
 {
-	name[0] = "Stein Golem";
-	aivar[22] = ID_STONEGOLEM;
+	//-------- general --------
+	name	=	"Stein Golem";
+	aivar[AIV_MM_REAL_ID]			= 	ID_STONEGOLEM;
+
+	//-------- visual --------
 	Set_StoneGolem_Visuals();
 	Npc_SetToFistMode(self);
-	protection[PROT_BLUNT] = 75;
-	start_aistate = ZS_MM_Summoned;
+
+	//-------- attributes --------
+	protection	[PROT_BLUNT]		=	75;
+
+	//-------- ai --------
+	start_aistate					= ZS_MM_Summoned;
 };
 
-instance FireGolem(Mst_Default_Golem)
+
+/*************************************************************************
+**	Fire Golem   														**
+*************************************************************************/
+INSTANCE FireGolem	(Mst_Default_Golem)
 {
-	name[0] = "Feuer Golem";
-	aivar[22] = id_firegolem;
+	//-------- general --------
+	name	=	"Feuer Golem";
+	aivar		[AIV_MM_REAL_ID]	= 	ID_FIREGOLEM;
+
+	//-------- visual --------
 	Set_FireGolem_Visuals();
 	Npc_SetToFistMode(self);
-	attribute[ATR_STRENGTH] = 50;
-	protection[PROT_MAGIC] = 0;
-	attribute[ATR_HITPOINTS_MAX] = 150;
-	attribute[ATR_HITPOINTS] = 150;
-	damagetype = DAM_FIRE;
-	CreateInvItem(self,itat_firegolemheart);
+
+	//-------- attributes --------
+	attribute	[ATR_STRENGTH]		=	50;	// da Feuerschaden
+	protection	[PROT_MAGIC]		=	0;	// betrifft im wesentlichen die Blitz- und Eiszauber
+	attribute	[ATR_HITPOINTS_MAX]	=	150;// da er nur durch Blitz- und Eiszauber verwundbar ist, muß dieser Wert hier sehr viel niedriger sein 
+	attribute	[ATR_HITPOINTS]		=	150;
+	damagetype 						=	DAM_FIRE;
+
+	//-------- inventory --------
+	CreateInvItem		(self, ItAt_FireGolemHeart);
+
+	//-------- ai --------
 };
 
-instance IceGolem(Mst_Default_Golem)
+
+/*************************************************************************
+**	Ice Golem   														**
+*************************************************************************/
+INSTANCE IceGolem	(Mst_Default_Golem)
 {
-	name[0] = "Eis Golem";
-	aivar[22] = id_icegolem;
+	//-------- general --------
+	name	=	"Eis Golem";
+	aivar[AIV_MM_REAL_ID]			= 	ID_ICEGOLEM;
+
+	//-------- visual --------
 	Set_IceGolem_Visuals();
-	attribute[ATR_MANA_MAX] = 500;
-	attribute[ATR_MANA] = 500;
-	attribute[ATR_HITPOINTS_MAX] = 150;
-	attribute[ATR_HITPOINTS] = 150;
-	protection[PROT_FIRE] = 0;
-	damagetype = DAM_BLUNT;
-	CreateInvItem(self,itat_icegolemheart);
-	CreateInvItem(self,itat_icegolempiece);
-	fight_tactic = FAI_HUMAN_MAGE;
+//	Npc_SetToFistMode(self);
+
+	//-------- attributes --------
+	attribute	[ATR_MANA_MAX] 		=	500;
+	attribute	[ATR_MANA] 			=	500;
+	attribute	[ATR_HITPOINTS_MAX]	=	150;	// da er nur durch Feuerschaden verwundbar
+	attribute	[ATR_HITPOINTS]		=	150;
+	protection	[PROT_FIRE]			=	0;
+	damagetype 						=	DAM_BLUNT;
+
+	//-------- inventory --------
+	CreateInvItem	(self, ItAt_IceGolemHeart);
+	CreateInvItem	(self, ItAt_IceGolemPiece);
+
+	//-------- ai --------
+	fight_tactic					=	FAI_HUMAN_MAGE;		// damit der Golem eine "Icecube"-Attack einsetzen kann
 };
 

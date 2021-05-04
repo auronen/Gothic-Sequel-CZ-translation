@@ -1,30 +1,31 @@
-
-func void b_arena_playerdefeat()
+//////////////////////////////////////////////////////////////////////////
+//	B_Arena_PlayerDefeat
+//	====================
+//	Hat der Spieler den Arenakampf verloren, wird diese Funktion hier
+//	ausgeführt.
+//////////////////////////////////////////////////////////////////////////
+func void B_Arena_PlayerDefeat ()
 {
-	var C_Npc npc;
-	PrintDebugNpc(PD_TA_FRAME,"B_Arena_PlayerDefeat");
-	if(GRIM_CHALLENGED)
-	{
-		npc = Hlp_GetNpc(min_306_grim);
-	};
-	if(GOLIATH_CHALLENGED)
-	{
-		npc = Hlp_GetNpc(wrk_216_goliath);
-	};
-	if(BRUTUS_CHALLENGED)
-	{
-		npc = Hlp_GetNpc(mil_121_brutus);
-	};
-	if(MALGAR_CHALLENGED)
-	{
-		npc = Hlp_GetNpc(dmh_1302_malgar);
-	};
-	if(THORA_CHALLENGED)
-	{
-		npc = Hlp_GetNpc(amz_900_thora);
-	};
-	npc.aivar[40] = npc.aivar[40] + 1;
-	ARENA_ABORTFIGHT = TRUE;
-	PrintScreen(_STR_MESSAGE_ARENAPLAYERDEFEAT,-1,_YPOS_MESSAGE_ARENARESULT,FONT_OLD_BIG,_TIME_MESSAGE_ARENARESULT);
+	PrintDebugNpc		(PD_TA_FRAME,	"B_Arena_PlayerDefeat");
+
+	//-------- Rankliste modifizieren --------
+	var	C_NPC npc;
+
+	if	Grim_Challenged		{	npc = Hlp_GetNpc(MIN_306_Grim);		};
+	if	Goliath_Challenged	{	npc = Hlp_GetNpc(WRK_216_Goliath);	};
+	if	Brutus_Challenged	{	npc = Hlp_GetNpc(MIL_121_Brutus);	};
+	if	Malgar_Challenged	{	npc = Hlp_GetNpc(DMH_1302_Malgar);	};
+	if	Thora_Challenged	{	npc = Hlp_GetNpc(AMZ_900_Thora);	};
+
+	//Arena_LastPCRanking	= B_GetGladiatorRanking(PC_Hero);
+	npc.aivar[AIV_ARENA_VICTORIES] = npc.aivar[AIV_ARENA_VICTORIES] + 1;
+
+	//-------- Flags anpassen --------
+	Arena_AbortFight = TRUE;
+
+	//-------- Textmeldung nun ausgeben --------
+	PrintScreen	(_STR_MESSAGE_ARENAPLAYERDEFEAT, -1, _YPOS_MESSAGE_ARENARESULT, FONT_OLD_BIG, _TIME_MESSAGE_ARENARESULT);
 };
+
+
 

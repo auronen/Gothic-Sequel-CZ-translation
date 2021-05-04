@@ -1,128 +1,143 @@
-
-instance BEG_706_BEGGAR_EXIT(C_Info)
+///////////////////////////////////////////////////////////////////////
+//	Info EXIT
+///////////////////////////////////////////////////////////////////////
+INSTANCE BEG_706_BEGGAR_EXIT   (C_INFO)
 {
-	npc = beg_706_beggar;
-	nr = 999;
-	condition = beg_706_beggar_exit_condition;
-	information = beg_706_beggar_exit_info;
-	permanent = TRUE;
+	npc         = BEG_706_BEGGAR;
+	nr          = 999;
+	condition   = BEG_706_BEGGAR_EXIT_Condition;
+	information = BEG_706_BEGGAR_EXIT_Info;
+	permanent   = TRUE;
 	description = DIALOG_ENDE;
 };
 
-
-func int beg_706_beggar_exit_condition()
+FUNC INT BEG_706_BEGGAR_EXIT_Condition()
 {
 	return TRUE;
 };
 
-func void beg_706_beggar_exit_info()
+FUNC VOID BEG_706_BEGGAR_EXIT_Info()
 {
-	AI_StopProcessInfos(self);
+	AI_StopProcessInfos (self);
 };
 
-
-instance BEG_706_BEGGAR_BEG(C_Info)
+ ///////////////////////////////////////////////////////////////////////
+//	Info BEG
+///////////////////////////////////////////////////////////////////////
+instance BEG_706_BEGGAR_BEG		(C_INFO)
 {
-	npc = beg_706_beggar;
-	nr = 1;
-	condition = beg_706_beggar_beg_condition;
-	information = beg_706_beggar_beg_info;
-	important = TRUE;
-	permanent = FALSE;
+	npc		 = 	BEG_706_BEGGAR;
+	nr		 = 	1;
+	condition	 = 	BEG_706_BEGGAR_BEG_Condition;
+	information	 = 	BEG_706_BEGGAR_BEG_Info;
+	important	 = 	TRUE;
+	permanent	 = 	FALSE;
 };
 
-
-func int beg_706_beggar_beg_condition()
+func int BEG_706_BEGGAR_BEG_Condition ()
 {
-	if(Npc_GetDistToNpc(self,hero) <= 600)
+	if (Npc_GetDistToNpc (self,hero) <= 600)
 	{
 		return TRUE;
 	};
 };
 
-func void beg_706_beggar_beg_info()
+func void BEG_706_BEGGAR_BEG_Info ()
 {
-	AI_GotoNpc(self,hero);
-	AI_Output(self,hero,"BEG_706_BEG_00_01");	//Silber für einen Armen, Silber für einen Armen!
-	Info_ClearChoices(beg_706_beggar_beg);
-	Info_AddChoice(beg_706_beggar_beg,"Nein, verpiss dich!",beg_706_beggar_beg_no);
-	if(Npc_HasItems(hero,itmi_silver) >= 1)
+	AI_GotoNpc			(self,hero);
+	AI_Output			(self, hero, "BEG_706_BEG_00_01"); //Silber für einen Armen, Silber für einen Armen!
+	Info_ClearChoices	(BEG_706_BEGGAR_BEG);
+	Info_AddChoice		(BEG_706_BEGGAR_BEG, "Nein, verpiss dich!", BEG_706_BEGGAR_BEG_NO );
+
+	if Npc_HasItems (hero,ItMi_Silver) >= 1
 	{
-		Info_AddChoice(beg_706_beggar_beg,"(1 Silbersück geben)",beg_706_beggar_beg_one);
+		Info_AddChoice	(BEG_706_BEGGAR_BEG, "(1 Silbersück geben)", BEG_706_BEGGAR_BEG_ONE );
 	};
-	if(Npc_HasItems(hero,itmi_silver) >= 5)
+	if Npc_HasItems (hero,ItMi_Silver) >= 5
 	{
-		Info_AddChoice(beg_706_beggar_beg,"(5 Silberstücke geben)",beg_706_beggar_beg_five);
+		Info_AddChoice	(BEG_706_BEGGAR_BEG, "(5 Silberstücke geben)", BEG_706_BEGGAR_BEG_FIVE );
 	};
-	Info_AddChoice(beg_706_beggar_beg,"Ich habe gerade leider kein Silber dabei",beg_706_beggar_beg_sorry);
+	Info_AddChoice		(BEG_706_BEGGAR_BEG, "Ich habe gerade leider kein Silber dabei", BEG_706_BEGGAR_BEG_SORRY );
+
+};
+func void BEG_706_BEGGAR_BEG_NO ()
+{
+	AI_Output			(hero, self, "BEG_706_BEG_NO_15_01"); //Nein, verpiss dich!
+
+	Beggars_Secrets = Beggars_Secrets - 1;
+	AI_StopProcessInfos (self);
 };
 
-func void beg_706_beggar_beg_no()
+func void BEG_706_BEGGAR_BEG_FIVE ()
 {
-	AI_Output(hero,self,"BEG_706_BEG_NO_15_01");	//Nein, verpiss dich!
-	BEGGARS_SECRETS = BEGGARS_SECRETS - 1;
-	AI_StopProcessInfos(self);
+	AI_Output			(hero, self, "BEG_706_BEG_FIVE_15_01"); //Vielleicht bringen dich diese 5 Silberstücke weiter.
+	B_GiveInvItems		(hero, self, ITMI_Silver,5);
+	AI_Output			(self, hero, "BEG_706_BEG_FIVE_00_02"); //Überaus großzügig, vielen Dank. Vielleicht bringt dich diese Gabe auch weiter...
+
+	Beggars_Secrets = Beggars_Secrets + 1;
+	Info_ClearChoices	(BEG_706_BEGGAR_BEG);
+	AI_StopProcessInfos (self);
 };
 
-func void beg_706_beggar_beg_five()
+func void BEG_706_BEGGAR_BEG_SORRY ()
 {
-	AI_Output(hero,self,"BEG_706_BEG_FIVE_15_01");	//Vielleicht bringen dich diese 5 Silberstücke weiter.
-	B_GiveInvItems(hero,self,itmi_silver,5);
-	AI_Output(self,hero,"BEG_706_BEG_FIVE_00_02");	//Überaus großzügig, vielen Dank. Vielleicht bringt dich diese Gabe auch weiter...
-	BEGGARS_SECRETS = BEGGARS_SECRETS + 1;
-	Info_ClearChoices(beg_706_beggar_beg);
-	AI_StopProcessInfos(self);
+	AI_Output			(hero, self, "BEG_706_BEG_SORRY_15_01"); //Ich habe gerade leider kein Silber dabei.
+	AI_StopProcessInfos (self);
 };
 
-func void beg_706_beggar_beg_sorry()
+func void BEG_706_BEGGAR_BEG_ONE ()
 {
-	AI_Output(hero,self,"BEG_706_BEG_SORRY_15_01");	//Ich habe gerade leider kein Silber dabei.
-	AI_StopProcessInfos(self);
+	AI_Output			(hero, self, "BEG_706_BEG_ONE_15_01"); //Hier, nimm dieses Silberstück.
+	B_GiveInvItems		(hero, self, ITMI_Silver,1);
+	AI_Output			(self, hero, "BEG_706_BEG_ONE_00_02"); //Danke. Vielleicht bekomme ich dafür sogar etwas zu Essen...
+
+	Info_ClearChoices	(BEG_706_BEGGAR_BEG);
+	AI_StopProcessInfos (self);
+};
+ ///////////////////////////////////////////////////////////////////////
+//	Info BEG2 (nach einmaligen Ansprechen durch die Bettler kann der Spieler die Bettler immer wieder von sich aus ansprechen
+///////////////////////////////////////////////////////////////////////
+instance BEG_706_BEGGAR_BEG2		(C_INFO)
+{
+	npc		 = 	BEG_706_BEGGAR;
+	nr		 = 	1;
+	condition	 = 	BEG_706_BEGGAR_BEG2_Condition;
+	information	 = 	BEG_706_BEGGAR_BEG2_Info;
+	important	 = 	TRUE;
+	permanent	 = 	TRUE;
 };
 
-func void beg_706_beggar_beg_one()
+func int BEG_706_BEGGAR_BEG2_Condition ()
 {
-	AI_Output(hero,self,"BEG_706_BEG_ONE_15_01");	//Hier, nimm dieses Silberstück.
-	B_GiveInvItems(hero,self,itmi_silver,1);
-	AI_Output(self,hero,"BEG_706_BEG_ONE_00_02");	//Danke. Vielleicht bekomme ich dafür sogar etwas zu Essen...
-	Info_ClearChoices(beg_706_beggar_beg);
-	AI_StopProcessInfos(self);
-};
-
-
-instance BEG_706_BEGGAR_BEG2(C_Info)
-{
-	npc = beg_706_beggar;
-	nr = 1;
-	condition = beg_706_beggar_beg2_condition;
-	information = beg_706_beggar_beg2_info;
-	important = TRUE;
-	permanent = TRUE;
-};
-
-
-func int beg_706_beggar_beg2_condition()
-{
-	if(c_npcisinvincible(hero) && Npc_KnowsInfo(hero,beg_706_beggar_beg))
+	if C_NPCisinvincible (hero)
+	&& Npc_KnowsInfo (hero,BEG_706_BEGGAR_BEG)
 	{
 		return TRUE;
 	};
 };
-
-func int beg_706_beggar_beg2_info()
+func int BEG_706_BEGGAR_BEG2_Info ()
 {
-	AI_GotoNpc(self,hero);
-	AI_Output(self,hero,"BEG_706_BEG_00_01");	//Silber für einen Armen, Silber für einen Armen!
-	Info_ClearChoices(beg_706_beggar_beg);
-	Info_AddChoice(beg_706_beggar_beg2,"Nein, verpiss dich!",beg_706_beggar_beg_no);
-	if(Npc_HasItems(hero,itmi_silver) >= 1)
+	AI_GotoNpc (self,hero);
+	AI_Output	(self, hero, "BEG_706_BEG_00_01"); //Silber für einen Armen, Silber für einen Armen!
+
+	Info_ClearChoices (BEG_706_BEGGAR_BEG);
+	Info_AddChoice	(BEG_706_BEGGAR_BEG2, "Nein, verpiss dich!", BEG_706_BEGGAR_BEG_NO );
+
+	if	(Npc_HasItems (hero,ItMi_Silver) >= 1)
 	{
-		Info_AddChoice(beg_706_beggar_beg2,"(1 Silbersück geben)",beg_706_beggar_beg_one);
+		Info_AddChoice	(BEG_706_BEGGAR_BEG2, "(1 Silbersück geben)", BEG_706_BEGGAR_BEG_ONE );
 	};
-	if(Npc_HasItems(hero,itmi_silver) >= 5)
+	if	(Npc_HasItems (hero,ItMi_Silver) >= 5)
 	{
-		Info_AddChoice(beg_706_beggar_beg2,"(5 Silberstücke geben)",beg_706_beggar_beg_five);
+		Info_AddChoice	(BEG_706_BEGGAR_BEG2, "(5 Silberstücke geben)", BEG_706_BEGGAR_BEG_FIVE );
 	};
-	Info_AddChoice(beg_706_beggar_beg2,"Ich habe gerade leider kein Silber dabei",beg_706_beggar_beg_sorry);
+	Info_AddChoice	(BEG_706_BEGGAR_BEG2, "Ich habe gerade leider kein Silber dabei", BEG_706_BEGGAR_BEG_SORRY );
+
 };
+
+
+
+
+
+
 
