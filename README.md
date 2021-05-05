@@ -33,7 +33,7 @@ instance PC_PSIONIC_FORTRESS(C_Info)
 ```
 
 ## Stav projektu
-- [ ] Menu
+- [x] Menu
 - [ ] Dialogy - `Content\Story\Missions`
 - [ ] Předměty - `Content\Items`
 - [ ] Ostatní - soubor `Content\Story\Text.d`
