@@ -2,7 +2,7 @@
 Německé skripty poskytl VaanaCZ, moc děkujeme!
 
 ## Překlad 
-Protože překládáme z originálu, tedy z němčiny :de:, doporučil bych zachovat ve skritpech původní německé texty pro kontrolu (týká se pouze dialogů). A to tak, že se původní řádek zkopíruje a zakomentuje - na začátek řádku se vloží `//`. Ukázka:
+Protože překládáme z originálu, tedy z němčiny :de:, doporučil bych zachovat ve skritpech původní německé texty, pro kontrolu. A to tak, že se původní řádek zkopíruje a zakomentuje - na začátek řádku se vloží `//`. Ukázka:
 ```c++
 func void pc_psionic_halloagain_info()
 {
