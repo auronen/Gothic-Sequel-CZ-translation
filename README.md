@@ -12,7 +12,7 @@ func void pc_psionic_halloagain_info()
  // AI_Output(self,hero,"PC_Psionic_HALLOAGAIN_23_01");	//Hey, ich dachte du wärst tot!
 	AI_Output(self,hero,"PC_Psionic_HALLOAGAIN_23_01");	//Hej, myslel jsem, že jsi mrtvý!
  // AI_Output(hero,self,"PC_Psionic_HALLOAGAIN_15_02");	//Das kommt mir bekannt vor.
-	AI_Output(hero,self,"PC_Psionic_HALLOAGAIN_15_02");	//To už jsem někdy slyšel. #Protože už to slyšel od Diega
+	AI_Output(hero,self,"PC_Psionic_HALLOAGAIN_15_02");	//To už jsem někdy slyšel. #Protože už to slyšel od Diega - toto je komentář k překladu
  // AI_Output(self,hero,"PC_Psionic_HALLOAGAIN_23_03");	//Was ist geschehen?
 	AI_Output(self,hero,"PC_Psionic_HALLOAGAIN_23_03");	//Co se stalo?
  // AI_Output(hero,self,"PC_Psionic_HALLOAGAIN_15_04");	//Der Kampf gegen den Schläfer hat mich geschwächt. Das bedeutet ich muss wieder 'ne Menge lernen.
@@ -31,7 +31,7 @@ instance PC_PSIONIC_FORTRESS(C_Info)
 	important = FALSE;
 	permanent = FALSE;
 //	description = "Wolltest Du nicht von der Felsenfestung Besitz nehmen?";
-	description = "Nechtěl jsi obsadit Horskou penvost?";
+	description = "Nechtěl jsi obsadit Horskou pevnost?";
 };
 ```
 
