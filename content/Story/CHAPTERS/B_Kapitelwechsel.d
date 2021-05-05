@@ -22,6 +22,7 @@ FUNC VOID B_Kapitelwechsel (VAR INT new_chapter)
 		PrintDebugNpc		(PD_MISSION, "---=== DAS ERSTE KAPITEL ===---");
 
 		//-------- Org --------
+//		IntroduceChapter	("Kapitel 1", "Die Rückkehr", "chapter1.tga", "levelup.wav", 5000);
 		IntroduceChapter	("Kapitola 1", "Návrat", "chapter1.tga", "levelup.wav", 5000);
 		subChapter = CH1_START;
 
@@ -42,6 +43,7 @@ FUNC VOID B_Kapitelwechsel (VAR INT new_chapter)
 		PrintDebugNpc		(PD_MISSION, "---=== DAS ZWEITE KAPITEL ===---");
 
 		//-------- Org --------
+//		IntroduceChapter	("Kapitel 2", "Der Aufbruch", "chapter2.tga", "levelup.wav", 5000);
 		IntroduceChapter	("Kapitola 2", "Odchod", "chapter2.tga", "levelup.wav", 5000);
 		subChapter = CH2_START;
 
