@@ -1,9 +1,6 @@
 # Gothic-Sequel-CZ-translation
 Německé skripty poskytl VaanaCZ, moc děkujeme!
 
-## Kde co je
-Protože nemáme k dispozici oficiální skripty, ale pouze ty dekompilované, je v nich trošku čurbes. Dialogy se nachází v adresáři `content\Story\MISSIONS` a všechno ostatní, jako jsou hlášky v aréně, předměty a ostatní věci k přeložení se nachází v adresáři `content\_misk_`.
-
 ## Překlad 
 Protože překládáme z originálu, tedy z němčiny :de:, doporučil bych zachovat ve skritpech původní německé texty pro kontrolu (týká se pouze dialogů). A to tak, že se původní řádek zkopíruje a zakomentuje - na začátek řádku se vloží `//`. Ukázka:
 ```c++
