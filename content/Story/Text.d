@@ -52,8 +52,9 @@ const string MOBNAME_RUNEMAKER		= "Stůl na výrobu run";
 const string MOBNAME_PHOENIX9		= "!!! Znovuzrození fénixe !!!";
 
 // ********************************************************************************
-//	Schemanamen für Mobsis
+//	Schemanamen für Mobsis 
 // ********************************************************************************
+//  TOTO SE NEPŘEKLÁDÁ
 const string SCEMENAME_LAB			= "LAB";
 const string SCEMENAME_BOW			= "BOGENMACHER";
 const string SCEMENAME_FLETCHER		= "SCHNITZER";
@@ -89,9 +90,12 @@ CONST STRING TXT_GUILDS	[GIL_MAX] =	{
 // - Charakterblatt (Text der Spielergilde)
 // - Debuganzeige (Taste "G")
 	"(keine)",
-	"Milizsoldat",
-	"Arbeiter",
-	"Minenarbeiter",
+//	"Milizsoldat",
+	"Voják milice",
+//	"Arbeiter",
+	"Dělník",
+//	"Minenarbeiter",
+	"Horník",
 	"Medikus",
 	"Dieb",
 	"Aussätziger",
@@ -280,22 +284,38 @@ const string	NAME_New5			=	"New5";							// SPL_NEW5			=	21;
 CONST STRING TXT_TALENTS [NPC_TALENT_MAX] =
 {
 	"",
-	"Einhänder",				// NPC_TALENT_1H
-	"Zweihänder",               // NPC_TALENT_2H
-	"Kampfstab",                // NPC_TALENT_STAFF
-	"Bogen",                    // NPC_TALENT_BOW
-	"Armbrust",                 // NPC_TALENT_CROSSBOW
-	"Schloss knacken",	        // NPC_TALENT_PICKLOCK
-	"Diebstahl",        		// NPC_TALENT_PICKPOCKET
-	"Zaubern",                  // NPC_TALENT_MAGE
-	"Schleichen",               // NPC_TALENT_SNEAK
-	"Schmieden",                // NPC_TALENT_SMITH
-	"Kochen",                   // NPC_TALENT_COOK
-	"Akrobatik",                // NPC_TALENT_ACROBAT
-	"Runen erschaffen",			// NPC_TALENT_THAUMATURGY
-	"Bognerei",					// NPC_TALENT_BOWMAKER
-	"Alchemie",                 // NPC_TALENT_ALCHEMY
-	"Tiere zähmen",				// NPC_TALENT_ANIMALTAMING
+//	"Einhänder",				// NPC_TALENT_1H
+	"Jednoruční zbraně",		// NPC_TALENT_1H
+//	"Zweihänder",               // NPC_TALENT_2H
+	"Obouruční zbraně",         // NPC_TALENT_2H
+//	"Kampfstab",                // NPC_TALENT_STAFF
+	"Bojové hole",              // NPC_TALENT_STAFF
+//	"Bogen",                    // NPC_TALENT_BOW
+	"Luky",                     // NPC_TALENT_BOW
+//	"Armbrust",                 // NPC_TALENT_CROSSBOW
+	"Luš",                      // NPC_TALENT_CROSSBOW
+//	"Schloss knacken",	        // NPC_TALENT_PICKLOCK
+	"Otevírání zámků",	        // NPC_TALENT_PICKLOCK
+//	"Diebstahl",        		// NPC_TALENT_PICKPOCKET
+	"Vybírání kapes",     		// NPC_TALENT_PICKPOCKET
+//	"Zaubern",                  // NPC_TALENT_MAGE
+	"Magie",                    // NPC_TALENT_MAGE
+//	"Schleichen",               // NPC_TALENT_SNEAK
+	"Plížení",               	// NPC_TALENT_SNEAK
+//	"Schmieden",                // NPC_TALENT_SMITH
+	"Kovářství",                // NPC_TALENT_SMITH
+//	"Kochen",                   // NPC_TALENT_COOK
+	"Vaření",                   // NPC_TALENT_COOK
+//	"Akrobatik",                // NPC_TALENT_ACROBAT
+	"Akrobacie",                // NPC_TALENT_ACROBAT
+//	"Runen erschaffen",			// NPC_TALENT_THAUMATURGY
+	"Výroba run",				// NPC_TALENT_THAUMATURGY
+//	"Bognerei",					// NPC_TALENT_BOWMAKER
+	"Výroba luků",				// NPC_TALENT_BOWMAKER
+//	"Alchemie",                 // NPC_TALENT_ALCHEMY
+	"Alchymie",                 // NPC_TALENT_ALCHEMY
+//	"Tiere zähmen",				// NPC_TALENT_ANIMALTAMING
+	"Získávání trofejí",		// NPC_TALENT_ANIMALTAMING
 	"UserDef5",
 	"UserDef6",
 	"UserDef7",
@@ -307,22 +327,38 @@ CONST STRING TXT_TALENTS [NPC_TALENT_MAX] =
 CONST STRING TXT_TALENTS_SKILLS [NPC_TALENT_MAX] =
 {
 	"",
-	"ungeübt|ausgebildet|gemeistert",						// NPC_TALENT_1H
-	"ungeübt|ausgebildet|gemeistert",						// NPC_TALENT_2H
-	"ungeübt|ausgebildet|gemeistert",						// NPC_TALENT_STAFF
-	"ungeübt|ausgebildet|gemeistert",						// NPC_TALENT_BOW
-	"ungeübt|ausgebildet|gemeistert",						// NPC_TALENT_CROSSBOW
-	"ungeübt|ausgebildet|gemeistert",						// NPC_TALENT_PICKLOCK
-	"ungeübt|ausgebildet|gemeistert",						// NPC_TALENT_PICKPOCKET
-	"-|1.Kreis|2.Kreis|3.Kreis|4.Kreis|5.Kreis|6.Kreis",	// NPC_TALENT_MAGE
-	"-|ausgebildet",										// NPC_TALENT_SNEAK
-	"-|normales Erz|Bluterz|Dunkelerz",						// NPC_TALENT_SMITH
-	"-|Lehrling|Geselle|Meister",							// NPC_TALENT_COOK
-	"-|ausgebildet",										// NPC_TALENT_ACROBAT
-	"-|Lehrling|Geselle|Meister",							// NPC_TALENT_THAUMATURGY
-	"-|Lehrling|Geselle|Meister",							// NPC_TALENT_BOWMAKER
-	"-|Lehrling|Geselle|Meister",							// NPC_TALENT_ALCHEMY
-	"-|Lehrling|Geselle|Meister",							// NPC_TALENT_ANIMALTAMING
+//	"ungeübt|ausgebildet|gemeistert",						// NPC_TALENT_1H
+	"začátečník|pokročilý|mistr",							// NPC_TALENT_1H
+//	"ungeübt|ausgebildet|gemeistert",						// NPC_TALENT_2H
+	"začátečník|pokročilý|mistr",							// NPC_TALENT_2H
+//	"ungeübt|ausgebildet|gemeistert",						// NPC_TALENT_STAFF
+	"začátečník|pokročilý|mistr",							// NPC_TALENT_STAFF
+//	"ungeübt|ausgebildet|gemeistert",						// NPC_TALENT_BOW
+	"začátečník|pokročilý|mistr",							// NPC_TALENT_BOW
+//	"ungeübt|ausgebildet|gemeistert",						// NPC_TALENT_CROSSBOW
+	"začátečník|pokročilý|mistr",							// NPC_TALENT_CROSSBOW
+//	"ungeübt|ausgebildet|gemeistert",						// NPC_TALENT_PICKLOCK
+	"začátečník|pokročilý|mistr",							// NPC_TALENT_PICKLOCK
+//	"ungeübt|ausgebildet|gemeistert",						// NPC_TALENT_PICKPOCKET
+	"začátečník|pokročilý|mistr",							// NPC_TALENT_PICKPOCKET
+//	"-|1.Kreis|2.Kreis|3.Kreis|4.Kreis|5.Kreis|6.Kreis",	// NPC_TALENT_MAGE
+	"ne|Kruh 1|Kruh 2|Kruh 3|Kruh 4|Kruh 5|Kruh 6",			// NPC_TALENT_MAGE
+//	"-|ausgebildet",										// NPC_TALENT_SNEAK
+	"-|naučeno",											// NPC_TALENT_SNEAK
+//	"-|normales Erz|Bluterz|Dunkelerz",						// NPC_TALENT_SMITH
+	"-|magická ruda|krvavá ruda|tmavá ruda",				// NPC_TALENT_SMITH
+//	"-|Lehrling|Geselle|Meister",							// NPC_TALENT_COOK
+	"-|učeň|tovaryš|mistr",									// NPC_TALENT_COOK
+//	"-|ausgebildet",										// NPC_TALENT_ACROBAT
+	"-|naučeno",											// NPC_TALENT_ACROBAT
+//	"-|Lehrling|Geselle|Meister",							// NPC_TALENT_THAUMATURGY
+	"-|učeň|tovaryš|mistr",									// NPC_TALENT_THAUMATURGY
+//	"-|Lehrling|Geselle|Meister",							// NPC_TALENT_BOWMAKER
+	"-|učeň|tovaryš|mistr",									// NPC_TALENT_BOWMAKER
+//	"-|Lehrling|Geselle|Meister",							// NPC_TALENT_ALCHEMY
+	"-|učeň|tovaryš|mistr",									// NPC_TALENT_ALCHEMY
+//	"-|Lehrling|Geselle|Meister",							// NPC_TALENT_ANIMALTAMING
+	"-|učeň|tovaryš|mistr",									// NPC_TALENT_ANIMALTAMING
 	"UserDef5",
 	"UserDef6",
 	"UserDef7",
@@ -337,14 +373,22 @@ CONST STRING TXT_TALENTS_SKILLS [NPC_TALENT_MAX] =
 
 CONST STRING TXT_INV_CAT [INV_CAT_MAX] = {
 	"",
-	"Waffen",
-	"Rüstungen",
+//	"Waffen",
+	"Zbraně",
+//	"Rüstungen",
+	"Zbroj",
+//	"Magie",
 	"Magie",
-	"Artefakte",
-	"Nahrung",
-	"Tränke",
-	"Schriften",
-	"Verschiedenes"
+//	"Artefakte",
+	"Artefakty",
+//	"Nahrung",
+	"Jídlo",
+//	"Tränke",
+	"Lektvary",
+//	"Schriften",
+	"Rukopisy",
+//	"Verschiedenes"
+	"Různé"
 };
 
 
@@ -352,422 +396,731 @@ CONST STRING TXT_INV_CAT [INV_CAT_MAX] = {
 // Fokusnamen der Ambient-NSCs
 // ***************************************************************************************
 
-CONST STRING NAME_Militia		= "Milizsoldat";
-CONST STRING NAME_Worker		= "Arbeiter";
-CONST STRING NAME_Miner			= "Minenarbeiter";
-CONST STRING NAME_Thief			= "Herumtreiber";
-CONST STRING NAME_Healer		= "Medikus";
-CONST STRING NAME_Possessed		= "Aussätziger";
-CONST STRING NAME_Beggar		= "Bettler";
-CONST STRING NAME_Demonic		= "Dämonenanbeter";
-CONST STRING NAME_Torwache		= "Torwache";
-CONST STRING NAME_Brueckenwache	= "Brückenwache";
-CONST STRING NAME_Schuetze		= "Armbrustschütze";
-CONST STRING NAME_Amazon		= "Amazone";
-CONST STRING NAME_Paladin		= "Wache";
-const string Name_Auxiliary		= "Soldat der Hilfstruppen";
-CONST STRING NAME_KDF			= "Feuermagier";
-CONST STRING NAME_Bloodearth	= "Bluterde-Klan";
-CONST STRING NAME_Demonhunter	= "Dämonenjäger";
-CONST STRING NAME_Trader		= "Händler";
+//CONST STRING NAME_Militia			= "Milizsoldat";
+CONST STRING NAME_Militia			= "Milice";
+//CONST STRING NAME_Worker			= "Arbeiter";
+CONST STRING NAME_Worker			= "Dělník";
+//CONST STRING NAME_Miner			= "Minenarbeiter";
+CONST STRING NAME_Miner				= "Horník";
+//CONST STRING NAME_Thief			= "Herumtreiber";
+CONST STRING NAME_Thief				= "Pobuda";
+//CONST STRING NAME_Healer			= "Medikus";
+CONST STRING NAME_Healer			= "Léčitel";
+//CONST STRING NAME_Possessed		= "Aussätziger";
+CONST STRING NAME_Possessed			= "Posedlý";
+//CONST STRING NAME_Beggar			= "Bettler";
+CONST STRING NAME_Beggar			= "Žebrák";
+//CONST STRING NAME_Demonic			= "Dämonenanbeter";
+CONST STRING NAME_Demonic			= "Uctívač démonů";
+//CONST STRING NAME_Torwache		= "Torwache";
+CONST STRING NAME_Torwache			= "Věžní stráž";
+//CONST STRING NAME_Brueckenwache	= "Brückenwache";
+CONST STRING NAME_Brueckenwache		= "Mostní stráž";
+//CONST STRING NAME_Schuetze		= "Armbrustschütze";
+CONST STRING NAME_Schuetze			= "Střelec z kuše";
+//CONST STRING NAME_Amazon			= "Amazone";
+CONST STRING NAME_Amazon			= "amazonka";
+//CONST STRING NAME_Paladin			= "Wache";
+CONST STRING NAME_Paladin			= "Stráž";
+//CONST STRING Name_Auxiliary		= "Soldat der Hilfstruppen";
+CONST STRING Name_Auxiliary			= "Voják pomocných jednotek ";
+//CONST STRING NAME_KDF				= "Feuermagier";
+CONST STRING NAME_KDF				= "Mág ohně";
+//CONST STRING NAME_Bloodearth		= "Bluterde-Klan";
+CONST STRING NAME_Bloodearth		= "";
+//CONST STRING NAME_Demonhunter		= "Dämonenjäger";
+CONST STRING NAME_Demonhunter		= "Lovec démonů";
+//CONST STRING NAME_Trader			= "Händler";
+CONST STRING NAME_Trader			= "Obchodník";
 
 
 // *************************************************************
 // DIALOG OPTIONEN
 // *************************************************************
-const STRING DIALOG_ENDE		= "ENDE";
-CONST STRING DIALOG_BACK		= "ZURÜCK";
-const string DIALOG_TRADE		= "(Tauschen)";
-const string PD_TRUE			= "...TRUE";
-const string PD_FALSE			= "...FALSE";
+//const STRING DIALOG_ENDE		= "ENDE";
+const STRING DIALOG_ENDE		= "Konec";
+//CONST STRING DIALOG_BACK		= "ZURÜCK";
+CONST STRING DIALOG_BACK		= "Zpět";
+//const string DIALOG_TRADE		= "(Tauschen)";
+const string DIALOG_TRADE		= "(Obchodovat)";
+//const string PD_TRUE			= "...TRUE";
+const string PD_TRUE			= "...Pravda";
+//const string PD_FALSE			= "...FALSE";
+const string PD_FALSE			= "...Lež";
 
 // *************************************************************
 // FOKUSNAMEN DER ITEMS
 // *************************************************************
 
-const string NAME_Ring			= "Ring";
-const string NAME_Amulett		= "Amulett";
-const string NAME_Trank			= "Trank";
-const string NAME_Rune			= "Rune";
-const string NAME_Spruchrolle	= "Spruchrolle";
+//const string NAME_Ring		= "Ring";
+const string NAME_Ring			= "Prsten";
+//const string NAME_Amulett		= "Amulett";
+const string NAME_Amulett		= "Amulet";
+//const string NAME_Trank		= "Trank";
+const string NAME_Trank			= "Lektvar";
+//const string NAME_Rune		= "Rune";
+const string NAME_Rune			= "Runa";
+//const string NAME_Spruchrolle	= "Spruchrolle";
+const string NAME_Spruchrolle	= "Magický svitek";
 
 
 // *************************************************************
 // TEXTE FÜR ITEM-BESCHREIBUNGEN IM INV.
 // *************************************************************
 
-const string NAME_Value			= "Wert:";
+//const string NAME_Value			= "Wert:";
+const string NAME_Value				= "Cena:";
 
-const string NAME_Mag_Circle	= "Kreis:";
-const string NAME_Manakosten	= "Manakosten:";
-const string NAME_ManakostenMax	= "Manakosten (max.):";
-const string NAME_ManaPerSec	= "Mana pro Sec.";
-const string NAME_Duration		= "Dauer (Minuten)";
+//const string NAME_Mag_Circle		= "Kreis:";
+const string NAME_Mag_Circle		= "Kruh:";
+//const string NAME_Manakosten		= "Manakosten:";
+const string NAME_Manakosten		= "Stojí magické energie:";
+//const string NAME_ManakostenMax	= "Manakosten (max.):";
+const string NAME_ManakostenMax		= "Stojí magické energie (max.):";
+//const string NAME_ManaPerSec		= "Mana pro Sec.";
+const string NAME_ManaPerSec		= "Mana za sek.";
+//const string NAME_Duration		= "Dauer (Minuten)";
+const string NAME_Duration			= "Trvání (minuty)";
 
-const string NAME_Mana_needed	= "benötigtes Mana:";
-const string NAME_Str_needed	= "benötigte Stärke:";
-const string NAME_Dex_needed	= "benötigte Geschicklichkeit:";
+//const string NAME_Mana_needed		= "benötigtes Mana:";
+const string NAME_Mana_needed		= "Požadovaná mana:";
+//const string NAME_Str_needed		= "benötigte Stärke:";
+const string NAME_Str_needed		= "Požadovaná síla:";
+//const string NAME_Dex_needed		= "benötigte Geschicklichkeit:";
+const string NAME_Dex_needed		= "Požadovaná obratnost:";
 
-const string NAME_Spell_Load	= "Aufladbarer Zauber";
-const string NAME_Spell_Invest	= "Aufrechterhaltungs-Zauber";
+//const string NAME_Spell_Load		= "Aufladbarer Zauber";
+const string NAME_Spell_Load		= "Nabíjecí kouzlo";
+const string NAME_Spell_Invest		= "Jednorázové kouzlo";
+//const string NAME_Spell_Invest	= "Aufrechterhaltungs-Zauber";
 
-const string NAME_Dam_Edge		= "Waffenschaden";
-const string NAME_Dam_Point		= "Pfeilschaden";
-const string NAME_Dam_Fire		= "Feuerschaden";
-const string NAME_Dam_Magic		= "Magieschaden";
-const string NAME_Dam_Fly		= "Wirbelschaden";
+//const string NAME_Dam_Edge		= "Waffenschaden";
+const string NAME_Dam_Edge			= "Poškození zbraněmi";
+//const string NAME_Dam_Point		= "Pfeilschaden";
+const string NAME_Dam_Point			= "Poškození šípy";
+//const string NAME_Dam_Fire		= "Feuerschaden";
+const string NAME_Dam_Fire			= "Poškození ohněm";
+//const string NAME_Dam_Magic		= "Magieschaden";
+const string NAME_Dam_Magic			= "Poškození magií";
+//const string NAME_Dam_Fly			= "Wirbelschaden";
+const string NAME_Dam_Fly			= "Poškození bouří";
 
-const string NAME_Bonus_Edge	= "Rüstschutzbonus Waffen";
-const string NAME_Bonus_Point	= "Rüstschutzbonus Pfeil";
-const string NAME_Bonus_Fire	= "Rüstschutzbonus Feuer";
-const string NAME_Bonus_Magic	= "Rüstschutzbonus Magie";
+//const string NAME_Bonus_Edge		= "Rüstschutzbonus Waffen";
+const string NAME_Bonus_Edge		= "Bonus k ochraně proti zbraním:";
+//const string NAME_Bonus_Point		= "Rüstschutzbonus Pfeil";
+const string NAME_Bonus_Point		= "Bonus k ochraně proti šípům:";
+//const string NAME_Bonus_Fire		= "Rüstschutzbonus Feuer";
+const string NAME_Bonus_Fire		= "Bonus k ochraně proti ohni:";
+//const string NAME_Bonus_Magic		= "Rüstschutzbonus Magie";
+const string NAME_Bonus_Magic		= "Bonus k ochraně proti magii:";
 
-const string NAME_Damage		= "Schaden";
-const string NAME_PerMana		= " (pro Mana)";
-const string NAME_DamagePerSec	= "Schaden pro Sec.";
+//const string NAME_Damage			= "Schaden";
+const string NAME_Damage			= "Poškození";
+//const string NAME_PerMana			= " (pro Mana)";
+const string NAME_PerMana			= " (za manu)";
+//const string NAME_DamagePerSec	= "Schaden pro Sec.";
+const string NAME_DamagePerSec		= "Poškození za s.";
 
-const string NAME_Prot_Edge		= "Schutz vor Waffen:";
-const string NAME_Prot_Point	= "Schutz vor Pfeilen:";
-const string NAME_Prot_Fire		= "Schutz vor Feuer:";
-const string NAME_Prot_Magic	= "Schutz vor Magie:";
+//const string NAME_Prot_Edge		= "Schutz vor Waffen:";
+const string NAME_Prot_Edge			= "Ochrana proti zbraním:";
+//const string NAME_Prot_Point		= "Schutz vor Pfeilen:";
+const string NAME_Prot_Point		= "Ochrana proti šípům:";
+//const string NAME_Prot_Fire		= "Schutz vor Feuer:";
+const string NAME_Prot_Fire			= "Ochrana proti ohni:";
+//const string NAME_Prot_Magic		= "Schutz vor Magie:";
+const string NAME_Prot_Magic		= "Ochrana proti magii:";
 
-const string NAME_Bonus_HP		= "Lebensenergie-Bonus:";
-const string NAME_Bonus_Mana	= "Mana-Bonus:";
+//const string NAME_Bonus_HP		= "Lebensenergie-Bonus:";
+const string NAME_Bonus_HP			= "Bonus zdraví:";
+//const string NAME_Bonus_Mana		= "Mana-Bonus:";
+const string NAME_Bonus_Mana		= "Bonus magické energie:";
 
-const string NAME_Bonus_HpMax	= "Bonus für maximale Lebensenergie:";
-const string NAME_Bonus_ManaMax	= "Bonus für maximales Mana:";
+//const string NAME_Bonus_HpMax		= "Bonus für maximale Lebensenergie:";
+const string NAME_Bonus_HpMax		= "Bonus pro maximum zdraví:";
+//const string NAME_Bonus_ManaMax	= "Bonus für maximales Mana:";
+const string NAME_Bonus_ManaMax		= "Bonus pro maximum magické energie:";
 
-const string NAME_Bonus_Dex		= "Geschicklichkeits-Bonus:";
-const string NAME_Bonus_Str		= "Stärke-Bonus:";
+//const string NAME_Bonus_Dex		= "Geschicklichkeits-Bonus:";
+const string NAME_Bonus_Dex			= "Bonus k obratnosti:";
+//const string NAME_Bonus_Str		= "Stärke-Bonus:";
+const string NAME_Bonus_Str			= "Bonus k síle:";
 
-const string NAME_TypeOneHanded	= "Waffentyp: Einhänder";
-const string NAME_TypeTwoHanded	= "Waffentyp: Zweihänder";
-const string NAME_TypeStaff		= "Waffentyp: Kampfstab";
-const string NAME_TypeBow		= "Waffentyp: Bogen";
-const string NAME_TypeCrossbow	= "Waffentyp: Armbrust";
+//const string NAME_TypeOneHanded	= "Waffentyp: Einhänder";
+const string NAME_TypeOneHanded		= "Typ: Jednoruční zbraň";
+//const string NAME_TypeTwoHanded	= "Waffentyp: Zweihänder";
+const string NAME_TypeTwoHanded		= "Typ: Obouruční zbraň";
+//const string NAME_TypeStaff		= "Waffentyp: Kampfstab";
+const string NAME_TypeStaff			= "Typ: Bojová hůl";
+//const string NAME_TypeBow			= "Waffentyp: Bogen";
+const string NAME_TypeBow			= "Typ: Luk";
+//const string NAME_TypeCrossbow	= "Waffentyp: Armbrust";
+const string NAME_TypeCrossbow		= "Typ: Kuš";
 
 // ***************************************************************************************
 // sonstige Bildschirmausgaben
 // ***************************************************************************************
-const string NAME_XPGained			= "Erfahrung + ";			// bei jedem Erfahrungsgewinn
-const string NAME_LevelUp			= "Stufe gestiegen!";		// beim Stufenaufstieg
+//const string NAME_XPGained		= "Erfahrung + ";			// bei jedem Erfahrungsgewinn
+const string NAME_XPGained			= "Zkušenost + ";
+//const string NAME_LevelUp			= "Stufe gestiegen!";		// beim Stufenaufstieg
+const string NAME_LevelUp			= "O úroveň výš!";
 
-const string NAME_LPGained			= "Lernpunkte + ";			// bei jedem Erfahrungsgewinn
-
-const string NAME_NewLogEntry		= "neuer Tagebucheintrag";
+//const string NAME_LPGained		= "Lernpunkte + ";			// bei jedem Erfahrungsgewinn
+const string NAME_LPGained			= "Zkušenostní body + ";
+//const string NAME_NewLogEntry		= "neuer Tagebucheintrag";
+const string NAME_NewLogEntry		= "Nový zápis do deníku";
 
 
 // ***************************************************************************************
 // Waffennamen
 // ***************************************************************************************
+//const string	NAME_Club					=	"Keule";
 const string	NAME_Club					=	"Keule";
+//const string	NAME_Poker					=	"Schürhaken";
 const string	NAME_Poker					=	"Schürhaken";
+//const string	NAME_Sickle					=	"Sichel";
 const string	NAME_Sickle					=	"Sichel";
+//const string	NAME_Pickaxe				=	"Spitzhacke";
 const string	NAME_Pickaxe				=	"Spitzhacke";
+//const string	NAME_Sledgehammer			=	"Schmiedehammer";
 const string	NAME_Sledgehammer			=	"Schmiedehammer";
+//const string	NAME_Scythe					=	"Sense";
 const string	NAME_Scythe					=	"Sense";
 
+//const string	NAME_Shortsword      		=	"Kurzschwert";
 const string	NAME_Shortsword      		=	"Kurzschwert";
+//const string	NAME_Longsword       		=	"Langschwert";
 const string	NAME_Longsword       		=	"Langschwert";
+//const string	NAME_Broadsword      		=	"Breitschwert";
 const string	NAME_Broadsword      		=	"Breitschwert";
+//const string	NAME_Bastardsword    		=	"Bastardschwert";
 const string	NAME_Bastardsword    		=	"Bastardschwert";
+//const string	NAME_2HSword         		=	"Zweihänder";
 const string	NAME_2HSword         		=	"Zweihänder";
+//const string	NAME_OrcSword        		=	"Krush Varrok";
 const string	NAME_OrcSword        		=	"Krush Varrok";
+//const string	NAME_Hatchet         		=	"Beil";
 const string	NAME_Hatchet         		=	"Beil";
+//const string	NAME_Battleaxe       		=	"Streitaxt";
 const string	NAME_Battleaxe       		=	"Streitaxt";
+//const string	NAME_DoublebladedAxe 		=	"Doppelblattaxt";
 const string	NAME_DoublebladedAxe 		=	"Doppelblattaxt";
+//const string	NAME_BerserkAxe      		=	"Berserkeraxt";
 const string	NAME_BerserkAxe      		=	"Berserkeraxt";
+//const string	NAME_OrcAxe          		=	"Krush BrokDar";
 const string	NAME_OrcAxe          		=	"Krush BrokDar";
+//const string	NAME_IronClub        		=	"Eisenkeule";
 const string	NAME_IronClub        		=	"Eisenkeule";
+//const string	NAME_Mace            		=	"Streitkolben";
 const string	NAME_Mace            		=	"Streitkolben";
+//const string	NAME_Morningstar     		=	"Morgenstern";
 const string	NAME_Morningstar     		=	"Morgenstern";
+//const string	NAME_Warhammer       		=	"Kriegshammer";
 const string	NAME_Warhammer       		=	"Kriegshammer";
+//const string	NAME_OrcHammer       		=	"Krush Karrok";
 const string	NAME_OrcHammer       		=	"Krush Karrok";
 
+//const string	NAME_Battlestaff			=	"Kampfstab";
 const string	NAME_Battlestaff			=	"Kampfstab";
 
+//const string	NAME_MilitiaSword      		=	"Milizschwert";
 const string	NAME_MilitiaSword      		=	"Milizschwert";
+//const string	NAME_PaladinSword      		=	"Paladinschwert";
 const string	NAME_PaladinSword      		=	"Paladinschwert";
+//const string	NAME_DemonhunterAxe    		=	"Dämonenjäger-Axt";
 const string	NAME_DemonhunterAxe    		=	"Dämonenjäger-Axt";
+//const string	NAME_AuxiliaryMace			=	"Streitkolben der Hilfstruppen";
 const string	NAME_AuxiliaryMace			=	"Streitkolben der Hilfstruppen";
 
 
 //////////////////////////////////////////////////////////////////////////////////////////
 // Nahrungsnamen
 //////////////////////////////////////////////////////////////////////////////////////////
-const string	NAME_Apple					=	"Apfel";
-const string	NAME_Grapes					=	"Weintrauben";
-const string	NAME_Loaf					=	"Brot";
-const string	NAME_Mutton					=	"gebratenes Fleisch";
-const string	NAME_MuttonRaw				=	"rohes Fleisch";
-const string	NAME_Ham      				=	"Schinken";
-const string	NAME_Cheese		       		=	"Käse";
-const string	NAME_Soup	  		  		=	"Wurzelsuppe";
-const string	NAME_MeatBugRagout         	=	"Fleischwanzenragout";
-const string	NAME_CrawlerSoup        	=	"Minecrawlersuppe";
-const string	NAME_Beer 		      		=	"Bier";
-const string	NAME_Wine			 		=	"Wein";
-const string	NAME_Booze		      		=	"Reisschnaps";
+//const string	NAME_Apple					=	"Apfel";
+const string	NAME_Apple					=	"Jablko";
+//const string	NAME_Grapes					=	"Weintrauben";
+const string	NAME_Grapes					=	"Hrozny";
+//const string	NAME_Loaf					=	"Brot";
+const string	NAME_Loaf					=	"Chléb";
+//const string	NAME_Mutton					=	"gebratenes Fleisch";
+const string	NAME_Mutton					=	"Opečené maso";
+//const string	NAME_MuttonRaw				=	"rohes Fleisch";
+const string	NAME_MuttonRaw				=	"Syrové maso";
+//const string	NAME_Ham      				=	"Schinken";
+const string	NAME_Ham      				=	"Šunka";
+//const string	NAME_Cheese		       		=	"Käse";
+const string	NAME_Cheese		       		=	"Sýr";
+//const string	NAME_Soup	  		  		=	"Wurzelsuppe";
+const string	NAME_Soup	  		  		=	"Polévka z kořínků";
+//const string	NAME_MeatBugRagout         	=	"Fleischwanzenragout";
+const string	NAME_MeatBugRagout         	=	"Ragú ze žravých štěnic";
+//const string	NAME_CrawlerSoup        	=	"Minecrawlersuppe";
+const string	NAME_CrawlerSoup        	=	"Polévka z důlních červů";
+//const string	NAME_Beer 		      		=	"Bier";
+const string	NAME_Beer 		      		=	"Pivo";
+//const string	NAME_Wine			 		=	"Wein";
+const string	NAME_Wine			 		=	"Víno";
+//const string	NAME_Booze		      		=	"Reisschnaps";
+const string	NAME_Booze		      		=	"Rýžová pálenka";
 
 //////////////////////////////////////////////////////////////////////////////////////////
 // Animaltrophis
 //////////////////////////////////////////////////////////////////////////////////////////
+//const string	NAME_MeatBug				=	"Wanzenfleisch";
 const string	NAME_MeatBug				=	"Wanzenfleisch";
+//const string	NAME_MoleratGrease			=	"Moleratfett";
 const string	NAME_MoleratGrease			=	"Moleratfett";
+//const string	NAME_Teeth					=	"Zähne";
 const string	NAME_Teeth					=	"Zähne";
+//const string	NAME_WolfFur				=	"Wolfsfell";
 const string	NAME_WolfFur				=	"Wolfsfell";
+//const string	NAME_OrkDogFur				=	"Orkhundfell";
 const string	NAME_OrkDogFur				=	"Orkhundfell";
+//const string	NAME_WaranTongue			=	"Flammenzunge";
 const string	NAME_WaranTongue			=	"Flammenzunge";
+//const string	NAME_Claws					=	"Krallen";
 const string	NAME_Claws					=	"Krallen";
+//const string	NAME_CrawlerPlates			=	"Panzerplatte";
 const string	NAME_CrawlerPlates			=	"Panzerplatte";
+//const string	NAME_CrawlerMandibles      	=	"Crawlerzangen";
 const string	NAME_CrawlerMandibles      	=	"Crawlerzangen";
+//const string	NAME_ShadowFur		       	=	"Fell";
 const string	NAME_ShadowFur		       	=	"Fell";
+//const string	NAME_ShadowHorn		      	=	"Horn";
 const string	NAME_ShadowHorn		      	=	"Horn";
+//const string	NAME_LurkerClaw	 	  		=	"Lurkerklaue";
 const string	NAME_LurkerClaw	 	  		=	"Lurkerklaue";
+//const string	NAME_LurkerSkin         	=	"Lurkerhaut";
 const string	NAME_LurkerSkin         	=	"Lurkerhaut";
+//const string	NAME_TrollTeeth 	       	=	"Trollhauer";
 const string	NAME_TrollTeeth 	       	=	"Trollhauer";
+//const string	NAME_TrollFur	         	=	"Trollfell";
 const string	NAME_TrollFur	         	=	"Trollfell";
+//const string	NAME_SwampsharkSkin 		=	"Sumpfhaihaut";
 const string	NAME_SwampsharkSkin 		=	"Sumpfhaihaut";
+//const string	NAME_SwampsharkTeeth		=	"Sumpfhaizähne";
 const string	NAME_SwampsharkTeeth		=	"Sumpfhaizähne";
+//const string	NAME_BloodflyWings		    =	"Flügel";
 const string	NAME_BloodflyWings		    =	"Flügel";
+//const string	NAME_BloodflySting			=	"Blutfliegenstachel";
 const string	NAME_BloodflySting			=	"Blutfliegenstachel";
+//const string	NAME_DemonSting				=	"dämonischer Stachel";
 const string	NAME_DemonSting				=	"dämonischer Stachel";
+//const string	NAME_StonegolemHeart		=	"Herz eines Steingolems";
 const string	NAME_StonegolemHeart		=	"Herz eines Steingolems";
+//const string	NAME_FiregolemHeart			=	"Herz eines Feuergolems";
 const string	NAME_FiregolemHeart			=	"Herz eines Feuergolems";
+//const string	NAME_IcegolemHeart			=	"Herz eines Eisgolems";
 const string	NAME_IcegolemHeart			=	"Herz eines Eisgolems";
+//const string	NAME_IcegolemPiece			=	"Stück eines Eisgolems";
 const string	NAME_IcegolemPiece			=	"Stück eines Eisgolems";
 
 //////////////////////////////////////////////////////////////////////////////////////////
 // Rüstungen
 //////////////////////////////////////////////////////////////////////////////////////////
+//const string	NAME_ArmorKing				=	"King_Armor";
 const string	NAME_ArmorKing				=	"King_Armor";
+//const string	NAME_HeavyArmorDemonhunter	=	"schwere Demonhunterrüstung";
 const string	NAME_HeavyArmorDemonhunter	=	"schwere Demonhunterrüstung";
+//const string	NAME_MediumArmorDemonhunter	=	"mittlere Demonhunterrüstung";
 const string	NAME_MediumArmorDemonhunter	=	"mittlere Demonhunterrüstung";
+//const string	NAME_LightArmorDemonhunter	=	"leichte Demonhunterrüstung";
 const string	NAME_LightArmorDemonhunter	=	"leichte Demonhunterrüstung";
+//const string	NAME_HeavyArmorDemonhunter2	=	"schwere Demonhunterrüstung2";
 const string	NAME_HeavyArmorDemonhunter2	=	"schwere Demonhunterrüstung2";
+//const string	NAME_MediumArmorDemonhunter2=	"mittlere Demonhunterrüstung2";
 const string	NAME_MediumArmorDemonhunter2=	"mittlere Demonhunterrüstung2";
+//const string	NAME_HeavyArmorPaladin      =	"schwere Paladinrüstung";
 const string	NAME_HeavyArmorPaladin      =	"schwere Paladinrüstung";
+//const string	NAME_MediumArmorPaladin		=	"mittlere Paladinrüstung";
 const string	NAME_MediumArmorPaladin		=	"mittlere Paladinrüstung";
+//const string	NAME_LightArmorPaladin     	=	"leichte Paladinrüstung";
 const string	NAME_LightArmorPaladin     	=	"leichte Paladinrüstung";
+//const string	NAME_HighArmorHealer	 	=	"Schweres Heilergewand";
 const string	NAME_HighArmorHealer	 	=	"Schweres Heilergewand";
+//const string	NAME_MediumArmorHealer      =	"Heilergewand";
 const string	NAME_MediumArmorHealer      =	"Heilergewand";
+//const string	NAME_ArmorDemonfollower 	=	"Dämonenanbeter-Gewand";
 const string	NAME_ArmorDemonfollower 	=	"Dämonenanbeter-Gewand";
+//const string	NAME_ArmorBeggar	        =	"Bettler-Lumpen";
 const string	NAME_ArmorBeggar	        =	"Bettler-Lumpen";
+//const string	NAME_ArmorVLk_L				=	"Leichte Buddlerhose";
 const string	NAME_ArmorVLk_L				=	"Leichte Buddlerhose";
+//const string	NAME_ArmorVLk_M				=	"Buddlerhose";
 const string	NAME_ArmorVLk_M				=	"Buddlerhose";
+//const string	NAME_ArmorSFB_L				=	"Schürferklamotten";
 const string	NAME_ArmorSFB_L				=	"Schürferklamotten";
 
 //////////////////////////////////////////////////////////////////////////////////////////
 // Misc
 //////////////////////////////////////////////////////////////////////////////////////////
+//const string	NAME_Lockpick				=	"Dietrich";
 const string	NAME_Lockpick				=	"Dietrich";
+//const string	NAME_Key					=	"Schlüssel";
 const string	NAME_Key					=	"Schlüssel";
+//const string	NAME_Stomper				=	"Krautstampfer";
 const string	NAME_Stomper				=	"Krautstampfer";
+//const string	NAME_Hammer					=	"Hammer";
 const string	NAME_Hammer					=	"Hammer";
+//const string	NAME_Scoop					=	"Kochlöffel";
 const string	NAME_Scoop					=	"Kochlöffel";
+//const string	NAME_LabFlask				=	"Laborflasche";
 const string	NAME_LabFlask				=	"Laborflasche";
+//const string	NAME_TorchFirespit 		    =	"Fackel";
 const string	NAME_TorchFirespit 		    =	"Fackel";
+//const string	NAME_Lute					=	"Laute";
 const string	NAME_Lute					=	"Laute";
+//const string	NAME_Whisk 			    	=	"Palm wedel";
 const string	NAME_Whisk 			    	=	"Palm wedel";
+//const string	NAME_Brush				 	=	"Bürste";
 const string	NAME_Brush				 	=	"Bürste";
+//const string	NAME_Joint1 			    =	"Grüner Novize";
 const string	NAME_Joint1 			    =	"Grüner Novize";
+//const string	NAME_Joint2				 	=	"Schwarzer Weiser";
 const string	NAME_Joint2				 	=	"Schwarzer Weiser";
+//const string	NAME_Joint3			        =	"Traumruf";
 const string	NAME_Joint3			        =	"Traumruf";
+//const string	NAME_Torch					=	"Fackel";
 const string	NAME_Torch					=	"Fackel";
+//const string	NAME_BurningTorch			=	"Brennende Fackel";
 const string	NAME_BurningTorch			=	"Brennende Fackel";
+//const string	NAME_TorchBurned			=	"Fackel";
 const string	NAME_TorchBurned			=	"Fackel";
+//const string	NAME_Swampweed				=	"Sumpfkraut";
 const string	NAME_Swampweed				=	"Sumpfkraut";
+//const string	NAME_Sulphur				=	"Schwefel";
 const string	NAME_Sulphur				=	"Schwefel";
+//const string	NAME_Quicksilver			=	"Quecksilber";
 const string	NAME_Quicksilver			=	"Quecksilber";
+//const string	NAME_Salt					=	"Salz";
 const string	NAME_Salt					=	"Salz";
+//const string	NAME_SyrianOil 			    =	"Syrianisches Öl";
 const string	NAME_SyrianOil 			    =	"Syrianisches Öl";
+//const string	NAME_Alcohol 		    	=	"Reiner Alkohol";
 const string	NAME_Alcohol 		    	=	"Reiner Alkohol";
+//const string	NAME_FakeScroll			 	=	"Brief";
 const string	NAME_FakeScroll			 	=	"Brief";
+//const string	NAME_AlarmHorn 				=	"Horn";
 const string	NAME_AlarmHorn 				=	"Horn";
+//const string	NAME_WorldMap				=	"Karte der Kolonie";
 const string	NAME_WorldMap				=	"Karte der Kolonie";
+//const string	NAME_StinkingSalt			=	"Müffelsalz";
 const string	NAME_StinkingSalt			=	"Müffelsalz";
 
 
 //////////////////////////////////////////////////////////////////////////////////////////
 // Ranged Weapons
 //////////////////////////////////////////////////////////////////////////////////////////
+//const string	NAME_ShortBow				=	"Kurzbogen";
 const string	NAME_ShortBow				=	"Kurzbogen";
+//const string	NAME_RiderBow				=	"Reiterbogen";
 const string	NAME_RiderBow				=	"Reiterbogen";
+//const string	NAME_FieldBow				=	"Feldbogen";
 const string	NAME_FieldBow				=	"Feldbogen";
+//const string	NAME_HuntingBow				=	"Jagdbogen";
 const string	NAME_HuntingBow				=	"Jagdbogen";
+//const string	NAME_LongBow				=	"Langbogen";
 const string	NAME_LongBow				=	"Langbogen";
+//const string	NAME_HedgeBow 			    =	"Heckenbogen";
 const string	NAME_HedgeBow 			    =	"Heckenbogen";
+//const string	NAME_YewBow 			   	=	"Eibenbogen";
 const string	NAME_YewBow 			   	=	"Eibenbogen";
+//const string	NAME_ArmyBow			 	=	"Armeebogen";
 const string	NAME_ArmyBow			 	=	"Armeebogen";
+//const string	NAME_WarBow					=	"Kriegsbogen";
 const string	NAME_WarBow					=	"Kriegsbogen";
+//const string	NAME_StormBow				=	"Sturmbogen";
 const string	NAME_StormBow				=	"Sturmbogen";
 
+//const string	NAME_LightCrossBow 		    =	"Leichte Armbrust";
 const string	NAME_LightCrossBow 		    =	"Leichte Armbrust";
+//const string	NAME_CrossBow				=	"Armbrust";
 const string	NAME_CrossBow				=	"Armbrust";
+//const string	NAME_HeavyCrossBow 			=	"Schwere Armbrust";
 const string	NAME_HeavyCrossBow 			=	"Schwere Armbrust";
+//const string	NAME_WarCrossBow			=	"Kriegs-Armbrust";
 const string	NAME_WarCrossBow			=	"Kriegs-Armbrust";
 
+//const string	NAME_Arrow 				    =	"Pfeil";
 const string	NAME_Arrow 				    =	"Pfeil";
+//const string	NAME_Bolt				 	=	"Bolzen";
 const string	NAME_Bolt				 	=	"Bolzen";
 
+//const string	NAME_WolfBow			 	=	"Wolfsfetzer";
 const string	NAME_WolfBow			 	=	"Wolfsfetzer";
+//const string	NAME_WindBreaker 			=	"Windbrecher";
 const string	NAME_WindBreaker 			=	"Windbrecher";
+//const string	NAME_Nimrod					=	"Nimroder";
 const string	NAME_Nimrod					=	"Nimroder";
+//const string	NAME_OrkHunter				=	"Orkhetzer";
 const string	NAME_OrkHunter				=	"Orkhetzer";
+//const string	NAME_DemonBow				=	"Dämonenbogen";
 const string	NAME_DemonBow				=	"Dämonenbogen";
+//const string	NAME_DeathBringer			=	"Todbringer";
 const string	NAME_DeathBringer			=	"Todbringer";
 
 // ***************************************************************************************
 // Schmiedematerialien & Zwischenprodukte
 // ***************************************************************************************
-const string	NAME_Nugget					=	"Erz";
-const string	NAME_BloodNugget			=	"Bluterz";
-const string	NAME_DarkNugget				=	"Dunkelerz";
+//const string	NAME_Nugget					=	"Erz";
+const string	NAME_Nugget					=	"ruda";
+//const string	NAME_BloodNugget			=	"Bluterz";
+const string	NAME_BloodNugget			=	"krvavá ruda";
+//const string	NAME_DarkNugget				=	"Dunkelerz";
+const string	NAME_DarkNugget				=	"tmavá ruda";
 
-const string	NAME_RawIron				=	"Roheisen";
-const string	NAME_RawLongIron			=	"Lang-Roheisen";
-const string	NAME_HotIron				=	"glühendes Roheisen";
-const string	NAME_HotLongIron			=	"glühendes Lang-Roheisen";
+//const string	NAME_RawIron				=	"Roheisen";
+const string	NAME_RawIron				=	"surová ocel";
+//const string	NAME_RawLongIron			=	"Lang-Roheisen";
+const string	NAME_RawLongIron			=	"dlouhá surová ocel";
+//const string	NAME_HotIron				=	"glühendes Roheisen";
+const string	NAME_HotIron				=	"žhnoucí ocel";
+//const string	NAME_HotLongIron			=	"glühendes Lang-Roheisen";
+const string	NAME_HotLongIron			=	"žhnoucí dlouhá ocel";
 
-const string	NAME_HotSwordBlade			=	"glühende Schwertklinge";
-const string	NAME_HotAxeBlade			=	"glühende Axtblatt";
-const string	NAME_HotStump				=	"glühender Waffenstumpf";
-const string	NAME_Hot2HSwordBlade		=	"glühende 2H-Schwertklinge";
-const string	NAME_Hot2HAxeBlade			=	"glühende 2H-Axtblatt";
-const string	NAME_Hot2HStump				=	"glühender 2H-Waffenstumpf";
+//const string	NAME_HotSwordBlade			=	"glühende Schwertklinge";
+const string	NAME_HotSwordBlade			=	"Žhnoucí čepel meče";
+//const string	NAME_HotAxeBlade			=	"glühende Axtblatt";
+const string	NAME_HotAxeBlade			=	"Žhnoucí list sekery";
+//const string	NAME_HotStump				=	"glühender Waffenstumpf";
+const string	NAME_HotStump				=	"Žhnoucí polotovar";
+//const string	NAME_Hot2HSwordBlade		=	"glühende 2H-Schwertklinge";
+const string	NAME_Hot2HSwordBlade		=	"Žhnoucí čepel obouručního meče";
+//const string	NAME_Hot2HAxeBlade			=	"glühende 2H-Axtblatt";
+const string	NAME_Hot2HAxeBlade			=	"Žhnoucí list obouruční sekery";
+//const string	NAME_Hot2HStump				=	"glühender 2H-Waffenstumpf";
+const string	NAME_Hot2HStump				=	"Polotovar obouruční zbraně";
 
-const string	NAME_SwordBlade				=	"Schwertklinge";
-const string	NAME_AxeBlade				=	"Axtblatt";
-const string	NAME_Stump					=	"Waffenstumpf";
-const string	NAME_2HSwordBlade			=	"2H-Schwertklinge";
-const string	NAME_2HAxeBlade				=	"2H-Axtblatt";
-const string	NAME_2HStump				=	"2H-Waffenstumpf";
+//const string	NAME_SwordBlade				=	"Schwertklinge";
+const string	NAME_SwordBlade				=	"Čepel meče";
+//const string	NAME_AxeBlade				=	"Axtblatt";
+const string	NAME_AxeBlade				=	"List sekery";
+//const string	NAME_Stump					=	"Waffenstumpf";
+const string	NAME_Stump					=	"Polotovar";
+//const string	NAME_2HSwordBlade			=	"2H-Schwertklinge";
+const string	NAME_2HSwordBlade			=	"Čepel obouručního meče";
+//const string	NAME_2HAxeBlade				=	"2H-Axtblatt";
+const string	NAME_2HAxeBlade				=	"List obouruční sekery";
+//const string	NAME_2HStump				=	"2H-Waffenstumpf";
+const string	NAME_2HStump				=	"Polotovar obouruční zbraně";
 
 const string	NAME_Ore					=	"";
-const string	NAME_BloodOre				=	" aus Bluterz";
-const string	NAME_DarkOre				=	" aus Dunkelerz";
+//const string	NAME_BloodOre				=	" aus Bluterz";
+const string	NAME_BloodOre				=	" z krvavé rudy";
+//const string	NAME_DarkOre				=	" aus Dunkelerz";
+const string	NAME_DarkOre				=	" z tmavé rudy";
 
-const string	NAME_Smith_Melter			=	" einschmelzen";
-const string	NAME_Smith_Fire				=	" erhitzen";
-const string	NAME_Smith_Anvil			=	" schmieden";
-const string	NAME_Smith_Cool				=	" abkühlen";
-const string	NAME_Smith_Sharp			=	" schleifen";
+//const string	NAME_Smith_Melter			=	" einschmelzen";
+const string	NAME_Smith_Melter			=	" taví se";
+//const string	NAME_Smith_Fire				=	" erhitzen";
+const string	NAME_Smith_Fire				=	" žhaví se";
+//const string	NAME_Smith_Anvil			=	" schmieden";
+const string	NAME_Smith_Anvil			=	" kovám";
+//const string	NAME_Smith_Cool				=	" abkühlen";
+const string	NAME_Smith_Cool				=	" kalí se";
+//const string	NAME_Smith_Sharp			=	" schleifen";
+const string	NAME_Smith_Sharp			=	" brousím";
 
-const string	NAME_Smith_Ore_Done			=	" geschürft";
-const string	NAME_Smith_Melter_Done		=	" eingeschmolzen";
-const string	NAME_Smith_Fire_Done		=	" erhitzt";
-const string	NAME_Smith_Anvil_Done		=	" geschmiedet";
-const string	NAME_Smith_Cool_Done		=	" abgekühlt";
-const string	NAME_Smith_Sharp_Done		=	" geschliffen";
+//const string	NAME_Smith_Ore_Done			=	" geschürft";
+const string	NAME_Smith_Ore_Done			=	" vytěženo";
+//const string	NAME_Smith_Melter_Done		=	" eingeschmolzen";
+const string	NAME_Smith_Melter_Done		=	" roztaveno";
+//const string	NAME_Smith_Fire_Done		=	" erhitzt";
+const string	NAME_Smith_Fire_Done		=	" nažhaveno";
+//const string	NAME_Smith_Anvil_Done		=	" geschmiedet";
+const string	NAME_Smith_Anvil_Done		=	" vykováno";
+//const string	NAME_Smith_Cool_Done		=	" abgekühlt";
+const string	NAME_Smith_Cool_Done		=	" zakaleno";
+//const string	NAME_Smith_Sharp_Done		=	" geschliffen";
+const string	NAME_Smith_Sharp_Done		=	" nabroušeno";
 
 // ***************************************************************************************
 // Kochprodukte
 // ***************************************************************************************
-const string	NAME_MeatbugSoup			= 	"Meatbug-Suppe";
-const string	NAME_MushroomSoup			=	"Pilz-Suppe";
-const string	NAME_HerbSoup				=	"Kraut-Suppe";
-const string	NAME_MeatSoup				=	"Fleisch-Suppe";
-const string	NAME_MoleratSoup			=	"Molerat-Suppe";
+//const string	NAME_MeatbugSoup			= 	"Meatbug-Suppe";
+const string	NAME_MeatbugSoup			= 	"Polévka ze žravých štěnic";
+//const string	NAME_MushroomSoup			=	"Pilz-Suppe";
+const string	NAME_MushroomSoup			=	"Houbová polévka";
+//const string	NAME_HerbSoup				=	"Kraut-Suppe";
+const string	NAME_HerbSoup				=	"Bylinková polévka";
+//const string	NAME_MeatSoup				=	"Fleisch-Suppe";
+const string	NAME_MeatSoup				=	"Masová polévka";
+//const string	NAME_MoleratSoup			=	"Molerat-Suppe";
+const string	NAME_MoleratSoup			=	"Krysokrtí polévka";
 
-const string	NAME_MeatbugStew			= 	"Meatbug-Eintopf";
-const string	NAME_MushroomStew			=	"Pilz-Eintopf";
-const string	NAME_HerbStew				=	"Kraut-Eintopf";
-const string	NAME_MeatStew				=	"Fleisch-Eintopf";
-const string	NAME_MoleratStew			=	"Molerat-Eintopf";
+//const string	NAME_MeatbugStew			= 	"Meatbug-Eintopf";
+const string	NAME_MeatbugStew			= 	"";
+//const string	NAME_MushroomStew			=	"Pilz-Eintopf";
+const string	NAME_MushroomStew			=	"";
+//const string	NAME_HerbStew				=	"Kraut-Eintopf";
+const string	NAME_HerbStew				=	"";
+//const string	NAME_MeatStew				=	"Fleisch-Eintopf";
+const string	NAME_MeatStew				=	"";
+//const string	NAME_MoleratStew			=	"Molerat-Eintopf";
+const string	NAME_MoleratStew			=	"";
 
-const string	NAME_MeatbugPie				= 	"Meatbug-Ragout";
-const string	NAME_MushroomPie			=	"Pilz-Ragout";
-const string	NAME_HerbPie				=	"Kraut-Ragout";
-const string	NAME_MeatPie				=	"Fleisch-Ragout";
-const string	NAME_MoleratPie				=	"Molerat-Ragout";
+//const string	NAME_MeatbugPie				= 	"Meatbug-Ragout";
+const string	NAME_MeatbugPie				= 	"Ragú ze žravých štěnic";
+//const string	NAME_MushroomPie			=	"Pilz-Ragout";
+const string	NAME_MushroomPie			=	"Houbové ragú";
+//const string	NAME_HerbPie				=	"Kraut-Ragout";
+const string	NAME_HerbPie				=	"Bylinkové ragú";
+//const string	NAME_MeatPie				=	"Fleisch-Ragout";
+const string	NAME_MeatPie				=	"Masové ragú";
+//const string	NAME_MoleratPie				=	"Molerat-Ragout";
+const string	NAME_MoleratPie				=	"Ragú z krysokrta";
 
-const string	NAME_RecipeMeatbug			=	"schmackhafte Wanzenrezepte";
-const string	NAME_RecipeMolerat			=	"ungewöhnliche Moleratgerichte";
-const string	NAME_RecipeHerb				=	"delikate Kräuterrezepte";
-const string	NAME_RecipeMushroom			=	"wunderliche Pilzgerichte";
-const string	NAME_RecipeMeat				=	"leckere Fleischzubereitung";
+//const string	NAME_RecipeMeatbug			=	"schmackhafte Wanzenrezepte";
+const string	NAME_RecipeMeatbug			=	"";
+//const string	NAME_RecipeMolerat			=	"ungewöhnliche Moleratgerichte";
+const string	NAME_RecipeMolerat			=	"";
+//const string	NAME_RecipeHerb				=	"delikate Kräuterrezepte";
+const string	NAME_RecipeHerb				=	"";
+//const string	NAME_RecipeMushroom			=	"wunderliche Pilzgerichte";
+const string	NAME_RecipeMushroom			=	"";
+//const string	NAME_RecipeMeat				=	"leckere Fleischzubereitung";
+const string	NAME_RecipeMeat				=	"";
 
-const string	NAME_CAULDRON_Done			=	" zubereitet";
+//const string	NAME_CAULDRON_Done			=	" zubereitet";
+const string	NAME_CAULDRON_Done			=	" připraveno";
 
-const string	NAME_Bow_Done				=	" gespannt";
-const string	NAME_RUNEMAKER_Done			=	" aufgeladen";
-const string	NAME_RUNEMELTER_Done		=	" gegossen";
-const string	NAME_WOOD_Done				=	" geschnitten";
-const string	NAME_STOMPER_DONE			=	" gerollt";
-const string	NAME_FLETCHER_DONE			=	" geschnitzt";
+//const string	NAME_Bow_Done				=	" gespannt";
+const string	NAME_Bow_Done				=	" nepnutý";
+//const string	NAME_RUNEMAKER_Done			=	" aufgeladen";
+const string	NAME_RUNEMAKER_Done			=	" vyrobena";
+//const string	NAME_RUNEMELTER_Done		=	" gegossen";
+const string	NAME_RUNEMELTER_Done		=	" odlita";
+//const string	NAME_WOOD_Done				=	" geschnitten";
+const string	NAME_WOOD_Done				=	" připraveno";
+//const string	NAME_STOMPER_DONE			=	" gerollt";
+const string	NAME_STOMPER_DONE			=	" ubaleno";
+//const string	NAME_FLETCHER_DONE			=	" geschnitzt";
+const string	NAME_FLETCHER_DONE			=	" vyřezán";
 
-const string	NAME_Ration					=	" Portion ";
-const string	NAME_Rations				=	" Portionen ";
+//const string	NAME_Ration					=	" Portion ";
+const string	NAME_Ration					=	" Porce ";
+//const string	NAME_Rations				=	" Portionen ";
+const string	NAME_Rations				=	" Porce ";
 
 // ***************************************************************************************
 // Pflanzen
 // ***************************************************************************************
-const string 	NAME_MountainMoss			=	"Bergmoos";
-const string 	NAME_Stoneroot				=	"Steinwurzel";
-const string 	NAME_BloodThistle			=	"Blutdistel";
-const string 	NAME_OrcLeaf				=	"Orkblatt";
-const string 	NAME_RavenHerb				=	"Rabenkraut";
-const string 	NAME_Nightshade				=	"Nachtschatten";
-const string 	NAME_CaveMushroom			=	"Höhlenpilz";
-const string 	NAME_Woodberry				=	"Waldbeeren";
-const string 	NAME_Flameberry				=	"Flammbeeren";
-const string 	NAME_Trollberry				=	"Trollkirsche";
+//const string 	NAME_MountainMoss			=	"Bergmoos";
+const string 	NAME_MountainMoss			=	"Horský mech";
+//const string 	NAME_Stoneroot				=	"Steinwurzel";
+const string 	NAME_Stoneroot				=	"Kamenný kořen";
+//const string 	NAME_BloodThistle			=	"Blutdistel";
+const string 	NAME_BloodThistle			=	"Krvavý bodlák";
+//const string 	NAME_OrcLeaf				=	"Orkblatt";
+const string 	NAME_OrcLeaf				=	"Skřetí list";
+//const string 	NAME_RavenHerb				=	"Rabenkraut";
+const string 	NAME_RavenHerb				=	"Havraní byliny";
+//const string 	NAME_Nightshade				=	"Nachtschatten";
+const string 	NAME_Nightshade				=	"Lilkovitá bylina";
+//const string 	NAME_CaveMushroom			=	"Höhlenpilz";
+const string 	NAME_CaveMushroom			=	"Pekelná houba";
+//const string 	NAME_Woodberry				=	"Waldbeeren";
+const string 	NAME_Woodberry				=	"Borůvky";
+//const string 	NAME_Flameberry				=	"Flammbeeren";
+const string 	NAME_Flameberry				=	"Ohnivý trn";
+//const string 	NAME_Trollberry				=	"Trollkirsche";
+const string 	NAME_Trollberry				=	"Trollí bobule";
 
 // ***************************************************************************************
 // Alchemie
 // ***************************************************************************************
-const string	NAME_LAB_Done				=	" gebraut";
+//const string	NAME_LAB_Done				=	" gebraut";
+const string	NAME_LAB_Done				=	" namíchán";
 
-const string	NAME_HealthPotion1			=	"Essenz der Heilung";
-const string	NAME_HealthPotion2			=	"Extrakt der Heilung";
-const string	NAME_HealthPotion3			=	"Elixier der Heilung";
-const string	NAME_HealthPotionAll		=	"Trank völliger Genesung";
-const string	NAME_ManaPotion1			=	"Essenz der Magie";
-const string	NAME_ManaPotion2			=	"Extrakt der Magie";
-const string	NAME_ManaPotion3			=	"Elixier der Magie";
-const string	NAME_ManaPotionAll			=	"Trank der Magiewiderherstellung";
-const string	NAME_SpeedPotion1			=	"Essenz der Eile";
-const string	NAME_SpeedPotion2			=	"Extrakt der Eile";
-const string	NAME_SpeedPotion3			=	"Elixier der Eile";
-const string	NAME_StrPotion1				=	"Essenz der Stärke";
-const string	NAME_StrPotion2				=	"Extrakt der Stärke";
-const string	NAME_StrPotion3				=	"Elixier der Stärke";
-const string	NAME_DexPotion1				=	"Essenz der Geschicklichkeit";
-const string	NAME_DexPotion2				=	"Extrakt der Geschicklichkeit";
-const string	NAME_DexPotion3				=	"Elixier der Geschicklichkeit";
-const string	NAME_StrDexPotion1			=	"Trank der Macht";
-const string	NAME_StrDexPotion2			=	"Trank der Herrschaft";
-const string	NAME_HealthPermaPotion1		=	"Essenz des Lebens";
-const string	NAME_HealthPermaPotion2		=	"Extrakt des Lebens";
-const string	NAME_HealthPermaPotion3		=	"Elixier des Lebens";
-const string	NAME_ManaPermaPotion1		=	"Essenz des Geistes";
-const string	NAME_ManaPermaPotion2		=	"Extrakt des Geistes";
-const string	NAME_ManaPermaPotion3		=	"Elixier des Geistes";
+//const string	NAME_HealthPotion1			=	"Essenz der Heilung";
+const string	NAME_HealthPotion1			=	"Esence hojivé síly";
+//const string	NAME_HealthPotion2			=	"Extrakt der Heilung";
+const string	NAME_HealthPotion2			=	"Extrakt hojivé síly";
+//const string	NAME_HealthPotion3			=	"Elixier der Heilung";
+const string	NAME_HealthPotion3			=	"Elixír hojivé síly";
+//const string	NAME_HealthPotionAll		=	"Trank völliger Genesung";
+const string	NAME_HealthPotionAll		=	"Lektvar úplného uzdravení";
+//const string	NAME_ManaPotion1			=	"Essenz der Magie";
+const string	NAME_ManaPotion1			=	"Esence magické energie";
+//const string	NAME_ManaPotion2			=	"Extrakt der Magie";
+const string	NAME_ManaPotion2			=	"Extrakt magické energie";
+//const string	NAME_ManaPotion3			=	"Elixier der Magie";
+const string	NAME_ManaPotion3			=	"Elixír magické energie";
+//const string	NAME_ManaPotionAll			=	"Trank der Magiewiderherstellung";
+const string	NAME_ManaPotionAll			=	"Letvar obnovy magické energie";
+//const string	NAME_SpeedPotion1			=	"Essenz der Eile";
+const string	NAME_SpeedPotion1			=	"Esence spěchu";
+//const string	NAME_SpeedPotion2			=	"Extrakt der Eile";
+const string	NAME_SpeedPotion2			=	"Extrakt spěchu";
+//const string	NAME_SpeedPotion3			=	"Elixier der Eile";
+const string	NAME_SpeedPotion3			=	"Elixír spěchu";
+//const string	NAME_StrPotion1				=	"Essenz der Stärke";
+const string	NAME_StrPotion1				=	"Esence síly";
+//const string	NAME_StrPotion2				=	"Extrakt der Stärke";
+const string	NAME_StrPotion2				=	"Extrakt síly";
+//const string	NAME_StrPotion3				=	"Elixier der Stärke";
+const string	NAME_StrPotion3				=	"Elixír síly";
+//const string	NAME_DexPotion1				=	"Essenz der Geschicklichkeit";
+const string	NAME_DexPotion1				=	"Esence obratnosti";
+//const string	NAME_DexPotion2				=	"Extrakt der Geschicklichkeit";
+const string	NAME_DexPotion2				=	"Extrakt obratnosti";
+//const string	NAME_DexPotion3				=	"Elixier der Geschicklichkeit";
+const string	NAME_DexPotion3				=	"Elixír obratnosti";
+//const string	NAME_StrDexPotion1			=	"Trank der Macht";
+const string	NAME_StrDexPotion1			=	"Lektvar moci";
+//const string	NAME_StrDexPotion2			=	"Trank der Herrschaft";
+const string	NAME_StrDexPotion2			=	"Lektvar nejvyšší moci";
+//const string	NAME_HealthPermaPotion1		=	"Essenz des Lebens";
+const string	NAME_HealthPermaPotion1		=	"Esence zdraví";
+//const string	NAME_HealthPermaPotion2		=	"Extrakt des Lebens";
+const string	NAME_HealthPermaPotion2		=	"Extrakt zdraví";
+//const string	NAME_HealthPermaPotion3		=	"Elixier des Lebens";
+const string	NAME_HealthPermaPotion3		=	"Elixír zdraví";
+//const string	NAME_ManaPermaPotion1		=	"Essenz des Geistes";
+const string	NAME_ManaPermaPotion1		=	"Esence ducha";
+//const string	NAME_ManaPermaPotion2		=	"Extrakt des Geistes";
+const string	NAME_ManaPermaPotion2		=	"Extrakt ducha";
+//const string	NAME_ManaPermaPotion3		=	"Elixier des Geistes";
+const string	NAME_ManaPermaPotion3		=	"Elixír ducha";
 
-const string	NAME_Essence				=	"Essenz";
-const string	NAME_Extract				=	"Extrakt";
-const string	NAME_Elixir					=	"Elixier";
+//const string	NAME_Essence				=	"Essenz";
+const string	NAME_Essence				=	"esence";
+//const string	NAME_Extract				=	"Extrakt";
+const string	NAME_Extract				=	"ektrakt";
+//const string	NAME_Elixir					=	"Elixier";
+const string	NAME_Elixir					=	"elixír";
 
-const string	NAME_BookHealingPotions		=	"Rezepturen für Heiltränke";
-const string	NAME_BookManaPotions		=	"Rezepturen für Manatränke";
-const string	NAME_BookSpeedPotions		=	"Rezepturen für Tränke der Eile";
+//const string	NAME_BookHealingPotions		=	"Rezepturen für Heiltränke";
+const string	NAME_BookHealingPotions		=	"Recepty na léčivé lektvary";
+//const string	NAME_BookManaPotions		=	"Rezepturen für Manatränke";
+const string	NAME_BookManaPotions		=	"Recepty na lektvary many";
+//const string	NAME_BookSpeedPotions		=	"Rezepturen für Tränke der Eile";
+const string	NAME_BookSpeedPotions		=	"Recepty na lektvary rychlosti";
 
 // ***************************************************************************************
 // Runen erschaffen
 // ***************************************************************************************
-const string	NAME_BlankRune				=	"leere Rune";
-const string	NAME_BlankBloodRune			=	"leere Blutrune";
-const string	NAME_BlankDarkRune			=	"leere Dunkelrune";
-const string	NAME_RunePostfix			=	"-Rune";
+//const string	NAME_BlankRune				=	"leere Rune";
+const string	NAME_BlankRune				=	"prázdná runa";
+//const string	NAME_BlankBloodRune			=	"leere Blutrune";
+const string	NAME_BlankBloodRune			=	"prázdná krvavá ruba";
+//const string	NAME_BlankDarkRune			=	"leere Dunkelrune";
+const string	NAME_BlankDarkRune			=	"prázdná tmavá runa";
+//const string	NAME_RunePostfix			=	"-Rune";
+const string	NAME_RunePostfix			=	"-runa";
 
 // ***************************************************************************************
 // sonstige Gegenstände
 // ***************************************************************************************
-const string	NAME_Silver					=	"Silber";
-const string	NAME_Pliers					=	"Schmiedezange";
-const string	NAME_FletcherWood			=	"Holz für Pfeile";
-const string	NAME_FletcherKnife			=	"Schnitzmesser";
-const string	NAME_BowWood				=	"Holz für Bogen";
+//const string	NAME_Silver					=	"Silber";
+const string	NAME_Silver					=	"Stříbro";
+//const string	NAME_Pliers					=	"Schmiedezange";
+const string	NAME_Pliers					=	"Kovářské kleště";
+//const string	NAME_FletcherWood			=	"Holz für Pfeile";
+const string	NAME_FletcherWood			=	"Dřevo na šípy";
+//const string	NAME_FletcherKnife			=	"Schnitzmesser";
+const string	NAME_FletcherKnife			=	"Řezbářský nůž";
+//const string	NAME_BowWood				=	"Holz für Bogen";
+const string	NAME_BowWood				=	"Dřevo na luk";
 
 
 //***************************************************************************************
@@ -784,149 +1137,246 @@ const string	FONT_BOOK_BIG				=	"FONT_15_BOOK.TGA";				// Farbe schwarz
 //***************************************************************************************
 // Stringkonstanten aus den G_FUNCTIONS
 //***************************************************************************************
+//const string _STR_INVALID					= "(Unbekannt)-"									;
 const string _STR_INVALID					= "(Unbekannt)-"									;
 
+//const string _STR_ATTRIBUTE_HITPOINTS		= "Lebens-"											;
 const string _STR_ATTRIBUTE_HITPOINTS		= "Lebens-"											;
+//const string _STR_ATTRIBUTE_HITPOINTS_MAX	= "maximale Lebens-"								;
 const string _STR_ATTRIBUTE_HITPOINTS_MAX	= "maximale Lebens-"								;
+//const string _STR_ATTRIBUTE_MANA			= "Mana-"											;
 const string _STR_ATTRIBUTE_MANA			= "Mana-"											;
+//const string _STR_ATTRIBUTE_MANA_MAX		= "maximale Mana-"									;
 const string _STR_ATTRIBUTE_MANA_MAX		= "maximale Mana-"									;
+//const string _STR_ATTRIBUTE_STRENGTH		= "Stärke-"											;
 const string _STR_ATTRIBUTE_STRENGTH		= "Stärke-"											;
+//const string _STR_ATTRIBUTE_DEXTERITY		= "Geschicklichkeits-"								;
 const string _STR_ATTRIBUTE_DEXTERITY		= "Geschicklichkeits-"								;
+//const string _STR_ATTRIBUTE_MAGIC_CIRCLE	= "magische Zauber-"								;
 const string _STR_ATTRIBUTE_MAGIC_CIRCLE	= "magische Zauber-"								;
 
 // Bildschirmausgabe, falls der Spieler eine Waffe anlegen will, für die ihm Attributspunkte fehlen
-const string _STR_CANNOTUSE_PRE_PLAYER		= "es fehlen "										;
-const string _STR_CANNOTUSE_POINTS			= "Punkte"											;
-const string _STR_CANNOTUSE_LEVELS		    = "Stufen"											;
-const string _STR_CANNOTUSE_POST			= ", um diesen Gegenstand anzulegen"				;
+//const string _STR_CANNOTUSE_PRE_PLAYER	= "es fehlen "										;
+const string _STR_CANNOTUSE_PRE_PLAYER		= "Nedostatek "										;
+//const string _STR_CANNOTUSE_POINTS		= "Punkte"											;
+const string _STR_CANNOTUSE_POINTS			= " body"											;
+//const string _STR_CANNOTUSE_LEVELS		= "Stufen"											;
+const string _STR_CANNOTUSE_LEVELS		    = " úrovně"											;
+//const string _STR_CANNOTUSE_POST			= ", um diesen Gegenstand anzulegen"				;
+const string _STR_CANNOTUSE_POST			= ", pro použití této položky"				;
 
 // Bildschirmausgabe, falls ein NSC zu wenig Attributspunkte, für das Anlegen von Waffen hat (nur Debugzwecke!)
 const string _STR_CANNOTUSE_PRE_NPC			= " ("												;
-const string _STR_CANNOTUSE_POST_NPC		= ") fehlen "										;
+//const string _STR_CANNOTUSE_POST_NPC		= ") fehlen "										;
+const string _STR_CANNOTUSE_POST_NPC		= ") scházejí "										;
 
 // Bidschrimausgabe zum Thema Schloß öffnen/knacken
-//const string _STR_MESSAGE_INTERACT_NO_KEY	= "kein Dietrich oder passender Schlüssel";
-const string _STR_MESSAGE_PICKLOCK_SUCCESS	= "das hörte sich gut an";
-const string _STR_MESSAGE_PICKLOCK_UNLOCK	= "das Schloß ist geknackt";
-const string _STR_MESSAGE_PICKLOCK_FAILURE	= "Mist.. wieder von vorne";
-const string _STR_MESSAGE_PICKLOCK_BROKEN	= "der Dietrich ist abgebrochen";
+//const string _STR_MESSAGE_INTERACT_NO_KEY		= "kein Dietrich oder passender Schlüssel";
+const string _STR_MESSAGE_INTERACT_NO_KEY		= "Žádný klíč ani paklíč";
+//const string _STR_MESSAGE_PICKLOCK_SUCCESS	= "das hörte sich gut an";
+const string _STR_MESSAGE_PICKLOCK_SUCCESS		= "To zní dobře.";
+//const string _STR_MESSAGE_PICKLOCK_UNLOCK		= "das Schloß ist geknackt";
+const string _STR_MESSAGE_PICKLOCK_UNLOCK		= "Zámek byl otevřen";
+//const string _STR_MESSAGE_PICKLOCK_FAILURE	= "Mist.. wieder von vorne";
+const string _STR_MESSAGE_PICKLOCK_FAILURE		= "Sakra... a znova od začátku";
+//const string _STR_MESSAGE_PICKLOCK_BROKEN		= "der Dietrich ist abgebrochen";
+const string _STR_MESSAGE_PICKLOCK_BROKEN		= "Paklíč se zlomil.";
 
 // Textausgabe für Mob-Benutzung
-const string _STR_MESSAGE_MOBSI_MISSING_KEY_OR_LOCKPICK	=	"weder Schlüssel noch Dietrich vorhanden!";
-const string _STR_MESSAGE_MOBSI_MISSING_KEY				=	"kein Schlüssel vorhanden!";
-const string _STR_MESSAGE_MOBSI_MISSING_LOCKPICK		= 	"kein Dietrich vorhanden!";
-const string _STR_MESSAGE_MOBSI_NEVER_OPEN				=	"fest verschlossen!";
-const string _STR_MESSAGE_MOBSI_MISSING_ITEM			=	"fehlender Gegenstand!";
-const string _STR_MESSAGE_MOBSI_ANOTHER_IS_USING		=	"wird gerade benutzt!";
-const string _STR_MESSAGE_MOBSI_TOO_FAR_AWAY			=	"ist zu weit weg!";
-const string _STR_MESSAGE_MOBSI_WRONG_SIDE				=	"falsche Seite!";
+//const string _STR_MESSAGE_MOBSI_MISSING_KEY_OR_LOCKPICK	=	"weder Schlüssel noch Dietrich vorhanden!";
+const string _STR_MESSAGE_MOBSI_MISSING_KEY_OR_LOCKPICK		=	"nemám klíč ani paklíč!";
+//const string _STR_MESSAGE_MOBSI_MISSING_KEY				=	"kein Schlüssel vorhanden!";
+const string _STR_MESSAGE_MOBSI_MISSING_KEY					=	"nemám klíč!";
+//const string _STR_MESSAGE_MOBSI_MISSING_LOCKPICK			= 	"kein Dietrich vorhanden!";
+const string _STR_MESSAGE_MOBSI_MISSING_LOCKPICK			= 	"nemám paklíč!";
+//const string _STR_MESSAGE_MOBSI_NEVER_OPEN				=	"fest verschlossen!";
+const string _STR_MESSAGE_MOBSI_NEVER_OPEN					=	"důkladně zavřené!";
+//const string _STR_MESSAGE_MOBSI_MISSING_ITEM				=	"fehlender Gegenstand!";
+const string _STR_MESSAGE_MOBSI_MISSING_ITEM				=	"!";
+//const string _STR_MESSAGE_MOBSI_ANOTHER_IS_USING			=	"wird gerade benutzt!";
+const string _STR_MESSAGE_MOBSI_ANOTHER_IS_USING			=	"je používán!";
+//const string _STR_MESSAGE_MOBSI_TOO_FAR_AWAY				=	"ist zu weit weg!";
+const string _STR_MESSAGE_MOBSI_TOO_FAR_AWAY				=	"je příliš daleko!";
+//const string _STR_MESSAGE_MOBSI_WRONG_SIDE				=	"falsche Seite!";
+const string _STR_MESSAGE_MOBSI_WRONG_SIDE					=	"špatná strana!";
 
 // Bidschrimausgabe zum Thema Hebel/Winden
-const string _STR_MESSAGE_OCLEVER_STUCKS	= "der Hebel bewegt sich kein Haarbreit";
-const string _STR_MESSAGE_WHEEL_STUCKS		= "die Winde klemmt";
-const string _STR_MESSAGE_ARENAWHEEL		= "die Winde darf nur vom Arenameister bedient werden";
+//const string _STR_MESSAGE_OCLEVER_STUCKS	= "der Hebel bewegt sich kein Haarbreit";
+const string _STR_MESSAGE_OCLEVER_STUCKS	= "S tou pákou nejde vůbec pohnout.";
+//const string _STR_MESSAGE_WHEEL_STUCKS	= "die Winde klemmt";
+const string _STR_MESSAGE_WHEEL_STUCKS		= "Naviják se zamotal.";
+//const string _STR_MESSAGE_ARENAWHEEL		= "die Winde darf nur vom Arenameister bedient werden";
+const string _STR_MESSAGE_ARENAWHEEL		= "Naviják smí používat pouze mistr arény.";
 
 // Bidschrimausgabe beim storybedingten Transfer von Items
-const string _STR_MESSAGE_ITEM_GIVEN		= " Gegenstand gegeben"		;	//SPACE davor wichtig, weil Trennzeichen
-const string _STR_MESSAGE_ITEMS_GIVEN		= " Gegenstände gegeben"	;
-const string _STR_MESSAGE_SILVER_GIVEN		= " Silber gegeben"			;
-const string _STR_MESSAGE_GOLD_GIVEN		= " Gold gegeben"			;
-const string _STR_MESSAGE_ITEM_TAKEN		= " Gegenstand erhalten"	;
-const string _STR_MESSAGE_ITEMS_TAKEN		= " Gegenstände erhalten"	;
-const string _STR_MESSAGE_SILVER_TAKEN		= " Silber erhalten"		;
-const string _STR_MESSAGE_GOLD_TAKEN		= " Gold erhalten"			;
+//const string _STR_MESSAGE_ITEM_GIVEN		= " Gegenstand gegeben";	//SPACE davor wichtig, weil Trennzeichen
+const string _STR_MESSAGE_ITEM_GIVEN		= " položka předána!";
+//const string _STR_MESSAGE_ITEMS_GIVEN		= " Gegenstände gegeben";
+const string _STR_MESSAGE_ITEMS_GIVEN		= " položek předána!";
+//const string _STR_MESSAGE_SILVER_GIVEN	= " Silber gegeben";
+const string _STR_MESSAGE_SILVER_GIVEN		= " stříbro předáno!";
+//const string _STR_MESSAGE_GOLD_GIVEN		= " Gold gegeben";
+const string _STR_MESSAGE_GOLD_GIVEN		= " zlato předáno!";
+//const string _STR_MESSAGE_ITEM_TAKEN		= " Gegenstand erhalten";
+const string _STR_MESSAGE_ITEM_TAKEN		= " položka přijata!";
+//const string _STR_MESSAGE_ITEMS_TAKEN		= " Gegenstände erhalten";
+const string _STR_MESSAGE_ITEMS_TAKEN		= " položek přijato!";
+//const string _STR_MESSAGE_SILVER_TAKEN	= " Silber erhalten";
+const string _STR_MESSAGE_SILVER_TAKEN		= " stříbro přijato!";
+//const string _STR_MESSAGE_GOLD_TAKEN		= " Gold erhalten";
+const string _STR_MESSAGE_GOLD_TAKEN		= " zlato přijato!";
 
 // Bildschirmausgaben beim Plündern
-const string _STR_MESSAGE_ITEM_PLUNDERED		= " Gegenstand genommen"	;	//SPACE davor wichtig, weil Trennzeichen
-const string _STR_MESSAGE_ITEMS_PLUNDERED		= " Gegenstände genommen"	;
-const string _STR_MESSAGE_SILVER_PLUNDERED		= " Silber genommen"		;
-const string _STR_MESSAGE_GOLD_PLUNDERED		= " Gold gegeben"			;
+//const string _STR_MESSAGE_ITEM_PLUNDERED		= " Gegenstand genommen"	;	//SPACE davor wichtig, weil Trennzeichen
+const string _STR_MESSAGE_ITEM_PLUNDERED		= " položka sebraná!"	;	
+//const string _STR_MESSAGE_ITEMS_PLUNDERED		= " Gegenstände genommen"	;
+const string _STR_MESSAGE_ITEMS_PLUNDERED		= " položek sebráno!"	;
+//const string _STR_MESSAGE_SILVER_PLUNDERED	= " Silber genommen"		;
+const string _STR_MESSAGE_SILVER_PLUNDERED		= " stříbra sebráno!"		;
+//const string _STR_MESSAGE_GOLD_PLUNDERED		= " Gold gegeben"			;
+const string _STR_MESSAGE_GOLD_PLUNDERED		= " zlato sebráno!"			;
 
 // Bidschrimausgabe fürs Tausch-Fenster
-const string _STR_MESSAGE_TRADE_FAILURE		= "der Wert deiner Tauschware ist nicht hoch genug"	;
+//const string _STR_MESSAGE_TRADE_FAILURE		= "der Wert deiner Tauschware ist nicht hoch genug"	;
+const string _STR_MESSAGE_TRADE_FAILURE			= "Hodnota tvého zboží není dost vysoká!"	;
 
 // GILDENAUFNAHMEBEDINGUNG (für die Funktion "B_PrintGuildCondition()" )
-const string _STR_MESSAGE_Joincamp			=	"Voraussetzung für die Aufnahme: Stufe ";
+//const string _STR_MESSAGE_Joincamp			=	"Voraussetzung für die Aufnahme: Stufe ";
+const string _STR_MESSAGE_Joincamp				=	"Podmínka pro přijetí: Úroveň";
 
 // nicht beklaubare NSCs
-const string _STR_MESSAGE_CANNOTSTEAL		=	"kann nicht beklaut werden";
+//const string _STR_MESSAGE_CANNOTSTEAL			=	"kann nicht beklaut werden";
+const string _STR_MESSAGE_CANNOTSTEAL			=	"Nelze ukrást.";
 
 // MOBSI-Fehlermeldungen
+//const string _STR_MESSAGE_MOBSI_ORE_TOOL		=	"keine Spitzhacke vorhanden!";
 const string _STR_MESSAGE_MOBSI_ORE_TOOL		=	"keine Spitzhacke vorhanden!";
+//const string _STR_MESSAGE_MOBSI_ORE_MAT			=	"Erzader erschöpft!";
 const string _STR_MESSAGE_MOBSI_ORE_MAT			=	"Erzader erschöpft!";
+//const string _STR_MESSAGE_MOBSI_MELTER_TAL		=	"Talent SCHMIEDEN nicht ausreichend!";
 const string _STR_MESSAGE_MOBSI_MELTER_TAL		=	"Talent SCHMIEDEN nicht ausreichend!";
+//const string _STR_MESSAGE_MOBSI_MELTER_MAT		=	"zu wenig Erznuggets vorhanden!";
 const string _STR_MESSAGE_MOBSI_MELTER_MAT		=	"zu wenig Erznuggets vorhanden!";
+//const string _STR_MESSAGE_MOBSI_MELTER_TOOL		=	"keine Schmiedezange vorhanden!";
 const string _STR_MESSAGE_MOBSI_MELTER_TOOL		=	"keine Schmiedezange vorhanden!";
+//const string _STR_MESSAGE_MOBSI_FIRE_TAL		=	"Talent SCHMIEDEN nicht ausreichend!";
 const string _STR_MESSAGE_MOBSI_FIRE_TAL		=	"Talent SCHMIEDEN nicht ausreichend!";
+//const string _STR_MESSAGE_MOBSI_FIRE_MAT		=	"kein Roheisen vorhanden!";
 const string _STR_MESSAGE_MOBSI_FIRE_MAT		=	"kein Roheisen vorhanden!";
+//const string _STR_MESSAGE_MOBSI_ANVIL_TAL		=	"Talent SCHMIEDEN nicht ausreichend!";
 const string _STR_MESSAGE_MOBSI_ANVIL_TAL		=	"Talent SCHMIEDEN nicht ausreichend!";
+//const string _STR_MESSAGE_MOBSI_ANVIL_MAT		=	"kein glühendes Roheisen vorhanden!";
 const string _STR_MESSAGE_MOBSI_ANVIL_MAT		=	"kein glühendes Roheisen vorhanden!";
+//const string _STR_MESSAGE_MOBSI_ANVIL_TOOL		=	"kein Schmiedehammer vorhanden!";
 const string _STR_MESSAGE_MOBSI_ANVIL_TOOL		=	"kein Schmiedehammer vorhanden!";
+//const string _STR_MESSAGE_MOBSI_COOL_TAL		=	"Talent SCHMIEDEN nicht ausreichend!";
 const string _STR_MESSAGE_MOBSI_COOL_TAL		=	"Talent SCHMIEDEN nicht ausreichend!";
+//const string _STR_MESSAGE_MOBSI_COOL_MAT		=	"kein glühender Waffenrohling vorhanden!";
 const string _STR_MESSAGE_MOBSI_COOL_MAT		=	"kein glühender Waffenrohling vorhanden!";
+//const string _STR_MESSAGE_MOBSI_SHARP_TAL		=	"Talent SCHMIEDEN nicht ausreichend!";
 const string _STR_MESSAGE_MOBSI_SHARP_TAL		=	"Talent SCHMIEDEN nicht ausreichend!";
+//const string _STR_MESSAGE_MOBSI_SHARP_MAT		=	"kein abgekühlter Waffenrohling vorhanden!";
 const string _STR_MESSAGE_MOBSI_SHARP_MAT		=	"kein abgekühlter Waffenrohling vorhanden!";
+//const string _STR_MESSAGE_MOBSI_PAN_MAT			=	"kein Fleisch mehr vorhanden";
 const string _STR_MESSAGE_MOBSI_PAN_MAT			=	"kein Fleisch mehr vorhanden";
 
-
+//const string _STR_MESSAGE_MOBSI_CAULDRON_TAL	=	"Talent KOCHEN nicht ausreichend!";
 const string _STR_MESSAGE_MOBSI_CAULDRON_TAL	=	"Talent KOCHEN nicht ausreichend!";
+//const string _STR_MESSAGE_MOBSI_CAULDRON_MAT	=	"Keine Zutaten für eine Rezeptur vorhanden!";
 const string _STR_MESSAGE_MOBSI_CAULDRON_MAT	=	"Keine Zutaten für eine Rezeptur vorhanden!";
+//const string _STR_MESSAGE_MOBSI_CAULDRON_TOOL	=	"kein Kochlöffel vorhanden!";
 const string _STR_MESSAGE_MOBSI_CAULDRON_TOOL	=	"kein Kochlöffel vorhanden!";
+//const string _STR_MESSAGE_MOBSI_CAULDRON_HALVOR	=	"Halvor kann dich sehen!";
 const string _STR_MESSAGE_MOBSI_CAULDRON_HALVOR	=	"Halvor kann dich sehen!";
 
+//const string _STR_MESSAGE_MOBSI_LAB_MAT			=	"Keine ausreichenden Zutaten für eine Rezeptur!";
 const string _STR_MESSAGE_MOBSI_LAB_MAT			=	"Keine ausreichenden Zutaten für eine Rezeptur!";
+//const string _STR_MESSAGE_MOBSI_LAB_TAL			=	"Talent ALCHEMIE ist nicht ausreichend!";
 const string _STR_MESSAGE_MOBSI_LAB_TAL			=	"Talent ALCHEMIE ist nicht ausreichend!";
 
+//const string _STR_MESSAGE_MOBSI_RUNEMELTER_MAT	=	"nicht genug Erz vorhanden!";
 const string _STR_MESSAGE_MOBSI_RUNEMELTER_MAT	=	"nicht genug Erz vorhanden!";
+//const string _STR_MESSAGE_MOBSI_RUNEMAKER_MAT	=	"kein leerer Runenstein oder Spruchrolle vorhanden!";
 const string _STR_MESSAGE_MOBSI_RUNEMAKER_MAT	=	"kein leerer Runenstein oder Spruchrolle vorhanden!";
+//const string _STR_MESSAGE_MOBSI_RUNE_TOOL		=	"keine Schmiedezange vorhanden!";
 const string _STR_MESSAGE_MOBSI_RUNE_TOOL		=	"keine Schmiedezange vorhanden!";
+//const string _STR_MESSAGE_MOBSI_RUNE_TAL		=	"Talent RUNEN ERSCHAFFEN nicht ausreichend!";
 const string _STR_MESSAGE_MOBSI_RUNE_TAL		=	"Talent RUNEN ERSCHAFFEN nicht ausreichend!";
+//const string _STR_MESSAGE_MOBSI_RUNE_MANA		=	"Nicht genug Mana für die Erschaffung!";
 const string _STR_MESSAGE_MOBSI_RUNE_MANA		=	"Nicht genug Mana für die Erschaffung!";
 
+//const string _STR_MESSAGE_MOBSI_WOOD_TOOL		=	"kein Holzmesser vorhanden!";
 const string _STR_MESSAGE_MOBSI_WOOD_TOOL		=	"kein Holzmesser vorhanden!";
+//const string _STR_MESSAGE_MOBSI_WOOD_MAT		=	"Bogenholz ist abgeerntet!";
 const string _STR_MESSAGE_MOBSI_WOOD_MAT		=	"Bogenholz ist abgeerntet!";
 
+//const string _STR_MESSAGE_MOBSI_BOW_TAL			=	"Talent BOGENMACHEN nicht ausreichend!";
 const string _STR_MESSAGE_MOBSI_BOW_TAL			=	"Talent BOGENMACHEN nicht ausreichend!";
+//const string _STR_MESSAGE_MOBSI_BOW_MAT			=	"Nicht genug Materialien vorhanden!";
 const string _STR_MESSAGE_MOBSI_BOW_MAT			=	"Nicht genug Materialien vorhanden!";
+//const string _STR_MESSAGE_MOBSI_BOW_TOOL		=	"Kein Bogenmachermesser vorhanden!";
 const string _STR_MESSAGE_MOBSI_BOW_TOOL		=	"Kein Bogenmachermesser vorhanden!";
+//const string _STR_MESSAGE_MOBSI_Bow_Book		=	"Noch kein Rezept gelernt!";
 const string _STR_MESSAGE_MOBSI_Bow_Book		=	"Noch kein Rezept gelernt!";
 
+//const string _STR_MESSAGE_MOBSI_FLETCHER_TAL	=	"Talent BOGENMACHEN nicht ausreichend!";
 const string _STR_MESSAGE_MOBSI_FLETCHER_TAL	=	"Talent BOGENMACHEN nicht ausreichend!";
+//const string _STR_MESSAGE_MOBSI_FLETCHER_MAT	=	"Nicht genug Materialien vorhanden!";
 const string _STR_MESSAGE_MOBSI_FLETCHER_MAT	=	"Nicht genug Materialien vorhanden!";
+//const string _STR_MESSAGE_MOBSI_FLETCHER_TOOL	=	"Kein Bogenmachermesser!";
 const string _STR_MESSAGE_MOBSI_FLETCHER_TOOL	=	"Kein Bogenmachermesser!";
 
+//const string _STR_MESSAGE_MOBSI_WATERPIPE_MAT	=	"Nicht genug Sumpfkraut dabei!";
 const string _STR_MESSAGE_MOBSI_WATERPIPE_MAT	=	"Nicht genug Sumpfkraut dabei!";
 
+//const string _STR_MESSAGE_MOBSI_STOMPER_MAT		=	"Nicht genug Sumpfkraut dabei!";
 const string _STR_MESSAGE_MOBSI_STOMPER_MAT		=	"Nicht genug Sumpfkraut dabei!";
+//const string _STR_MESSAGE_MOBSI_STOMPER_TOOL	=	"Kein Krautstamper vorhanden!";
 const string _STR_MESSAGE_MOBSI_STOMPER_TOOL	=	"Kein Krautstamper vorhanden!";
 
+//const string _STR_MESSAGE_MOBSI_ARENABENCH_GLADIATOR	=	"nur für die Kampfvorbereitung!";
 const string _STR_MESSAGE_MOBSI_ARENABENCH_GLADIATOR	=	"nur für die Kampfvorbereitung!";
+//const string _STR_MESSAGE_MOBSI_ARENABENCH_CHAMBER		=	"falsche Vorbereitungskammer!";
 const string _STR_MESSAGE_MOBSI_ARENABENCH_CHAMBER		=	"falsche Vorbereitungskammer!";
 
 // Textausgabe für Steal
+//const string _STR_MESSAGE_STEAL_NPC_IS_AWARE			=	"mein Opfer beobachtet mich";
 const string _STR_MESSAGE_STEAL_NPC_IS_AWARE			=	"mein Opfer beobachtet mich";
+//const string _STR_MESSAGE_STEAL_NO_TALENT				=	"kein Taschendiebstahl-Talent";
 const string _STR_MESSAGE_STEAL_NO_TALENT				=	"kein Taschendiebstahl-Talent";
+//const string _STR_MESSAGE_STEAL_NOT_IN_RANGE			=	"zu weit weg!";
 const string _STR_MESSAGE_STEAL_NOT_IN_RANGE			=	"zu weit weg!";
+//const string _STR_MESSAGE_STEAL_NPC_IS_EMPTY			=	"der hat nichts dabei!";
 const string _STR_MESSAGE_STEAL_NPC_IS_EMPTY			=	"der hat nichts dabei!";
 
 // Textausgabe für bereits geplünderte Leiche
+//const string _STR_MESSAGE_PLUNDER_IS_EMPTY				=	"da ist nichts mehr zu holen!";
 const string _STR_MESSAGE_PLUNDER_IS_EMPTY				=	"da ist nichts mehr zu holen!";
 
 // Textausgabe wenn Muntion alle ist
+//const string _STR_MESSAGE_RANGED_NO_AMMO				=	"keine Munition!";
 const string _STR_MESSAGE_RANGED_NO_AMMO				=	"keine Munition!";
 
 // Lern-Meldungen
+//const string _STR_MESSAGE_LEARNSMITH		=	"Wissen über neue Waffe erlernt!";
 const string _STR_MESSAGE_LEARNSMITH		=	"Wissen über neue Waffe erlernt!";
+//const string _STR_MESSAGE_LEARNCOOK			=	"Wissen über neues Kochrezept erlernt!";
 const string _STR_MESSAGE_LEARNCOOK			=	"Wissen über neues Kochrezept erlernt!";
+//const string _STR_MESSAGE_LEARNALCHEMIE		=	"Wissen über neues Alchemierezept erlernt!";
 const string _STR_MESSAGE_LEARNALCHEMIE		=	"Wissen über neues Alchemierezept erlernt!";
+//const string _STR_MESSAGE_LEARNthaumaturgy	=	"Wissen über neue Rune erlernt!";
 const string _STR_MESSAGE_LEARNthaumaturgy	=	"Wissen über neue Rune erlernt!";
+//const string _STR_MESSAGE_LEARNBOW			=	"Wissen über das Bogenmachen erlernt!";
 const string _STR_MESSAGE_LEARNBOW			=	"Wissen über das Bogenmachen erlernt!";
+//const string _STR_MESSAGE_LEARNPLANTS		=	"Wissen über Pflanzen erlernt!";
 const string _STR_MESSAGE_LEARNPLANTS		=	"Wissen über Pflanzen erlernt!";
 
+//const string _STR_MESSAGE_ADDDARKPOINTS		=	"deine dunkle Seite wird stärker!";
 const string _STR_MESSAGE_ADDDARKPOINTS		=	"deine dunkle Seite wird stärker!";
+//const string _STR_MESSAGE_ADDFAME			=	"deine Bekanntheit wächst!";
 const string _STR_MESSAGE_ADDFAME			=	"deine Bekanntheit wächst!";
 
-const string _STR_MESSAGE_ARENARANK			=	"Platz ";
+const string _STR_MESSAGE_ARENARANK			=	"Místo ";
 const string _STR_MESSAGE_ARENAVICTORY		=	" Vítězství";
 const string _STR_MESSAGE_ARENAVICTORIES	=	" Vítězství";
 const string _STR_MESSAGE_ARENAPENALTY1		=	"Postih!";
@@ -934,36 +1384,60 @@ const string _STR_MESSAGE_ARENAPENALTY2		=	"(Protivník není připraven)";
 const string _STR_MESSAGE_ARENAPLAYERVICTORY=	"Vyhrál jsi !!!";
 const string _STR_MESSAGE_ARENAPLAYERDEFEAT =	"Byl jsi poražen !!!";
 
+//const string _STR_MESSAGE_EXPLO				=	"Verborgener Ort entdeckt !";
 const string _STR_MESSAGE_EXPLO				=	"Verborgener Ort entdeckt !";
 
+//const string _STR_MESSAGE_PHOENIX_NOTYET	=	"Merkwürdige Kiste! Lässt sich kein haarbreit bewegen!";
 const string _STR_MESSAGE_PHOENIX_NOTYET	=	"Merkwürdige Kiste! Lässt sich kein haarbreit bewegen!";
+//const string _STR_MESSAGE_DTCELL_NOTYET	=	"Der Hebel scheint magisch blockiert zu sein!";
 const string _STR_MESSAGE_DTCELL_NOTYET		=	"Der Hebel scheint magisch blockiert zu sein!";
 
+//const string _STR_MESSAGE_DEATH0			=	"Dies ist dein Ende!";
 const string _STR_MESSAGE_DEATH0			=	"Dies ist dein Ende!";
+//const string _STR_MESSAGE_DEATH1			=	"Du hast versagt!";
 const string _STR_MESSAGE_DEATH1			=	"Du hast versagt!";
+//const string _STR_MESSAGE_DEATH2			=	"Deine Reise endet hier!";
 const string _STR_MESSAGE_DEATH2			=	"Deine Reise endet hier!";
+//const string _STR_MESSAGE_DEATH3			=	"Der Tod siegt immer!";
 const string _STR_MESSAGE_DEATH3			=	"Der Tod siegt immer!";
+//const string _STR_MESSAGE_DEATH4			=	"Dein Leben endet hier!";
 const string _STR_MESSAGE_DEATH4			=	"Dein Leben endet hier!";
+//const string _STR_MESSAGE_DEATH5			=	"Dein Tod ist die Freiheit der Dämonen!";
 const string _STR_MESSAGE_DEATH5			=	"Dein Tod ist die Freiheit der Dämonen!";
+//const string _STR_MESSAGE_DEATH6			=	"Du warst nicht gut genug!";
 const string _STR_MESSAGE_DEATH6			=	"Du warst nicht gut genug!";
+//const string _STR_MESSAGE_DEATH7			=	"Die Dämonen werden siegen!";
 const string _STR_MESSAGE_DEATH7			=	"Die Dämonen werden siegen!";
+//const string _STR_MESSAGE_DEATH8			=	"Am Ende aller Dinge steht der Tod!";
 const string _STR_MESSAGE_DEATH8			=	"Am Ende aller Dinge steht der Tod!";
+//const string _STR_MESSAGE_DEATH9			=	"Dämonen werden nun Einzug halten...!";
 const string _STR_MESSAGE_DEATH9			=	"Dämonen werden nun Einzug halten...!";
+//const string _STR_MESSAGE_DEATH10  		=	"Du bist Tot!";
 const string _STR_MESSAGE_DEATH10  			=	"Du bist Tot!";
+//const string _STR_MESSAGE_DEATH11  		=	"Dein Weg endet hier!";
 const string _STR_MESSAGE_DEATH11  			=	"Dein Weg endet hier!";
+//const string _STR_MESSAGE_DEATH12			=	"Jeder muss einmal sterben!";
 const string _STR_MESSAGE_DEATH12			=	"Jeder muss einmal sterben!";
 
+//const string _STR_MESSAGE_RUNEINACTIVE	=	"Das magische Pentagramm wurde blockiert!";
 const string _STR_MESSAGE_RUNEINACTIVE		=	"Das magische Pentagramm wurde blockiert!";
+//const string _STR_MESSAGE_SPELLWRONGPLACE	=	"Der Zauber scheint hier nicht zu wirken!";
 const string _STR_MESSAGE_SPELLWRONGPLACE	=	"Der Zauber scheint hier nicht zu wirken!";
+//const string _STR_MESSAGE_SPELLWRONG		=	"Der Zauber benötigt noch irgendetwas...";
 const string _STR_MESSAGE_SPELLWRONG		=	"Der Zauber benötigt noch irgendetwas...";
 
-const string _STR_MESSAGE_GAMESTART			=	"Arbeitsversion der 2. Etappe !!!";
-const string _STR_MESSAGE_GAMEEND			=	"Hier endet das Zwischen-Release !";
+//const string _STR_MESSAGE_GAMESTART		=	"Arbeitsversion der 2. Etappe !!!";
+const string _STR_MESSAGE_GAMESTART			=	"Pracovní verze druhé etapy!!!";
+//const string _STR_MESSAGE_GAMEEND			=	"Hier endet das Zwischen-Release !";
+const string _STR_MESSAGE_GAMEEND			=	"Tady Sequel končí!";
 
-const string _STR_MESSAGE_WHEEL_JAMMED		=	"die Winde klemmt!";
-const string _STR_MESSAGE_MOBSI_BROKEN		=	"nicht mehr zu gebrauchen!";
+//const string _STR_MESSAGE_WHEEL_JAMMED	=	"die Winde klemmt!";
+const string _STR_MESSAGE_WHEEL_JAMMED		=	"Naviják se zamotal.";
+//const string _STR_MESSAGE_MOBSI_BROKEN	=	"nicht mehr zu gebrauchen!";
+const string _STR_MESSAGE_MOBSI_BROKEN		=	"to už nepůjde použít";
 
-const string _STR_MESSAGE_LEVELTOOLOW		=	"benötigte Stufe: ";
+//const string _STR_MESSAGE_LEVELTOOLOW		=	"benötigte Stufe: ";
+const string _STR_MESSAGE_LEVELTOOLOW		=	"Potřebná úroveň: ";
 
 // ***************************************************************************************
 // Relative Y-Koordinaten für die Bildschirmausgabe (in % der aktuellen Bildhöhe)
@@ -1132,7 +1606,7 @@ const string MENU_TEXT_NEEDS_APPLY		= "";
 
 // Text, der erscheint, wenn ein Restart des Spiels notwendig ist (Grafikkartebauswahl).
 // Maximal ca. 60 Zeichen, da nur eine Zeile Platz!
-const string MENU_TEXT_NEEDS_RESTART	= "Některé změny v nastavení se projeví až po dalším spuštění.";
+const string MENU_TEXT_NEEDS_RESTART	= "Některé změny v nastavení se projeví až po dalším spuštění hry.";
 
 // ***************************************************************************************
 // Missionen-Konstanten
