@@ -144,7 +144,8 @@ const int STAT_B_X3 = 7200;
 
 instance MENU_ITEM_PLAYERGUILD_TITLE(C_MENU_ITEM_DEF)
 {
-	text[0]	 = "Gilde:";
+//	text[0]	 = "Gilde:";
+	text[0]	 = "Společ.:";
 	posx	 = STAT_A_X1;	posy = STAT_PLY_Y+STAT_DY*0;	fontName = STAT_FONT_TITLE;
 	flags		=	flags & ~IT_SELECTABLE;
 };
@@ -167,28 +168,32 @@ instance MENU_ITEM_PLAYERGUILD(C_MENU_ITEM_DEF)
 INSTANCE MENU_ITEM_LEVEL_TITLE(C_MENU_ITEM_DEF)
 {
 	posx = STAT_A_X1;	posy = STAT_PLY_Y + 1*STAT_DY;
-	text[0]	= "Stufe";										fontName = STAT_FONT_TITLE;		
+//	text[0]	= "Stufe";										fontName = STAT_FONT_TITLE;		
+	text[0]	= "Úroveň";										fontName = STAT_FONT_TITLE;		
 	flags	= flags & ~IT_SELECTABLE;
 };
 
 INSTANCE MENU_ITEM_EXP_TITLE(C_MENU_ITEM_DEF)
 {
 	posx = STAT_A_X1;	posy = STAT_PLY_Y + 3*STAT_DY;	
-	text[0]	= "Erfahrung"; 									fontName = STAT_FONT_DEFAULT;	
+//	text[0]	= "Erfahrung"; 									fontName = STAT_FONT_DEFAULT;	
+	text[0]	= "Zkušenost"; 									fontName = STAT_FONT_DEFAULT;	
 	flags	= flags & ~IT_SELECTABLE;
 };
 
 INSTANCE MENU_ITEM_LEVEL_NEXT_TITLE(C_MENU_ITEM_DEF)
 {
 	posx = STAT_A_X1;	posy = STAT_PLY_Y + 4*STAT_DY;	
-	text[0]	= "Nächste Stufe";								fontName = STAT_FONT_DEFAULT;
+//	text[0]	= "Nächste Stufe";								fontName = STAT_FONT_DEFAULT;
+	text[0]	= "Další úroveň";								fontName = STAT_FONT_DEFAULT;
 	flags	= flags & ~IT_SELECTABLE;
 };
 
 INSTANCE MENU_ITEM_LEARN_TITLE(C_MENU_ITEM_DEF)
 {
 	posx = STAT_A_X1;	posy = STAT_PLY_Y + 5*STAT_DY;	
-	text[0]	= "Lernpunkte";									fontName = STAT_FONT_DEFAULT;
+//	text[0]	= "Lernpunkte";									fontName = STAT_FONT_DEFAULT;
+	text[0]	= "Zkuš. body";							        fontName = STAT_FONT_DEFAULT;
 	flags	= flags & ~IT_SELECTABLE;
 };
 
@@ -227,7 +232,8 @@ INSTANCE MENU_ITEM_LEARN(C_MENU_ITEM_DEF)
 INSTANCE MENU_ITEM_ATTRIBUTE_HEADING(C_MENU_ITEM_DEF)
 {
 	posx = STAT_A_X1;	posy = STAT_ATR_Y + 1*STAT_DY;
-	text[0]		=  "Attribute:";							fontName = STAT_FONT_TITLE;
+//	text[0]		=  "Attribute:";							fontName = STAT_FONT_TITLE;
+	text[0]		=  "VLASTNOSTI";							    fontName = STAT_FONT_TITLE;
 	flags		= flags & ~IT_SELECTABLE;
 };
 
@@ -235,25 +241,29 @@ INSTANCE MENU_ITEM_ATTRIBUTE_HEADING(C_MENU_ITEM_DEF)
 INSTANCE MENU_ITEM_ATTRIBUTE_1_TITLE(C_MENU_ITEM_DEF)
 {
 	posx = STAT_A_X1;	posy = STAT_ATR_Y + 2*STAT_DY;
-	text[0]		= 	"Stärke";								fontName = STAT_FONT_DEFAULT;
+//	text[0]		= 	"Stärke";								fontName = STAT_FONT_DEFAULT;
+	text[0]		= 	"Síla";									fontName = STAT_FONT_DEFAULT;
 	flags		= 	flags & ~IT_SELECTABLE;
 };
 INSTANCE MENU_ITEM_ATTRIBUTE_2_TITLE(C_MENU_ITEM_DEF)
 {
 	posx = STAT_A_X1;	posy = STAT_ATR_Y + 3*STAT_DY;
-	text[0]		=	"Geschick";								fontName = STAT_FONT_DEFAULT;
+//	text[0]		=	"Geschick";								fontName = STAT_FONT_DEFAULT;
+	text[0]		=	"Obratnost";							fontName = STAT_FONT_DEFAULT;
 	flags		=	flags & ~IT_SELECTABLE;
 };
 INSTANCE MENU_ITEM_ATTRIBUTE_3_TITLE(C_MENU_ITEM_DEF)
 {
 	posx = STAT_A_X1;	posy = STAT_ATR_Y + 4*STAT_DY;
+//	text[0]		=	"Mana";									fontName = STAT_FONT_DEFAULT;
 	text[0]		=	"Mana";									fontName = STAT_FONT_DEFAULT;
 	flags		=	flags & ~IT_SELECTABLE;
 };
 INSTANCE MENU_ITEM_ATTRIBUTE_4_TITLE(C_MENU_ITEM_DEF)
 {
 	posx = STAT_A_X1;	posy = STAT_ATR_Y + 5*STAT_DY;
-	text[0]		=	"Gesundheit";							fontName =	STAT_FONT_DEFAULT;
+//	text[0]		=	"Gesundheit";							fontName =	STAT_FONT_DEFAULT;
+	text[0]		=	"Zdraví";							fontName =	STAT_FONT_DEFAULT;
 	flags		=	flags & ~IT_SELECTABLE;
 };
 
@@ -286,28 +296,32 @@ INSTANCE MENU_ITEM_ATTRIBUTE_4(C_MENU_ITEM_DEF)
 
 INSTANCE MENU_ITEM_ARMOR_HEADING(C_MENU_ITEM_DEF)
 {
-	text[0]	= "Rüstungs-Schutz:";						fontName = STAT_FONT_TITLE;
+//	text[0]	= "Rüstungs-Schutz:";						fontName = STAT_FONT_TITLE;
+	text[0]	= "OCHRANA";								fontName = STAT_FONT_TITLE;
 	posx =  STAT_A_X1; posy = STAT_ARM_Y + 0*STAT_DY;
 	flags = flags & ~IT_SELECTABLE;
 };
 
 INSTANCE MENU_ITEM_ARMOR_1_TITLE(C_MENU_ITEM_DEF)
 {
-	text[0]	= "Waffen";
+//	text[0]	= "Waffen";
+	text[0]	= "proti zbraním";
 	posx =  STAT_A_X1; posy = STAT_ARM_Y + 1*STAT_DY;	fontName = STAT_FONT_DEFAULT;
 	flags = flags & ~IT_SELECTABLE;
 };
 
 INSTANCE MENU_ITEM_ARMOR_2_TITLE(C_MENU_ITEM_DEF)
 {
-	text[0]	= "Geschosse";
+//	text[0]	= "Geschosse";
+	text[0]	= "proti šípům";
 	posx =  STAT_A_X1; posy = STAT_ARM_Y + 2*STAT_DY;	fontName = STAT_FONT_DEFAULT;
 	flags = flags & ~IT_SELECTABLE;
 };
 
 INSTANCE MENU_ITEM_ARMOR_3_TITLE(C_MENU_ITEM_DEF)
 {
-	text[0]	= "Feuer";
+//	text[0]	= "Feuer";
+	text[0]	= "proti ohni";
 	posx =  STAT_A_X1; posy = STAT_ARM_Y + 3*STAT_DY;	fontName = STAT_FONT_DEFAULT;
 	flags = flags & ~IT_SELECTABLE;
 };
@@ -315,7 +329,8 @@ INSTANCE MENU_ITEM_ARMOR_3_TITLE(C_MENU_ITEM_DEF)
 
 INSTANCE MENU_ITEM_ARMOR_4_TITLE(C_MENU_ITEM_DEF)
 {
-	text[0]	= "Magie";
+//	text[0]	= "Magie";
+	text[0]	= "proti magii";
 	posx =  STAT_A_X1; posy = STAT_ARM_Y + 4*STAT_DY;	fontName = STAT_FONT_DEFAULT;
 	flags = flags & ~IT_SELECTABLE;
 };
@@ -353,28 +368,28 @@ INSTANCE MENU_ITEM_ARMOR_4(C_MENU_ITEM_DEF)
 // Headings
 INSTANCE MENU_ITEM_TALENTS_WEAPON_HEADING(C_MENU_ITEM_DEF)
 {
-	text[0]	= "Waffentalente / Treffer-Chance:";
+	text[0]	= "Bojové dovednosti / Kritický úder";
 	posx	= STAT_B_X1; posy = STAT_TAL_Y + STAT_DY*0;			fontName = STAT_FONT_TITLE;	
 	flags		=	flags & ~IT_SELECTABLE;
 };
 
 INSTANCE MENU_ITEM_TALENTS_THIEF_HEADING(C_MENU_ITEM_DEF)
 {
-	text[0]	= "Diebestalente / Erfolgs-Chance:";
+	text[0]	= "Zloděj. dovednosti / Možnost přistižení";
 	posx	= STAT_B_X1; posy = STAT_TAL_Y + STAT_DY*7;			fontName = STAT_FONT_TITLE;	
 	flags		=	flags & ~IT_SELECTABLE;
 };
 
 INSTANCE MENU_ITEM_TALENTS_MAGIC_HEADING(C_MENU_ITEM_DEF)
 {
-	text[0]	= "Magie-Talente:";
+	text[0]	= "Magie:";
 	posx	= STAT_B_X1; posy = STAT_TAL_Y + STAT_DY*13; 		fontName = STAT_FONT_TITLE;
 	flags		=	flags & ~IT_SELECTABLE;
 };
 
 INSTANCE MENU_ITEM_TALENTS_WORK_HEADING(C_MENU_ITEM_DEF)
 {
-	text[0]	= "Handwerks-Talente:";
+	text[0]	= "Ostatní dovednosti:";
 	posx	= STAT_B_X1; posy = STAT_TAL_Y + STAT_DY*18; 		fontName = STAT_FONT_TITLE;
 	flags		=	flags & ~IT_SELECTABLE;
 };

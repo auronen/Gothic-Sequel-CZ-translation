@@ -28,7 +28,8 @@ INSTANCE MENU_OPTIONS(C_MENU_DEF)
 
 INSTANCE MENUITEM_OPT_HEADING(C_MENU_ITEM_DEF)
 {
-	text[0]		=	"EINSTELLUNGEN";
+//	text[0]		=	"EINSTELLUNGEN";
+	text[0]		=	"NASTAVENÍ";
 	type		=	MENU_ITEM_TEXT;
 	// Position und Dimension
 	posx		=	0;		posy		=	MENU_TITLE_Y;
@@ -41,8 +42,10 @@ INSTANCE MENUITEM_OPT_HEADING(C_MENU_ITEM_DEF)
 INSTANCE MENUITEM_OPT_GAME(C_MENU_ITEM_DEF)
 {
 	backpic		= MENU_ITEM_BACK_PIC;
-	text[0]		= "Spiel";
-	text[1]		= "Diverse Spieleinstellungen vornehmen.";  // Kommentar
+//	text[0]		= "Spiel";
+//	text[1]		= "Diverse Spieleinstellungen vornehmen.";  // Kommentar
+	text[0]		= "Hra";
+	text[1]		= "Upravit nastavení hry.";
 
 	// Position und Dimension
 	posx		= 0;		posy		= MENU_START_Y + MENU_DY*0;
@@ -58,8 +61,10 @@ INSTANCE MENUITEM_OPT_GAME(C_MENU_ITEM_DEF)
 INSTANCE MENUITEM_OPT_GRAPHICS(C_MENU_ITEM_DEF)
 {
 	backpic		= MENU_ITEM_BACK_PIC;
-	text[0]		= "Grafik";
-	text[1]		= "Sichtweite, Details und Effekte.";  // Kommentar
+//	text[0]		= "Grafik";
+//	text[1]		= "Sichtweite, Details und Effekte.";  // Kommentar
+	text[0]		= "Grafika";
+	text[1]		= "Viditelnost, detaily a efekty.";
 
 	// Position und Dimension
 	posx		= 0;		posy		= MENU_START_Y + MENU_DY*1;
@@ -75,9 +80,11 @@ INSTANCE MENUITEM_OPT_GRAPHICS(C_MENU_ITEM_DEF)
 instance MENUITEM_OPT_VIDEO(C_MENU_ITEM_DEF)
 {
 	backpic		= MENU_ITEM_BACK_PIC;
+//	text[0]		=	"Video";
+//	text[1]		=	"Grafikkarte, Auflösung und Helligkeit.";  // Kommentar
 	text[0]		=	"Video";
-	text[1]		=	"Grafikkarte, Auflösung und Helligkeit.";  // Kommentar
-
+	text[1]		=	"Grafický adaptér, rozlišení a jas.";
+	
 	// Position und Dimension
 	posx		= 0;		posy		= MENU_START_Y + MENU_DY*2;
 	dimx		= 8192;		dimy		= 750;
@@ -92,9 +99,11 @@ instance MENUITEM_OPT_VIDEO(C_MENU_ITEM_DEF)
 INSTANCE MENUITEM_OPT_AUDIO(C_MENU_ITEM_DEF)
 {
 	backpic		= MENU_ITEM_BACK_PIC;
-	text[0]		= "Audio";
-	text[1]		= "Musik, Sprache und Soundeffekte.";  // Kommentar
-
+//	text[0]		= "Audio";
+//	text[1]		= "Musik, Sprache und Soundeffekte.";  // Kommentar
+	text[0]		= "Zvuk";
+	text[1]		= "Hudba, jazyk a zvukové efekty.";
+	
 	// Position und Dimension
 	posx		= 0;		posy		= MENU_START_Y + MENU_DY*3;
 	dimx		= 8192;		dimy		= 750;
@@ -110,9 +119,11 @@ INSTANCE MENUITEM_OPT_AUDIO(C_MENU_ITEM_DEF)
 INSTANCE MENUITEM_OPT_CONTROLS(C_MENU_ITEM_DEF)
 {
 	backpic		= MENU_ITEM_BACK_PIC;
-	text[0]		= "Steuerung";
-	text[1]		= "Konfiguration der Tastatur- und Mausbelegung.";  // Kommentar
-
+//	text[0]		= "Steuerung";
+//	text[1]		= "Konfiguration der Tastatur- und Mausbelegung.";  // Kommentar
+	text[0]		= "Ovládání";
+	text[1]		= "Nastavení klávesnice.";
+	
 	// Position und Dimension
 	posx		= 0;		posy		= MENU_START_Y + MENU_DY*4;
 	dimx		= 8192;		dimy		= 750;
@@ -129,9 +140,11 @@ INSTANCE MENUITEM_OPT_CONTROLS(C_MENU_ITEM_DEF)
 INSTANCE MENUITEM_PERF(C_MENU_ITEM_DEF)
 {
 	backpic		= MENU_ITEM_BACK_PIC;
-	text[0]		= "Performance/Qualität";
-	text[1]		= "Optimierung von Performance und Qualität.";  // Kommentar
-
+//	text[0]		= "Performance/Qualität";
+//	text[1]		= "Optimierung von Performance und Qualität.";  // Kommentar
+	text[0]		= "Výkon/kvalita";
+	text[1]		= "Optimalizovat výkon a kvalitu.";
+	
 	// Position und Dimension
 	posx		= 0;		posy		= MENU_START_Y + MENU_DY*5;
 	dimx		= 8192;		dimy		= 800;
@@ -146,7 +159,8 @@ INSTANCE MENUITEM_PERF(C_MENU_ITEM_DEF)
 instance MENUITEM_PERF_CHOICE(C_MENU_ITEM_DEF)
 {
 	backpic		= MENU_CHOICE_BACK_PIC;
-	text[0]		= "benutzerdefiniert#hohe Performance|mittlere Qualität|hohe Qualität";	// # trennt die UnDef-Option von der auswaehlbaren Optionen
+//	text[0]		= "benutzerdefiniert#hohe Performance|mittlere Qualität|hohe Qualität";	// # trennt die UnDef-Option von der auswaehlbaren Optionen
+	text[0]		= "uživatelské nastavení#vysoký výkon|střední kvalita|vysoká kvalita";
 	type		= MENU_ITEM_CHOICEBOX;
 	fontName	= MENU_FONT_SMALL;
 	// Position und Dimension
@@ -164,7 +178,8 @@ instance MENUITEM_PERF_CHOICE(C_MENU_ITEM_DEF)
 INSTANCE MENUITEM_OPT_BACK(C_MENU_ITEM_DEF)
 {
 	backpic		=	MENU_ITEM_BACK_PIC;
-	text[0]		=	"Zurück";
+//	text[0]		=	"Zurück";
+	text[0]		=	"Zpět";
 	// Position und Dimension
 	posx		=	1000;			posy		=	MENU_BACK_Y;
 	dimx		=	6192;		dimy		=	MENU_DY;

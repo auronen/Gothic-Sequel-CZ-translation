@@ -66,4 +66,5 @@
 //
 
 	const string MENU_TEXT_NEEDS_APPLY		= "";
-	const string MENU_TEXT_NEEDS_RESTART	= "Einige Einstellungen werden erst nach einem Neustart aktiv";
+	//const string MENU_TEXT_NEEDS_RESTART	= "Einige Einstellungen werden erst nach einem Neustart aktiv";
+	const string MENU_TEXT_NEEDS_RESTART	= "Některá nastavení se projeví až po restartu hry.";

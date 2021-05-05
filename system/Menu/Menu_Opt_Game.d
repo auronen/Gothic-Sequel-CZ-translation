@@ -34,7 +34,8 @@ INSTANCE MENU_OPT_GAME(C_MENU_DEF)
 
 INSTANCE MENUITEM_GAME_HEADLINE(C_MENU_ITEM_DEF) 
 {
-	text[0]		=	"SPIEL EINSTELLUNGEN";
+//	text[0]		=	"SPIEL EINSTELLUNGEN";
+	text[0]		=	"NASTAVENÍ HRY";
 	type		=	MENU_ITEM_TEXT;
 	// Position und Dimension	
 	posx		=	0;		posy		=	MENU_TITLE_Y;
@@ -52,8 +53,10 @@ INSTANCE MENUITEM_GAME_HEADLINE(C_MENU_ITEM_DEF)
 INSTANCE MENUITEM_GAME_SUB_TITLES(C_MENU_ITEM_DEF)
 {
 	backpic		=	MENU_ITEM_BACK_PIC;
-	text[0]		=	"Untertitel";
-	text[1]		= 	"Visuelle Einblendung von Dialogen."; // Kommentar
+//	text[0]		=	"Untertitel";
+//	text[1]		= 	"Visuelle Einblendung von Dialogen."; // Kommentar
+	text[0]		=	"Titulky";
+	text[1]		= 	"Vzhled dialogů.";
 	// Position und Dimension	
 	posx		=	1000;	posy		=	MENU_START_Y + MENU_DY*0;
 	dimx		=	4000;	dimy		=	750;
@@ -67,7 +70,8 @@ instance MENUITEM_GAME_SUB_TITLES_CHOICE(C_MENU_ITEM_DEF)
 {
 	backPic		=	MENU_CHOICE_BACK_PIC;
 	type		=	MENU_ITEM_CHOICEBOX;		
-	text[0]		= 	"nein|ja";
+//	text[0]		= 	"nein|ja";
+	text[0]		= 	"ne|ano";
 	fontName	=   MENU_FONT_SMALL;
 	// Position und Dimension	
 	posx		= 5000;		posy		=	MENU_START_Y + MENU_DY*0 + MENU_CHOICE_YPLUS;
@@ -88,8 +92,10 @@ instance MENUITEM_GAME_SUB_TITLES_CHOICE(C_MENU_ITEM_DEF)
 INSTANCE MENUITEM_GAME_ANIMATE_WINDOWS(C_MENU_ITEM_DEF)
 {
 	backpic		=	MENU_ITEM_BACK_PIC;
-	text[0]		=	"Animierte Fenster";
-	text[1]		= 	"Animierte Dialogfenster."; // Kommentar
+//	text[0]		=	"Animierte Fenster";
+//	text[1]		= 	"Animierte Dialogfenster."; // Kommentar
+	text[0]		=	"Animovaná okna";
+	text[1]		= 	"Animovaná dialogová okna";
 	// Position und Dimension	
 	posx		=	1000;	posy		=	MENU_START_Y + MENU_DY*1;
 	dimx		=	4000;	dimy		=	750;
@@ -103,7 +109,8 @@ instance MENUITEM_GAME_ANIMATE_WINDOWS_CHOICE(C_MENU_ITEM_DEF)
 {
 	backPic		=	MENU_CHOICE_BACK_PIC;
 	type		=	MENU_ITEM_CHOICEBOX;	
-	text[0]		= 	"nein|ja";
+//	text[0]		= 	"nein|ja";
+	text[0]		= 	"ne|ano";
 	fontName	=   MENU_FONT_SMALL;
 	// Position und Dimension	
 	posx		= 5000;		posy		= MENU_START_Y + MENU_DY*1 + MENU_CHOICE_YPLUS;
@@ -125,8 +132,10 @@ instance MENUITEM_GAME_ANIMATE_WINDOWS_CHOICE(C_MENU_ITEM_DEF)
 INSTANCE MENUITEM_GAME_LOOKAROUND_INVERSE(C_MENU_ITEM_DEF)
 {
 	backpic		=	MENU_ITEM_BACK_PIC;
-	text[0]		=	"Umschau umkehren";
-	text[1]		= 	"Inverse Kamerasteuerung."; // Kommentar
+//	text[0]		=	"Umschau umkehren";
+//	text[1]		= 	"Inverse Kamerasteuerung."; // Kommentar
+	text[0]		=	"Inverzní pohled";
+	text[1]		= 	"Inverzní ovládání kamery.";
 	// Position und Dimension	
 	posx		=	1000;	posy		=	MENU_START_Y + MENU_DY*2;
 	dimx		=	4000;	dimy		=	750;
@@ -140,7 +149,8 @@ instance MENUITEM_GAME_LOOKAROUND_INVERSE_CHOICE(C_MENU_ITEM_DEF)
 {
 	backPic		=	MENU_CHOICE_BACK_PIC;
 	type		=	MENU_ITEM_CHOICEBOX;		
-	text[0]		= 	"nein|ja";
+//	text[0]		= 	"nein|ja";
+	text[0]		= 	"ne|ano";
 	fontName	=   MENU_FONT_SMALL;
 	// Position und Dimension	
 	posx		= 5000;		posy		=	MENU_START_Y + MENU_DY*2 + MENU_CHOICE_YPLUS;
@@ -161,8 +171,10 @@ instance MENUITEM_GAME_LOOKAROUND_INVERSE_CHOICE(C_MENU_ITEM_DEF)
 INSTANCE MENUITEM_M(C_MENU_ITEM_DEF)
 {
 	backpic		=	MENU_ITEM_BACK_PIC;
-	text[0]		=	"Maus";
-	text[1]		= 	"Aktiviert eine Maussteuerung"; // Kommentar
+//	text[0]		=	"Maus";
+//	text[1]		= 	"Aktiviert eine Maussteuerung"; // Kommentar
+	text[0]		=	"Myš";
+	text[1]		= 	"Aktivovat ovládání myší.";
 	// Position und Dimension	
 	posx		=	1000;	posy		=	MENU_START_Y + MENU_DY*3;
 	dimx		=	4000;	dimy		=	750;
@@ -176,7 +188,8 @@ instance MENUITEM_M_CHOICE(C_MENU_ITEM_DEF)
 {
 	backPic		=	MENU_CHOICE_BACK_PIC;
 	type		=	MENU_ITEM_CHOICEBOX;	
-	text[0]		= 	"aus|an";
+//	text[0]		= 	"aus|an";
+	text[0]		= 	"vypnuto|zapnuto";
 	fontName	=   MENU_FONT_SMALL;
 	// Position und Dimension	
 	posx		= 5000;		posy		= MENU_START_Y + MENU_DY*3 + MENU_CHOICE_YPLUS;
@@ -197,8 +210,10 @@ instance MENUITEM_M_CHOICE(C_MENU_ITEM_DEF)
 INSTANCE MENUITEM_MSENSITIVITY(C_MENU_ITEM_DEF)
 {
 	backpic		=	MENU_ITEM_BACK_PIC;
-	text[0]		=	"Maus Empfindlichkeit";
-	text[1]		= 	""; // Kommentar
+//	text[0]		=	"Maus Empfindlichkeit";
+//	text[1]		= 	""; // Kommentar
+	text[0]		=	"Citlivost myši";
+	text[1]		= 	"";
 	// Position und Dimension	
 	posx		=	1000;	posy		=	MENU_START_Y + MENU_DY*4;
 	dimx		=	4000;	dimy		=	750;
@@ -236,8 +251,10 @@ instance MENUITEM_MSENSITIVITY_SLIDER(C_MENU_ITEM_DEF)
 INSTANCE MENUITEM_GAME_BLOOD(C_MENU_ITEM_DEF)
 {
 	backpic		=	MENU_ITEM_BACK_PIC;
-	text[0]		=	"Blut Details";
-	text[1]		= 	"Grad der Darstellung von Bluteffekten."; // Kommentar
+//	text[0]		=	"Blut Details";
+//	text[1]		= 	"Grad der Darstellung von Bluteffekten."; // Kommentar
+	text[0]		=	"Krev";
+	text[1]		= 	"Zobrazení efektů s krví.";
 	// Position und Dimension	
 	posx		=	1000;	posy		=	MENU_START_Y + MENU_DY*5;
 	dimx		=	4000;	dimy		=	750;
@@ -251,7 +268,8 @@ instance MENUITEM_GAME_BLOOD_CHOICE(C_MENU_ITEM_DEF)
 {
 	backPic		=	MENU_CHOICE_BACK_PIC;
 	type		=	MENU_ITEM_CHOICEBOX;	
-	text[0]		= 	"keine|wenige|mehrere|viele";
+//	text[0]		= 	"keine|wenige|mehrere|viele";
+	text[0]		= 	"ne|málo|více|hodně";
 	fontName	=   MENU_FONT_SMALL;
 	// Position und Dimension	
 	posx		= 5000;		posy		= MENU_START_Y + MENU_DY*5 + MENU_CHOICE_YPLUS;
@@ -269,7 +287,8 @@ instance MENUITEM_GAME_BLOOD_CHOICE(C_MENU_ITEM_DEF)
 INSTANCE MENUITEM_GAME_BACK(C_MENU_ITEM_DEF)
 {
 	backpic		=	MENU_ITEM_BACK_PIC;
-	text[0]		=	"Zurück";
+//	text[0]		=	"Zurück";
+	text[0]		=	"Zpět";
 	// Position und Dimension	
 	posx		=	1000;		posy		=	MENU_BACK_Y;
 	dimx		=	6192;		dimy		=	MENU_DY;

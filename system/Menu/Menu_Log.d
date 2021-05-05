@@ -39,7 +39,8 @@ const int LOG_ITEM_LIST_WIDTH	= 4500;
 
 INSTANCE MENU_ITEM_SEL_MISSIONS_ACT(C_MENU_ITEM_DEF)
 {
-	text[0]		=	"Aktuelle\nMissionen";
+//	text[0]		=	"Aktuelle\nMissionen";
+	text[0]		=	"Rozehrané\nmise";
 	posx		=	LOG_ITEM_X1;
 	posy		=   	1500;
 	dimx 		= 	LOG_ITEM_DX1;
@@ -53,7 +54,8 @@ INSTANCE MENU_ITEM_SEL_MISSIONS_ACT(C_MENU_ITEM_DEF)
 
 INSTANCE MENU_ITEM_SEL_MISSIONS_OLD(C_MENU_ITEM_DEF)
 {
-	text[0]		=	"Erfüllte\nMissionen";
+//	text[0]		=	"Erfüllte\nMissionen";
+	text[0]		=	"Dokončené\nmise";
 	
 	posx		=	LOG_ITEM_X1;
 	posy		=   	2500;
@@ -69,7 +71,8 @@ INSTANCE MENU_ITEM_SEL_MISSIONS_OLD(C_MENU_ITEM_DEF)
 
 INSTANCE MENU_ITEM_SEL_MISSIONS_FAILED(C_MENU_ITEM_DEF)
 {
-	text[0]		=	"Gescheiterte\nMissionen";
+//	text[0]		=	"Gescheiterte\nMissionen";
+	text[0]		=	"Nedokončené\nmise";
 	
 	posx		=	LOG_ITEM_X1;
 	posy		=   	3500;
@@ -85,7 +88,8 @@ INSTANCE MENU_ITEM_SEL_MISSIONS_FAILED(C_MENU_ITEM_DEF)
 
 INSTANCE MENU_ITEM_SEL_LOG(C_MENU_ITEM_DEF)
 {
-	text[0]		=	"Allgemeine\nInfos";
+//	text[0]		=	"Allgemeine\nInfos";
+	text[0]		=	"Všeobecné\ninformace";
 	
 	posx		=	LOG_ITEM_X1;
 	posy		=   	4500;
@@ -106,7 +110,8 @@ INSTANCE MENU_ITEM_SEL_LOG(C_MENU_ITEM_DEF)
 instance MENU_ITEM_LIST_MISSIONS_ACT(C_MENU_ITEM_DEF)
 {
 	type		= 	MENU_ITEM_LISTBOX;	
-	text[0]		= 	"Act Missions";
+//	text[0]		= 	"Act Missions";
+	text[0]		= 	"Rozehrané mise";
 	
 	posx		=	LOG_ITEM_LIST_X;
 	posy		=   LOG_ITEM_LIST_Y;
@@ -126,7 +131,8 @@ instance MENU_ITEM_LIST_MISSIONS_ACT(C_MENU_ITEM_DEF)
 instance MENU_ITEM_LIST_MISSIONS_FAILED(C_MENU_ITEM_DEF)
 {
 	type		= 	MENU_ITEM_LISTBOX;	
-	text[0]		= 	"Old Missions";
+//	text[0]		= 	"Old Missions";
+	text[0]		= 	"Dokončené mise";
 	
 	posx		=	LOG_ITEM_LIST_X;
 	posy		=   LOG_ITEM_LIST_Y;
@@ -146,7 +152,8 @@ instance MENU_ITEM_LIST_MISSIONS_FAILED(C_MENU_ITEM_DEF)
 instance MENU_ITEM_LIST_MISSIONS_OLD(C_MENU_ITEM_DEF)
 {
 	type		= 	MENU_ITEM_LISTBOX;	
-	text[0]		= 	"Old Missions";
+//	text[0]		= 	"Old Missions";
+	text[0]		= 	"Nedokončené mise";
 	
 	posx		=	LOG_ITEM_LIST_X;
 	posy		=   LOG_ITEM_LIST_Y;
@@ -166,7 +173,8 @@ instance MENU_ITEM_LIST_MISSIONS_OLD(C_MENU_ITEM_DEF)
 instance MENU_ITEM_LIST_LOG(C_MENU_ITEM_DEF)
 {
 	type		= 	MENU_ITEM_LISTBOX;	
-	text[0]		= 	"Log";
+//	text[0]		= 	"Log";
+	text[0]		= 	"Deník";
 	
 	posx		=	LOG_ITEM_LIST_X;
 	posy		=   LOG_ITEM_LIST_Y;
@@ -189,7 +197,8 @@ instance MENU_ITEM_LIST_LOG(C_MENU_ITEM_DEF)
 
 INSTANCE MENU_ITEM_CONTENT_VIEWER(C_MENU_ITEM_DEF)
 {
-	text[0]		=	"no content";
+//	text[0]		=	"no content";
+	text[0]		=	"prázdné";
 	
 	posx		=	0;
 	posy		=   0;	
@@ -208,7 +217,8 @@ INSTANCE MENU_ITEM_CONTENT_VIEWER(C_MENU_ITEM_DEF)
 
 INSTANCE MENU_ITEM_DAY_TITLE(C_MENU_ITEM_DEF)
 {
-	text[0]		= 	"Tag";
+//	text[0]		= 	"Tag";
+	text[0]		= 	"Den";
 	posx 		= 	1800; // see dimx of MENU_ITEM_DAY!!
 	posy		= 	6000;
 	fontName	=	LOG_FONT_DATETIME;
@@ -217,7 +227,8 @@ INSTANCE MENU_ITEM_DAY_TITLE(C_MENU_ITEM_DEF)
 
 INSTANCE MENU_ITEM_TIME_TITLE(C_MENU_ITEM_DEF)
 {
-	text[0]		= 	"Zeit:";
+//	text[0]		= 	"Zeit:";
+	text[0]		= 	"Čas:";
 	posx 		= 	1500;
 	posy		= 	6300;
 	fontName	=	LOG_FONT_DATETIME;

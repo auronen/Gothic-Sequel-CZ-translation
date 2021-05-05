@@ -77,7 +77,8 @@ const int CTRL_GROUP5	= ctrl_y_step * 4;
 
 INSTANCE MENU_ITEM_CHG_KEYS_HEADLINE(C_MENU_ITEM_DEF) 
 {
-	text[0]		=	"TASTATUR EINSTELLUNGEN";
+//	text[0]		=	"TASTATUR EINSTELLUNGEN";
+	text[0]		=	"NASTAVENÍ KLÁVESNICE";
 	type		=	MENU_ITEM_TEXT;	
 	// Position und Dimension	
 	posx		= 0;		
@@ -96,8 +97,10 @@ INSTANCE MENU_ITEM_CHG_KEYS_HEADLINE(C_MENU_ITEM_DEF)
 
 INSTANCE MENU_ITEM_KEY_UP(C_MENU_ITEM_DEF)
 {
-	text[0]			=	"Vorwärts";
-	text[1]			=   "Taste ENTF zum Löschen und RETURN zum definieren"; // Kommentar
+//	text[0]			=	"Vorwärts";
+//	text[1]			=   "Taste ENTF zum Löschen und RETURN zum definieren"; // Kommentar
+	text[0]			=	"Dopředu";
+	text[1]			=   "Stiskem DEL zrušte stávající klávesu a stiskem ENTER zadejte novou.";
 	posx			= 	ctrl_sp1_1;	posy	= 	ctrl_y_start + ctrl_y_step * 0 + CTRL_GROUP1;
 	onSelAction[0]	=	SEL_ACTION_EXECCOMMANDS;
 	onSelAction_S[0]=	"RUN MENU_ITEM_INP_UP";
@@ -107,8 +110,10 @@ INSTANCE MENU_ITEM_KEY_UP(C_MENU_ITEM_DEF)
 
 INSTANCE MENU_ITEM_KEY_DOWN(C_MENU_ITEM_DEF)
 {
-	text[0]			=	"Rückwärts";
-	text[1]			=   "Taste ENTF zum Löschen und RETURN zum definieren"; // Kommentar
+//	text[0]			=	"Rückwärts";
+//	text[1]			=   "Taste ENTF zum Löschen und RETURN zum definieren"; // Kommentar
+	text[0]			=	"Dozadu";
+	text[1]			=   "Stiskem DEL zrušte stávající klávesu a stiskem ENTER zadejte novou.";
 	posx			=	ctrl_sp1_1;		posy	=	ctrl_y_start + ctrl_y_step * 1 + CTRL_GROUP1;
 	onSelAction[0]	=	SEL_ACTION_EXECCOMMANDS;
 	onSelAction_S[0]= 	"RUN MENU_ITEM_INP_DOWN";  
@@ -118,8 +123,10 @@ INSTANCE MENU_ITEM_KEY_DOWN(C_MENU_ITEM_DEF)
 
 INSTANCE MENU_ITEM_KEY_LEFT(C_MENU_ITEM_DEF)
 {
-	text[0]			=	"Links drehen";
-	text[1]			=   "Taste ENTF zum Löschen und RETURN zum definieren"; // Kommentar
+//	text[0]			=	"Links drehen";
+//	text[1]			=   "Taste ENTF zum Löschen und RETURN zum definieren"; // Kommentar
+	text[0]			=	"Doleva";
+	text[1]			=   "Stiskem DEL zrušte stávající klávesu a stiskem ENTER zadejte novou.";
 	posx			=	ctrl_sp1_1;		posy	=	ctrl_y_start + ctrl_y_step * 2 + CTRL_GROUP1;
 	onSelAction[0]	=	SEL_ACTION_EXECCOMMANDS;
 	onSelAction_S[0]= 	"RUN MENU_ITEM_INP_LEFT";  
@@ -129,8 +136,10 @@ INSTANCE MENU_ITEM_KEY_LEFT(C_MENU_ITEM_DEF)
 	
 INSTANCE MENU_ITEM_KEY_RIGHT(C_MENU_ITEM_DEF)
 {
-	text[0]			=	"Rechts drehen";
-	text[1]			=   "Taste ENTF zum Löschen und RETURN zum definieren"; // Kommentar
+//	text[0]			=	"Rechts drehen";
+//	text[1]			=   "Taste ENTF zum Löschen und RETURN zum definieren"; // Kommentar
+	text[0]			=	"Doprava";
+	text[1]			=   "Stiskem DEL zrušte stávající klávesu a stiskem ENTER zadejte novou.";
 	posx			=	ctrl_sp1_1;		posy	=	ctrl_y_start + ctrl_y_step * 3 + CTRL_GROUP1;
 	onSelAction[0]	=	SEL_ACTION_EXECCOMMANDS;
 	onSelAction_S[0]= 	"RUN MENU_ITEM_INP_RIGHT";  
@@ -141,8 +150,10 @@ INSTANCE MENU_ITEM_KEY_RIGHT(C_MENU_ITEM_DEF)
 
 INSTANCE MENU_ITEM_KEY_STRAFE_LEFT(C_MENU_ITEM_DEF)
 {
-	text[0]			=	"Seitwärts links";
-	text[1]			=   "Taste ENTF zum Löschen und RETURN zum definieren"; // Kommentar
+//	text[0]			=	"Seitwärts links";
+//	text[1]			=   "Taste ENTF zum Löschen und RETURN zum definieren"; // Kommentar
+	text[0]			=	"Úkrok doleva";
+	text[1]			=   "Stiskem DEL zrušte stávající klávesu a stiskem ENTER zadejte novou.";
 	posx			=	ctrl_sp1_1;		posy	=	ctrl_y_start + ctrl_y_step * 4 + CTRL_GROUP1;
 	onSelAction[0]	=	SEL_ACTION_EXECCOMMANDS;
 	onSelAction_S[0]= 	"RUN MENU_ITEM_INP_STRAFE_LEFT";  
@@ -152,8 +163,10 @@ INSTANCE MENU_ITEM_KEY_STRAFE_LEFT(C_MENU_ITEM_DEF)
 	
 INSTANCE MENU_ITEM_KEY_STRAFE_RIGHT(C_MENU_ITEM_DEF)
 {
-	text[0]			=	"Seitwärts rechts";
-	text[1]			=   "Taste ENTF zum Löschen und RETURN zum definieren"; // Kommentar
+//	text[0]			=	"Seitwärts rechts";
+//	text[1]			=   "Taste ENTF zum Löschen und RETURN zum definieren"; // Kommentar
+	text[0]			=	"Úkrok doprava";
+	text[1]			=   "Stiskem DEL zrušte stávající klávesu a stiskem ENTER zadejte novou.";
 	posx			=	ctrl_sp1_1;		posy	=	ctrl_y_start + ctrl_y_step * 5 + CTRL_GROUP1;
 	onSelAction[0]	=	SEL_ACTION_EXECCOMMANDS;
 	onSelAction_S[0]= 	"RUN MENU_ITEM_INP_STRAFE_RIGHT";  
@@ -169,8 +182,10 @@ INSTANCE MENU_ITEM_KEY_STRAFE_RIGHT(C_MENU_ITEM_DEF)
 
 INSTANCE MENU_ITEM_KEY_WEAPON(C_MENU_ITEM_DEF)
 {
-	text[0]			=	"Waffen";
-	text[1]			=   "Taste ENTF zum Löschen und RETURN zum definieren"; // Kommentar
+//	text[0]			=	"Waffen";
+//	text[1]			=   "Taste ENTF zum Löschen und RETURN zum definieren"; // Kommentar
+	text[0]			=	"Zbraně";
+	text[1]			=   "Stiskem DEL zrušte stávající klávesu a stiskem ENTER zadejte novou.";
 	posx			=	ctrl_sp1_1;		posy	=	ctrl_y_start + ctrl_y_step * 6 + CTRL_GROUP2;
 	onSelAction[0]	=	SEL_ACTION_EXECCOMMANDS;
 	onSelAction_S[0]= 	"RUN MENU_ITEM_INP_WEAPON";  
@@ -180,8 +195,10 @@ INSTANCE MENU_ITEM_KEY_WEAPON(C_MENU_ITEM_DEF)
 
 INSTANCE MENU_ITEM_KEY_ACTION(C_MENU_ITEM_DEF)
 {
-	text[0]			=	"Aktion";
-	text[1]			=   "Taste ENTF zum Löschen und RETURN zum definieren"; // Kommentar
+//	text[0]			=	"Aktion";
+//	text[1]			=   "Taste ENTF zum Löschen und RETURN zum definieren"; // Kommentar
+	text[0]			=	"Akce";
+	text[1]			=   "Stiskem DEL zrušte stávající klávesu a stiskem ENTER zadejte novou.";
 	posx			=	ctrl_sp1_1;		posy	=	ctrl_y_start + ctrl_y_step * 7 + CTRL_GROUP2;
 	onSelAction[0]	=	SEL_ACTION_EXECCOMMANDS;
 	onSelAction_S[0]= 	"RUN MENU_ITEM_INP_ACTION";  
@@ -191,8 +208,10 @@ INSTANCE MENU_ITEM_KEY_ACTION(C_MENU_ITEM_DEF)
 
 INSTANCE MENU_ITEM_KEY_JUMPCLIMBSTRAFE(C_MENU_ITEM_DEF)
 {
-	text[0]			=	"Springen/Klettern";
-	text[1]			=   "Taste ENTF zum Löschen und RETURN zum definieren"; // Kommentar
+//	text[0]			=	"Springen/Klettern";
+//	text[1]			=   "Taste ENTF zum Löschen und RETURN zum definieren"; // Kommentar
+	text[0]			=	"Skok/Šplhání";
+	text[1]			=   "Stiskem DEL zrušte stávající klávesu a stiskem ENTER zadejte novou.";
 	posx			=	ctrl_sp1_1;		posy	=	ctrl_y_start + ctrl_y_step * 8 + CTRL_GROUP2;
 	onSelAction[0]	=	SEL_ACTION_EXECCOMMANDS;
 	onSelAction_S[0]= 	"RUN MENU_ITEM_INP_JUMPCLIMBSTRAFE";  
@@ -202,8 +221,10 @@ INSTANCE MENU_ITEM_KEY_JUMPCLIMBSTRAFE(C_MENU_ITEM_DEF)
 
 INSTANCE MENU_ITEM_KEY_RUNMODETOGGLE(C_MENU_ITEM_DEF)
 {	
-	text[0]			=	"Langsam laufen";
-	text[1]			=   "Taste ENTF zum Löschen und RETURN zum definieren"; // Kommentar
+//	text[0]			=	"Langsam laufen";
+//	text[1]			=   "Taste ENTF zum Löschen und RETURN zum definieren"; // Kommentar
+	text[0]			=	"Běh";
+	text[1]			=   "Stiskem DEL zrušte stávající klávesu a stiskem ENTER zadejte novou.";
 	posx			=	ctrl_sp1_1;		posy	=	ctrl_y_start + ctrl_y_step * 9 + CTRL_GROUP2;
 	onSelAction[0]	=	SEL_ACTION_EXECCOMMANDS;
 	onSelAction_S[0]= 	"RUN MENU_ITEM_INP_RUNMODETOGGLE";  
@@ -213,8 +234,10 @@ INSTANCE MENU_ITEM_KEY_RUNMODETOGGLE(C_MENU_ITEM_DEF)
 
 INSTANCE MENU_ITEM_KEY_SNEAK(C_MENU_ITEM_DEF)
 {	
-	text[0]			=	"Schleichen";
-	text[1]			=   "Taste ENTF zum Löschen und RETURN zum definieren"; // Kommentar
+//	text[0]			=	"Schleichen";
+//	text[1]			=   "Taste ENTF zum Löschen und RETURN zum definieren"; // Kommentar
+	text[0]			=	"Plížení";
+	text[1]			=   "Stiskem DEL zrušte stávající klávesu a stiskem ENTER zadejte novou.";
 	posx			=	ctrl_sp1_1;		posy	=	ctrl_y_start + ctrl_y_step * 10 + CTRL_GROUP2;
 	onSelAction[0]	=	SEL_ACTION_EXECCOMMANDS;
 	onSelAction_S[0]= 	"RUN MENU_ITEM_INP_SNEAK";  
@@ -224,8 +247,10 @@ INSTANCE MENU_ITEM_KEY_SNEAK(C_MENU_ITEM_DEF)
 
 INSTANCE MENU_ITEM_KEY_LOOK(C_MENU_ITEM_DEF)
 {
-	text[0]			=	"Umsehen";
-	text[1]			=   "Taste ENTF zum Löschen und RETURN zum definieren"; // Kommentar
+//	text[0]			=	"Umsehen";
+//	text[1]			=   "Taste ENTF zum Löschen und RETURN zum definieren"; // Kommentar
+	text[0]			=	"Rozhlížení";
+	text[1]			=   "Stiskem DEL zrušte stávající klávesu a stiskem ENTER zadejte novou.";
 	posx			=	ctrl_sp1_1;		posy	=	ctrl_y_start + ctrl_y_step * 11 + CTRL_GROUP2;
 	onSelAction[0]	=	SEL_ACTION_EXECCOMMANDS;
 	onSelAction_S[0]= 	"RUN MENU_ITEM_INP_LOOK";  
@@ -235,8 +260,10 @@ INSTANCE MENU_ITEM_KEY_LOOK(C_MENU_ITEM_DEF)
 
 INSTANCE MENU_ITEM_KEY_LOOK_FP(C_MENU_ITEM_DEF)
 {
-	text[0]			=	"Umsehen FirstPerson";
-	text[1]			=   "Taste ENTF zum Löschen und RETURN zum definieren"; // Kommentar
+//	text[0]			=	"Umsehen FirstPerson";
+//	text[1]			=   "Taste ENTF zum Löschen und RETURN zum definieren"; // Kommentar
+	text[0]			=	"Rozhlížení (1. osobna)";
+	text[1]			=   "Stiskem DEL zrušte stávající klávesu a stiskem ENTER zadejte novou.";
 	posx			=	ctrl_sp1_1;		posy	=	ctrl_y_start + ctrl_y_step * 12 + CTRL_GROUP2;
 	onSelAction[0]	=	SEL_ACTION_EXECCOMMANDS;
 	onSelAction_S[0]= 	"RUN MENU_ITEM_INP_LOOK_FP";  
@@ -250,8 +277,10 @@ INSTANCE MENU_ITEM_KEY_LOOK_FP(C_MENU_ITEM_DEF)
 
 INSTANCE MENU_ITEM_KEY_INVENTORY(C_MENU_ITEM_DEF)
 {
-	text[0]			=	"Inventar";
-	text[1]			=   "Taste ENTF zum Löschen und RETURN zum definieren"; // Kommentar
+//	text[0]			=	"Inventar";
+//	text[1]			=   "Taste ENTF zum Löschen und RETURN zum definieren"; // Kommentar
+	text[0]			=	"Inventář";
+	text[1]			=   "Stiskem DEL zrušte stávající klávesu a stiskem ENTER zadejte novou.";
 	posx			=	ctrl_sp1_1;		posy	=	ctrl_y_start + ctrl_y_step * 13 + CTRL_GROUP3;
 	onSelAction[0]	=	SEL_ACTION_EXECCOMMANDS;
 	onSelAction_S[0]= 	"RUN MENU_ITEM_INP_INVENTORY";  
@@ -261,8 +290,10 @@ INSTANCE MENU_ITEM_KEY_INVENTORY(C_MENU_ITEM_DEF)
 
 INSTANCE MENU_ITEM_KEY_SCREEN_STATUS(C_MENU_ITEM_DEF)
 {
-	text[0]			=	"Spielerstatus";
-	text[1]			=   "Taste ENTF zum Löschen und RETURN zum definieren"; // Kommentar
+//	text[0]			=	"Spielerstatus";
+//	text[1]			=   "Taste ENTF zum Löschen und RETURN zum definieren"; // Kommentar
+	text[0]			=	"Statistiky";
+	text[1]			=   "Stiskem DEL zrušte stávající klávesu a stiskem ENTER zadejte novou.";
 	posx			=	ctrl_sp1_1;		posy	=	ctrl_y_start + ctrl_y_step * 14 + CTRL_GROUP3;
 	onSelAction[0]	=	SEL_ACTION_EXECCOMMANDS;
 	onSelAction_S[0]= 	"RUN MENU_ITEM_INP_SCREEN_STATUS";  
@@ -273,8 +304,10 @@ INSTANCE MENU_ITEM_KEY_SCREEN_STATUS(C_MENU_ITEM_DEF)
 
 INSTANCE MENU_ITEM_KEY_SCREEN_LOG(C_MENU_ITEM_DEF)
 {
-	text[0]			=	"Missionen und Notizen";
-	text[1]			=   "Taste ENTF zum Löschen und RETURN zum definieren"; // Kommentar
+//	text[0]			=	"Missionen und Notizen";
+//	text[1]			=   "Taste ENTF zum Löschen und RETURN zum definieren"; // Kommentar
+	text[0]			=	"Mise a poznámky";
+	text[1]			=   "Stiskem DEL zrušte stávající klávesu a stiskem ENTER zadejte novou.";
 	posx			=	ctrl_sp1_1;		posy	=	ctrl_y_start + ctrl_y_step * 15 + CTRL_GROUP3;
 	onSelAction[0]	=	SEL_ACTION_EXECCOMMANDS;
 	onSelAction_S[0]= 	"RUN MENU_ITEM_INP_SCREEN_LOG";  
@@ -289,7 +322,8 @@ INSTANCE MENU_ITEM_KEY_SCREEN_LOG(C_MENU_ITEM_DEF)
 INSTANCE MENU_ITEM_INP_UP(C_MENU_ITEM_DEF)
 {
 	backPic		=	MENU_KBDINPUT_BACK_PIC;	
-	text[1] 	=   "Gewünschte Taste betätigen.";
+//	text[1] 	=   "Gewünschte Taste betätigen.";
+	text[1] 	=   "Stiskněte požadovanou klávesu";
 	type		= 	MENU_ITEM_INPUT;
 	posx		=	ctrl_sp1_2;	posy		=	ctrl_y_start + ctrl_y_step * 0 + CTRL_GROUP1;	
 	dimx		=	ctrl_dimx;	dimy		=	300;
@@ -304,7 +338,8 @@ INSTANCE MENU_ITEM_INP_UP(C_MENU_ITEM_DEF)
 INSTANCE MENU_ITEM_INP_DOWN(C_MENU_ITEM_DEF)
 {
 	type		= 	MENU_ITEM_INPUT;
-	text[1] 	=   "Gewünschte Taste betätigen.";
+//	text[1] 	=   "Gewünschte Taste betätigen.";
+	text[1] 	=   "Stiskněte požadovanou klávesu";
 	
 	posx		=	ctrl_sp1_2;	posy		=	ctrl_y_start + ctrl_y_step * 1 + CTRL_GROUP1;	
 	dimx		=	ctrl_dimx;	dimy		=	300;
@@ -320,7 +355,8 @@ INSTANCE MENU_ITEM_INP_DOWN(C_MENU_ITEM_DEF)
 INSTANCE MENU_ITEM_INP_LEFT(C_MENU_ITEM_DEF)
 {
 	type		= 	MENU_ITEM_INPUT;
-	text[1] 	=   "Gewünschte Taste betätigen.";
+//	text[1] 	=   "Gewünschte Taste betätigen.";
+	text[1] 	=   "Stiskněte požadovanou klávesu";
 	
 	posx		=	ctrl_sp1_2;	posy		=	ctrl_y_start + ctrl_y_step * 2 + CTRL_GROUP1;
 	dimx		=	ctrl_dimx;	dimy		=	300;
@@ -334,7 +370,8 @@ INSTANCE MENU_ITEM_INP_LEFT(C_MENU_ITEM_DEF)
 INSTANCE MENU_ITEM_INP_RIGHT(C_MENU_ITEM_DEF)
 {
 	type		= 	MENU_ITEM_INPUT;
-	text[1] 	=   "Gewünschte Taste betätigen.";
+//	text[1] 	=   "Gewünschte Taste betätigen.";
+	text[1] 	=   "Stiskněte požadovanou klávesu";
 	
 	posx		=	ctrl_sp1_2;	posy		=	ctrl_y_start + ctrl_y_step * 3 + CTRL_GROUP1;
 	dimx		=	ctrl_dimx;	dimy		=	300;
@@ -349,7 +386,8 @@ INSTANCE MENU_ITEM_INP_RIGHT(C_MENU_ITEM_DEF)
 INSTANCE MENU_ITEM_INP_STRAFE_LEFT(C_MENU_ITEM_DEF)
 {
 	type		= 	MENU_ITEM_INPUT;
-	text[1] 	=   "Gewünschte Taste betätigen.";
+//	text[1] 	=   "Gewünschte Taste betätigen.";
+	text[1] 	=   "Stiskněte požadovanou klávesu";
 	
 	posx		=	ctrl_sp1_2;	posy		=	ctrl_y_start + ctrl_y_step * 4 + CTRL_GROUP1;
 	dimx		=	ctrl_dimx;	dimy		=	300;
@@ -363,7 +401,8 @@ INSTANCE MENU_ITEM_INP_STRAFE_LEFT(C_MENU_ITEM_DEF)
 INSTANCE MENU_ITEM_INP_STRAFE_RIGHT(C_MENU_ITEM_DEF)
 {
 	type		= 	MENU_ITEM_INPUT;
-	text[1] 	=   "Gewünschte Taste betätigen.";
+//	text[1] 	=   "Gewünschte Taste betätigen.";
+	text[1] 	=   "Stiskněte požadovanou klávesu";
 	
 	posx		=	ctrl_sp1_2;	posy		=	ctrl_y_start + ctrl_y_step * 5 + CTRL_GROUP1;
 	dimx		=	ctrl_dimx;	dimy		=	300;
@@ -381,7 +420,8 @@ INSTANCE MENU_ITEM_INP_STRAFE_RIGHT(C_MENU_ITEM_DEF)
 INSTANCE MENU_ITEM_INP_WEAPON(C_MENU_ITEM_DEF)
 {
 	type		= 	MENU_ITEM_INPUT;
-	text[1] 	=   "Gewünschte Taste betätigen.";
+//	text[1] 	=   "Gewünschte Taste betätigen.";
+	text[1] 	=   "Stiskněte požadovanou klávesu";
 	
 	posx		=	ctrl_sp1_2;	posy		=	ctrl_y_start + ctrl_y_step * 6 + CTRL_GROUP2;
 	dimx		=	ctrl_dimx;
@@ -398,7 +438,8 @@ INSTANCE MENU_ITEM_INP_WEAPON(C_MENU_ITEM_DEF)
 INSTANCE MENU_ITEM_INP_ACTION(C_MENU_ITEM_DEF)
 {
 	type		= 	MENU_ITEM_INPUT;
-	text[1] 	=   "Gewünschte Taste betätigen.";
+//	text[1] 	=   "Gewünschte Taste betätigen.";
+	text[1] 	=   "Stiskněte požadovanou klávesu";
 	
 	posx		=	ctrl_sp1_2;	posy		=	ctrl_y_start + ctrl_y_step * 7 + CTRL_GROUP2;
 	dimx		=	ctrl_dimx;	dimy		=	300;
@@ -414,7 +455,8 @@ INSTANCE MENU_ITEM_INP_ACTION(C_MENU_ITEM_DEF)
 INSTANCE MENU_ITEM_INP_JUMPCLIMBSTRAFE(C_MENU_ITEM_DEF)
 {
 	type		= 	MENU_ITEM_INPUT;
-	text[1] 	=   "Gewünschte Taste betätigen.";
+//	text[1] 	=   "Gewünschte Taste betätigen.";
+	text[1] 	=   "Stiskněte požadovanou klávesu";
 	
 	posx		=	ctrl_sp1_2;	posy		=	ctrl_y_start + ctrl_y_step * 8 + CTRL_GROUP2;
 	dimx		=	ctrl_dimx;
@@ -432,7 +474,8 @@ INSTANCE MENU_ITEM_INP_JUMPCLIMBSTRAFE(C_MENU_ITEM_DEF)
 instance MENU_ITEM_INP_RUNMODETOGGLE(C_MENU_ITEM_DEF)
 {
 	type		= 	MENU_ITEM_INPUT;
-	text[1] 	=   "Gewünschte Taste betätigen.";
+//	text[1] 	=   "Gewünschte Taste betätigen.";
+	text[1] 	=   "Stiskněte požadovanou klávesu";
 	
 	posx		=	ctrl_sp1_2;	posy		=	ctrl_y_start + ctrl_y_step * 9 + CTRL_GROUP2;
 	dimx		=	ctrl_dimx;
@@ -449,7 +492,8 @@ instance MENU_ITEM_INP_RUNMODETOGGLE(C_MENU_ITEM_DEF)
 INSTANCE MENU_ITEM_INP_SNEAK(C_MENU_ITEM_DEF)
 {
 	type		= 	MENU_ITEM_INPUT;
-	text[1] 	=   "Gewünschte Taste betätigen.";
+//	text[1] 	=   "Gewünschte Taste betätigen.";
+	text[1] 	=   "Stiskněte požadovanou klávesu";
 	
 	posx		=	ctrl_sp1_2;	posy		=	ctrl_y_start + ctrl_y_step * 10 + CTRL_GROUP2;
 	dimx		=	ctrl_dimx;
@@ -465,7 +509,8 @@ INSTANCE MENU_ITEM_INP_SNEAK(C_MENU_ITEM_DEF)
 INSTANCE MENU_ITEM_INP_LOOK(C_MENU_ITEM_DEF)
 {
 	type		= 	MENU_ITEM_INPUT;
-	text[1] 	=   "Gewünschte Taste betätigen.";
+//	text[1] 	=   "Gewünschte Taste betätigen.";
+	text[1] 	=   "Stiskněte požadovanou klávesu";
 	
 	posx		=	ctrl_sp1_2;	posy		=	ctrl_y_start + ctrl_y_step * 11 + CTRL_GROUP2;
 	dimx		=	ctrl_dimx;
@@ -482,7 +527,8 @@ INSTANCE MENU_ITEM_INP_LOOK(C_MENU_ITEM_DEF)
 INSTANCE MENU_ITEM_INP_LOOK_FP(C_MENU_ITEM_DEF)
 {
 	type		= 	MENU_ITEM_INPUT;
-	text[1] 	=   "Gewünschte Taste betätigen.";
+//	text[1] 	=   "Gewünschte Taste betätigen.";
+	text[1] 	=   "Stiskněte požadovanou klávesu";
 	
 	posx		=	ctrl_sp1_2;	posy		=	ctrl_y_start + ctrl_y_step * 12 + CTRL_GROUP2;
 	dimx		=	ctrl_dimx;
@@ -502,7 +548,8 @@ INSTANCE MENU_ITEM_INP_LOOK_FP(C_MENU_ITEM_DEF)
 INSTANCE MENU_ITEM_INP_INVENTORY(C_MENU_ITEM_DEF)
 {
 	type		= 	MENU_ITEM_INPUT;
-	text[1] 	=   "Gewünschte Taste betätigen.";
+//	text[1] 	=   "Gewünschte Taste betätigen.";
+	text[1] 	=   "Stiskněte požadovanou klávesu";
 	
 	posx		=	ctrl_sp1_2;		posy	=	ctrl_y_start + ctrl_y_step * 13 + CTRL_GROUP3;
 	dimx		=	ctrl_dimx;
@@ -519,7 +566,8 @@ INSTANCE MENU_ITEM_INP_INVENTORY(C_MENU_ITEM_DEF)
 INSTANCE MENU_ITEM_INP_SCREEN_STATUS(C_MENU_ITEM_DEF)
 {
 	type		= 	MENU_ITEM_INPUT;
-	text[1] 	=   "Gewünschte Taste betätigen.";
+//	text[1] 	=   "Gewünschte Taste betätigen.";
+	text[1] 	=   "Stiskněte požadovanou klávesu";
 	
 	posx		=	ctrl_sp1_2;		posy	=	ctrl_y_start + ctrl_y_step * 14 + CTRL_GROUP3;
 	dimx		=	ctrl_dimx;
@@ -535,7 +583,8 @@ INSTANCE MENU_ITEM_INP_SCREEN_STATUS(C_MENU_ITEM_DEF)
 INSTANCE MENU_ITEM_INP_SCREEN_LOG(C_MENU_ITEM_DEF)
 {
 	type		= 	MENU_ITEM_INPUT;
-	text[1] 	=   "Gewünschte Taste betätigen.";
+//	text[1] 	=   "Gewünschte Taste betätigen.";
+	text[1] 	=   "Stiskněte požadovanou klávesu";
 	
 	posx		=	ctrl_sp1_2;		posy	=	ctrl_y_start + ctrl_y_step * 15 + CTRL_GROUP3;
 	dimx		=	ctrl_dimx;
@@ -555,8 +604,10 @@ INSTANCE MENU_ITEM_INP_SCREEN_LOG(C_MENU_ITEM_DEF)
 
 INSTANCE MENU_ITEM_CHG_KEYS_SET_DEFAULT(C_MENU_ITEM_DEF)
 {
-	text[0]		=	"Standard-Einstellung";	
-	text[1]		=	"Aktiviert die Standardbelegung der Tastatur."; // Kommentar
+//	text[0]		=	"Standard-Einstellung";	
+//	text[1]		=	"Aktiviert die Standardbelegung der Tastatur."; // Kommentar
+	text[0]		=	"Výchozí nastavení";
+	text[1]		=	"Vrátí nastavení klávesnice do výchozího nastavení.";
 	posx		=	ctrl_sp1_1;		posy		=	ctrl_y_start + ctrl_y_step * 16 + CTRL_GROUP4;
 	dimy		=	300;
 	onSelAction[0]	=	SEL_ACTION_EXECCOMMANDS;
@@ -567,8 +618,10 @@ INSTANCE MENU_ITEM_CHG_KEYS_SET_DEFAULT(C_MENU_ITEM_DEF)
 
 INSTANCE MENU_ITEM_CHG_KEYS_SET_ALTERNATIVE(C_MENU_ITEM_DEF)
 {
-	text[0]		=	"Alternativ-Einstellung";	
-	text[1]		=	"Aktiviert eine alternative Belegung der Tastatur."; // Kommentar
+//	text[0]		=	"Alternativ-Einstellung";	
+//	text[1]		=	"Aktiviert eine alternative Belegung der Tastatur."; // Kommentar
+	text[0]		=	"Alternativní nastavení";
+	text[1]		=	"Aktivuje alternativní nastavení.";
 	posx		=	ctrl_sp1_1;		posy		=	ctrl_y_start + ctrl_y_step * 17 + CTRL_GROUP4;
 	dimy		=	300;
 	onSelAction[0]	=	SEL_ACTION_EXECCOMMANDS;
@@ -581,7 +634,8 @@ INSTANCE MENU_ITEM_CHG_KEYS_SET_ALTERNATIVE(C_MENU_ITEM_DEF)
 INSTANCE MENUITEM_CHG_KEYS_BACK(C_MENU_ITEM_DEF)
 {
 	backpic		=	MENU_ITEM_BACK_PIC;
-	text[0]		=	"Zurück";
+//	text[0]		=	"Zurück";
+	text[0]		=	"Zpět";
 	// Position und Dimension	
 	posx		=	ctrl_sp1_1;		posy		=	ctrl_y_start + ctrl_y_step * 18 + CTRL_GROUP5;
 	dimy		=	300;

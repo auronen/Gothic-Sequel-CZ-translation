@@ -38,7 +38,8 @@ INSTANCE MENU_OPT_AUDIO(C_MENU_DEF)
 INSTANCE MENUITEM_AUDIO_HEADLINE(C_MENU_ITEM_DEF) 
 {
 	backpic		= MENU_ITEM_BACK_PIC;
-	text[0]		= "AUDIO EINSTELLUNGEN";
+//	text[0]		= "AUDIO EINSTELLUNGEN";
+	text[0]		= "NASTAVENÍ ZVUKU";
 	type		= MENU_ITEM_TEXT;
 	// Position und Dimension	
 	posx		= 0;		posy		= MENU_TITLE_Y;
@@ -56,8 +57,10 @@ INSTANCE MENUITEM_AUDIO_HEADLINE(C_MENU_ITEM_DEF)
 INSTANCE MENUITEM_AUDIO_SFXVOL(C_MENU_ITEM_DEF)
 {
 	backpic		= MENU_ITEM_BACK_PIC;
-	text[0]		= "Effekte&Sprache";
-	text[1]		= "Lautstärke von Soundeffekten und Sprachausgabe."; // Kommentar
+//	text[0]		= "Effekte&Sprache";
+//	text[1]		= "Lautstärke von Soundeffekten und Sprachausgabe."; // Kommentar
+	text[0]		= "Efekty&jazyk";
+	text[1]		= "Hlasitost zvukových efektů a jazyk.";
 	
 	// Position und Dimension	
 	posx		= 1000;		posy		= MENU_START_Y + MENU_DY*0;
@@ -92,8 +95,10 @@ INSTANCE MENUITEM_AUDIO_SFXVOL_SLIDER(C_MENU_ITEM_DEF)
 INSTANCE MENUITEM_AUDIO_MUSICVOL(C_MENU_ITEM_DEF)
 {
 	backpic		= MENU_ITEM_BACK_PIC;
-	text[0]		= "Musik-Lautstärke";
-	text[1]		= "Läutstärke der Hintergrundmusik."; // Kommentar
+//	text[0]		= "Musik-Lautstärke";
+//	text[1]		= "Läutstärke der Hintergrundmusik."; // Kommentar
+	text[0]		= "Hlasitost hudby";
+	text[1]		= "Hlasitost hudby na pozadí";
 	
 	// Position und Dimension	
 	posx		= 1000;		posy		=	MENU_START_Y + MENU_DY*1;
@@ -128,8 +133,10 @@ INSTANCE MENUITEM_AUDIO_MUSICVOL_SLIDER(C_MENU_ITEM_DEF)
 instance MENUITEM_AUDIO_MUSIC(C_MENU_ITEM_DEF)
 {
 	backpic		= MENU_ITEM_BACK_PIC;
-	text[0]		= "Musik";
-	text[1]		= "Hintergrundmusik an- bzw. ausschalten."; // Kommentar
+//	text[0]		= "Musik";
+//	text[1]		= "Hintergrundmusik an- bzw. ausschalten."; // Kommentar
+	text[0]		= "Hudba";
+	text[1]		= "Zapnout/vypnout hudbu na pozadí";
 	
 	// Position und Dimension	
 	posx		=	1000;	posy		=	MENU_START_Y + MENU_DY*2;
@@ -145,7 +152,8 @@ INSTANCE MENUITEM_AUDIO_MUSIC_CHOICE(C_MENU_ITEM_DEF)
 {
 	backPic		=	MENU_CHOICE_BACK_PIC;
 	type		=	MENU_ITEM_CHOICEBOX;	
-	text[0]		=   "aus|an";
+//	text[0]		=   "aus|an";
+	text[0]		=   "vypnuto|zapnuto";
 	fontName	= 	MENU_FONT_SMALL;
 	// Position und Dimension	
 	posx		= 4300;		posy		=	MENU_START_Y + MENU_DY*2 + MENU_CHOICE_YPLUS;
@@ -171,8 +179,10 @@ INSTANCE MENUITEM_AUDIO_MUSIC_CHOICE(C_MENU_ITEM_DEF)
 instance MENUITEM_AUDIO_PROVIDER(C_MENU_ITEM_DEF)
 {
 	backpic		= MENU_ITEM_BACK_PIC;
-	text[0]		= "Soundprovider";
-	text[1]		= "Eine Änderung wirkt sich erst beim Neustart aus!"; // Kommentar
+//	text[0]		= "Soundprovider";
+//	text[1]		= "Eine Änderung wirkt sich erst beim Neustart aus!"; // Kommentar
+	text[0]		= "Generátor zvuku";
+	text[1]		= "Nové nastavení se uplatní po dalším spuštění hry Gothic.";
 	
 	// Position und Dimension	
 	posx		=	1000;	posy		=	MENU_START_Y + MENU_DY*3;
@@ -204,7 +214,8 @@ instance MENUITEM_AUDIO_PROVIDER_CHOICE(C_MENU_ITEM_DEF)
 instance MENUITEM_AUDIO_SPEEKER(C_MENU_ITEM_DEF)
 {
 	backpic		= MENU_ITEM_BACK_PIC;
-	text[0]		= "Lautsprecher";
+//	text[0]		= "Lautsprecher";
+	text[0]		= "Reproduktory";
 	text[1]		= ""; // Kommentar
 	
 	// Position und Dimension	
@@ -220,7 +231,8 @@ instance MENUITEM_AUDIO_SPEEKER_CHOICE(C_MENU_ITEM_DEF)
 {
 	backPic		=	MENU_CHOICE_BACK_PIC;
 	type		=	MENU_ITEM_CHOICEBOX;	
-	text[0]		=   "2 Lautsprecher|Kopfhörer|Surround|4 Lautsprecher";
+//	text[0]		=   "2 Lautsprecher|Kopfhörer|Surround|4 Lautsprecher";
+	text[0]		=   "2 reproduktory|sluchátka|surround|4 reproduktory";
 	fontName	= 	MENU_FONT_SMALL;
 	// Position und Dimension	
 	posx		= 4300;		posy		=	MENU_START_Y + MENU_DY*4 + MENU_CHOICE_YPLUS;
@@ -236,8 +248,10 @@ instance MENUITEM_AUDIO_SPEEKER_CHOICE(C_MENU_ITEM_DEF)
 instance MENUITEM_AUDIO_REVERB(C_MENU_ITEM_DEF)
 {
 	backpic		= MENU_ITEM_BACK_PIC;
-	text[0]		= "Hall-Effekt";
-	text[1]		= "Sollen Halleffekte in Höhlen aktiviert werden (Neustart erforderlich) ?"; // Kommentar
+//	text[0]		= "Hall-Effekt";
+//	text[1]		= "Sollen Halleffekte in Höhlen aktiviert werden (Neustart erforderlich) ?"; // Kommentar
+	text[0]		= "Prostorový zvuk";
+	text[1]		= "Umožní prostorové zvukové efekty v jeskyních. (nutno znovu spustit)";
 	
 	// Position und Dimension	
 	posx		=	1000;	posy		=	MENU_START_Y + MENU_DY*5;
@@ -252,7 +266,8 @@ instance MENUITEM_AUDIO_REVERB_CHOICE(C_MENU_ITEM_DEF)
 {
 	backPic		=	MENU_CHOICE_BACK_PIC;
 	type		=	MENU_ITEM_CHOICEBOX;	
-	text[0]		=   "aus|an";
+//	text[0]		=   "aus|an";
+	text[0]		=   "vypnuto|zapnuto";
 	fontName	= 	MENU_FONT_SMALL;
 	// Position und Dimension	
 	posx		= 4300;		posy		=	MENU_START_Y + MENU_DY*5 + MENU_CHOICE_YPLUS;
@@ -268,8 +283,10 @@ instance MENUITEM_AUDIO_REVERB_CHOICE(C_MENU_ITEM_DEF)
 instance MENUITEM_AUDIO_SAMPLERATE(C_MENU_ITEM_DEF)
 {
 	backpic		= MENU_ITEM_BACK_PIC;
-	text[0]		= "Sample-Rate";
-	text[1]		= "Eine Änderung wirkt sich erst beim Neustart aus!"; // Kommentar
+//	text[0]		= "Sample-Rate";
+//	text[1]		= "Eine Änderung wirkt sich erst beim Neustart aus!"; // Kommentar
+	text[0]		= "Vzorkovací frekvence.";
+	text[1]		= "Nové nastavení se uplatní po dalším spuštění hry Gothic.";
 	
 	// Position und Dimension	
 	posx		=	1000;	posy		=	MENU_START_Y + MENU_DY*6;
@@ -300,7 +317,8 @@ instance MENUITEM_AUDIO_SAMPLERATE_CHOICE(C_MENU_ITEM_DEF)
 INSTANCE MENUITEM_AUDIO_BACK(C_MENU_ITEM_DEF)
 {
 	backpic		=	MENU_ITEM_BACK_PIC;
-	text[0]		=	"Zurück";
+//	text[0]		=	"Zurück";
+	text[0]		=	"Zpět";
 	// Position und Dimension	
 	posx		=	1000;		posy		=	MENU_BACK_Y;
 	dimx		=	6192;		dimy		=	MENU_DY;

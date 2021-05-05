@@ -97,7 +97,8 @@ const int SAVEGAME_DX2= 1000;
 
 instance MENUITEM_LOAD_HEADLINE(C_MENU_ITEM_DEF)  
 {	
-	text[0]		=	"SPIEL LADEN";   
+//	text[0]		=	"SPIEL LADEN";   
+	text[0]		=	"NAHRÁT HRU";
 	type		=	MENU_ITEM_TEXT;
 	posx		=	SAVEGAME_X1;
 	posy		=	1000;	
@@ -108,7 +109,8 @@ instance MENUITEM_LOAD_HEADLINE(C_MENU_ITEM_DEF)
 
 INSTANCE MENUITEM_SAVE_HEADLINE(C_MENU_ITEM_DEF)  
 {
-	text[0]		=	"SPIEL SPEICHERN";   
+//	text[0]		=	"SPIEL SPEICHERN";   
+	text[0]		=	"ULOŽIT HRU";
 	type		=	MENU_ITEM_TEXT;
 	posx		=	SAVEGAME_X1;
 	posy		=	1000;	
@@ -137,7 +139,8 @@ instance MENUITEM_LOADSAVE_THUMBPIC(C_MENU_ITEM_DEF)
 instance MENUITEM_LOADSAVE_LEVELNAME(C_MENU_ITEM_DEF)	
 {
 	type		= MENU_ITEM_TEXT;
-	text[0]		= "Welt:";	
+//	text[0]		= "Welt:";	
+	text[0]		= "Svět:";	
 	posx		= SAVEGAME_X2;
 	posy		= 3960;
 	fontName	= MENU_FONT_SMALL;
@@ -163,7 +166,8 @@ instance MENUITEM_LOADSAVE_LEVELNAME_VALUE(C_MENU_ITEM_DEF)
 instance MENUITEM_LOADSAVE_DATETIME(C_MENU_ITEM_DEF)	
 {	
 	type		= MENU_ITEM_TEXT;
-	text[0]		= "gespeichert:";	
+//	text[0]		= "gespeichert:";	
+	text[0]		= "Uloženo:";	
 	posx		= SAVEGAME_X2;
 	posy		= 4900;
 	fontName	= MENU_FONT_SMALL;
@@ -192,7 +196,8 @@ instance MENUITEM_LOADSAVE_DATETIME_VALUE(C_MENU_ITEM_DEF)
 instance MENUITEM_LOADSAVE_GAMETIME(C_MENU_ITEM_DEF)	
 {	
 	type		= MENU_ITEM_TEXT;
-	text[0]		= "Spielzeit:";	
+//	text[0]		= "Spielzeit:";	
+	text[0]		= "Doba hry:";	
 	posx		= SAVEGAME_X2;
 	posy		= 6200;
 	fontName	= MENU_FONT_SMALL;
@@ -235,8 +240,10 @@ instance MENUITEM_LOADSAVE_PLAYTIME_VALUE(C_MENU_ITEM_DEF)
 
 instance MENUITEM_SAVE_BACK(C_MENU_ITEM_DEF) 
 {
-	text[0]		=	"Zurück";
-	text[1]		=	"Back";
+//	text[0]		=	"Zurück";
+//	text[1]		=	"Back";
+	text[0]		=	"Zpět";
+	text[1]		=	"Zpět";
 	posx		=	SAVEGAME_X1;
 	posy		=	SAVEGAME_Y + 16*SAVEGAME_DY;	
 };
@@ -251,7 +258,8 @@ instance MENUITEM_SAVE_BACK(C_MENU_ITEM_DEF)
 
 INSTANCE MENUITEM_LOAD_BACK(C_MENU_ITEM_DEF) 
 {
-	text[0]		=	"Zurück";	
+//	text[0]		=	"Zurück";	
+	text[0]		=	"Zpět";	
 	posx		=	SAVEGAME_X1;	
 	posy		=	SAVEGAME_Y + 16*SAVEGAME_DY;				
 };

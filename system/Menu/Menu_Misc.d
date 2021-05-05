@@ -20,7 +20,8 @@ INSTANCE MENU_LEAVE_GAME(C_MENU_DEF)
 
 INSTANCE MENUITEM_LEAVE_GAME_HEADLINE(C_MENU_ITEM_DEF) 
 {
-	text[0]		= "Sequel verlassen?";   		
+//	text[0]		= "Sequel verlassen?";   		
+	text[0]		= "Opravdu si přejete ukončit Sequel?";   		
 	type		= MENU_ITEM_TEXT;
 	// Position und Dimension	
 	posx		=    0;		posy		= 3400;
@@ -33,8 +34,10 @@ INSTANCE MENUITEM_LEAVE_GAME_HEADLINE(C_MENU_ITEM_DEF)
 INSTANCE MENUITEM_LEAVE_GAME_YES(C_MENU_ITEM_DEF)
 {
 	backpic		= MENU_ITEM_BACK_PIC;
-	text[0]		= "Ja";
-	text[1]		= "Ja, ich möchte Gothic verlassen."; // Kommentar
+//	text[0]		= "Ja";
+//	text[1]		= "Ja, ich möchte Gothic verlassen."; // Kommentar
+	text[0]		= "Ano";
+	text[1]		= "Ano, chci ukončit Sequel.";
 	
 	// Position und Dimension	
 	posx		=    0;		posy		= 4400;	
@@ -49,8 +52,10 @@ INSTANCE MENUITEM_LEAVE_GAME_YES(C_MENU_ITEM_DEF)
 INSTANCE MENUITEM_LEAVE_GAME_NO(C_MENU_ITEM_DEF)
 {
 	backpic		= MENU_ITEM_BACK_PIC;
-	text[0]		= "Nein";
-	text[1]		= "Nein, ich möchte weiterspielen."; // Kommentar
+//	text[0]		= "Nein";
+//	text[1]		= "Nein, ich möchte weiterspielen."; // Kommentar
+	text[0]		= "Ne";
+	text[1]		= "Ne, chci pokračovat ve hře.";
 	
 	// Position und Dimension	
 	posx		=    0;		posy		= 5000;	

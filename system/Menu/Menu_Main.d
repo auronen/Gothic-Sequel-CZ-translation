@@ -35,8 +35,10 @@ const int MENU_MAIN_Y = 2500;
 instance MENUITEM_MAIN_NEWGAME(C_MENU_ITEM_DEF) 
 {
 	backpic		= MENU_ITEM_BACK_PIC;
-	text[0]		= "Neues Spiel";
-	text[1]		= "Ein neues Abenteuer beginnen.";  // Kommentar
+//	text[0]		= "Neues Spiel";
+//	text[1]		= "Ein neues Abenteuer beginnen.";  // Kommentar
+	text[0]		= "Nová hra";
+	text[1]		= "Začít nové dobrodružství.";
 	
 	// Positionen  und Dimensionen	
 	posx		= 0;		posy		= MENU_MAIN_Y + MENU_MAIN_DY*0;
@@ -57,8 +59,10 @@ instance MENUITEM_MAIN_NEWGAME(C_MENU_ITEM_DEF)
 INSTANCE MENUITEM_MAIN_SAVEGAME_LOAD(C_MENU_ITEM_DEF)
 {
 	backpic		=	MENU_ITEM_BACK_PIC;
-	text[0]		=	"Spiel laden";
-	text[1]		=	"Einen gespeicherten Spielstand laden.";  // Kommentar
+//	text[0]		=	"Spiel laden";
+//	text[1]		=	"Einen gespeicherten Spielstand laden.";  // Kommentar
+	text[0]		=	"Nahrát hru";
+	text[1]		=	"Nahrát uloženou hru";
 	
 	// Positionen  und Dimensionen	
 	posx		=  0;		posy		= MENU_MAIN_Y + MENU_MAIN_DY*1;
@@ -73,8 +77,10 @@ INSTANCE MENUITEM_MAIN_SAVEGAME_LOAD(C_MENU_ITEM_DEF)
 instance MENUITEM_MAIN_SAVEGAME_SAVE(C_MENU_ITEM_DEF) 
 {
 	backpic		= MENU_ITEM_BACK_PIC;
-	text[0]		= "Spiel speichern";
-	text[1]		= "Den aktuellen Spielstand speichern.";  // Kommentar
+//	text[0]		= "Spiel speichern";
+//	text[1]		= "Den aktuellen Spielstand speichern.";  // Kommentar
+	text[0]		= "Uložit hru";
+	text[1]		= "Uložit rozehranou hru";
 	
 	// Positionen  und Dimensionen
 	posx		= 0;		posy		= MENU_MAIN_Y + MENU_MAIN_DY*2;
@@ -95,8 +101,10 @@ instance MENUITEM_MAIN_SAVEGAME_SAVE(C_MENU_ITEM_DEF)
 INSTANCE MENUITEM_MAIN_RESUME(C_MENU_ITEM_DEF)
 {
 	backpic		=	MENU_ITEM_BACK_PIC;
-	text[0]		=	"Weiterspielen";
-	text[1]		=   "Aktuelles Spiel fortführen.";  // Kommentar
+//	text[0]		=	"Weiterspielen";
+//	text[1]		=   "Aktuelles Spiel fortführen.";  // Kommentar
+	text[0]		=	"Pokračovat";
+	text[1]		=   "Pokračovat v rozehrané hře";
 	
 	// Position und Dimension
 	posx		=	0;		posy		=	MENU_MAIN_Y + MENU_MAIN_DY*3;
@@ -115,8 +123,10 @@ INSTANCE MENUITEM_MAIN_RESUME(C_MENU_ITEM_DEF)
 instance MENUITEM_MAIN_OPTIONS(C_MENU_ITEM_DEF) 
 {
 	backpic		= MENU_ITEM_BACK_PIC;
-	text[0]		= "Einstellungen";
-	text[1]		= "Spiel, Video, Audio und Tastatur einstellen";  // Kommentar
+//	text[0]		= "Einstellungen";
+//	text[1]		= "Spiel, Video, Audio und Tastatur einstellen";  // Kommentar
+	text[0]		= "Nastavení";
+	text[1]		= "Nastavení hry, grafiky, zvuku a klávesnice";
 	
 	// Positionen  und Dimensionen	
 	posx		= 0;		posy		= MENU_MAIN_Y + MENU_MAIN_DY*4;
@@ -132,8 +142,10 @@ instance MENUITEM_MAIN_OPTIONS(C_MENU_ITEM_DEF)
 instance MENUITEM_MAIN_INTRO(C_MENU_ITEM_DEF) 
 {
 	backpic		= MENU_ITEM_BACK_PIC;
-	text[0]		= "Intro spielen";
-	text[1]		= "Introsequenz noch einmal abspielen.";
+//	text[0]		= "Intro spielen";
+//	text[1]		= "Introsequenz noch einmal abspielen.";
+	text[0]		= "Spustit intro";
+	text[1]		= "Znovu spustí intro.";
 	// Positionen  und Dimensione	
 	posx		= 0;		posy		= MENU_MAIN_Y + MENU_MAIN_DY*5;
 	dimx		= 8100;		dimy		=  750;
@@ -147,8 +159,10 @@ instance MENUITEM_MAIN_INTRO(C_MENU_ITEM_DEF)
 INSTANCE MENUITEM_MAIN_CREDITS(C_MENU_ITEM_DEF) 
 {
 	backpic		= MENU_ITEM_BACK_PIC;
-	text[0]		= "Credits";
-	text[1]		= "Credits";  // Kommentar
+//	text[0]		= "Credits";
+//	text[1]		= "Credits";  // Kommentar
+	text[0]		= "Autoři";
+	text[1]		= "Autoři";
 	
 	// Positionen  und Dimensionen	
 	posx		= 0;		posy		= MENU_MAIN_Y + MENU_MAIN_DY*6;
@@ -168,8 +182,10 @@ INSTANCE MENUITEM_MAIN_CREDITS(C_MENU_ITEM_DEF)
 INSTANCE MENUITEM_MAIN_EXIT(C_MENU_ITEM_DEF) 
 {
 	backpic		= MENU_ITEM_BACK_PIC;
-	text[0]		= "Sequel beenden";
-	text[1]		= "Spiel verlassen.";  // Kommentar
+//	text[0]		= "Sequel beenden";
+//	text[1]		= "Spiel verlassen.";  // Kommentar
+	text[0]		= "Ukončit Sequel";
+	text[1]		= "Opustit svět Sequelu.";
 	
 	// Positionen  und Dimensionen
 	posx		= 0;		posy		= MENU_MAIN_Y + MENU_MAIN_DY*7;	
