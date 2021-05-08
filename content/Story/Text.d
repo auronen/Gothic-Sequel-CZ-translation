@@ -96,44 +96,77 @@ CONST STRING TXT_GUILDS	[GIL_MAX] =	{
 	"Dělník",
 //	"Minenarbeiter",
 	"Horník",
-	"Medikus",
-	"Dieb",
-	"Aussätziger",
-	"Bettler",
-	"Dämonenanbeter",
-	"Amazone",
+//	"Medikus",
+	"Léčitel",
+//	"Dieb",
+	"Zloděj",
+//	"Aussätziger",
+	"Nemocný",
+//	"Bettler",
+	"Pobuda",
+//	"Dämonenanbeter",
+	"Uctívač démonů",
+//	"Amazone",
+	"Amazonka",
+//	"Paladin",			// 10
 	"Paladin",			// 10
-	"Sturmjäger-Klan",
-	"Bluterde-Klan",
-	"Dämonenjäger",
+//	"Sturmjäger-Klan",
+	"Klan lovců bouře",
+//	"Bluterde-Klan",
+	"Klan krvavé země",
+//	"Dämonenjäger",
+	"Lovec démonů",
 	"",
 	"",
 	"",
-	"Waran",			// 17
+//	"Waran",			// 17
+	"Ještěr",			// 17
 	"",
+//	"Goblin",
 	"Goblin",
+//	"Troll",
 	"Troll",
-	"Snapper",
-	"Minecrawler",
-	"Fleischwanze",
-	"Scavenger",
-	"Dämon",
-	"Wolf",
-	"Schattenläufer",
-	"Bloodfly",
-	"Sumpfhai",			// 30
+//	"Snapper",
+	"Chňapavec",
+//	"Minecrawler",
+	"Důlní červ",
+//	"Fleischwanze",
+	"Žravá štěnice",
+//	"Scavenger",
+	"Mrchožrout",
+//	"Dämon",
+	"Démon",
+//	"Wolf",
+	"Vlk",
+//	"Schattenläufer",
+	"Stínová šelma",
+//	"Bloodfly",
+	"Krvavá moucha",
+//	"Sumpfhai",			// 30
+	"Močálový žralok",			// 30
+//	"Zombie",
 	"Zombie",
-	"Zombie	Orc",
-	"Skelett",
-	"Ork-Hund",
-	"Molerat",
+//	"Zombie	Orc",
+	"Skřetí zombie",
+//	"Skelett",
+	"Kostlivec",
+//	"Ork-Hund",
+	"Skřetí pes",
+//	"Molerat",
+	"Krysokrt",
+//	"Golem",
 	"Golem",
-	"Lurker",
+//	"Lurker",
+	"Číhavec",
 	"",				// 38
-	"Orc Schamane",
-	"Orc Krieger",
-	"Orc Späher",
-	"Orc Sklave"
+//	"Orc Schamane",
+	"Skřetí šaman",
+//	"Orc Krieger",
+	"Skřetí bojovník",
+//	"Orc Späher",
+	"Skřetí zvěd",
+//	"Orc Sklave"
+	"Skřetí otrok"
 };
 
 
@@ -147,6 +180,7 @@ CONST STRING TXT_GUILDS	[GIL_MAX] =	{
 // WICHTIG: Wird in diesem Array eine Änderung vorgenommen, so muss diese Änderung auch
 //			in der entsprechenden Stringkonstante NAMA_<Zaubername> erfolgen
 // -----------------------------------------------------------------------------------------
+/*
 const STRING TXT_SPELLS	[MAX_SPELL]	=
 {
 	"Licht",						// SPL_LIGHT		=	0;
@@ -209,7 +243,69 @@ const STRING TXT_SPELLS	[MAX_SPELL]	=
 	"New4",							// SPL_NEW4			=	20;
 	"New5"							// SPL_NEW5			=	21;
  };
-
+*/
+const STRING TXT_SPELLS	[MAX_SPELL]	=
+{
+	"Světlo",						// SPL_LIGHT		=	0;
+	"Ohnivá koule",					// SPL_FIREBALL		=	1;
+	"n/a",							// SPL_TRANSFORM	=	2;
+	"Strach",						// SPL_FEAR			=	3;
+	"Léčení",						// SPL_HEAL			=	4;
+	"n/a",							// SPL_LIGHTNING	=	5;
+	"Vyvolání démnoa",				// SPL_SUMMONDEMON	=	6;
+	"Vyvolání kostlivce",			// SPL_SUMMONSKELETON=	7;
+	"n/a",							// SPL_FORGET		=	8;
+	"Větrná pěst",					// SPL_WINDFIST		=	9;
+	"Telekineze",					// SPL_TELEKINESIS	=	10;
+	"Šarm",							// SPL_CHARM		=	11;
+	"Spánek",						// SPL_SLEEP		=	12;
+	"Pyrokineze",					// SPL_PYROKINESIS	=	13;
+	"Kruh smrti",					// SPL_MASSDEATH	=	14;
+	"Ovládnutí",					// SPL_CONTROL		=	15;
+	"Smrt nemrtvému",				// SPL_DESTROYUNDEAD=	16;
+	"Ohnivý šíp",					// SPL_FIREBOLT		=	17;
+	"Ohnivá bouře",					// SPL_FIRESTORM	=	18;
+	"Ohnivý déšť",					// SPL_FIRERAIN		=	19;
+	"n/a",							// SPL_SPEED		=	20;
+	"Podivný teleport",				// SPL_TELEPORT1	=	21;
+	"Teleport k mágům Vody",		// SPL_TELEPORT2	=	22;
+	"Teleport k nekromancerovi",	// SPL_TELEPORT3	=	23;
+	"Teleport do Starého tábora",	// SPL_TELEPORT4	=	24;
+	"Teleport do tábora v bažinách",// SPL_TELEPORT5	=	25;
+	"Proměna v krvavou mouchu",		// SPL_TRF_BLOODFLY	=	26;
+	"n/a",							// SPL_TRF_BLOODHOUND=	27;
+	"Proměna v důlního červa",		// SPL_TRF_CRAWLER	=	28;
+	"Proměna v číhavce",			// SPL_TRF_LURKER	=	29;
+	"Proměna ve žravou štěnici",	// SPL_TRF_MEATBUG	=	30;
+	"Proměna v krysokrta",			// SPL_TRF_MOLERAT	=	31;
+	"Proměna ve skřetího psa",		// SPL_TRF_ORCDOG	=	32;
+	"n/a",							// SPL_TRF_RAZOR	=	33;
+	"Proměna v mrchožrouta",		// SPL_TRF_SCAVENGER=	34;
+	"n/a",							// SPL_TRF_SCAVENGER2=	35;
+	"Proměna ve stínovou šelmu",	// SPL_TRF_SHADOWBEAST=	36;
+	"Proměna v chňapavce",			// SPL_TRF_SNAPPER	=	37;
+	"Proměna v ještěrku",			// SPL_TRF_WARAN	=	38;
+	"Proměna ve vlka",				// SPL_TRF_WOLF		=	39;
+	"Blesek",						// SPL_CHAINLIGHTNING=	40;
+	"Ledový šíp",					// SPL_THUNDERBOLT	=	41;
+	"Kulový blesk",					// SPL_THUNDERBALL	=	42;
+	"Ledový blok",					// SPL_ICECUBE		=	43;
+	"Ledová vlna",					// SPL_ICEWAVE		=	44;
+	"Vyvolání golema",				// SPL_SUMMONGOLEM	=	45;
+	"Armáda temnot",				// SPL_ARMYOFDARKNESS=	46;
+	"Větrná pěst",					// SPL_STORMFIST	=	47;
+	"n/a",							// SPL_TELEKINESIS2	=	48;
+	"Dech smrti",					// SPL_BREATHOFDEATH=	49;
+	"Zmenšit nestvůru",				// SPL_SHRINK		=	50;
+	"n/a",							// SPL_UNDRESS		=	51;
+	"n/a",							// SPL_DANCE		=	52;
+	"Vztek",						// SPL_BERZERK		=	53;
+	"Hněv Urizielu",				// SPL_NEW1			=	17;
+	"New2",							// SPL_NEW2			=	18;
+	"New3",							// SPL_NEW3			=	19;
+	"New4",							// SPL_NEW4			=	20;
+	"New5"							// SPL_NEW5			=	21;
+ };
 
 // -----------------------------------------------------------------------------------------
 // WORKAROUND:	Da im Skript der Ausdruck TXT_SPELLS[SPL_LIGHT] nicht zulässig ist
@@ -217,61 +313,61 @@ const STRING TXT_SPELLS	[MAX_SPELL]	=
 //				werden können, müssen alle Namen der Zauber hier ein zweites Mal
 //				angegeben werden!
 // -----------------------------------------------------------------------------------------
-const string	NAME_Light			=   "Licht";						// SPL_LIGHT		=	0;
-const string	NAME_Fireball		=	"Feuerball";					// SPL_FIREBALL		=	1;
+const string	NAME_Light			=   "Světlo";						// SPL_LIGHT		=	0;
+const string	NAME_Fireball		=	"Ohnivá koule";					// SPL_FIREBALL		=	1;
 const string	NAME_Transform		=   "n/a";							// SPL_TRANSFORM	=	2;
-const string	NAME_Fear			=	"Angst";						// SPL_FEAR			=	3;
-const string	NAME_Heal			=	"Heilung";						// SPL_HEAL			=	4;
+const string	NAME_Fear			=	"Strach";						// SPL_FEAR			=	3;
+const string	NAME_Heal			=	"Léčení";						// SPL_HEAL			=	4;
 const string	NAME_Lightning		=   "n/a";							// SPL_LIGHTNING	=	5;
-const string	NAME_Summondemon	=   "Dämon beschwören";				// SPL_SUMMONDEMON	=	6;
-const string	NAME_Summonskeleton	=   "Skelette beschwören";			// SPL_SUMMONSKELETON=	7;
+const string	NAME_Summondemon	=   "Vyvolání démnoa";				// SPL_SUMMONDEMON	=	6;
+const string	NAME_Summonskeleton	=   "Vyvolání kostlivce";			// SPL_SUMMONSKELETON=	7;
 const string	NAME_Forget			=   "n/a";							// SPL_FORGET		=	8;
-const string	NAME_Windfist		=	"Windfaust";					// SPL_WINDFIST		=	9;
-const string	NAME_Telekinesis	=   "Telekinese";					// SPL_TELEKINESIS	=	10;
-const string	NAME_Charm			=   "Charme";						// SPL_CHARM		=	11;
-const string	NAME_Sleep			=   "Schlaf";						// SPL_SLEEP		=	12;
-const string	NAME_Pyrokinesis	=   "Pyrokinese";					// SPL_PYROKINESIS	=	13;
-const string	NAME_Massdeath		=   "Todesring";					// SPL_MASSDEATH	=	14;
-const string	NAME_Control		=   "Kontrolle";					// SPL_CONTROL		=	15;
-const string	NAME_Destroyundead	=   "Untote vernichten";			// SPL_DESTROYUNDEAD=	16;
-const string	NAME_Firebolt		=	"Feuerpfeil";					// SPL_FIREBOLT		=	17;
-const string	NAME_Firestorm		=   "Feuersturm";					// SPL_FIRESTORM	=	18;
-const string	NAME_Firerain		=	"Feuerregen";					// SPL_FIRERAIN		=	19;
+const string	NAME_Windfist		=	"Větrná pěst";					// SPL_WINDFIST		=	9;
+const string	NAME_Telekinesis	=   "Telekineze";					// SPL_TELEKINESIS	=	10;
+const string	NAME_Charm			=   "Šarm";							// SPL_CHARM		=	11;
+const string	NAME_Sleep			=   "Spánek";						// SPL_SLEEP		=	12;
+const string	NAME_Pyrokinesis	=   "Pyrokineze";					// SPL_PYROKINESIS	=	13;
+const string	NAME_Massdeath		=   "Kruh smrti";					// SPL_MASSDEATH	=	14;
+const string	NAME_Control		=   "Ovládnutí";					// SPL_CONTROL		=	15;
+const string	NAME_Destroyundead	=   "Smrt nemrtvému";				// SPL_DESTROYUNDEAD=	16;
+const string	NAME_Firebolt		=	"Ohnivý šíp";					// SPL_FIREBOLT		=	17;
+const string	NAME_Firestorm		=   "Ohnivá bouře";					// SPL_FIRESTORM	=	18;
+const string	NAME_Firerain		=	"Ohnivý déšť";					// SPL_FIRERAIN		=	19;
 const string	NAME_Speed			=   "n/a";							// SPL_SPEED		=	20;
-const string	NAME_Teleport1		=   "merkwürdiger Teleportzauber";	// SPL_TELEPORT1	=	21;
-const string	NAME_Teleport2		=   "Teleport Wassermagier";		// SPL_TELEPORT2	=	22;
-const string	NAME_Teleport3		=   "Teleport Xardas";				// SPL_TELEPORT3	=	23;
-const string	NAME_Teleport4		=   "Teleport Altes Lager";			// SPL_TELEPORT4	=	24;
-const string	NAME_Teleport5		=   "Teleport Sumpflager";			// SPL_TELEPORT5	=	25;
-const string	NAME_Trf_Bloodfly	=	"Verwandlung Blutfliege";		// SPL_TRF_BLOODFLY	=	26;
+const string	NAME_Teleport1		=   "Podivný teleport";				// SPL_TELEPORT1	=	21;
+const string	NAME_Teleport2		=   "Teleport k mágům Vody";		// SPL_TELEPORT2	=	22;
+const string	NAME_Teleport3		=   "Teleport k nekromancerovi";	// SPL_TELEPORT3	=	23;
+const string	NAME_Teleport4		=   "Teleport do Starého tábora";	// SPL_TELEPORT4	=	24;
+const string	NAME_Teleport5		=   "Teleport do tábora v bažinách";// SPL_TELEPORT5	=	25;
+const string	NAME_Trf_Bloodfly	=	"Proměna v krvavou mouchu";		// SPL_TRF_BLOODFLY	=	26;
 const string	NAME_Trf_Bloodhound	=   "n/a";							// SPL_TRF_BLOODHOUND=	27;
-const string	NAME_Trf_Crawler	=   "Verwandlung Minecrawler";		// SPL_TRF_CRAWLER	=	28;
-const string	NAME_Trf_Lurker		=   "Verwandlung Lurker";			// SPL_TRF_LURKER	=	29;
-const string	NAME_Trf_Meatbug	=   "Verwandlung Fleischwanze";		// SPL_TRF_MEATBUG	=	30;
-const string	NAME_Trf_Molerat	=   "Verwandlung Molerat";			// SPL_TRF_MOLERAT	=	31;
-const string	NAME_Trf_Orcdog		=   "Verwandlung Orc-Hund";			// SPL_TRF_ORCDOG	=	32;
+const string	NAME_Trf_Crawler	=   "Proměna v důlního červa";		// SPL_TRF_CRAWLER	=	28;
+const string	NAME_Trf_Lurker		=   "Proměna v číhavce";			// SPL_TRF_LURKER	=	29;
+const string	NAME_Trf_Meatbug	=   "Proměna ve žravou štěnici";	// SPL_TRF_MEATBUG	=	30;
+const string	NAME_Trf_Molerat	=   "Proměna v krysokrta";			// SPL_TRF_MOLERAT	=	31;
+const string	NAME_Trf_Orcdog		=   "Proměna ve skřetího psa";		// SPL_TRF_ORCDOG	=	32;
 const string	NAME_Trf_Razor		=   "n/a";							// SPL_TRF_RAZOR	=	33;
-const string	NAME_Trf_Scavenger	=   "Verwandlung Scavenger";		// SPL_TRF_SCAVENGER=	34;
+const string	NAME_Trf_Scavenger	=   "Proměna v mrchožrouta";		// SPL_TRF_SCAVENGER=	34;
 const string	NAME_Trf_Scavenger2	=   "n/a";							// SPL_TRF_SCAVENGER2=	35;
-const string	NAME_Trf_Shadowbeast=	"Verwandlung Schattenläufer";	// SPL_TRF_SHADOWBEAST=	36;
-const string	NAME_Trf_Snapper	=   "Verwandlung Snapper";			// SPL_TRF_SNAPPER	=	37;
-const string	NAME_Trf_Waran		=   "Verwandlung Waran";			// SPL_TRF_WARAN	=	38;
-const string	NAME_Trf_Wolf		=	"Verwandlung Wolf";				// SPL_TRF_WOLF		=	39;
-const string	NAME_Chainlightning	=   "Blitz";						// SPL_CHAINLIGHTNING=	40;
-const string	NAME_Thunderbolt	=   "Eispfeil";						// SPL_THUNDERBOLT	=	41;
-const string	NAME_Thunderball	=   "Kugelblitz";					// SPL_THUNDERBALL	=	42;
-const string	NAME_Icecube		=   "Eisblock";						// SPL_ICECUBE		=	43;
-const string	NAME_Icewave		=   "Eiswelle";						// SPL_ICEWAVE		=	44;
-const string	NAME_Summongolem	=   "Golem beschwören";				// SPL_SUMMONGOLEM	=	45;
-const string	NAME_Armyofdarkness	=   "Armee der Finsternis";			// SPL_ARMYOFDARKNESS=	46;
-const string	NAME_Stormfist		=   "Sturmfaust";					// SPL_STORMFIST	=	47;
+const string	NAME_Trf_Shadowbeast=	"Proměna ve stínovou šelmu";	// SPL_TRF_SHADOWBEAST=	36;
+const string	NAME_Trf_Snapper	=   "Proměna v chňapavce";			// SPL_TRF_SNAPPER	=	37;
+const string	NAME_Trf_Waran		=   "Proměna v ještěrku";			// SPL_TRF_WARAN	=	38;
+const string	NAME_Trf_Wolf		=	"Proměna ve vlka";				// SPL_TRF_WOLF		=	39;
+const string	NAME_Chainlightning	=   "Blesek";						// SPL_CHAINLIGHTNING=	40;
+const string	NAME_Thunderbolt	=   "Ledový šíp";					// SPL_THUNDERBOLT	=	41;
+const string	NAME_Thunderball	=   "Kulový blesk";					// SPL_THUNDERBALL	=	42;
+const string	NAME_Icecube		=   "Ledový blok";					// SPL_ICECUBE		=	43;
+const string	NAME_Icewave		=   "Ledová vlna";					// SPL_ICEWAVE		=	44;
+const string	NAME_Summongolem	=   "Vyvolání golema";				// SPL_SUMMONGOLEM	=	45;
+const string	NAME_Armyofdarkness	=   "Armáda temnot";				// SPL_ARMYOFDARKNESS=	46;
+const string	NAME_Stormfist		=   "Větrná pěst";					// SPL_STORMFIST	=	47;
 const string	NAME_Telekinesis2	=	"n/a";							// SPL_TELEKINESIS2	=	48;
-const string	NAME_Breathofdeath	=   "Todeshauch";					// SPL_BREATHOFDEATH=	49;
-const string	NAME_Shrink			=   "Schrumpfen";					// SPL_SHRINK		=	50;
+const string	NAME_Breathofdeath	=   "Dech smrti";					// SPL_BREATHOFDEATH=	49;
+const string	NAME_Shrink			=   "Zmenšit nestvůru";				// SPL_SHRINK		=	50;
 const string	NAME_Undress		=   "n/a";							// SPL_UNDRESS		=	51;
 const string	NAME_Dance			=   "n/a";							// SPL_DANCE		=	52;
-const string	NAME_Berzerk		=   "Raserei";						// SPL_BERZERK		=	53;
-const string	NAME_New1			=	"Zorn des URIZIEL";				// SPL_NEW1			=	17;
+const string	NAME_Berzerk		=   "Vztek";						// SPL_BERZERK		=	53;
+const string	NAME_New1			=	"Hněv Urizielu";				// SPL_NEW1			=	17;
 const string	NAME_New2			=	"New2";							// SPL_NEW2			=	18;
 const string	NAME_New3			=	"New3";							// SPL_NEW3			=	19;
 const string	NAME_New4			=	"New4";							// SPL_NEW4			=	20;
@@ -285,9 +381,9 @@ CONST STRING TXT_TALENTS [NPC_TALENT_MAX] =
 {
 	"",
 //	"Einhänder",				// NPC_TALENT_1H
-	"Jednoruční zbraně",		// NPC_TALENT_1H
+	"Jednoruční meč",		// NPC_TALENT_1H
 //	"Zweihänder",               // NPC_TALENT_2H
-	"Obouruční zbraně",         // NPC_TALENT_2H
+	"Obouruční meč",         // NPC_TALENT_2H
 //	"Kampfstab",                // NPC_TALENT_STAFF
 	"Bojové hole",              // NPC_TALENT_STAFF
 //	"Bogen",                    // NPC_TALENT_BOW
@@ -419,13 +515,13 @@ CONST STRING NAME_Brueckenwache		= "Strážce mostu";
 //CONST STRING NAME_Schuetze		= "Armbrustschütze";
 CONST STRING NAME_Schuetze			= "Kušník"; // Tohle mi zní asi nejpřirozeněji, ale původní střelec z kuše je taky ok.
 //CONST STRING NAME_Amazon			= "Amazone";
-CONST STRING NAME_Amazon			= "amazonka";
+CONST STRING NAME_Amazon			= "Amazonka";
 //CONST STRING NAME_Paladin			= "Wache";
 CONST STRING NAME_Paladin			= "Stráž";
 //CONST STRING Name_Auxiliary		= "Soldat der Hilfstruppen";
-CONST STRING Name_Auxiliary			= "Voják pomocných jednotek ";
+CONST STRING Name_Auxiliary			= "Voják pomocných jednotek";
 //CONST STRING NAME_KDF				= "Feuermagier";
-CONST STRING NAME_KDF				= "Mág ohně";
+CONST STRING NAME_KDF				= "Mág Ohně";
 //CONST STRING NAME_Bloodearth		= "Bluterde-Klan";
 CONST STRING NAME_Bloodearth		= "Klan krvavé země"; // Pokud se to vztahuje k postavě, tak možná Příslušník klanu krvavé země?
 //CONST STRING NAME_Demonhunter		= "Dämonenjäger";
@@ -491,8 +587,8 @@ const string NAME_Dex_needed		= "Požadovaná obratnost:";
 
 //const string NAME_Spell_Load		= "Aufladbarer Zauber";
 const string NAME_Spell_Load		= "Nabíjecí kouzlo";
-const string NAME_Spell_Invest		= "Jednorázové kouzlo";
 //const string NAME_Spell_Invest	= "Aufrechterhaltungs-Zauber";
+const string NAME_Spell_Invest		= "Jednorázové kouzlo";
 
 //const string NAME_Dam_Edge		= "Waffenschaden";
 const string NAME_Dam_Edge			= "Poškození zbraněmi";
@@ -602,7 +698,7 @@ const string	NAME_OrcSword        		=	"Krush Varrok";
 const string	NAME_Hatchet         		=	"Sekyra"; // Správně je i sekera, ale beru to podle oficiálního překladu G1
 //const string	NAME_Battleaxe       		=	"Streitaxt";
 const string	NAME_Battleaxe       		=	"Bojová sekyra";
-//const string	NAME_DoublebladedAxe 		=	"Dopp	elblattaxt";
+//const string	NAME_DoublebladedAxe 		=	"Doppelblattaxt";
 const string	NAME_DoublebladedAxe 		=	"Dvoubřitá sekyra";
 //const string	NAME_BerserkAxe      		=	"Berserkeraxt";
 const string	NAME_BerserkAxe      		=	"Sekyra berserkera";
@@ -668,7 +764,7 @@ const string	NAME_Booze		      		=	"Rýžová pálenka";
 //const string	NAME_MeatBug				=	"Wanzenfleisch";
 const string	NAME_MeatBug				=	"Maso ze žravé štěnice";
 //const string	NAME_MoleratGrease			=	"Moleratfett";
-const string	NAME_MoleratGrease			=	"Krysokrtí maso";
+const string	NAME_MoleratGrease			=	"Krysokrtí sádlo";
 //const string	NAME_Teeth					=	"Zähne";
 const string	NAME_Teeth					=	"Zuby";
 //const string	NAME_WolfFur				=	"Wolfsfell";
@@ -688,9 +784,9 @@ const string	NAME_ShadowFur		       	=	"Kůže stínové šelmy"; // Asi? Podle 
 //const string	NAME_ShadowHorn		      	=	"Horn";
 const string	NAME_ShadowHorn		      	=	"Roh stínové šelmy";
 //const string	NAME_LurkerClaw	 	  		=	"Lurkerklaue";
-const string	NAME_LurkerClaw	 	  		=	"Číhavčí dráp";
+const string	NAME_LurkerClaw	 	  		=	"Drápy číhavce";
 //const string	NAME_LurkerSkin         	=	"Lurkerhaut";
-const string	NAME_LurkerSkin         	=	"Číhavčí kůže";
+const string	NAME_LurkerSkin         	=	"Kůže číhavce";
 //const string	NAME_TrollTeeth 	       	=	"Trollhauer";
 const string	NAME_TrollTeeth 	       	=	"Trollí tesák";
 //const string	NAME_TrollFur	         	=	"Trollfell";
@@ -704,7 +800,7 @@ const string	NAME_BloodflyWings		    =	"Křídla krvavé mouchy";
 //const string	NAME_BloodflySting			=	"Blutfliegenstachel";
 const string	NAME_BloodflySting			=	"Žihadlo krvavé mouchy";
 //const string	NAME_DemonSting				=	"dämonischer Stachel";
-const string	NAME_DemonSting				=	"Démonický trn"; // To chce asi něco lepšího, ale nevím přesně o co jde ve hře. 
+const string	NAME_DemonSting				=	"Démonický trn"; // To chce asi něco lepšího, ale nevím přesně o co jde ve hře.
 //const string	NAME_StonegolemHeart		=	"Herz eines Steingolems";
 const string	NAME_StonegolemHeart		=	"Srdce kamenného golema";
 //const string	NAME_FiregolemHeart			=	"Herz eines Feuergolems";
@@ -758,7 +854,7 @@ const string	NAME_Lockpick				=	"Paklíč"; // Popř. šperhák, to zní krásn�
 //const string	NAME_Key					=	"Schlüssel";
 const string	NAME_Key					=	"Klíč";
 //const string	NAME_Stomper				=	"Krautstampfer";
-const string	NAME_Stomper				=	"Palice"; // Tady fakt nevím. Taková ta věc na drcení bylin v hmoždíři? Dal jsem prozatím Palice.
+const string	NAME_Stomper				=	"Tlouček"; // Tady fakt nevím. Taková ta věc na drcení bylin v hmoždíři? Dal jsem prozatím Palice.
 //const string	NAME_Hammer					=	"Hammer";
 const string	NAME_Hammer					=	"Kladivo";
 //const string	NAME_Scoop					=	"Kochlöffel";
@@ -776,7 +872,7 @@ const string	NAME_Brush				 	=	"Kartáč";
 //const string	NAME_Joint1 			    =	"Grüner Novize";
 const string	NAME_Joint1 			    =	"Zelený novic";
 //const string	NAME_Joint2				 	=	"Schwarzer Weiser";
-const string	NAME_Joint2				 	=	"Černý mudrc"; // Asi? Ale je to název jointu, tak se dá být různě kreativní.
+const string	NAME_Joint2				 	=	"Černý mudrc"; // Severní soumrak - Asi? Ale je to název jointu, tak se dá být různě kreativní.
 //const string	NAME_Joint3			        =	"Traumruf";
 const string	NAME_Joint3			        =	"Přivolávač snů";
 //const string	NAME_Torch					=	"Fackel";
@@ -984,7 +1080,7 @@ const string	NAME_RecipeMeat				=	"Výtečný recept na maso";
 const string	NAME_CAULDRON_Done			=	" připraveno";
 
 //const string	NAME_Bow_Done				=	" gespannt";
-const string	NAME_Bow_Done				=	" nepnutý";
+const string	NAME_Bow_Done				=	" napnutý";
 //const string	NAME_RUNEMAKER_Done			=	" aufgeladen";
 const string	NAME_RUNEMAKER_Done			=	" vyrobena";
 //const string	NAME_RUNEMELTER_Done		=	" gegossen";
@@ -997,9 +1093,9 @@ const string	NAME_STOMPER_DONE			=	" ubaleno";
 const string	NAME_FLETCHER_DONE			=	" vyřezán";
 
 //const string	NAME_Ration					=	" Portion ";
-const string	NAME_Ration					=	" Porce ";
+const string	NAME_Ration					=	" porce ";
 //const string	NAME_Rations				=	" Portionen ";
-const string	NAME_Rations				=	" Porce ";
+const string	NAME_Rations				=	" porce ";
 
 // ***************************************************************************************
 // Pflanzen
@@ -1102,7 +1198,7 @@ const string	NAME_BookSpeedPotions		=	"Recepty na lektvary rychlosti";
 //const string	NAME_BlankRune				=	"leere Rune";
 const string	NAME_BlankRune				=	"prázdná runa";
 //const string	NAME_BlankBloodRune			=	"leere Blutrune";
-const string	NAME_BlankBloodRune			=	"prázdná krvavá ruba";
+const string	NAME_BlankBloodRune			=	"prázdná krvavá runa";
 //const string	NAME_BlankDarkRune			=	"leere Dunkelrune";
 const string	NAME_BlankDarkRune			=	"prázdná tmavá runa";
 //const string	NAME_RunePostfix			=	"-Rune";
