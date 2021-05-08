@@ -136,7 +136,7 @@ const int STAT_TAL_Y  = 900;
 
 
 const int STAT_A_X1 =  700;
-const int STAT_A_X2 = 1500;
+const int STAT_A_X2 = 1650;//1500;
 const int STAT_A_X3 = 2500;
 const int STAT_B_X1 = 3500;
 const int STAT_B_X2 = 5700;
@@ -370,28 +370,28 @@ INSTANCE MENU_ITEM_TALENTS_WEAPON_HEADING(C_MENU_ITEM_DEF)
 {
 	text[0]	= "Bojové dovednosti / Kritický úder";
 	posx	= STAT_B_X1; posy = STAT_TAL_Y + STAT_DY*0;			fontName = STAT_FONT_TITLE;	
-	flags		=	flags & ~IT_SELECTABLE;
+	flags	=	flags & ~IT_SELECTABLE;
 };
 
 INSTANCE MENU_ITEM_TALENTS_THIEF_HEADING(C_MENU_ITEM_DEF)
 {
-	text[0]	= "Zloděj. dovednosti / Možnost přistižení";
+	text[0]	= "Zlodějské dovednosti";
 	posx	= STAT_B_X1; posy = STAT_TAL_Y + STAT_DY*7;			fontName = STAT_FONT_TITLE;	
-	flags		=	flags & ~IT_SELECTABLE;
+	flags	=	flags & ~IT_SELECTABLE;
 };
 
 INSTANCE MENU_ITEM_TALENTS_MAGIC_HEADING(C_MENU_ITEM_DEF)
 {
-	text[0]	= "Magie:";
+	text[0]	= "Magické dovednosti";
 	posx	= STAT_B_X1; posy = STAT_TAL_Y + STAT_DY*13; 		fontName = STAT_FONT_TITLE;
-	flags		=	flags & ~IT_SELECTABLE;
+	flags	=	flags & ~IT_SELECTABLE;
 };
 
 INSTANCE MENU_ITEM_TALENTS_WORK_HEADING(C_MENU_ITEM_DEF)
 {
-	text[0]	= "Ostatní dovednosti:";
+	text[0]	= "Ostatní dovednosti";
 	posx	= STAT_B_X1; posy = STAT_TAL_Y + STAT_DY*18; 		fontName = STAT_FONT_TITLE;
-	flags		=	flags & ~IT_SELECTABLE;
+	flags	=	flags & ~IT_SELECTABLE;
 };
 
 
