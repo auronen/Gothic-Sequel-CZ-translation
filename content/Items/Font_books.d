@@ -38,16 +38,19 @@ FUNC void Use_test_text1()
 				Doc_SetFont 	(nDocID, -1, FONT_BOOK_SMALL);
 				Doc_PrintLines	(nDocID,  0, "Příliš žluťoučký kůň úpěl ďábelské ódy.");
 				Doc_PrintLines	(nDocID,  0, "PŘÍLIŠ ŽLUŤOUČKÝ KŮŇ ÚPĚL ĎÁBELSKÉ ÓDY.");
+				Doc_PrintLines	(nDocID,  0, "1234567890!#$%&()+,-./:;<=>?@ \_{|}~‚„‘a’a“a”–™§©®");
 				Doc_PrintLine	(nDocID,  0, "");
 				Doc_SetFont 	(nDocID, -1, "font_old_20_white.tga");
 				Doc_PrintLines	(nDocID,  0, "Příliš žluťoučký kůň úpěl ďábelské ódy.");
 				Doc_PrintLines	(nDocID,  0, "PŘÍLIŠ ŽLUŤOUČKÝ KŮŇ ÚPĚL ĎÁBELSKÉ ÓDY.");
+				Doc_PrintLines	(nDocID,  0, "1234567890!#$%&()+,-./:;<=>?@ \_{|}~‚„‘a’a“a”–™§©®");
 				Doc_PrintLine	(nDocID,  0, "");
 				Doc_SetFont 	(nDocID, -1, "font_old_10_white.tga");
 				Doc_PrintLines	(nDocID,  0, "Příliš žluťoučký kůň úpěl ďábelské ódy.");
 				Doc_PrintLines	(nDocID,  0, "PŘÍLIŠ ŽLUŤOUČKÝ KŮŇ ÚPĚL ĎÁBELSKÉ ÓDY.");
+				Doc_PrintLines	(nDocID,  0, "1234567890!#$%&()+,-./:;<=>?@ \_{|}~‚„‘a’a“a”–™§©®");
 				Doc_PrintLine	(nDocID,  0, "");
-				Doc_PrintLine	(nDocID,  0, "         VaanaCZ & Auronen");
+				Doc_PrintLine	(nDocID,  0, "         VaanaCZ & Auronen & Tým™");
 				Doc_Show		(nDocID);
 
 	Diego_LetterRead = TRUE;
