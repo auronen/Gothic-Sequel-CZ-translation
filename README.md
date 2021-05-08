@@ -4,31 +4,27 @@ Německé skripty poskytl VaanaCZ, moc děkujeme!
 ## Překlad 
 Protože překládáme z originálu, tedy z němčiny :de:, doporučil bych zachovat ve skritpech původní německé texty, pro kontrolu. A to tak, že se původní řádek zkopíruje a zakomentuje - na začátek řádku se vloží `//`. Ukázka:
 ```c++
-func void pc_psionic_halloagain_info()
+instance WRK_203_Bromor_TROPHYS		(C_INFO)
 {
- // AI_Output(self,hero,"PC_Psionic_HALLOAGAIN_23_01");	//Hey, ich dachte du wärst tot!
-	AI_Output(self,hero,"PC_Psionic_HALLOAGAIN_23_01");	//Hej, myslel jsem, že jsi mrtvý!
- // AI_Output(hero,self,"PC_Psionic_HALLOAGAIN_15_02");	//Das kommt mir bekannt vor.
-	AI_Output(hero,self,"PC_Psionic_HALLOAGAIN_15_02");	//To už jsem někdy slyšel. #Protože už to slyšel od Diega - toto je komentář k překladu
- // AI_Output(self,hero,"PC_Psionic_HALLOAGAIN_23_03");	//Was ist geschehen?
-	AI_Output(self,hero,"PC_Psionic_HALLOAGAIN_23_03");	//Co se stalo?
- // AI_Output(hero,self,"PC_Psionic_HALLOAGAIN_15_04");	//Der Kampf gegen den Schläfer hat mich geschwächt. Das bedeutet ich muss wieder 'ne Menge lernen.
-	AI_Output(hero,self,"PC_Psionic_HALLOAGAIN_15_04");	//Boj proti Spáči mě oslabil. To znamená, že se toho budu muset zase hodně naučit.
- // AI_Output(self,hero,"PC_Psionic_HALLOAGAIN_23_05");	//Ich kann dir zeigen, wie du deine magische Kraft steigerst und dir die Kreise der Magie lehren.
-	AI_Output(self,hero,"PC_Psionic_HALLOAGAIN_23_05");	//Můžu ti ukázat, jak posílit svou magickou moc a také tě uvést do kruhů magie.
-	b_setattitude(self,ATT_FRIENDLY);
+	npc		 = 	WRK_203_Bromor;
+	nr		 = 	23;
+	condition	 = 	WRK_203_Bromor_TROPHYS_Condition;
+	information	 = 	WRK_203_Bromor_TROPHYS_Info;
+	important	 = 	FALSE;
+	permanent	 = 	FALSE;
+
+//	description	 = 	"Ich hörte, du sammelst Trophäen?";
+	description	 = 	"Slyšel jsem, že sbíráš trofeje..?";
 };
 
-instance PC_PSIONIC_FORTRESS(C_Info)
+func void WRK_203_Bromor_TROPHYS_Info ()
 {
-	npc = PC_Psionic;
-	nr = 5;
-	condition = pc_psionic_fortress_condition;
-	information = pc_psionic_fortress_info;
-	important = FALSE;
-	permanent = FALSE;
-//	description = "Wolltest Du nicht von der Felsenfestung Besitz nehmen?";
-	description = "Nechtěl jsi obsadit Horskou pevnost?";
+//	AI_Output			(hero, self, "WRK_203_TROPHYS_15_01"); //Ich hörte, du sammelst Trophäen?
+	AI_Output			(hero, self, "WRK_203_TROPHYS_15_01"); //Slyšel jsem, že sbíráš trofeje..?
+//	AI_Output			(self, hero, "WRK_203_TROPHYS_09_02"); //Das stimmt. Aber nicht dieses Wolfs- und Scavenger Zeug. Davon habe ich schon genug.
+	AI_Output			(self, hero, "WRK_203_TROPHYS_09_02"); //Ano, tak. Ale ne tyhle cetky z vlků nebo mrchožroutů. Těch už mám až dost.
+//	AI_Output			(self, hero, "WRK_203_TROPHYS_09_03"); //Aber wenn du mir ein SchattenläuferHorn oder -Fell bringst, dafür zahle ich hundert Silberstücke!
+	AI_Output			(self, hero, "WRK_203_TROPHYS_09_03"); //Ale kdybys mi přinesl roh nebo kůži stínové šelmy, dal bych ti za ně sto stříbrných!
 };
 ```
 
@@ -37,11 +33,14 @@ instance PC_PSIONIC_FORTRESS(C_Info)
 - [ ] Dialogy - `Content\Story\Missions`
 - [ ] Předměty - `Content\Items`
 - [ ] Ostatní - soubor `Content\Story\Text.d`
-- [ ] Font
+- [x] Fonty
 
 ## Snímky ze hry
 ### Menu
 ![hlavní nabídka](https://github.com/auronen/Gothic-Sequel-CZ-translation/blob/main/screenshots/Sequel_menu_cz.png?raw=true)
+
+### Titulky
+![hlavní nabídka](https://github.com/auronen/Gothic-Sequel-CZ-translation/blob/main/screenshots/Sequel_titulek.png?raw=true)
 
 ## Předpokládaný čas vydání
 Až to bude, tak to bude™
