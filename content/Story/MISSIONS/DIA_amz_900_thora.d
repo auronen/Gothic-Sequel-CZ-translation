@@ -57,8 +57,10 @@ FUNC int  AMZ_900_Thora_GREETING_Condition()
 
 func void  AMZ_900_Thora_GREETING_Info()
 {
-	AI_Output 			(self, hero, "AMZ_900_GREETING_16_01"); //Verdammt, woher kommst du so plötzlich? Wer bist du?
-	AI_Output 			(self, hero, "AMZ_900_GREETING_16_02"); //Beinahe hätte ich Dich niedergeschlagen!
+//	AI_Output 			(self, hero, "AMZ_900_GREETING_16_01"); //Verdammt, woher kommst du so plötzlich? Wer bist du?
+	AI_Output 			(self, hero, "AMZ_900_GREETING_16_01"); //Zatraceně, odkud ses tu takhle vzal? Kdo jsi?
+//	AI_Output 			(self, hero, "AMZ_900_GREETING_16_02"); //Beinahe hätte ich Dich niedergeschlagen!
+	AI_Output 			(self, hero, "AMZ_900_GREETING_16_02"); //Málem bych tě srazila!
 	Npc_ExchangeRoutine (self,"ArenaWait");
 };
 
@@ -70,7 +72,8 @@ instance  AMZ_900_Thora_WHO (C_INFO)
 	information		= AMZ_900_Thora_WHO_Info;
 	important		= FALSE;
 	permanent		= FALSE;
-	description		= "Immer langsam! Sag mir doch erstmal wer du bist.";
+//	description		= "Immer langsam! Sag mir doch erstmal wer du bist.";
+	description		= "Jen hezky pomalu! Pověz mi nejdřív, kdo jsi.";
 };
 
 FUNC int  AMZ_900_Thora_WHO_Condition()
@@ -84,17 +87,24 @@ FUNC int  AMZ_900_Thora_WHO_Condition()
 
 FUNC void  AMZ_900_Thora_WHO_Info()
 {
-	AI_Output (hero, self,"AMZ_900_Thora_WHO_Info_15_01"); //Immer langsam! Sag mir doch erstmal wer du bist.
-	AI_Output (self, hero,"AMZ_900_Thora_WHO_Info_16_02"); //Ich bin Thora. Und ich frage mich, wo du so plötzlich herkommst!
-	Info_AddChoice		(AMZ_900_Thora_WHO,	"Ich bin vom Himmel gefallen!",				AMZ_900_Thora_WHO_SKY);
-	Info_AddChoice		(AMZ_900_Thora_WHO,	"Das kann ich dir leider nicht sagen.",		AMZ_900_Thora_WHO_CANTSAY);
+//	AI_Output (hero, self,"AMZ_900_Thora_WHO_Info_15_01"); //Immer langsam! Sag mir doch erstmal wer du bist.
+	AI_Output (hero, self,"AMZ_900_Thora_WHO_Info_15_01"); //Jen hezky pomalu! Pověz mi nejdřív, kdo jsi.
+//	AI_Output (self, hero,"AMZ_900_Thora_WHO_Info_16_02"); //Ich bin Thora. Und ich frage mich, wo du so plötzlich herkommst!
+	AI_Output (self, hero,"AMZ_900_Thora_WHO_Info_16_02"); //Jsem Thora. A ráda bych věděla, jak ses tu najednou takhle objevil!
+//	Info_AddChoice		(AMZ_900_Thora_WHO,	"Ich bin vom Himmel gefallen!",				AMZ_900_Thora_WHO_SKY);
+	Info_AddChoice		(AMZ_900_Thora_WHO,	"Spadnul jsem z nebe!",				AMZ_900_Thora_WHO_SKY);
+//	Info_AddChoice		(AMZ_900_Thora_WHO,	"Das kann ich dir leider nicht sagen.",		AMZ_900_Thora_WHO_CANTSAY);
+	Info_AddChoice		(AMZ_900_Thora_WHO,	"To ti bohužel nemůžu říct.",		AMZ_900_Thora_WHO_CANTSAY);
 };
 
 FUNC VOID AMZ_900_Thora_WHO_SKY()
 {
-	AI_Output (hero, self,"AMZ_900_Thora_WHO_SKY_Info_15_01"); //Ich bin vom Himmel gefallen!
-	AI_Output (self, hero,"AMZ_900_Thora_WHO_SKY_Info_16_02"); //Wirklich wahr? Dann sieh mal zu, daß du wieder heil nach oben kommst, mein Vögelchen!
-	AI_Output (self, hero,"AMZ_900_Thora_WHO_SKY_Info_16_03"); //Und falls du mal wieder landest, solltest du etwas freundlicher sein!
+//	AI_Output (hero, self,"AMZ_900_Thora_WHO_SKY_Info_15_01"); //Ich bin vom Himmel gefallen!
+	AI_Output (hero, self,"AMZ_900_Thora_WHO_SKY_Info_15_01"); //Spadnul jsem z nebe!
+//	AI_Output (self, hero,"AMZ_900_Thora_WHO_SKY_Info_16_02"); //Wirklich wahr? Dann sieh mal zu, daß du wieder heil nach oben kommst, mein Vögelchen!
+	AI_Output (self, hero,"AMZ_900_Thora_WHO_SKY_Info_16_02"); //Opravdu? Tak koukej zase vyletět nahoru, ty můj ptáčku!
+//	AI_Output (self, hero,"AMZ_900_Thora_WHO_SKY_Info_16_03"); //Und falls du mal wieder landest, solltest du etwas freundlicher sein!
+	AI_Output (self, hero,"AMZ_900_Thora_WHO_SKY_Info_16_03"); //A jestli znova přistaneš, tak bys měl být trochu přátelštější!
 
 	Info_ClearChoices	(AMZ_900_Thora_WHO);
 	AI_StopProcessInfos (self);
@@ -102,28 +112,39 @@ FUNC VOID AMZ_900_Thora_WHO_SKY()
 
 FUNC VOID AMZ_900_Thora_WHO_CANTSAY()
 {
-	AI_Output (hero, self,"AMZ_900_Thora_WHO_CANTSAY_Info_15_01"); //Das kann ich dir leider nicht sagen.
-	AI_Output (self, hero,"AMZ_900_Thora_WHO_CANTSAY_Info_16_02"); //Das war doch ein Teleport-Zauber, aber wie ein Magier siehst du nicht gerade aus.
+//	AI_Output (hero, self,"AMZ_900_Thora_WHO_CANTSAY_Info_15_01"); //Das kann ich dir leider nicht sagen.
+	AI_Output (hero, self,"AMZ_900_Thora_WHO_CANTSAY_Info_15_01"); //To ti bohužel nemůžu říct.
+//	AI_Output (self, hero,"AMZ_900_Thora_WHO_CANTSAY_Info_16_02"); //Das war doch ein Teleport-Zauber, aber wie ein Magier siehst du nicht gerade aus.
+	AI_Output (self, hero,"AMZ_900_Thora_WHO_CANTSAY_Info_16_02"); //To bylo určitě teleportační kouzlo, jenže jako mág ty zrovna nevypadáš.
 
 	Info_ClearChoices	(AMZ_900_Thora_WHO);
-	Info_AddChoice 		(AMZ_900_Thora_WHO,	"Beurteilst du jeden nach dem Äusseren?",					AMZ_900_Thora_WHO_JUDGE);
+//	Info_AddChoice 		(AMZ_900_Thora_WHO,	"Beurteilst du jeden nach dem Äusseren?",					AMZ_900_Thora_WHO_JUDGE);
+	Info_AddChoice 		(AMZ_900_Thora_WHO,	"Soudíš každého podle zevnějšku?",					AMZ_900_Thora_WHO_JUDGE);
 };
 
 FUNC VOID AMZ_900_Thora_WHO_JUDGE()
 {
-	AI_Output (other, self,"AMZ_900_Thora_WHO_JUDGE_Info_15_01"); //Beurteilst du jeden nach dem Äusseren?
-	AI_Output (self, other,"AMZ_900_Thora_WHO_JUDGE_Info_16_02"); //Nicht jeden. Nur die, die nichts zu sagen haben!
-	AI_Output (self, other,"AMZ_900_Thora_WHO_JUDGE_Info_16_03"); //Was hast du denn hier vor?
+//	AI_Output (other, self,"AMZ_900_Thora_WHO_JUDGE_Info_15_01"); //Beurteilst du jeden nach dem Äusseren?
+	AI_Output (other, self,"AMZ_900_Thora_WHO_JUDGE_Info_15_01"); //Soudíš každého podle zevnějšku?
+//	AI_Output (self, other,"AMZ_900_Thora_WHO_JUDGE_Info_16_02"); //Nicht jeden. Nur die, die nichts zu sagen haben!
+	AI_Output (self, other,"AMZ_900_Thora_WHO_JUDGE_Info_16_02"); //Každého ne. Jen ty, co nemají co říct!
+//	AI_Output (self, other,"AMZ_900_Thora_WHO_JUDGE_Info_16_03"); //Was hast du denn hier vor?
+	AI_Output (self, other,"AMZ_900_Thora_WHO_JUDGE_Info_16_03"); //Takže o co ti tu jde?
 
-	Info_AddChoice 		(AMZ_900_Thora_WHO,	"Sagst du mir auch, was Du hier machst?",					AMZ_900_Thora_WHO_WHAT);
-	Info_AddChoice 		(AMZ_900_Thora_WHO,	"Was ich hier vorhabe, kann ich dir nicht erzählen.",		AMZ_900_Thora_WHO_SECRET);
-	Info_AddChoice 		(AMZ_900_Thora_WHO,	"Ich will ins Lager.",										AMZ_900_Thora_WHO_WHATELSE);
+//	Info_AddChoice 		(AMZ_900_Thora_WHO,	"Sagst du mir auch, was Du hier machst?",					AMZ_900_Thora_WHO_WHAT);
+	Info_AddChoice 		(AMZ_900_Thora_WHO,	"A ty mi taky řekneš, co tu děláš?",					AMZ_900_Thora_WHO_WHAT);
+//	Info_AddChoice 		(AMZ_900_Thora_WHO,	"Was ich hier vorhabe, kann ich dir nicht erzählen.",		AMZ_900_Thora_WHO_SECRET);
+	Info_AddChoice 		(AMZ_900_Thora_WHO,	"O svých plánech ti říct nemohu.",		AMZ_900_Thora_WHO_SECRET);
+//	Info_AddChoice 		(AMZ_900_Thora_WHO,	"Ich will ins Lager.",										AMZ_900_Thora_WHO_WHATELSE);
+	Info_AddChoice 		(AMZ_900_Thora_WHO,	"Chci do tábora.",										AMZ_900_Thora_WHO_WHATELSE);
 };
 
 FUNC VOID AMZ_900_Thora_WHO_WHAT()
 {
-	AI_Output (other, self,"AMZ_900_Thora_WHO_WHAT_Info_15_01"); //Sagst du mir auch, was Du hier machst?
-	AI_Output (self, other,"AMZ_900_Thora_WHO_WHAT_Info_16_02"); //...also gerade versuche ich etwas über dich zu erfahren.
+//	AI_Output (other, self,"AMZ_900_Thora_WHO_WHAT_Info_15_01"); //Sagst du mir auch, was Du hier machst?
+	AI_Output (other, self,"AMZ_900_Thora_WHO_WHAT_Info_15_01"); //A ty mi taky řekneš, co tu děláš?
+//	AI_Output (self, other,"AMZ_900_Thora_WHO_WHAT_Info_16_02"); //...also gerade versuche ich etwas über dich zu erfahren.
+	AI_Output (self, other,"AMZ_900_Thora_WHO_WHAT_Info_16_02"); //...takže se snažím o tobě něco zjistit.
 	AI_Output (other, self,"AMZ_900_Thora_WHO_WHAT_Info_15_03"); //und sonst?
 	AI_Output (self, other,"AMZ_900_Thora_WHO_WHAT_Info_16_04"); //Ich bin Kämpferin.
 
