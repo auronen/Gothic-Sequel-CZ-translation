@@ -47,19 +47,22 @@ func void KDF_1101_Feoras_WELCOME_Info ()
 	
 	if (randomizer == 0)
 	{
-		AI_Output			(self, hero, "KDF_1101_Feoras_WELCOME_00_01"); //Stör mich jetzt nicht! 
+//		AI_Output			(self, hero, "KDF_1101_Feoras_WELCOME_00_01"); //Stör mich jetzt nicht!
+		AI_Output			(self, hero, "KDF_1101_Feoras_WELCOME_00_01"); //Teď mě neruš!
 	
 		AI_StopProcessInfos		(self);
 	};
 	if (randomizer == 1)
 	{
-		AI_Output			(self, hero, "KDF_1101_Feoras_WELCOME_00_02"); //Ich habe keine Zeit für dich! 
+//		AI_Output			(self, hero, "KDF_1101_Feoras_WELCOME_00_02"); //Ich habe keine Zeit für dich!
+		AI_Output			(self, hero, "KDF_1101_Feoras_WELCOME_00_02"); //Nemám na tebe čas! 
 	
 		AI_StopProcessInfos		(self);
 	};
 	if (randomizer == 2)
 	{
-		AI_Output			(self, hero, "KDF_1101_Feoras_WELCOME_00_03"); //Steh hier nicht im Weg rum!  
+//		AI_Output			(self, hero, "KDF_1101_Feoras_WELCOME_00_03"); //Steh hier nicht im Weg rum!
+		AI_Output			(self, hero, "KDF_1101_Feoras_WELCOME_00_03"); //Nestůj tu v cestě! 
 	
 		AI_StopProcessInfos		(self);
 	};
