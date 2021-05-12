@@ -1263,8 +1263,8 @@ const string _STR_CANNOTUSE_POST			= ", pro použití této položky"				;
 
 // Bildschirmausgabe, falls ein NSC zu wenig Attributspunkte, für das Anlegen von Waffen hat (nur Debugzwecke!)
 const string _STR_CANNOTUSE_PRE_NPC			= " ("												;
-//const string _STR_CANNOTUSE_POST_NPC		= ") fehlen "										;
-const string _STR_CANNOTUSE_POST_NPC		= ") scházejí "										;
+//const string _STR_CANNOTUSE_POST_NPC		= ") fehlen"										;
+const string _STR_CANNOTUSE_POST_NPC		= ") schází"										;
 
 // Bidschrimausgabe zum Thema Schloß öffnen/knacken
 //const string _STR_MESSAGE_INTERACT_NO_KEY		= "kein Dietrich oder passender Schlüssel";
@@ -1280,21 +1280,21 @@ const string _STR_MESSAGE_PICKLOCK_BROKEN		= "Paklíč se zlomil.";
 
 // Textausgabe für Mob-Benutzung
 //const string _STR_MESSAGE_MOBSI_MISSING_KEY_OR_LOCKPICK	=	"weder Schlüssel noch Dietrich vorhanden!";
-const string _STR_MESSAGE_MOBSI_MISSING_KEY_OR_LOCKPICK		=	"nemám klíč ani paklíč!";
+const string _STR_MESSAGE_MOBSI_MISSING_KEY_OR_LOCKPICK		=	"Nemám klíč ani paklíč!";
 //const string _STR_MESSAGE_MOBSI_MISSING_KEY				=	"kein Schlüssel vorhanden!";
-const string _STR_MESSAGE_MOBSI_MISSING_KEY					=	"nemám klíč!";
+const string _STR_MESSAGE_MOBSI_MISSING_KEY					=	"Nemám klíč!";
 //const string _STR_MESSAGE_MOBSI_MISSING_LOCKPICK			= 	"kein Dietrich vorhanden!";
-const string _STR_MESSAGE_MOBSI_MISSING_LOCKPICK			= 	"nemám paklíč!";
+const string _STR_MESSAGE_MOBSI_MISSING_LOCKPICK			= 	"Nemám paklíč!";
 //const string _STR_MESSAGE_MOBSI_NEVER_OPEN				=	"fest verschlossen!";
-const string _STR_MESSAGE_MOBSI_NEVER_OPEN					=	"důkladně zavřené!";
+const string _STR_MESSAGE_MOBSI_NEVER_OPEN					=	"Důkladně zavřené!";
 //const string _STR_MESSAGE_MOBSI_MISSING_ITEM				=	"fehlender Gegenstand!";
-const string _STR_MESSAGE_MOBSI_MISSING_ITEM				=	"chybí předmět!";
+const string _STR_MESSAGE_MOBSI_MISSING_ITEM				=	"Chybí předmět!";
 //const string _STR_MESSAGE_MOBSI_ANOTHER_IS_USING			=	"wird gerade benutzt!";
-const string _STR_MESSAGE_MOBSI_ANOTHER_IS_USING			=	"je používán!";
+const string _STR_MESSAGE_MOBSI_ANOTHER_IS_USING			=	"Je používán!";
 //const string _STR_MESSAGE_MOBSI_TOO_FAR_AWAY				=	"ist zu weit weg!";
-const string _STR_MESSAGE_MOBSI_TOO_FAR_AWAY				=	"je příliš daleko!";
+const string _STR_MESSAGE_MOBSI_TOO_FAR_AWAY				=	"Je příliš daleko!";
 //const string _STR_MESSAGE_MOBSI_WRONG_SIDE				=	"falsche Seite!";
-const string _STR_MESSAGE_MOBSI_WRONG_SIDE					=	"špatná strana!";
+const string _STR_MESSAGE_MOBSI_WRONG_SIDE					=	"Špatná strana!";
 
 // Bidschrimausgabe zum Thema Hebel/Winden
 //const string _STR_MESSAGE_OCLEVER_STUCKS	= "der Hebel bewegt sich kein Haarbreit";
@@ -1310,17 +1310,17 @@ const string _STR_MESSAGE_ITEM_GIVEN		= " položka předána!";
 //const string _STR_MESSAGE_ITEMS_GIVEN		= " Gegenstände gegeben";
 const string _STR_MESSAGE_ITEMS_GIVEN		= " položek předána!";
 //const string _STR_MESSAGE_SILVER_GIVEN	= " Silber gegeben";
-const string _STR_MESSAGE_SILVER_GIVEN		= " stříbro předáno!";
+const string _STR_MESSAGE_SILVER_GIVEN		= " stříbra předáno!";
 //const string _STR_MESSAGE_GOLD_GIVEN		= " Gold gegeben";
-const string _STR_MESSAGE_GOLD_GIVEN		= " zlato předáno!";
+const string _STR_MESSAGE_GOLD_GIVEN		= " zlata předáno!";
 //const string _STR_MESSAGE_ITEM_TAKEN		= " Gegenstand erhalten";
 const string _STR_MESSAGE_ITEM_TAKEN		= " položka přijata!";
 //const string _STR_MESSAGE_ITEMS_TAKEN		= " Gegenstände erhalten";
 const string _STR_MESSAGE_ITEMS_TAKEN		= " položek přijato!";
 //const string _STR_MESSAGE_SILVER_TAKEN	= " Silber erhalten";
-const string _STR_MESSAGE_SILVER_TAKEN		= " stříbro přijato!";
+const string _STR_MESSAGE_SILVER_TAKEN		= " stříbra přijato!";
 //const string _STR_MESSAGE_GOLD_TAKEN		= " Gold erhalten";
-const string _STR_MESSAGE_GOLD_TAKEN		= " zlato přijato!";
+const string _STR_MESSAGE_GOLD_TAKEN		= " zlata přijato!";
 
 // Bildschirmausgaben beim Plündern
 //const string _STR_MESSAGE_ITEM_PLUNDERED		= " Gegenstand genommen"	;	//SPACE davor wichtig, weil Trennzeichen
@@ -1330,7 +1330,7 @@ const string _STR_MESSAGE_ITEMS_PLUNDERED		= " položek sebráno!"	;
 //const string _STR_MESSAGE_SILVER_PLUNDERED	= " Silber genommen"		;
 const string _STR_MESSAGE_SILVER_PLUNDERED		= " stříbra sebráno!"		;
 //const string _STR_MESSAGE_GOLD_PLUNDERED		= " Gold gegeben"			;
-const string _STR_MESSAGE_GOLD_PLUNDERED		= " zlato sebráno!"			;
+const string _STR_MESSAGE_GOLD_PLUNDERED		= " zlata sebráno!"			;
 
 // Bidschrimausgabe fürs Tausch-Fenster
 //const string _STR_MESSAGE_TRADE_FAILURE		= "der Wert deiner Tauschware ist nicht hoch genug"	;
@@ -1477,11 +1477,11 @@ const string _STR_MESSAGE_ARENAVICTORY		=	" Vítězství";
 const string _STR_MESSAGE_ARENAVICTORIES	=	" Vítězství";
 const string _STR_MESSAGE_ARENAPENALTY1		=	"Postih!";
 const string _STR_MESSAGE_ARENAPENALTY2		=	"(Protivník není připraven)";
-const string _STR_MESSAGE_ARENAPLAYERVICTORY=	"Vyhrál jsi !!!";
-const string _STR_MESSAGE_ARENAPLAYERDEFEAT =	"Byl jsi poražen !!!";
+const string _STR_MESSAGE_ARENAPLAYERVICTORY=	"Vyhrál jsi!";
+const string _STR_MESSAGE_ARENAPLAYERDEFEAT =	"Byl jsi poražen!";
 
 //const string _STR_MESSAGE_EXPLO				=	"Verborgener Ort entdeckt !";
-const string _STR_MESSAGE_EXPLO				=	"Objeveno skryté místo !";
+const string _STR_MESSAGE_EXPLO				=	"Objeveno skryté místo!";
 
 //const string _STR_MESSAGE_PHOENIX_NOTYET	=	"Merkwürdige Kiste! Lässt sich kein haarbreit bewegen!";
 const string _STR_MESSAGE_PHOENIX_NOTYET	=	"Prazvláštní bedna! Nechce se pohnout ani o chlup!"; // Asi není ideální, neznám kontext.
@@ -1511,7 +1511,7 @@ const string _STR_MESSAGE_DEATH9			=	"Příchodu démonů už nebude zabráněno
 //const string _STR_MESSAGE_DEATH10  		=	"Du bist Tot!";
 const string _STR_MESSAGE_DEATH10  			=	"Jsi mrtvý!";
 //const string _STR_MESSAGE_DEATH11  		=	"Dein Weg endet hier!";
-const string _STR_MESSAGE_DEATH11  			=	"Tvoje cesta končí zde!";
+const string _STR_MESSAGE_DEATH11  			=	"Tvoje cesta zde končí!";
 //const string _STR_MESSAGE_DEATH12			=	"Jeder muss einmal sterben!";
 const string _STR_MESSAGE_DEATH12			=	"Každý musí někdy zemřít!";
 
