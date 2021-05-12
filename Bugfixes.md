@@ -4,7 +4,7 @@ Even though we didn't intend to fix any bugs, since it's not finished, but some 
 ## Bugs
 ### Npc_KnowsInfo() bug
 `Npc_KnowsInfo()` function doesn't properly return, if the input C_INFO instance has atribute `permanent = TRUE`
-### `.permanent` save persistency
+### Attribute .permanent save persistency
 Setting C_INFO.permanent in game works only during a session, it is not saved in a save file. 
 ```
 class oCInfo {
