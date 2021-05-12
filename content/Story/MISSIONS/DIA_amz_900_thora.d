@@ -145,18 +145,24 @@ FUNC VOID AMZ_900_Thora_WHO_WHAT()
 	AI_Output (other, self,"AMZ_900_Thora_WHO_WHAT_Info_15_01"); //A ty mi taky řekneš, co tu děláš?
 //	AI_Output (self, other,"AMZ_900_Thora_WHO_WHAT_Info_16_02"); //...also gerade versuche ich etwas über dich zu erfahren.
 	AI_Output (self, other,"AMZ_900_Thora_WHO_WHAT_Info_16_02"); //...takže se snažím o tobě něco zjistit.
-	AI_Output (other, self,"AMZ_900_Thora_WHO_WHAT_Info_15_03"); //und sonst?
-	AI_Output (self, other,"AMZ_900_Thora_WHO_WHAT_Info_16_04"); //Ich bin Kämpferin.
+//	AI_Output (other, self,"AMZ_900_Thora_WHO_WHAT_Info_15_03"); //und sonst?
+	AI_Output (other, self,"AMZ_900_Thora_WHO_WHAT_Info_15_03"); //A co teda?
+//	AI_Output (self, other,"AMZ_900_Thora_WHO_WHAT_Info_16_04"); //Ich bin Kämpferin.
+	AI_Output (self, other,"AMZ_900_Thora_WHO_WHAT_Info_16_04"); //Jsem bojovnice.
 
 //	Info_ClearChoices	(AMZ_900_Thora_WHO);
-	Info_AddChoice 		(AMZ_900_Thora_WHO,	"Eine Frau als Kämpferin?",		AMZ_900_Thora_WHO_FIGHTER);
-
+//	Info_AddChoice 		(AMZ_900_Thora_WHO,	"Eine Frau als Kämpferin?",		AMZ_900_Thora_WHO_FIGHTER);
+	Info_AddChoice 		(AMZ_900_Thora_WHO,	"Žena a bojovnice?",		AMZ_900_Thora_WHO_FIGHTER);
+	
 };
 
 FUNC VOID AMZ_900_Thora_WHO_SECRET()
 {
-	AI_Output (hero, self,"AMZ_900_Thora_WHO_SECRET_Info_15_01"); //Was ich hier vorhabe, kann ich dir nicht erzählen.
-	AI_Output (self, hero,"AMZ_900_Thora_WHO_SECRET_Info_16_02"); //Na dann!
+//	AI_Output (hero, self,"AMZ_900_Thora_WHO_SECRET_Info_15_01"); //Was ich hier vorhabe, kann ich dir nicht erzählen.
+	AI_Output (hero, self,"AMZ_900_Thora_WHO_SECRET_Info_15_01"); //O svých plánech ti říct nemohu.
+//	AI_Output (self, hero,"AMZ_900_Thora_WHO_SECRET_Info_16_02"); //Na dann!
+	AI_Output (self, hero,"AMZ_900_Thora_WHO_SECRET_Info_16_02"); //Tak ať!
+
 
 	Info_ClearChoices	(AMZ_900_Thora_WHO);
 	AI_StopProcessInfos (self);
@@ -164,16 +170,21 @@ FUNC VOID AMZ_900_Thora_WHO_SECRET()
 
 FUNC VOID AMZ_900_Thora_WHO_WHATELSE()
 {
-	AI_Output (other, self,"AMZ_900_Thora_WHO_WHATELSE_Info_15_01"); //Ich will ins Lager.
-	AI_Output (self, other,"AMZ_900_Thora_WHO_WHATELSE_Info_16_02"); //Das hast du schon fast geschafft. Da hinten ist es.
+//	AI_Output (other, self,"AMZ_900_Thora_WHO_WHATELSE_Info_15_01"); //Ich will ins Lager.
+	AI_Output (other, self,"AMZ_900_Thora_WHO_WHATELSE_Info_15_01"); //Chci do tábora.
+//	AI_Output (self, other,"AMZ_900_Thora_WHO_WHATELSE_Info_16_02"); //Das hast du schon fast geschafft. Da hinten ist es.
+	AI_Output (self, other,"AMZ_900_Thora_WHO_WHATELSE_Info_16_02"); //To už se ti skoro povedlo. Je támhle vzadu
 	Info_ClearChoices	(AMZ_900_Thora_WHO);
 };
 
 FUNC VOID AMZ_900_Thora_WHO_FIGHTER()
 {
-	AI_Output (other, self,"AMZ_900_Thora_WHO_FIGHTER_Info_15_01"); //Eine Frau als Kämpferin?
-	AI_Output (self, other,"AMZ_900_Thora_WHO_FIGHTER_Info_16_02"); //Auch Du solltest nicht nach dem Äusseren urteilen.
-	AI_Output (self, other,"AMZ_900_Thora_WHO_FIGHTER_Info_16_03"); //Einige hier mussten das erst schmerzvoll lernen!
+//	AI_Output (other, self,"AMZ_900_Thora_WHO_FIGHTER_Info_15_01"); //Eine Frau als Kämpferin?
+	AI_Output (other, self,"AMZ_900_Thora_WHO_FIGHTER_Info_15_01"); //Žena a bojovnice?
+//	AI_Output (self, other,"AMZ_900_Thora_WHO_FIGHTER_Info_16_02"); //Auch Du solltest nicht nach dem Äusseren urteilen.
+	AI_Output (self, other,"AMZ_900_Thora_WHO_FIGHTER_Info_16_02"); //Ani ty bys neměl soudit podle zevnějšku.
+//	AI_Output (self, other,"AMZ_900_Thora_WHO_FIGHTER_Info_16_03"); //Einige hier mussten das erst schmerzvoll lernen!
+	AI_Output (self, other,"AMZ_900_Thora_WHO_FIGHTER_Info_16_03"); //Někteří se tu o tom dozvěděli teprv bolestivou cestou!
 //	Info_ClearChoices	(AMZ_900_Thora_WHO);
 };
 
@@ -185,7 +196,8 @@ instance  AMZ_900_Thora_TRAINING (C_INFO)
 	information		= AMZ_900_Thora_TRAINING_Info;
 	important		= FALSE;
 	permanent		= FALSE;
-	description		= "Ich bin hier um zu trainieren und zu lernen.";
+//	description		= "Ich bin hier um zu trainieren und zu lernen.";
+	description		= "Jsem tu, abych se potrénoval a něco naučil.";
 };
 
 FUNC int  AMZ_900_Thora_TRAINING_Condition()
@@ -200,37 +212,50 @@ FUNC int  AMZ_900_Thora_TRAINING_Condition()
 
 FUNC void  AMZ_900_Thora_TRAINING_Info()
 {
-	AI_Output (other, self,"AMZ_900_Thora_TRAINING_Info_15_01"); //Ich bin hier um zu trainieren und zu lernen.
-	AI_Output (self, other,"AMZ_900_Thora_TRAINING_Info_16_02"); //Sieht so aus, als ob du das auch nötig hast!
+//	AI_Output (other, self,"AMZ_900_Thora_TRAINING_Info_15_01"); //Ich bin hier um zu trainieren und zu lernen.
+	AI_Output (other, self,"AMZ_900_Thora_TRAINING_Info_15_01"); //Jsem tu, abych se potrénoval a něco naučil.
+//	AI_Output (self, other,"AMZ_900_Thora_TRAINING_Info_16_02"); //Sieht so aus, als ob du das auch nötig hast!
+	AI_Output (self, other,"AMZ_900_Thora_TRAINING_Info_16_02"); //Však bys to taky očividně potřeboval!
 
 	Info_ClearChoices 	(AMZ_900_Thora_TRAINING);
-	Info_AddChoice 		(AMZ_900_Thora_TRAINING,	"Mit dir werde ich auch ohne Training fertig!",	AMZ_900_Thora_TRAINING_HOSTILE);
-	Info_AddChoice 		(AMZ_900_Thora_TRAINING,	"Wer hat dich denn um deine Meinung gefragt?",	AMZ_900_Thora_TRAINING_ANGRY);
-	Info_AddChoice 		(AMZ_900_Thora_TRAINING,	"Ich war wirklich schon mal besser in Form.",	AMZ_900_Thora_TRAINING_FRIENDLY);
+//	Info_AddChoice 		(AMZ_900_Thora_TRAINING,	"Mit dir werde ich auch ohne Training fertig!",	AMZ_900_Thora_TRAINING_HOSTILE);
+	Info_AddChoice 		(AMZ_900_Thora_TRAINING,	"S tebou se vypořádám i bez tréninku!",	AMZ_900_Thora_TRAINING_HOSTILE);
+//	Info_AddChoice 		(AMZ_900_Thora_TRAINING,	"Wer hat dich denn um deine Meinung gefragt?",	AMZ_900_Thora_TRAINING_ANGRY);
+	Info_AddChoice 		(AMZ_900_Thora_TRAINING,	"Kdo se ptal na tvůj názor?",	AMZ_900_Thora_TRAINING_ANGRY);
+//	Info_AddChoice 		(AMZ_900_Thora_TRAINING,	"Ich war wirklich schon mal besser in Form.",	AMZ_900_Thora_TRAINING_FRIENDLY);
+	Info_AddChoice 		(AMZ_900_Thora_TRAINING,	"Upřímně, opravdu nejsem zrovna ve formě.",	AMZ_900_Thora_TRAINING_FRIENDLY);
 };
 
 FUNC VOID AMZ_900_Thora_TRAINING_FRIENDLY()
 {
-	AI_Output (other, self,"AMZ_900_Thora_TRAINING_FRIENDLY_Info_15_01"); //Ich war wirklich schon mal besser in Form.
-	AI_Output (self, other,"AMZ_900_Thora_TRAINING_FRIENDLY_Info_16_02"); //Im Lager gibt es viel zu lernen. Du kannst dich sicher irgendwo nützlich machen!
-	AI_Output (self, other,"AMZ_900_Thora_TRAINING_FRIENDLY_Info_16_03"); //Ich muß los, wir sehen uns bestimmt später noch.
+//	AI_Output (other, self,"AMZ_900_Thora_TRAINING_FRIENDLY_Info_15_01"); //Ich war wirklich schon mal besser in Form.
+	AI_Output (other, self,"AMZ_900_Thora_TRAINING_FRIENDLY_Info_15_01"); //Upřímně, opravdu nejsem zrovna ve formě.
+//	AI_Output (self, other,"AMZ_900_Thora_TRAINING_FRIENDLY_Info_16_02"); //Im Lager gibt es viel zu lernen. Du kannst dich sicher irgendwo nützlich machen!
+	AI_Output (self, other,"AMZ_900_Thora_TRAINING_FRIENDLY_Info_16_02"); //V táboře je toho hodně, co se můžeš naučit. Určitě můžeš být někde užitečný.
+//	AI_Output (self, other,"AMZ_900_Thora_TRAINING_FRIENDLY_Info_16_03"); //Ich muß los, wir sehen uns bestimmt später noch.
+	AI_Output (self, other,"AMZ_900_Thora_TRAINING_FRIENDLY_Info_16_03"); //Už musím jít, určitě se později ještě uvidíme.
 
 	AI_StopProcessInfos (self);
 };
 
 FUNC VOID AMZ_900_Thora_TRAINING_ANGRY()
 {
-	AI_Output (other, self,"AMZ_900_Thora_TRAINING_ANGRY_Info_15_01"); //Wer hat dich denn um deine Meinung gefragt?
-	AI_Output (self, other,"AMZ_900_Thora_TRAINING_ANGRY_Info_16_02"); //Du scheinst einen schlechten Tag zu haben.
-	AI_Output (self, other,"AMZ_900_Thora_TRAINING_ANGRY_Info_16_03"); //Wenn du mal Hilfe brauchst, solltest du etwas freundlicher sein!
+//	AI_Output (other, self,"AMZ_900_Thora_TRAINING_ANGRY_Info_15_01"); //Wer hat dich denn um deine Meinung gefragt?
+	AI_Output (other, self,"AMZ_900_Thora_TRAINING_ANGRY_Info_15_01"); //Kdo se ptal na tvůj názor?
+//	AI_Output (self, other,"AMZ_900_Thora_TRAINING_ANGRY_Info_16_02"); //Du scheinst einen schlechten Tag zu haben.
+	AI_Output (self, other,"AMZ_900_Thora_TRAINING_ANGRY_Info_16_02"); //Dneska máš asi špatný den.
+//	AI_Output (self, other,"AMZ_900_Thora_TRAINING_ANGRY_Info_16_03"); //Wenn du mal Hilfe brauchst, solltest du etwas freundlicher sein!
+	AI_Output (self, other,"AMZ_900_Thora_TRAINING_ANGRY_Info_16_03"); //Kdybys někdy potřeboval pomoc, měl bys být o něco přátelštější!
 
 	AI_StopProcessInfos (self);
 };
 
 FUNC VOID AMZ_900_Thora_TRAINING_HOSTILE()
 {
-	AI_Output (other, self,"AMZ_900_Thora_TRAINING_HOSTILE_Info_15_01"); //Mit dir werde ich auch ohne Training fertig!
-	AI_Output (self, other,"AMZ_900_Thora_TRAINING_HOSTILE_Info_16_02"); //Tatsächlich? Dann zeig doch mal, was du kannst!
+//	AI_Output (other, self,"AMZ_900_Thora_TRAINING_HOSTILE_Info_15_01"); //Mit dir werde ich auch ohne Training fertig!
+	AI_Output (other, self,"AMZ_900_Thora_TRAINING_HOSTILE_Info_15_01"); //S tebou se vypořádám i bez tréninku!
+//	AI_Output (self, other,"AMZ_900_Thora_TRAINING_HOSTILE_Info_16_02"); //Tatsächlich? Dann zeig doch mal, was du kannst!
+	AI_Output (self, other,"AMZ_900_Thora_TRAINING_HOSTILE_Info_16_02"); //Opravdu? No tak ukaž, co umíš!
 
 	AI_StopProcessInfos (self);
 
@@ -264,15 +289,20 @@ func int AMZ_900_Thora_NOTENOUGH_Condition ()
 
 func void AMZ_900_Thora_NOTENOUGH_Info ()
 {
-	AI_Output			(self, hero, "AMZ_900_NOTENOUGH_16_01"); //(fröhlich) Na, ich kämpfe nicht so schlecht, oder?
-	Info_AddChoice	(AMZ_900_Thora_NOTENOUGH, "Ich hab dich gewinnen lassen. Hab garnicht richtig zugeschlagen!", AMZ_900_Thora_NOTENOUGH_YES );
-	Info_AddChoice	(AMZ_900_Thora_NOTENOUGH, "Stimmt. Wirklich nicht so schlecht!", AMZ_900_Thora_NOTENOUGH_NO );
+//	AI_Output			(self, hero, "AMZ_900_NOTENOUGH_16_01"); //(fröhlich) Na, ich kämpfe nicht so schlecht, oder?
+	AI_Output			(self, hero, "AMZ_900_NOTENOUGH_16_01"); //(radostně) No, nebojuju tak zle, co?
+//	Info_AddChoice	(AMZ_900_Thora_NOTENOUGH, "Ich hab dich gewinnen lassen. Hab garnicht richtig zugeschlagen!", AMZ_900_Thora_NOTENOUGH_YES );
+	Info_AddChoice	(AMZ_900_Thora_NOTENOUGH, "Nechal jsem tě vyhrát. Jen jsem tak bezmyšlenkovitě bouchal!", AMZ_900_Thora_NOTENOUGH_YES );
+//	Info_AddChoice	(AMZ_900_Thora_NOTENOUGH, "Stimmt. Wirklich nicht so schlecht!", AMZ_900_Thora_NOTENOUGH_NO );
+	Info_AddChoice	(AMZ_900_Thora_NOTENOUGH, "Jo, to sedí. Vůbec ne zle!", AMZ_900_Thora_NOTENOUGH_NO );
 };
 
 func void AMZ_900_Thora_NOTENOUGH_NO ()
 {
-	AI_Output			(hero, self, "AMZ_900_NOTENOUGH_NO_15_01"); //Stimmt. Wirklich nicht so schlecht!
-	AI_Output			(self, hero, "AMZ_900_NOTENOUGH_NO_16_02"); //(freundlich) Na dann, bis später!
+//	AI_Output			(hero, self, "AMZ_900_NOTENOUGH_NO_15_01"); //Stimmt. Wirklich nicht so schlecht!
+	AI_Output			(hero, self, "AMZ_900_NOTENOUGH_NO_15_01"); //Jo, to sedí. Vůbec ne zle!
+//	AI_Output			(self, hero, "AMZ_900_NOTENOUGH_NO_16_02"); //(freundlich) Na dann, bis später!
+	AI_Output			(self, hero, "AMZ_900_NOTENOUGH_NO_16_02"); //(přátelsky) Tak jo, zatím!
 
 	Info_ClearChoices 	(AMZ_900_Thora_NOTENOUGH);
 	AMZ_900_Thora_NOTENOUGH.permanent = FALSE;
@@ -281,8 +311,10 @@ func void AMZ_900_Thora_NOTENOUGH_NO ()
 
 func void AMZ_900_Thora_NOTENOUGH_YES ()
 {
-	AI_Output			(hero, self, "AMZ_900_NOTENOUGH_YES_15_01"); //Ich hab dich gewinnen lassen. Hab garnicht richtig zugeschlagen!
-	AI_Output			(self, hero, "AMZ_900_NOTENOUGH_YES_16_02"); //Na wenn das so ist... tu das besser jetzt, sonst schluckst du nochmal Staub!
+//	AI_Output			(hero, self, "AMZ_900_NOTENOUGH_YES_15_01"); //Ich hab dich gewinnen lassen. Hab garnicht richtig zugeschlagen!
+	AI_Output			(hero, self, "AMZ_900_NOTENOUGH_YES_15_01"); //Nechal jsem tě vyhrát. Jen jsem tak bezmyšlenkovitě bouchal!
+//	AI_Output			(self, hero, "AMZ_900_NOTENOUGH_YES_16_02"); //Na wenn das so ist... tu das besser jetzt, sonst schluckst du nochmal Staub!
+	AI_Output			(self, hero, "AMZ_900_NOTENOUGH_YES_16_02"); //No, jestli to tak je... tak se teď víc snaž, jinak budeš zase rýt hubou v zemi!
 
 	Info_ClearChoices 	(AMZ_900_Thora_NOTENOUGH);
 	AI_StopProcessInfos (self);
@@ -302,7 +334,8 @@ instance AMZ_900_Thora_SEEYA		(C_INFO)
 	important	 = 	FALSE;
 	permanent	 = 	FALSE;
 
-	description	 = 	"Wohin gehst du?";
+//	description	 = 	"Wohin gehst du?";
+	description	 = 	"Kam jdeš?";
 };
 
 func int AMZ_900_Thora_SEEYA_Condition ()
@@ -319,8 +352,10 @@ func int AMZ_900_Thora_SEEYA_Condition ()
 
 func void AMZ_900_Thora_SEEYA_Info ()
 {
-	AI_Output			(hero, self, "AMZ_900_SEEYA_15_01"); //Wohin gehst du?
+//	AI_Output			(hero, self, "AMZ_900_SEEYA_15_01"); //Wohin gehst du?
+	AI_Output			(hero, self, "AMZ_900_SEEYA_15_01"); //Kam jdeš?
 	AI_Output			(self, hero, "AMZ_900_SEEYA_16_02"); //Zur Arena. Ich kämpfe dort. Tagsüber bin ich meistens da.
+	AI_Output			(self, hero, "AMZ_900_SEEYA_16_02"); //Do arény. Bojuju tam. Přes den tam většinou jsem.
 };
 
 ///////////////////////////////////////////////////////////////////////
@@ -334,7 +369,8 @@ instance AMZ_900_Thora_WHERENIGHT		(C_INFO)
 	important	 = 	FALSE;
 	permanent	 = 	FALSE;
 
-	description	 = 	"Und wo bist du... nachts?";
+//	description	 = 	"Und wo bist du... nachts?";
+	description	 = 	"A kde jsi... přes noc?";
 };
 
 func int AMZ_900_Thora_WHERENIGHT_Condition ()
@@ -347,8 +383,10 @@ func int AMZ_900_Thora_WHERENIGHT_Condition ()
 
 func void AMZ_900_Thora_WHERENIGHT_Info ()
 {
-	AI_Output			(hero, self, "AMZ_900_WHERENIGHT_15_01"); //Und wo bist du... nachts?
-	AI_Output			(self, hero, "AMZ_900_WHERENIGHT_16_02"); //(Lacht) Du bist zwar schlecht in Form, aber dafür ganz schön dreist!
+//	AI_Output			(hero, self, "AMZ_900_WHERENIGHT_15_01"); //Und wo bist du... nachts?
+	AI_Output			(hero, self, "AMZ_900_WHERENIGHT_15_01"); //A kde jsi... přes noc?
+//	AI_Output			(self, hero, "AMZ_900_WHERENIGHT_16_02"); //(Lacht) Du bist zwar schlecht in Form, aber dafür ganz schön dreist!
+	AI_Output			(self, hero, "AMZ_900_WHERENIGHT_16_02"); //(Směje se) Ty sice vůbec nejseš ve formě, ale jseš na to docela drzej!
 
 	AI_StopProcessInfos		(self);
 };
