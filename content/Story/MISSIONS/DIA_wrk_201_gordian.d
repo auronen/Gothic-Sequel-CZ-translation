@@ -36,7 +36,8 @@ func int Wrk_201_Gordian_HI_Condition ()
 
 func void Wrk_201_Gordian_HI_Info ()
 {
-	AI_Output			(self, hero, "Wrk_201_HI_09_01"); //Äh, oh,... was willst du von mir?
+//	AI_Output			(self, hero, "Wrk_201_HI_09_01"); //Äh, oh,... was willst du von mir?
+	AI_Output			(self, hero, "Wrk_201_HI_09_01"); //Ach, oh... co ode mě chceš?
 };
 //-------------------------------------------------------------------------
 instance  Wrk_201_Gordian_FIRST (C_INFO)
@@ -45,7 +46,8 @@ instance  Wrk_201_Gordian_FIRST (C_INFO)
 	nr				= 10;
 	condition		= Wrk_201_Gordian_FIRST_Condition;
 	information		= Wrk_201_Gordian_FIRST_Info;
-	description		= "Wer bist du?";
+//	description		= "Wer bist du?";
+	description		= "Kdo jsi?";
 };
 
 FUNC int  Wrk_201_Gordian_FIRST_Condition()
@@ -55,8 +57,10 @@ FUNC int  Wrk_201_Gordian_FIRST_Condition()
 
 FUNC void  Wrk_201_Gordian_FIRST_Info()
 {
-	AI_Output (other, self,"Wrk_201_Gordian_FIRST_Info_15_01"); //Wer bist du?
-	AI_Output (self, other,"Wrk_201_Gordian_FIRST_Info_09_02"); //Mein Name ist Gordian. Schriftgelehrter und Schreiber. Ich erstelle Abschriften.
+//	AI_Output (other, self,"Wrk_201_Gordian_FIRST_Info_15_01"); //Wer bist du?
+	AI_Output (other, self,"Wrk_201_Gordian_FIRST_Info_15_01"); //Kdo jsi?
+//	AI_Output (self, other,"Wrk_201_Gordian_FIRST_Info_09_02"); //Mein Name ist Gordian. Schriftgelehrter und Schreiber. Ich erstelle Abschriften.
+	AI_Output (self, other,"Wrk_201_Gordian_FIRST_Info_09_02"); //Jmenuju se Gordian. Učitel písma a písař. Starám se o spisy.
 };
 
 
@@ -82,7 +86,8 @@ instance	Wrk_201_Gordian_POSSESSEDRECIPE (C_Info)
 	nr				= 5;
 	condition		= Wrk_201_Gordian_POSSESSEDRECIPE_Condition;
 	information		= Wrk_201_Gordian_POSSESSEDRECIPE_Info;
-	description		= "Ich suche eine Rezeptur für die Heiler";
+//	description		= "Ich suche eine Rezeptur für die Heiler";
+	description		= "Hledám jistý recept pro léčitele.";
 	permanent		= FALSE;
 };
 
@@ -98,11 +103,16 @@ func int Wrk_201_Gordian_POSSESSEDRECIPE_Condition ()
 
 func void Wrk_201_Gordian_POSSESSEDRECIPE_Info ()
 {
-	AI_Output	(hero, self, "Wrk_201_POSSESSEDRECIPE_15_01");	//Ich suche eine Rezeptur für die Heiler
-	AI_Output	(self, hero, "Wrk_201_POSSESSEDRECIPE_09_02");	//Talamon hat Dich geschickt, was? Er ist zu ungeduldig!
-	AI_Output	(self, hero, "Wrk_201_POSSESSEDRECIPE_09_03");	//Ich hab mir schon viele Nächte um die Ohren geschlagen, um Hinweise darüber zu entdecken!
-	AI_Output	(hero, self, "Wrk_201_POSSESSEDRECIPE_15_04");	//Was hast du herausgefunden?
-	AI_Output	(self, hero, "Wrk_201_POSSESSEDRECIPE_09_05");	//Für diese Informationen scheinen mir 15 Silber angemessen zu sein. Ich hatte schließlich viel Arbeit!
+//	AI_Output	(hero, self, "Wrk_201_POSSESSEDRECIPE_15_01");	//Ich suche eine Rezeptur für die Heiler
+	AI_Output	(hero, self, "Wrk_201_POSSESSEDRECIPE_15_01");	//Hledám jistý recept pro léčitele.
+//	AI_Output	(self, hero, "Wrk_201_POSSESSEDRECIPE_09_02");	//Talamon hat Dich geschickt, was? Er ist zu ungeduldig!
+	AI_Output	(self, hero, "Wrk_201_POSSESSEDRECIPE_09_02");	//Talamon tě sem poslal, co? Je až moc nedočkavý!
+//	AI_Output	(self, hero, "Wrk_201_POSSESSEDRECIPE_09_03");	//Ich hab mir schon viele Nächte um die Ohren geschlagen, um Hinweise darüber zu entdecken!
+	AI_Output	(self, hero, "Wrk_201_POSSESSEDRECIPE_09_03");	//Noc co noc jsem nemohl z uší dostat to naléhání, abych ty postupy nalezl!
+//	AI_Output	(hero, self, "Wrk_201_POSSESSEDRECIPE_15_04");	//Was hast du herausgefunden?
+	AI_Output	(hero, self, "Wrk_201_POSSESSEDRECIPE_15_04");	//A co jsi našel?
+//	AI_Output	(self, hero, "Wrk_201_POSSESSEDRECIPE_09_05");	//Für diese Informationen scheinen mir 15 Silber angemessen zu sein. Ich hatte schließlich viel Arbeit!
+	AI_Output	(self, hero, "Wrk_201_POSSESSEDRECIPE_09_05");	//Řekl bych, že tahle informace má cenu tak 15 stříbrných. Koneckonců, mám hodně práce!
 };
 
 ///////////////////////////////////////////////////////////////////////
@@ -116,7 +126,8 @@ instance Wrk_201_Gordian_PAYFORINFO		(C_INFO)
 	information	 = 	Wrk_201_Gordian_PAYFORINFO_Info;
 	important	 = 	FALSE;
 	permanent	 = 	TRUE;
-	description	 = 	"(15 Silber für die Information bezahlen)";
+//	description	 = 	"(15 Silber für die Information bezahlen)";
+	description	 = 	"(Zaplatit 15 stříbrných za informace.)";
 };
 
 func int Wrk_201_Gordian_PAYFORINFO_Condition ()
@@ -132,16 +143,24 @@ func void Wrk_201_Gordian_PAYFORINFO_Info ()
 	if (Npc_HasItems	(hero, ItMi_Silver)	>= 15)
 	{
 		B_GiveInvItems	(hero, self, ItMi_Silver, 15);
-		AI_Output		(hero, self, "Wrk_201_PAYFORINFO_15_01");	//Na gut, erzähl mir was du weisst.
-		AI_Output		(self, hero, "Wrk_201_PAYFORINFO_09_02");	//Die Feuermagier haben an einer Rezeptur, wie Talamon sie sucht, gearbeitet.
-		AI_Output		(self, hero, "Wrk_201_PAYFORINFO_09_03");	//Ich habe die gesamte Bibliothek im Magierhaus auf den Kopf gestellt.
-		AI_Output		(self, hero, "Wrk_201_PAYFORINFO_09_04");	//Aber alle Bücher drehen sich um irgendwelche abstrusen Themen, die ...äusserst... mystisch formuliert sind!
-		AI_Output		(self, hero, "Wrk_201_PAYFORINFO_09_05");	//Ts ts, Magier halt. Es ist zum Verzweifeln, aber ich werde aus diesen Büchern einfach nicht schlau.
-		AI_Output		(hero, self, "Wrk_201_PAYFORINFO_15_06");	//(ungläubig) Das ist alles ???
-		AI_Output		(self, hero, "Wrk_201_PAYFORINFO_09_07");	//Ist vielleicht nicht viel, aber es war harte Arbeit das herauszufinden.
+//		AI_Output		(hero, self, "Wrk_201_PAYFORINFO_15_01");	//Na gut, erzähl mir was du weisst.
+		AI_Output		(hero, self, "Wrk_201_PAYFORINFO_15_01");	//Tak dobře, pověz mi, co víš.
+//		AI_Output		(self, hero, "Wrk_201_PAYFORINFO_09_02");	//Die Feuermagier haben an einer Rezeptur, wie Talamon sie sucht, gearbeitet.
+		AI_Output		(self, hero, "Wrk_201_PAYFORINFO_09_02");	//Ohniví mágové vypracovali ten recept, který Talomon hledá.
+//		AI_Output		(self, hero, "Wrk_201_PAYFORINFO_09_03");	//Ich habe die gesamte Bibliothek im Magierhaus auf den Kopf gestellt.
+		AI_Output		(self, hero, "Wrk_201_PAYFORINFO_09_03");	//Obrátil jsem kvůli tomu celou knihovnu v domě mágů vzhůru nohama.
+//		AI_Output		(self, hero, "Wrk_201_PAYFORINFO_09_04");	//Aber alle Bücher drehen sich um irgendwelche abstrusen Themen, die ...äusserst... mystisch formuliert sind!
+		AI_Output		(self, hero, "Wrk_201_PAYFORINFO_09_04");	//Ale všechny ty knihy se točí kolem nějakých nepochopitelných témat, která... jsou... nanejvýš mysticky formulována!
+//		AI_Output		(self, hero, "Wrk_201_PAYFORINFO_09_05");	//Ts ts, Magier halt. Es ist zum Verzweifeln, aber ich werde aus diesen Büchern einfach nicht schlau.
+		AI_Output		(self, hero, "Wrk_201_PAYFORINFO_09_05");	//Ts ts, zkrátka mágové. Je to k uzoufání, ale z těchto knih prostě nezmoudřím.
+//		AI_Output		(hero, self, "Wrk_201_PAYFORINFO_15_06");	//(ungläubig) Das ist alles ???
+		AI_Output		(hero, self, "Wrk_201_PAYFORINFO_15_06");	//(nevěřícně) To je všechno ???
+//		AI_Output		(self, hero, "Wrk_201_PAYFORINFO_09_07");	//Ist vielleicht nicht viel, aber es war harte Arbeit das herauszufinden.
+		AI_Output		(self, hero, "Wrk_201_PAYFORINFO_09_07");	//Není to moc, ale zjistit tohle všechno byla už tak dost náročná práce.
 
 		Wrk_201_Gordian_PAYFORINFO.permanent = FALSE;
-		B_LogEntry		(CH1_LearnAlchemy, "Gordian war keine grosse Hilfe. Er suchte erfolglos nach Hinweisen in der Bibliothek des Magierhauses. Aber vielleicht hat er etwas übersehen.");
+//		B_LogEntry		(CH1_LearnAlchemy, "Gordian war keine grosse Hilfe. Er suchte erfolglos nach Hinweisen in der Bibliothek des Magierhauses. Aber vielleicht hat er etwas übersehen.");
+		B_LogEntry		(CH1_LearnAlchemy, "Gordian mi moc nepomohl. Bezúspěšně prohledal knihovnu v domě mágů, aby našel nějaká vodítka. Ale možná také něco přehlédl.");
 	}
 	else
 	{

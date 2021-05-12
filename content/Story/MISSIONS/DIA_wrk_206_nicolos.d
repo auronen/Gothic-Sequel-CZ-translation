@@ -35,7 +35,8 @@ instance WRK_206_Nicolos_GOOD		(C_INFO)
 	important	 = 	FALSE;
 	permanent	 = 	TRUE;
 
-	description	 = 	"Wie schmeckt dir das Essen hier?";
+//	description	 = 	"Wie schmeckt dir das Essen hier?";
+	description	 = 	"Jak ti tu chutná?";
 };
 
 func int WRK_206_Nicolos_GOOD_Condition ()
@@ -45,8 +46,10 @@ func int WRK_206_Nicolos_GOOD_Condition ()
 
 func void WRK_206_Nicolos_GOOD_Info ()
 {
-	AI_Output			(hero, self, "WRK_206_GOOD_15_01"); //Wie schmeckt dir das Essen hier?
-	AI_Output			(self, hero, "WRK_206_GOOD_00_02"); //Snaf ist der beste Koch hier im Lager. Seine Suppen sind erste Klasse!
+//	AI_Output			(hero, self, "WRK_206_GOOD_15_01"); //Wie schmeckt dir das Essen hier?
+	AI_Output			(hero, self, "WRK_206_GOOD_15_01"); //Jak ti tu chutná?
+//	AI_Output			(self, hero, "WRK_206_GOOD_00_02"); //Snaf ist der beste Koch hier im Lager. Seine Suppen sind erste Klasse!
+	AI_Output			(self, hero, "WRK_206_GOOD_00_02"); //Snaf je nejlepší kuchař tady v táboře. Jeho polévky jsou první třída!
 };
 
 

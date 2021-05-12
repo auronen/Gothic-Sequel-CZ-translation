@@ -33,7 +33,8 @@ instance WRK_226_Osric_HI		(C_INFO)
 	important	 = 	FALSE;
 	permanent	 = 	FALSE;
 
-	description	 = 	"Wer bist du?";
+//	description	 = 	"Wer bist du?";
+	description	 = 	"Kdo jsi?";
 };
 
 func int WRK_226_Osric_HI_Condition ()
@@ -43,8 +44,10 @@ func int WRK_226_Osric_HI_Condition ()
 
 func void WRK_226_Osric_HI_Info ()
 {
-	AI_Output			(hero, self, "WRK_226_HI_15_01"); //Wer bist du?
-	AI_Output			(self, hero, "WRK_226_HI_00_02"); //Ich bin Osric. 
+//	AI_Output			(hero, self, "WRK_226_HI_15_01"); //Wer bist du?
+	AI_Output			(hero, self, "WRK_226_HI_15_01"); //Kdo jsi?
+//	AI_Output			(self, hero, "WRK_226_HI_00_02"); //Ich bin Osric. 
+	AI_Output			(self, hero, "WRK_226_HI_00_02"); //Jsem Osric.  
 };
 
 ///////////////////////////////////////////////////////////////////////
@@ -59,7 +62,8 @@ instance WRK_226_Osric_PFEILE		(C_INFO)
 	important	 = 	FALSE;
 	permanent	 = 	FALSE;
 
-	description	 = 	"...und du schnitzt Pfeile...";
+//	description	 = 	"...und du schnitzt Pfeile...";
+	description	 = 	"...a vyrábíš šípy...";
 };
 
 func int WRK_226_Osric_PFEILE_Condition ()
@@ -71,8 +75,10 @@ func int WRK_226_Osric_PFEILE_Condition ()
 };
 func void WRK_226_Osric_PFEILE_Info ()
 {
-	AI_Output			(hero, self, "WRK_226_PFEILE_15_01"); //...und du schnitzt Pfeile...
-	AI_Output			(self, hero, "WRK_226_PFEILE_00_02"); //Gut erkannt. 
+//	AI_Output			(hero, self, "WRK_226_PFEILE_15_01"); //...und du schnitzt Pfeile...
+	AI_Output			(hero, self, "WRK_226_PFEILE_15_01"); //...a vyrábíš šípy...
+//	AI_Output			(self, hero, "WRK_226_PFEILE_00_02"); //Gut erkannt. 
+	AI_Output			(self, hero, "WRK_226_PFEILE_00_02"); //Přesně tak.
 };
 ///////////////////////////////////////////////////////////////////////
 //	Info SELL
@@ -86,7 +92,8 @@ instance WRK_226_Osric_SELL		(C_INFO)
 	important	 = 	FALSE;
 	permanent	 = 	FALSE;
 
-	description	 = 	"Verkaufst du auch Pfeile?";
+//	description	 = 	"Verkaufst du auch Pfeile?";
+	description	 = 	"A prodáváš ty šípy?";
 };
 
 func int WRK_226_Osric_SELL_Condition ()
@@ -98,9 +105,12 @@ func int WRK_226_Osric_SELL_Condition ()
 };
 func void WRK_226_Osric_SELL_Info ()
 {
-	AI_Output			(hero, self, "WRK_226_SELL_15_01"); //Verkaufst du auch Pfeile?
-	AI_Output			(self, hero, "WRK_226_SELL_00_02"); //Nein.
-	AI_Output			(self, hero, "WRK_226_SELL_00_03"); //Aber Helvegor verkauft Bögen und die Pfeile, die ich schnitze.
+//	AI_Output			(hero, self, "WRK_226_SELL_15_01"); //Verkaufst du auch Pfeile?
+	AI_Output			(hero, self, "WRK_226_SELL_15_01"); //A prodáváš ty šípy?
+//	AI_Output			(self, hero, "WRK_226_SELL_00_02"); //Nein.
+	AI_Output			(self, hero, "WRK_226_SELL_00_02"); //Ne.
+//	AI_Output			(self, hero, "WRK_226_SELL_00_03"); //Aber Helvegor verkauft Bögen und die Pfeile, die ich schnitze.
+	AI_Output			(self, hero, "WRK_226_SELL_00_03"); //Ale Helvegor prodává luky a šípy, které vyrábím.
 };
 ///////////////////////////////////////////////////////////////////////
 //	Info TRAIN
@@ -114,7 +124,8 @@ instance WRK_226_Osric_TRAIN		(C_INFO)
 	important	 = 	FALSE;
 	permanent	 = 	TRUE;
 
-	description	 = 	"Kannst du mir beibringen, Pfeile zu schnitzen?";
+//	description	 = 	"Kannst du mir beibringen, Pfeile zu schnitzen?";
+	description	 = 	"Mohl bys mě naučit, jak šípy vyřezávat?";
 };
 
 func int WRK_226_Osric_TRAIN_Condition ()
@@ -127,18 +138,8 @@ func int WRK_226_Osric_TRAIN_Condition ()
 
 func void WRK_226_Osric_TRAIN_Info ()
 {
-	AI_Output			(hero, self, "WRK_226_TRAIN_15_01"); //Kannst du mir beibringen, Pfeile zu schnitzen?
-	AI_Output			(self, hero, "WRK_226_TRAIN_00_02"); //Nein, dazu habe ich keine Zeit. 
+//	AI_Output			(hero, self, "WRK_226_TRAIN_15_01"); //Kannst du mir beibringen, Pfeile zu schnitzen?
+	AI_Output			(hero, self, "WRK_226_TRAIN_15_01"); //Mohl bys mě naučit, jak šípy vyřezávat?
+//	AI_Output			(self, hero, "WRK_226_TRAIN_00_02"); //Nein, dazu habe ich keine Zeit. 
+	AI_Output			(self, hero, "WRK_226_TRAIN_00_02"); //Ne, na to nemám čas.
 };
-
-
-
-
-
-
-
-
-
-
-
-
