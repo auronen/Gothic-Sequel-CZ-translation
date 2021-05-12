@@ -122,14 +122,3 @@ func void HLR_502_Isgar_WINE_Info ()
 	AI_Output			(hero, self, "HLR_502_WINE_15_03"); //Nemám tušení. Jen ho vyzvedávám.
 
 };
-
-
-
-
-
-
-
-
-
-
-

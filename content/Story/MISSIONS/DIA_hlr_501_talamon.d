@@ -21,15 +21,6 @@ FUNC VOID HLR_501_Talamon_EXIT_Info()
 	AI_StopProcessInfos (self);
 };
 
-
-
-
-
-
-
-
-
-
 //#####################################################################
 //##
 //##
@@ -297,7 +288,7 @@ func void HLR_501_Talamon_AGON_Info ()
 //	AI_Output			(self, hero, "HLR_501_AGON_08_02"); //Wirklich?	
 	AI_Output			(self, hero, "HLR_501_AGON_08_02"); //Skutečně?
 //	AI_Output			(hero, self, "HLR_501_AGON_15_03"); //Agon der Händler hat sie. Aber er will 500 Silber dafür haben.
-	AI_Output			(hero, self, "HLR_501_AGON_15_03"); //Obchodník Agon ji má der Händler hat sie. Ale chce za ni 500 stříbrných.
+	AI_Output			(hero, self, "HLR_501_AGON_15_03"); //Obchodník Agon ji má u sebe. Ale chce za ni 500 stříbrných.
 //	AI_Output			(self, hero, "HLR_501_AGON_08_04"); //Das ist typisch Agon. Er ist ein richtiger Raffzahn.
 	AI_Output			(self, hero, "HLR_501_AGON_08_04"); //To je typický Agon. Je to pořádný skrblík.
 //	AI_Output			(self, hero, "HLR_501_AGON_08_05"); //Ein harter Brocken, aber er hat eine Schwäche. Seine panische Angst vor der Krankheit.
@@ -339,7 +330,7 @@ func void HLR_501_Talamon_ANTIDOTE_Info ()
 //	AI_Output			(self, hero, "HLR_501_ANTIDOTE_08_03"); //Vielleicht erinnerst du dich, dass wir nach einem solchen Mittel suchen...
 	AI_Output			(self, hero, "HLR_501_ANTIDOTE_08_03"); //Snad si vzpomínáš, že přesně takový prostředek hledáme...
 //	AI_Output			(hero, self, "HLR_501_ANTIDOTE_15_04"); //Er muss nur _AUSSEHEN_ als ob er heilt!
-	AI_Output			(hero, self, "HLR_501_ANTIDOTE_15_04"); //Stačí jen aby _VYPADAL_, že léčí!
+	AI_Output			(hero, self, "HLR_501_ANTIDOTE_15_04"); //Stačí jen aby VYPADAL, že léčí!
 //	AI_Output			(self, hero, "HLR_501_ANTIDOTE_08_05"); //Hmmm... vielleicht tut es diese Tinktur hier, die bei einem missglückten Experiment herausgekommen ist.
 	AI_Output			(self, hero, "HLR_501_ANTIDOTE_08_05"); //Hmmm... možná tato tinktura, která vzešla z jednoho neúspěšného experimentu.
 	B_GiveInvItems		(self, hero, ItFo_Placebo, 1);
@@ -391,14 +382,6 @@ func void HLR_501_Talamon_HASRECIPE_Info ()
 //	Wld_InsertItem		(ItWr_Phoenix1,		"FP_SPAWN_PHOENIX_1");	//am umgefallenen Bücherregal //Nevím, jestli se má překládat, ale tak pro jistotu...
 	Wld_InsertItem		(ItWr_Phoenix1,		"FP_SPAWN_PHOENIX_1");	//na spadlé polici na knihy
 };
-
-
-
-
-
-
-
-
 
 
 
@@ -817,70 +800,3 @@ func void HLR_501_Talamon_BUYSALT_Info ()
 		B_Say			(self, hero, "$NotEnoughSilver");
 	};
 };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -23,13 +23,6 @@ func void	DMH_1302_Malgar_EXIT_Info()
 };
 
 
-
-
-
-
-
-
-
 //#####################################################################
 //##
 //##
@@ -137,13 +130,13 @@ func void	DMH_1302_Malgar_CHALLENGED_Info()
 	{
 		if	(Npc_GetDistToWP	(self, ARENA_WP_LEFT_CHAMBER) > ARENA_DIST_PRECHAMBER)
 		{
-//			AI_Output			(self, hero,"DMH_1302_CHALLENGED_11_01"); //(grüssend) Heute abend, Gladiator... // Neznám kontext, tak nevím přesně jak to přeložit.
-			AI_Output			(self, hero,"DMH_1302_CHALLENGED_11_01"); //(pozdrav) Dnes večer, gladiátor... 
+//			AI_Output			(self, hero,"DMH_1302_CHALLENGED_11_01"); //(grüssend) Heute abend, Gladiator... #// Neznám kontext, tak nevím přesně jak to přeložit.
+			AI_Output			(self, hero,"DMH_1302_CHALLENGED_11_01"); //(pozdrav) Dnes večer, gladiátore... 
 		}
 		else
 		{
-//			AI_Output			(self, hero,"DMH_1302_CHALLENGED_11_02"); //Geh rüber!
-			AI_Output			(self, hero,"DMH_1302_CHALLENGED_11_02"); //???! //Tady nevím a neznám kontext.
+//			AI_Output			(self, hero,"DMH_1302_CHALLENGED_11_02"); //Geh rüber! #//Tady nevím a neznám kontext. 
+			AI_Output			(self, hero,"DMH_1302_CHALLENGED_11_02"); //Jdi támhle!
 		};
 
 		AI_StopProcessInfos		(self);
@@ -152,15 +145,15 @@ func void	DMH_1302_Malgar_CHALLENGED_Info()
 
 	if	Npc_IsInRoutine(self, ZS_ArenaFight)
 	{
-//		AI_Output				(self, hero,"DMH_1302_CHALLENGED_11_03"); //Kämpfe Gladiator! // Neznám kontext, tak nevím přesně jak to přeložit.
+//		AI_Output				(self, hero,"DMH_1302_CHALLENGED_11_03"); //Kämpfe Gladiator! #// Neznám kontext, tak nevím přesně jak to přeložit.
 		AI_Output				(self, hero,"DMH_1302_CHALLENGED_11_03"); //Bojovat s gladiátorem!
 		AI_StopProcessInfos		(self);
 		return;
 	}
 	else
 	{
-//		AI_Output				(self, hero,"DMH_1302_CHALLENGED_11_04"); //(grüssend) Morgen abend, Gladiator... // Neznám kontext, tak nevím přesně jak to přeložit.
-			AI_Output				(self, hero,"DMH_1302_CHALLENGED_11_04"); //(pozdrav) Zítra večer, gladiátor...
+//		AI_Output				(self, hero,"DMH_1302_CHALLENGED_11_04"); //(grüssend) Morgen abend, Gladiator... #// Neznám kontext, tak nevím přesně jak to přeložit.
+		AI_Output				(self, hero,"DMH_1302_CHALLENGED_11_04"); //(pozdrav) Zítra večer, gladiátore...
 		AI_StopProcessInfos		(self);
 		return;
 	};
@@ -191,8 +184,8 @@ func int	DMH_1302_Malgar_PRENPC_Condition()
 
 func void	DMH_1302_Malgar_PRENPC_Info()
 {
-//	AI_Output			(self, hero,"DMH_1302_PRENPC_11_01"); //Raus hier! // Neznám kontext, tak nevím přesně jak to přeložit.
-	AI_Output			(self, hero,"DMH_1302_PRENPC_11_01"); //Jít pryč!
+//	AI_Output			(self, hero,"DMH_1302_PRENPC_11_01"); //Raus hier!
+	AI_Output			(self, hero,"DMH_1302_PRENPC_11_01"); //Vypadni!
 	AI_StopProcessInfos	(self);
 };
 
@@ -266,7 +259,7 @@ instance	DMH_1302_Malgar_VICTORIES (C_INFO)
 	important		= FALSE;
 	permanent		= FALSE;
 //	description		= "Wieviele Arenakämpfe hast du schon gewonnen?";
-	description		= "Kolik soubojů v aréně už jsi vyhrál?";
+	description		= "Kolik soubojů v aréně jsi už vyhrál?";
 };
 
 func int	DMH_1302_Malgar_VICTORIES_Condition()
@@ -280,7 +273,7 @@ func int	DMH_1302_Malgar_VICTORIES_Condition()
 func void	DMH_1302_Malgar_VICTORIES_Info()
 {
 //	AI_Output			(hero, self, "DMH_1302_VICTORIES_15_01"); //Wieviele Arenakämpfe hast du schon gewonnen?
-	AI_Output			(hero, self, "DMH_1302_VICTORIES_15_01"); //Kolik soubojů v aréně už jsi vyhrál?
+	AI_Output			(hero, self, "DMH_1302_VICTORIES_15_01"); //Kolik soubojů v aréně jsi už vyhrál?
 //	AI_Output			(self, hero, "DMH_1302_VICTORIES_11_02"); //Genug!
 	AI_Output			(self, hero, "DMH_1302_VICTORIES_11_02"); //Dost!
 };
@@ -312,7 +305,8 @@ func int DMH_1302_Malgar_QUIET_Info ()
 {
 //	AI_Output			(hero, self, "DMH_1302_QUIET_15_01"); //Du sprichst wohl nicht sehr viel, was?
 	AI_Output			(hero, self, "DMH_1302_QUIET_15_01"); //Ty toho moc nenamluvíš, co?
-	AI_Output			(self, hero, "DMH_1302_QUIET_11_02"); //hmmmm
+//	AI_Output			(self, hero, "DMH_1302_QUIET_11_02"); //hmmmm
+	AI_Output			(self, hero, "DMH_1302_QUIET_11_02"); //Hmmmm
 //	AI_Output			(hero, self, "DMH_1302_QUIET_15_03"); //Na dann...
 	AI_Output			(hero, self, "DMH_1302_QUIET_15_03"); //No dobře...
 };
@@ -406,7 +400,7 @@ func void	DMH_1302_Malgar_CHALLENGE_Info()
 		&&	(B_Arena_GetGladiatorRanking(DMH_1302_Malgar) >= 3)
 		{
 //			AI_Output	(self, hero, "DMH_1302_CHALLENGE_11_11"); //Du bist der Champion, ich bin nicht mal zweiter. // Nejsem si jistý překladem.
-			AI_Output	(self, hero, "DMH_1302_CHALLENGE_11_11"); //Ty jsi šampion, já nejsem ani druhý.
+			AI_Output	(self, hero, "DMH_1302_CHALLENGE_11_11"); //Ty jsi šampion, já nejsem ani na druhém místě.
 //			AI_Output	(self, hero, "DMH_1302_CHALLENGE_11_12"); //Kämpfe gegen den zweiten!
 			AI_Output	(self, hero, "DMH_1302_CHALLENGE_11_12"); //Bojuj proti druhému!
 
@@ -468,79 +462,3 @@ func void DMH_1302_Malgar_HOWDY_Info ()
 	AI_Output			(hero, self, "DMH_1302_HOWDY_15_03"); //...myslel jsem si to!
 	AI_StopProcessInfos	(self);
 };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

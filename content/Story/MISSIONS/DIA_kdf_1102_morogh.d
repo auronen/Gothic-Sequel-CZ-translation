@@ -162,7 +162,7 @@ instance KDF_1102_Morogh_MISSION		(C_INFO)
 	permanent	 = 	FALSE;
 
 //	description	 = 	"Ich hörte du verbesserst die Konzentration magischer Tränke ?!";
-	description	 = 	"Slyšel jsem, že vylepšuješ koncentraci magických lektvarů ?!";
+	description	 = 	"Slyšel jsem, že vylepšuješ koncentraci magických lektvarů?!";
 };
 
 func int KDF_1102_Morogh_MISSION_Condition ()
@@ -301,7 +301,7 @@ func void KDF_1102_Morogh_RYAN_Info ()
 //	AI_Output			(self, hero, "KDF_1102_RYAN_14_02"); //Ein Kerl namens Ryan. Bisher war er zuverlässig aber er sollte längst wieder hier sein.
 	AI_Output			(self, hero, "KDF_1102_RYAN_14_02"); //Chlápek jménem Ryan. Doposud byl spolehlivý, ale už tu dávno měl být.
 //	AI_Output			(self, hero, "KDF_1102_RYAN_14_03"); //Na, wahrscheinlich haben ihn die Wölfe gefressen. 
-	AI_Output			(self, hero, "KDF_1102_RYAN_14_03"); //No, nejspíše jej snědli vlci.
+	AI_Output			(self, hero, "KDF_1102_RYAN_14_03"); //No, nejspíše jej sežrali vlci.
 };
 
 ///////////////////////////////////////////////////////////////////////
@@ -346,15 +346,3 @@ func void KDF_1102_Morogh_SUCCESS_Info ()
 	
 	Morogh_Trust = LOG_SUCCESS;
 };
-
-
-
-
-
-
-
-
-
-
-
-

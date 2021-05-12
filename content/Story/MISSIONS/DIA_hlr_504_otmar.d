@@ -118,8 +118,3 @@ func int HLR_504_Otmar_HOWCALM_Info ()
 	AI_Output			(self, hero, "HLR_504_HOWCALM_00_02"); //Na co? Říkají jen nesmysly. Chudáci blázni.
 
 };
-
-
-
-
-

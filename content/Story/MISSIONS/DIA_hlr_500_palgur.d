@@ -78,14 +78,14 @@ func int HLR_500_Palgur_JOB_Condition ()
 func int HLR_500_Palgur_JOB_Info ()
 {
 //	AI_Output			(hero, self, "HLR_500_JOB_15_01"); //Was ist deine Aufgabe hier?
-	AI_Output			(hero, self, "HLR_500_JOB_15_01"); //Was ist deine Aufgabe hier?
+	AI_Output			(hero, self, "HLR_500_JOB_15_01"); //Jakou tu plníš úlohu?
 //	AI_Output			(self, hero, "HLR_500_JOB_08_02"); //Ich erforsche verschiedene Rezepturen, um ein Heilmittel zu finden
 	AI_Output			(self, hero, "HLR_500_JOB_08_02"); //Zkoumám různé receptury, abych našel lék.
 //	AI_Output			(self, hero, "HLR_500_JOB_08_03"); //Wir haben herausgefunden, daß die Kranken durch SUMPFKRAUT beruhigt werden.
 	AI_Output			(self, hero, "HLR_500_JOB_08_03"); //Zatím jsme přišli na to, že TRÁVA Z BAŽIN nemocné uklidňuje.
 //	AI_Output			(hero, self, "HLR_500_JOB_15_04"); //Das ist alles?
 	AI_Output			(hero, self, "HLR_500_JOB_15_04"); //To je všechno?
-//	AI_Output			(self, hero, "HLR_500_JOB_08_05"); //... alles? Wir verzeichnen das als den ersten großen Fortschritt. //volný překlad, ale to "...všechno?" by v češtině moc nedávalo smysl.
+//	AI_Output			(self, hero, "HLR_500_JOB_08_05"); //... alles? Wir verzeichnen das als den ersten großen Fortschritt. #//volný překlad, ale to "...všechno?" by v češtině moc nedávalo smysl.
 	AI_Output			(self, hero, "HLR_500_JOB_08_05"); //... to je ti málo? Vnímáme to jako první zásadní krok vpřed.
 };
 ///////////////////////////////////////////////////////////////////////
@@ -121,5 +121,3 @@ func int HLR_500_Palgur_RECIPE_Info ()
 	AI_Output			(self, hero, "HLR_500_RECIPE_08_03"); //Přesto je to ještě dlouhá cesta, než nalezneme lék.
 
 };
-
-
