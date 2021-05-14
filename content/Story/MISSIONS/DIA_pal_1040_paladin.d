@@ -44,9 +44,12 @@ FUNC VOID PAL_1040_FirstWarn_Info()
 {
 	PrintGlobals	(PD_MISSION);
 
-	AI_Output (self, hero,"PAL_1040_FirstWarn_Info_07_01"); //KEIN ZUTRITT!
-	AI_Output (hero, self,"PAL_1040_FirstWarn_Info_15_02"); //Ich will in die Festung!
-	AI_Output (self, hero,"PAL_1040_FirstWarn_Info_07_03"); //Nur Gefolgsleute des Königs!
+//	AI_Output (self, hero,"PAL_1040_FirstWarn_Info_07_01"); //KEIN ZUTRITT!
+	AI_Output (self, hero,"PAL_1040_FirstWarn_Info_07_01"); //ZÁKAZ VSTUPU!
+//	AI_Output (hero, self,"PAL_1040_FirstWarn_Info_15_02"); //Ich will in die Festung!
+	AI_Output (hero, self,"PAL_1040_FirstWarn_Info_15_02"); //Chci jít do pevnosti!
+//	AI_Output (self, hero,"PAL_1040_FirstWarn_Info_07_03"); //Nur Gefolgsleute des Königs!
+	AI_Output (self, hero,"PAL_1040_FirstWarn_Info_07_03"); //Jen pro královu družinu!
 
 	hero.aivar[AIV_LASTDISTTOWP] 		= Npc_GetDistToWP(hero,PAL_1040_CHECKPOINT);
 	hero.aivar[AIV_GUARDPASSAGE_STATUS]	= AIV_GPS_FIRSTWARN;
@@ -82,7 +85,8 @@ FUNC INT PAL_1040_LastWarn_Condition()
 
 func int PAL_1040_LastWarn_Info()
 {
-	AI_Output (self, hero,"PAL_1040_LastWarn_07_01"); 		//KEINEN SCHRITT WEITER!
+//	AI_Output (self, hero,"PAL_1040_LastWarn_07_01"); 		//KEINEN SCHRITT WEITER!
+	AI_Output (self, hero,"PAL_1040_LastWarn_07_01"); 		//ANI O KROK DÁL!
 
 	hero.aivar[AIV_LASTDISTTOWP] 		= Npc_GetDistToWP (hero,PAL_1040_CHECKPOINT);
 	hero.aivar[AIV_GUARDPASSAGE_STATUS]	= AIV_GPS_LASTWARN;
@@ -179,7 +183,8 @@ instance PAL_1040_Paladin_WANTIN		(C_INFO)
 	important	 = 	FALSE;
 	permanent	 = 	TRUE;
 
-	description	 = 	"Ich möchte in die Festung!";
+//	description	 = 	"Ich möchte in die Festung!";
+	description	 = 	"Chci jít do pevnosti!";
 };
 
 func int PAL_1040_Paladin_WANTIN_Condition ()
@@ -192,8 +197,10 @@ func int PAL_1040_Paladin_WANTIN_Condition ()
 
 func void PAL_1040_Paladin_WANTIN_Info ()
 {
-	AI_Output			(hero, self, "PAL_1040_WANTIN_15_01"); //Ich möchte in die Festung.
-	AI_Output			(self, hero, "PAL_1040_WANTIN_07_02"); //Nur Gefolgsleute des Königs!
+//	AI_Output			(hero, self, "PAL_1040_WANTIN_15_01"); //Ich möchte in die Festung.
+	AI_Output			(hero, self, "PAL_1040_WANTIN_15_01"); //Chci jít do pevnosti.
+//	AI_Output			(self, hero, "PAL_1040_WANTIN_07_02"); //Nur Gefolgsleute des Königs!
+	AI_Output			(self, hero, "PAL_1040_WANTIN_07_02"); //Jen pro královu družinu!
 	AI_StopProcessInfos	(self);
 };
 
@@ -240,7 +247,8 @@ func void PAL_1040_Paladin_HALTTHORA_Info ()
 
 	AI_TurnToNpc		(self, thora);
 
-	AI_Output			(self, hero, "PAL_1040_HALTTHORA_07_01"); //Thora, du kannst passieren...mit Begleitung!
+//	AI_Output			(self, hero, "PAL_1040_HALTTHORA_07_01"); //Thora, du kannst passieren...mit Begleitung!
+	AI_Output			(self, hero, "PAL_1040_HALTTHORA_07_01"); //Thoro, ty projít můžeš...i s doprovodem!
 
 	AI_StopProcessInfos	(self);
 };
