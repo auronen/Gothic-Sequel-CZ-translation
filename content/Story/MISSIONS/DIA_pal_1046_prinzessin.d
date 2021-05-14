@@ -40,11 +40,16 @@ func int PAL_1046_Prinzessin_HI_Condition ()
 
 func void PAL_1046_Prinzessin_HI_Info ()
 {
-	AI_Output			(self, hero, "PAL_1046_HI_16_01"); //Ich bin eine Prinzessin!
-	AI_Output			(self, hero, "PAL_1046_HI_16_02"); //Tatsächlich? 
-	AI_Output			(self, hero, "PAL_1046_HI_16_03"); //Oh ein junger stürmischer Krieger -TRIEF-
-	AI_Output			(hero, self, "PAL_1046_HI_15_04"); //Noch so abgetakelte mitt-40erin die keinen mehr abgekriegt hat
-	AI_Output			(self, hero, "PAL_1046_HI_16_05"); //Kann ich was für dich tun - KLIMPER- KLIMPER-
+//	AI_Output			(self, hero, "PAL_1046_HI_16_01"); //Ich bin eine Prinzessin!
+	AI_Output			(self, hero, "PAL_1046_HI_16_01"); //Já jsem princezna!
+//	AI_Output			(self, hero, "PAL_1046_HI_16_02"); //Tatsächlich?
+	AI_Output			(self, hero, "PAL_1046_HI_16_02"); //Opravdu?
+//	AI_Output			(self, hero, "PAL_1046_HI_16_03"); //Oh ein junger stürmischer Krieger -TRIEF- // Nevím jak přeložit to TRIEF.
+	AI_Output			(self, hero, "PAL_1046_HI_16_03"); //Och, mladý bouřlivý válečník -???- 
+//	AI_Output			(hero, self, "PAL_1046_HI_15_04"); //Noch so abgetakelte mitt-40erin die keinen mehr abgekriegt hat // Tohle jsem hodně střelil, ale myslím, že ten význam asi má být takový.
+	AI_Output			(hero, self, "PAL_1046_HI_15_04"); //Leda tak vyřízený čtyřicátník, který už toho moc nenaválčí
+//	AI_Output			(self, hero, "PAL_1046_HI_16_05"); //Kann ich was für dich tun - KLIMPER- KLIMPER- // To klimper klimper by asi mohlo být něco jako mrk mrk.
+	AI_Output			(self, hero, "PAL_1046_HI_16_05"); //Co pro tebe můžu udělat? (mrk mrk) 
 
 };
 ///////////////////////////////////////////////////////////////////////
@@ -59,7 +64,8 @@ instance PAL_1046_Prinzessin_BATH		(C_INFO)
 	important	 = 	FALSE;
 	permanent	 = 	FALSE;
 
-	description	 = 	"Geh baden!";
+//	description	 = 	"Geh baden!";
+	description	 = 	"Vykoupej se!";
 };
 
 func int PAL_1046_Prinzessin_BATH_Condition ()
@@ -69,9 +75,12 @@ func int PAL_1046_Prinzessin_BATH_Condition ()
 
 func void PAL_1046_Prinzessin_BATH_Info ()
 {
-	AI_Output			(hero, self, "PAL_1046_BATH_15_01"); //Geh baden!
-	AI_Output			(self, hero, "PAL_1046_BATH_16_02"); //Oh Jaaa, ich bin so schmutzig! Willst du mir nicht beim Baden zusehen??
-	AI_Output			(self, hero, "PAL_1046_BATH_16_03"); //BITTE (Winsel)
+//	AI_Output			(hero, self, "PAL_1046_BATH_15_01"); //Geh baden!
+	AI_Output			(hero, self, "PAL_1046_BATH_15_01"); //Vykoupej se!
+//	AI_Output			(self, hero, "PAL_1046_BATH_16_02"); //Oh Jaaa, ich bin so schmutzig! Willst du mir nicht beim Baden zusehen??
+	AI_Output			(self, hero, "PAL_1046_BATH_16_02"); //Och anooo, jsem tak špinavá! Nechceš se na mě při koupeli dívat??
+//	AI_Output			(self, hero, "PAL_1046_BATH_16_03"); //BITTE (Winsel)
+	AI_Output			(self, hero, "PAL_1046_BATH_16_03"); //PROSÍÍÍM.
 	AI_StopProcessInfos (self);
 	Npc_ExchangeRoutine (self,"BATH");
 	
@@ -89,7 +98,8 @@ instance PAL_1046_Prinzessin_LOVE		(C_INFO)
 	important	 = 	FALSE;
 	permanent	 = 	FALSE;
 
-	description	 = 	"Zieh dich aus und leg dich hin!";
+//	description	 = 	"Zieh dich aus und leg dich hin!";
+	description	 = 	"Vysvleč se a lehni si!";
 };
 
 func int PAL_1046_Prinzessin_LOVE_Condition ()
@@ -99,9 +109,12 @@ func int PAL_1046_Prinzessin_LOVE_Condition ()
 
 func void PAL_1046_Prinzessin_LOVE_Info ()
 {
-	AI_Output			(hero, self, "PAL_1046_LOVE_15_01"); //Zieh dich aus und leg dich hin!
-	AI_Output			(self, hero, "PAL_1046_LOVE_16_02"); //Nichts würde ich lieber, du Starker, aber das Bett ist nicht gemacht...
-	AI_Output			(hero, self, "PAL_1046_LOVE_15_03"); //Scheisse!
+//	AI_Output			(hero, self, "PAL_1046_LOVE_15_01"); //Zieh dich aus und leg dich hin!
+	AI_Output			(hero, self, "PAL_1046_LOVE_15_01"); //Vysvleč se a lehni si!
+//	AI_Output			(self, hero, "PAL_1046_LOVE_16_02"); //Nichts würde ich lieber, du Starker, aber das Bett ist nicht gemacht...
+	AI_Output			(self, hero, "PAL_1046_LOVE_16_02"); //Nic bych neudělala radši, ty jeden siláku, ale postel není ustlaná...
+//	AI_Output			(hero, self, "PAL_1046_LOVE_15_03"); //Scheisse!
+	AI_Output			(hero, self, "PAL_1046_LOVE_15_03"); //A sakra!
 };
 
 ///////////////////////////////////////////////////////////////////////
@@ -116,7 +129,8 @@ instance PAL_1046_Prinzessin_SUICIDE		(C_INFO)
 	important	 = 	FALSE;
 	permanent	 = 	FALSE;
 
-	description	 = 	"Du bist über, Bitch! ";
+//	description	 = 	"Du bist über, Bitch! ";
+	description	 = 	"Skončilas, děvko! ";
 };
 
 func int PAL_1046_Prinzessin_SUICIDE_Condition ()
@@ -126,9 +140,12 @@ func int PAL_1046_Prinzessin_SUICIDE_Condition ()
 
 func void PAL_1046_Prinzessin_SUICIDE_Info ()
 {
-	AI_Output			(hero, self, "PAL_1046_SUICIDE_15_01"); //Du bist über, Bitch!
-	AI_Output			(self, hero, "PAL_1046_SUICIDE_16_02"); //Oh - nein, du liebst mich nicht (dramatisch)
-	AI_Output			(self, hero, "PAL_1046_SUICIDE_16_03"); //Dann stürze ich mich jetzt zu Tode!! 
+//	AI_Output			(hero, self, "PAL_1046_SUICIDE_15_01"); //Du bist über, Bitch!
+	AI_Output			(hero, self, "PAL_1046_SUICIDE_15_01"); //Skončilas, děvko!
+//	AI_Output			(self, hero, "PAL_1046_SUICIDE_16_02"); //Oh - nein, du liebst mich nicht (dramatisch)
+	AI_Output			(self, hero, "PAL_1046_SUICIDE_16_02"); //Ach ne, ty mě nemiluješ (dramaticky)
+//	AI_Output			(self, hero, "PAL_1046_SUICIDE_16_03"); //Dann stürze ich mich jetzt zu Tode!!
+	AI_Output			(self, hero, "PAL_1046_SUICIDE_16_03"); //Pak tedy musím zhynout!!
 	AI_StopProcessInfos (self);
 	Npc_ExchangeRoutine (self,"SUICIDE");
 };
