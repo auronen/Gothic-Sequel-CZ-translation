@@ -354,7 +354,7 @@ func void AMZ_900_Thora_SEEYA_Info ()
 {
 //	AI_Output			(hero, self, "AMZ_900_SEEYA_15_01"); //Wohin gehst du?
 	AI_Output			(hero, self, "AMZ_900_SEEYA_15_01"); //Kam jdeš?
-	AI_Output			(self, hero, "AMZ_900_SEEYA_16_02"); //Zur Arena. Ich kämpfe dort. Tagsüber bin ich meistens da.
+//	AI_Output			(self, hero, "AMZ_900_SEEYA_16_02"); //Zur Arena. Ich kämpfe dort. Tagsüber bin ich meistens da.
 	AI_Output			(self, hero, "AMZ_900_SEEYA_16_02"); //Do arény. Bojuju tam. Přes den tam většinou jsem.
 };
 
@@ -402,7 +402,8 @@ instance AMZ_900_Thora_HEYWAIT		(C_INFO)
 	important	 = 	FALSE;
 	permanent	 = 	TRUE;
 
-	description	 = 	"Warte mal!";
+//	description	 = 	"Warte mal!";
+	description	 = 	"Počkej chvilku!";
 };
 
 func int AMZ_900_Thora_HEYWAIT_Condition ()
@@ -417,8 +418,10 @@ func int AMZ_900_Thora_HEYWAIT_Condition ()
 
 func void AMZ_900_Thora_HEYWAIT_Info ()
 {
-	AI_Output			(hero, self, "AMZ_900_HEYWAIT_15_01"); //Warte mal!
-	AI_Output			(self, hero, "AMZ_900_HEYWAIT_16_02"); //(fröhlich) Wir sehen uns später!
+//	AI_Output			(hero, self, "AMZ_900_HEYWAIT_15_01"); //Warte mal!
+	AI_Output			(hero, self, "AMZ_900_HEYWAIT_15_01"); //Počkej chvilku!
+//	AI_Output			(self, hero, "AMZ_900_HEYWAIT_16_02"); //(fröhlich) Wir sehen uns später!
+	AI_Output			(self, hero, "AMZ_900_HEYWAIT_16_02"); //(radostně) Uvidíme se později!
 
 	AI_StopProcessInfos		(self);
 };
@@ -451,7 +454,8 @@ instance AMZ_900_Thora_NIGHT		(C_INFO)
 	important	 = 	FALSE;
 	permanent	 = 	FALSE;
 
-	description	 = 	"Was tust du hier draussen?";
+//	description	 = 	"Was tust du hier draussen?";
+	description	 = 	"Co tady venku děláš?";
 };
 
 func int AMZ_900_Thora_NIGHT_Condition ()
@@ -465,9 +469,12 @@ func int AMZ_900_Thora_NIGHT_Condition ()
 
 func void AMZ_900_Thora_NIGHT_Info ()
 {
-	AI_Output			(hero, self, "AMZ_900_NIGHT_15_01"); //Was tust du hier draussen?
-	AI_Output			(self, hero, "AMZ_900_NIGHT_16_02"); //Ich betrachte die Sterne. Sie sind erfüllt von der Macht des Feuers.
-	AI_Output			(self, hero, "AMZ_900_NIGHT_16_03"); //Das Feuer bestimmt mein Schicksal, so wie es das der Sterne bestimmt.
+//	AI_Output			(hero, self, "AMZ_900_NIGHT_15_01"); //Was tust du hier draussen?
+	AI_Output			(hero, self, "AMZ_900_NIGHT_15_01"); //Co tady venku děláš?
+//	AI_Output			(self, hero, "AMZ_900_NIGHT_16_02"); //Ich betrachte die Sterne. Sie sind erfüllt von der Macht des Feuers.
+	AI_Output			(self, hero, "AMZ_900_NIGHT_16_02"); //Pozoruji hvězdy. Jsou plné moci ohně.
+//	AI_Output			(self, hero, "AMZ_900_NIGHT_16_03"); //Das Feuer bestimmt mein Schicksal, so wie es das der Sterne bestimmt.
+	AI_Output			(self, hero, "AMZ_900_NIGHT_16_03"); //Stejně jako utváří oheň hvězdy, utváří i můj osud.
 	AI_StopProcessInfos	(self);
 };
 
@@ -482,7 +489,8 @@ instance AMZ_900_Thora_NIGHTAGAIN		(C_INFO)
 	important	 = 	FALSE;
 	permanent	 = 	TRUE;
 
-	description	 = 	"Betrachtest du immer noch die Sterne?";
+//	description	 = 	"Betrachtest du immer noch die Sterne?";
+	description	 = 	"Pozoruješ pořád hvězdy?";
 };
 
 func int AMZ_900_Thora_NIGHTAGAIN_Condition ()
@@ -497,8 +505,10 @@ func int AMZ_900_Thora_NIGHTAGAIN_Condition ()
 
 func void AMZ_900_Thora_NIGHTAGAIN_Info ()
 {
-	AI_Output			(hero, self, "AMZ_900_NIGHTAGAIN_15_01"); //Betrachtest du immer noch die Sterne?
-	AI_Output			(self, hero, "AMZ_900_NIGHTAGAIN_16_02"); //Die Sterne reflektieren das Feuer in mir. Ich liebe die Sterne.
+//	AI_Output			(hero, self, "AMZ_900_NIGHTAGAIN_15_01"); //Betrachtest du immer noch die Sterne?
+	AI_Output			(hero, self, "AMZ_900_NIGHTAGAIN_15_01"); //Pozoruješ pořád hvězdy?
+//	AI_Output			(self, hero, "AMZ_900_NIGHTAGAIN_16_02"); //Die Sterne reflektieren das Feuer in mir. Ich liebe die Sterne.
+	AI_Output			(self, hero, "AMZ_900_NIGHTAGAIN_16_02"); //Hvězdy odrážejí oheň v mém nitru. Miluji hvězdy.
 	AI_StopProcessInfos	(self);
 };
 
@@ -552,19 +562,24 @@ func int AMZ_900_Thora_MYWEAPON_Info ()
 {
 	AI_SetWalkmode			(self, NPC_RUN);
 	AI_GotoNpc				(self, hero);
-	AI_Output				(self, hero, "AMZ_900_MYWEAPON_Info_16_01"); //(wütend) Gib mir den Kampfstab!
+//	AI_Output				(self, hero, "AMZ_900_MYWEAPON_Info_16_01"); //(wütend) Gib mir den Kampfstab!
+	AI_Output				(self, hero, "AMZ_900_MYWEAPON_Info_16_01"); //(naštvaně) Dej mi tu bojovou hůl!
 
 	Info_ClearChoices		(AMZ_900_Thora_MYWEAPON);
-	Info_AddChoice			(AMZ_900_Thora_MYWEAPON, "Ich glaube, ich behalte ihn lieber.",	AMZ_900_Thora_MYWEAPON_TAKEN );
-	Info_AddChoice			(AMZ_900_Thora_MYWEAPON, "Hier hast du das Ding zurück!",	AMZ_900_Thora_MYWEAPON_GIVEBACK );
+//	Info_AddChoice			(AMZ_900_Thora_MYWEAPON, "Ich glaube, ich behalte ihn lieber.",	AMZ_900_Thora_MYWEAPON_TAKEN );
+	Info_AddChoice			(AMZ_900_Thora_MYWEAPON, "Řekl bych, že si ji radši nechám.",	AMZ_900_Thora_MYWEAPON_TAKEN );
+//	Info_AddChoice			(AMZ_900_Thora_MYWEAPON, "Hier hast du das Ding zurück!",	AMZ_900_Thora_MYWEAPON_GIVEBACK );
+	Info_AddChoice			(AMZ_900_Thora_MYWEAPON, "Tady ti to vracím!",	AMZ_900_Thora_MYWEAPON_GIVEBACK );
 };
 
 func void AMZ_900_Thora_MYWEAPON_GIVEBACK ()
 {
 	Info_ClearChoices		(AMZ_900_Thora_MYWEAPON);
-	AI_Output				(hero, self, "AMZ_900_MYWEAPON_GIVEBACK_15_01"); //Hier hast du das Ding zurück!
+//	AI_Output				(hero, self, "AMZ_900_MYWEAPON_GIVEBACK_15_01"); //Hier hast du das Ding zurück!
+	AI_Output				(hero, self, "AMZ_900_MYWEAPON_GIVEBACK_15_01"); //Tady ti to vracím!
 	B_GiveInvItems			(hero, self, ItMw_Thora_Battlestaff, 1);
-	AI_Output				(self, hero, "AMZ_900_MYWEAPON_GIVEBACK_16_02"); //Dann zeig mal, ob du noch was anderes drauf hast, ausser Waffenstehlen.
+//	AI_Output				(self, hero, "AMZ_900_MYWEAPON_GIVEBACK_16_02"); //Dann zeig mal, ob du noch was anderes drauf hast, ausser Waffenstehlen.
+	AI_Output				(self, hero, "AMZ_900_MYWEAPON_GIVEBACK_16_02"); //Tak předveď, jestli umíš ještě něco jiného, kromě kradení zbraní.
 
 	AI_StopProcessInfos		(self);
 
@@ -573,8 +588,10 @@ func void AMZ_900_Thora_MYWEAPON_GIVEBACK ()
 func void AMZ_900_Thora_MYWEAPON_TAKEN ()
 {
 	Info_ClearChoices		(AMZ_900_Thora_MYWEAPON);
-	AI_Output				(hero, self, "AMZ_900_MYWEAPON_TAKEN_15_01"); //Ich glaube, ich behalte ihn lieber.
-	AI_Output				(self, hero, "AMZ_900_MYWEAPON_TAKEN_16_02"); //(wütender) Du kannst dich nicht mal in der Arena an die Regeln halten!
+//	AI_Output				(hero, self, "AMZ_900_MYWEAPON_TAKEN_15_01"); //Ich glaube, ich behalte ihn lieber.
+	AI_Output				(hero, self, "AMZ_900_MYWEAPON_TAKEN_15_01"); //Řekl bych, že si ji radši nechám.
+//	AI_Output				(self, hero, "AMZ_900_MYWEAPON_TAKEN_16_02"); //(wütender) Du kannst dich nicht mal in der Arena an die Regeln halten!
+	AI_Output				(self, hero, "AMZ_900_MYWEAPON_TAKEN_16_02"); //(naštvaněji) Ty nedokážeš dodržovat pravidla ani v aréně!
 	AI_StopProcessInfos		(self);
 
 	B_Arena_AbortFight		(AF_PLAYERSTOLEWEAPON);
@@ -609,12 +626,15 @@ func void	AMZ_900_Thora_CHALLENGED_Info()
 	{
 		if	(Npc_GetDistToWP	(self, ARENA_WP_RIGHT_CHAMBER) > ARENA_DIST_PRECHAMBER)
 		{
-			AI_Output			(self, hero,"AMZ_900_CHALLENGED_16_01"); //Bin gespannt, was du draufhast.
-			AI_Output			(self, hero,"AMZ_900_CHALLENGED_16_02"); //Wir sehen uns heute Abend in der Arena!
+//			AI_Output			(self, hero,"AMZ_900_CHALLENGED_16_01"); //Bin gespannt, was du draufhast.
+			AI_Output			(self, hero,"AMZ_900_CHALLENGED_16_01"); //Jsem zvědavá, co máš přichystáno.
+//			AI_Output			(self, hero,"AMZ_900_CHALLENGED_16_02"); //Wir sehen uns heute Abend in der Arena!
+			AI_Output			(self, hero,"AMZ_900_CHALLENGED_16_02"); //Uvidíme se večer v aréně!
 		}
 		else
 		{
-			AI_Output			(self, hero,"AMZ_900_CHALLENGED_16_03"); //Das ist MEINE Vorbereitungskammer.
+//			AI_Output			(self, hero,"AMZ_900_CHALLENGED_16_03"); //Das ist MEINE Vorbereitungskammer.
+			AI_Output			(self, hero,"AMZ_900_CHALLENGED_16_03"); //Tohle je MOJE šatna.
 			B_AttackProper		(self, hero);
 		};
 
@@ -624,13 +644,15 @@ func void	AMZ_900_Thora_CHALLENGED_Info()
 
 	if	Npc_IsInRoutine(self, ZS_ArenaFight)
 	{
-		AI_Output				(self, hero,"AMZ_900_CHALLENGED_16_04"); //Bist du nervös, oder warum redest du soviel?
+//		AI_Output				(self, hero,"AMZ_900_CHALLENGED_16_04"); //Bist du nervös, oder warum redest du soviel?
+		AI_Output				(self, hero,"AMZ_900_CHALLENGED_16_04"); //Jsi nervózní, nebo proč tolik mluvíš?
 		AI_StopProcessInfos		(self);
 		return;
 	}
 	else
 	{
-		AI_Output				(self, hero,"MIL_121_CHALLENGED_16_05"); //Wir sehen uns in der Arena. Morgen Abend!
+//		AI_Output				(self, hero,"MIL_121_CHALLENGED_16_05"); //Wir sehen uns in der Arena. Morgen Abend!
+		AI_Output				(self, hero,"MIL_121_CHALLENGED_16_05"); //Uvidíme se v aréně. Zítra večer!
 		AI_StopProcessInfos		(self);
 		return;
 	};
@@ -661,7 +683,8 @@ func int	AMZ_900_Thora_PRENPC_Condition()
 
 func void	AMZ_900_Thora_PRENPC_Info()
 {
-	AI_Output			(self, hero,"AMZ_900_PRENPC_16_01"); //Du hast in meiner Vorbereitungskammer nichts zu suchen. Verschwinde!
+//	AI_Output			(self, hero,"AMZ_900_PRENPC_16_01"); //Du hast in meiner Vorbereitungskammer nichts zu suchen. Verschwinde!
+	AI_Output			(self, hero,"AMZ_900_PRENPC_16_01"); //V mojí šatně nemáš co dělat! Padej!
 	AI_StopProcessInfos	(self);
 };
 
@@ -677,7 +700,8 @@ instance AMZ_900_Thora_GLADIATOR		(C_INFO)
 	important	=	FALSE;
 	permanent	=	FALSE;
 
-	description	=	"Du kämpfst in der Arena?";
+//	description	=	"Du kämpfst in der Arena?";
+	description	=	"Ty bojuješ v aréně?";
 };
 
 func int AMZ_900_Thora_GLADIATOR_Condition ()
@@ -691,18 +715,23 @@ func int AMZ_900_Thora_GLADIATOR_Condition ()
 
 func int AMZ_900_Thora_GLADIATOR_Info ()
 {
-	AI_Output			(hero, self, "AMZ_900_GLADIATOR_15_01"); //(ungläubig) Du kämpfst in der Arena?
+//	AI_Output			(hero, self, "AMZ_900_GLADIATOR_15_01"); //(ungläubig) Du kämpfst in der Arena?
+	AI_Output			(hero, self, "AMZ_900_GLADIATOR_15_01"); //(nevěřícně) Ty bojuješ v aréně?
 
 	if	self.aivar[AIV_HASDEFEATEDSC]
 	{
-		AI_Output		(self, hero, "AMZ_900_GLADIATOR_16_02"); //(spöttisch)Du solltest wissen, daß ich mit Waffen umgehen kann.
-		AI_Output		(hero, self, "AMZ_900_GLADIATOR_15_03"); //ja... ich erinnere mich!
+//		AI_Output		(self, hero, "AMZ_900_GLADIATOR_16_02"); //(spöttisch)Du solltest wissen, daß ich mit Waffen umgehen kann.
+		AI_Output		(self, hero, "AMZ_900_GLADIATOR_16_02"); //(posměšně) Ty bys ale měl vědět, že já se zbraněmi zacházet umím.
+//		AI_Output		(hero, self, "AMZ_900_GLADIATOR_15_03"); //ja... ich erinnere mich!
+		AI_Output		(hero, self, "AMZ_900_GLADIATOR_15_03"); //Ano... pamatuju si!
 
 	}
 	else
 	{
-		AI_Output		(self, hero, "AMZ_900_GLADIATOR_16_04"); //Du glaubst wohl immer noch, daß nur Männer mit Waffen umgehen können!
+//		AI_Output		(self, hero, "AMZ_900_GLADIATOR_16_04"); //Du glaubst wohl immer noch, daß nur Männer mit Waffen umgehen können!
+		AI_Output		(self, hero, "AMZ_900_GLADIATOR_16_04"); //Ty pořád ještě věřím tomu, že se zbraněmi to umí jen muži.
 //		AI_Output		(self, hero, "AMZ_900_GLADIATOR_16_05"); //Ich kann dir beweisen, daß das nicht stimmt!
+//		AI_Output		(self, hero, "AMZ_900_GLADIATOR_16_05"); //Můžu ti dokázat, že tomu tak není!
 	};
 
 };
@@ -718,7 +747,8 @@ instance	AMZ_900_Thora_WEAPON (C_INFO)
 	information		= AMZ_900_Thora_WEAPON_Info;
 	important		= FALSE;
 	permanent		= FALSE;
-	description		= "Was hast du da für eine seltsame Waffe?";
+//	description		= "Was hast du da für eine seltsame Waffe?";
+	description		= "Copak to máš za zvláštní zbraň?";
 };
 
 func int	AMZ_900_Thora_WEAPON_Condition()
@@ -732,15 +762,19 @@ func int	AMZ_900_Thora_WEAPON_Condition()
 
 func void	AMZ_900_Thora_WEAPON_Info()
 {
-	AI_Output			(hero, self, "AMZ_900_WEAPON_15_01"); //Was hast du da für eine seltsame Waffe?
+//	AI_Output			(hero, self, "AMZ_900_WEAPON_15_01"); //Was hast du da für eine seltsame Waffe?
+	AI_Output			(hero, self, "AMZ_900_WEAPON_15_01"); //Copak to máš za zvláštní zbraň?
 
 	AI_ReadyMeleeWeapon	(self);
 	AI_TurnToNpc		(self, hero);
 
 	AI_Wait				(self, 0.5);
-	AI_Output			(self, hero, "AMZ_900_WEAPON_16_02"); //Einen thyrianischer Kampfstab.
-	AI_Output			(self, hero, "AMZ_900_WEAPON_16_03"); //Ist schnell wie ein Pfeil und hat eine grosse Reichweite.
-	AI_Output			(self, hero, "AMZ_900_WEAPON_16_04"); //Diese Waffe zu meistern ist sehr schwierig.
+//	AI_Output			(self, hero, "AMZ_900_WEAPON_16_02"); //Einen thyrianischer Kampfstab.
+	AI_Output			(self, hero, "AMZ_900_WEAPON_16_02"); //Thyrianskou bojovou hůl.
+//	AI_Output			(self, hero, "AMZ_900_WEAPON_16_03"); //Ist schnell wie ein Pfeil und hat eine grosse Reichweite.
+	AI_Output			(self, hero, "AMZ_900_WEAPON_16_03"); //Je rychlá jako šíp a má velký dosah.
+//	AI_Output			(self, hero, "AMZ_900_WEAPON_16_04"); //Diese Waffe zu meistern ist sehr schwierig.
+	AI_Output			(self, hero, "AMZ_900_WEAPON_16_04"); //Osvojit si tuhle zbraň je dost obtížné.
 
 	AI_RemoveWeapon		(self);
 	AI_StopProcessInfos	(self);
@@ -757,7 +791,8 @@ instance	AMZ_900_Thora_VICTORIES (C_INFO)
 	information		= AMZ_900_Thora_VICTORIES_Info;
 	important		= FALSE;
 	permanent		= FALSE;
-	description		= "Wieviele Arenakämpfe hast du gewonnen?";
+//	description		= "Wieviele Arenakämpfe hast du gewonnen?";
+	description		= "Kolik soubojů v aréně jsi už vyhrála?";
 };
 
 func int	AMZ_900_Thora_VICTORIES_Condition()
@@ -771,9 +806,12 @@ func int	AMZ_900_Thora_VICTORIES_Condition()
 
 func void	AMZ_900_Thora_VICTORIES_Info()
 {
-	AI_Output			(hero, self, "AMZ_900_VICTORIES_15_01"); //Wieviele Arenakämpfe hast du gewonnen?
-	AI_Output			(self, hero, "AMZ_900_VICTORIES_16_02"); //Also bis jetzt... Alle.
-	AI_Output			(self, hero, "AMZ_900_VICTORIES_16_03"); //(gelangweilt) Die Kämpfer hier sind wirklich keine Gegner für mich!
+//	AI_Output			(hero, self, "AMZ_900_VICTORIES_15_01"); //Wieviele Arenakämpfe hast du gewonnen?
+	AI_Output			(hero, self, "AMZ_900_VICTORIES_15_01"); //Kolik soubojů v aréně jsi už vyhrála?
+//	AI_Output			(self, hero, "AMZ_900_VICTORIES_16_02"); //Also bis jetzt... Alle.
+	AI_Output			(self, hero, "AMZ_900_VICTORIES_16_02"); //Tak až doposud... Všechny.
+//	AI_Output			(self, hero, "AMZ_900_VICTORIES_16_03"); //(gelangweilt) Die Kämpfer hier sind wirklich keine Gegner für mich!
+	AI_Output			(self, hero, "AMZ_900_VICTORIES_16_03"); //(znuděně) Místní bojovníci pro mě vážně nejsou soupeři!
 };
 
 ///////////////////////////////////////////////////////////////////////
@@ -787,7 +825,8 @@ instance	AMZ_900_Thora_CHALLENGE (C_INFO)
 	information		= AMZ_900_Thora_CHALLENGE_Info;
 	important		= FALSE;
 	permanent		= TRUE;
-	description		= "Ich fordere dich zu einem Arenakampf heraus!";
+//	description		= "Ich fordere dich zu einem Arenakampf heraus!";
+	description		= "Vyzývám tě k souboji v aréně!";
 };
 
 func int	AMZ_900_Thora_CHALLENGE_Condition()
@@ -808,29 +847,35 @@ func int	AMZ_900_Thora_CHALLENGE_Condition()
 
 func void	AMZ_900_Thora_CHALLENGE_Info()
 {
-	AI_Output			(hero, self, "AMZ_900_CHALLENGE_15_01"); //Ich fordere dich zu einem Arenakampf heraus!
+//	AI_Output			(hero, self, "AMZ_900_CHALLENGE_15_01"); //Ich fordere dich zu einem Arenakampf heraus!
+	AI_Output			(hero, self, "AMZ_900_CHALLENGE_15_01"); //Vyzývám tě k souboji v aréně!
 
 	if	!Npc_HasItems(self, ItMw_Thora_Battlestaff)
 	{
-		AI_Output		(self, hero,"AMZ_900_CHALLENGE_16_02"); //Sobald ich meinen Kampfstab wiederhabe, werde ich gegen dich antreten.
+//		AI_Output		(self, hero,"AMZ_900_CHALLENGE_16_02"); //Sobald ich meinen Kampfstab wiederhabe, werde ich gegen dich antreten.
+		AI_Output		(self, hero,"AMZ_900_CHALLENGE_16_02"); //Dokud nebudu mít zpátky svoji bojovou hůl, tak proti tobě nenastoupím.
 
 		if	Npc_HasItems(hero, ItMw_Thora_Battlestaff)
 		{
 			Info_ClearChoices	(AMZ_900_Thora_CHALLENGE);
-			Info_AddChoice		(AMZ_900_Thora_CHALLENGE, "Ich habe deine Waffe... ähem... gefunden! Hier!",AMZ_900_Thora_CHALLENGE_FOUND);
+//			Info_AddChoice		(AMZ_900_Thora_CHALLENGE, "Ich habe deine Waffe... ähem... gefunden! Hier!",AMZ_900_Thora_CHALLENGE_FOUND);
+			Info_AddChoice		(AMZ_900_Thora_CHALLENGE, "Já tu tvoji zbraň... ehm... našel! Tady!",AMZ_900_Thora_CHALLENGE_FOUND);
 		};
 		return;
 	};
 
 	if	!Thora_PlayerWonBefore
 	{
-		AI_Output		(hero, self, "AMZ_900_CHALLENGE_15_03"); //Wird doch Zeit, daß du mal einen Kampf verlierst!
+//		AI_Output		(hero, self, "AMZ_900_CHALLENGE_15_03"); //Wird doch Zeit, daß du mal einen Kampf verlierst!
+		AI_Output		(hero, self, "AMZ_900_CHALLENGE_15_03"); //Je na čase, abys zase jednou prohrál v souboji!
 	};
 
 	if	Arena_PlayerBanned
 	{
-		AI_Output		(self, hero, "AMZ_900_CHALLENGE_16_04"); //Du hast Mist gebaut, in der Arena.
-		AI_Output		(self, hero, "AMZ_900_CHALLENGE_16_05"); //Klär das mit dem Arenameister, sonst kann ich nicht gegen dich kämpfen!
+//		AI_Output		(self, hero, "AMZ_900_CHALLENGE_16_04"); //Du hast Mist gebaut, in der Arena.
+		AI_Output		(self, hero, "AMZ_900_CHALLENGE_16_04"); //Udělal jsi v aréně pěknou kravinu.
+//		AI_Output		(self, hero, "AMZ_900_CHALLENGE_16_05"); //Klär das mit dem Arenameister, sonst kann ich nicht gegen dich kämpfen!
+		AI_Output		(self, hero, "AMZ_900_CHALLENGE_16_05"); //Ujasni si to vedoucím arény, jinak proti tobě nemůžu bojovat!
 		AI_StopProcessInfos	(self);
 	}
 	else
@@ -838,9 +883,10 @@ func void	AMZ_900_Thora_CHALLENGE_Info()
 		if	!Malgar_PlayerWonBefore
 		{
 
-			AI_Output	(self, hero, "AMZ_900_CHALLENGE_16_06"); //Solange du nicht mal Malgar besiegt hast, kämpfe ich nicht gegen dich!
-			AI_Output	(self, hero, "AMZ_900_CHALLENGE_16_07"); //Er ist nach mir der zweitbeste Kämpfer hier.
-
+//			AI_Output	(self, hero, "AMZ_900_CHALLENGE_16_06"); //Solange du nicht mal Malgar besiegt hast, kämpfe ich nicht gegen dich!
+			AI_Output	(self, hero, "AMZ_900_CHALLENGE_16_06"); //Dokud neporazíš Malgara, nebudu proti tobě bojovat!
+//			AI_Output	(self, hero, "AMZ_900_CHALLENGE_16_07"); //Er ist nach mir der zweitbeste Kämpfer hier.
+			AI_Output	(self, hero, "AMZ_900_CHALLENGE_16_07"); //Je tu po mně druhý nejlepší bojovník.
 			return;
 		};
 
