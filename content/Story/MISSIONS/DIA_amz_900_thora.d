@@ -891,8 +891,10 @@ func void	AMZ_900_Thora_CHALLENGE_Info()
 		};
 
 		//else
-		AI_Output		(self, hero, "AMZ_900_CHALLENGE_16_08"); //Es wird mir eine Freude sein, gegen dich zu kämpfen.
-		AI_Output		(self, hero, "AMZ_900_CHALLENGE_16_09"); //Gib dein Preisgeld beim Arenameister ab, dann können wir heute abend zusammen... (neckisch) TANZEN!!!
+//		AI_Output		(self, hero, "AMZ_900_CHALLENGE_16_08"); //Es wird mir eine Freude sein, gegen dich zu kämpfen.
+		AI_Output		(self, hero, "AMZ_900_CHALLENGE_16_08"); //Bude mi potěšením se s tebou utkat.
+//		AI_Output		(self, hero, "AMZ_900_CHALLENGE_16_09"); //Gib dein Preisgeld beim Arenameister ab, dann können wir heute abend zusammen... (neckisch) TANZEN!!!
+		AI_Output		(self, hero, "AMZ_900_CHALLENGE_16_09"); //Dej svoje peníze vedoucímu arény, pak si můžeme večer... (směle) ZATANČIT!!!
 
 		Thora_Challenged = TRUE;
 	};
@@ -901,9 +903,11 @@ func void	AMZ_900_Thora_CHALLENGE_Info()
 func void AMZ_900_Thora_CHALLENGE_FOUND ()
 {
 	Info_ClearChoices	(AMZ_900_Thora_CHALLENGE);
-	AI_Output			(hero, self,"AMZ_900_CHALLENGE_FOUND_15_01"); //Ich habe deine Waffe... ähem... gefunden! Hier!
+//	AI_Output			(hero, self,"AMZ_900_CHALLENGE_FOUND_15_01"); //Ich habe deine Waffe... ähem... gefunden! Hier!
+	AI_Output			(hero, self,"AMZ_900_CHALLENGE_FOUND_15_01"); //Já tu tvoji zbraň... ehm... našel! Tady!
 	B_GiveInvItems		(hero, self, ItMw_Thora_Battlestaff, 1);
-	AI_Output			(self, hero,"AMZ_900_CHALLENGE_FOUND_16_02"); //Kann nur für dich hoffen, dass du sie wirklich GEFUNDEN hast.
+//	AI_Output			(self, hero,"AMZ_900_CHALLENGE_FOUND_16_02"); //Kann nur für dich hoffen, dass du sie wirklich GEFUNDEN hast.
+	AI_Output			(self, hero,"AMZ_900_CHALLENGE_FOUND_16_02"); //Pro tvoje vlastní dobro doufám, že jsi ji opravdu NAŠEL.
 	AI_StopProcessInfos	(self);
 };
 
@@ -930,7 +934,8 @@ instance AMZ_900_Thora_TEACHME		(C_INFO)
 	nr		 	 = 	1;
 	condition	 = 	AMZ_900_Thora_TEACHME_Condition;
 	information	 = 	AMZ_900_Thora_TEACHME_Info;
-	description	 = 	"Kannst du mir den Umgang mit dem Kampfstab beibringen?";
+//	description	 = 	"Kannst du mir den Umgang mit dem Kampfstab beibringen?";
+	description	 = 	"Mohla bys mě naučit zacházet s bojovou holí?";
 };
 
 func int AMZ_900_Thora_TEACHME_Condition ()
@@ -943,9 +948,12 @@ func int AMZ_900_Thora_TEACHME_Condition ()
 
 func int AMZ_900_Thora_TEACHME_Info ()
 {
-	AI_Output			(hero, self, "AMZ_900_TEACHME_15_01"); //Kannst du mir den Umgang mit dem Kampfstab beibringen?
-	AI_Output			(self, hero, "AMZ_900_TEACHME_16_02"); //Ich könnte schon. Aber die Waffe ist schwer zu führen, nichts für Anfänger!
-	AI_Output			(self, hero, "AMZ_900_TEACHME_16_03"); //Solange Du kein gleichwertiger Gegner für mich bist, wäre das reine Zeitverschwendung!
+//	AI_Output			(hero, self, "AMZ_900_TEACHME_15_01"); //Kannst du mir den Umgang mit dem Kampfstab beibringen?
+	AI_Output			(hero, self, "AMZ_900_TEACHME_15_01"); //Mohla bys mě naučit zacházet s bojovou holí?
+//	AI_Output			(self, hero, "AMZ_900_TEACHME_16_02"); //Ich könnte schon. Aber die Waffe ist schwer zu führen, nichts für Anfänger!
+	AI_Output			(self, hero, "AMZ_900_TEACHME_16_02"); //Mohla bych. Ale ovládat tuhle zbraň je náročné, nic pro začátečníky!
+//	AI_Output			(self, hero, "AMZ_900_TEACHME_16_03"); //Solange Du kein gleichwertiger Gegner für mich bist, wäre das reine Zeitverschwendung!
+	AI_Output			(self, hero, "AMZ_900_TEACHME_16_03"); //Dokud pro mě nebudeš rovnocenným protivníkem, byla by to jen ztráta času!
 };
 
 ///////////////////////////////////////////////////////////////////////
@@ -959,7 +967,8 @@ instance AMZ_900_Thora_TEACHWHAT		(C_INFO)
 	information	= 	AMZ_900_Thora_TEACHWHAT_Info;
 
 	permanent	=	TRUE;
-	description	= 	"Was muss ich tun, damit du mich am Kampfstab unterrichtest?";
+//	description	= 	"Was muss ich tun, damit du mich am Kampfstab unterrichtest?";
+	description	= 	"Co musím udělat, abys mě učila bojovat s holí?";
 };
 
 func int AMZ_900_Thora_TEACHWHAT_Condition ()
@@ -972,8 +981,10 @@ func int AMZ_900_Thora_TEACHWHAT_Condition ()
 
 func int AMZ_900_Thora_TEACHWHAT_Info ()
 {
-	AI_Output			(hero, self, "AMZ_900_TEACHWHAT_15_01"); //Was muss ich tun, damit du mich am Kampfstab unterrichtest?
-	AI_Output			(self, hero, "AMZ_900_TEACHWHAT_16_02"); //Du musst dir meinen Respekt verdienen! Bisher hat das noch keiner der Gladiatoren hier geschafft.
+//	AI_Output			(hero, self, "AMZ_900_TEACHWHAT_15_01"); //Was muss ich tun, damit du mich am Kampfstab unterrichtest?
+	AI_Output			(hero, self, "AMZ_900_TEACHWHAT_15_01"); //Co musím udělat, abys mě učila bojovat s holí?
+//	AI_Output			(self, hero, "AMZ_900_TEACHWHAT_16_02"); //Du musst dir meinen Respekt verdienen! Bisher hat das noch keiner der Gladiatoren hier geschafft.
+	AI_Output			(self, hero, "AMZ_900_TEACHWHAT_16_02"); //Musíš si vysloužit moje uznání! Což se tu doposud nepodařilo nikomu z gladiátorů.
 };
 
 ///////////////////////////////////////////////////////////////////////
@@ -986,7 +997,8 @@ instance AMZ_900_Thora_TEACHNOW		(C_INFO)
 	condition	= 	AMZ_900_Thora_TEACHNOW_Condition;
 	information	= 	AMZ_900_Thora_TEACHNOW_Info;
 
-	description	= 	"Zeigst du mir jetzt den Umgang mit dem Kampfstab?";
+//	description	= 	"Zeigst du mir jetzt den Umgang mit dem Kampfstab?";
+	description	= 	"Ukážeš mi teď jak zacházet s bojovou holí?";
 };
 
 func int AMZ_900_Thora_TEACHNOW_Condition ()
@@ -999,16 +1011,21 @@ func int AMZ_900_Thora_TEACHNOW_Condition ()
 
 func int AMZ_900_Thora_TEACHNOW_Info ()
 {
-	AI_Output			(hero, self, "AMZ_900_TEACHNOW_15_01"); //Zeigst du mir jetzt den Umgang mit dem Kampfstab?
+//	AI_Output			(hero, self, "AMZ_900_TEACHNOW_15_01"); //Zeigst du mir jetzt den Umgang mit dem Kampfstab?
+	AI_Output			(hero, self, "AMZ_900_TEACHNOW_15_01"); //Ukážeš mi teď jak zacházet s bojovou holí?
 	if	(B_Arena_GetGladiatorRanking(PC_Hero) == 1)
 	{
-		AI_Output		(self, hero, "AMZ_900_TEACHNOW_16_02"); //Du hast mich in der Arena besiegt, aber vielleicht hast du nur Glück gehabt.
-		AI_Output		(self, hero, "AMZ_900_TEACHNOW_16_03"); //Wenn du es schaffst, mich als Champion abzulösen, werde dich in die Kunst des Kampfstabes einführen.
+//		AI_Output		(self, hero, "AMZ_900_TEACHNOW_16_02"); //Du hast mich in der Arena besiegt, aber vielleicht hast du nur Glück gehabt.
+		AI_Output		(self, hero, "AMZ_900_TEACHNOW_16_02"); //Porzail jsi mě v aréně, ale to jsi měl možná jen štěstí.
+//		AI_Output		(self, hero, "AMZ_900_TEACHNOW_16_03"); //Wenn du es schaffst, mich als Champion abzulösen, werde dich in die Kunst des Kampfstabes einführen.
+		AI_Output		(self, hero, "AMZ_900_TEACHNOW_16_03"); //Pokud se ti podaří mě jako šampionku nahradit, uvedu tě do umění boje s holí.
 	}
 	else
 	{
-		AI_Output		(self, hero, "AMZ_900_TEACHNOW_16_04"); //Du hast es geschafft. Du bist Champion dieser Arena.
-		AI_Output		(self, hero, "AMZ_900_TEACHNOW_16_05"); //Wie versprochen werde ich dich nun im Stabkampf unterrichten. Sag mir, wenn du bereit dafür bist.
+//		AI_Output		(self, hero, "AMZ_900_TEACHNOW_16_04"); //Du hast es geschafft. Du bist Champion dieser Arena.
+		AI_Output		(self, hero, "AMZ_900_TEACHNOW_16_04"); //Dokázal jsi to. Jsi šampionem této arény.
+//		AI_Output		(self, hero, "AMZ_900_TEACHNOW_16_05"); //Wie versprochen werde ich dich nun im Stabkampf unterrichten. Sag mir, wenn du bereit dafür bist.
+		AI_Output		(self, hero, "AMZ_900_TEACHNOW_16_05"); //Jak jsem slíbila, budu tě teď učit boji s holí. Řekni mi, až k tomu budeš připraven.
 	};
 
 };
@@ -1040,7 +1057,8 @@ instance AMZ_900_Thora_NEEDTOFORTRESS		(C_INFO)
 	important	 = 	FALSE;
 	permanent	 = 	TRUE;
 
-	description	 = 	"Ich muss mit den Feuermagiern in der Bergfestung sprechen!";
+//	description	 = 	"Ich muss mit den Feuermagiern in der Bergfestung sprechen!";
+	description	 = 	"Musím mluvit s mágy ohně ve Skalní pevnosti!";
 };
 
 func int AMZ_900_Thora_NEEDTOFORTRESS_Condition ()
@@ -1054,28 +1072,40 @@ func int AMZ_900_Thora_NEEDTOFORTRESS_Condition ()
 
 func void AMZ_900_Thora_NEEDTOFORTRESS_Info ()
 {
-	AI_Output			(hero, self, "AMZ_900_NEEDTOFORTRESS_15_01"); //Ich muss mit den Feuermagiern in der Bergfestung sprechen!
-	AI_Output			(self, hero, "AMZ_900_NEEDTOFORTRESS_16_02"); //Du bist ja ein Spassvogel, warum erzählst du mir das?
+//	AI_Output			(hero, self, "AMZ_900_NEEDTOFORTRESS_15_01"); //Ich muss mit den Feuermagiern in der Bergfestung sprechen!
+	AI_Output			(hero, self, "AMZ_900_NEEDTOFORTRESS_15_01"); //Musím mluvit s mágy ohně ve Skalní pevnosti!
+//	AI_Output			(self, hero, "AMZ_900_NEEDTOFORTRESS_16_02"); //Du bist ja ein Spassvogel, warum erzählst du mir das?
+	AI_Output			(self, hero, "AMZ_900_NEEDTOFORTRESS_16_02"); //Ty jsi ale vtipálek, proč mi to povídáš?
 
-	Info_AddChoice		(AMZ_900_Thora_NEEDTOFORTRESS, "Ich hörte, du bist eine Kundschafterin der Paladine!", AMZ_900_Thora_NEEDTOFORTRESS_NEAR );
-	Info_AddChoice		(AMZ_900_Thora_NEEDTOFORTRESS, "Kein Wort mehr Weib! Du wirst mich dorthinbringen.", AMZ_900_Thora_NEEDTOFORTRESS_INSULT );
-	Info_AddChoice		(AMZ_900_Thora_NEEDTOFORTRESS, "Diego schickt mich! Du sollst mich dorthinbringen.", AMZ_900_Thora_NEEDTOFORTRESS_DIEGO );
+//	Info_AddChoice		(AMZ_900_Thora_NEEDTOFORTRESS, "Ich hörte, du bist eine Kundschafterin der Paladine!", AMZ_900_Thora_NEEDTOFORTRESS_NEAR );
+	Info_AddChoice		(AMZ_900_Thora_NEEDTOFORTRESS, "Slyšel jsem, že pracuješ pro paladiny jako zvěd!", AMZ_900_Thora_NEEDTOFORTRESS_NEAR );
+//	Info_AddChoice		(AMZ_900_Thora_NEEDTOFORTRESS, "Kein Wort mehr Weib! Du wirst mich dorthinbringen.", AMZ_900_Thora_NEEDTOFORTRESS_INSULT );
+	Info_AddChoice		(AMZ_900_Thora_NEEDTOFORTRESS, "Už ani slovo, ženo! Dostaneš mě tam.", AMZ_900_Thora_NEEDTOFORTRESS_INSULT );
+//	Info_AddChoice		(AMZ_900_Thora_NEEDTOFORTRESS, "Diego schickt mich! Du sollst mich dorthinbringen.", AMZ_900_Thora_NEEDTOFORTRESS_DIEGO );
+	Info_AddChoice		(AMZ_900_Thora_NEEDTOFORTRESS, "Posílá mě Diego! Máš mě tam dostat.", AMZ_900_Thora_NEEDTOFORTRESS_DIEGO );
 };
 
 func void AMZ_900_Thora_NEEDTOFORTRESS_NEAR ()
 {
 	Info_ClearChoices	(AMZ_900_Thora_NEEDTOFORTRESS);
 
-	AI_Output			(hero, self, "AMZ_900_NEEDTOFORTRESS_NEAR_15_01"); //Ich hörte, du bist eine Kundschafterin der Paladine!
-	AI_Output			(self, hero, "AMZ_900_NEEDTOFORTRESS_NEAR_16_02"); //Scheint sich ja mittlerweile herumgesprochen zu haben.
-	AI_Output			(self, hero, "AMZ_900_NEEDTOFORTRESS_NEAR_16_03"); //Aber warum sollte ich dich zur Bergfestung bringen?
-	AI_Output			(hero, self, "AMZ_900_NEEDTOFORTRESS_NEAR_15_04"); //Es ist von grösster Wichtigkeit. Ich habe Informationen über die dämonische Bedrohung nach der die Feuermagier forschen.
+//	AI_Output			(hero, self, "AMZ_900_NEEDTOFORTRESS_NEAR_15_01"); //Ich hörte, du bist eine Kundschafterin der Paladine!
+	AI_Output			(hero, self, "AMZ_900_NEEDTOFORTRESS_NEAR_15_01"); //Slyšel jsem, že pracuješ pro paladiny jako zvěd!
+//	AI_Output			(self, hero, "AMZ_900_NEEDTOFORTRESS_NEAR_16_02"); //Scheint sich ja mittlerweile herumgesprochen zu haben.
+	AI_Output			(self, hero, "AMZ_900_NEEDTOFORTRESS_NEAR_16_02"); //Vypadá to, že už se to stihlo rozkřiknout.
+//	AI_Output			(self, hero, "AMZ_900_NEEDTOFORTRESS_NEAR_16_03"); //Aber warum sollte ich dich zur Bergfestung bringen?
+	AI_Output			(self, hero, "AMZ_900_NEEDTOFORTRESS_NEAR_16_03"); //Ale proč bych tě měla brát do Skalní pevnosti?
+//	AI_Output			(hero, self, "AMZ_900_NEEDTOFORTRESS_NEAR_15_04"); //Es ist von grösster Wichtigkeit. Ich habe Informationen über die dämonische Bedrohung nach der die Feuermagier forschen.
+	AI_Output			(hero, self, "AMZ_900_NEEDTOFORTRESS_NEAR_15_04"); //Je to mimořádně důležité. Mám informace o démoní hrozbě, po které se ohniví mágové pídí.
 	AI_StandUp			(self);
 	AI_TurnToNpc		(self, hero);
 	AI_TurnToNpc		(hero, self);
-	AI_Output			(self, hero, "AMZ_900_NEEDTOFORTRESS_NEAR_16_05"); //(überrascht) Was weist DU über die Dämonen?
-	AI_Output			(hero, self, "AMZ_900_NEEDTOFORTRESS_NEAR_15_06"); //Bringe mich zur Festung, es ist wichtig.
-	AI_Output			(self, hero, "AMZ_900_NEEDTOFORTRESS_NEAR_16_07"); //Nun gut, ich werde dich an den Wachen vorbeibringen, aber ich kann dir nicht alle Türen öffnen. Du wirst allerhand Überzeugungsarbeit leisten müssen.
+//	AI_Output			(self, hero, "AMZ_900_NEEDTOFORTRESS_NEAR_16_05"); //(überrascht) Was weist DU über die Dämonen?
+	AI_Output			(self, hero, "AMZ_900_NEEDTOFORTRESS_NEAR_16_05"); //(překvapená) Co TY víš o démonech?
+//	AI_Output			(hero, self, "AMZ_900_NEEDTOFORTRESS_NEAR_15_06"); //Bringe mich zur Festung, es ist wichtig.
+	AI_Output			(hero, self, "AMZ_900_NEEDTOFORTRESS_NEAR_15_06"); //Doveď mě do pevnosti, je to důležité.
+//	AI_Output			(self, hero, "AMZ_900_NEEDTOFORTRESS_NEAR_16_07"); //Nun gut, ich werde dich an den Wachen vorbeibringen, aber ich kann dir nicht alle Türen öffnen. Du wirst allerhand Überzeugungsarbeit leisten müssen.
+	AI_Output			(self, hero, "AMZ_900_NEEDTOFORTRESS_NEAR_16_07"); //No dobře, dostanu tě přes stráže, ale všude ti otevřít nemohu. Budeš muset každopádně muset hodně přesvědčovat.
 	B_LogEntry			(CH1_DemonThreat, "Ich konnte Thora dazu bringen, mich zur Bergfestung zu führen. Allerdings wird sie mich nur an den ersten Wachen vorbeibringen. Danach bin ich auf mich allein gestellt.");
 	subChapter			= CH2_THORA_CONVINCED;
 };
