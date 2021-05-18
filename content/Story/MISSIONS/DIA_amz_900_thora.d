@@ -1106,30 +1106,37 @@ func void AMZ_900_Thora_NEEDTOFORTRESS_NEAR ()
 	AI_Output			(hero, self, "AMZ_900_NEEDTOFORTRESS_NEAR_15_06"); //Doveď mě do pevnosti, je to důležité.
 //	AI_Output			(self, hero, "AMZ_900_NEEDTOFORTRESS_NEAR_16_07"); //Nun gut, ich werde dich an den Wachen vorbeibringen, aber ich kann dir nicht alle Türen öffnen. Du wirst allerhand Überzeugungsarbeit leisten müssen.
 	AI_Output			(self, hero, "AMZ_900_NEEDTOFORTRESS_NEAR_16_07"); //No dobře, dostanu tě přes stráže, ale všude ti otevřít nemohu. Budeš muset každopádně muset hodně přesvědčovat.
-	B_LogEntry			(CH1_DemonThreat, "Ich konnte Thora dazu bringen, mich zur Bergfestung zu führen. Allerdings wird sie mich nur an den ersten Wachen vorbeibringen. Danach bin ich auf mich allein gestellt.");
+//	B_LogEntry			(CH1_DemonThreat, "Ich konnte Thora dazu bringen, mich zur Bergfestung zu führen. Allerdings wird sie mich nur an den ersten Wachen vorbeibringen. Danach bin ich auf mich allein gestellt.");
+	B_LogEntry			(CH1_DemonThreat, "Dokázal jsem Thoru přesvědčit, aby mě vzala do Skalní pevnosti. Každopádně mě dostane jen přes první strážné. Potom se už musím spolehnout na sebe.");
 	subChapter			= CH2_THORA_CONVINCED;
 };
 
 func void AMZ_900_Thora_NEEDTOFORTRESS_DIEGO ()
 {
-	AI_Output			(hero, self, "AMZ_900_NEEDTOFORTRESS_DIEGO_15_01"); //Diego schickt mich! Du sollst mich dorthinbringen.
-	AI_Output			(self, hero, "AMZ_900_NEEDTOFORTRESS_DIEGO_16_02"); //Ja und?? Diego hat mir garnichts zu sagen!
+//	AI_Output			(hero, self, "AMZ_900_NEEDTOFORTRESS_DIEGO_15_01"); //Diego schickt mich! Du sollst mich dorthinbringen.
+	AI_Output			(hero, self, "AMZ_900_NEEDTOFORTRESS_DIEGO_15_01"); //Posílá mě Diego! Máš mě tam dostat.
+//	AI_Output			(self, hero, "AMZ_900_NEEDTOFORTRESS_DIEGO_16_02"); //Ja und?? Diego hat mir garnichts zu sagen!
+	AI_Output			(self, hero, "AMZ_900_NEEDTOFORTRESS_DIEGO_16_02"); //No a?? Diego mě nemá vůbec nic co říkat!
 };
 
 func void AMZ_900_Thora_NEEDTOFORTRESS_INSULT ()
 {
 	Info_ClearChoices	(AMZ_900_Thora_NEEDTOFORTRESS);
 
-	AI_Output			(hero, self, "AMZ_900_NEEDTOFORTRESS_INSULT_15_01"); //Kein Wort mehr Weib! Du wirst mich dorthinbringen.
+//	AI_Output			(hero, self, "AMZ_900_NEEDTOFORTRESS_INSULT_15_01"); //Kein Wort mehr Weib! Du wirst mich dorthinbringen.
+	AI_Output			(hero, self, "AMZ_900_NEEDTOFORTRESS_INSULT_15_01"); //Už ani slovo, ženo! Dostaneš mě tam.
 
 	if	self.aivar[AIV_HASDEFEATEDSC]
 	{
-		AI_Output		(self, hero, "AMZ_900_NEEDTOFORTRESS_INSULT_16_02"); //(seufzt) Sind die blauen Flecken, die ich dir verpasst habe etwa schon wieder verheilt?
-		AI_Output		(self, hero, "AMZ_900_NEEDTOFORTRESS_INSULT_16_03"); //Kein Problem, ich kann dir gerne ein paar neue verabreichen.
+//		AI_Output		(self, hero, "AMZ_900_NEEDTOFORTRESS_INSULT_16_02"); //(seufzt) Sind die blauen Flecken, die ich dir verpasst habe etwa schon wieder verheilt?
+		AI_Output		(self, hero, "AMZ_900_NEEDTOFORTRESS_INSULT_16_02"); //(vzdychne) Jsou už ty modřiny, kterými jsem tě nedávno ozdobila, zase uzdravené?
+//		AI_Output		(self, hero, "AMZ_900_NEEDTOFORTRESS_INSULT_16_03"); //Kein Problem, ich kann dir gerne ein paar neue verabreichen.
+		AI_Output		(self, hero, "AMZ_900_NEEDTOFORTRESS_INSULT_16_03"); //Žádný problém, ráda ti udělám pár nových.
 	}
 	else
 	{
-		AI_Output		(self, hero, "AMZ_900_NEEDTOFORTRESS_INSULT_16_04"); //(seufzt) Ich glaube du brauchst eine Lektion in guten Manieren.
+//		AI_Output		(self, hero, "AMZ_900_NEEDTOFORTRESS_INSULT_16_04"); //(seufzt) Ich glaube du brauchst eine Lektion in guten Manieren.
+		AI_Output		(self, hero, "AMZ_900_NEEDTOFORTRESS_INSULT_16_04"); //(vzdychne) Řekla bych, že potřebuješ lekci slušného chování.
 	};
 
 	AI_StopProcessInfos	(self);
@@ -1147,7 +1154,8 @@ instance AMZ_900_Thora_LETSGO		(C_INFO)
 	important	 = 	FALSE;
 	permanent	 = 	FALSE;
 
-	description	 = 	"Dann lass uns zur Bergfestung aufbrechen.";
+//	description	 = 	"Dann lass uns zur Bergfestung aufbrechen.";
+	description	 = 	"Tak se vydejme do Skalní pevnosti.";
 };
 
 func int AMZ_900_Thora_LETSGO_Condition ()
@@ -1161,12 +1169,18 @@ func int AMZ_900_Thora_LETSGO_Condition ()
 
 func void AMZ_900_Thora_LETSGO_Info ()
 {
-	AI_Output			(hero, self, "AMZ_900_LETSGO_15_01"); //Dann lass uns zur Bergfestung aufbrechen.
-	AI_Output			(self, hero, "AMZ_900_LETSGO_16_02"); //Ich bin bereit. Etwas Abwechslung ist mir ohnehin willkommen.
-	AI_Output			(self, hero, "AMZ_900_LETSGO_16_03"); //Sollten wir uns unterwegs verlieren, treffen wir uns wieder an der Arena, klar?
-	AI_Output			(hero, self, "AMZ_900_LETSGO_15_04"); //An der Arena! Klar!
-	AI_Output			(self, hero, "AMZ_900_LETSGO_16_05"); //Dann folge mir, wenn du es schaffst an mir dranzubleiben.
-	B_LogEntry			(CH1_DemonThreat, "Sollte wir auf dem Weg in die Bergfestung getrennt werden, treffen wir uns an der Arena im Alten Lager wieder.");
+//	AI_Output			(hero, self, "AMZ_900_LETSGO_15_01"); //Dann lass uns zur Bergfestung aufbrechen.
+	AI_Output			(hero, self, "AMZ_900_LETSGO_15_01"); //Tak se vydejme do Skalní pevnosti.
+//	AI_Output			(self, hero, "AMZ_900_LETSGO_16_02"); //Ich bin bereit. Etwas Abwechslung ist mir ohnehin willkommen.
+	AI_Output			(self, hero, "AMZ_900_LETSGO_16_02"); //Jsem připravena. Beztak uvítám nějakou změnu.
+//	AI_Output			(self, hero, "AMZ_900_LETSGO_16_03"); //Sollten wir uns unterwegs verlieren, treffen wir uns wieder an der Arena, klar?
+	AI_Output			(self, hero, "AMZ_900_LETSGO_16_03"); //Kdybychom se jeden druhému ztratili, setkáme se znovu u arény, jasné?
+//	AI_Output			(hero, self, "AMZ_900_LETSGO_15_04"); //An der Arena! Klar!
+	AI_Output			(hero, self, "AMZ_900_LETSGO_15_04"); //U arény! Jasné!
+//	AI_Output			(self, hero, "AMZ_900_LETSGO_16_05"); //Dann folge mir, wenn du es schaffst an mir dranzubleiben.
+	AI_Output			(self, hero, "AMZ_900_LETSGO_16_05"); //Tak pojď za mnou, jestli teda dokážeš se mnou držet krok.
+//	B_LogEntry			(CH1_DemonThreat, "Sollte wir auf dem Weg in die Bergfestung getrennt werden, treffen wir uns an der Arena im Alten Lager wieder.");
+	B_LogEntry			(CH1_DemonThreat, "Kdybychom se na cestě do Skalní pevnosti rozdělili, potkáme se znovu u arény ve Starém táboře..");
 
 	AI_StopProcessInfos	(self);
 	B_SetAttitude		(self, ATT_FRIENDLY);
@@ -1189,7 +1203,8 @@ instance AMZ_900_Thora_ONWAYTOBF		(C_INFO)
 	important	 = 	FALSE;
 	permanent	 = 	TRUE;
 
-	description	 = 	"Von mir aus kanns weiter gehen!";
+//	description	 = 	"Von mir aus kanns weiter gehen!";
+	description	 = 	"Pokud jde o mě, můžeme pokračovat!";
 };
 
 func int AMZ_900_Thora_ONWAYTOBF_Condition ()
@@ -1203,8 +1218,10 @@ func int AMZ_900_Thora_ONWAYTOBF_Condition ()
 
 func void AMZ_900_Thora_ONWAYTOBF_Info ()
 {
-	AI_Output			(hero, self, "AMZ_900_ONWAYTOBF_15_01"); //Von mir aus kanns weiter gehen!
-	AI_Output			(self, hero, "AMZ_900_ONWAYTOBF_16_02"); //Gut! Wir sind bald da!
+//	AI_Output			(hero, self, "AMZ_900_ONWAYTOBF_15_01"); //Von mir aus kanns weiter gehen!
+	AI_Output			(hero, self, "AMZ_900_ONWAYTOBF_15_01"); //Pokud jde o mě, můžeme pokračovat!
+//	AI_Output			(self, hero, "AMZ_900_ONWAYTOBF_16_02"); //Gut! Wir sind bald da!
+	AI_Output			(self, hero, "AMZ_900_ONWAYTOBF_16_02"); //Dobře! Brzo už tam budeme!
 	AI_StopProcessInfos	(self);
 };
 
@@ -1231,8 +1248,10 @@ func int AMZ_900_Thora_KILLEDSCAV_Condition ()
 
 func void AMZ_900_Thora_KILLEDSCAV_Info ()
 {
-	AI_Output			(self, hero, "AMZ_900_KILLEDSCAV_16_01"); //Diese Scavanger sind wirklich lästig.
-	AI_Output			(self, hero, "AMZ_900_KILLEDSCAV_16_02"); //Die vermehren sich schneller, als man sie zu Essbarem verarbeiten kann.
+//	AI_Output			(self, hero, "AMZ_900_KILLEDSCAV_16_01"); //Diese Scavanger sind wirklich lästig.
+	AI_Output			(self, hero, "AMZ_900_KILLEDSCAV_16_01"); //Tihle mrchožrouti jsou vážně otravní.
+//	AI_Output			(self, hero, "AMZ_900_KILLEDSCAV_16_02"); //Die vermehren sich schneller, als man sie zu Essbarem verarbeiten kann.
+	AI_Output			(self, hero, "AMZ_900_KILLEDSCAV_16_02"); //Množí se rychleji, než se z nich dá udělat něco stravitelného.
 	AI_StopProcessInfos	(self);
 
 	B_GuidePC			(self, "GuideToBF", TOBF_DEMONSCAV);
@@ -1263,11 +1282,16 @@ func int AMZ_900_Thora_KILLEDDEMONSCAV_Condition ()
 
 func void AMZ_900_Thora_KILLEDDEMONSCAV_Info ()
 {
-	AI_Output			(self, hero, "AMZ_900_KILLEDDEMONSCAV_16_01"); //Verdammte dämonische Brut!
-	AI_Output			(hero, self, "AMZ_900_KILLEDDEMONSCAV_15_02"); //Was waren das für monströse Scavenger?
-	AI_Output			(self, hero, "AMZ_900_KILLEDDEMONSCAV_16_03"); //Die Magier sagen, dies seien von Dämonen besessene Tiere.
-	AI_Output			(self, hero, "AMZ_900_KILLEDDEMONSCAV_16_04"); //Viel stärker und widerstandsfähiger als normale Exemplare ihrer Art.
-	AI_Output			(self, hero, "AMZ_900_KILLEDDEMONSCAV_16_05"); //Sie sollten bald was dagegen unternehmen, sonst werden sie uns noch überrollen.
+//	AI_Output			(self, hero, "AMZ_900_KILLEDDEMONSCAV_16_01"); //Verdammte dämonische Brut!
+	AI_Output			(self, hero, "AMZ_900_KILLEDDEMONSCAV_16_01"); //Zatracená démoní mláďata!
+//	AI_Output			(hero, self, "AMZ_900_KILLEDDEMONSCAV_15_02"); //Was waren das für monströse Scavenger?
+	AI_Output			(hero, self, "AMZ_900_KILLEDDEMONSCAV_15_02"); //Co to bylo za obludné mrchožrouty?
+//	AI_Output			(self, hero, "AMZ_900_KILLEDDEMONSCAV_16_03"); //Die Magier sagen, dies seien von Dämonen besessene Tiere.
+	AI_Output			(self, hero, "AMZ_900_KILLEDDEMONSCAV_16_03"); //Mágové říkají, že tohle jsou démony posedlá zvířata.
+//	AI_Output			(self, hero, "AMZ_900_KILLEDDEMONSCAV_16_04"); //Viel stärker und widerstandsfähiger als normale Exemplare ihrer Art.
+	AI_Output			(self, hero, "AMZ_900_KILLEDDEMONSCAV_16_04"); //Mnohem silnější a odolnější než běžní jedinci jejich druhu.
+//	AI_Output			(self, hero, "AMZ_900_KILLEDDEMONSCAV_16_05"); //Sie sollten bald was dagegen unternehmen, sonst werden sie uns noch überrollen.
+	AI_Output			(self, hero, "AMZ_900_KILLEDDEMONSCAV_16_05"); //Měli by s nimi rychle něco udělat, jinak nás tu ještě zavalí.
 
 	B_GuidePC			(self, "GuideToBF", TOBF_RECCETOWER);
 };
@@ -1283,7 +1307,8 @@ instance AMZ_900_Thora_WHATBRIDGE		(C_INFO)
 	important	 = 	FALSE;
 	permanent	 = 	FALSE;
 
-	description	 = 	"Was ist auf der anderen Seite der Brücke dort hinten.";
+//	description	 = 	"Was ist auf der anderen Seite der Brücke dort hinten.";
+	description	 = 	"Co je na druhé straně toho mostu tamhle?";
 };
 
 func int AMZ_900_Thora_WHATBRIDGE_Condition ()
@@ -1297,12 +1322,18 @@ func int AMZ_900_Thora_WHATBRIDGE_Condition ()
 
 func void AMZ_900_Thora_WHATBRIDGE_Info ()
 {
-	AI_Output			(hero, self, "AMZ_900_WHATBRIDGE_15_01"); //Was ist auf der anderen Seite der Brücke dort hinten.
-	AI_Output			(self, hero, "AMZ_900_WHATBRIDGE_16_02"); //Ein kleines Höhlensystem. Dort soll früher eine ganze Horde schwarzer Goblins gehaust haben.
-	AI_Output			(self, hero, "AMZ_900_WHATBRIDGE_16_03"); //Aber hüte dich vor der Höhle.
-	AI_Output			(hero, self, "AMZ_900_WHATBRIDGE_15_04"); //Warum?
-	AI_Output			(self, hero, "AMZ_900_WHATBRIDGE_16_05"); //Die untoten Gebeine dieser heimtückischen Geschöpfe streifen noch immer durch die Höhlenstollen.
-	AI_Output			(self, hero, "AMZ_900_WHATBRIDGE_16_06"); //Nun aber weiter.
+//	AI_Output			(hero, self, "AMZ_900_WHATBRIDGE_15_01"); //Was ist auf der anderen Seite der Brücke dort hinten.
+	AI_Output			(hero, self, "AMZ_900_WHATBRIDGE_15_01"); //Co je na druhé straně toho mostu tamhle?
+//	AI_Output			(self, hero, "AMZ_900_WHATBRIDGE_16_02"); //Ein kleines Höhlensystem. Dort soll früher eine ganze Horde schwarzer Goblins gehaust haben.
+	AI_Output			(self, hero, "AMZ_900_WHATBRIDGE_16_02"); //Malý systém jeskyň. Dříve se tam zabydlela celá horda černých goblinů.
+//	AI_Output			(self, hero, "AMZ_900_WHATBRIDGE_16_03"); //Aber hüte dich vor der Höhle.
+	AI_Output			(self, hero, "AMZ_900_WHATBRIDGE_16_03"); //Ale dej si na tu jeskyni pozor.
+//	AI_Output			(hero, self, "AMZ_900_WHATBRIDGE_15_04"); //Warum?
+	AI_Output			(hero, self, "AMZ_900_WHATBRIDGE_15_04"); //Proč?
+//	AI_Output			(self, hero, "AMZ_900_WHATBRIDGE_16_05"); //Die untoten Gebeine dieser heimtückischen Geschöpfe streifen noch immer durch die Höhlenstollen.
+	AI_Output			(self, hero, "AMZ_900_WHATBRIDGE_16_05"); //Nemrtví kostlivci těch zákeřných tvorů stále bloudí jeskynními tunely.
+//	AI_Output			(self, hero, "AMZ_900_WHATBRIDGE_16_06"); //Nun aber weiter.
+	AI_Output			(self, hero, "AMZ_900_WHATBRIDGE_16_06"); //Teď ale dále.
 
 	AI_StopProcessInfos	(self);
 };
@@ -1330,13 +1361,20 @@ func int AMZ_900_Thora_RECCETOWER_Condition ()
 
 func void AMZ_900_Thora_RECCETOWER_Info ()
 {
-	AI_Output			(self, hero, "AMZ_900_RECCETOWER_16_01"); //Hier ist einer unserer Aussenposten.
-	AI_Output			(self, hero, "AMZ_900_RECCETOWER_16_02"); //Die Kundschafter halten nach Orks Ausschau und melden regelmässig alle Aktivitäten an die Paladine in der Bergfestung.
-	AI_Output			(hero, self, "AMZ_900_RECCETOWER_15_03"); //Euch scheint nichts zu entgehen!
-	AI_Output			(self, hero, "AMZ_900_RECCETOWER_16_04"); //Garwog hat noch mehr Kundschafter hier im Tal, auch ich bin einer von ihnen.
-	AI_Output			(hero, self, "AMZ_900_RECCETOWER_15_05"); //Wer ist Garwog?
-	AI_Output			(self, hero, "AMZ_900_RECCETOWER_16_06"); //Er ist der Paladin, der für die Kundschafter und Aussenposten verantwortlich ist.
-	AI_Output			(self, hero, "AMZ_900_RECCETOWER_16_07"); //Mein Auftraggeber, wenn du so willst.
+//	AI_Output			(self, hero, "AMZ_900_RECCETOWER_16_01"); //Hier ist einer unserer Aussenposten.
+	AI_Output			(self, hero, "AMZ_900_RECCETOWER_16_01"); //Tady je jedna z našich základen.
+//	AI_Output			(self, hero, "AMZ_900_RECCETOWER_16_02"); //Die Kundschafter halten nach Orks Ausschau und melden regelmässig alle Aktivitäten an die Paladine in der Bergfestung.
+	AI_Output			(self, hero, "AMZ_900_RECCETOWER_16_02"); //Zvědové dávají pozor na skřety a pravidelně hlásí všechny jejich aktivity paladinům v pevnosti.
+//	AI_Output			(hero, self, "AMZ_900_RECCETOWER_15_03"); //Euch scheint nichts zu entgehen!
+	AI_Output			(hero, self, "AMZ_900_RECCETOWER_15_03"); //Vám prostě nic neunikne!
+//	AI_Output			(self, hero, "AMZ_900_RECCETOWER_16_04"); //Garwog hat noch mehr Kundschafter hier im Tal, auch ich bin einer von ihnen.
+	AI_Output			(self, hero, "AMZ_900_RECCETOWER_16_04"); //Garwog má ještě více zvědů v údolí, i já jsem jedna z nich.
+//	AI_Output			(hero, self, "AMZ_900_RECCETOWER_15_05"); //Wer ist Garwog?
+	AI_Output			(hero, self, "AMZ_900_RECCETOWER_15_05"); //Kdo je Garwog?
+//	AI_Output			(self, hero, "AMZ_900_RECCETOWER_16_06"); //Er ist der Paladin, der für die Kundschafter und Aussenposten verantwortlich ist.
+	AI_Output			(self, hero, "AMZ_900_RECCETOWER_16_06"); //Je to paladin, který je zodpovědný za zvědy a základny.
+//	AI_Output			(self, hero, "AMZ_900_RECCETOWER_16_07"); //Mein Auftraggeber, wenn du so willst.
+	AI_Output			(self, hero, "AMZ_900_RECCETOWER_16_07"); //Ten, co mi dává úkoly, jestli to chceš takhle.
 
 	AI_StopProcessInfos	(self);
 
@@ -1366,12 +1404,18 @@ func int AMZ_900_Thora_OUTERGATE_Condition ()
 
 func void AMZ_900_Thora_OUTERGATE_Info ()
 {
-	AI_Output			(self, hero, "AMZ_900_OUTERGATE_16_01"); //Ab hier beginnt das abgeriegelte Gebiet der Felsenfestung. Nur Gefolgsleute des Königs dürfen es betreten.
-	AI_Output			(hero, self, "AMZ_900_OUTERGATE_15_02"); //Diese Torwachen dort... sind Soldaten des Königs ???
-	AI_Output			(self, hero, "AMZ_900_OUTERGATE_16_03"); //(zögerlich) Nicht wirklich... genau genommen sind es nur Hilfstruppen.
-	AI_Output			(self, hero, "AMZ_900_OUTERGATE_16_04"); //Billig angeworben und hastig ausgebildet, um den ersten Ansturm der Orks zu bremsen.
-	AI_Output			(self, hero, "AMZ_900_OUTERGATE_16_05"); //Sie wissen das selbst aber sie hören es nicht gerne. Also sprich sie nicht darauf an, wenn du Ärger vermeiden willst.
-	AI_Output			(hero, self, "AMZ_900_OUTERGATE_15_06"); //(zu sich selbst, sarkastisch) Das wird ein richtiger Spass werden.
+//	AI_Output			(self, hero, "AMZ_900_OUTERGATE_16_01"); //Ab hier beginnt das abgeriegelte Gebiet der Felsenfestung. Nur Gefolgsleute des Königs dürfen es betreten.
+	AI_Output			(self, hero, "AMZ_900_OUTERGATE_16_01"); //Zde začíná uzavřené území Skalní pevnosti. Jenom následovníci krále tam mohou vstoupit.
+//	AI_Output			(hero, self, "AMZ_900_OUTERGATE_15_02"); //Diese Torwachen dort... sind Soldaten des Königs ???
+	AI_Output			(hero, self, "AMZ_900_OUTERGATE_15_02"); //Ti strážní u brány támhle... jsou vojáci krále???
+//	AI_Output			(self, hero, "AMZ_900_OUTERGATE_16_03"); //(zögerlich) Nicht wirklich... genau genommen sind es nur Hilfstruppen.
+	AI_Output			(self, hero, "AMZ_900_OUTERGATE_16_03"); //(váhavě) Ne tak docela... přísně vzato to jsou jen pomocná vojska.
+//	AI_Output			(self, hero, "AMZ_900_OUTERGATE_16_04"); //Billig angeworben und hastig ausgebildet, um den ersten Ansturm der Orks zu bremsen.
+	AI_Output			(self, hero, "AMZ_900_OUTERGATE_16_04"); //Najatí zalevno a narychlo vycvičení, aby zbrzdili první skřetí útok.
+//	AI_Output			(self, hero, "AMZ_900_OUTERGATE_16_05"); //Sie wissen das selbst aber sie hören es nicht gerne. Also sprich sie nicht darauf an, wenn du Ärger vermeiden willst.
+	AI_Output			(self, hero, "AMZ_900_OUTERGATE_16_05"); //Sami to dobře vědí, ale neslyší to rádi. Takže s nimi o tom nemluv, pokud se chceš vyhnout hádkám.
+//	AI_Output			(hero, self, "AMZ_900_OUTERGATE_15_06"); //(zu sich selbst, sarkastisch) Das wird ein richtiger Spass werden.
+	AI_Output			(hero, self, "AMZ_900_OUTERGATE_15_06"); //(sám k sobě, sarkasticky) To by byla vážně sranda.
 
 	AI_StopProcessInfos	(self);
 
@@ -1401,8 +1445,10 @@ func int AMZ_900_Thora_SQUARE_Condition ()
 
 func void AMZ_900_Thora_SQUARE_Info ()
 {
-	AI_Output			(self, hero, "AMZ_900_SQUARE_16_01"); //Hier sind wir. Weiter kann ich dich nicht bringen, ab jetzt bist du auf dich allein gestellt.
-	AI_Output			(self, hero, "AMZ_900_SQUARE_16_02"); //Ich bin unten bei Garwog, meinen Bericht erstatten. du kannst mich dort finden, wenn du mich brauchst.
+//	AI_Output			(self, hero, "AMZ_900_SQUARE_16_01"); //Hier sind wir. Weiter kann ich dich nicht bringen, ab jetzt bist du auf dich allein gestellt.
+	AI_Output			(self, hero, "AMZ_900_SQUARE_16_01"); //A jsme tu. Dále už tě dostat nemohu, od teď jsi odkázán sám na sebe.
+//	AI_Output			(self, hero, "AMZ_900_SQUARE_16_02"); //Ich bin unten bei Garwog, meinen Bericht erstatten. du kannst mich dort finden, wenn du mich brauchst.
+	AI_Output			(self, hero, "AMZ_900_SQUARE_16_02"); //Budu dole u Garwoga, abych mu podala hlášení. Kdybys mě potřeboval, tak mě tam najdeš.
 
 	B_LeavePC			(self, "ReportToGarwog");
 	B_ExchangeRoutine	(PAL_1003_Garwog, "ReportFromThora");
