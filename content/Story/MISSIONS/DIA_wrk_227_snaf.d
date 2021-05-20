@@ -1,5 +1,5 @@
 // This is a hack variable to prevent a bug: After game load the .permamnent attribute of C_INFO class is not saved, so this has to be fixed with external variable 
-const int BF_DAILYRAGOUT;  // WRK_227_Snaf_DAILYRAGOUT.permanent
+const int BF_DAILYRAGOUT = TRUE;  // WRK_227_Snaf_DAILYRAGOUT.permanent
 
 ///////////////////////////////////////////////////////////////////////
 //	Info EXIT

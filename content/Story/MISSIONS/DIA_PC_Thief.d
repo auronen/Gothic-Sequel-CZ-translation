@@ -925,7 +925,7 @@ instance  PC_Thief_BOW2SUCCESS (C_INFO)
 	important		= 0;
 	permanent		= 0;
 //	description		= "Ich hab das Fleisch der Molerats";
-	description		= "Mám maso z krysokrtů.";
+	description		= "Mám to krysokrtí maso.";
 };
 
 FUNC int  PC_Thief_BOW2SUCCESS_Condition()
@@ -943,7 +943,7 @@ FUNC int  PC_Thief_BOW2SUCCESS_Condition()
 FUNC void  PC_Thief_BOW2SUCCESS_Info()
 {
 //	AI_Output			(other, self,"PC_Thief_BOW2SUCCESS_Info_15_01"); //Ich hab das Fleisch der Molerats
-	AI_Output			(other, self,"PC_Thief_BOW2SUCCESS_Info_15_01"); //Mám maso z krysokrtů.
+	AI_Output			(other, self,"PC_Thief_BOW2SUCCESS_Info_15_01"); //Mám to krysokrtí maso.
 //	AI_Output			(self, other,"PC_Thief_BOW2SUCCESS_Info_11_02"); //Gute Arbeit. Du bist schon wieder besser in Form!
 	AI_Output			(self, other,"PC_Thief_BOW2SUCCESS_Info_11_02"); //Dobrá práce. Už jsi zase v lepší formě!
 //	AI_Output			(other, self,"PC_Thief_BOW2SUCCESS_Info_15_03"); //Wenn ich mit meinem Trainig fertig bin, kann ich überall als Kammerjäger anheuern.
