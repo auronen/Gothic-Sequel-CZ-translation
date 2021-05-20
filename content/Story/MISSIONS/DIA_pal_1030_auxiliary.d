@@ -44,10 +44,14 @@ FUNC VOID PAL_1030_FirstWarn_Info()
 {
 	PrintGlobals	(PD_MISSION);
 
-	AI_Output (self, hero,"PAL_1030_FirstWarn_Info_07_01"); //HEH DU DA!
-	AI_Output (hero, self,"PAL_1030_FirstWarn_Info_15_02"); //Äh ich?
-	AI_Output (self, hero,"PAL_1030_FirstWarn_Info_07_03"); //Du gehörst nicht zum Gefolge des Königs!
-	AI_Output (self, hero,"PAL_1030_FirstWarn_Info_07_04"); //Also ziehe Leine, sonst mach ich dir Beine!
+//	AI_Output (self, hero,"PAL_1030_FirstWarn_Info_07_01"); //HEH DU DA!
+	AI_Output (self, hero,"PAL_1030_FirstWarn_Info_07_01"); //HEJ, TY TAM!
+//	AI_Output (hero, self,"PAL_1030_FirstWarn_Info_15_02"); //Äh ich?
+	AI_Output (hero, self,"PAL_1030_FirstWarn_Info_15_02"); //Uh, já?
+//	AI_Output (self, hero,"PAL_1030_FirstWarn_Info_07_03"); //Du gehörst nicht zum Gefolge des Königs!
+	AI_Output (self, hero,"PAL_1030_FirstWarn_Info_07_03"); //Nepatříš ke králově družině!
+//	AI_Output (self, hero,"PAL_1030_FirstWarn_Info_07_04"); //Also ziehe Leine, sonst mach ich dir Beine!
+	AI_Output (self, hero,"PAL_1030_FirstWarn_Info_07_04"); //Být tebou, tak zmiznu, než ti jednu líznu!
 
 	hero.aivar[AIV_LASTDISTTOWP] 		= Npc_GetDistToWP(hero,Pal_1030_CHECKPOINT);
 	hero.aivar[AIV_GUARDPASSAGE_STATUS]	= AIV_GPS_FIRSTWARN;
@@ -83,8 +87,10 @@ FUNC INT PAL_1030_LastWarn_Condition()
 
 func int PAL_1030_LastWarn_Info()
 {
-	AI_Output (self, hero,"PAL_1030_LastWarn_07_01"); 		//KEINEN SCHRITT WEITER!
-	AI_Output (self, hero,"PAL_1030_LastWarn_07_02"); 		//Oder du siehst die Radieschen von unten!
+//	AI_Output (self, hero,"PAL_1030_LastWarn_07_01"); 		//KEINEN SCHRITT WEITER!
+	AI_Output (self, hero,"PAL_1030_LastWarn_07_01"); 		//ANI O KROK DÁLE!
+//	AI_Output (self, hero,"PAL_1030_LastWarn_07_02"); 		//Oder du siehst die Radieschen von unten!
+	AI_Output (self, hero,"PAL_1030_LastWarn_07_02"); 		//Nebo budeš čuchat ke kytkám zespoda!
 
 	hero.aivar[AIV_LASTDISTTOWP] 		= Npc_GetDistToWP (hero,Pal_1030_CHECKPOINT);
 	hero.aivar[AIV_GUARDPASSAGE_STATUS]	= AIV_GPS_LASTWARN;
@@ -181,7 +187,8 @@ instance PAL_1030_Auxiliary_WANTIN		(C_INFO)
 	important	 = 	FALSE;
 	permanent	 = 	TRUE;
 
-	description	 = 	"Ich möchte in die Festung!";
+//	description	 = 	"Ich möchte in die Festung!";
+	description	 = 	"Chci jít do pevnosti!";
 };
 
 func int PAL_1030_Auxiliary_WANTIN_Condition ()
@@ -194,8 +201,10 @@ func int PAL_1030_Auxiliary_WANTIN_Condition ()
 
 func void PAL_1030_Auxiliary_WANTIN_Info ()
 {
-	AI_Output			(hero, self, "PAL_1030_WANTIN_15_01"); //Ich möchte in die Festung!
-	AI_Output			(self, hero, "PAL_1030_WANTIN_07_02"); //Sprich mit Osraed, er hat am Tor das Sagen!
+//	AI_Output			(hero, self, "PAL_1030_WANTIN_15_01"); //Ich möchte in die Festung!
+	AI_Output			(hero, self, "PAL_1030_WANTIN_15_01"); //Chci jít do pevnosti!
+//	AI_Output			(self, hero, "PAL_1030_WANTIN_07_02"); //Sprich mit Osraed, er hat am Tor das Sagen!
+	AI_Output			(self, hero, "PAL_1030_WANTIN_07_02"); //Běž za Osraedem, ten má na starosti bránu!
 	AI_StopProcessInfos	(self);
 };
 
@@ -237,9 +246,12 @@ func int PAL_1030_Auxiliary_HALTTHORA_Condition ()
 
 func void PAL_1030_Auxiliary_HALTTHORA_Info ()
 {
-	AI_Output			(self, hero, "PAL_1030_HALTTHORA_07_01"); //HEH DU DA!
-	AI_Output			(self, hero, "PAL_1030_HALTTHORA_07_02"); //(misstrauisch) Thoras Kamerad, wie?
-	AI_Output			(self, hero, "PAL_1030_HALTTHORA_07_03"); //OK, kannst passieren!
+//	AI_Output			(self, hero, "PAL_1030_HALTTHORA_07_01"); //HEH DU DA!
+	AI_Output			(self, hero, "PAL_1030_HALTTHORA_07_01"); //HEJ, TY TAM!
+//	AI_Output			(self, hero, "PAL_1030_HALTTHORA_07_02"); //(misstrauisch) Thoras Kamerad, wie?
+	AI_Output			(self, hero, "PAL_1030_HALTTHORA_07_02"); //(nedůvěřivě) Thořin kamarád, tak?
+//	AI_Output			(self, hero, "PAL_1030_HALTTHORA_07_03"); //OK, kannst passieren!
+	AI_Output			(self, hero, "PAL_1030_HALTTHORA_07_03"); //OK, můžeš dál!
 	AI_StopProcessInfos	(self);
 };
 
