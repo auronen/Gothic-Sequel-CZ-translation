@@ -410,7 +410,8 @@ instance MOB_BOW (c_Info)
 	information		= MOB_BOWDialog_Info;
 	important		= 0;
 	permanent		= 1;
-	description		= "Kurzbögen";
+//	description		= "Kurzbögen";
+	description		= "Krátké luky";
 };
 
 func VOID MOB_BOWDialog_Info()
@@ -558,7 +559,8 @@ instance MOB_BOW_LongBow (c_Info)
 	information		= MOB_BOW_LongBow_Info;
 	important		= 0;
 	permanent		= 1;
-	description		= "Langbögen";
+//	description		= "Langbögen";
+	description		= "Dlouhé luky";
 };
 
 func VOID MOB_BOW_LongBow_Info()
@@ -615,7 +617,8 @@ instance MOB_BOW_crossBow (c_Info)
 	information		= MOB_BOW_crossBow_Info;
 	important		= 0;
 	permanent		= 1;
-	description		= "Armbrüste";
+//	description		= "Armbrüste";
+	description		= "Kuše";
 };
 
 func VOID MOB_BOW_crossBow_Info()

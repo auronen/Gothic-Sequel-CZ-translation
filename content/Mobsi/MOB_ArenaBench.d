@@ -179,7 +179,8 @@ instance MOB_ARENABENCH1 (c_Info)
 	information		= MOB_ARENABENCH_GotoFight_Info;
 	important		= FALSE;
 	permanent		= TRUE;
-	description		= "(bis zum Kampf warten)";
+//	description		= "(bis zum Kampf warten)";
+	description		= "(Počkat na začátek zápasu)";
 };
 
 func int MOB_ARENABENCH_GotoFight_Condition()
@@ -203,6 +204,7 @@ func void MOB_ARENABENCH_GotoFight_Info()
 	hero.attribute[ATR_HITPOINTS] = hero.attribute[ATR_HITPOINTS_MAX];
 	hero.attribute[ATR_MANA] = hero.attribute[ATR_MANA_MAX];
 
-	PrintScreen	("Du bist hochkonzentriert und bereit für den Kampf!", -1,-1,FONT_OLD_BIG,3);
+//	PrintScreen	("Du bist hochkonzentriert und bereit für den Kampf!", -1,-1,FONT_OLD_BIG,3);
+	PrintScreen	("Jsi soustředěný a připravený na souboj!", -1,-1,FONT_OLD_BIG,3);
 };
 

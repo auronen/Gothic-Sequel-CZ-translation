@@ -716,12 +716,14 @@ instance MOB_CAULDRON_Spoil (c_Info)
 	information		= MOB_Cauldron_Spoil_Info;
 	important		= 0;
 	permanent		= 0;
-	description		= "(Müffelsalz hineinrühren)";
+//	description		= "(Müffelsalz hineinrühren)";
+	description		= "(Přimíchat smradlavou sůl)";
 };
 
 func VOID MOB_Cauldron_Spoil_Info()
 {
-	PrintScreen			("Müffelsalz eingerührt!", -1, _YPOS_MESSAGE_PRODUCE, FONT_OLD_SMALL, _TIME_MESSAGE_PRODUCE);
+//	PrintScreen			("Müffelsalz eingerührt!", -1, _YPOS_MESSAGE_PRODUCE, FONT_OLD_SMALL, _TIME_MESSAGE_PRODUCE);
+	PrintScreen			("Přimíchal jsi smradlavou sůl!", -1, _YPOS_MESSAGE_PRODUCE, FONT_OLD_SMALL, _TIME_MESSAGE_PRODUCE);
 
 	Npc_RemoveInvItem	(hero, ItMi_StinkingSalt);
 	Halvor_StewSalted = TRUE;

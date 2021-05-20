@@ -16,7 +16,7 @@ func void PC_Sleep (var int t)
 		Wld_SetTime	(t,00);
 	};
 
-	PrintScreen	("Du hast geschlafen und bist ausgeruht!", -1,-1,FONT_OLD_BIG,3);
+	PrintScreen	("Spal jsi dobře a cítíš se lépe!", -1,-1,FONT_OLD_BIG,3);
 	hero.attribute[ATR_HITPOINTS] = hero.attribute[ATR_HITPOINTS_MAX];
 	hero.attribute[ATR_MANA] = hero.attribute[ATR_MANA_MAX];
 
@@ -76,7 +76,8 @@ INSTANCE PC_SleepTime_Morning (C_INFO)
 	information		= PC_SleepTime_Morning_Info;
 	important		= 0;
 	permanent		= 1;
-	description		= "Bis zum nächsten Morgen schlafen";
+//	description		= "Bis zum nächsten Morgen schlafen";
+	description		= "Spát až do příštího rána";
 };
 
 FUNC INT PC_SleepTime_Morning_Condition()
@@ -101,7 +102,8 @@ INSTANCE PC_SleepTime_Noon (C_INFO)
 	information		= PC_SleepTime_Noon_Info;
 	important		= 0;
 	permanent		= 1;
-	description		= "Bis Mittags schlafen";
+//	description		= "Bis Mittags schlafen";
+	description		= "Spát až do odpoledne";
 };
 
 FUNC INT PC_SleepTime_Noon_Condition()
@@ -126,7 +128,8 @@ INSTANCE PC_SleepTime_Evening (C_INFO)
 	information		= PC_SleepTime_Evening_Info;
 	important		= 0;
 	permanent		= 1;
-	description		= "Bis zum nächsten Abend schlafen";
+//	description		= "Bis zum nächsten Abend schlafen";
+	description		= "Spát až do večera";
 };
 
 FUNC INT PC_SleepTime_Evening_Condition()
@@ -151,7 +154,8 @@ instance PC_SleepTime_Midnight (C_INFO)
 	information		= PC_SleepTime_Midnight_Info;
 	important		= 0;
 	permanent		= 1;
-	description		= "Bis Mitternacht schlafen";
+//	description		= "Bis Mitternacht schlafen";
+	description		= "Spát až do půlnoci";
 };
 
 FUNC INT PC_SleepTime_Midnight_Condition()

@@ -207,7 +207,8 @@ instance MOB_Stomper (c_Info)
 	information		= MOB_StomperDialog_Info;
 	important		= 0;
 	permanent		= 1;
-	description		= "Grünen Novicen rollen";
+//	description		= "Grünen Novicen rollen";
+	description		= "Připravit Zeleného novice";
 };
 
 func VOID MOB_StomperDialog_Info()
@@ -228,7 +229,8 @@ instance MOB_Stomper_BlackWise (c_Info)
 	information		= MOB_Stomper_BlackWiseDialog_Info;
 	important		= 0;
 	permanent		= 1;
-	description		= "Schwarzen Weisen rollen";
+//	description		= "Schwarzen Weisen rollen";
+	description		= "Připravit Severní soumrak";
 };
 
 func void MOB_Stomper_BlackWiseDialog_Info ()
@@ -247,7 +249,8 @@ instance MOB_Stomper_DreamCall (c_Info)
 	information		= MOB_Stomper_DreamCallDialog_Info;
 	important		= 0;
 	permanent		= 1;
-	description		= "Traumruf rollen";
+//	description		= "Traumruf rollen";
+	description		= "Připravit Přivolávač snů";
 };
 
 func void MOB_Stomper_DreamCallDialog_Info ()

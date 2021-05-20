@@ -275,7 +275,8 @@ instance MOB_WOOD_1 (c_Info)
 	information		= MOB_WOOD_1_Info;
 	important		= FALSE;
 	permanent		= TRUE;
-	description		= "1 Holz schneiden";
+//	description		= "1 Holz schneiden";
+	description		= "Uříznout 1 dřevo";
 };
 
 func VOID MOB_WOOD_1_Info()
@@ -301,7 +302,8 @@ instance MOB_WOOD_5 (c_Info)
 	information		= MOB_WOOD_5_Info;
 	important		= FALSE;
 	permanent		= TRUE;
-	description		= "5 Holz schneiden";
+//	description		= "5 Holz schneiden";
+	description		= "Uříznout 5 dřeva";
 };
 
 func VOID MOB_WOOD_5_Info()
@@ -331,7 +333,8 @@ instance MOB_WOOD_10 (c_Info)
 	information		= MOB_WOOD_10_Info;
 	important		= FALSE;
 	permanent		= TRUE;
-	description		= "10 Holz schneiden";
+//	description		= "10 Holz schneiden";
+	description		= "Uříznout 10 dřeva";
 };
 
 func VOID MOB_WOOD_10_Info()

@@ -178,7 +178,8 @@ instance MOB_WATERPIPE (c_Info)
 	information		= MOB_WATERPIPE_Info;
 	important		= TRUE;
 	permanent		= TRUE;
-	description		= "";
+//	description		= "";
+	description		= "Kouřit trávu z bažin";
 };
 
 func VOID MOB_WATERPIPE_Info()

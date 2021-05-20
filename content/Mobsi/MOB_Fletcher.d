@@ -338,7 +338,8 @@ instance MOB_fletcher_1 (c_Info)
 	information		= MOB_fletcher_1_Info;
 	important		= FALSE;
 	permanent		= TRUE;
-	description		= "1 Pfeil herstellen";
+//	description		= "1 Pfeil herstellen";
+	description		= "Vyrobit 1 šíp";
 };
 
 func VOID MOB_fletcher_1_Info()
@@ -363,7 +364,8 @@ instance MOB_fletcher_5 (c_Info)
 	information		= MOB_fletcher_5_Info;
 	important		= FALSE;
 	permanent		= TRUE;
-	description		= "5 Pfeile herstellen";
+//	description		= "5 Pfeile herstellen";
+	description		= "Vyrobit 5 šípů";
 };
 
 func VOID MOB_fletcher_5_Info()
@@ -394,7 +396,8 @@ instance MOB_fletcher_10 (c_Info)
 	information		= MOB_fletcher_10_Info;
 	important		= FALSE;
 	permanent		= TRUE;
-	description		= "10 Pfeile herstellen";
+//	description		= "10 Pfeile herstellen";
+	description		= "Vyrobit 10 šípů";
 };
 
 func VOID MOB_fletcher_10_Info()
@@ -432,7 +435,8 @@ instance MOB_fletcher_1Bolts (c_Info)
 	information		= MOB_fletcher_1Bolts_Info;
 	important		= FALSE;
 	permanent		= TRUE;
-	description		= "1 Bolzen herstellen";
+//	description		= "1 Bolzen herstellen";
+	description		= "Vyrobit 1 šipku";
 };
 
 func VOID MOB_fletcher_1Bolts_Info()
@@ -457,7 +461,8 @@ instance MOB_fletcher_5Bolts (c_Info)
 	information		= MOB_fletcher_5Bolts_Info;
 	important		= FALSE;
 	permanent		= TRUE;
-	description		= "5 Bolzen herstellen";
+//	description		= "5 Bolzen herstellen";
+	description		= "Vyrobit 5 šipek";
 };
 
 func VOID MOB_fletcher_5Bolts_Info()
@@ -481,7 +486,8 @@ instance MOB_fletcher_10Bolts (c_Info)
 	information		= MOB_fletcher_10Bolts_Info;
 	important		= FALSE;
 	permanent		= TRUE;
-	description		= "10 Bolzen herstellen";
+//	description		= "10 Bolzen herstellen";
+	description		= "Vyrobit 10 šipek";
 };
 
 func VOID MOB_fletcher_10Bolts_Info()

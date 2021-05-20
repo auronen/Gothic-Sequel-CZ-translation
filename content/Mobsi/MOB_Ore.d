@@ -280,7 +280,8 @@ instance MOB_Ore_1 (c_Info)
 	information		= MOB_Ore_1_Info;
 	important		= FALSE;
 	permanent		= TRUE;
-	description		= "ein wenig Erz schürfen";
+//	description		= "ein wenig Erz schürfen";
+	description		= "Vytěžit trošku rudy";
 };
 
 func VOID MOB_Ore_1_Info()
@@ -306,7 +307,8 @@ instance MOB_Ore_5 (c_Info)
 	information		= MOB_Ore_5_Info;
 	important		= FALSE;
 	permanent		= TRUE;
-	description		= "etwas mehr Erz schürfen";
+//	description		= "etwas mehr Erz schürfen";
+	description		= "Vytěžit více rudy";
 };
 
 func VOID MOB_Ore_5_Info()
@@ -336,7 +338,8 @@ instance MOB_Ore_10 (c_Info)
 	information		= MOB_Ore_10_Info;
 	important		= FALSE;
 	permanent		= TRUE;
-	description		= "richtig viel Erz schürfen";
+//	description		= "richtig viel Erz schürfen";
+	description		= "Vytěžit opravdu hodně rudy";
 };
 
 func VOID MOB_Ore_10_Info()

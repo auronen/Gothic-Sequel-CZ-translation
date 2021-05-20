@@ -85,28 +85,36 @@ func void MOB_BOOK_S1 ()
 
   					Doc_SetFont 	( nDocID, -1, FONT_BOOK_BIG	   			); 	// -1 -> all pages
   					Doc_SetMargins	( nDocID,  0,  275, 20, 30, 20, 1   		);  //  0 -> margins are in pixels
-					Doc_PrintLine	( nDocID,  0, "Formel der glühenden Kraft"			);
+//					Doc_PrintLine	( nDocID,  0, "Formel der glühenden Kraft"			);
+					Doc_PrintLine	( nDocID,  0, "Formule zářící síly"			);
 					Doc_PrintLine	( nDocID,  0, "--------------------------");
 					Doc_SetFont 	( nDocID, -1, FONT_BOOK_SMALL	   			); 	// -1 -> all pages
 					Doc_PrintLine	( nDocID,  0, "");
-					Doc_PrintLines	( nDocID,  0, "Runen herzustellen war seit alters her den besten Magier vorbehaltne, in diesem Buch verraten sie ihre Geheimnisse über das Herstellen von Runen des Feuers");
+//					Doc_PrintLines	( nDocID,  0, "Runen herzustellen war seit alters her den besten Magier vorbehaltne, in diesem Buch verraten sie ihre Geheimnisse über das Herstellen von Runen des Feuers");
+					Doc_PrintLines	( nDocID,  0, "Výroba run byla vždy vyhrazena těm nejlepším mágům, v této knize odhaluji svá tajemství výroby magických run Ohně.");
 
 
 
 					//2.Seite
 					Doc_SetMargins	( nDocID, -1, 30, 20, 275, 20, 1   		);  //  0 -> margins are in pixels (Position des Textes von den Ränder des TGAs aus, links,oben,rechts,unten)
 					Doc_PrintLine	( nDocID,  1, "");
-					Doc_PrintLine	( nDocID,  1,  "Die niederen Tränke" );
+//					Doc_PrintLine	( nDocID,  1,  "Die niederen Tränke" );
+					Doc_PrintLine	( nDocID,  1,  "Jednoduché lektvary" );
 					Doc_PrintLine	( nDocID,  1, "---------------");
-					Doc_PrintLines	( nDocID,  1, "Schon mit geringem Talent in der Alchemie ist es möglich diese herzustellen");
+//					Doc_PrintLines	( nDocID,  1, "Schon mit geringem Talent in der Alchemie ist es möglich diese herzustellen");
+					Doc_PrintLines	( nDocID,  1, "I s limitovanými znalostmi alchymie je možné tyto lektvary připravit.");
 					Doc_PrintLine	( nDocID,  1,  "" );
-					Doc_PrintLine	( nDocID,  1, "Tränke stärkerer Energie");
+//					Doc_PrintLine	( nDocID,  1, "Tränke stärkerer Energie");
+					Doc_PrintLine	( nDocID,  1, "Lektvary silnější energie");
 					Doc_PrintLine	( nDocID,  1, "---------------");
-					Doc_PrintLines	( nDocID,  1, "Um diese herzustellen ist ein geübter Alchemist von nöten");
+//					Doc_PrintLines	( nDocID,  1, "Um diese herzustellen ist ein geübter Alchemist von nöten");
+					Doc_PrintLines	( nDocID,  1, "Výrobu těchto lektvarů zvládne pouze vyškolený alchymista.");
 					Doc_PrintLine	( nDocID,  1, "");
-					Doc_PrintLine	( nDocID,  1, "Tränke großer Macht");
+//					Doc_PrintLine	( nDocID,  1, "Tränke großer Macht");
+					Doc_PrintLine	( nDocID,  1, "Lektvary moci");
 					Doc_PrintLine	( nDocID,  1, "---------------");
-					Doc_PrintLines	( nDocID,  1, "Nur ein Meister der Alchemie ist fähig diese zu erzeugen");
+//					Doc_PrintLines	( nDocID,  1, "Nur ein Meister der Alchemie ist fähig diese zu erzeugen");
+					Doc_PrintLines	( nDocID,  1, "Pouze mistr alchymista je schopen tyto lektvary bezchybně připravit.");
 					Doc_Show		( nDocID );
 	};
 };
