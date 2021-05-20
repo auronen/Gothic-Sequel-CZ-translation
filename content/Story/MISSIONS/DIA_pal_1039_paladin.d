@@ -44,9 +44,12 @@ FUNC VOID PAL_1039_FirstWarn_Info()
 {
 	PrintGlobals	(PD_MISSION);
 
-	AI_Output (self, hero,"PAL_1039_FirstWarn_Info_07_01"); //HALT!
-	AI_Output (hero, self,"PAL_1039_FirstWarn_Info_15_02"); //Kann ich passieren!
-	AI_Output (SELF, HERO,"PAL_1039_FIRSTWARN_INFO_07_03"); //NEIN!
+//	AI_Output (self, hero,"PAL_1039_FirstWarn_Info_07_01"); //HALT!
+	AI_Output (self, hero,"PAL_1039_FirstWarn_Info_07_01"); //STÁT!
+//	AI_Output (hero, self,"PAL_1039_FirstWarn_Info_15_02"); //Kann ich passieren!
+	AI_Output (hero, self,"PAL_1039_FirstWarn_Info_15_02"); //Můžu jít dál?
+//	AI_Output (SELF, HERO,"PAL_1039_FIRSTWARN_INFO_07_03"); //NEIN!
+	AI_Output (SELF, HERO,"PAL_1039_FIRSTWARN_INFO_07_03"); //NE!
 
 	hero.aivar[AIV_LASTDISTTOWP] 		= Npc_GetDistToWP(hero,PAL_1039_CHECKPOINT);
 	hero.aivar[AIV_GUARDPASSAGE_STATUS]	= AIV_GPS_FIRSTWARN;
@@ -82,7 +85,8 @@ FUNC INT PAL_1039_LastWarn_Condition()
 
 func int PAL_1039_LastWarn_Info()
 {
-	AI_Output (self, hero,"PAL_1039_LastWarn_07_01"); 		//BLEIB SOFORT STEHEN!!!
+//	AI_Output (self, hero,"PAL_1039_LastWarn_07_01"); 		//BLEIB SOFORT STEHEN!!!
+	AI_Output (self, hero,"PAL_1039_LastWarn_07_01"); 		//OKAMŽITĚ SE ZASTAV!!!
 
 	hero.aivar[AIV_LASTDISTTOWP] 		= Npc_GetDistToWP (hero,PAL_1039_CHECKPOINT);
 	hero.aivar[AIV_GUARDPASSAGE_STATUS]	= AIV_GPS_LASTWARN;
@@ -179,7 +183,8 @@ instance PAL_1039_Paladin_WANTIN		(C_INFO)
 	important	 = 	FALSE;
 	permanent	 = 	TRUE;
 
-	description	 = 	"Warum kann ich nicht in die Festung?";
+//	description	 = 	"Warum kann ich nicht in die Festung?";
+	description	 = 	"Proč nemůžu do pevnosti?";
 };
 
 func int PAL_1039_Paladin_WANTIN_Condition ()
@@ -192,8 +197,10 @@ func int PAL_1039_Paladin_WANTIN_Condition ()
 
 func void PAL_1039_Paladin_WANTIN_Info ()
 {
-	AI_Output			(hero, self, "PAL_1039_WANTIN_15_01"); //Warum kann ich nicht in die Festung?
-	AI_Output			(self, hero, "PAL_1039_WANTIN_07_02"); //Du siehst nicht aus wie ein Gefolgsmann des Königs!
+//	AI_Output			(hero, self, "PAL_1039_WANTIN_15_01"); //Warum kann ich nicht in die Festung?
+	AI_Output			(hero, self, "PAL_1039_WANTIN_15_01"); //Proč nemůžu do pevnosti?
+//	AI_Output			(self, hero, "PAL_1039_WANTIN_07_02"); //Du siehst nicht aus wie ein Gefolgsmann des Königs!
+	AI_Output			(self, hero, "PAL_1039_WANTIN_07_02"); //Nevypadáš jako jeden z králova doprovodu!
 	BF_InnerGate_Bribable	= TRUE;
 	AI_StopProcessInfos	(self);
 };
@@ -209,7 +216,8 @@ instance PAL_1039_Paladin_BRIBE		(C_INFO)
 	important	 = 	FALSE;
 	permanent	 = 	FALSE;
 
-	description	 = 	"Vielleicht kann ein wenig Silber das ändern.";
+//	description	 = 	"Vielleicht kann ein wenig Silber das ändern.";
+	description	 = 	"Možná by to mohla změnit trocha stříbra.";
 };
 
 func int PAL_1039_Paladin_BRIBE_Condition ()
@@ -222,9 +230,12 @@ func int PAL_1039_Paladin_BRIBE_Condition ()
 
 func void PAL_1039_Paladin_BRIBE_Info ()
 {
-	AI_Output			(hero, self, "PAL_1039_BRIBE_15_01"); //Vielleicht kann ein wenig Silber das ändern.
-	AI_Output			(self, hero, "PAL_1039_BRIBE_08_02"); //(wütend) Soldat des Königs sind unbestechlich!
-	AI_Output			(self, hero, "PAL_1039_BRIBE_08_03"); //Ich werde dafür sorgen, dass du das nie vergisst!
+//	AI_Output			(hero, self, "PAL_1039_BRIBE_15_01"); //Vielleicht kann ein wenig Silber das ändern.
+	AI_Output			(hero, self, "PAL_1039_BRIBE_15_01"); //Možná by to mohla změnit trocha stříbra.
+//	AI_Output			(self, hero, "PAL_1039_BRIBE_08_02"); //(wütend) Soldat des Königs sind unbestechlich!
+	AI_Output			(self, hero, "PAL_1039_BRIBE_08_02"); //(zlostně) Královi vojáci jsou neúplatní!
+//	AI_Output			(self, hero, "PAL_1039_BRIBE_08_03"); //Ich werde dafür sorgen, dass du das nie vergisst!
+	AI_Output			(self, hero, "PAL_1039_BRIBE_08_03"); //Postarám se, abys to nikdy nezapomněl!
 	B_AttackProper	(self, hero);
 	BF_InnerGate_Attacked	= TRUE;
 };
@@ -272,7 +283,8 @@ func void PAL_1039_Paladin_HALTTHORA_Info ()
 
 	AI_TurnToNpc		(self, thora);
 
-	AI_Output			(self, hero, "PAL_1039_HALTTHORA_07_01"); //Thora, du kannst passieren...mit Begleitung!
+//	AI_Output			(self, hero, "PAL_1039_HALTTHORA_07_01"); //Thora, du kannst passieren...mit Begleitung!
+	AI_Output			(self, hero, "PAL_1039_HALTTHORA_07_01"); //Thoro, ty projít můžeš...i s doprovodem!
 
 	AI_StopProcessInfos	(self);
 };
