@@ -40,7 +40,7 @@ const string MOBNAME_PILLAR			= "Sloup";
 const string MOBNAME_BASKET_RICE	= "";
 const string MOBNAME_DRUM			= "";
 const string MOBNAME_GROUND_SLOT	= "n/a";
-const string MOBNAME_HERB_PSI		= "Krautstampfer";
+const string MOBNAME_HERB_PSI		= "Tlouček";
 const string MOBNAME_IDOL			= "Figurka";
 const string MOBNAME_LEAN_WALL		= "";
 const string MOBNAME_ORCDRUM		= "";
@@ -89,7 +89,8 @@ const string SCEMENAME_PAN			= "PAN";
 CONST STRING TXT_GUILDS	[GIL_MAX] =	{
 // - Charakterblatt (Text der Spielergilde)
 // - Debuganzeige (Taste "G")
-	"(keine)",
+//	"(keine)",
+	"(žádná)",
 //	"Milizsoldat",
 	"Voják milice",
 //	"Arbeiter",
@@ -872,7 +873,7 @@ const string	NAME_Brush				 	=	"Kartáč";
 //const string	NAME_Joint1 			    =	"Grüner Novize";
 const string	NAME_Joint1 			    =	"Zelený novic";
 //const string	NAME_Joint2				 	=	"Schwarzer Weiser";
-const string	NAME_Joint2				 	=	"Černý mudrc"; // Severní soumrak - Asi? Ale je to název jointu, tak se dá být různě kreativní.
+const string	NAME_Joint2				 	=	"Severní soumrak"; // Černý mudrc - Asi? Ale je to název jointu, tak se dá být různě kreativní.
 //const string	NAME_Joint3			        =	"Traumruf";
 const string	NAME_Joint3			        =	"Přivolávač snů";
 //const string	NAME_Torch					=	"Fackel";
@@ -1115,7 +1116,7 @@ const string 	NAME_Nightshade				=	"Lilkovitá bylina";
 //const string 	NAME_CaveMushroom			=	"Höhlenpilz";
 const string 	NAME_CaveMushroom			=	"Pekelná houba";
 //const string 	NAME_Woodberry				=	"Waldbeeren";
-const string 	NAME_Woodberry				=	"Lesní plody";
+const string 	NAME_Woodberry				=	"Borůvky"; // známe z G1
 //const string 	NAME_Flameberry				=	"Flammbeeren";
 const string 	NAME_Flameberry				=	"Ohnivý trn";
 //const string 	NAME_Trollberry				=	"Trollkirsche";
@@ -1432,7 +1433,7 @@ const string _STR_MESSAGE_MOBSI_STOMPER_TOOL	=	"Žádná palice k dispozici!"; /
 
 //const string _STR_MESSAGE_MOBSI_ARENABENCH_GLADIATOR	=	"nur für die Kampfvorbereitung!";
 const string _STR_MESSAGE_MOBSI_ARENABENCH_GLADIATOR	=	"Jen pro přípravu na souboj!";
-//const string _STR_MESSAGE_MOBSI_ARENABENCH_CHAMBER		=	"falsche Vorbereitungskammer!";
+//const string _STR_MESSAGE_MOBSI_ARENABENCH_CHAMBER	=	"falsche Vorbereitungskammer!";
 const string _STR_MESSAGE_MOBSI_ARENABENCH_CHAMBER		=	"Špatná místnost na přípravu!";
 
 // Textausgabe für Steal
@@ -1446,7 +1447,7 @@ const string _STR_MESSAGE_STEAL_NOT_IN_RANGE			=	"Příliš daleko!";
 const string _STR_MESSAGE_STEAL_NPC_IS_EMPTY			=	"Nemá nic u sebe!";
 
 // Textausgabe für bereits geplünderte Leiche
-//const string _STR_MESSAGE_PLUNDER_IS_EMPTY				=	"da ist nichts mehr zu holen!";
+//const string _STR_MESSAGE_PLUNDER_IS_EMPTY			=	"da ist nichts mehr zu holen!";
 const string _STR_MESSAGE_PLUNDER_IS_EMPTY				=	"Nic víc k sebrání!";
 
 // Textausgabe wenn Muntion alle ist
@@ -1454,20 +1455,20 @@ const string _STR_MESSAGE_PLUNDER_IS_EMPTY				=	"Nic víc k sebrání!";
 const string _STR_MESSAGE_RANGED_NO_AMMO				=	"Žádná munice!";
 
 // Lern-Meldungen
-//const string _STR_MESSAGE_LEARNSMITH		=	"Wissen über neue Waffe erlernt!";
-const string _STR_MESSAGE_LEARNSMITH		=	"Naučil jsem se kovat nové zbraně!";
+//const string _STR_MESSAGE_LEARNSMITH			=	"Wissen über neue Waffe erlernt!";
+const string _STR_MESSAGE_LEARNSMITH			=	"Naučil jsem se kovat nové zbraně!";
 //const string _STR_MESSAGE_LEARNCOOK			=	"Wissen über neues Kochrezept erlernt!";
-const string _STR_MESSAGE_LEARNCOOK			=	"Naučil jsem se nové recepty!";
+const string _STR_MESSAGE_LEARNCOOK				=	"Naučil jsem se nové recepty!";
 //const string _STR_MESSAGE_LEARNALCHEMIE		=	"Wissen über neues Alchemierezept erlernt!";
-const string _STR_MESSAGE_LEARNALCHEMIE		=	"Naučil jsem se nové alchymistické receptury!";
+const string _STR_MESSAGE_LEARNALCHEMIE			=	"Naučil jsem se nové alchymistické receptury!";
 //const string _STR_MESSAGE_LEARNthaumaturgy	=	"Wissen über neue Rune erlernt!";
-const string _STR_MESSAGE_LEARNthaumaturgy	=	"Naučil jsem se vytvářet nové runy!";
+const string _STR_MESSAGE_LEARNthaumaturgy		=	"Naučil jsem se vytvářet nové runy!";
 //const string _STR_MESSAGE_LEARNBOW			=	"Wissen über das Bogenmachen erlernt!";
-const string _STR_MESSAGE_LEARNBOW			=	"Naučil jsem se vyrábět luky!";
-//const string _STR_MESSAGE_LEARNPLANTS		=	"Wissen über Pflanzen erlernt!";
-const string _STR_MESSAGE_LEARNPLANTS		=	"Naučil jsem se o bylinkách!";
+const string _STR_MESSAGE_LEARNBOW				=	"Naučil jsem se vyrábět luky!";
+//const string _STR_MESSAGE_LEARNPLANTS			=	"Wissen über Pflanzen erlernt!";
+const string _STR_MESSAGE_LEARNPLANTS			=	"Naučil jsem se o bylinkách!";
 
-//const string _STR_MESSAGE_ADDDARKPOINTS		=	"deine dunkle Seite wird stärker!";
+//const string _STR_MESSAGE_ADDDARKPOINTS	=	"deine dunkle Seite wird stärker!";
 const string _STR_MESSAGE_ADDDARKPOINTS		=	"Tvoje temná stránka sílí!";
 //const string _STR_MESSAGE_ADDFAME			=	"deine Bekanntheit wächst!";
 const string _STR_MESSAGE_ADDFAME			=	"Tvoje proslulost roste!";
@@ -1621,7 +1622,7 @@ const string NAME_PrizePostfix		=	" stříbra";
 const string NAME_LearnPrefix		=	" (";
 const string NAME_LearnMidfix		=	" stříbra, ";
 const string NAME_LearnPostfixS		=	" Vědomostní bod)";
-const string NAME_LearnPostfixP		=	" Vědomostní body)";
+const string NAME_LearnPostfixP		=	" Vědomostních bodů)";
 
 const string NAME_LearnStrength_1	=	"Síla +1";
 const string NAME_LearnStrength_5	=	"Síla +5";
