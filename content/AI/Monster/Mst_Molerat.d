@@ -70,6 +70,8 @@ INSTANCE Molerat	(Mst_Default_Molerat)
 	Npc_SetToFistMode(self);
 
 	CreateInvItems (self, ItAt_MoleratGrease,	2);
+// This is a bugfix for Diegos 2nd bow skill quest
+	CreateInvItems (self, ItFo_MuttonRaw,		2);
 };
 
 
