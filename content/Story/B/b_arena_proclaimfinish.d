@@ -40,28 +40,36 @@ func void B_Arena_ProclaimFinish (var C_NPC arenamaster)
 	};
 
 	//-------- Siegsätze ermitteln ermitteln --------
-	AI_Output			(arenamaster, target, "MIL_122_ProclaimFinish_12_01"); //(theatralisch) DIE WÜRFEL SIND GEFALLEN.
+//	AI_Output			(arenamaster, target, "MIL_122_ProclaimFinish_12_01"); //(theatralisch) DIE WÜRFEL SIND GEFALLEN.
+	AI_Output			(arenamaster, target, "MIL_122_ProclaimFinish_12_01"); //(teatrálně) KOSTKY JSOU VRŽENY.
 
 	if	(Arena_PlayerFight && Arena_PlayerHasWonToday)
 	{
 		if	(Arena_PCRanking == 1)
 		&&	(Arena_LastPCRanking == 2)
 		{
-			AI_Output	(arenamaster, target, "MIL_122_ProclaimFinish_12_02"); //WIR ABEN EINEN NEUEN CHAMPION !!!
-			AI_Output	(arenamaster, target, "MIL_122_ProclaimFinish_12_03"); //!!! DU !!! ...BIST DER NEUE CHAMPION DIESER ARENA!
-			AI_Output	(arenamaster, target, "MIL_122_ProclaimFinish_12_04"); //!!! DU !!! ...BIST DER BESTE KÄMPFER WEIT UND BREIT!
-			AI_Output	(arenamaster, target, "MIL_122_ProclaimFinish_12_05"); //WIR VERNEIGEN UNS VOR DIR!
+//			AI_Output	(arenamaster, target, "MIL_122_ProclaimFinish_12_02"); //WIR ABEN EINEN NEUEN CHAMPION !!!
+//			AI_Output	(arenamaster, target, "MIL_122_ProclaimFinish_12_03"); //!!! DU !!! ...BIST DER NEUE CHAMPION DIESER ARENA!
+//			AI_Output	(arenamaster, target, "MIL_122_ProclaimFinish_12_04"); //!!! DU !!! ...BIST DER BESTE KÄMPFER WEIT UND BREIT!
+//			AI_Output	(arenamaster, target, "MIL_122_ProclaimFinish_12_05"); //WIR VERNEIGEN UNS VOR DIR!
+			AI_Output	(arenamaster, target, "MIL_122_ProclaimFinish_12_02"); //MÁME NOVÉHO ŠAMPIONA!
+			AI_Output	(arenamaster, target, "MIL_122_ProclaimFinish_12_03"); //TY... JSI NOVÝ ŠAMPION ARÉNY!
+			AI_Output	(arenamaster, target, "MIL_122_ProclaimFinish_12_04"); //TY... JSI NEJLEPŠÍ BOJOVNÍK ŠIROKO DALEKO!
+			AI_Output	(arenamaster, target, "MIL_122_ProclaimFinish_12_05"); //KLANÍME SE PŘED TEBOU!
 		}
 		else
 		{
-			AI_Output	(arenamaster, target, "MIL_122_ProclaimFinish_12_06"); //DER SIEGER DES HEUTIGEN KAMPFES...
+//			AI_Output	(arenamaster, target, "MIL_122_ProclaimFinish_12_06"); //DER SIEGER DES HEUTIGEN KAMPFES...
+			AI_Output	(arenamaster, target, "MIL_122_ProclaimFinish_12_06"); //Vítězem dnešního souboje...
 			AI_TurnToNpc(arenamaster, hero);
-			AI_Output	(arenamaster, hero, "MIL_122_ProclaimFinish_12_07"); //...bist DU !!!
+//			AI_Output	(arenamaster, hero, "MIL_122_ProclaimFinish_12_07"); //...bist DU !!!
+			AI_Output	(arenamaster, hero, "MIL_122_ProclaimFinish_12_07"); //...jsi TY!
 		};
 	}
 	else
 	{
-		AI_Output		(arenamaster, target, "MIL_122_ProclaimFinish_12_08"); //DER SIEGER DES HEUTIGEN KAMPFES IST...
+//		AI_Output		(arenamaster, target, "MIL_122_ProclaimFinish_12_08"); //DER SIEGER DES HEUTIGEN KAMPFES IST...
+		AI_Output		(arenamaster, target, "MIL_122_ProclaimFinish_12_08"); ////Vítězem dnešního souboje je...
 
 		if	Arena_PlayerFight
 		&&	!Arena_PlayerHasWonToday
@@ -72,16 +80,19 @@ func void B_Arena_ProclaimFinish (var C_NPC arenamaster)
 			||	(Thora_Challenged	&& (ThoraPoints		< ARENA_POINTSFORVICTORY))	)
 		&&	!Arena_PlayerBanned
 		{
-			AI_Output	(arenamaster, target, "MIL_122_ProclaimFinish_12_09"); //NIEMAND !!!
-			AI_Output	(arenamaster, target, "MIL_122_ProclaimFinish_12_10"); //Kein Gladiator hat 10 Punkte erringen können.
-			AI_Output	(arenamaster, target, "MIL_122_ProclaimFinish_12_11"); //Somit ist der heutige Kampf unentschieden!
+//			AI_Output	(arenamaster, target, "MIL_122_ProclaimFinish_12_09"); //NIEMAND !!!
+//			AI_Output	(arenamaster, target, "MIL_122_ProclaimFinish_12_10"); //Kein Gladiator hat 10 Punkte erringen können.
+//			AI_Output	(arenamaster, target, "MIL_122_ProclaimFinish_12_11"); //Somit ist der heutige Kampf unentschieden!
+			AI_Output	(arenamaster, target, "MIL_122_ProclaimFinish_12_09"); //NIKDO!
+			AI_Output	(arenamaster, target, "MIL_122_ProclaimFinish_12_10"); //Žádný z gladiátorů nedokázal nasbírat 10 bodů.
+			AI_Output	(arenamaster, target, "MIL_122_ProclaimFinish_12_11"); //Dnešní boj tedy není rozhodnutý!
 		};
 
 		if	(Arena_PlayerFight && Grim_Challenged && !Arena_PlayerHasWonToday && (GrimPoints >= ARENA_POINTSFORVICTORY))
 		||	(Arena_PlayerFight && Grim_Challenged && Arena_PlayerBanned)
 		||	(Arena_NpcFight	&& (Arena_NpcCombo == AC_GRIM_GOLIATH) && (GrimPoints > GoliathPoints))
 		{
-			AI_Output	(arenamaster, target, "MIL_122_ProclaimFinish_12_12"); //!!!   G R I M   !!!!
+//			AI_Output	(arenamaster, target, "MIL_122_ProclaimFinish_12_12"); //!!!   G R I M   !!!!
 		};
 
 		if	(Arena_PlayerFight && Goliath_Challenged && !Arena_PlayerHasWonToday && (GoliathPoints >= ARENA_POINTSFORVICTORY))
@@ -89,7 +100,8 @@ func void B_Arena_ProclaimFinish (var C_NPC arenamaster)
 		||	(Arena_NpcFight	&& (Arena_NpcCombo == AC_GRIM_GOLIATH)   && (GrimPoints <= GoliathPoints))
 		||	(Arena_NpcFight	&& (Arena_NpcCombo == AC_GOLIATH_BRUTUS) && (GoliathPoints > BrutusPoints))
 		{
-			AI_Output	(arenamaster, target, "MIL_122_ProclaimFinish_12_13"); //!!!   G O L I A T H   !!!!
+//			AI_Output	(arenamaster, target, "MIL_122_ProclaimFinish_12_13"); //!!!   G O L I A T H   !!!!
+			AI_Output	(arenamaster, target, "MIL_122_ProclaimFinish_12_13"); //!!!   G O L I Á Š   !!!!
 		};
 
 		if	(Arena_PlayerFight && Brutus_Challenged && !Arena_PlayerHasWonToday && (BrutusPoints >= ARENA_POINTSFORVICTORY))

@@ -28,7 +28,8 @@ instance  Infos_Wrk_2_HI (C_INFO)
 
 	condition		= Infos_Wrk_2_HI_Condition;
 	information		= Infos_Wrk_2_HI_Info;
-	description		= "Wie läufts?";
+//	description		= "Wie läufts?";
+	description		= "Jak se daří?";
 	permanent		= TRUE;
 };
 
@@ -38,8 +39,10 @@ FUNC int  Infos_Wrk_2_HI_Condition()
 };
 FUNC void  Infos_Wrk_2_HI_Info()
 {
-	AI_Output (other, self,"Infos_Wrk_2_HI_Info_15_01"); //Wie läufts?
-	AI_Output (self, other,"Infos_Wrk_2_HI_Info_01_02"); //Wir müssen einen starken Wall bauen. Nur ein starker Wall kann die Orks aufhalten!
+//	AI_Output (other, self,"Infos_Wrk_2_HI_Info_15_01"); //Wie läufts?
+	AI_Output (other, self,"Infos_Wrk_2_HI_Info_15_01"); //Jak se daří?
+//	AI_Output (self, other,"Infos_Wrk_2_HI_Info_01_02"); //Wir müssen einen starken Wall bauen. Nur ein starker Wall kann die Orks aufhalten!
+	AI_Output (self, other,"Infos_Wrk_2_HI_Info_01_02"); //Musíme postavit silnou zeď. Jedině silná zeď může skřety zastavit!
 };
 ///////////////////////////////////////////////////////////////////////
 //	Info CAMP
@@ -49,7 +52,8 @@ instance  Infos_Wrk_2_CAMP (C_INFO)
 
 	condition		= Infos_Wrk_2_CAMP_Condition;
 	information		= Infos_Wrk_2_CAMP_Info;
-	description		= "Wie siehts im Lager aus?";
+//	description		= "Wie siehts im Lager aus?";
+	description		= "Jak to vypadá v táboře?";
 	permanent		= TRUE;
 };
 
@@ -59,9 +63,12 @@ FUNC int  Infos_Wrk_2_CAMP_Condition()
 };
 FUNC void  Infos_Wrk_2_CAMP_Info()
 {
-	AI_Output (other, self,"Infos_Wrk_2_CAMP_Info_15_01"); //Wie siehts im Lager aus?
-	AI_Output (self, other,"Infos_Wrk_2_CAMP_Info_01_02"); //Die Miliz beschützt alle die arbeiten.
-	AI_Output (self, other,"Infos_Wrk_2_CAMP_Info_01_03"); //Aber es gibt auch viele die nicht arbeiten. Die sollen selber zusehen wie sie klarkommen.
+//	AI_Output (other, self,"Infos_Wrk_2_CAMP_Info_15_01"); //Wie siehts im Lager aus?
+	AI_Output (other, self,"Infos_Wrk_2_CAMP_Info_15_01"); //Jak to vypadá v táboře?
+//	AI_Output (self, other,"Infos_Wrk_2_CAMP_Info_01_02"); //Die Miliz beschützt alle die arbeiten.
+	AI_Output (self, other,"Infos_Wrk_2_CAMP_Info_01_02"); //Milice chrání každého, kdo pracuje.
+//	AI_Output (self, other,"Infos_Wrk_2_CAMP_Info_01_03"); //Aber es gibt auch viele die nicht arbeiten. Die sollen selber zusehen wie sie klarkommen.
+	AI_Output (self, other,"Infos_Wrk_2_CAMP_Info_01_03"); //Ale je tu také mnoho těch, kteří nepracují. Ti by měli zvládnout se o sebe postarat sami.
 
 };
 /*//////////////////////////////////////////////////////////////////////
@@ -97,7 +104,8 @@ instance  Infos_Wrk_2_BOSS (C_INFO)
 
 	condition		= Infos_Wrk_2_BOSS_Condition;
 	information		= Infos_Wrk_2_BOSS_Info;
-	description		= "Wer hat hier das Sagen?";
+//	description		= "Wer hat hier das Sagen?";
+	description		= "Kdo to tu má na starost?";
 };
 
 FUNC int  Infos_Wrk_2_BOSS_Condition()
@@ -110,8 +118,10 @@ FUNC int  Infos_Wrk_2_BOSS_Condition()
 };
 FUNC void  Infos_Wrk_2_BOSS_Info()
 {
-	AI_Output (other, self,"Infos_Wrk_2_BOSS_Info_15_01"); //Wer hat hier das Sagen?
-	AI_Output (self, other,"Infos_Wrk_2_BOSS_Info_01_02"); //Bromor. Er ist der Baumeister. Sprich mit ihm, wenn du was willst.
+//	AI_Output (other, self,"Infos_Wrk_2_BOSS_Info_15_01"); //Wer hat hier das Sagen?
+	AI_Output (other, self,"Infos_Wrk_2_BOSS_Info_15_01"); //Kdo to tu má na starost?
+//	AI_Output (self, other,"Infos_Wrk_2_BOSS_Info_01_02"); //Bromor. Er ist der Baumeister. Sprich mit ihm, wenn du was willst.
+	AI_Output (self, other,"Infos_Wrk_2_BOSS_Info_01_02"); //Bromor. To on je mistr stavitel. Promluv si s ním, jestli chceš.
 
 	var C_NPC Bromor; Bromor = Hlp_GetNpc (WRK_203_Bromor);
 	Bromor.aivar[AIV_FINDABLE] = TRUE;

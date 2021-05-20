@@ -41,7 +41,8 @@ FUNC int  Wrk_207_Worker_STEP_Condition()
 };
 func void  Wrk_207_Worker_STEP_Info()
 {
-	AI_Output (self, other,"Wrk_207_Worker_STEP_Info_15_01"); //Pass auf, das du nicht runterfällst!
+//	AI_Output (self, other,"Wrk_207_Worker_STEP_Info_15_01"); //Pass auf, das du nicht runterfällst!
+	AI_Output (self, other,"Wrk_207_Worker_STEP_Info_15_01"); //Dej pozor, ať nespadneš dolů!
 };
 ///////////////////////////////////////////////////////////////////////
 //	Info Hi
@@ -51,7 +52,8 @@ instance  Infos_Wrk_1_HI (C_INFO)
 
 	condition		= Infos_Wrk_1_HI_Condition;
 	information		= Infos_Wrk_1_HI_Info;
-	description		= "Wie läufts?";
+//	description		= "Wie läufts?";
+	description		= "Jak to jde?";
 	permanent		= TRUE;
 };
 
@@ -61,10 +63,14 @@ FUNC int  Infos_Wrk_1_HI_Condition()
 };
 FUNC void  Infos_Wrk_1_HI_Info()
 {
-	AI_Output (other, self,"Infos_Wrk_1_HI_Info_15_01"); //Wie läufts?
-	AI_Output (self, other,"Infos_Wrk_1_HI_Info_01_02"); //Es gibt viel zu tun. Wir müssen vorbereitet sein, falls die Orks kommen.
-	AI_Output (other, self,"Infos_Wrk_1_HI_Info_15_03"); //Was meinst du mit Vorbereiten?
-	AI_Output (self, other,"Infos_Wrk_1_HI_Info_01_04"); //Einen stabilen Wallschutz aufbauen, Waffen schmieden und Vorräte anlegen. Wir müssen in jeder Hinsicht vorbereitet sein. Jeder von uns. Du solltest dich auch vorbereiten.
+//	AI_Output (other, self,"Infos_Wrk_1_HI_Info_15_01"); //Wie läufts?
+	AI_Output (other, self,"Infos_Wrk_1_HI_Info_15_01"); //Jak to jde?
+//	AI_Output (self, other,"Infos_Wrk_1_HI_Info_01_02"); //Es gibt viel zu tun. Wir müssen vorbereitet sein, falls die Orks kommen.
+	AI_Output (self, other,"Infos_Wrk_1_HI_Info_01_02"); //Máme hrozně moc práce. Musíme být připraveni, až přijdou skřeti.
+//	AI_Output (other, self,"Infos_Wrk_1_HI_Info_15_03"); //Was meinst du mit Vorbereiten?
+	AI_Output (other, self,"Infos_Wrk_1_HI_Info_15_03"); //Jak to myslíš 'připraveni'?
+//	AI_Output (self, other,"Infos_Wrk_1_HI_Info_01_04"); //Einen stabilen Wallschutz aufbauen, Waffen schmieden und Vorräte anlegen. Wir müssen in jeder Hinsicht vorbereitet sein. Jeder von uns. Du solltest dich auch vorbereiten.
+	AI_Output (self, other,"Infos_Wrk_1_HI_Info_01_04"); //Myslím: Vybudovat stabilní obrannou zeď, vyrobit zbraně a naskladnit zásoby. Musíme být připraveni po všech stránkách. Každý z nás musí být připraven. Měl by ses také začít připravovat.
 
 };
 ///////////////////////////////////////////////////////////////////////
@@ -75,7 +81,8 @@ instance  Infos_Wrk_1_CAMP (C_INFO)
 
 	condition		= Infos_Wrk_1_CAMP_Condition;
 	information		= Infos_Wrk_1_CAMP_Info;
-	description		= "Wie siehts im Lager aus?";
+//	description		= "Wie siehts im Lager aus?";
+	description		= "Jak to vypadá v táboře?";
 	permanent		= TRUE;
 };
 
@@ -85,11 +92,16 @@ FUNC int  Infos_Wrk_1_CAMP_Condition()
 };
 FUNC void  Infos_Wrk_1_CAMP_Info()
 {
-	AI_Output (other, self,"Infos_Wrk_1_CAMP_Info_15_01"); //Wie siehts im Lager aus?
-	AI_Output (self, other,"Infos_Wrk_1_CAMP_Info_01_02"); //Es könnte besser laufen, wenn mehr Leute arbeiten würden.  Es gibt einfach zuviel Gesindel.
-	AI_Output (self, other,"Infos_Wrk_1_CAMP_Info_01_03"); //Das sie faul sind ist eine Sache, aber die sind auch feige. Und damit werden sie für uns völlig wertlos.
-	AI_Output (other, self,"Infos_Wrk_1_CAMP_Info_15_04"); //Verstehe. Gerade jetzt ist jeder Mann wichtig.
-	AI_Output (self, other,"Infos_Wrk_1_CAMP_Info_01_05"); //Die nicht! Dieses Diebespack, diese faulen Hunde, soll Beliar sie alle holen!
+//	AI_Output (other, self,"Infos_Wrk_1_CAMP_Info_15_01"); //Wie siehts im Lager aus?
+	AI_Output (other, self,"Infos_Wrk_1_CAMP_Info_15_01"); //Jak to vypadá v táboře?
+//	AI_Output (self, other,"Infos_Wrk_1_CAMP_Info_01_02"); //Es könnte besser laufen, wenn mehr Leute arbeiten würden.  Es gibt einfach zuviel Gesindel.
+	AI_Output (self, other,"Infos_Wrk_1_CAMP_Info_01_02"); //Mohlo by být lépe, kdyby pracovalo více lidí. Máme tu jednoduše moc chamtivců.
+//	AI_Output (self, other,"Infos_Wrk_1_CAMP_Info_01_03"); //Das sie faul sind ist eine Sache, aber die sind auch feige. Und damit werden sie für uns völlig wertlos.
+	AI_Output (self, other,"Infos_Wrk_1_CAMP_Info_01_03"); //To, že jsou líní je jedna věc, ale oni jsou také zbabělí. A takoví lidé pro nás nejsou velkým přínosem.
+//	AI_Output (other, self,"Infos_Wrk_1_CAMP_Info_15_04"); //Verstehe. Gerade jetzt ist jeder Mann wichtig.
+	AI_Output (other, self,"Infos_Wrk_1_CAMP_Info_15_04"); //Chápej. Každý muž je právě teď velice důležitý.
+//	AI_Output (self, other,"Infos_Wrk_1_CAMP_Info_01_05"); //Die nicht! Dieses Diebespack, diese faulen Hunde, soll Beliar sie alle holen!
+	AI_Output (self, other,"Infos_Wrk_1_CAMP_Info_01_05"); //Ale oni ne! Tahle zlodějská banda, tihle líní psi, ať si je všechny vezme Beliar!
 
 };
 /*//////////////////////////////////////////////////////////////////////
@@ -124,7 +136,8 @@ instance  Infos_Wrk_1_BOSS (C_INFO)
 
 	condition		= Infos_Wrk_1_BOSS_Condition;
 	information		= Infos_Wrk_1_BOSS_Info;
-	description		= "Wer hat hier das Sagen?";
+//	description		= "Wer hat hier das Sagen?";
+	description		= "Kdo tomu tady šéfuje?";
 };
 
 FUNC int  Infos_Wrk_1_BOSS_Condition()
@@ -137,8 +150,10 @@ FUNC int  Infos_Wrk_1_BOSS_Condition()
 };
 FUNC void  Infos_Wrk_1_BOSS_Info()
 {
-	AI_Output (other, self,"Infos_Wrk_1_BOSS_Info_15_01"); //Wer hat hier das Sagen?
-	AI_Output (self, other,"Infos_Wrk_1_BOSS_Info_01_02"); //Bromor. Er ist der Baumeister. Sprich mit ihm, wenn du was willst.
+//	AI_Output (other, self,"Infos_Wrk_1_BOSS_Info_15_01"); //Wer hat hier das Sagen?
+	AI_Output (other, self,"Infos_Wrk_1_BOSS_Info_15_01"); //Kdo tomu tady šéfuje?
+//	AI_Output (self, other,"Infos_Wrk_1_BOSS_Info_01_02"); //Bromor. Er ist der Baumeister. Sprich mit ihm, wenn du was willst.
+	AI_Output (self, other,"Infos_Wrk_1_BOSS_Info_01_02"); //Bromor. To on je mistr stavitel. Promluv si s ním, jestli chceš.
 
 	var C_NPC Bromor; Bromor = Hlp_GetNpc (WRK_203_Bromor);
 	Bromor.aivar[AIV_FINDABLE] = TRUE;

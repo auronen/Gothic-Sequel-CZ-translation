@@ -26,7 +26,8 @@ instance  Infos_Wrk_11_HI (C_INFO)
 
 	condition		= Infos_Wrk_11_HI_Condition;
 	information		= Infos_Wrk_11_HI_Info;
-	description		= "Wie läufts?";
+//	description		= "Wie läufts?";
+	description		= "Jak to jde?";
 	permanent		= TRUE;
 };
 
@@ -36,11 +37,16 @@ FUNC int  Infos_Wrk_11_HI_Condition()
 };
 FUNC void  Infos_Wrk_11_HI_Info()
 {
-	AI_Output (other, self,"Infos_Wrk_11_HI_Info_15_01"); //Wie läufts?
-	AI_Output (self, other,"Infos_Wrk_11_HI_Info_11_02"); //Gut. Es gibt zwar noch genug Arbeit, aber wir haben schon eine starke Verteidigung.
-	AI_Output (self, other,"Infos_Wrk_11_HI_Info_11_03"); //Das gibt den Männern Mut. Und den werden sie brauchen, falls die Orks angreifen.
-	AI_Output (other, self,"Infos_Wrk_11_HI_Info_15_04"); //Und werden die Orks angreifen?
-	AI_Output (self, other,"Infos_Wrk_11_HI_Info_11_05"); //Wenn es soweit ist, werden wir es wissen.
+//	AI_Output (other, self,"Infos_Wrk_11_HI_Info_15_01"); //Wie läufts?
+	AI_Output (other, self,"Infos_Wrk_11_HI_Info_15_01"); //Jak to jde?
+//	AI_Output (self, other,"Infos_Wrk_11_HI_Info_11_02"); //Gut. Es gibt zwar noch genug Arbeit, aber wir haben schon eine starke Verteidigung.
+	AI_Output (self, other,"Infos_Wrk_11_HI_Info_11_02"); //Dobře. Ještě nám zbývá notný kus práce, ale obranu už máme silnou.
+//	AI_Output (self, other,"Infos_Wrk_11_HI_Info_11_03"); //Das gibt den Männern Mut. Und den werden sie brauchen, falls die Orks angreifen.
+	AI_Output (self, other,"Infos_Wrk_11_HI_Info_11_03"); //To dává chlapům odvahu. A že ji budou potřebovat, až skřeti z zaútočí.
+//	AI_Output (other, self,"Infos_Wrk_11_HI_Info_15_04"); //Und werden die Orks angreifen?
+	AI_Output (other, self,"Infos_Wrk_11_HI_Info_15_04"); //A skřeti zaútočí?
+//	AI_Output (self, other,"Infos_Wrk_11_HI_Info_11_05"); //Wenn es soweit ist, werden wir es wissen.
+	AI_Output (self, other,"Infos_Wrk_11_HI_Info_11_05"); //Až přijde čas, tak se to dozvíme.
 
 };
 ///////////////////////////////////////////////////////////////////////
@@ -51,7 +57,8 @@ instance  Infos_Wrk_11_CAMP (C_INFO)
 
 	condition		= Infos_Wrk_11_CAMP_Condition;
 	information		= Infos_Wrk_11_CAMP_Info;
-	description		= "Wie siehts im Lager aus?";
+//	description		= "Wie siehts im Lager aus?";
+	description		= "A jak to vypadá v táboře?";
 	permanent		= TRUE;
 };
 
@@ -61,11 +68,16 @@ FUNC int  Infos_Wrk_11_CAMP_Condition()
 };
 FUNC void  Infos_Wrk_11_CAMP_Info()
 {
-	AI_Output (other, self,"Infos_Wrk_11_CAMP_Info_15_01"); //Wie siehts im Lager aus?
-	AI_Output (self, other,"Infos_Wrk_11_CAMP_Info_11_02"); //Seit unserer Ankunft hier sind wir damit beschäftigt das Lager wieder aufzubauen.
-	AI_Output (self, other,"Infos_Wrk_11_CAMP_Info_11_03"); //Und die Arbeit geht voran. Die Orks werden sich ihre Schädel am Wall einrennen!
-	AI_Output (other, self,"Infos_Wrk_11_CAMP_Info_15_04"); //Glaubst du, sie werden bald angreifen?
-	AI_Output (self, other,"Infos_Wrk_11_CAMP_Info_11_05"); //Natürlich. Wozu machen wir uns sonst die ganze Arbeit?
+//	AI_Output (other, self,"Infos_Wrk_11_CAMP_Info_15_01"); //Wie siehts im Lager aus?
+	AI_Output (other, self,"Infos_Wrk_11_CAMP_Info_15_01"); //A jak to vypadá v táboře?
+//	AI_Output (self, other,"Infos_Wrk_11_CAMP_Info_11_02"); //Seit unserer Ankunft hier sind wir damit beschäftigt das Lager wieder aufzubauen.
+	AI_Output (self, other,"Infos_Wrk_11_CAMP_Info_11_02"); //Od našho příjezdu jsme se zabývali přestavbou tábora.
+//	AI_Output (self, other,"Infos_Wrk_11_CAMP_Info_11_03"); //Und die Arbeit geht voran. Die Orks werden sich ihre Schädel am Wall einrennen!
+	AI_Output (self, other,"Infos_Wrk_11_CAMP_Info_11_03"); //A práce pokračují. Skřeti naběhnou hlavou přímo do zdi!
+//	AI_Output (other, self,"Infos_Wrk_11_CAMP_Info_15_04"); //Glaubst du, sie werden bald angreifen?
+	AI_Output (other, self,"Infos_Wrk_11_CAMP_Info_15_04"); //Myslíš, že brzy zaútočí?
+//	AI_Output (self, other,"Infos_Wrk_11_CAMP_Info_11_05"); //Natürlich. Wozu machen wir uns sonst die ganze Arbeit?
+	AI_Output (self, other,"Infos_Wrk_11_CAMP_Info_11_05"); //Samozřejmě. Proč bychom tu všechnu tuhle práci jinak dělali?
 
 
 };
@@ -102,7 +114,8 @@ instance  Infos_Wrk_11_BOSS (C_INFO)
 
 	condition		= Infos_Wrk_11_BOSS_Condition;
 	information		= Infos_Wrk_11_BOSS_Info;
-	description		= "Wer hat hier das Sagen?";
+//	description		= "Wer hat hier das Sagen?";
+	description		= "Kdo tomu tady velí?";
 };
 
 FUNC int  Infos_Wrk_11_BOSS_Condition()
@@ -118,8 +131,10 @@ FUNC int  Infos_Wrk_11_BOSS_Condition()
 };
 FUNC void  Infos_Wrk_11_BOSS_Info()
 {
-	AI_Output (other, self,"Infos_Wrk_11_BOSS_Info_15_01"); //Wer hat hier das Sagen?
-	AI_Output (self, other,"Infos_Wrk_11_BOSS_Info_11_02"); //Gotmar der Schmied und Bromor der Baumeister. Die beiden haben das Kommando.
+//	AI_Output (other, self,"Infos_Wrk_11_BOSS_Info_15_01"); //Wer hat hier das Sagen?
+	AI_Output (other, self,"Infos_Wrk_11_BOSS_Info_15_01"); //Kdo tomu tady velí?
+//	AI_Output (self, other,"Infos_Wrk_11_BOSS_Info_11_02"); //Gotmar der Schmied und Bromor der Baumeister. Die beiden haben das Kommando.
+	AI_Output (self, other,"Infos_Wrk_11_BOSS_Info_11_02"); //Kovář Gotmar a Bromor, mistr stavitel. Oba dva tady rozhodují.
 
 	var C_NPC Bromor; Bromor = Hlp_GetNpc (WRK_203_BROMOR);
 	Bromor.aivar[AIV_FINDABLE] = TRUE;

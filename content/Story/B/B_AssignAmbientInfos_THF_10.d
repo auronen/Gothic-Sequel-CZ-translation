@@ -21,7 +21,8 @@ instance  Infos_Thf_10_HI (C_INFO)
 	
 	condition		= Infos_Thf_10_HI_Condition;
 	information		= Infos_Thf_10_HI_Info;
-	description		= "Wie läufts?"; 
+//	description		= "Wie läufts?"; 
+	description		= "Jak to jde?"; 
 	permanent		= TRUE;
 };
 
@@ -31,10 +32,11 @@ FUNC int  Infos_Thf_10_HI_Condition()
 };
 FUNC void  Infos_Thf_10_HI_Info()
 {
-	AI_Output (other, self,"Infos_Thf_10_HI_Info_15_01"); //Wie läufts?
-	AI_Output (self, other,"Infos_Thf_10_HI_Info_01_02"); //Wenn du überleben willst, dann verlasse nicht das Lager. Draussen gibt es nichts, was es wert wäre sein Leben dafür aufs Spiel zu setzen! 
-
-		
+//	AI_Output (other, self,"Infos_Thf_10_HI_Info_15_01"); //Wie läufts?
+	AI_Output (other, self,"Infos_Thf_10_HI_Info_15_01"); //Jak to jde?
+//	AI_Output (self, other,"Infos_Thf_10_HI_Info_01_02"); //Wenn du überleben willst, dann verlasse nicht das Lager. Draussen gibt es nichts, was es wert wäre sein Leben dafür aufs Spiel zu setzen! 
+	AI_Output (self, other,"Infos_Thf_10_HI_Info_01_02"); //Pokud chceš žít, neopouštěj tábor. Venku není nic, za co stojí nasazovat život.
+	
 };  
 ///////////////////////////////////////////////////////////////////////
 //	Info STORY
@@ -68,7 +70,8 @@ instance  Infos_Thf_10_CAMP (C_INFO)
 	
 	condition		= Infos_Thf_10_CAMP_Condition;
 	information		= Infos_Thf_10_CAMP_Info;
-	description		= "Wie siehts im Lager aus?"; 
+//	description		= "Wie siehts im Lager aus?"; 
+	description		= "Jak to vypadá v táboře?"; 
 	permanent		= TRUE;
 };
 
@@ -78,9 +81,12 @@ FUNC int  Infos_Thf_10_CAMP_Condition()
 };
 FUNC void  Infos_Thf_10_CAMP_Info()
 {
-	AI_Output (other, self,"Infos_Thf_10_CAMP_Info_15_01"); //Wie siehts im Lager aus? 
-	AI_Output (self, other,"Infos_Thf_10_CAMP_Info_01_02"); //Wenn du dich mit Snaf dem Koch gutstellst, dann kriegst du eine warme Mahlzeit am Tag.
-	AI_Output (self, other,"Infos_Thf_10_CAMP_Info_01_03"); //Ansonsten gilt, verhalte dich ruhig und mache keinen Ärger!
+//	AI_Output (other, self,"Infos_Thf_10_CAMP_Info_15_01"); //Wie siehts im Lager aus? 
+	AI_Output (other, self,"Infos_Thf_10_CAMP_Info_15_01"); //Jak to vypadá v táboře?
+//	AI_Output (self, other,"Infos_Thf_10_CAMP_Info_01_02"); //Wenn du dich mit Snaf dem Koch gutstellst, dann kriegst du eine warme Mahlzeit am Tag.
+	AI_Output (self, other,"Infos_Thf_10_CAMP_Info_01_02"); //Pokud budeš dobře vycházet s kuchařem Snafem, dostaneš od něj každý den teplé jídlo.
+//	AI_Output (self, other,"Infos_Thf_10_CAMP_Info_01_03"); //Ansonsten gilt, verhalte dich ruhig und mache keinen Ärger!
+	AI_Output (self, other,"Infos_Thf_10_CAMP_Info_01_03"); //Jinak zachovej klid a nedělej potíže!
 	
 		var C_NPC Nicolos; Nicolos = Hlp_GetNpc (WRK_206_Nicolos); 
 	Nicolos.aivar[AIV_FINDABLE] = TRUE;
@@ -91,7 +97,8 @@ instance  Infos_Thf_10_BOSS (C_INFO)
 	
 	condition		= Infos_Thf_10_BOSS_Condition;
 	information		= Infos_Thf_10_BOSS_Info;
-	description		= "Wer hat hier das Sagen?"; 
+//	description		= "Wer hat hier das Sagen?"; 
+	description		= "Kdo je tu šéf?"; 
 };
 FUNC int  Infos_Thf_10_BOSS_Condition()
 {	
@@ -99,8 +106,10 @@ FUNC int  Infos_Thf_10_BOSS_Condition()
 };
 FUNC void  Infos_Thf_10_BOSS_Info()
 {
-	AI_Output (other, self,"Infos_Thf_10_BOSS_Info_15_01"); //Wer hat hier das Sagen?
-	AI_Output (self, other,"Infos_Thf_10_BOSS_Info_01_02"); //Niemand hat mir etwas zu sagen.
+//	AI_Output (other, self,"Infos_Thf_10_BOSS_Info_15_01"); //Wer hat hier das Sagen?
+	AI_Output (other, self,"Infos_Thf_10_BOSS_Info_15_01"); //Kdo je tu šéf?
+//	AI_Output (self, other,"Infos_Thf_10_BOSS_Info_01_02"); //Niemand hat mir etwas zu sagen.
+	AI_Output (self, other,"Infos_Thf_10_BOSS_Info_01_02"); //Mně nikdo nešéfuje.
 	
 
 	

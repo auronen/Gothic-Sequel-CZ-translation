@@ -3,7 +3,8 @@ func string B_BuildRunemelterString (var string rune, var int oreAmount, var str
 {
 	var string msg;
 
-	msg	= ConcatStrings(rune,	" giessen (");
+//	msg	= ConcatStrings(rune,	" giessen (");
+	msg	= ConcatStrings(rune,	" odlít (");
 	msg = ConcatStrings(msg,	IntToString(oreAmount));
 	msg = ConcatStrings(msg,	" ");
 	msg = ConcatStrings(msg,	oreName);
@@ -18,11 +19,15 @@ func string B_BuildRunemakerString (var string spell, var string rune, var int n
 {
 	var string msg;
 
-	msg	= ConcatStrings(spell,	"-");
-	msg = ConcatStrings(msg,	rune);
-	msg = ConcatStrings(msg,	" erschaffen (");
+//	msg	= ConcatStrings(spell,	"-");
+//	msg = ConcatStrings(msg,	rune);
+//	msg = ConcatStrings(msg,	" erschaffen (");
+//	msg = ConcatStrings(msg,	IntToString(neededMana));
+//	msg = ConcatStrings(msg,	" dauerhafte Mana)");
+	msg = ConcatStrings("Vytvořit runu - ", spell);
+	msg = ConcatStrings(msg,	" (");
 	msg = ConcatStrings(msg,	IntToString(neededMana));
-	msg = ConcatStrings(msg,	" dauerhafte Mana)");
+	msg = ConcatStrings(msg,	" maximální magické energie)");
 
 	return msg;
 };

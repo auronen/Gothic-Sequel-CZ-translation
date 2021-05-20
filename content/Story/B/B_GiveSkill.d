@@ -29,35 +29,40 @@ func int B_GiveSkill(var C_NPC typ, var int TAL, var int NEW_Wert, var int LP_Co
 			{
 				Npc_SetTalentSkill(typ, NPC_TALENT_1H, NEW_Wert);
 				Npc_SetTalentValue(typ, NPC_TALENT_1H, Npc_GetTalentValue(typ, NPC_TALENT_1H)+5);
-				AI_PrintScreen	(self, "Lerne: Kampf mit Einhandwaffen", -1,-1,FONT_OLD_BIG,2, TEXT_COLOR_WHITE);
+//				AI_PrintScreen	(self, "Lerne: Kampf mit Einhandwaffen", -1,-1,FONT_OLD_BIG,2, TEXT_COLOR_WHITE);
+				AI_PrintScreen	(self, "Naučl jsem se bojovat s jednoručními zbraněmi", -1,-1,FONT_OLD_BIG,2, TEXT_COLOR_WHITE);
 				return 1;
 			}
 			else if (tal == NPC_TALENT_2H)
 			{
 				Npc_SetTalentSkill(typ, NPC_TALENT_2H, NEW_Wert);
 				Npc_SetTalentValue(typ, NPC_TALENT_2H, Npc_GetTalentValue(typ, NPC_TALENT_2H)+5);
-				AI_PrintScreen	(self, "Lerne: Kampf mit Zweihandwaffen", -1,-1,FONT_OLD_BIG,2, TEXT_COLOR_WHITE);
+//				AI_PrintScreen	(self, "Lerne: Kampf mit Zweihandwaffen", -1,-1,FONT_OLD_BIG,2, TEXT_COLOR_WHITE);
+				AI_PrintScreen	(self, "Naučl jsem se bojovat s obouručními zbraněmi", -1,-1,FONT_OLD_BIG,2, TEXT_COLOR_WHITE);
 				return 1;
 			}
 			else if (tal == NPC_TALENT_STAFF)
 			{
 				Npc_SetTalentSkill(typ, NPC_TALENT_STAFF, NEW_Wert);
 				Npc_SetTalentValue(typ, NPC_TALENT_STAFF, Npc_GetTalentValue(typ, NPC_TALENT_STAFF)+5);
-				AI_PrintScreen	(self, "Lerne: Kampf mit Stabwaffe", -1,-1,FONT_OLD_BIG,2, TEXT_COLOR_WHITE);
+//				AI_PrintScreen	(self, "Lerne: Kampf mit Stabwaffe", -1,-1,FONT_OLD_BIG,2, TEXT_COLOR_WHITE);
+				AI_PrintScreen	(self, "Naučil jsem se bojovat s bojovými holemi", -1,-1,FONT_OLD_BIG,2, TEXT_COLOR_WHITE);
 				return 1;
 			}
 			else if (tal == NPC_TALENT_BOW)
 			{
 				Npc_SetTalentSkill(typ, NPC_TALENT_BOW, NEW_Wert);
 				Npc_SetTalentValue(typ, NPC_TALENT_BOW, Npc_GetTalentValue(typ, NPC_TALENT_BOW)+15);
-				AI_PrintScreen	(self, "Lerne: Bogenschießen", -1,-1,FONT_OLD_BIG,2, TEXT_COLOR_WHITE);
+//				AI_PrintScreen	(self, "Lerne: Bogenschießen", -1,-1,FONT_OLD_BIG,2, TEXT_COLOR_WHITE);
+				AI_PrintScreen	(self, "Naučil jsem se střílet z luku", -1,-1,FONT_OLD_BIG,2, TEXT_COLOR_WHITE);
 				return 1;
 			}
 			else if (tal == NPC_TALENT_CROSSBOW)
 			{
 				Npc_SetTalentSkill(typ, NPC_TALENT_CROSSBOW, NEW_Wert);
 				Npc_SetTalentValue(typ, NPC_TALENT_CROSSBOW, Npc_GetTalentValue(typ, NPC_TALENT_CROSSBOW)+20);
-				AI_PrintScreen	(self, "Lerne: Armbrustschießen", -1,-1,FONT_OLD_BIG,2, TEXT_COLOR_WHITE);
+//				AI_PrintScreen	(self, "Lerne: Armbrustschießen", -1,-1,FONT_OLD_BIG,2, TEXT_COLOR_WHITE);
+				AI_PrintScreen	(self, "Naučil jsem se střílet z kuše", -1,-1,FONT_OLD_BIG,2, TEXT_COLOR_WHITE);
 				return 1;
 			}
 			else if (tal == NPC_TALENT_PICKLOCK)
@@ -66,12 +71,14 @@ func int B_GiveSkill(var C_NPC typ, var int TAL, var int NEW_Wert, var int LP_Co
 				if (NEW_Wert == 1)
 				{
 					Npc_SetTalentValue(typ, NPC_TALENT_PICKLOCK, 60);
-					AI_PrintScreen	(self, "Lerne: Schlösser knacken", -1,-1,FONT_OLD_BIG,2, TEXT_COLOR_WHITE);
+//					AI_PrintScreen	(self, "Lerne: Schlösser knacken", -1,-1,FONT_OLD_BIG,2, TEXT_COLOR_WHITE);
+					AI_PrintScreen	(self, "Naučil jsem se otevírat zámky", -1,-1,FONT_OLD_BIG,2, TEXT_COLOR_WHITE);
 				}
 				else
 				{
 					Npc_SetTalentValue(typ, NPC_TALENT_PICKLOCK, 95);
-					AI_PrintScreen	(self, "Steigere: Schlösser knacken", -1,-1,FONT_OLD_BIG,2, TEXT_COLOR_WHITE);
+//					AI_PrintScreen	(self, "Steigere: Schlösser knacken", -1,-1,FONT_OLD_BIG,2, TEXT_COLOR_WHITE);
+					AI_PrintScreen	(self, "Zlepšil sjem se v otevírání zámků", -1,-1,FONT_OLD_BIG,2, TEXT_COLOR_WHITE);
 				};
 				return 1;
 			}
@@ -81,25 +88,29 @@ func int B_GiveSkill(var C_NPC typ, var int TAL, var int NEW_Wert, var int LP_Co
 				if (NEW_Wert == 1)
 				{
 					Npc_SetTalentValue(typ, NPC_TALENT_PICKPOCKET, 60);
-					AI_PrintScreen	(self, "Lerne: Taschendiebstahl", -1,-1,FONT_OLD_BIG,2, TEXT_COLOR_WHITE);
+//					AI_PrintScreen	(self, "Lerne: Taschendiebstahl", -1,-1,FONT_OLD_BIG,2, TEXT_COLOR_WHITE);
+					AI_PrintScreen	(self, "Naučil jsem se vybírat kapsy", -1,-1,FONT_OLD_BIG,2, TEXT_COLOR_WHITE);
 				}
 				else
 				{
 					Npc_SetTalentValue(typ, NPC_TALENT_PICKPOCKET, 95);
-					AI_PrintScreen	(self, "Steigere: Taschendiebstahl", -1,-1,FONT_OLD_BIG,2, TEXT_COLOR_WHITE);
+//					AI_PrintScreen	(self, "Steigere: Taschendiebstahl", -1,-1,FONT_OLD_BIG,2, TEXT_COLOR_WHITE);
+					AI_PrintScreen	(self, "Zlepšil jsem se ve vybírání kapes", -1,-1,FONT_OLD_BIG,2, TEXT_COLOR_WHITE);
 				};
 				return 1;
 			}
 			else if (tal == NPC_TALENT_MAGE)
 			{
 				Npc_SetTalentSkill(typ, NPC_TALENT_MAGE, NEW_Wert);
-				AI_PrintScreen	(self, "Lerne: Nächster Kreis der Magie", -1,-1,FONT_OLD_BIG,2, TEXT_COLOR_WHITE);
+//				AI_PrintScreen	(self, "Lerne: Nächster Kreis der Magie", -1,-1,FONT_OLD_BIG,2, TEXT_COLOR_WHITE);
+				AI_PrintScreen	(self, "Naučil jsem se další kruh magie", -1,-1,FONT_OLD_BIG,2, TEXT_COLOR_WHITE);
 				return 1;
 			}
 			else if (tal == NPC_TALENT_SNEAK)
 			{
 				Npc_SetTalentSkill(typ, NPC_TALENT_SNEAK, NEW_Wert);
-				AI_PrintScreen	(self, "Lerne: Schleichen", -1,-1,FONT_OLD_BIG,2, TEXT_COLOR_WHITE);
+//				AI_PrintScreen	(self, "Lerne: Schleichen", -1,-1,FONT_OLD_BIG,2, TEXT_COLOR_WHITE);
+				AI_PrintScreen	(self, "Naučil jsem se plížit", -1,-1,FONT_OLD_BIG,2, TEXT_COLOR_WHITE);
 				return 1;
 			}
 			else if (tal == NPC_TALENT_SMITH)
@@ -107,12 +118,14 @@ func int B_GiveSkill(var C_NPC typ, var int TAL, var int NEW_Wert, var int LP_Co
 				Npc_SetTalentSkill(typ, NPC_TALENT_SMITH, NEW_Wert);
 				if (NEW_Wert == 1)
 				{
-					AI_PrintScreen	(self, "Lerne: Schmieden", -1,-1,FONT_OLD_BIG,2, TEXT_COLOR_WHITE);
+//					AI_PrintScreen	(self, "Lerne: Schmieden", -1,-1,FONT_OLD_BIG,2, TEXT_COLOR_WHITE);
+					AI_PrintScreen	(self, "Naučil jsem se kovářskému řemeslu", -1,-1,FONT_OLD_BIG,2, TEXT_COLOR_WHITE);
 					B_LearnShortsword();
 				}
 				else
 				{
-					AI_PrintScreen	(self, "Steigere: Schmieden", -1,-1,FONT_OLD_BIG,2, TEXT_COLOR_WHITE);
+//					AI_PrintScreen	(self, "Steigere: Schmieden", -1,-1,FONT_OLD_BIG,2, TEXT_COLOR_WHITE);
+					AI_PrintScreen	(self, "Zlepšil jsem se v kovařině", -1,-1,FONT_OLD_BIG,2, TEXT_COLOR_WHITE);
 				};
 
 				return 1;
@@ -122,11 +135,13 @@ func int B_GiveSkill(var C_NPC typ, var int TAL, var int NEW_Wert, var int LP_Co
 				Npc_SetTalentSkill(typ, NPC_TALENT_COOK, NEW_Wert);
 				if (NEW_Wert == 1)
 				{
-					AI_PrintScreen	(self, "Lerne: Kochen", -1,-1,FONT_OLD_BIG,2, TEXT_COLOR_WHITE);
+//					AI_PrintScreen	(self, "Lerne: Kochen", -1,-1,FONT_OLD_BIG,2, TEXT_COLOR_WHITE);
+					AI_PrintScreen	(self, "Naučl jsem se vařit", -1,-1,FONT_OLD_BIG,2, TEXT_COLOR_WHITE);
 				}
 				else
 				{
-					AI_PrintScreen	(self, "Steigere: Kochen", -1,-1,FONT_OLD_BIG,2, TEXT_COLOR_WHITE);
+//					AI_PrintScreen	(self, "Steigere: Kochen", -1,-1,FONT_OLD_BIG,2, TEXT_COLOR_WHITE);
+					AI_PrintScreen	(self, "Zlepšil jsem se ve vaření", -1,-1,FONT_OLD_BIG,2, TEXT_COLOR_WHITE);
 				};
 
 				return 1;
@@ -134,7 +149,8 @@ func int B_GiveSkill(var C_NPC typ, var int TAL, var int NEW_Wert, var int LP_Co
 			else if (tal == NPC_TALENT_ACROBAT)
 			{
 				Npc_SetTalentSkill(typ, NPC_TALENT_ACROBAT, NEW_Wert);
-				AI_PrintScreen	(self, "Lerne: Akrobatik", -1,-1,FONT_OLD_BIG,2, TEXT_COLOR_WHITE);
+//				AI_PrintScreen	(self, "Lerne: Akrobatik", -1,-1,FONT_OLD_BIG,2, TEXT_COLOR_WHITE);
+				AI_PrintScreen	(self, "Naučil jsem se akrobacii", -1,-1,FONT_OLD_BIG,2, TEXT_COLOR_WHITE);
 				return 1;
 			}
 			else if ( tal == NPC_TALENT_ALCHEMY)
@@ -142,11 +158,13 @@ func int B_GiveSkill(var C_NPC typ, var int TAL, var int NEW_Wert, var int LP_Co
 				Npc_SetTalentSkill(typ, NPC_TALENT_ALCHEMY, NEW_Wert);
 				if (NEW_Wert == 1)
 				{
-					AI_PrintScreen	(self, "Lerne: Alchemie", -1,-1,FONT_OLD_BIG,2, TEXT_COLOR_WHITE);
+//					AI_PrintScreen	(self, "Lerne: Alchemie", -1,-1,FONT_OLD_BIG,2, TEXT_COLOR_WHITE);
+					AI_PrintScreen	(self, "Naučl jsem se alchymii", -1,-1,FONT_OLD_BIG,2, TEXT_COLOR_WHITE);
 				}
 				else
 				{
-					AI_PrintScreen	(self, "Steigere: Alchemie", -1,-1,FONT_OLD_BIG,2, TEXT_COLOR_WHITE);
+//					AI_PrintScreen	(self, "Steigere: Alchemie", -1,-1,FONT_OLD_BIG,2, TEXT_COLOR_WHITE);
+					AI_PrintScreen	(self, "Zlepšil jsem se v alchymii", -1,-1,FONT_OLD_BIG,2, TEXT_COLOR_WHITE);
 				};
 				return 1;
 			}
@@ -155,11 +173,13 @@ func int B_GiveSkill(var C_NPC typ, var int TAL, var int NEW_Wert, var int LP_Co
 				Npc_SetTalentSkill(typ, NPC_TALENT_THAUMATURGY, NEW_Wert);
 				if (NEW_Wert == 1)
 				{
-					AI_PrintScreen	(self, "Lerne: Runen erschaffen", -1,-1,FONT_OLD_BIG,2, TEXT_COLOR_WHITE);
+//					AI_PrintScreen	(self, "Lerne: Runen erschaffen", -1,-1,FONT_OLD_BIG,2, TEXT_COLOR_WHITE);
+					AI_PrintScreen	(self, "Naučil jsem se vytvářet magické runy", -1,-1,FONT_OLD_BIG,2, TEXT_COLOR_WHITE);
 				}
 				else
 				{
-					AI_PrintScreen	(self, "Steigere: Runen erschaffen", -1,-1,FONT_OLD_BIG,2, TEXT_COLOR_WHITE);
+	//				AI_PrintScreen	(self, "Steigere: Runen erschaffen", -1,-1,FONT_OLD_BIG,2, TEXT_COLOR_WHITE);
+					AI_PrintScreen	(self, "Zlepšil jsem se ve výrobě magických run", -1,-1,FONT_OLD_BIG,2, TEXT_COLOR_WHITE);
 				};
 				return 1;
 			}
@@ -168,11 +188,13 @@ func int B_GiveSkill(var C_NPC typ, var int TAL, var int NEW_Wert, var int LP_Co
 				Npc_SetTalentSkill(typ, NPC_TALENT_BOWMAKER, NEW_Wert);
 				if (NEW_Wert == 1)
 				{
-					AI_PrintScreen	(self, "Lerne: Bogenmachen", -1,-1,FONT_OLD_BIG,2, TEXT_COLOR_WHITE);
+//					AI_PrintScreen	(self, "Lerne: Bogenmachen", -1,-1,FONT_OLD_BIG,2, TEXT_COLOR_WHITE);
+					AI_PrintScreen	(self, "Naučil jsem se vyrábět luky", -1,-1,FONT_OLD_BIG,2, TEXT_COLOR_WHITE);
 				}
 				else
 				{
-					AI_PrintScreen	(self, "Steigere: Bogenmachen", -1,-1,FONT_OLD_BIG,2, TEXT_COLOR_WHITE);
+//					AI_PrintScreen	(self, "Steigere: Bogenmachen", -1,-1,FONT_OLD_BIG,2, TEXT_COLOR_WHITE);
+					AI_PrintScreen	(self, "Zlepšil jsem se ve vyýrobě luků", -1,-1,FONT_OLD_BIG,2, TEXT_COLOR_WHITE);
 				};
 				return 1;
 			}
@@ -183,7 +205,8 @@ func int B_GiveSkill(var C_NPC typ, var int TAL, var int NEW_Wert, var int LP_Co
 		}
 		else
 		{
-			AI_PrintScreen	(self, "Zu wenig Lernpunkte!", -1,-1,FONT_OLD_BIG,2, TEXT_COLOR_WHITE);
+//			AI_PrintScreen	(self, "Zu wenig Lernpunkte!", -1,-1,FONT_OLD_BIG,2, TEXT_COLOR_WHITE);
+			AI_PrintScreen	(self, "Málo zkušenostních bodů!", -1,-1,FONT_OLD_BIG,2, TEXT_COLOR_WHITE);
 			B_Say (self, other, "$NOLEARNNOPOINTS");
 			return 0;
 		};
@@ -192,12 +215,14 @@ func int B_GiveSkill(var C_NPC typ, var int TAL, var int NEW_Wert, var int LP_Co
 	{
 		if (TAL_Wert >= NEW_Wert)
 		{
-			B_Say (self, other, "$NOLEARNYOUREBETTER"); //Du bist jetzt schon besser!
+//			B_Say (self, other, "$NOLEARNYOUREBETTER"); //Du bist jetzt schon besser!
+			B_Say (self, other, "$NOLEARNYOUREBETTER"); //Zlepšuješ se!
 			return 0;
 		}
 		else if ((TAL_Wert+1) < NEW_Wert) //d.h. i.d.R. TAL_Wert=2 und NEW_Wert=0, außer bei TALENT_MAGE
 		{
-			B_Say (self, other, "$NOLEARNYOUALREADYKNOW"); //Du mußt erst Fortgeschritten sein, bevor du ein Meister werden kannst!
+//			B_Say (self, other, "$NOLEARNYOUALREADYKNOW"); //Du mußt erst Fortgeschritten sein, bevor du ein Meister werden kannst!
+			B_Say (self, other, "$NOLEARNYOUALREADYKNOW"); //Musíš být nejdříve pokročilý, aby ses stal mistrem!
 			return 0;
 		};
 	};

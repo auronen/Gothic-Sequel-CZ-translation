@@ -19,13 +19,15 @@ func void B_BuyAttributePoints (var C_NPC typ, var int ATR, var int AtrPlus)
 			if (ATR == ATR_STRENGTH)
 			{
 				typ.attribute[ATR_STRENGTH] = typ.attribute[ATR_STRENGTH] + AtrPlus;
-				PrintString = ConcatStrings("Stärke + ", AtrPlusSTRING);
+//				PrintString = ConcatStrings("Stärke + ", AtrPlusSTRING);
+				PrintString = ConcatStrings("Síla + ", AtrPlusSTRING);
 				PrintScreen	(PrintSTRING, -1,-1,FONT_OLD_BIG,1);
 			}
 			else if (ATR == ATR_DEXTERITY)
 			{
 				typ.attribute[ATR_DEXTERITY] = typ.attribute[ATR_DEXTERITY] + AtrPlus;
-				PrintString = ConcatStrings("Geschicklichkeit + ", AtrPlusSTRING);
+//				PrintString = ConcatStrings("Geschicklichkeit + ", AtrPlusSTRING);
+				PrintString = ConcatStrings("Obratnost + ", AtrPlusSTRING);
 				PrintScreen	(PrintSTRING, -1,-1,FONT_OLD_BIG,1);
 			}
 			else if (ATR == ATR_MANA_MAX)
@@ -37,13 +39,15 @@ func void B_BuyAttributePoints (var C_NPC typ, var int ATR, var int AtrPlus)
 		}
 		else
 		{
-			PrintScreen	("Keine Steigerung über Maximum 100!", -1,-1,FONT_OLD_BIG,1);
+//			PrintScreen	("Keine Steigerung über Maximum 100!", -1,-1,FONT_OLD_BIG,1);
+			PrintScreen	("Nelze zvýšit přes maximální hodnotu 100!", -1,-1,FONT_OLD_BIG,1);
 			B_Say (self, other, "$NOLEARNOVERMAX");
 		};
 	}
 	else
 	{
-		PrintScreen	("Zu wenig Lernpunkte!", -1,-1,FONT_OLD_BIG,1);
+//		PrintScreen	("Zu wenig Lernpunkte!", -1,-1,FONT_OLD_BIG,1);
+		PrintScreen	("Málo zkušenostních bodů!", -1,-1,FONT_OLD_BIG,1);
 		B_Say (self, other, "$NOLEARNNOPOINTS");
 	};
 };
