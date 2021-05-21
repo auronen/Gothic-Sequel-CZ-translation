@@ -49,7 +49,7 @@ func void BEG_704_Lakarus_HI_Info ()
 
 	Log_CreateTopic		(GE_TraderOC, LOG_NOTE);
 //	B_LogEntry			(GE_TraderOC, "Einer der Bettler mit Namen Lakarus verkauft SUMPFKRAUT auf dem Arenaplatz.");
-	B_LogEntry			(GE_TraderOC, "Jeden z žebráků, Lakarus, prodává TRÁVU Z BAŽIN poblíž arény.");
+	B_LogEntry			(GE_TraderOC, "Jeden z žebráků, Lakarus, prodává poblíž arény TRÁVU Z BAŽIN.");
 };
 
 ///////////////////////////////////////////////////////////////////////
@@ -147,7 +147,7 @@ func void BEG_704_Lakarus_WHEREHERB_Info ()
 //	AI_Output			(self, hero, "BEG_704_WHEREHERB_00_02"); //Wie der Name schon sagt wächst es nur im Sumpf. Aber ich bin nicht so wahnsinnig und gehe in dorthin.
 	AI_Output			(self, hero, "BEG_704_WHEREHERB_00_02"); //Jak napovídá název, roste jenom v bažinách. Ale nejsem tak šílený, abych tam sám šel.
 //	AI_Output			(self, hero, "BEG_704_WHEREHERB_00_03"); //Niemand der klaren Verstandes ist geht dorthin. Nur ein paar Jäger trauen sich in die Sumpfgebiete.
-	AI_Output			(self, hero, "BEG_704_WHEREHERB_00_03"); //Nikdo rozumný by tam nešel. Jenom pár  Jenom pár lovců se do těch bažin odváží.
+	AI_Output			(self, hero, "BEG_704_WHEREHERB_00_03"); //Nikdo rozumný by tam nešel. Jenom pár lovců se do těch bažin odváží.
 //	AI_Output			(self, hero, "BEG_704_WHEREHERB_00_04"); //Die Jäger kommen ab und zu ins Lager. Und von denen kaufe ich das Kraut.
 	AI_Output			(self, hero, "BEG_704_WHEREHERB_00_04"); //Ti lovci se občas staví v táboře. A od nich tu trávu kupuju.
 };

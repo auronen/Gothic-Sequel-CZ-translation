@@ -43,7 +43,7 @@ func void PAL_1046_Prinzessin_HI_Info ()
 //	AI_Output			(self, hero, "PAL_1046_HI_16_01"); //Ich bin eine Prinzessin!
 	AI_Output			(self, hero, "PAL_1046_HI_16_01"); //Já jsem princezna!
 //	AI_Output			(self, hero, "PAL_1046_HI_16_02"); //Tatsächlich?
-	AI_Output			(self, hero, "PAL_1046_HI_16_02"); //Opravdu?
+	AI_Output			(hero, self, "PAL_1046_HI_16_02"); //Opravdu?
 //	AI_Output			(self, hero, "PAL_1046_HI_16_03"); //Oh ein junger stürmischer Krieger -TRIEF- // Nevím jak přeložit to TRIEF.
 	AI_Output			(self, hero, "PAL_1046_HI_16_03"); //Och, mladý bouřlivý válečník -???- 
 //	AI_Output			(hero, self, "PAL_1046_HI_15_04"); //Noch so abgetakelte mitt-40erin die keinen mehr abgekriegt hat // Tohle jsem hodně střelil, ale myslím, že ten význam asi má být takový.
@@ -80,7 +80,7 @@ func void PAL_1046_Prinzessin_BATH_Info ()
 //	AI_Output			(self, hero, "PAL_1046_BATH_16_02"); //Oh Jaaa, ich bin so schmutzig! Willst du mir nicht beim Baden zusehen??
 	AI_Output			(self, hero, "PAL_1046_BATH_16_02"); //Och anooo, jsem tak špinavá! Nechceš se na mě při koupeli dívat??
 //	AI_Output			(self, hero, "PAL_1046_BATH_16_03"); //BITTE (Winsel)
-	AI_Output			(self, hero, "PAL_1046_BATH_16_03"); //PROSÍÍÍM.
+	AI_Output			(self, hero, "PAL_1046_BATH_16_03"); //PROSÍÍÍM. (Kňučí)
 	AI_StopProcessInfos (self);
 	Npc_ExchangeRoutine (self,"BATH");
 	
@@ -130,7 +130,7 @@ instance PAL_1046_Prinzessin_SUICIDE		(C_INFO)
 	permanent	 = 	FALSE;
 
 //	description	 = 	"Du bist über, Bitch! ";
-	description	 = 	"Skončilas, děvko! ";
+	description	 = 	"Skončilas, děvko!";
 };
 
 func int PAL_1046_Prinzessin_SUICIDE_Condition ()
