@@ -25,3 +25,4 @@ source: [Ikarus](https://forum.worldofplayers.de/forum/threads/1299679-Skriptpak
 - MIL_122_ARENAMASTER - fixed Npc_KnowsInfo() bug
 - Mst_Molerat.d - added DMolerat instance for Diegos quest - these molerats drop meat now
 - DIA_PC_Thief.d - quest spawns molerats with meat
+- Chests.d - uncommented some lines, to add some books to those chests
