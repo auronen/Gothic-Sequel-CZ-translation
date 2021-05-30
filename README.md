@@ -6,8 +6,8 @@ Protože překládáme z originálu, tedy z němčiny :de:, doporučil bych zach
 ```c++
 instance WRK_203_Bromor_TROPHYS		(C_INFO)
 {
-	npc		 = 	WRK_203_Bromor;
-	nr		 = 	23;
+	npc		 	 = 	WRK_203_Bromor;
+	nr		 	 = 	23;
 	condition	 = 	WRK_203_Bromor_TROPHYS_Condition;
 	information	 = 	WRK_203_Bromor_TROPHYS_Info;
 	important	 = 	FALSE;
@@ -19,20 +19,20 @@ instance WRK_203_Bromor_TROPHYS		(C_INFO)
 
 func void WRK_203_Bromor_TROPHYS_Info ()
 {
-//	AI_Output			(hero, self, "WRK_203_TROPHYS_15_01"); //Ich hörte, du sammelst Trophäen?
-	AI_Output			(hero, self, "WRK_203_TROPHYS_15_01"); //Slyšel jsem, že sbíráš trofeje..?
-//	AI_Output			(self, hero, "WRK_203_TROPHYS_09_02"); //Das stimmt. Aber nicht dieses Wolfs- und Scavenger Zeug. Davon habe ich schon genug.
-	AI_Output			(self, hero, "WRK_203_TROPHYS_09_02"); //Ano, tak. Ale ne tyhle cetky z vlků nebo mrchožroutů. Těch už mám až dost.
-//	AI_Output			(self, hero, "WRK_203_TROPHYS_09_03"); //Aber wenn du mir ein SchattenläuferHorn oder -Fell bringst, dafür zahle ich hundert Silberstücke!
-	AI_Output			(self, hero, "WRK_203_TROPHYS_09_03"); //Ale kdybys mi přinesl roh nebo kůži stínové šelmy, dal bych ti za ně sto stříbrných!
+//	AI_Output (hero, self, "WRK_203_TROPHYS_15_01"); //Ich hörte, du sammelst Trophäen?
+	AI_Output (hero, self, "WRK_203_TROPHYS_15_01"); //Slyšel jsem, že sbíráš trofeje..?
+//	AI_Output (self, hero, "WRK_203_TROPHYS_09_02"); //Das stimmt. Aber nicht dieses Wolfs- und Scavenger Zeug. Davon habe ich schon genug.
+	AI_Output (self, hero, "WRK_203_TROPHYS_09_02"); //Ano, tak. Ale ne tyhle cetky z vlků nebo mrchožroutů. Těch už mám až dost.
+//	AI_Output (self, hero, "WRK_203_TROPHYS_09_03"); //Aber wenn du mir ein SchattenläuferHorn oder -Fell bringst, dafür zahle ich hundert Silberstücke!
+	AI_Output (self, hero, "WRK_203_TROPHYS_09_03"); //Ale kdybys mi přinesl roh nebo kůži stínové šelmy, dal bych ti za ně sto stříbrných!
 };
 ```
 
 ## Stav projektu
 - [x] Menu
 - [ ] Dialogy - `Content\Story\Missions`
-- [ ] Předměty - `Content\Items`
-- [ ] Ostatní - soubor `Content\Story\Text.d`
+- [x] Předměty - `Content\Items`
+- [x] Ostatní - soubor `Content\Story\Text.d`
 - [x] Fonty
 
 ## Snímky ze hry
