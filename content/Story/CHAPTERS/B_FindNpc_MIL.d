@@ -15,10 +15,14 @@ INSTANCE Info_FindNPC_MIL(C_INFO)
 
 FUNC INT Info_FindNPC_MIL_Condition()
 {
-	if ((Npc_KnowsInfo (hero,Infos_Mil_4_BOSS))
-	||(Npc_KnowsInfo (hero,Infos_Mil_6_BOSS))
-	||(Npc_KnowsInfo (hero,Infos_Mil_7_BOSS))
-	||(Npc_KnowsInfo (hero,Infos_Mil_9_BOSS)) ) // Info erscheint erst, wenn der Spieler den Namen schon mal gehört hat
+//	if ((Npc_KnowsInfo (hero,Infos_Mil_4_BOSS))
+//	||(Npc_KnowsInfo (hero,Infos_Mil_6_BOSS))
+//	||(Npc_KnowsInfo (hero,Infos_Mil_7_BOSS))
+//	||(Npc_KnowsInfo (hero,Infos_Mil_9_BOSS)) ) // Info erscheint erst, wenn der Spieler den Namen schon mal gehört hat
+	if ( BF_Mil_4_Boss
+	|| BF_Mil_6_Boss
+	|| BF_Mil_7_Boss
+	|| BF_Mil_9_Boss )
 	{
 		return TRUE;
 	};
