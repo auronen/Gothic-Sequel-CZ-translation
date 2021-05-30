@@ -354,7 +354,7 @@ const string	NAME_Trf_Shadowbeast=	"Proměna ve stínovou šelmu";	// SPL_TRF_SH
 const string	NAME_Trf_Snapper	=   "Proměna v chňapavce";			// SPL_TRF_SNAPPER	=	37;
 const string	NAME_Trf_Waran		=   "Proměna v ještěrku";			// SPL_TRF_WARAN	=	38;
 const string	NAME_Trf_Wolf		=	"Proměna ve vlka";				// SPL_TRF_WOLF		=	39;
-const string	NAME_Chainlightning	=   "Blesek";						// SPL_CHAINLIGHTNING=	40;
+const string	NAME_Chainlightning	=   "Blesk";						// SPL_CHAINLIGHTNING=	40;
 const string	NAME_Thunderbolt	=   "Ledový šíp";					// SPL_THUNDERBOLT	=	41;
 const string	NAME_Thunderball	=   "Kulový blesk";					// SPL_THUNDERBALL	=	42;
 const string	NAME_Icecube		=   "Ledový blok";					// SPL_ICECUBE		=	43;
@@ -572,6 +572,9 @@ const string NAME_Value				= "Cena:";
 const string NAME_Mag_Circle		= "Kruh:";
 //const string NAME_Manakosten		= "Manakosten:";
 const string NAME_Manakosten		= "Stojí magické energie:";
+const string NAME_Manacost_book		= "Stojí many: ";
+
+
 //const string NAME_ManakostenMax	= "Manakosten (max.):";
 const string NAME_ManakostenMax		= "Stojí magické energie (max.):";
 //const string NAME_ManaPerSec		= "Mana pro Sec.";
@@ -617,6 +620,8 @@ const string NAME_Damage			= "Poškození";
 const string NAME_PerMana			= " (za manu)";
 //const string NAME_DamagePerSec	= "Schaden pro Sec.";
 const string NAME_DamagePerSec		= "Poškození za s.";
+
+const string NAME_HealPerMana		= "Léčení za manu";
 
 //const string NAME_Prot_Edge		= "Schutz vor Waffen:";
 const string NAME_Prot_Edge			= "Ochrana proti zbraním:";
@@ -1180,11 +1185,11 @@ const string	NAME_ManaPermaPotion2		=	"Extrakt ducha";
 const string	NAME_ManaPermaPotion3		=	"Elixír ducha";
 
 //const string	NAME_Essence				=	"Essenz";
-const string	NAME_Essence				=	"esence";
+const string	NAME_Essence				=	"Esence";
 //const string	NAME_Extract				=	"Extrakt";
-const string	NAME_Extract				=	"ektrakt";
+const string	NAME_Extract				=	"Extrakt";
 //const string	NAME_Elixir					=	"Elixier";
-const string	NAME_Elixir					=	"elixír";
+const string	NAME_Elixir					=	"Elixír";
 
 //const string	NAME_BookHealingPotions		=	"Rezepturen für Heiltränke";
 const string	NAME_BookHealingPotions		=	"Recepty na léčivé lektvary";
