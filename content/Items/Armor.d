@@ -618,7 +618,8 @@ INSTANCE VLK_ARMOR_M(C_Item)
 
 INSTANCE STT_ARMOR_M(C_Item)
 {
-	name 					=	"Schattenkluft";
+//	name 					=	"Schattenkluft";
+	name 					=	"Oděv Stínů";
 
 	mainflag 				=	ITEM_KAT_ARMOR;
 	flags 					=	0;
@@ -650,7 +651,8 @@ INSTANCE STT_ARMOR_M(C_Item)
 /******************************************************************************************/
 INSTANCE STT_ARMOR_H(C_Item)
 {
-	name 					=	"Schattenrüstung";
+//	name 					=	"Schattenrüstung";
+	name 					=	"Zbroj Stínů";
 
 	mainflag 				=	ITEM_KAT_ARMOR;
 	flags 					=	0;
@@ -684,7 +686,8 @@ INSTANCE STT_ARMOR_H(C_Item)
 
 INSTANCE GRD_ARMOR_L(C_Item)
 {
-	name 					=	"Leichte Garderüstung";
+//	name 					=	"Leichte Garderüstung";
+	name 					=	"Lehká zbroj strážce";
 
 	mainflag 				=	ITEM_KAT_ARMOR;
 	flags 					=	0;
@@ -716,7 +719,8 @@ INSTANCE GRD_ARMOR_L(C_Item)
 /******************************************************************************************/
 INSTANCE GRD_ARMOR_M(C_Item)
 {
-	name 					=	"Garderüstung";
+//	name 					=	"Garderüstung";
+	name 					=	"Zbroj strážce";
 
 	mainflag 				=	ITEM_KAT_ARMOR;
 	flags 					=	0;
@@ -748,7 +752,8 @@ INSTANCE GRD_ARMOR_M(C_Item)
 /******************************************************************************************/
 INSTANCE GRD_ARMOR_H(C_Item)
 {
-	name 					=	"Schwere Garderüstung";
+//	name 					=	"Schwere Garderüstung";
+	name 					=	"Těžká zbroj strážce";
 
 	mainflag 				=	ITEM_KAT_ARMOR;
 	flags 					=	0;
@@ -782,7 +787,8 @@ INSTANCE GRD_ARMOR_H(C_Item)
 
 INSTANCE EBR_ARMOR_M(C_Item)
 {
-	name 					=	"Prunkgewand";
+//	name 					=	"Prunkgewand";
+	name 					=	"Přepychový oděv";
 
 	mainflag 				=	ITEM_KAT_ARMOR;
 	flags 					=	0;
@@ -815,7 +821,8 @@ INSTANCE EBR_ARMOR_M(C_Item)
 /******************************************************************************************/
 INSTANCE EBR_ARMOR_H(C_Item)
 {
-	name 					=	"Gomez'Rüstung";
+//	name 					=	"Gomez'Rüstung";
+	name 					=	"Gomezova zbroj";
 
 
 	mainflag 				=	ITEM_KAT_ARMOR;
@@ -849,7 +856,8 @@ INSTANCE EBR_ARMOR_H(C_Item)
 /******************************************************************************************/
 INSTANCE EBR_ARMOR_H2(C_Item)
 {
-	name 					=	"Schwere Erzbaronrüstung";
+//	name 					=	"Schwere Erzbaronrüstung";
+	name 					=	"Těžká zbroj Rudobarona";
 
 	mainflag 				=	ITEM_KAT_ARMOR;
 	flags 					=	0;
@@ -922,7 +930,8 @@ instance SFB_ARMOR_L(C_Item)
 
 INSTANCE ORG_ARMOR_L(C_Item)
 {
-	name 					=	"Leichte Banditenkleidung";
+//	name 					=	"Leichte Banditenkleidung";
+	name 					=	"Lehký oděv bandity";
 
 	mainflag 				=	ITEM_KAT_ARMOR;
 	flags 					=	0;
@@ -954,7 +963,8 @@ INSTANCE ORG_ARMOR_L(C_Item)
 /******************************************************************************************/
 INSTANCE ORG_ARMOR_M(C_Item)
 {
-	name 					=	"Mittlere Banditenkleidung";
+//	name 					=	"Mittlere Banditenkleidung";
+	name 					=	"Oděv tuláka";
 
 	mainflag 				=	ITEM_KAT_ARMOR;
 	flags 					=	0;
@@ -986,7 +996,8 @@ INSTANCE ORG_ARMOR_M(C_Item)
 /******************************************************************************************/
 INSTANCE ORG_ARMOR_H(C_Item)
 {
-	name 					=	"Schwere Banditenkleidung";
+//	name 					=	"Schwere Banditenkleidung";
+	name 					=	"Těžký oblek tuláka";
 
 	mainflag 				=	ITEM_KAT_ARMOR;
 	flags 					=	0;
@@ -1018,7 +1029,8 @@ INSTANCE ORG_ARMOR_H(C_Item)
 /******************************************************************************************/
 INSTANCE SLD_ARMOR_L(C_Item)
 {
-	name 					=	"leichte Söldnerrüstung";
+//	name 					=	"leichte Söldnerrüstung";
+	name 					=	"Lehká zbroj žoldáka";
 
 	mainflag 				=	ITEM_KAT_ARMOR;
 	flags 					=	0;
@@ -1050,7 +1062,8 @@ INSTANCE SLD_ARMOR_L(C_Item)
 /******************************************************************************************/
 instance SLD_ARMOR_M(C_Item)
 {
-	name 					=	"Söldnerrüstung";
+//	name 					=	"Söldnerrüstung";
+	name 					=	"Zbroj žoldáka";
 
 	mainflag 				=	ITEM_KAT_ARMOR;
 	flags 					=	0;
@@ -1082,7 +1095,8 @@ instance SLD_ARMOR_M(C_Item)
 /******************************************************************************************/
 INSTANCE SLD_ARMOR_H(C_Item)
 {
-	name 					=	"Schwere Söldnerrüstung";
+//	name 					=	"Schwere Söldnerrüstung";
+	name 					=	"Těžká zbroj žoldáka";
 
 	mainflag 				=	ITEM_KAT_ARMOR;
 	flags 					=	0;
@@ -1121,7 +1135,8 @@ INSTANCE SLD_ARMOR_H(C_Item)
 
 INSTANCE NOV_ARMOR_L(C_Item)
 {
-	name 					=	"Novizen Rock";
+//	name 					=	"Novizen Rock";
+	name 					=	"Bederní rouška novice";
 
 	mainflag 				=	ITEM_KAT_ARMOR;
 	flags 					=	0;
@@ -1153,7 +1168,8 @@ INSTANCE NOV_ARMOR_L(C_Item)
 /******************************************************************************************/
 INSTANCE NOV_ARMOR_M(C_Item)
 {
-	name 					=	"Leichte Novizenrüstung";
+//	name 					=	"Leichte Novizenrüstung";
+	name 					=	"Lehká zbroj novice";
 
 	mainflag 				=	ITEM_KAT_ARMOR;
 	flags 					=	0;
@@ -1185,7 +1201,8 @@ INSTANCE NOV_ARMOR_M(C_Item)
 /******************************************************************************************/
 INSTANCE NOV_ARMOR_H(C_Item)
 {
-	name 					=	"Novizenrüstung";
+//	name 					=	"Novizenrüstung";
+	name 					=	"Zbroj novice";
 
 	mainflag 				=	ITEM_KAT_ARMOR;
 	flags 					=	0;
@@ -1219,7 +1236,8 @@ INSTANCE NOV_ARMOR_H(C_Item)
 
 INSTANCE TPL_ARMOR_L(C_Item)
 {
-	name 					=	"Leichte Templerrüstung";
+//	name 					=	"Leichte Templerrüstung";
+	name 					=	"Lehká zbroj templáře";
 
 	mainflag 				=	ITEM_KAT_ARMOR;
 	flags 					=	0;
@@ -1251,7 +1269,8 @@ INSTANCE TPL_ARMOR_L(C_Item)
 /******************************************************************************************/
 INSTANCE TPL_ARMOR_M(C_Item)
 {
-	name 					=	"Templerrüstung";
+//	name 					=	"Templerrüstung";
+	name 					=	"Zbroj templáře";
 
 	mainflag 				=	ITEM_KAT_ARMOR;
 	flags 					=	0;
@@ -1283,7 +1302,8 @@ INSTANCE TPL_ARMOR_M(C_Item)
 /******************************************************************************************/
 INSTANCE TPL_ARMOR_H(C_Item)
 {
-	name 					=	"Schwere Templerrüstung";
+//	name 					=	"Schwere Templerrüstung";
+	name 					=	"Těžká zbroj templáře";
 
 	mainflag 				=	ITEM_KAT_ARMOR;
 	flags 					=	0;
@@ -1317,7 +1337,8 @@ INSTANCE TPL_ARMOR_H(C_Item)
 
 INSTANCE GUR_ARMOR_M(C_Item)
 {
-	name 					=	"Gururobe";
+//	name 					=	"Gururobe";
+	name 					=	"Roucho Guru";
 
 	mainflag 				=	ITEM_KAT_ARMOR;
 	flags 					=	0;
@@ -1349,7 +1370,8 @@ INSTANCE GUR_ARMOR_M(C_Item)
 /******************************************************************************************/
 INSTANCE GUR_ARMOR_H(C_Item)
 {
-	name 					=	"Hohe Gururobe";
+//	name 					=	"Hohe Gururobe";
+	name 					=	"Vznešené roucho Guru";
 
 	mainflag 				=	ITEM_KAT_ARMOR;
 	flags 					=	0;
@@ -1387,7 +1409,8 @@ INSTANCE GUR_ARMOR_H(C_Item)
 
 INSTANCE KDF_ARMOR_L(C_Item)
 {
-	name 					=	"Feuermagierrobe";
+//	name 					=	"Feuermagierrobe";
+	name 					=	"Roucho mágů Ohně";
 
 	mainflag 				=	ITEM_KAT_ARMOR;
 	flags 					=	0;
@@ -1418,7 +1441,8 @@ INSTANCE KDF_ARMOR_L(C_Item)
 /******************************************************************************************/
 INSTANCE KDF_ARMOR_H(C_Item)
 {
-	name 					=	"Große Feuerrobe";
+//	name 					=	"Große Feuerrobe";
+	name 					=	"Vznešené roucho mágů Ohně";
 
 	mainflag 				=	ITEM_KAT_ARMOR;
 	flags 					=	0;
@@ -1451,7 +1475,8 @@ INSTANCE KDF_ARMOR_H(C_Item)
 
 INSTANCE KDW_ARMOR_L(C_Item)
 {
-	name 					=	"Wasserrobe";
+//	name 					=	"Wasserrobe";
+	name 					=	"Roucho mágů Vody";
 
 	mainflag 				=	ITEM_KAT_ARMOR;
 	flags 					=	0;
@@ -1483,7 +1508,8 @@ INSTANCE KDW_ARMOR_L(C_Item)
 /******************************************************************************************/
 INSTANCE KDW_ARMOR_H(C_Item)
 {
-	name 					=	"Große Wasserrobe";
+//	name 					=	"Große Wasserrobe";
+	name 					=	"Vznešené roucho mágů Vody";
 
 	mainflag 				=	ITEM_KAT_ARMOR;
 	flags 					=	0;
@@ -1516,7 +1542,8 @@ INSTANCE KDW_ARMOR_H(C_Item)
 
 INSTANCE DMB_ARMOR_M(C_Item)
 {
-	name 					=	"Robe der Dunklen Künste";
+//	name 					=	"Robe der Dunklen Künste";
+	name 					=	"Roucho temných umění";
 
 	mainflag 				=	ITEM_KAT_ARMOR;
 	flags 					=	0;
@@ -1557,7 +1584,8 @@ INSTANCE DMB_ARMOR_M(C_Item)
 // Crawler-Plattenrüstung
 INSTANCE CRW_ARMOR_H(C_Item)
 {
-	name 					=	"Crawler-Plattenrüstung";
+//	name 					=	"Crawler-Plattenrüstung";
+	name 					=	"Zbroj z krunýřů důlních červů";
 
 	mainflag 				=	ITEM_KAT_ARMOR;
 	flags 					=	0;
@@ -1591,7 +1619,8 @@ INSTANCE CRW_ARMOR_H(C_Item)
 // Erz-Rüstungen
 INSTANCE ORE_ARMOR_M(C_Item)
 {
-	name 					=	"antike Erzrüstung";
+//	name 					=	"antike Erzrüstung";
+	name 					=	"Starobylá rudná zbroj";
 
 	mainflag 				=	ITEM_KAT_ARMOR;
 	flags 					=	0;
@@ -1612,7 +1641,8 @@ INSTANCE ORE_ARMOR_M(C_Item)
 	material 				=	MAT_WOOD;
 
 	description				=	name;
-	TEXT[0]					=	"Diese uralte Rüstung wurde vollständig aus magischen Erz geschmiedet.";
+//	TEXT[0]					=	"Diese uralte Rüstung wurde vollständig aus magischen Erz geschmiedet.";
+	TEXT[0]					=	"Tato starobylá zbroj byla celá vyrobena z magické rudy.";
 	TEXT[1]					=	NAME_Prot_Edge;			COUNT[1]	= protection	[PROT_EDGE];
 	TEXT[2]					=	NAME_Prot_Point;		COUNT[2]	= protection	[PROT_POINT];
 	TEXT[3] 				=	NAME_Prot_Fire;			COUNT[3]	= protection	[PROT_FIRE];
@@ -1622,7 +1652,8 @@ INSTANCE ORE_ARMOR_M(C_Item)
 
 INSTANCE ORE_ARMOR_H(C_Item)
 {
-	name 					=	"verbesserte Erzrüstung";
+//	name 					=	"verbesserte Erzrüstung";
+	name 					=	"Vylepšená rudná zbroj";
 
 	mainflag 				=	ITEM_KAT_ARMOR;
 	flags 					=	0;
@@ -1643,7 +1674,8 @@ INSTANCE ORE_ARMOR_H(C_Item)
 	material 				=	MAT_WOOD;
 
 	description				=	name;
-	TEXT[0]					=	"Stone der Schmied hat diese antike Rüstung noch verbessern können!";
+//	TEXT[0]					=	"Stone der Schmied hat diese antike Rüstung noch verbessern können!";
+	TEXT[0]					=	"Kovář Stone dokázal vylepšit toto starobylé brnění!";
 	TEXT[1]					=	NAME_Prot_Edge;			COUNT[1]	= protection	[PROT_EDGE];
 	TEXT[2]					=	NAME_Prot_Point;		COUNT[2]	= protection	[PROT_POINT];
 	TEXT[3] 				=	NAME_Prot_Fire;			COUNT[3]	= protection	[PROT_FIRE];
@@ -1659,7 +1691,8 @@ INSTANCE ORE_ARMOR_H(C_Item)
 *******************************************************************************************/
 INSTANCE LAW_ARMOR (C_Item)
 {
-	name 					=	"Richterrobe";
+//	name 					=	"Richterrobe";
+	name 					=	"Roucho soudce";
 
 	mainflag 				=	ITEM_KAT_ARMOR;
 	flags 					=	0;
@@ -1698,7 +1731,8 @@ INSTANCE LAW_ARMOR (C_Item)
 *******************************************************************************************/
 INSTANCE GRD_ARMOR_I(C_Item)
 {
-	name 					=	"Königliche Garderüstung";
+//	name 					=	"Königliche Garderüstung";
+	name 					=	"Zbroj královské stráže";
 
 	mainflag 				=	ITEM_KAT_ARMOR;
 	flags 					=	0;
@@ -1734,7 +1768,8 @@ INSTANCE GRD_ARMOR_I(C_Item)
 *******************************************************************************************/
 INSTANCE BAB_ARMOR_NUDE (C_Item)
 {
-	name 					=	"Nacktes Babe";
+//	name 					=	"Nacktes Babe";
+	name 					=	"Nahá dívka";
 	mainflag 				=	ITEM_KAT_ARMOR;
 	flags 					=	0;
 	value 					=	1;
@@ -1756,7 +1791,8 @@ INSTANCE BAB_ARMOR_NUDE (C_Item)
 /******************************************************************************************/
 INSTANCE BAB_ARMOR_BIKINI (C_Item)
 {
-	name 					=	"bikini babe";
+//	name 					=	"bikini babe";
+	name 					=	"Dívka v bikinách";
 	mainflag 				=	ITEM_KAT_ARMOR;
 	flags 					=	0;
 	value 					=	1;

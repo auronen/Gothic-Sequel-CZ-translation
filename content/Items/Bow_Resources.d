@@ -34,16 +34,20 @@ const int		Prod_WarCrossBow	= 1;
 
 
 
-const string 	NAME_ItMi_Wood		= "Holz zur Bogenherstellung";
+//const string 	NAME_ItMi_Wood		= "Holz zur Bogenherstellung";
+const string 	NAME_ItMi_Wood		= "Dřevo na výrobu luků";
 const int		VAlue_Wood			= 1;
 
-const string 	NAME_ItWr_Bow		= "Buch der Kurzbögen";
+//const string 	NAME_ItWr_Bow		= "Buch der Kurzbögen";
+const string 	NAME_ItWr_Bow		= "Kniha krátkých luků";
 const int		VAlue_Book_Bow		= 10;
 
-const string 	NAME_ItWr_LongBow	= "Buch der Langbögen";
+//const string 	NAME_ItWr_LongBow	= "Buch der Langbögen";
+const string 	NAME_ItWr_LongBow	= "Kniha dlouhých luků";
 const int		VAlue_Book_LongBow		= 10;
 
-const string 	NAME_ItWr_CrossBow	= "Buch der Armbrüste";
+//const string 	NAME_ItWr_CrossBow	= "Buch der Armbrüste";
+const string 	NAME_ItWr_CrossBow	= "Kniha kuší";
 const int		VAlue_Book_CrossBow		= 10;
 
 /******************************************************************************************/

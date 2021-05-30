@@ -809,7 +809,8 @@ INSTANCE ItMw_Scythe (C_Item)
 //////////////////////////////////////////////////////////////////////////////////
 INSTANCE ItMw_RustySword (C_Item)
 {
-	name 				=	"Rostiges Schwert";
+//	name 				=	"Rostiges Schwert";
+	name 				=	"Rezavý meč";
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_SWD;
@@ -838,7 +839,8 @@ INSTANCE ItMw_RustySword (C_Item)
 //////////////////////////////////////////////////////////////////////////////////
 INSTANCE ItMw_Nailmace (C_Item)
 {
-	name 				=	"Nagelkeule";
+//	name 				=	"Nagelkeule";
+	name 				=	"Ostnatý kyj";
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_AXE;
@@ -867,7 +869,8 @@ INSTANCE ItMw_Nailmace (C_Item)
 //////////////////////////////////////////////////////////////////////////////////
 instance ItMw_WitheredAxe (C_Item)
 {
-	name 				=	"Verwitterte Axt";
+//	name 				=	"Verwitterte Axt";
+	name 				=	"Rozpadlá sekyra";
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_AXE;
@@ -896,7 +899,8 @@ instance ItMw_WitheredAxe (C_Item)
 //////////////////////////////////////////////////////////////////////////////////
 INSTANCE ItMw_NotchedMace (C_Item)
 {
-	name 				=	"schartiger Streitkolben";
+//	name 				=	"schartiger Streitkolben";
+	name 				=	"Zubatý palcát";
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_AXE;
@@ -1014,8 +1018,10 @@ INSTANCE ItMw_MilitiaSword	(C_Item)
 	visual				=	"ItMw_1H_Sword_Long_02.3DS";
 
 	description			=	name;
-	TEXT[0]				=	"Nur Milizsoldaten tragen diese Art";
-	TEXT[1]				=	"der Langschwerter.";
+//	TEXT[0]				=	"Nur Milizsoldaten tragen diese Art";
+//	TEXT[1]				=	"der Langschwerter.";
+	TEXT[0]				=	"Pouze příslušníci milice nosí";
+	TEXT[1]				=	"tento typ dlouhého meče.";
 	TEXT[2]				=	NAME_TypeOneHanded;
 	TEXT[3]				=	NAME_Damage;				COUNT[3]	= damageTotal;
 	TEXT[4]				=	NAME_Str_needed;			COUNT[4]	= cond_value[0];
@@ -1045,8 +1051,10 @@ INSTANCE ItMw_PaladinSword (C_Item)
 	visual				=	"ItMw_2H_Sword_Heavy_03.3DS";
 
 	description			=	name;
-	TEXT[0]				=	"Nur die Paladine des Königs tragen";
-	TEXT[1]				=	"solche zweihändigen Schwerter.";
+//	TEXT[0]				=	"Nur die Paladine des Königs tragen";
+//	TEXT[1]				=	"solche zweihändigen Schwerter.";
+	TEXT[0]				=	"Pouze královi paladinové";
+	TEXT[1]				=	"nosí tento obouruční meč.";
 	TEXT[2]				=	NAME_TypeTwoHanded;
 	TEXT[3]				=	NAME_Damage;				COUNT[3]	= damageTotal;
 	TEXT[4]				=	NAME_Str_needed;			COUNT[4]	= cond_value[0];
@@ -1076,8 +1084,10 @@ INSTANCE ItMw_DemonhunterAxe (C_Item)
 	visual				=	"ItMw_2H_Axe_Heavy_02.3DS";
 
 	description			=	name;
-	TEXT[0]				=	"Die Dämonenjäger führen solche";
-	TEXT[1]				=	"wuchtigen Zweihandäxte.";
+//	TEXT[0]				=	"Die Dämonenjäger führen solche";
+//	TEXT[1]				=	"wuchtigen Zweihandäxte.";
+	TEXT[0]				=	"Lovci démonů používají tyto";
+	TEXT[1]				=	"masivní obouruční sekyry.";
 	TEXT[2]				=	NAME_TypeTwoHanded;
 	TEXT[3]				=	NAME_Damage;				COUNT[3]	= damageTotal;
 	TEXT[4]				=	NAME_Str_needed;			COUNT[4]	= cond_value[0];
@@ -1106,8 +1116,10 @@ INSTANCE ItMw_AuxiliaryMace (C_Item)
 	visual				=	"ItMw_1H_Mace_War_02.3DS";
 
 	description			=	name;
-	TEXT[0]				=	"Ein Streitkolben wie sie die";
-	TEXT[1]				=	"Hilfstruppen des Königs tragen.";
+//	TEXT[0]				=	"Ein Streitkolben wie sie die";
+//	TEXT[1]				=	"Hilfstruppen des Königs tragen.";
+	TEXT[0]				=	"Palcát, který používají";
+	TEXT[1]				=	"pomocné královy jendotky.";
 	TEXT[2]				=	NAME_TypeOneHanded;
 	TEXT[3]				=	NAME_Damage;				COUNT[2]	= damageTotal;
 	TEXT[4] 			=	NAME_Str_needed;			COUNT[3]	= cond_value[0];
@@ -1137,7 +1149,8 @@ INSTANCE ItMw_AuxiliaryMace (C_Item)
 //////////////////////////////////////////////////////////////////////////////////
 instance ItMw_Grim_Pickaxe (C_Item)
 {
-	name				=	"Grim's Spitzhacke";
+//	name				=	"Grim's Spitzhacke";
+	name				=	"Grimův krumpáč";
 
 	mainflag			=	ITEM_KAT_NF;
 	flags				=	ITEM_2HD_AXE;
@@ -1167,7 +1180,8 @@ instance ItMw_Grim_Pickaxe (C_Item)
 //////////////////////////////////////////////////////////////////////////////////
 INSTANCE ItMw_Goliath_Sledgehammer (C_Item)
 {
-	name				=	"Goliath's Schmiedehammer";
+//	name				=	"Goliath's Schmiedehammer";
+	name				=	"Goliášovo kovářské kladivo";
 
 	mainflag			=	ITEM_KAT_NF;
 	flags				=	ITEM_AXE;
@@ -1197,7 +1211,8 @@ INSTANCE ItMw_Goliath_Sledgehammer (C_Item)
 //////////////////////////////////////////////////////////////////////////////////
 INSTANCE ItMw_Brutus_Longsword	(C_Item)
 {
-	name				=	"Brutus' Langschwert";
+//	name				=	"Brutus' Langschwert";
+	name				=	"Brutův dlouhý meč";
 
 	mainflag			=	ITEM_KAT_NF;
 	flags				=	ITEM_SWD|ITEM_MULTI;
@@ -1227,7 +1242,8 @@ INSTANCE ItMw_Brutus_Longsword	(C_Item)
 //////////////////////////////////////////////////////////////////////////////////
 instance ItMw_Malgar_Broadsword (C_Item)
 {
-	name				=	"Malgar's Breitschwert";
+//	name				=	"Malgar's Breitschwert";
+	name				=	"Malgarův široký meč";
 
 	mainflag			=	ITEM_KAT_NF;
 	flags				=	ITEM_SWD|ITEM_MULTI;
@@ -1257,7 +1273,8 @@ instance ItMw_Malgar_Broadsword (C_Item)
 //////////////////////////////////////////////////////////////////////////////////
 instance ItMw_Thora_BattleStaff (C_Item)
 {
-	name				=	"Thora's Kampfstab";
+//	name				=	"Thora's Kampfstab";
+	name				=	"Thořina bojová hůl";
 
 	mainflag			=	ITEM_KAT_NF;
 	flags				=	ITEM_STAFF;
@@ -1291,7 +1308,8 @@ instance ItMw_Thora_BattleStaff (C_Item)
 //////////////////////////////////////////////////////////////////////////////////
 instance ItMw_Arenamaster_Sword (C_Item)
 {
-	name				=	"Gladiatorenzucht";
+//	name				=	"Gladiatorenzucht";
+	name				=	"Cvičitel gladiátorů";
 
 	mainflag			=	ITEM_KAT_NF;
 	flags				=	ITEM_SWD|ITEM_MULTI;
@@ -1309,8 +1327,10 @@ instance ItMw_Arenamaster_Sword (C_Item)
 	visual				=	"ItMw_1H_Sword_Short_05.3DS";
 
 	description			=	name;
-	TEXT[0]				=	"Die persönliche Waffe des Arenameisters";
-	TEXT[1]				=	"ist eher eine Zierwaffe als alles andere.";
+//	TEXT[0]				=	"Die persönliche Waffe des Arenameisters";
+//	TEXT[1]				=	"ist eher eine Zierwaffe als alles andere.";
+	TEXT[0]				=	"Osobní zbraň mistra arény.";
+	TEXT[1]				=	"Spíš na parádu než na cokoliv jiného.";
 	TEXT[2]				=	NAME_TypeOneHanded;
 	TEXT[3]				=	NAME_Damage;				COUNT[3]	= damageTotal;
 	TEXT[4]				=	NAME_Str_needed;			COUNT[4]	= cond_value[0];
@@ -1322,7 +1342,8 @@ instance ItMw_Arenamaster_Sword (C_Item)
 //////////////////////////////////////////////////////////////////////////////////
 INSTANCE ItMw_Diego_Sword	(C_Item)
 {
-	name				=	"Brutus' Langschwert";
+//	name				=	"Brutus' Langschwert";
+	name				=	"Diegův dlouhý meč";
 
 	mainflag			=	ITEM_KAT_NF;
 	flags				=	ITEM_SWD|ITEM_MULTI;
@@ -1338,11 +1359,14 @@ INSTANCE ItMw_Diego_Sword	(C_Item)
 	cond_value[0]		=	Str_Longsword;
 	visual				=	"ItMw_1H_Sword_Long_05.3DS";
 
-	owner				=	MIL_121_Brutus;
+//	owner				=	MIL_121_Brutus;
+	owner				=	PC_Thief;
 
 	description			=	name;
-	TEXT[0]				=	"Diego's Langschert ist schlicht aber";
-	TEXT[1]				=	"präzise. Die Waffe eines Meisters.";
+//	TEXT[0]				=	"Diego's Langschert ist schlicht aber";
+//	TEXT[1]				=	"präzise. Die Waffe eines Meisters.";
+	TEXT[0]				=	"Diegův dlouhý meč je jednoduchý, ale velice ";
+	TEXT[1]				=	"precizně vyhotovený meč. Zbraň mistra!";
 	TEXT[2]				=	NAME_TypeOneHanded;
 	TEXT[3]				=	NAME_Damage;				COUNT[3]	= damageTotal;
 	TEXT[4]				=	NAME_Str_needed;			COUNT[4]	= cond_value[0];

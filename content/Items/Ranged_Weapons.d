@@ -41,7 +41,7 @@ INSTANCE ItRw_ShortBow (C_Item)
 	visual 				=	"ItRw_Bow_Small_01.mms";
 
 	description			=	name;
-	TEXT[1]				=	NAME_TypeBow;
+	TEXT[0]				=	NAME_TypeBow;
 	TEXT[2]				=	NAME_Damage;					COUNT[2]	= damageTotal;
 	TEXT[3] 			=	NAME_Dex_needed;				COUNT[3]	= cond_value[0];
 	TEXT[5]				=	NAME_Value;						COUNT[5]	= value;
@@ -66,7 +66,7 @@ INSTANCE ItRw_RiderBow (C_Item)
 	visual 				=	"ItRw_Bow_Small_02.mms";
 
 	description			=	name;
-	TEXT[1]				=	NAME_TypeBow;
+	TEXT[0]				=	NAME_TypeBow;
 	TEXT[2]				=	NAME_Damage;				COUNT[2]	= damageTotal;
 	TEXT[3] 			=	NAME_Dex_needed;			COUNT[3]	= cond_value[0];
 	TEXT[5]				=	NAME_Value;					COUNT[5]	= value;
@@ -91,7 +91,7 @@ INSTANCE ItRw_FieldBow (C_Item)
 	visual 				=	"ItRw_Bow_Small_03.mms";
 
 	description			=	name;
-	TEXT[1]				=	NAME_TypeBow;
+	TEXT[0]				=	NAME_TypeBow;
 	TEXT[2]				=	NAME_Damage;				COUNT[2]	= damageTotal;
 	TEXT[3] 			=	NAME_Dex_needed;			COUNT[3]	= cond_value[0];
 	TEXT[5]				=	NAME_Value;					COUNT[5]	= value;
@@ -116,7 +116,7 @@ INSTANCE ItRw_HuntingBow (C_Item)
 	visual 				=	"ItRw_Bow_Small_04.mms";
 
 	description			=	name;
-	TEXT[1]				=	NAME_TypeBow;
+	TEXT[0]				=	NAME_TypeBow;
 	TEXT[2]				=	NAME_Damage;				COUNT[2]	= damageTotal;
 	TEXT[3] 			=	NAME_Dex_needed;			COUNT[3]	= cond_value[0];
 	TEXT[5]				=	NAME_Value;					COUNT[5]	= value;
@@ -144,7 +144,7 @@ INSTANCE ItRw_LongBow (C_Item)
 	visual 				=	"ItRw_Bow_Long_01.mms";
 
 	description			=	name;
-	TEXT[1]				=	NAME_TypeBow;
+	TEXT[0]				=	NAME_TypeBow;
 	TEXT[2]				=	NAME_Damage;				COUNT[2]	= damageTotal;
 	TEXT[3] 			=	NAME_Dex_needed;			COUNT[3]	= cond_value[0];
 	TEXT[5]				=	NAME_Value;					COUNT[5]	= value;
@@ -169,7 +169,7 @@ INSTANCE ItRw_HedgeBow (C_Item)
 	visual 				=	"ItRw_Bow_Long_02.mms";
 
 	description			=	name;
-	TEXT[1]				=	NAME_TypeBow;
+	TEXT[0]				=	NAME_TypeBow;
 	TEXT[2]				=	NAME_Damage;				COUNT[2]	= damageTotal;
 	TEXT[3] 			=	NAME_Dex_needed;			COUNT[3]	= cond_value[0];
 	TEXT[5]				=	NAME_Value;					COUNT[5]	= value;
@@ -194,7 +194,7 @@ INSTANCE ItRw_YewBow (C_Item)
 	visual 				=	"ItRw_Bow_Long_03.mms";
 
 	description			=	name;
-	TEXT[1]				=	NAME_TypeBow;
+	TEXT[0]				=	NAME_TypeBow;
 	TEXT[2]				=	NAME_Damage;				COUNT[2]	= damageTotal;
 	TEXT[3] 			=	NAME_Dex_needed;			COUNT[3]	= cond_value[0];
 	TEXT[5]				=	NAME_Value;					COUNT[5]	= value;
@@ -219,7 +219,7 @@ INSTANCE ItRw_ArmyBow (C_Item)
 	visual 				=	"ItRw_Bow_Long_07.mms";
 
 	description			=	name;
-	TEXT[1]				=	NAME_TypeBow;
+	TEXT[0]				=	NAME_TypeBow;
 	TEXT[2]				=	NAME_Damage;				COUNT[2]	= damageTotal;
 	TEXT[3] 			=	NAME_Dex_needed;			COUNT[3]	= cond_value[0];
 	TEXT[5]				=	NAME_Value;					COUNT[5]	= value;
@@ -248,7 +248,7 @@ INSTANCE ItRw_WarBow (C_Item)
 	visual 				=	"ItRw_Bow_War_01.mms";
 
 	description			=	name;
-	TEXT[1]				=	NAME_TypeBow;
+	TEXT[0]				=	NAME_TypeBow;
 	TEXT[2]				=	NAME_Damage;				COUNT[2]	= damageTotal;
 	TEXT[3] 			=	NAME_Dex_needed;			COUNT[3]	= cond_value[0];
 	TEXT[5]				=	NAME_Value;					COUNT[5]	= value;
@@ -273,7 +273,7 @@ INSTANCE ItRw_StormBow (C_Item)
 	visual 				=	"ItRw_Bow_War_03.mms";
 
 	description			=	name;
-	TEXT[1]				=	NAME_TypeBow;
+	TEXT[0]				=	NAME_TypeBow;
 	TEXT[2]				=	NAME_Damage;				COUNT[2]	= damageTotal;
 	TEXT[3] 			=	NAME_Dex_needed;			COUNT[3]	= cond_value[0];
 	TEXT[5]				=	NAME_Value;					COUNT[5]	= value;
@@ -305,7 +305,7 @@ INSTANCE ItRw_LightCrossBow(C_Item)
 	visual 				=	"ItRwCrossbow1.mms";
 
 	description			=	name;
-	TEXT[1]				=	NAME_TypeCrossbow;
+	TEXT[0]				=	NAME_TypeCrossbow;
 	TEXT[2]				=	NAME_Damage;				COUNT[2]	= damageTotal;
 	TEXT[3] 			=	NAME_Dex_needed;			COUNT[3]	= cond_value[0];
 	TEXT[5]				=	NAME_Value;					COUNT[5]	= value;
@@ -330,7 +330,7 @@ INSTANCE ItRw_CrossBow(C_Item)
 	visual 				=	"ItRwCrossbow2.mms";
 
 	description			=	name;
-	TEXT[1]				=	NAME_TypeCrossbow;
+	TEXT[0]				=	NAME_TypeCrossbow;
 	TEXT[2]				=	NAME_Damage;				COUNT[2]	= damageTotal;
 	TEXT[3] 			=	NAME_Dex_needed;			COUNT[3]	= cond_value[0];
 	TEXT[5]				=	NAME_Value;					COUNT[5]	= value;
@@ -355,7 +355,7 @@ INSTANCE ItRw_HeavyCrossBow(C_Item)
 	visual 				=	"ItRwCrossbow3.mms";
 
 	description			=	name;
-	TEXT[1]				=	NAME_TypeCrossbow;
+	TEXT[0]				=	NAME_TypeCrossbow;
 	TEXT[2]				=	NAME_Damage;				COUNT[2]	= damageTotal;
 	TEXT[3] 			=	NAME_Dex_needed;			COUNT[3]	= cond_value[0];
 	TEXT[5]				=	NAME_Value;					COUNT[5]	= value;
@@ -380,7 +380,7 @@ INSTANCE ItRw_WarCrossBow(C_Item)
 	visual 				=	"ItRwCrossbow4.mms";
 
 	description			=	name;
-	TEXT[1]				=	NAME_TypeCrossbow;
+	TEXT[0]				=	NAME_TypeCrossbow;
 	TEXT[2]				=	NAME_Damage;				COUNT[2]	= damageTotal;
 	TEXT[3] 			=	NAME_Dex_needed;			COUNT[3]	= cond_value[0];
 	TEXT[5]				=	NAME_Value;					COUNT[5]	= value;

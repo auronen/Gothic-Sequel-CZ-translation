@@ -435,7 +435,8 @@ INSTANCE ItLsTorch(C_Item)
 	material 			=	MAT_WOOD;
 
 	description			= name;
-	TEXT[0]				= "Bringt Licht in die dunkelsten Ecken!";
+//	TEXT[0]				= "Bringt Licht in die dunkelsten Ecken!";
+	TEXT[0]				= "Prosvítí i ta nejtemnější zákoutí!";
 	TEXT[4]				= NAME_Value;					COUNT[4]	= value;
 
 };
@@ -554,8 +555,10 @@ INSTANCE ItWr_Worldmap(C_Item)
 	on_state[0]				=	UseWorldmap;
 
 	description				= name;
-	TEXT[0]					= "Leider fehlt darauf ein großes Gebiet";
-	TEXT[1]					= "im Südwesten.";
+//	TEXT[0]					= "Leider fehlt darauf ein großes Gebiet";
+//	TEXT[1]					= "im Südwesten.";
+	TEXT[0]					= "Bohužel, velká oblast na jihozápadě";
+	TEXT[1]					= "je prázdná.";
 	TEXT[5]					= NAME_Value;
 	COUNT[5]				= value;
 };
@@ -596,7 +599,8 @@ INSTANCE ItWr_Worldmap(C_Item)
 /******************************************************************************************/
 INSTANCE ItMi_Saw (C_Item)
 {
-	name 				=	"Säge";
+//	name 				=	"Säge";
+	name 				=	"Pila";
 
 	mainflag 			=	ITEM_KAT_NONE;
 	flags 				=	ITEM_MULTI;
@@ -612,7 +616,8 @@ INSTANCE ItMi_Saw (C_Item)
 
 INSTANCE FakeBook(C_Item)
 {
-	name 					=	"FakeBook";
+//	name 					=	"FakeBook";
+	name 					=	"Falešná kniha";
 
 	mainflag 				=	ITEM_KAT_DOCS;
 	flags 					=	ITEM_MISSION;

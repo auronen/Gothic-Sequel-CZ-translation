@@ -326,7 +326,8 @@ INSTANCE ItMi_Salt (C_Item)
 	material 			=	MAT_CLAY;
 
 	description			=	name;
-	TEXT[0]				=	"Darf in keiner Speise fehlen!";
+//	TEXT[0]				=	"Darf in keiner Speise fehlen!";
+	TEXT[0]				=	"Nesmí chybět v žádném pokrmu!";
 	TEXT[4]				=	NAME_Value;					COUNT[4]	= value;
 };
 

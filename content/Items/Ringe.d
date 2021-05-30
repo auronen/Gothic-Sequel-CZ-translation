@@ -15,7 +15,8 @@
 	on_equip				=	Equip_ItRi_Fire_01;
 	on_unequip				=	UnEquip_ItRi_Fire_01;
 
-	description		= " Flammenschutzring";
+//	description		= " Flammenschutzring";
+	description		= "Prsten plamenné ochrany";
 	//TEXT[0]			= "";
 	//TEXT[1]			= "";
 	////COUNT[1]		= ;
@@ -56,7 +57,8 @@
 	on_equip				=	Equip_ItRi_Fire_02;
 	on_unequip				=	UnEquip_ItRi_Fire_02;
 
-	description		= "Schutz vor Feuer";
+//	description		= "Schutz vor Feuer";
+	description		= "Ochrana před ohněm";
 	//TEXT[0]			= "";
 	//TEXT[1]			= "";
 	////COUNT[1]		= ;
@@ -97,7 +99,8 @@
 	on_equip				=	Equip_ItRi_Point_01;
 	on_unequip				=	UnEquip_ItRi_Point_01;
 
-	description		= "Ring der Holzhaut";
+//	description		= "Ring der Holzhaut";
+	description		= "Prsten dřevěné kůže";
 	//TEXT[0]			= "";
 	//TEXT[1]			= "";
 	////COUNT[1]		= ;
@@ -138,7 +141,8 @@
 	on_equip				=	Equip_ItRi_Point_02;
 	on_unequip				=	UnEquip_ItRi_Point_02;
 
-	description		= "Ring der Steinhaut";
+//	description		= "Ring der Steinhaut";
+	description		= "Prsten kamenné kůže";
 	//TEXT[0]			= "";
 	//TEXT[1]			= "";
 	////COUNT[1]		= ;
@@ -179,7 +183,8 @@
 	on_equip				=	Equip_ItRi_Edge_01;
 	on_unequip				=	UnEquip_ItRi_Edge_01;
 
-	description		= "Ring der Eisenhaut";
+//	description		= "Ring der Eisenhaut";
+	description		= "Prsten železné kůže";
 	//TEXT[0]			= "";
 	//TEXT[1]			= "";
 	////COUNT[1]		= ;
@@ -222,7 +227,8 @@
 	on_equip				=	Equip_Schutzring_Waffen2;
 	on_unequip				=	UnEquip_Schutzring_Waffen2;
 
-	description		= "Ring der Erzhaut";
+//	description		= "Ring der Erzhaut";
+	description		= "Prsten kůže z magické rudy";
 	//TEXT[0]			= "";
 	//TEXT[1]			= "";
 	////COUNT[1]		= ;
@@ -265,7 +271,8 @@
 	on_equip				=	Equip_Schutzring_Magie1;
 	on_unequip				=	UnEquip_Schutzring_Magie1;
 
-	description		= "Ring der Geisteskraft";
+//	description		= "Ring der Geisteskraft";
+	description		= "Prsten duchovní síly";
 	//TEXT[0]			= "";
 	//TEXT[1]			= "";
 	////COUNT[1]		= ;
@@ -307,7 +314,8 @@
 	on_equip				=	Equip_Schutzring_Magie2;
 	on_unequip				=	UnEquip_Schutzring_Magie2;
 
-	description		= "Ring der Verteidigung";
+//	description		= "Ring der Verteidigung";
+	description		= "Prsten obrany";
 	//TEXT[0]			= "";
 	//TEXT[1]			= "";
 	////COUNT[1]		= ;
@@ -350,7 +358,8 @@
 	on_equip				=	Equip_Schutzring_Magie1_Fire1;
 	on_unequip				=	UnEquip_Schutzring_Magie1_Fire1;
 
-	description		= "Ring der Läuterung";
+//	description		= "Ring der Läuterung";
+	description		= "Prsten očisty";
 	//TEXT[0]			= "";
 	//TEXT[1]			= "";
 	////COUNT[1]		= ;
@@ -393,7 +402,8 @@
 	on_equip				=	Equip_Schutzring_Magie2_Fire2;
 	on_unequip				=	UnEquip_Schutzring_Magie2_Fire2;
 
-	description		= "Ring der Unbezwingbarkeit";
+//	description		= "Ring der Unbezwingbarkeit";
+	description		= "Prsten nepřemožitelnosti";
 	//TEXT[0]			= "";
 	//TEXT[1]			= "";
 	////COUNT[1]		= ;
@@ -436,7 +446,8 @@
 	on_equip				=  	Equip_Schutzring_Geschosse1_Waffen1;
 	on_unequip				= 	UnEquip_Schutzring_Geschosse1_Waffen1;
 
-	description		= "Ring der Standhaftigkeit";
+//	description		= "Ring der Standhaftigkeit";
+	description		= "Prsten vytrvalosti";
 	//TEXT[0]			= "";
 	//TEXT[1]			= "";
 	////COUNT[1]		= ;
@@ -481,7 +492,8 @@
 	on_equip				=  	Equip_ItRi_Point_02_Waffen2;
 	on_unequip				= 	UnEquip_ItRi_Point_02_Waffen2;
 
-	description		= "Ring der Unantastbarkeit";
+//	description		= "Ring der Unantastbarkeit";
+	description		= "Prsten nezranitelnosti";
 	//TEXT[0]			= "";
 	//TEXT[1]			= "";
 	////COUNT[1]		= ;
@@ -526,7 +538,8 @@
 	on_equip				=  	Equip_Schutzring_Total1;
 	on_unequip				= 	UnEquip_Schutzring_Total1;
 
-	description		= "Ring der Unbezwingbarkeit";
+//	description		= "Ring der Unbezwingbarkeit";
+	description		= "Prsten menší nepřemožitelnosti";
 	//TEXT[0]			= "";
 	TEXT[1]			= NAME_Prot_Magic;
 	COUNT[1]		= 1;
@@ -575,7 +588,8 @@
 	on_equip				=  	Equip_Schutzring_Total2;
 	on_unequip				= 	UnEquip_Schutzring_Total2;
 
-	description		= "Ring der Unbesiegbarkeit";
+//	description		= "Ring der Unbesiegbarkeit";
+	description		= "Prsten větší nepřemožitelnosti";
 	//TEXT[0]			= "";
 	TEXT[1]			= NAME_Prot_Magic;
 	COUNT[1]		= 3;
@@ -624,7 +638,8 @@
 	on_equip				=	Equip_Ring_des_Geschicks;
 	on_unequip				=	UnEquip_Ring_des_Geschicks;
 
-	description		= "Ring der Gewandtheit";
+//	description		= "Ring der Gewandtheit";
+	description		= "Prsten menší obratnosti";
 	//TEXT[0]			= "";
 	//TEXT[1]			= "";
 	////COUNT[1]		= ;
@@ -666,7 +681,8 @@
 	on_equip				=	Equip_Ring_des_Geschicks2;
 	on_unequip				=	UnEquip_Ring_des_Geschicks2;
 
-	description		= "Ring der Geschicklichkeit";
+//	description		= "Ring der Geschicklichkeit";
+	description		= "Prsten větší obratnosti";
 	//TEXT[0]			= "";
 	//TEXT[1]			= "";
 	////COUNT[1]		= ;
@@ -708,7 +724,7 @@
 	on_equip				=	Equip_Ring_des_Lebens;
 	on_unequip				=	UnEquip_Ring_des_Lebens;
 
-	description		= "Ring der Lebenskraft";
+	description		= "Prsten zdraví";
 	//TEXT[0]			= "";
 	//TEXT[1]			= "";
 	////COUNT[1]		= ;
@@ -757,7 +773,8 @@
 	material 				=	MAT_METAL;
 	on_equip				=	Equip_Ring_des_Lebens2;
 	on_unequip				=	UnEquip_Ring_des_Lebens2;
-	description		= "Ring des Lebendigkeit";
+//	description		= "Ring des Lebendigkeit";
+	description		= "Prsten života";
 	//TEXT[0]			= "";
 	//TEXT[1]			= "";
 	////COUNT[1]		= ;
@@ -808,7 +825,8 @@
 	on_equip				=	Equip_Staerkering;
 	on_unequip				=	UnEquip_Staerkering;
 
-	description		= "Ring der Kraft";
+//	description		= "Ring der Kraft";
+	description		= "Prsten síly";
 	//TEXT[0]			= "";
 	//TEXT[1]			= "";
 	////COUNT[1]		= ;
@@ -850,7 +868,8 @@
 	on_equip				=	Equip_Staerkering2;
 	on_unequip				=	UnEquip_Staerkering2;
 
-	description		= "Ring der Stärke";
+//	description		= "Ring der Stärke";
+	description		= "Prsten větší síly";
 	//TEXT[0]			= "";
 	//TEXT[1]			= "";
 	////COUNT[1]		= ;
@@ -891,7 +910,8 @@
 	on_equip				=	Equip_Ring_der_Magie;
 	on_unequip				=	UnEquip_Ring_der_Magie;
 
-	description		= "Ring der Magie";
+//	description		= "Ring der Magie";
+	description		= "Prsten magie";
 	//TEXT[0]			= "";
 	//TEXT[1]			= "";
 	////COUNT[1]		= ;
@@ -935,7 +955,8 @@
 	on_equip				=	Equip_Ring_der_Erleuchtung;
 	on_unequip				=	UnEquip_Ring_der_Erleuchtung;
 
-	description		= "Ring der Erleuchtung";
+//	description		= "Ring der Erleuchtung";
+	description		= "Prsten osvícení";
 	//TEXT[0]			= "";
 	//TEXT[1]			= "";
 	////COUNT[1]		= ;
@@ -993,7 +1014,8 @@
 	on_equip				=	Equip_Machtring;
 	on_unequip				=	UnEquip_Machtring;
 
-	description		= "Ring der Macht";
+//	description		= "Ring der Macht";
+	description		= "Prsten moci";
 	//TEXT[0]			= "";
 	//TEXT[1]			= "";
 	////COUNT[1]		= ;

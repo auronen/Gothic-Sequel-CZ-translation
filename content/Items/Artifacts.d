@@ -297,8 +297,10 @@ INSTANCE ItAr_ScrollTeleport1 (C_Item)
 
 	description			= 	NAME_Teleport1;
 	TEXT	[0]			=	NAME_Manakosten;			COUNT	[1]		=	SPL_SENDCAST_TELEPORT;
-	TEXT	[2]			=	"Dieser Teleportzauber ist nicht wie andere.";
-	TEXT	[3]			=	"Er scheint mehr als nur Mana zu benötigen!";
+//	TEXT	[2]			=	"Dieser Teleportzauber ist nicht wie andere.";
+//	TEXT	[3]			=	"Er scheint mehr als nur Mana zu benötigen!";
+	TEXT	[2]			=	"Toto teleportační kouzlo je jiné než ta ostatní.";
+	TEXT	[3]			=	"Vypadá to, že vyžaduje něco víc než jen manu!";
 };
 
 /*******************************************************************************************/
@@ -360,8 +362,10 @@ INSTANCE ItAr_RuneTeleport3 (C_Item)
 	description			=	NAME_Teleport3;	//blaue Rune
 	TEXT	[0]			=	NAME_Mag_Circle;			COUNT	[0]		=	mag_circle;
 	TEXT	[1]			=	NAME_Manakosten;			COUNT	[1]		=	SPL_SENDCAST_TELEPORT;
-	TEXT	[3]			=	"Diese Rune teleportiert direkt in den";
-	TEXT	[4]			=	"Turm von Xardas dem Dämonenbeschwörer.";
+//	TEXT	[3]			=	"Diese Rune teleportiert direkt in den";
+//	TEXT	[4]			=	"Turm von Xardas dem Dämonenbeschwörer.";
+	TEXT	[3]			=	"Tato runa teleportuje mága přímo";
+	TEXT	[4]			=	"do věže nekromancera - Xardase.";
 };
 
 INSTANCE ItAr_ScrollTeleport3 (C_Item)
@@ -451,7 +455,8 @@ INSTANCE ItAr_RuneHeal (C_Item)
 
 	description			=	NAME_Heal;
 	TEXT	[0]			=	NAME_Mag_Circle;			COUNT	[0]		=	mag_circle;
-	TEXT	[1]			=	"Heilung pro Mana";			COUNT	[1]		=	SPL_HEALING_HP_PER_MP;
+//	TEXT	[1]			=	"Heilung pro Mana";			COUNT	[1]		=	SPL_HEALING_HP_PER_MP;
+	TEXT	[1]			=	NAME_HealPerMana;			COUNT	[1]		=	SPL_HEALING_HP_PER_MP;
 	//TEXT	[2]			=	"";							COUNT	[2]		=	;
 	//TEXT	[3] 		=	"";							COUNT	[3]		=	;
 	TEXT	[4]			=	NAME_Spell_Invest;
@@ -477,7 +482,8 @@ INSTANCE ItAr_ScrollHeal (C_Item)
 
 	description			=	NAME_Heal;
 	//TEXT	[0]			=	NAME_Mag_Circle;			COUNT	[0]		=	mag_circle;
-	TEXT	[1]			=	"Heilung pro Mana";			COUNT	[1]		=	SPL_HEALING_HP_PER_MP;
+//	TEXT	[1]			=	"Heilung pro Mana";			COUNT	[1]		=	SPL_HEALING_HP_PER_MP;
+	TEXT	[1]			=	NAME_HealPerMana;			COUNT	[1]		=	SPL_HEALING_HP_PER_MP;
 	TEXT	[2]			=	NAME_Mana_needed;			COUNT	[2]		=	SPL_HEALING_HP_PER_MP;
 	//TEXT	[3] 		=	"";							COUNT	[3]		=	;
 	TEXT	[4]			=	NAME_Spell_Invest;
@@ -945,7 +951,8 @@ INSTANCE ItAr_RuneIceCube (C_Item)
 	description			=	NAME_Icecube;
 	TEXT	[0]			=	NAME_Mag_Circle;			COUNT	[0]		=	mag_circle;
 	TEXT	[1]			=	NAME_Manakosten;			COUNT	[1]		=	SPL_SENDCAST_ICECUBE;
-	TEXT	[2]			=	"Schaden";					COUNT	[2]		=	SPL_FREEZE_DAMAGE;
+//	TEXT	[2]			=	"Schaden";					COUNT	[2]		=	SPL_FREEZE_DAMAGE;
+	TEXT	[2]			=	NAME_Damage;				COUNT	[2]		=	SPL_FREEZE_DAMAGE;
 	//TEXT	[3] 		=	"";							COUNT	[3]		=	;
 	//TEXT	[4]			=	"";
 	TEXT	[5]			=	NAME_Value;					COUNT	[5]		=	value;
@@ -970,7 +977,8 @@ INSTANCE ItAr_ScrollIceCube (C_Item)
 	description			=	NAME_Icecube;
 	//TEXT	[0]			=	NAME_Mag_Circle;			COUNT	[0]		=	mag_circle;
 	TEXT	[1]			=	NAME_Manakosten;			COUNT	[1]		=	SPL_SENDCAST_ICECUBE;
-	TEXT	[2]			=	"Schaden";					COUNT	[2]		=	SPL_FREEZE_DAMAGE;
+//	TEXT	[2]			=	"Schaden";					COUNT	[2]		=	SPL_FREEZE_DAMAGE;
+	TEXT	[2]			=	NAME_Damage;				COUNT	[2]		=	SPL_FREEZE_DAMAGE;
 	//TEXT	[3] 		=	"";							COUNT	[3]		=	;
 	//TEXT	[4]			=	"";
 	TEXT	[5]			=	NAME_Value;					COUNT	[5]		=	value;
@@ -998,7 +1006,8 @@ INSTANCE ItAr_RuneIceWave (C_Item)
 	description			=	NAME_Icewave;
 	TEXT	[0]			=	NAME_Mag_Circle;			COUNT	[0]		=	mag_circle;
 	TEXT	[1]			=	NAME_Manakosten;			COUNT	[1]		=	SPL_SENDCAST_ICEWAVE;
-	TEXT	[2]			=	"Schaden";					COUNT	[2]		=	SPL_FREEZE_DAMAGE;
+//	TEXT	[2]			=	"Schaden";					COUNT	[2]		=	SPL_FREEZE_DAMAGE;
+	TEXT	[2]			=	NAME_Damage;				COUNT	[2]		=	SPL_FREEZE_DAMAGE;
 	//TEXT	[3] 		=	"";							COUNT	[3]		=	;
 	//TEXT	[4]			=	"";
 	TEXT	[5]			=	NAME_Value;					COUNT	[5]		=	value;
@@ -1023,7 +1032,8 @@ INSTANCE ItAr_ScrollIceWave (C_Item)
 	description			=	NAME_Icewave;
 	//TEXT	[0]			=	NAME_Mag_Circle;			COUNT	[0]		=	mag_circle;
 	TEXT	[1]			=	NAME_Manakosten;			COUNT	[1]		=	SPL_SENDCAST_ICEWAVE;
-	TEXT	[2]			=	"Schaden";					COUNT	[2]		=	SPL_FREEZE_DAMAGE;
+//	TEXT	[2]			=	"Schaden";					COUNT	[2]		=	SPL_FREEZE_DAMAGE;
+	TEXT	[2]			=	NAME_Damage;				COUNT	[2]		=	SPL_FREEZE_DAMAGE;
 	//TEXT	[3] 		=	"";							COUNT	[3]		=	;
 	//TEXT	[4]			=	"";
 	TEXT	[5]			=	NAME_Value;					COUNT	[5]		=	value;

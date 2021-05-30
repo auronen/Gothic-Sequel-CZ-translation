@@ -14,9 +14,12 @@ INSTANCE ItMi_Amulet_Psi(C_Item)
 	visual_skin 	=	0;
 	material 		=	MAT_METAL;
 
-	description		= "Zeichen der Bruderschaft";
-	TEXT[0]			= "Dieses alte Amulett war ein Erkennungszeichen";
-	TEXT[1]			= "aus den Tagen der Barriere.";
+//	description		= "Zeichen der Bruderschaft";
+//	TEXT[0]			= "Dieses alte Amulett war ein Erkennungszeichen";
+//	TEXT[1]			= "aus den Tagen der Barriere.";
+	description		= "Znak Bratrstva";
+	TEXT[0]			= "Tento starý amulet byl znakem Bratrstva";
+	TEXT[1]			= "z dob, kdy údolí uzavírala Bariéra.";
 
 	TEXT[5]			= NAME_Value;
 	COUNT[5]		= value;
@@ -39,7 +42,8 @@ INSTANCE  Schutzamulett_Feuer(C_Item)
 	on_equip		=	Equip_Schutzamulett_Feuer;
 	on_unequip		=	UnEquip_Schutzamulett_Feuer;
 
-	description		= "Amulett der Flammen";
+//	description		= "Amulett der Flammen";
+	description		= "Amulet plamenů";
 	//TEXT[0]			= "";
 	TEXT[2]			= NAME_Prot_Fire;
 	COUNT[2]		= 10;
@@ -77,7 +81,8 @@ INSTANCE  Schutzamulett_Feuer(C_Item)
 	on_equip		=	Equip_Schutzamulett_Waffen;
 	on_unequip		=	UnEquip_Schutzamulett_Waffen;
 
-	description		= "Harnischamulett";
+//	description		= "Harnischamulett";
+	description		= "Amulet zbroje";
 	//TEXT[0]			= "";
 	TEXT[2]			= NAME_Prot_Edge;
 	COUNT[2]		= 15;
@@ -117,7 +122,8 @@ INSTANCE  Schutzamulett_Feuer(C_Item)
 	on_equip		=	Equip_Schutzamulett_Geschosse;
 	on_unequip		=	UnEquip_Schutzamulett_Geschosse;
 
-	description		= "Amulett der Eichenhaut";
+//	description		= "Amulett der Eichenhaut";
+	description		= "Amulet dubové kůže";
 	//TEXT[0]			= "";
 	TEXT[2]			= NAME_Prot_Point;
 	COUNT[2]		= 15;
@@ -155,7 +161,8 @@ INSTANCE  Schutzamulett_Feuer(C_Item)
 	on_equip		=	Equip_Schutzamulett_Magie;
 	on_unequip		=	UnEquip_Schutzamulett_Magie;
 
-	description		= "Amulett der Geisteskraft";
+//	description		= "Amulett der Geisteskraft";
+	description		= "Amulet duchovní síly";
 	//TEXT[0]			= "";
 	TEXT[2]			= NAME_Prot_Magic;
 	COUNT[2]		= 8;
@@ -192,7 +199,8 @@ INSTANCE  Schutzamulett_Feuer(C_Item)
 	on_equip		=	Equip_Schutzamulett_Magie_Feuer;
 	on_unequip		=	UnEquip_Schutzamulett_Magie_Feuer;
 
-	description		= "Amulett der Läuterung";
+//	description		= "Amulett der Läuterung";
+	description		= "Amulet očisty";
 	//TEXT[0]			= "";
 	TEXT[2]			= NAME_Prot_Fire;
 	COUNT[2]		= 10;
@@ -233,7 +241,8 @@ INSTANCE  Schutzamulett_Feuer(C_Item)
 	on_equip		=	Equip_Schutzamulett_Waffen_Geschosse;
 	on_unequip		=	UnEquip_Schutzamulett_Waffen_Geschosse;
 
-	description		= "Amulett der Steinhaut";
+//	description		= "Amulett der Steinhaut";
+	description		= "Amulet kamenné kůže";
 	//TEXT[0]			= "";
 	TEXT[2]			= NAME_Prot_Edge;
 	COUNT[2]		= 15;
@@ -274,7 +283,8 @@ INSTANCE  Schutzamulett_Feuer(C_Item)
 	on_equip		=	Equip_Schutzamulett_Total;
 	on_unequip		=	UnEquip_Schutzamulett_Total;
 
-	description		= "Amulett der Erzhaut";
+//	description		= "Amulett der Erzhaut";
+	description		= "Amulet kůže z magické rudy";
 	//TEXT[0]			= "";
 	TEXT[1]			= NAME_Prot_Fire;
 	COUNT[1]		= 10;
@@ -324,7 +334,8 @@ INSTANCE  Schutzamulett_Feuer(C_Item)
 	on_equip		=	Equip_Gewandtheitsamulett;
 	on_unequip		=	UnEquip_Gewandtheitsamulett;
 
-	description		= "Amulett der Wendigkeit";
+//	description		= "Amulett der Wendigkeit";
+	description		= "Amulet čilosti";
 	//TEXT[0]			= "";
 	//TEXT[1]			= "";
 	////COUNT[1]		= ;
@@ -366,7 +377,8 @@ INSTANCE  Schutzamulett_Feuer(C_Item)
 	on_equip		=	Equip_Gewandtheitsamulett2;
 	on_unequip		=	UnEquip_Gewandtheitsamulett2;
 
-	description		= "Amulett der Geschicklichkeit";
+//	description		= "Amulett der Geschicklichkeit";
+	description		= "Amulet obratnosti";
 	//TEXT[0]			= "";
 	//TEXT[1]			= "";
 	////COUNT[1]		= ;
@@ -407,7 +419,8 @@ INSTANCE  Schutzamulett_Feuer(C_Item)
 	on_equip		=	Equip_Staerkeamulett;
 	on_unequip		=	UnEquip_Staerkeamulett;
 
-	description		= "Amulett der Kraft";
+//	description		= "Amulett der Kraft";
+	description		= "Amulet moci";
 	//TEXT[0]			= "";
 	//TEXT[1]			= "";
 	////COUNT[1]		= ;
@@ -448,7 +461,8 @@ INSTANCE  Schutzamulett_Feuer(C_Item)
 	on_equip		=	Equip_Staerkeamulett2;
 	on_unequip		=	UnEquip_Staerkeamulett2;
 
-	description		= "Amulett der Stärke";
+//	description		= "Amulett der Stärke";
+	description		= "Amulet síly";
 	//TEXT[0]			= "";
 	//TEXT[1]			= "";
 	////COUNT[1]		= ;
@@ -490,7 +504,8 @@ INSTANCE  Schutzamulett_Feuer(C_Item)
 	on_equip		=	Equip_Lebensamulett;
 	on_unequip		=	UnEquip_Lebensamulett;
 
-	description		= "Amulett der Lebenskraft";
+//	description		= "Amulett der Lebenskraft";
+	description		= "Amulet života";
 	//TEXT[0]			= "";
 	//TEXT[1]			= "";
 	////COUNT[1]		= ;
@@ -542,7 +557,8 @@ INSTANCE  Schutzamulett_Feuer(C_Item)
 	on_equip		=	Equip_Amulett_der_Magie;
 	on_unequip		=	UnEquip_Amulett_der_Magie;
 
-	description		= "Amulett der Magie";
+//	description		= "Amulett der Magie";
+	description		= "Amulet magie";
 	//TEXT[0]			= "";
 	//TEXT[1]			= "";
 	////COUNT[1]		= ;
@@ -571,7 +587,8 @@ INSTANCE  Schutzamulett_Feuer(C_Item)
 /******************************************************************************************/
 	INSTANCE  Amulett_der_Macht(C_Item)
 {
-	name 			=	"Amulett der Macht";
+//	name 			=	"Amulett der Macht";
+	name 			=	"Amulet moci";
 
 	mainflag 		=	ITEM_KAT_MAGIC;
 	flags 			=	ITEM_AMULET;
@@ -585,7 +602,8 @@ INSTANCE  Schutzamulett_Feuer(C_Item)
 	on_equip		=	Equip_Amulett_der_Macht;
 	on_unequip		=	UnEquip_Amulett_der_Macht;
 
-	description		= "Amulett der Macht";
+//	description		= "Amulett der Macht";
+	description		= "Amulet moci";
 	//TEXT[0]			= "";
 	//TEXT[1]			= "";
 	////COUNT[1]		= ;
@@ -615,7 +633,8 @@ INSTANCE  Schutzamulett_Feuer(C_Item)
 /******************************************************************************************/
 	INSTANCE  Amulett_der_Erleuchtung(C_Item)
 {
-	name 			=	"Amulett der Erleuchtung";
+//	name 			=	"Amulett der Erleuchtung";
+	name 			=	"Amulet osvícení";
 
 	mainflag 		=	ITEM_KAT_MAGIC;
 	flags 			=	ITEM_AMULET;
@@ -629,7 +648,8 @@ INSTANCE  Schutzamulett_Feuer(C_Item)
 	on_equip		=	Equip_Amulett_der_Erleuchtung;
 	on_unequip		=	UnEquip_Amulett_der_Erleuchtung;
 
-	description		= "Amulett der Erleuchtung";
+//	description		= "Amulett der Erleuchtung";
+	description		= "Amulet osvícení";
 	//TEXT[0]			= "";
 	//TEXT[1]			= "";
 	////COUNT[1]		= ;
@@ -671,11 +691,12 @@ INSTANCE  Schutzamulett_Feuer(C_Item)
 	};
 
 /******************************************************************************************/
-/*
+
 // FIXME: was soll das machen? Dämon beschwören???
-	INSTANCE  Beschwörungsamulett(C_Item)
+INSTANCE  Beschwörungsamulett(C_Item)
 {
-	name 			=	"Amulett der Erleuchtung";
+//	name 			=	"Amulett der Erleuchtung";
+	name 			=	NAME_Amulett;
 
 	mainflag 		=	ITEM_KAT_MAGIC;
 	flags 			=	ITEM_AMULET;
@@ -688,13 +709,18 @@ INSTANCE  Schutzamulett_Feuer(C_Item)
 	material 		=	MAT_METAL;
 	on_equip		=	Equip_Beschwörungsamulett;
 	on_unequip		=	UnEquip_Beschwörungsamulett;
-	description		= "Dämonenbeschwörung";
-	TEXT[0]			= "Schwarz wie die Seele";
-	TEXT[1]			= "Schwarz wie die Nacht";
+//	description		= "Dämonenbeschwörung";
+	description		= "Amulet vyvolání démona";
+//	TEXT[0]			= "Schwarz wie die Seele";
+	TEXT[0]			= "Černý jako duše,";
+//	TEXT[1]			= "Schwarz wie die Nacht";
+	TEXT[1]			= "černý jako noc";
 	////COUNT[1]		= ;
-	TEXT[2]			= "Schwarz wie das Böse";
+//	TEXT[2]			= "Schwarz wie das Böse";
+	TEXT[2]			= "černý jako zloba,";
 	////COUNT[2]		= ;
-	TEXT[3] 		= "Schwarz verheisst Macht";
+//	TEXT[3] 		= "Schwarz verheisst Macht";
+	TEXT[3] 		= "černá slibuje noc.";
 	////COUNT[3]		= ;
 	//TEXT[4]			= "";
 	////COUNT[4]		= ;
@@ -704,16 +730,16 @@ INSTANCE  Schutzamulett_Feuer(C_Item)
 
 	FUNC VOID Equip_Beschwörungsamulett()
 	{
-
-
+	
+	
 	};
-
-
+	
+	
 	FUNC VOID UnEquip_Beschwörungsamulett ()
 	{
-
-
+	
+	
 	};
 
-*/
+
 	

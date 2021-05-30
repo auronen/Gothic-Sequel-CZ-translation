@@ -495,14 +495,18 @@ instance ItWr_Recipe_Meatbug (C_Item)
 
   					Doc_SetFont 	( nDocID, -1, FONT_BOOK_BIG	   			); 	// -1 -> all pages
   					Doc_SetMargins	( nDocID,  0,  275, 20, 30, 20, 1   			);  //  0 -> margins are in pixels
-					Doc_PrintLine	( nDocID,  0, "Kochen mit"						);
-					Doc_PrintLine	( nDocID,  0, "Fleischwanzen"					);
+//					Doc_PrintLine	( nDocID,  0, "Kochen mit"						);
+					Doc_PrintLine	( nDocID,  0, "Recepty ze žravých"						);
+//					Doc_PrintLine	( nDocID,  0, "Fleischwanzen"					);
+					Doc_PrintLine	( nDocID,  0, "štěnic"					);
 					Doc_PrintLine	( nDocID,  0, "---------------"					);
 					Doc_SetFont 	( nDocID, -1, FONT_BOOK_SMALL	   			); 	// -1 -> all pages
 					Doc_PrintLine	( nDocID,  0, "");
-					Doc_PrintLines	( nDocID,  0, "Obwohl diese kleinen Mehrfüssler im allgemeinen sofort Ekel bis hin zum Erbrechen verursachen, so sollte man sich doch nicht von ihrer äusseren Erscheinung täuschen lassen.");
+//					Doc_PrintLines	( nDocID,  0, "Obwohl diese kleinen Mehrfüssler im allgemeinen sofort Ekel bis hin zum Erbrechen verursachen, so sollte man sich doch nicht von ihrer äusseren Erscheinung täuschen lassen.");
+					Doc_PrintLines	( nDocID,  0, "Přestože tyhle malé potvůrky vyvolávají v lidech znechucení nebo dokonce zvracení, neměli bychom se nechat zmást jejich vzhledem.");
 					Doc_PrintLine	( nDocID,  0, "");
-					Doc_PrintLines	( nDocID,  0, "Der meisterhafte Koch, kann aus dem Fleisch dieser Schalentiere ganze Kunststücke zaubern.");
+//					Doc_PrintLines	( nDocID,  0, "Der meisterhafte Koch, kann aus dem Fleisch dieser Schalentiere ganze Kunststücke zaubern.");
+					Doc_PrintLines	( nDocID,  0, "Mistr kuchař dokáže z masa těchto korýšů vykouzlit chutné delikatesy.");
 					Doc_PrintLine	( nDocID,  0, "");
 					Doc_PrintLine	( nDocID,  0, "                  Snaf");
 
@@ -512,15 +516,18 @@ instance ItWr_Recipe_Meatbug (C_Item)
 
 					Doc_PrintLine	( nDocID,  1, NAME_MeatbugSoup);
 					Doc_PrintLine	( nDocID,  1, "----------------");
-					Doc_PrintLines	( nDocID,  1, "Man nehme etwas Salz, den Körper einer gut geschälten Fleischwanze, sowie ein Stück Brot, um das ganze anzudicken.");
+//					Doc_PrintLines	( nDocID,  1, "Man nehme etwas Salz, den Körper einer gut geschälten Fleischwanze, sowie ein Stück Brot, um das ganze anzudicken.");
+					Doc_PrintLines	( nDocID,  1, "Vezmeme trošku soli, tělo dobře očištěné žravé štěnice a kousek chleba na zahuštění.");
 					Doc_PrintLine	( nDocID,  1,  "" );
 					Doc_PrintLine	( nDocID,  1, NAME_MeatbugStew);
 					Doc_PrintLine	( nDocID,  1, "------------------");
-					Doc_PrintLines	( nDocID,  1, "Anstelle des Brotes verschafft ein ordentliches Stück Käse dem ganzen Eintopf so richtig Geschmack.");
+//					Doc_PrintLines	( nDocID,  1, "Anstelle des Brotes verschafft ein ordentliches Stück Käse dem ganzen Eintopf so richtig Geschmack.");
+					Doc_PrintLines	( nDocID,  1, "Místo chleba přidá kus pořádného sýra guláši tu pravou chuť.");
 					Doc_PrintLine	( nDocID,  1, "");
 					Doc_PrintLine	( nDocID,  1, NAME_MeatbugPie);
 					Doc_PrintLine	( nDocID,  1, "-----------------");
-					Doc_PrintLines	( nDocID,  1, "Der gegarte Wanzenkörper wird mit einem Stück Schinken und einer Prise Salz zu einem leckeren Ragout.");
+//					Doc_PrintLines	( nDocID,  1, "Der gegarte Wanzenkörper wird mit einem Stück Schinken und einer Prise Salz zu einem leckeren Ragout.");
+					Doc_PrintLines	( nDocID,  1, "Vařeného maso žravé štěnice se s kouskem šunky a špetkou soli promění v delikátní ragú.");
 					Doc_Show		( nDocID );
 	};
 
@@ -562,27 +569,33 @@ INSTANCE ItWr_Recipe_Molerat (C_Item)
 
   					Doc_SetFont 	( nDocID, -1, FONT_BOOK_BIG	   			); 	// -1 -> all pages
   					Doc_SetMargins	( nDocID,  0,  275, 20, 30, 20, 1   		);  //  0 -> margins are in pixels
-					Doc_PrintLine	( nDocID,  0, "Kochen mit"			);
-					Doc_PrintLine	( nDocID,  0, "Moleratfett"			);
+//					Doc_PrintLine	( nDocID,  0, "Kochen mit"			);
+					Doc_PrintLine	( nDocID,  0, "Vaříme s "			);
+//					Doc_PrintLine	( nDocID,  0, "Moleratfett"			);
+					Doc_PrintLine	( nDocID,  0, "krysokrtím tukem"			);
 					Doc_PrintLine	( nDocID,  0, "-------------");
 					Doc_SetFont 	( nDocID, -1, FONT_BOOK_SMALL	   			); 	// -1 -> all pages
 					Doc_PrintLine	( nDocID,  0, "");
-					Doc_PrintLines	( nDocID,  0, "Man sollte es wirklich nicht meinen, aber Molerats bestehen fast ausschliesslich aus purem Fett, dass sich zu sehr nahrhaften Mahlzeiten verkochen lässt.");
+//					Doc_PrintLines	( nDocID,  0, "Man sollte es wirklich nicht meinen, aber Molerats bestehen fast ausschliesslich aus purem Fett, dass sich zu sehr nahrhaften Mahlzeiten verkochen lässt.");
+					Doc_PrintLines	( nDocID,  0, "Není to moc známé, ale krysokrt je velice tučné zvíře. Jeho tuk je možné využít při přípravě výborných jídel.");
 
 					//2.Seite
 					Doc_SetMargins	( nDocID, -1, 30, 20, 275, 20, 1   		);  //  0 -> margins are in pixels (Position des Textes von den Ränder des TGAs aus, links,oben,rechts,unten)
 					Doc_PrintLine	( nDocID,  1, "");
 					Doc_PrintLine	( nDocID,  1, NAME_MoleratSoup);
 					Doc_PrintLine	( nDocID,  1, "----------------");
-					Doc_PrintLines	( nDocID,  1, "Obwohl man es nicht unbedingt vermutet, kann Moleratfett, zusammen mit einem Leib Brot und einer Prise Salz eine nahrhafte Mahlzeit ergeben.");
+//					Doc_PrintLines	( nDocID,  1, "Obwohl man es nicht unbedingt vermutet, kann Moleratfett, zusammen mit einem Leib Brot und einer Prise Salz eine nahrhafte Mahlzeit ergeben.");
+					Doc_PrintLines	( nDocID,  1, "I když si to možná nemyslíte, chléb, krysokrtí tuk a špetka soli se dá využít k přípravě výborného pokrmu.");
 					Doc_PrintLine	( nDocID,  1, "" );
 					Doc_PrintLine	( nDocID,  1, NAME_MoleratStew);
 					Doc_PrintLine	( nDocID,  1, "------------------");
-					Doc_PrintLines	( nDocID,  1, "Verwendet man anstelle des Brotes ein Stück Käse, so erhält man dieses leckere Gericht.");
+//					Doc_PrintLines	( nDocID,  1, "Verwendet man anstelle des Brotes ein Stück Käse, so erhält man dieses leckere Gericht.");
+					Doc_PrintLines	( nDocID,  1, "Vyměňte chléb za kousek sýra, tak získáte ještě chutnější pokrm.");
 					Doc_PrintLine	( nDocID,  1, "");
 					Doc_PrintLine	( nDocID,  1, NAME_MoleratPie);
 					Doc_PrintLine	( nDocID,  1, "-----------------");
-					Doc_PrintLines	( nDocID,  1, "Nur wer das Moleratfett mit Schinken und etwas Salz verkocht, gelangt an diese äusserst schmackhafte Mahlzeit.");
+//					Doc_PrintLines	( nDocID,  1, "Nur wer das Moleratfett mit Schinken und etwas Salz verkocht, gelangt an diese äusserst schmackhafte Mahlzeit.");
+					Doc_PrintLines	( nDocID,  1, "Pouze ten, pokud se vaří krysokrtí tuk s šunkou a solí, dostane tento vynikající pokrm.");
 					Doc_Show		( nDocID );
 };
 
@@ -624,27 +637,33 @@ INSTANCE ItWr_Recipe_Herb (C_Item)
 
   					Doc_SetFont 	( nDocID, -1, FONT_BOOK_BIG	   			); 	// -1 -> all pages
   					Doc_SetMargins	( nDocID,  0,  275, 20, 30, 20, 1   		);  //  0 -> margins are in pixels
-					Doc_PrintLine	( nDocID,  0, "Kochen mit"			);
-					Doc_PrintLine	( nDocID,  0, "Kräutern"			);
+//					Doc_PrintLine	( nDocID,  0, "Kochen mit"			);
+					Doc_PrintLine	( nDocID,  0, "Bylinkové"			);
+//					Doc_PrintLine	( nDocID,  0, "Kräutern"			);
+					Doc_PrintLine	( nDocID,  0, "recepty"			);
 					Doc_PrintLine	( nDocID,  0, "---------------");
 					Doc_SetFont 	( nDocID, -1, FONT_BOOK_SMALL	   			); 	// -1 -> all pages
 					Doc_PrintLine	( nDocID,  0, "");
-					Doc_PrintLines	( nDocID,  0, "Frische Kräuter aus dem Sumpf eigenen sich nicht nur zum Rauchen. Mit etwas Kochkunst kann man daraus eine ganze Reihe leckerer Gerichte zubereiten. ");
+//					Doc_PrintLines	( nDocID,  0, "Frische Kräuter aus dem Sumpf eigenen sich nicht nur zum Rauchen. Mit etwas Kochkunst kann man daraus eine ganze Reihe leckerer Gerichte zubereiten. ");
+					Doc_PrintLines	( nDocID,  0, "Čerstvé bylinky z bažin jsou vhodné nejen na kouření. S trochou kulinářského umění je z nich možné připravit celou řadu lahodných pokrmů.");
 
 					//2.Seite
 					Doc_SetMargins	( nDocID, -1, 30, 20, 275, 20, 1   		);  //  0 -> margins are in pixels (Position des Textes von den Ränder des TGAs aus, links,oben,rechts,unten)
 					Doc_PrintLine	( nDocID,  1, "");
 					Doc_PrintLine	( nDocID,  1, NAME_HerbSoup);
 					Doc_PrintLine	( nDocID,  1, "--------------");
-					Doc_PrintLines	( nDocID,  1, "Sumpfkraut mit Brot und Salz kann zu einer nahrhaften Suppe zubereitet werden.");
+//					Doc_PrintLines	( nDocID,  1, "Sumpfkraut mit Brot und Salz kann zu einer nahrhaften Suppe zubereitet werden.");
+					Doc_PrintLines	( nDocID,  1, "Z trávy z bažin, chleba a soli je možné připravit výživnou polévku.");
 					Doc_PrintLine	( nDocID,  1,  "" );
 					Doc_PrintLine	( nDocID,  1, NAME_HerbStew);
 					Doc_PrintLine	( nDocID,  1, "---------------");
-					Doc_PrintLines	( nDocID,  1, "Anstelle des Brotes kann auch ein Stück Käse hinzugefügt werden, und so entsteht ein leckerer Eintopf.");
+//					Doc_PrintLines	( nDocID,  1, "Anstelle des Brotes kann auch ein Stück Käse hinzugefügt werden, und so entsteht ein leckerer Eintopf.");
+					Doc_PrintLines	( nDocID,  1, "Nahraď chléb kouskem sýra, tím připravíš výborný guláš.");
 					Doc_PrintLine	( nDocID,  1, "");
 					Doc_PrintLine	( nDocID,  1, NAME_HerbPie);
 					Doc_PrintLine	( nDocID,  1, "--------------");
-					Doc_PrintLines	( nDocID,  1, "Nichts geht über ein Stück Schinken, das auch dem Sumpfkraut den edelsten Geschmack verleiht. Das Salzen nicht vergessen!");
+//					Doc_PrintLines	( nDocID,  1, "Nichts geht über ein Stück Schinken, das auch dem Sumpfkraut den edelsten Geschmack verleiht. Das Salzen nicht vergessen!");
+					Doc_PrintLines	( nDocID,  1, "Nic nepředčí kousek šunky naložený v trávě z bažin. Nezpomeňte přidat sůl!");
 					Doc_Show		( nDocID );
 	};
 
@@ -686,26 +705,31 @@ INSTANCE ItWr_Recipe_Mushroom (C_Item)
 
   					Doc_SetFont 	( nDocID, -1, FONT_BOOK_BIG	   			); 	// -1 -> all pages
   					Doc_SetMargins	( nDocID,  0,  275, 20, 30, 20, 1   		);  //  0 -> margins are in pixels
-					Doc_PrintLine	( nDocID,  0, "Kochen mit Pilzen"			);
+//					Doc_PrintLine	( nDocID,  0, "Kochen mit Pilzen"			);
+					Doc_PrintLine	( nDocID,  0, "Houbové recepty"			);
 					Doc_PrintLine	( nDocID,  0, "-----------------");
 					Doc_SetFont 	( nDocID, -1, FONT_BOOK_SMALL	   			); 	// -1 -> all pages
 					Doc_PrintLine	( nDocID,  0, "");
-					Doc_PrintLines	( nDocID,  0, "Pilze gehören zu den meist unterschätzten Pflanzen. Sie eigenen sich hervorragen dazu einige sehr exquisite Gerichte daraus zuzubereiten.");
+//					Doc_PrintLines	( nDocID,  0, "Pilze gehören zu den meist unterschätzten Pflanzen. Sie eigenen sich hervorragen dazu einige sehr exquisite Gerichte daraus zuzubereiten.");
+					Doc_PrintLines	( nDocID,  0, "Houby patří k nejméně používaným ingrediencím. Ale je možné je použít v některých výjimečných receptech.");
 
 					//2.Seite
 					Doc_SetMargins	( nDocID, -1, 30, 20, 275, 20, 1   		);  //  0 -> margins are in pixels (Position des Textes von den Ränder des TGAs aus, links,oben,rechts,unten)
 					Doc_PrintLine	( nDocID,  1, "");
 					Doc_PrintLine	( nDocID,  1, NAME_MushroomSoup);
 					Doc_PrintLine	( nDocID,  1, "------------");
-					Doc_PrintLines	( nDocID,  1, "Ein Höhlenpilz, gut gesäubert und mit Brot und Salz gekocht.");
+//					Doc_PrintLines	( nDocID,  1, "Ein Höhlenpilz, gut gesäubert und mit Brot und Salz gekocht.");
+					Doc_PrintLines	( nDocID,  1, "Pekelná houba, dobře očištěná, vařená s chlebem a solí.");
 					Doc_PrintLine	( nDocID,  1,  "" );
 					Doc_PrintLine	( nDocID,  1, NAME_MushroomStew);
 					Doc_PrintLine	( nDocID,  1, "--------------");
-					Doc_PrintLines	( nDocID,  1, "Mit einem Stück Käse und einer Prise Salz schmecken Pilze bedeutend besser.");
+//					Doc_PrintLines	( nDocID,  1, "Mit einem Stück Käse und einer Prise Salz schmecken Pilze bedeutend besser.");
+					Doc_PrintLines	( nDocID,  1, "S kouskem sýra a špetkou soli chutnají houby mnohem lépe.");
 					Doc_PrintLine	( nDocID,  1, "");
 					Doc_PrintLine	( nDocID,  1, NAME_MushroomPie);
 					Doc_PrintLine	( nDocID,  1, "-------------");
-					Doc_PrintLines	( nDocID,  1, "Die Krönung der Pilzgerichte wird mit einem Stück Schinken zubereitet. So entsteht mit Pilzen und einer Prise Salz ein schmackhaftes Ragout.");
+//					Doc_PrintLines	( nDocID,  1, "Die Krönung der Pilzgerichte wird mit einem Stück Schinken zubereitet. So entsteht mit Pilzen und einer Prise Salz ein schmackhaftes Ragout.");
+					Doc_PrintLines	( nDocID,  1, "Vrchol všech pokrmů s houbami připravíme s kouskem šunky. S houbami a špetkou soli vznikne tak chutné houbové ragú.");
 					Doc_Show		( nDocID );
 	};
 
@@ -748,11 +772,13 @@ INSTANCE ItWr_Recipe_Meat (C_Item)
 
   					Doc_SetFont 	( nDocID, -1, FONT_BOOK_BIG	   			); 	// -1 -> all pages
   					Doc_SetMargins	( nDocID,  0,  275, 20, 30, 20, 1   		);  //  0 -> margins are in pixels
-					Doc_PrintLine	( nDocID,  0, "Kochen mit Fleisch"			);
+//					Doc_PrintLine	( nDocID,  0, "Kochen mit Fleisch"			);
+					Doc_PrintLine	( nDocID,  0, "Recepty s masem"			);
 					Doc_PrintLine	( nDocID,  0, "------------------");
 					Doc_SetFont 	( nDocID, -1, FONT_BOOK_SMALL	   			); 	// -1 -> all pages
 					Doc_PrintLine	( nDocID,  0, "");
-					Doc_PrintLines	( nDocID,  0, "Richtiges Fleisch. Was kann es besseres im Kochtopf geben. Wird es vorher in einer Pfanne angebraten, so kann man daraus die wohl besten Mahlzeiten zubereiten, die man sich nur denken kann.");
+//					Doc_PrintLines	( nDocID,  0, "Richtiges Fleisch. Was kann es besseres im Kochtopf geben. Wird es vorher in einer Pfanne angebraten, so kann man daraus die wohl besten Mahlzeiten zubereiten, die man sich nur denken kann.");
+					Doc_PrintLines	( nDocID,  0, "Skutečné maso. Co lepšího může člověk do hrnce hodit? Pokud ho předem osmažíme na pánvi, můžeme jej použít k přípravě nejlepších pokrmů, které si dokážete představit.");
 					Doc_PrintLine	( nDocID,  0, "");
 					Doc_PrintLine	( nDocID,  0, "                Halvor");
 
@@ -762,15 +788,18 @@ INSTANCE ItWr_Recipe_Meat (C_Item)
 					Doc_PrintLine	( nDocID,  1, "");
 					Doc_PrintLine	( nDocID,  1, NAME_MeatSoup);
 					Doc_PrintLine	( nDocID,  1, "---------------");
-					Doc_PrintLines	( nDocID,  1, "Ein Stück vorgebratenes Fleisch kann zusammen mit etwas Brot und einer Prise Salz zu einer schmackhaften Suppe zubereitet werden.");
+//					Doc_PrintLines	( nDocID,  1, "Ein Stück vorgebratenes Fleisch kann zusammen mit etwas Brot und einer Prise Salz zu einer schmackhaften Suppe zubereitet werden.");
+					Doc_PrintLines	( nDocID,  1, "Z kouksu předsmaženého masa můžeme společně s kouksem chleba a špetkou soli uvařít výbornou polévku.");
 					Doc_PrintLine	( nDocID,  1,  "" );
 					Doc_PrintLine	( nDocID,  1, NAME_MeatStew);
 					Doc_PrintLine	( nDocID,  1, "-----------------");
-					Doc_PrintLines	( nDocID,  1, "Besser als das Brot eignet sich ein Stück Käse. So wird aus der Suppe ein Eintopf.");
+//					Doc_PrintLines	( nDocID,  1, "Besser als das Brot eignet sich ein Stück Käse. So wird aus der Suppe ein Eintopf.");
+					Doc_PrintLines	( nDocID,  1, "Lépe než chléb chutná kousek sýra. Tak z polévky uděláme guláš.");
 					Doc_PrintLine	( nDocID,  1, "");
 					Doc_PrintLine	( nDocID,  1, NAME_MeatPie);
 					Doc_PrintLine	( nDocID,  1, "----------------");
-					Doc_PrintLines	( nDocID,  1, "Wer das beste aus dem Fleisch holen will, sollte ein Stück Schinken hinzufügen. Zusammen mit Salz ergibt es das allseits beliebte Fleisch-Ragout.");
+//					Doc_PrintLines	( nDocID,  1, "Wer das beste aus dem Fleisch holen will, sollte ein Stück Schinken hinzufügen. Zusammen mit Salz ergibt es das allseits beliebte Fleisch-Ragout.");
+					Doc_PrintLines	( nDocID,  1, "Pokud chceme z masa vytěžit maximum, přidáme do pokrmu šunku. Společně se solí vytváří oblíbené masové ragú.");
 					Doc_Show		( nDocID );
 	};
 

@@ -81,8 +81,10 @@ INSTANCE ItPl_Stoneroot(C_Item)
 	scemeName			=	"FOOD";
 
 	description			=	name;
-	TEXT[0]				=	"Diese Pflanze wirkt wie ein starkes";
-	TEXT[1]				=	"Schlafmittel!";
+//	TEXT[0]				=	"Diese Pflanze wirkt wie ein starkes";
+//	TEXT[1]				=	"Schlafmittel!";
+	TEXT[0]				=	"Tyto rostliny působí jako";
+	TEXT[1]				=	"silný uspávací prostředek!";
 	TEXT[3]				=	NAME_Bonus_HP;				COUNT[1]		= HP_Stoneroot;
 	change_atr[0]		=	ATR_HITPOINTS;				change_value[0]	= HP_Stoneroot;
 	TEXT[5]				=	NAME_Value;					COUNT[5]		= value;
@@ -362,8 +364,10 @@ INSTANCE ItPl_Trollberry(C_Item)
 	scemeName			=	"FOOD";
 
 	description			=	name;
-	TEXT[1]				=	"Diese Beeren sind für Menschen";
-	TEXT[2]				=	"hochgradig giftig!";
+//	TEXT[1]				=	"Diese Beeren sind für Menschen";
+//	TEXT[2]				=	"hochgradig giftig!";
+	TEXT[1]				=	"Tyto bobule jsou pro lidi";
+	TEXT[2]				=	"nesmírně jedovaté!";
 	change_atr[0]		=	ATR_HITPOINTS;				change_value[0]	= HP_Trollberry;
 	TEXT[5]				=	NAME_Value;					COUNT[5]		= value;
 };

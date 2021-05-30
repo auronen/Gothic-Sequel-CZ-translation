@@ -113,7 +113,8 @@ INSTANCE ItFo_Potion_Mana_03(C_Item)
 	scemeName		=	"POTIONFAST";
 
 	description		=	name;
-	TEXT[1]			=	"Regeneriert Mana vollständig";
+//	TEXT[1]			=	"Regeneriert Mana vollständig";
+	TEXT[1]			=	"Zregeneruje všechnu manu";
 	change_atr[0]	= 	ATR_MANA;					change_value[0]	= 999999;
 	TEXT[5]			=	NAME_Value;					COUNT[5]		= value;
 };
@@ -200,7 +201,8 @@ INSTANCE ItFo_Potion_Health_03(C_Item)
 	scemeName		=	"POTIONFAST";
 
 	description		=	NAME_HealthPotionAll;
-	TEXT[1]			=	"Regeneriert die Gesundheit vollständig";
+//	TEXT[1]			=	"Regeneriert die Gesundheit vollständig";
+	TEXT[1]			=	"Zcela doplní zdraví";
 	change_atr[0]	= 	ATR_HITPOINTS;				change_value[0]	= 999999;
 	TEXT[5]			=	NAME_Value;					COUNT[5]		= value;
 };
@@ -630,7 +632,8 @@ INSTANCE ItFo_Potion_Haste_01(C_Item)
 	scemeName		=	"POTIONFAST";
 
 	description		= NAME_SpeedPotion1;
-	TEXT[1]			= "Ermöglicht kurzzeitiges Sprinten ";
+//	TEXT[1]			= "Ermöglicht kurzzeitiges Sprinten ";
+	TEXT[1]			= "Umožní hráči krátce zrychlit běh.";
 	TEXT[3]			= NAME_Duration;				COUNT[3]	= Time_Haste1/60000;
 	TEXT[5]			= NAME_Value;					COUNT[5]	= value;
 };
@@ -657,7 +660,8 @@ INSTANCE ItFo_Potion_Haste_02(C_Item)
 	scemeName		=	"POTIONFAST";
 
 	description		= NAME_SpeedPotion2;
-	TEXT[1]			= "Ermöglicht Sprinten ";
+//	TEXT[1]			= "Ermöglicht Sprinten ";
+	TEXT[1]			= "Umožní hráči zrychlit běh.";
 	TEXT[3]			= NAME_Duration;				COUNT[3]	= Time_Haste2/60000;
 	TEXT[5]			= NAME_Value;					COUNT[5]	= value;
 };
@@ -684,7 +688,8 @@ INSTANCE ItFo_Potion_Haste_03(C_Item)
 	scemeName		=	"POTIONFAST";
 
 	description		= NAME_SpeedPotion3;
-	TEXT[1]			= "Ermöglicht längeres Sprinten ";
+//	TEXT[1]			= "Ermöglicht längeres Sprinten ";
+	TEXT[1]			= "Umožní hráči déle rychleji běžet.";
 	TEXT[3]			= NAME_Duration;				COUNT[3]	= Time_Haste3/60000;
 	TEXT[5]			= NAME_Value;					COUNT[5]	= value;
 };
