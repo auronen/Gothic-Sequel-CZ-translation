@@ -863,12 +863,12 @@ FUNC VOID PC_Thief_STARTRAINING_BOW2()
 			LearnBow_2 = LOG_RUNNING;
 
 			// Auftragsmonster spawnen
-			Wld_InsertNpc (Molerat,"OW_PATH_193");
-			Wld_InsertNpc (Molerat,"OW_PATH_193");
-			Wld_InsertNpc (Molerat,"OW_PATH_193");
-			Wld_InsertNpc (Molerat,"OW_PATH_193");
-			Wld_InsertNpc (Molerat,"OW_PATH_193");
-			Wld_InsertNpc (Molerat,"OW_PATH_193");
+			Wld_InsertNpc (DMolerat,"OW_PATH_193");
+			Wld_InsertNpc (DMolerat,"OW_PATH_193");
+			Wld_InsertNpc (DMolerat,"OW_PATH_193");
+			Wld_InsertNpc (DMolerat,"OW_PATH_193");
+			Wld_InsertNpc (DMolerat,"OW_PATH_193");
+			Wld_InsertNpc (DMolerat,"OW_PATH_193");
 
 			// Log für die Mission : CH1_TrainBow_2
 			Log_CreateTopic (CH1_TrainBow_2, LOG_MISSION);

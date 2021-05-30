@@ -70,8 +70,7 @@ INSTANCE Molerat	(Mst_Default_Molerat)
 	Npc_SetToFistMode(self);
 
 	CreateInvItems (self, ItAt_MoleratGrease,	2);
-// This is a bugfix for Diegos 2nd bow skill quest
-	CreateInvItems (self, ItFo_MuttonRaw,		2);
+
 };
 
 
@@ -103,4 +102,38 @@ INSTANCE YMolerat	(Mst_Default_Molerat)
 	Npc_SetToFistMode(self);
 
 	CreateInvItems (self, ItFo_MuttonRaw, 1);
+};
+
+INSTANCE DMolerat	(Mst_Default_Molerat)
+{
+	Set_Molerat_Visuals();
+	Npc_SetToFistMode(self);
+
+	CreateInvItems (self, ItAt_MoleratGrease,	2);
+	
+	// This is a bugfix for Diegos 2nd bow skill quest
+	CreateInvItems (self, ItFo_MuttonRaw,		2);
+	
+	// Make them a bit stronger
+	const int BF_Multiplier = 2;
+	Mdl_SetModelScale(self, 1.1, 1.1, 1.1);  // make them a bit bigger
+	
+	level							=	7; // 70 Exp
+
+//------------------------------------------------------------
+	attribute	[ATR_STRENGTH]		=	8 * BF_Multiplier;
+	attribute	[ATR_DEXTERITY]		=	8 * BF_Multiplier;
+
+	attribute	[ATR_HITPOINTS_MAX]	=	40 * BF_Multiplier;
+	attribute	[ATR_HITPOINTS]		=	40 * BF_Multiplier;
+
+	attribute	[ATR_MANA_MAX] 		=	0;
+	attribute	[ATR_MANA] 			=	0;
+//------------------------------------------------------------
+	protection	[PROT_BLUNT]		=	8 * BF_Multiplier;
+	protection	[PROT_EDGE]			=	8 * BF_Multiplier;
+	protection	[PROT_POINT]		=	5; 					// make them weaker to arrows
+	protection	[PROT_FIRE]			=	5 * BF_Multiplier;
+	protection	[PROT_FLY]			=	0;
+	protection	[PROT_MAGIC]		=	0;
 };
