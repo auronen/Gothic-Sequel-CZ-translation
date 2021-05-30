@@ -31,8 +31,8 @@ func void WRK_203_Bromor_TROPHYS_Info ()
 ## Stav projektu
 - [x] Menu
 - [ ] Dialogy - `Content\Story\Missions`
-- [ ] Předměty - `Content\Items`
-- [ ] Ostatní - soubor `Content\Story\Text.d`
+- [x] Předměty - `Content\Items`
+- [x] Ostatní - soubor `Content\Story\Text.d`
 - [x] Fonty
 
 ## Snímky ze hry
