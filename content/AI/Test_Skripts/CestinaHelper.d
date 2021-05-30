@@ -59,6 +59,7 @@ FUNC VOID  CzH_Exit_Info()
 INSTANCE CzH_Plants (C_INFO)
 {
 	npc				= CzH;
+	nr				=  20;
 	condition		= CzH_Plants_Condition;
 	information		= CzH_Plants_Info;
 	important		= 0;
@@ -96,6 +97,7 @@ func VOID CzH_Plants_Info()
 INSTANCE CzH_Weapons (C_INFO)
 {
 	npc				= CzH;
+	nr				=  30;
 	condition		= CzH_Weapons_Condition;
 	information		= CzH_Weapons_Info;
 	important		= 0;
@@ -140,6 +142,7 @@ func VOID CzH_Weapons_Info()
 INSTANCE CzH_Potions (C_INFO)
 {
 	npc				= CzH;
+	nr				=  20;
 	condition		= CzH_Potions_Condition;
 	information		= CzH_Potions_Info;
 	important		= 0;
@@ -163,3 +166,67 @@ func VOID CzH_Potions_Info()
 
 	AI_StopProcessInfos	(self);
 };
+
+INSTANCE CzH_FixGerion (C_INFO)
+{
+	npc				= CzH;
+	condition		= CzH_FixGerion_Condition;
+	information		= CzH_FixGerion_Info;
+	important		= 0;
+	permanent		= 1;
+	description		= "Prsten pro Geriona!";
+};
+
+FUNC INT CzH_FixGerion_Condition()
+{
+		return TRUE;
+};
+
+func VOID CzH_FixGerion_Info()
+{
+	CreateInvItem(hero,	ItRi_Fire_01);
+    LearnPickpocket_1 = LOG_RUNNING;
+	AI_StopProcessInfos	(self);
+};
+
+INSTANCE CzH_PhoenixDebug (C_INFO)
+{
+	npc				= CzH;
+	nr				=  50;
+	condition		= CzH_PhoenixDebug_Condition;
+	information		= CzH_PhoenixDebug_Info;
+	important		= 0;
+	permanent		= 1;
+	description		= "Úkol Fénixova pouť!";
+};
+
+FUNC INT CzH_PhoenixDebug_Condition()
+{
+		return TRUE;
+};
+
+func VOID CzH_PhoenixDebug_Info()
+{
+	Info_AddChoice		(CzH_PhoenixDebug, "Dej mi všechny knihy!", CzH_PhoenixBooks );
+	Info_AddChoice		(CzH_PhoenixDebug, "Spusť úkol!", HLR_501_Talamon_STINKINGSALT_MEATBUGS );
+};
+
+func VOID CzH_PhoenixLaunch ()
+{
+	Wld_InsertItem		(ItWr_Phoenix1,		"FP_SPAWN_PHOENIX_1");
+	AI_StopProcessInfos	(self);
+};
+
+func VOID CzH_PhoenixBooks ()
+{
+	CreateInvItem(hero,	ItWr_Phoenix1);
+	CreateInvItem(hero,	ItWr_Phoenix2);
+	CreateInvItem(hero,	ItWr_Phoenix3);
+	CreateInvItem(hero,	ItWr_Phoenix4);
+	CreateInvItem(hero,	ItWr_Phoenix5);
+	CreateInvItem(hero,	ItWr_Phoenix6);
+	CreateInvItem(hero,	ItWr_Phoenix7);
+	CreateInvItem(hero,	ItWr_Phoenix8);
+	AI_StopProcessInfos	(self);
+};
+
