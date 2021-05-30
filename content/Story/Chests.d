@@ -87,7 +87,8 @@ func void	FillChests_OldCamp ()
 
 	// OCC_STABLE_BACKROOM
 	Mob_CreateItems			("OCC_STABLE_BACKROOM", ItMi_Silver,			20);
-	//Mob_CreateItems			("OCC_STABLE_BACKROOM", ItWr_Smith_Art_01,		1);
+	// We can put this back in :)
+	Mob_CreateItems			("OCC_STABLE_BACKROOM", ItWr_Smith_Art_01,		1);
 
 	// OCC_STABLE_TO_CORRIDOR (Kiste mit Schmiedezubehör in der Burgschmiede)
 	Mob_CreateItems			("OCC_STABLE_TO_CORRIDOR", ItMi_OreNugget,		137);
@@ -273,7 +274,9 @@ func void	FillChests_OldCamp ()
 	// OCR_MEDICUS_HUT_2	MEDICI
 	Mob_CreateItems			("OCR_MEDICUS_HUT_2",ItFo_Potion_Mana_03 ,		3);
 	Mob_CreateItems			("OCR_MEDICUS_HUT_2",ItFo_Potion_Health_03 ,	4);
-	//Mob_CreateItems			("OCR_MEDICUS_HUT_2",ItWr_Palgur ,				1);
+	// We can uncommnet this ;)
+	Mob_CreateItems			("OCR_MEDICUS_HUT_2",ItWr_Palgur ,				1);
+	
 	// OCR_MEDICUS_HUT_3	MEDICI
 	Mob_CreateItems			("OCR_MEDICUS_HUT_3",ItPl_BloodThistle ,	5);
 	Mob_CreateItems			("OCR_MEDICUS_HUT_3",ItPl_OrcLeaf ,			5);
