@@ -617,6 +617,14 @@ INSTANCE PC_Rockefeller(C_NPC)
 	CreateInvItems(self,ItAr_RuneBlank,			1);
 	CreateInvItems(self,ItAr_BloodRuneBlank,	1);
 	CreateInvItems(self,ItAr_DarkRuneBlank,		1);
+	
+// ---------------------------------------------------------------------
+// Items added by the czech translation team
+// ---------------------------------------------------------------------	
+	
+	CreateInvItem(self,Beschwörungsamulett);
+	CreateInvItem(self,HELMET);
+	
 
 };
 
