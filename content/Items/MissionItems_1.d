@@ -331,7 +331,7 @@ instance ItWr_Book_Thief_02 (C_Item)
 					Doc_SetMargins	( nDocID, -1, 30, 20, 275, 20, 1   		);  //  0 -> margins are in pixels (Position des Textes von den Ränder des TGAs aus, links,oben,rechts,unten)
 
 //					Doc_PrintLines	( nDocID,  1, "Getragen wurde es bisher von:");
-					Doc_PrintLine	( nDocID,  0, "");
+					Doc_PrintLine	( nDocID,  1, "");
 					Doc_PrintLines	( nDocID,  1, "Tento prsten nosili tito zloději:");
 					Doc_PrintLine	( nDocID,  1, "");
 //					Doc_PrintLines	( nDocID,  1, "Nantanuel Gildenmeister von Khorinis");
@@ -345,7 +345,7 @@ instance ItWr_Book_Thief_02 (C_Item)
 					Doc_PrintLine	( nDocID,  1, "");
 //					Doc_PrintLines	( nDocID,  1, "Michal Meister der Hände");
 					Doc_PrintLines	( nDocID,  1, "Michal - Mistr rukou");
-					Doc_PrintLine	( nDocID,  0, "");
+					Doc_PrintLine	( nDocID,  1, "");
 //					Doc_PrintLine	( nDocID,  1, "Raul die Katze");
 					Doc_PrintLine	( nDocID,  1, "Raul - Kocour");
 					Doc_PrintLine	( nDocID,  1, "");
@@ -354,7 +354,7 @@ instance ItWr_Book_Thief_02 (C_Item)
 					Doc_PrintLine	( nDocID,  1, "");
 //					Doc_PrintLine	( nDocID,  1, "Diego");
 					Doc_PrintLine	( nDocID,  1, "Diego");
-					Doc_PrintLine	( nDocID,  0, "");
+					Doc_PrintLine	( nDocID,  1, "");
 //					Doc_PrintLine	( nDocID,  1, "Edo Flinkhand");
 					Doc_PrintLine	( nDocID,  1, "Edo - Mrštná ruka");
 					Doc_Show		( nDocID );

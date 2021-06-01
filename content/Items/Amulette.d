@@ -720,7 +720,7 @@ INSTANCE  Beschwörungsamulett(C_Item)
 	TEXT[2]			= "černý jako zloba,";
 	////COUNT[2]		= ;
 //	TEXT[3] 		= "Schwarz verheisst Macht";
-	TEXT[3] 		= "černá slibuje noc.";
+	TEXT[3] 		= "černá slibuje moc.";
 	////COUNT[3]		= ;
 	//TEXT[4]			= "";
 	////COUNT[4]		= ;
