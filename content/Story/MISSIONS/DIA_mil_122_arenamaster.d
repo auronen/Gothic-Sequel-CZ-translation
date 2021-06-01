@@ -1648,7 +1648,8 @@ func int MIL_122_Arenamaster_GREETCHAMPION_Condition ()
 
 func void MIL_122_Arenamaster_GREETCHAMPION_Info ()
 {
-	AI_Output (self, hero, "MIL_122_GREETCHAMPION_12_01"); //CHAMPION, ich grüsse dich!
+//	AI_Output (self, hero, "MIL_122_GREETCHAMPION_12_01"); //CHAMPION, ich grüsse dich!
+	AI_Output (self, hero, "MIL_122_GREETCHAMPION_12_01"); //ŠAMPIONE, zdravím tě!
 };
 
 
