@@ -107,7 +107,8 @@ instance	Info_Bartok_HOWDY (C_INFO)
 	information		= Info_Bartok_HOWDY_Info;
 	important		= FALSE;
 	permanent		= FALSE;
-	description		= "Wie geht es dir, Schmied?";
+//	description		= "Wie geht es dir, Schmied?";
+	description		= "Jak se daří, kováři?";
 };
 
 func int	Info_Bartok_HOWDY_Condition()
@@ -120,11 +121,16 @@ func int	Info_Bartok_HOWDY_Condition()
 
 func void	Info_Bartok_HOWDY_Info()
 {
-	AI_Output			(hero, self,"Info_Bartok_HOWDY_15_01"); //Wie geht es dir, Schmied?
-	AI_Output			(self, hero,"Info_Bartok_HOWDY_02_02"); //(verrückt) SIE werden uns alle holen.. aieehhhhh
-	AI_Output			(hero, self,"Info_Bartok_HOWDY_15_03"); //Ähh... ja, natürlich!
-	AI_Output			(self, hero,"Info_Bartok_HOWDY_02_04"); //(verrückt) SIE werden uns mit ihrer Unreitheit überziehen... ouhhlll
-	AI_Output			(hero, self,"Info_Bartok_HOWDY_15_05"); //Völlig...ahem... logisch!
+//	AI_Output			(hero, self,"Info_Bartok_HOWDY_15_01"); //Wie geht es dir, Schmied?
+	AI_Output			(hero, self,"Info_Bartok_HOWDY_15_01"); //Jak se daří, kováři?
+//	AI_Output			(self, hero,"Info_Bartok_HOWDY_02_02"); //(verrückt) SIE werden uns alle holen.. aieehhhhh
+	AI_Output			(self, hero,"Info_Bartok_HOWDY_02_02"); //(šíleně) ONI nás všechny dostanou... aieehhhhh
+//	AI_Output			(hero, self,"Info_Bartok_HOWDY_15_03"); //Ähh... ja, natürlich!
+	AI_Output			(hero, self,"Info_Bartok_HOWDY_15_03"); //Ahh... ano, samozřejmě!
+//	AI_Output			(self, hero,"Info_Bartok_HOWDY_02_04"); //(verrückt) SIE werden uns mit ihrer Unreitheit überziehen... ouhhlll
+	AI_Output			(self, hero,"Info_Bartok_HOWDY_02_04"); //(šíleně) ONI nás zavalí svou nečistotou... ouhhlll
+//	AI_Output			(hero, self,"Info_Bartok_HOWDY_15_05"); //Völlig...ahem... logisch!
+	AI_Output			(hero, self,"Info_Bartok_HOWDY_15_05"); //Úplně... ahm... logické!
 };
 
 ///////////////////////////////////////////////////////////////////////
@@ -138,7 +144,8 @@ instance	Info_Bartok_WHO (C_INFO)
 	information		= Info_Bartok_WHO_Info;
 	important		= FALSE;
 	permanent		= FALSE;
-	description		= "Wen meinst du mit SIE?";
+//	description		= "Wen meinst du mit SIE?";
+	description		= "Koho tím ONI myslíš?";
 };
 
 func int	Info_Bartok_WHO_Condition()
@@ -151,10 +158,14 @@ func int	Info_Bartok_WHO_Condition()
 
 func void	Info_Bartok_WHO_Info()
 {
-	AI_Output			(hero, self,"Info_Bartok_WHO_15_01"); //Wen meinst du mit SIE?
-	AI_Output			(self, hero,"Info_Bartok_WHO_02_02"); //(verrückt) SIE jagen mich in meinen Träumen... arghhhh
-	AI_Output			(hero, self,"Info_Bartok_WHO_15_03"); //WER, verdammt nochmal? WER???
-	AI_Output			(self, hero,"Info_Bartok_WHO_02_04"); //(verrückt) Bald werden SIE überall sein.... (sabbel)
+//	AI_Output			(hero, self,"Info_Bartok_WHO_15_01"); //Wen meinst du mit SIE?
+	AI_Output			(hero, self,"Info_Bartok_WHO_15_01"); //Koho tím ONI myslíš?
+//	AI_Output			(self, hero,"Info_Bartok_WHO_02_02"); //(verrückt) SIE jagen mich in meinen Träumen... arghhhh
+	AI_Output			(self, hero,"Info_Bartok_WHO_02_02"); //(šíleně) ONI mě pronáseldují ve snech... arghhhh
+//	AI_Output			(hero, self,"Info_Bartok_WHO_15_03"); //WER, verdammt nochmal? WER???
+	AI_Output			(hero, self,"Info_Bartok_WHO_15_03"); //KDO, zatraceně? KDO???
+//	AI_Output			(self, hero,"Info_Bartok_WHO_02_04"); //(verrückt) Bald werden SIE überall sein.... (sabbel)
+	AI_Output			(self, hero,"Info_Bartok_WHO_02_04"); //(šíleně) Brzy budou úplně všude.... (mrmlá)
 };
 
 ///////////////////////////////////////////////////////////////////////
@@ -168,7 +179,8 @@ instance	Info_Bartok_KEY (C_INFO)
 	information		= Info_Bartok_KEY_Info;
 	important		= FALSE;
 	permanent		= FALSE;
-	description		= "Du hast einen Schlüssel, den ich gerne haben würde!";
+//	description		= "Du hast einen Schlüssel, den ich gerne haben würde!";
+	description		= "Máš u sebe klíč, který bych rád získal!";
 };
 
 func int	Info_Bartok_KEY_Condition()
@@ -181,15 +193,23 @@ func int	Info_Bartok_KEY_Condition()
 
 func void	Info_Bartok_KEY_Info()
 {
-	AI_Output			(hero, self,"Info_Bartok_KEY_15_01"); //Du hast einen Schlüssel, den ich gerne haben würde!
-	AI_Output			(self, hero,"Info_Bartok_KEY_02_02"); //(verrückt) SIE kommen... dlblgldl... hörst du SIE auch, hörst du SIE kommen?
-	AI_Output			(hero, self,"Info_Bartok_KEY_15_03"); //Nochmal zurück zum Schlüssel...
-	AI_Output			(self, hero,"Info_Bartok_KEY_02_04"); //(nachdenklich) Schlüssel ?
-	AI_Output			(hero, self,"Info_Bartok_KEY_15_05"); //(hoffnungsvoll) JA... Genau... der Schlüssel!!!
-	AI_Output			(self, hero,"Info_Bartok_KEY_02_06"); //(verrückt) SIE werden uns in ein tiefes Verlies sperren und den Schlüssel wegwerfen... ich weiss es, ich weiss es...
-	AI_Output			(hero, self,"Info_Bartok_KEY_15_07"); //(zu sich selbst) Ich geb's auf, der ist ja völlig durchgeknallt.
+//	AI_Output			(hero, self,"Info_Bartok_KEY_15_01"); //Du hast einen Schlüssel, den ich gerne haben würde!
+	AI_Output			(hero, self,"Info_Bartok_KEY_15_01"); //Máš u sebe klíč, který bych rád získal!
+//	AI_Output			(self, hero,"Info_Bartok_KEY_02_02"); //(verrückt) SIE kommen... dlblgldl... hörst du SIE auch, hörst du SIE kommen?
+	AI_Output			(self, hero,"Info_Bartok_KEY_02_02"); //(šíleně) ONI přicházejí... dlblgldl... slyšíš JE, slyšíš JE jak přichází?
+//	AI_Output			(hero, self,"Info_Bartok_KEY_15_03"); //Nochmal zurück zum Schlüssel...
+	AI_Output			(hero, self,"Info_Bartok_KEY_15_03"); //A teď zpátky k tomu klíči...
+//	AI_Output			(self, hero,"Info_Bartok_KEY_02_04"); //(nachdenklich) Schlüssel ?
+	AI_Output			(self, hero,"Info_Bartok_KEY_02_04"); //(zamyšleně) Klíč?
+//	AI_Output			(hero, self,"Info_Bartok_KEY_15_05"); //(hoffnungsvoll) JA... Genau... der Schlüssel!!!
+	AI_Output			(hero, self,"Info_Bartok_KEY_15_05"); //(nadějně) ANO... správně... klíč!
+//	AI_Output			(self, hero,"Info_Bartok_KEY_02_06"); //(verrückt) SIE werden uns in ein tiefes Verlies sperren und den Schlüssel wegwerfen... ich weiss es, ich weiss es...
+	AI_Output			(self, hero,"Info_Bartok_KEY_02_06"); //(šíleně) ONI nás zavřou do hlubokého žaláře a zahodí klíč... já vím, já vím...
+//	AI_Output			(hero, self,"Info_Bartok_KEY_15_07"); //(zu sich selbst) Ich geb's auf, der ist ja völlig durchgeknallt.
+	AI_Output			(hero, self,"Info_Bartok_KEY_15_07"); //(pro sebe) Vzdávám to, je úplně šílený.
 
-	B_LogEntry			(CH1_Bartok,	"Ich habe Bartok im Krankenviertel getroffen. Er ist völlig durchgeknallt. Es ist unmöglich aus ihm etwas vernünftiges herauszubekommen. Vielleicht weiss einer der Pfleger etwas von dem Schlüssel.");
+//	B_LogEntry			(CH1_Bartok,	"Ich habe Bartok im Krankenviertel getroffen. Er ist völlig durchgeknallt. Es ist unmöglich aus ihm etwas vernünftiges herauszubekommen. Vielleicht weiss einer der Pfleger etwas von dem Schlüssel.");
+	B_LogEntry			(CH1_Bartok,	"Ve čtvrti nemocných jsem potkal Bartoka. Je úplně šílený. Je nemožné z toho ubožáka dostat cokoliv rozumného. Možná jeden z jeho ošetřovatelů bude o tom klíči vědět něco víc.");
 
 	AI_StopProcessInfos	(self);
 };

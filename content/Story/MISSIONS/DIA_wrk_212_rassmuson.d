@@ -33,7 +33,8 @@ instance Wrk_212_Rassmuson_HI		(C_INFO)
 	important	 = 	FALSE;
 	permanent	 = 	FALSE;
 
-	description	 = 	"Was machst du hier?";
+//	description	 = 	"Was machst du hier?";
+	description	 = 	"Co tady děláš?";
 };
 
 func int Wrk_212_Rassmuson_HI_Condition ()
@@ -43,12 +44,18 @@ func int Wrk_212_Rassmuson_HI_Condition ()
 
 func void Wrk_212_Rassmuson_HI_Info ()
 {
-	AI_Output			(hero, self, "WRK_212_HI_15_01"); //Was machst du hier?
-	AI_Output			(self, hero, "WRK_212_HI_01_02"); //Mir reicht's. Diese ewige Plockerei, die Orks, einfach alles.
-	AI_Output			(self, hero, "WRK_212_HI_01_03"); //Jeden Tag schuften wir uns den Arsch ab,und wofür? Wenn die Orks kommen, sind wir eh Futter!
-	AI_Output			(self, hero, "WRK_212_HI_01_04"); //Ich kann nicht mehr und ich will nicht mehr.
-	AI_Output			(hero, self, "WRK_212_HI_15_05"); //Und was willst du tun?
-	AI_Output			(self, hero, "WRK_212_HI_01_06"); //Ich werde mich absetzen,... aber wenn du das weitererzählst, mache ich dich fertig!
+//	AI_Output			(hero, self, "WRK_212_HI_15_01"); //Was machst du hier?
+	AI_Output			(hero, self, "WRK_212_HI_15_01"); //Co tady děláš?
+//	AI_Output			(self, hero, "WRK_212_HI_01_02"); //Mir reicht's. Diese ewige Plockerei, die Orks, einfach alles.
+	AI_Output			(self, hero, "WRK_212_HI_01_02"); //Mám toho dost. Toho věčného povyku, skřetů, zkrátka všeho.
+//	AI_Output			(self, hero, "WRK_212_HI_01_03"); //Jeden Tag schuften wir uns den Arsch ab,und wofür? Wenn die Orks kommen, sind wir eh Futter!
+	AI_Output			(self, hero, "WRK_212_HI_01_03"); //Každý den se dřeme až do úmoru a k čemu? Stejně nás skřeti převálcují!
+//	AI_Output			(self, hero, "WRK_212_HI_01_04"); //Ich kann nicht mehr und ich will nicht mehr.
+	AI_Output			(self, hero, "WRK_212_HI_01_04"); //Už nemůžu a ani se mi nechce.
+//	AI_Output			(hero, self, "WRK_212_HI_15_05"); //Und was willst du tun?
+	AI_Output			(hero, self, "WRK_212_HI_15_05"); //A co chceš dělat?
+//	AI_Output			(self, hero, "WRK_212_HI_01_06"); //Ich werde mich absetzen,... aber wenn du das weitererzählst, mache ich dich fertig!
+	AI_Output			(self, hero, "WRK_212_HI_01_06"); //Odejdu, ale jestli o tom někomu řekneš, zabiju tě!
 };
 
 ///////////////////////////////////////////////////////////////////////
@@ -63,7 +70,8 @@ instance Wrk_212_Rassmuson_WHERE		(C_INFO)
 	important	 = 	FALSE;
 	permanent	 = 	FALSE;
 
-	description	 = 	"Wo willst du denn hin?";
+//	description	 = 	"Wo willst du denn hin?";
+	description	 = 	"Kam chceš jít?";
 };
 
 func int Wrk_212_Rassmuson_WHERE_Condition ()
@@ -75,10 +83,14 @@ func int Wrk_212_Rassmuson_WHERE_Condition ()
 };
 func void Wrk_212_Rassmuson_WHERE_Info ()
 {
-	AI_Output			(hero, self, "WRK_212_WHERE_15_01"); //Wo willst du denn hin?
-	AI_Output			(self, hero, "WRK_212_WHERE_01_02"); //Keine Ahnung. Ich werde mir ein paar Vorräte und einen Bogen mitnehmen und mich den Jägern anschliessen.
-	AI_Output			(self, hero, "WRK_212_WHERE_01_03"); //Irgendwo finde ich schon eine Höhle wo ich unterkommen kann, bis der ganze Scheiss hier vorbei ist!
-	AI_Output			(self, hero, "WRK_212_WHERE_01_04"); //Ich warte nur noch auf einen günstigen Augenblick...
+//	AI_Output			(hero, self, "WRK_212_WHERE_15_01"); //Wo willst du denn hin?
+	AI_Output			(hero, self, "WRK_212_WHERE_15_01"); //Kam chceš jít?
+//	AI_Output			(self, hero, "WRK_212_WHERE_01_02"); //Keine Ahnung. Ich werde mir ein paar Vorräte und einen Bogen mitnehmen und mich den Jägern anschliessen.
+	AI_Output			(self, hero, "WRK_212_WHERE_01_02"); //Nemám ponětí. Seženu si pár zásob a luk a přidám se k lovcům.
+//	AI_Output			(self, hero, "WRK_212_WHERE_01_03"); //Irgendwo finde ich schon eine Höhle wo ich unterkommen kann, bis der ganze Scheiss hier vorbei ist!
+	AI_Output			(self, hero, "WRK_212_WHERE_01_03"); //Najdu si někde jeskyni, kde budu moci zůstat do té doby, než tahle sračka neskončí!
+//	AI_Output			(self, hero, "WRK_212_WHERE_01_04"); //Ich warte nur noch auf einen günstigen Augenblick...
+	AI_Output			(self, hero, "WRK_212_WHERE_01_04"); //Čekám jen na vhodný okamžik...
 	AI_StopProcessInfos (self);
 };
 
@@ -94,7 +106,8 @@ instance Wrk_212_Rassmuson_AGAIN		(C_INFO)
 	important	 = 	FALSE;
 	permanent	 = 	TRUE;
 
-	description	 = 	"Na, immer noch da?";
+//	description	 = 	"Na, immer noch da?";
+	description	 = 	"No, stále tady?";
 };
 
 func int Wrk_212_Rassmuson_AGAIN_Condition ()
@@ -106,8 +119,10 @@ func int Wrk_212_Rassmuson_AGAIN_Condition ()
 };
 func void Wrk_212_Rassmuson_AGAIN_Info ()
 {
-	AI_Output			(hero, self, "WRK_212_AGAIN_15_01"); //Na, immer noch da?
-	AI_Output			(self, hero, "WRK_212_AGAIN_01_02"); //Ja, gute Vorbereitungen brauchen ihre Zeit.
+//	AI_Output			(hero, self, "WRK_212_AGAIN_15_01"); //Na, immer noch da?
+	AI_Output			(hero, self, "WRK_212_AGAIN_15_01"); //No, stále tady?
+//	AI_Output			(self, hero, "WRK_212_AGAIN_01_02"); //Ja, gute Vorbereitungen brauchen ihre Zeit.
+	AI_Output			(self, hero, "WRK_212_AGAIN_01_02"); //Ano, dobrá příprava si žádá svůj čas.
 };
 
 

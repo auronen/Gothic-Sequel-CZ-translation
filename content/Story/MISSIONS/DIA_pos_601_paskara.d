@@ -47,14 +47,16 @@ func void POS_601_Paskara_CRAZY_Info ()
 {
 	if (Paskara_Crazy == 0)
 	{
-		AI_Output			(self, hero, "POS_601_CRAZY_00_01"); //Ist das Leben nicht beschissen?
+//		AI_Output			(self, hero, "POS_601_CRAZY_00_01"); //Ist das Leben nicht beschissen?
+		AI_Output			(self, hero, "POS_601_CRAZY_00_01"); //Není ten život posranej?
 		Paskara_Crazy = 1;
 		AI_StopProcessInfos	( self );
 		return;
 	};
 	if (Paskara_Crazy == 1)
 	{
-		AI_Output			(self, hero, "POS_601_CRAZY_00_02"); //Das Leben ist nur eine Qual bis zum Tod. Und danach kommt nichts mehr.
+//		AI_Output			(self, hero, "POS_601_CRAZY_00_02"); //Das Leben ist nur eine Qual bis zum Tod. Und danach kommt nichts mehr.
+		AI_Output			(self, hero, "POS_601_CRAZY_00_02"); //Život je jen utrpení... až do smrti. A potom nic není.
 		Paskara_Crazy = 2;
 		AI_StopProcessInfos	( self );
 		return;
@@ -62,7 +64,8 @@ func void POS_601_Paskara_CRAZY_Info ()
 
 	if (Paskara_Crazy == 2)
 	{
-		AI_Output			(self, hero, "POS_601_CRAZY_00_03"); //Alles vergeht. Alles verschimmelt. Alles verdorrt. Alles leidet. Alles stirbt. 
+//		AI_Output			(self, hero, "POS_601_CRAZY_00_03"); //Alles vergeht. Alles verschimmelt. Alles verdorrt. Alles leidet. Alles stirbt. 
+		AI_Output			(self, hero, "POS_601_CRAZY_00_03"); //Všechno pojde. Všechno je plesnivé. Všechno vadne. Všechno trpí. Všechno umírá.
 		Paskara_Crazy = 3;
 		AI_StopProcessInfos	( self );
 		return;
@@ -70,7 +73,8 @@ func void POS_601_Paskara_CRAZY_Info ()
 
 	if (Paskara_Crazy == 3)
 	{
-		AI_Output			(self, hero, "POS_601_CRAZY_00_04"); //Dasein des Schmerzes    Tot geborener Mensch
+//		AI_Output			(self, hero, "POS_601_CRAZY_00_04"); //Dasein des Schmerzes    Tot geborener Mensch
+		AI_Output			(self, hero, "POS_601_CRAZY_00_04"); //Exitence bolesti    Narození zemřelého
 		Paskara_Crazy = 4;
 		AI_StopProcessInfos	( self );
 		return;
@@ -79,6 +83,7 @@ func void POS_601_Paskara_CRAZY_Info ()
 	if (Paskara_Crazy == 4)
 	{
 		AI_Output			(self, hero, "POS_601_CRAZY_00_05"); //Kaltes Fleisch         Geqäulter Geist       Tote Seele
+		AI_Output			(self, hero, "POS_601_CRAZY_00_05"); //Chladné maso          Umučený duch          Mrtvá duše
 		Paskara_Crazy = 0;
 		AI_StopProcessInfos	( self );
 		return;

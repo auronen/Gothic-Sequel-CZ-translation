@@ -46,7 +46,8 @@ func void Pos_603_Gonker_CRAZY_Info ()
 	
 	if Gonker_Crazy == 0 
 	{
-		AI_Output			(self, hero, "Pos_603_CRAZY_00_01"); //Ist dir einer gefolgt?
+//		AI_Output			(self, hero, "Pos_603_CRAZY_00_01"); //Ist dir einer gefolgt?
+		AI_Output			(self, hero, "Pos_603_CRAZY_00_01"); //Sledoval tě někdo?
 		Gonker_Crazy = 1; 
 		AI_PlayAni (self,"T_SEARCH");
 		AI_StopProcessInfos	( self );
@@ -54,7 +55,8 @@ func void Pos_603_Gonker_CRAZY_Info ()
 	};
 	if Gonker_Crazy == 1 
 	{
-		AI_Output			(self, hero, "Pos_603_CRAZY_00_02"); //Haben sie dich geschickt?
+//		AI_Output			(self, hero, "Pos_603_CRAZY_00_02"); //Haben sie dich geschickt?
+		AI_Output			(self, hero, "Pos_603_CRAZY_00_02"); //Stihli jste to?
 		Gonker_Crazy = 2; 
 		AI_PlayAni (self,"T_STAND_2_MAD");
 		AI_StopProcessInfos	( self );
@@ -62,7 +64,8 @@ func void Pos_603_Gonker_CRAZY_Info ()
 	};
 	if Gonker_Crazy == 2 
 	{
-		AI_Output			(self, hero, "Pos_603_CRAZY_00_03"); //Sie sind hinter mir her, ich weiß es.
+//		AI_Output			(self, hero, "Pos_603_CRAZY_00_03"); //Sie sind hinter mir her, ich weiß es.
+		AI_Output			(self, hero, "Pos_603_CRAZY_00_03"); //Jdou po mně, vím to!
 		Gonker_Crazy = 3; 
 		AI_PlayAni (self,"T_FORGETIT");
 		AI_StopProcessInfos	( self );
@@ -70,7 +73,8 @@ func void Pos_603_Gonker_CRAZY_Info ()
 	};
 	if Gonker_Crazy == 3 
 	{
-		AI_Output			(self, hero, "Pos_603_CRAZY_00_04"); //Sie werden mich finden, sie finden jeden. 
+//		AI_Output			(self, hero, "Pos_603_CRAZY_00_04"); //Sie werden mich finden, sie finden jeden. 
+		AI_Output			(self, hero, "Pos_603_CRAZY_00_04"); //Oni mě najdou, najdou každého.
 		Gonker_Crazy = 4; 
 		AI_PlayAni (self,"T_STAND_2_MAD");
 		AI_StopProcessInfos	( self );
@@ -78,7 +82,8 @@ func void Pos_603_Gonker_CRAZY_Info ()
 	};
 	if Gonker_Crazy == 4 
 	{
-		AI_Output			(self, hero, "Pos_603_CRAZY_00_05"); //Hast du sie gesehen? Ich habe sie schon oft gesehen. 
+//		AI_Output			(self, hero, "Pos_603_CRAZY_00_05"); //Hast du sie gesehen? Ich habe sie schon oft gesehen. 
+		AI_Output			(self, hero, "Pos_603_CRAZY_00_05"); //Viděl jsi je? Vídával jsem je často.
 		Gonker_Crazy = 0; 
 		AI_PlayAni (self,"T_SEARCH");
 		AI_StopProcessInfos	( self );
@@ -86,7 +91,8 @@ func void Pos_603_Gonker_CRAZY_Info ()
 	};
 	if Gonker_Crazy == 4 
 	{
-		AI_Output			(self, hero, "Pos_603_CRAZY_00_06"); //Sie kommen in der Nacht, wenn wir schlafen
+//		AI_Output			(self, hero, "Pos_603_CRAZY_00_06"); //Sie kommen in der Nacht, wenn wir schlafen
+		AI_Output			(self, hero, "Pos_603_CRAZY_00_06"); //Přicházejí v noci, když spíme.
 		Gonker_Crazy = 0; 
 		AI_PlayAni (self,"T_STAND_2_MAD");
 		AI_StopProcessInfos	( self );
@@ -94,7 +100,8 @@ func void Pos_603_Gonker_CRAZY_Info ()
 	};
 	if Gonker_Crazy == 4 
 	{
-		AI_Output			(self, hero, "Pos_603_CRAZY_00_07"); //Irgendwann kriegen sie dich und dann nehmen sie dich mit.
+//		AI_Output			(self, hero, "Pos_603_CRAZY_00_07"); //Irgendwann kriegen sie dich und dann nehmen sie dich mit.
+		AI_Output			(self, hero, "Pos_603_CRAZY_00_07"); //Nejdříve vás dostanou a potom vás odtáhnou pryč.
 		Gonker_Crazy = 0; 
 		AI_PlayAni (self,"T_DONTKNOW");
 		AI_StopProcessInfos	( self );
@@ -102,7 +109,8 @@ func void Pos_603_Gonker_CRAZY_Info ()
 	};
 	if Gonker_Crazy == 4 
 	{
-		AI_Output			(self, hero, "Pos_603_CRAZY_00_08"); //Sie stecken dich in einen Käfig und fügen dir Schmerzen zu. 
+//		AI_Output			(self, hero, "Pos_603_CRAZY_00_08"); //Sie stecken dich in einen Käfig und fügen dir Schmerzen zu. 
+		AI_Output			(self, hero, "Pos_603_CRAZY_00_08"); //Strčí vás do klece a začnou vám ubližovat.
 		Gonker_Crazy = 0; 
 		AI_PlayAni (self,"T_STAND_2_MAD");
 		AI_StopProcessInfos	( self );
@@ -110,14 +118,16 @@ func void Pos_603_Gonker_CRAZY_Info ()
 	};
 	if Gonker_Crazy == 4 
 	{
-		AI_Output			(self, hero, "Pos_603_CRAZY_00_09"); //Sie machen schreckliche Dinge mit dir. Sie qäulen dich. 
+//		AI_Output			(self, hero, "Pos_603_CRAZY_00_09"); //Sie machen schreckliche Dinge mit dir. Sie qäulen dich. 
+		AI_Output			(self, hero, "Pos_603_CRAZY_00_09"); //Dělajá vám hrozné věci. Trápí vás.
 		Gonker_Crazy = 0; 
 		AI_PlayAni (self,"T_IGETYOU");
 		AI_StopProcessInfos	( self );
 		return;
 	};if Gonker_Crazy == 4 
 	{
-		AI_Output			(self, hero, "Pos_603_CRAZY_00_10"); //Ich war schon bei ihnen, aber ich bin ihnen entkommen!
+//		AI_Output			(self, hero, "Pos_603_CRAZY_00_10"); //Ich war schon bei ihnen, aber ich bin ihnen entkommen!
+		AI_Output			(self, hero, "Pos_603_CRAZY_00_10"); //Už jsem u nich byl, ale unikl jsem!
 		Gonker_Crazy = 0; 
 		AI_PlayAni (self,"T_STAND_2_MAD");
 		AI_StopProcessInfos	( self );
@@ -125,7 +135,8 @@ func void Pos_603_Gonker_CRAZY_Info ()
 	};
 	if Gonker_Crazy == 4 
 	{
-		AI_Output			(self, hero, "Pos_603_CRAZY_00_11"); //Wenn sie mich noch einmal erwischen, werden sie mich töten.
+//		AI_Output			(self, hero, "Pos_603_CRAZY_00_11"); //Wenn sie mich noch einmal erwischen, werden sie mich töten.
+		AI_Output			(self, hero, "Pos_603_CRAZY_00_11"); //Jestli mě dostanou ještě jednou, zabijí mě!
 		Gonker_Crazy = 0; 
 		AI_PlayAni (self,"T_YES");
 		AI_StopProcessInfos	( self );
@@ -133,7 +144,8 @@ func void Pos_603_Gonker_CRAZY_Info ()
 	};
 	if Gonker_Crazy == 4 
 	{
-		AI_Output			(self, hero, "Pos_603_CRAZY_00_12"); //Es sind viele. sie sind überall und sie beobachten alles.
+//		AI_Output			(self, hero, "Pos_603_CRAZY_00_12"); //Es sind viele. sie sind überall und sie beobachten alles.
+		AI_Output			(self, hero, "Pos_603_CRAZY_00_12"); //Je jeich mnoho, jsou všude! A všechno sledují.
 		Gonker_Crazy = 0; 
 		AI_PlayAni (self,"T_NO");
 		AI_StopProcessInfos	( self );

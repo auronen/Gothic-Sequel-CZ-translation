@@ -33,7 +33,8 @@ instance WRK_222_Helvegor_HI		(C_INFO)
 	important	 = 	FALSE;
 	permanent	 = 	FALSE;
 
-	description	 = 	"Du bist der Bogenmacher?";
+//	description	 = 	"Du bist der Bogenmacher?";
+	description	 = 	"Ty vyrábíš luky?";
 };
 
 func int WRK_222_Helvegor_HI_Condition ()
@@ -43,11 +44,14 @@ func int WRK_222_Helvegor_HI_Condition ()
 
 func void WRK_222_Helvegor_HI_Info ()
 {
-	AI_Output			(hero, self, "WRK_222_HI_15_01"); //Du bist der Bogenmacher?
-	AI_Output			(self, hero, "WRK_222_HI_00_02"); //Ja. Bei mir bekommst du die besten Bögen im Lager - und die einzigen...
+//	AI_Output			(hero, self, "WRK_222_HI_15_01"); //Du bist der Bogenmacher?
+	AI_Output			(hero, self, "WRK_222_HI_15_01"); //Ty vyrábíš luky?
+//	AI_Output			(self, hero, "WRK_222_HI_00_02"); //Ja. Bei mir bekommst du die besten Bögen im Lager - und die einzigen...
+	AI_Output			(self, hero, "WRK_222_HI_00_02"); //Ano. U mě dostenš ty nejlepší luky v 
 
 	Log_CreateTopic		(GE_TraderOC, LOG_NOTE);
-	B_LogEntry			(GE_TraderOC,"Helvegor stellt BÖGEN her und verkauft sie zusammen mit den PFEILEN von Osric. Dieses seltsame 'Paar' hat seinen Stand im Händlerviertel.");
+//	B_LogEntry			(GE_TraderOC,"Helvegor stellt BÖGEN her und verkauft sie zusammen mit den PFEILEN von Osric. Dieses seltsame 'Paar' hat seinen Stand im Händlerviertel.");
+	B_LogEntry			(GE_TraderOC,"Helvegor vyrábí LUKY a prodává je společně s Osricovými šípy. Tato podivná 'dvojice' má svůj stánek v obchodní čtvrti.");
 };
 
 ///////////////////////////////////////////////////////////////////////
@@ -75,7 +79,8 @@ func int WRK_222_Helvegor_TRADEBOW_Condition ()
 };
 func void WRK_222_Helvegor_TRADEBOW_Info ()
 {
-	AI_Output			(hero, self, "WRK_222_TRADEBOW_15_01"); //Zeig mir deine Ware.
+//	AI_Output			(hero, self, "WRK_222_TRADEBOW_15_01"); //Zeig mir deine Ware.
+	AI_Output			(hero, self, "WRK_222_TRADEBOW_15_01"); //Ukaž mi tvoje zboží.
 
 };
 

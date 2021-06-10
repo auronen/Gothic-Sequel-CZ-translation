@@ -42,48 +42,60 @@ func void POS_600_Jurgi_CRAZY_Info ()
 {
 	if (Jurgi_Crazy == 0)
 	{
-		AI_Output			(self, hero, "POS_600_CRAZY_00_01"); //Wohl denen die da gehen und sehen, denn sie sind es...äh..sie sind es...die sehen!
+//		AI_Output			(self, hero, "POS_600_CRAZY_00_01"); //Wohl denen die da gehen und sehen, denn sie sind es...äh..sie sind es...die sehen!
+		AI_Output			(self, hero, "POS_600_CRAZY_00_01"); //Dobré pro ty, kteří chodí a vidí, ti jsou... ah.. oni jsou... oni vidí!
 		Jurgi_Crazy = 1;
 		AI_StopProcessInfos	( self );
 		return;
 	};
 	if (Jurgi_Crazy == 1)
 	{
-		AI_Output			(self, hero, "POS_600_CRAZY_00_02"); //Wahrlich ich sage dir ein Mann der ein Haus baut  ist ein Mann der...äh...Dinge hat,
-		AI_Output			(self, hero, "POS_600_CRAZY_00_03"); //die er braucht, er braucht diese Dinge, denn ohne diese Dinge äh...hat er sie nicht.
+//		AI_Output			(self, hero, "POS_600_CRAZY_00_02"); //Wahrlich ich sage dir ein Mann der ein Haus baut  ist ein Mann der...äh...Dinge hat,
+		AI_Output			(self, hero, "POS_600_CRAZY_00_02"); //Opravdu ti říkám, muž, který staví důl je muž který... ah... má věci,
+//		AI_Output			(self, hero, "POS_600_CRAZY_00_03"); //die er braucht, er braucht diese Dinge, denn ohne diese Dinge äh...hat er sie nicht.
+		AI_Output			(self, hero, "POS_600_CRAZY_00_03"); //které potřebuje, on ty věci ptořebuje, pootm bez těch věcí... ah.. je nemá.
 		Jurgi_Crazy = 2;
 		AI_StopProcessInfos	( self );
 		return;
 	};
 	if (Jurgi_Crazy == 2)
 	{
-		AI_Output			(self, hero, "POS_600_CRAZY_00_04"); //Denn der Himmel öffnete sich und das Wasser ergoss sich über die Häupter von...
-		AI_Output			(self, hero, "POS_600_CRAZY_00_05"); //äh...allen die gesehen hatten...äh,...wie sie gingen und woher sie kamen.
+//		AI_Output			(self, hero, "POS_600_CRAZY_00_04"); //Denn der Himmel öffnete sich und das Wasser ergoss sich über die Häupter von...
+		AI_Output			(self, hero, "POS_600_CRAZY_00_04"); //Pak se otevřelo nebe a voda se vylila na hlavu...
+//		AI_Output			(self, hero, "POS_600_CRAZY_00_05"); //äh...allen die gesehen hatten...äh,...wie sie gingen und woher sie kamen.
+		AI_Output			(self, hero, "POS_600_CRAZY_00_05"); //ah... každý, kdo viděl... ah... jak šli a kam jdou.
 		Jurgi_Crazy = 3;
 		AI_StopProcessInfos	( self );
 		return;
 	};
 	if (Jurgi_Crazy == 3)
 	{
-		AI_Output			(self, hero, "POS_600_CRAZY_00_06"); //Und sie hatten kleine Truhen mit noch kleineren Schachteln, in denen die winzigkleinen ...
-		AI_Output			(self, hero, "POS_600_CRAZY_00_07"); //wirklich wirklich winzigkleinen Dinge lagen, mit denen eigentlich niemand so recht wußte...
-		AI_Output			(self, hero, "POS_600_CRAZY_00_08"); //was er sagen wollte...äh...sie waren sehr klein - Winzig.
+//		AI_Output			(self, hero, "POS_600_CRAZY_00_06"); //Und sie hatten kleine Truhen mit noch kleineren Schachteln, in denen die winzigkleinen ...
+		AI_Output			(self, hero, "POS_600_CRAZY_00_06"); //A měli malé truhly s ještě menšími krabičkami, ve kteých byly malé...
+//		AI_Output			(self, hero, "POS_600_CRAZY_00_07"); //wirklich wirklich winzigkleinen Dinge lagen, mit denen eigentlich niemand so recht wußte...
+		AI_Output			(self, hero, "POS_600_CRAZY_00_07"); //opravdu opravdu maličkaté věcičky, o kterých opravdu nikdo nevěděl...
+//		AI_Output			(self, hero, "POS_600_CRAZY_00_08"); //was er sagen wollte...äh...sie waren sehr klein - Winzig.
+		AI_Output			(self, hero, "POS_600_CRAZY_00_08"); //co chtěl říct... ah... byly opravdu malé - titěrné!
 		Jurgi_Crazy = 4;
 		AI_StopProcessInfos	( self );
 		return;
 	};
 	if (Jurgi_Crazy == 4)
 	{
-		AI_Output			(self, hero, "POS_600_CRAZY_00_09"); //Und der Himmel wird sich blutrot färben und die Herrscharen werden kommen auf Rössern die schwarz wie die Nacht sind!
-		AI_Output			(self, hero, "POS_600_CRAZY_00_10"); //Und es wird eine große Not unter denen geben die nicht ...äh... diese kleinen Truhen haben.
+//		AI_Output			(self, hero, "POS_600_CRAZY_00_09"); //Und der Himmel wird sich blutrot färben und die Herrscharen werden kommen auf Rössern die schwarz wie die Nacht sind!
+		AI_Output			(self, hero, "POS_600_CRAZY_00_09"); //A obloha bude krvavě rudá a vládci přijedou na koních černých jako noc!
+//		AI_Output			(self, hero, "POS_600_CRAZY_00_10"); //Und es wird eine große Not unter denen geben die nicht ...äh... diese kleinen Truhen haben.
+		AI_Output			(self, hero, "POS_600_CRAZY_00_10"); //A bude tu velká bída pod kterou nebudou... ah... tyto malé truhly.
 		Jurgi_Crazy = 5;
 		AI_StopProcessInfos	( self );
 		return;
 	};
 	if (Jurgi_Crazy == 5)
 	{
-		AI_Output			(self, hero, "POS_600_CRAZY_00_11"); //Wahrlich ich frage dich : Was nützt ein Brunnen ohne Wasser? Was ist ein Vogel der nicht fliegt?
-		AI_Output			(self, hero, "POS_600_CRAZY_00_12"); //Aha! Also frage dich selber warum und vor allem  WAS in diesen kleinen Truhen ist...äh....
+//		AI_Output			(self, hero, "POS_600_CRAZY_00_11"); //Wahrlich ich frage dich : Was nützt ein Brunnen ohne Wasser? Was ist ein Vogel der nicht fliegt?
+		AI_Output			(self, hero, "POS_600_CRAZY_00_11"); //Opravdu se tě ptám: K čemu je studna bez vody? Co je pták, který nelítá?
+//		AI_Output			(self, hero, "POS_600_CRAZY_00_12"); //Aha! Also frage dich selber warum und vor allem  WAS in diesen kleinen Truhen ist...äh....
+		AI_Output			(self, hero, "POS_600_CRAZY_00_12"); //Aha! Takže se zeptaj sám sebe, proč a především CO je v těch malých truhlách... ah...
 		Jurgi_Crazy = 0;
 		AI_StopProcessInfos	( self );
 		return;

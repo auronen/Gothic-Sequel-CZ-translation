@@ -48,7 +48,8 @@ func void POS_602_Halbert_CRAZY_Info ()
 	if Halbert_Crazy == 0
 	&&   Wld_IsTime			(04, 00, 20, 00)    
 	{
-		AI_Output			(self, hero, "POS_602_CRAZY_00_01"); //Des Tages Licht ist meine Agonie.
+//		AI_Output			(self, hero, "POS_602_CRAZY_00_01"); //Des Tages Licht ist meine Agonie.
+		AI_Output			(self, hero, "POS_602_CRAZY_00_01"); //Dënní světlo je má agonie.
 		Halbert_Crazy = 1;
 		AI_StopProcessInfos	( self );
 		return; 
@@ -56,7 +57,8 @@ func void POS_602_Halbert_CRAZY_Info ()
 	if Halbert_Crazy == 1
 	&&   Wld_IsTime			(04, 00, 20, 00)    
 	{
-		AI_Output			(self, hero, "POS_602_CRAZY_00_02"); //Der Tag ist eine ewige Qual.
+//		AI_Output			(self, hero, "POS_602_CRAZY_00_02"); //Der Tag ist eine ewige Qual.
+		AI_Output			(self, hero, "POS_602_CRAZY_00_02"); //Den je věčné utrpení.
 		Halbert_Crazy = 2;
 		AI_StopProcessInfos	( self );
 		return;
@@ -64,7 +66,8 @@ func void POS_602_Halbert_CRAZY_Info ()
 	if Halbert_Crazy == 2
 	&&   Wld_IsTime			(04, 00, 20, 00)    
 	{
-		AI_Output			(self, hero, "POS_602_CRAZY_00_03"); //Stunde um Stunde Schmerz um Schmerz.
+//		AI_Output			(self, hero, "POS_602_CRAZY_00_03"); //Stunde um Stunde Schmerz um Schmerz.
+		AI_Output			(self, hero, "POS_602_CRAZY_00_03"); //Hodina za hodinou, bolest za bolestí.
 		Halbert_Crazy = 0;
 		AI_StopProcessInfos	( self );
 		return;
@@ -72,8 +75,10 @@ func void POS_602_Halbert_CRAZY_Info ()
 	if Halbert_Night == 0
 	&&   Wld_IsTime			(20, 00, 04, 00)    
 	{
-		AI_Output			(self, hero, "POS_602_CRAZY_00_04"); //Siehst du die Sternbilder?
-		AI_Output			(self, hero, "POS_602_CRAZY_00_05"); //Sie waren schon da bevor wir waren und sie werden immer sein, wenn wir längst vergangen sind
+//		AI_Output			(self, hero, "POS_602_CRAZY_00_04"); //Siehst du die Sternbilder?
+		AI_Output			(self, hero, "POS_602_CRAZY_00_04"); //Vidíš souhvězdí?
+//		AI_Output			(self, hero, "POS_602_CRAZY_00_05"); //Sie waren schon da bevor wir waren und sie werden immer sein, wenn wir längst vergangen sind
+		AI_Output			(self, hero, "POS_602_CRAZY_00_05"); //Byly tam dříve, než jsme tu byli my, a budou tam, až my tu nebudeme.
 		Halbert_Night = 1;
 		AI_StopProcessInfos	( self );
 		return;
@@ -81,7 +86,8 @@ func void POS_602_Halbert_CRAZY_Info ()
 	if Halbert_Night == 1
 	&&   Wld_IsTime			(20, 00, 04, 00)    
 	{
-		AI_Output			(self, hero, "POS_602_CRAZY_00_06"); //Spürst du die Nacht? Sie währt bereits ewig und sieht niemals das Licht der Sonne.
+//		AI_Output			(self, hero, "POS_602_CRAZY_00_06"); //Spürst du die Nacht? Sie währt bereits ewig und sieht niemals das Licht der Sonne.
+		AI_Output			(self, hero, "POS_602_CRAZY_00_06"); //Cítíš noc? Trvá věčnost a už nikdy nespatří světlo slunce.
 		Halbert_Night = 2;
 		AI_StopProcessInfos	( self );
 		return;
@@ -89,8 +95,10 @@ func void POS_602_Halbert_CRAZY_Info ()
 	if Halbert_Night == 2
 	&&   Wld_IsTime			(20, 00, 04, 00)    
 	{
-		AI_Output			(self, hero, "POS_602_CRAZY_00_07"); //Fühlst du die Dunkelheit? 
-		AI_Output			(self, hero, "POS_602_CRAZY_00_08"); //Sie ist überall, schön und friedlich. Aber die Dunkelheit in dir, nennst du Angst und Zweifel.
+//		AI_Output			(self, hero, "POS_602_CRAZY_00_07"); //Fühlst du die Dunkelheit? 
+		AI_Output			(self, hero, "POS_602_CRAZY_00_07"); //Cítíš temnotu? 
+//		AI_Output			(self, hero, "POS_602_CRAZY_00_08"); //Sie ist überall, schön und friedlich. Aber die Dunkelheit in dir, nennst du Angst und Zweifel.
+		AI_Output			(self, hero, "POS_602_CRAZY_00_08"); //Je všude, krásná a přátelská. Ale temnotě uvnitř, říkáš strach a pochybnost.
 		Halbert_Night = 0;
 		AI_StopProcessInfos	( self );
 		return;
