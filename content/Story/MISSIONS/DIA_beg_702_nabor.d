@@ -53,7 +53,7 @@ func int BEG_702_Nabor_TIP_Info ()
 	AI_Output			(self, hero, "BEG_702_TIP_00_04"); //Ten pravý muž, který by chtěl za trochu stříbra koupit cennou informaci. Ale nevěřím, že bys to byl ty. Nebo snad ano?
 
 //	Info_AddChoice	(BEG_702_Nabor_TIP, "Ich bin der Richtige. Her mit der Information.", BEG_702_Nabor_TIP_RIGHTMAN );
-	Info_AddChoice	(BEG_702_Nabor_TIP, "Já jsem ten pravý. Sem s informací.", BEG_702_Nabor_TIP_RIGHTMAN );
+	Info_AddChoice	(BEG_702_Nabor_TIP, "Já jsem ten pravý. Sem s tou informací.", BEG_702_Nabor_TIP_RIGHTMAN );
 //	Info_AddChoice	(BEG_702_Nabor_TIP, "Wie teuer ist deine Information?", BEG_702_Nabor_TIP_HOWMUCH );
 	Info_AddChoice	(BEG_702_Nabor_TIP, "Kolik stojí ta tvoje informace?", BEG_702_Nabor_TIP_HOWMUCH );
 //	Info_AddChoice	(BEG_702_Nabor_TIP, "Ich glaube du willst nur schnell ein bisschen Silber abstauben. ", BEG_702_Nabor_TIP_TRICK );
@@ -85,7 +85,7 @@ func void BEG_702_Nabor_TIP_HOWMUCH ()
 func void BEG_702_Nabor_TIP_RIGHTMAN ()
 {
 //	AI_Output			(hero, self, "BEG_702_TIP_RIGHTMAN_15_01"); //Ich bin der Richtige. Her mit der Information.
-	AI_Output			(hero, self, "BEG_702_TIP_RIGHTMAN_15_01"); //Já jsem ten pravý. Sem s informací.
+	AI_Output			(hero, self, "BEG_702_TIP_RIGHTMAN_15_01"); //Já jsem ten pravý. Sem s tou informací.
 //	AI_Output			(self, hero, "BEG_702_TIP_RIGHTMAN_00_02"); //Die kostet allerdings 20 Silberstücke. Kein Verhandeln. Kein Feilschen. Sprich mich an, wenn du das Geld hast.
 	AI_Output			(self, hero, "BEG_702_TIP_RIGHTMAN_00_02"); //Ta ale stojí 20 stříbrných. Žádné dohadování. Žádné smlouvání. Řekni mi, až budeš mít ty peníze.
 	Nabor_20 = TRUE;

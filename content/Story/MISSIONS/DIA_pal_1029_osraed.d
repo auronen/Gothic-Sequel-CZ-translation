@@ -44,10 +44,14 @@ FUNC VOID PAL_1029_FirstWarn_Info()
 {
 	PrintGlobals	(PD_MISSION);
 
-	AI_Output (self, hero,"PAL_1029_FirstWarn_Info_06_01"); //HALT!
-	AI_Output (hero, self,"PAL_1029_FirstWarn_Info_15_02"); //Was ist?
-	AI_Output (self, hero,"PAL_1029_FirstWarn_Info_06_03"); //Hier dürfen nur Gefolgsleute des Königs passieren!
-	AI_Output (self, hero,"PAL_1029_FirstWarn_Info_06_04"); //Also verschwinde!
+//	AI_Output (self, hero,"PAL_1029_FirstWarn_Info_06_01"); //HALT!
+	AI_Output (self, hero,"PAL_1029_FirstWarn_Info_06_01"); //STÁT!
+//	AI_Output (hero, self,"PAL_1029_FirstWarn_Info_15_02"); //Was ist?
+	AI_Output (hero, self,"PAL_1029_FirstWarn_Info_15_02"); //Co je?
+//	AI_Output (self, hero,"PAL_1029_FirstWarn_Info_06_03"); //Hier dürfen nur Gefolgsleute des Königs passieren!
+	AI_Output (self, hero,"PAL_1029_FirstWarn_Info_06_03"); //Tudy smí projít pouz následovníci krále!
+//	AI_Output (self, hero,"PAL_1029_FirstWarn_Info_06_04"); //Also verschwinde!
+	AI_Output (self, hero,"PAL_1029_FirstWarn_Info_06_04"); //Takže vypadni!
 
 	hero.aivar[AIV_LASTDISTTOWP] 		= Npc_GetDistToWP(hero,Pal_1029_CHECKPOINT);
 	hero.aivar[AIV_GUARDPASSAGE_STATUS]	= AIV_GPS_FIRSTWARN;
@@ -83,7 +87,8 @@ FUNC INT PAL_1029_LastWarn_Condition()
 
 func int PAL_1029_LastWarn_Info()
 {
-	AI_Output (self, hero,"PAL_1029_LastWarn_06_01"); 		//Noch einen Schritt weiter und wir machen Kleinholz aus dir!
+//	AI_Output (self, hero,"PAL_1029_LastWarn_06_01"); 		//Noch einen Schritt weiter und wir machen Kleinholz aus dir!
+	AI_Output (self, hero,"PAL_1029_LastWarn_06_01"); 		//Ještě krok a naděláme z tebe třísky!
 
 	hero.aivar[AIV_LASTDISTTOWP] 		= Npc_GetDistToWP (hero,Pal_1029_CHECKPOINT);
 	hero.aivar[AIV_GUARDPASSAGE_STATUS]	= AIV_GPS_LASTWARN;
@@ -182,7 +187,8 @@ INSTANCE PAL_1029_SOLDIER (C_INFO)
 	condition	= PAL_1029_SOLDIER_Condition;
 	information	= PAL_1029_SOLDIER_Info;
 	permanent	= FALSE;
-	description	= "Lass mich rein, ich möchte Soldat des Königs werden!";
+//	description	= "Lass mich rein, ich möchte Soldat des Königs werden!";
+	description	= "Pusť mě dovnitř, chci se stát vojákem královy armády!";
 };
 
 FUNC INT PAL_1029_SOLDIER_Condition()
@@ -195,9 +201,12 @@ FUNC INT PAL_1029_SOLDIER_Condition()
 
 FUNC VOID PAL_1029_SOLDIER_Info()
 {
-	AI_Output			(hero, self,"PAL_1029_SOLDIER_15_01"); //Lass mich rein, ich möchte Soldat des Königs werden!
-	AI_Output			(self, hero,"PAL_1029_SOLDIER_06_02"); //Die zwei Spinner da vorne am Lagerfeuer möchten auch Soldat werden.
-	AI_Output			(self, hero,"PAL_1029_SOLDIER_06_03"); //(spöttisch) Fällt dir nichts besseres ein?
+//	AI_Output			(hero, self,"PAL_1029_SOLDIER_15_01"); //Lass mich rein, ich möchte Soldat des Königs werden!
+	AI_Output			(hero, self,"PAL_1029_SOLDIER_15_01"); //Pusť mě dovnitř, chci se stát vojákem královy armády!
+//	AI_Output			(self, hero,"PAL_1029_SOLDIER_06_02"); //Die zwei Spinner da vorne am Lagerfeuer möchten auch Soldat werden.
+	AI_Output			(self, hero,"PAL_1029_SOLDIER_06_02"); //Ti dva blázni támhle u táboráku se také chtějí stát vojáky.
+//	AI_Output			(self, hero,"PAL_1029_SOLDIER_06_03"); //(spöttisch) Fällt dir nichts besseres ein?
+	AI_Output			(self, hero,"PAL_1029_SOLDIER_06_03"); //(uštěpačně) Nenapadá tě nic lepšího?
 	AI_StopProcessInfos	(self);
 };
 
@@ -212,7 +221,8 @@ instance PAL_1029_Osraed_BRIBE		(C_INFO)
 	important	 = 	FALSE;
 	permanent	 = 	FALSE;
 
-	description	 = 	"Lass mich rein, es soll nicht dein Schaden sein!";
+//	description	 = 	"Lass mich rein, es soll nicht dein Schaden sein!";
+	description	 = 	"Pusť mě dovnitř, vždyť ti to neublíží!";
 };
 
 func int PAL_1029_Osraed_BRIBE_Condition ()
@@ -226,26 +236,34 @@ func int PAL_1029_Osraed_BRIBE_Condition ()
 
 func void PAL_1029_Osraed_BRIBE_Info ()
 {
-	AI_Output			(hero, self, "PAL_1029_BRIBE_15_01"); //Lass mich rein, es soll nicht dein Schaden sein!
-	AI_Output			(self, hero, "PAL_1029_BRIBE_06_02"); //(bedrohlich) Soso, du willst mich also bestechen!
+//	AI_Output			(hero, self, "PAL_1029_BRIBE_15_01"); //Lass mich rein, es soll nicht dein Schaden sein!
+	AI_Output			(hero, self, "PAL_1029_BRIBE_15_01"); //Pusť mě dovnitř, vždyť ti to neublíží!
+//	AI_Output			(self, hero, "PAL_1029_BRIBE_06_02"); //(bedrohlich) Soso, du willst mich also bestechen!
+	AI_Output			(self, hero, "PAL_1029_BRIBE_06_02"); //(hrozivě) Takže ty mě chceš podplatit!
 
-	Info_AddChoice	(PAL_1029_Osraed_BRIBE, "Wieviel?", PAL_1029_Osraed_BRIBE_YES );
-	Info_AddChoice	(PAL_1029_Osraed_BRIBE, "Nein, du musst mich missverstanden haben!", PAL_1029_Osraed_BRIBE_NO );
+//	Info_AddChoice	(PAL_1029_Osraed_BRIBE, "Wieviel?", PAL_1029_Osraed_BRIBE_YES );
+	Info_AddChoice	(PAL_1029_Osraed_BRIBE, "Kolik?", PAL_1029_Osraed_BRIBE_YES );
+//	Info_AddChoice	(PAL_1029_Osraed_BRIBE, "Nein, du musst mich missverstanden haben!", PAL_1029_Osraed_BRIBE_NO );
+	Info_AddChoice	(PAL_1029_Osraed_BRIBE, "Ne, to jsi mi musel špatně rozumět!", PAL_1029_Osraed_BRIBE_NO );
 };
 
 func void PAL_1029_Osraed_BRIBE_NO ()
 {
 	Info_ClearChoices	(PAL_1029_Osraed_BRIBE);
-	AI_Output			(hero, self, "PAL_1029_BRIBE_NO_15_01"); //Nein, du musst mich missverstanden haben!
-	AI_Output			(self, hero, "PAL_1029_BRIBE_NO_06_02"); //Pah! Erst das Maul aufreissen, dann den Schwanz einkneifen.
+//	AI_Output			(hero, self, "PAL_1029_BRIBE_NO_15_01"); //Nein, du musst mich missverstanden haben!
+	AI_Output			(hero, self, "PAL_1029_BRIBE_NO_15_01"); //Ne, to jsi mi musel špatně rozumět!
+//	AI_Output			(self, hero, "PAL_1029_BRIBE_NO_06_02"); //Pah! Erst das Maul aufreissen, dann den Schwanz einkneifen.
+	AI_Output			(self, hero, "PAL_1029_BRIBE_NO_06_02"); //Pche! Nejdřív si otevře hubu a potom stáhne ocas mezi nohy!
 	AI_StopProcessInfos	(self);
 };
 
 func void PAL_1029_Osraed_BRIBE_YES ()
 {
 	Info_ClearChoices	(PAL_1029_Osraed_BRIBE);
-	AI_Output			(hero, self, "PAL_1029_BRIBE_YES_15_01"); //Wieviel?
-	AI_Output			(self, hero, "PAL_1029_BRIBE_YES_06_02"); //100 Silber, darunter läuft nichts!
+//	AI_Output			(hero, self, "PAL_1029_BRIBE_YES_15_01"); //Wieviel?
+	AI_Output			(hero, self, "PAL_1029_BRIBE_YES_15_01"); //Kolik?
+//	AI_Output			(self, hero, "PAL_1029_BRIBE_YES_06_02"); //100 Silber, darunter läuft nichts!
+	AI_Output			(self, hero, "PAL_1029_BRIBE_YES_06_02"); //Sto stříbrných, níž nejdu!
 	BF_OuterGateBribable = TRUE;
 };
 
@@ -260,7 +278,8 @@ instance PAL_1029_Osraed_GIVESILVER		(C_INFO)
 	important	 = 	FALSE;
 	permanent	 = 	TRUE;
 
-	description	 = 	"(100 Silber geben)";
+//	description	 = 	"(100 Silber geben)";
+	description	 = 	"(předat sto stříbrných)";
 };
 
 func int PAL_1029_Osraed_GIVESILVER_Condition ()
@@ -277,9 +296,12 @@ func void PAL_1029_Osraed_GIVESILVER_Info ()
 	if	(Npc_HasItems(hero, ItMi_Silver) >= BF_BRIBE_OUTERGATE)
 	{
 		B_GiveInvItems	(hero, self, ItMi_Silver, BF_BRIBE_OUTERGATE);
-		AI_Output		(hero, self, "PAL_1029_GIVESILVER_15_01"); //Ich sagte doch, es soll nicht dein Schaden sein.
-		AI_Output		(self, hero, "PAL_1029_GIVESILVER_06_02"); //Wenn du jemanden hiervon erzählst bist du tot!
-		AI_Output		(self, hero, "PAL_1029_GIVESILVER_06_03"); //Jetzt mach dass du rein kommst und mach keinen Ärger!
+//		AI_Output		(hero, self, "PAL_1029_GIVESILVER_15_01"); //Ich sagte doch, es soll nicht dein Schaden sein.
+		AI_Output		(hero, self, "PAL_1029_GIVESILVER_15_01"); //Říkal jsem, že ti to neublíží.
+//		AI_Output		(self, hero, "PAL_1029_GIVESILVER_06_02"); //Wenn du jemanden hiervon erzählst bist du tot!
+		AI_Output		(self, hero, "PAL_1029_GIVESILVER_06_02"); //Pokud o tom někom řekneš, tak jsi mrtvej!
+//		AI_Output		(self, hero, "PAL_1029_GIVESILVER_06_03"); //Jetzt mach dass du rein kommst und mach keinen Ärger!
+		AI_Output		(self, hero, "PAL_1029_GIVESILVER_06_03"); //Teď běž dál a nedělej problémy!
 
 		// Wachen auf "Passieren" schalten
 		self.aivar[AIV_PASSGATE] = TRUE;
@@ -305,7 +327,8 @@ instance PAL_1029_Osraed_HOWDYBRIBED		(C_INFO)
 	important	 = 	FALSE;
 	permanent	 = 	TRUE;
 
-	description	 = 	"Gib mir meine 100 Silber zurück!";
+//	description	 = 	"Gib mir meine 100 Silber zurück!";
+	description	 = 	"Vrať mi mých sto stříbrných!";
 };
 
 func int PAL_1029_Osraed_HOWDYBRIBED_Condition ()
@@ -319,8 +342,10 @@ func int PAL_1029_Osraed_HOWDYBRIBED_Condition ()
 
 func void PAL_1029_Osraed_HOWDYBRIBED_Info ()
 {
-	AI_Output			(hero, self, "PAL_1029_HOWDYBRIBED_15_01"); //Gib mir meine 100 Silber zurück!
-	AI_Output			(self, hero, "PAL_1029_HOWDYBRIBED_06_02"); //(gekünstelt) Ich weiss nicht wovon du sprichst. Zieh Leine!
+//	AI_Output			(hero, self, "PAL_1029_HOWDYBRIBED_15_01"); //Gib mir meine 100 Silber zurück!
+	AI_Output			(hero, self, "PAL_1029_HOWDYBRIBED_15_01"); //Vrať mi mých sto stříbrných!
+//	AI_Output			(self, hero, "PAL_1029_HOWDYBRIBED_06_02"); //(gekünstelt) Ich weiss nicht wovon du sprichst. Zieh Leine!
+	AI_Output			(self, hero, "PAL_1029_HOWDYBRIBED_06_02"); //(falešně) Vůbec nevím o čem to mluvíš. A teď odejdi!
 	AI_StopProcessInfos	(self);
 };
 
@@ -366,18 +391,25 @@ func void PAL_1029_Osraed_HALTTHORA_Info ()
 	var c_npc thora;
 	thora = Hlp_GetNpc(AMZ_900_Thora);
 
-	AI_Output			(self, hero, "PAL_1029_HALTTHORA_06_01"); //HALT! Hier ist kein...
+//	AI_Output			(self, hero, "PAL_1029_HALTTHORA_06_01"); //HALT! Hier ist kein...
+	AI_Output			(self, hero, "PAL_1029_HALTTHORA_06_01"); //STÁT! Tady to není žádný...
 
 	AI_TurnToNpc			(self, thora);
-	AI_Output			(self, hero, "PAL_1029_HALTTHORA_06_02"); //(schmierig) Ah, Thora...! Mein Einladung zu einer Flasche Wein steht immer noch.!
+//	AI_Output			(self, hero, "PAL_1029_HALTTHORA_06_02"); //(schmierig) Ah, Thora...! Mein Einladung zu einer Flasche Wein steht immer noch.!
+	AI_Output			(self, hero, "PAL_1029_HALTTHORA_06_02"); //(slizce) Ah, Thora..! Moje pozvání na láhev vína stále platí!
 	AI_TurnToNpc			(thora, self);
-	AI_Output			(thora, hero, "PAL_1029_HALTTHORA_06_03"); //(kalt) Träum weiter, Schmierlocke!
+//	AI_Output			(thora, hero, "PAL_1029_HALTTHORA_06_03"); //(kalt) Träum weiter, Schmierlocke!
+	AI_Output			(thora, hero, "PAL_1029_HALTTHORA_06_03"); //(chladně) Sni dál, mastňáku!
 	AI_TurnToNpc			(self, hero);
 
-	AI_Output			(self, hero, "PAL_1029_HALTTHORA_06_04"); //Gut du kannst passieren!
-	AI_Output			(self, hero, "PAL_1029_HALTTHORA_06_05"); //Ach nochwas...
-	AI_Output			(hero, self, "PAL_1029_HALTTHORA_15_06"); //Was?
-	AI_Output			(self, hero, "PAL_1029_HALTTHORA_06_07"); //(leise) Nur das das klar ist. Finger weg von Thora, sie gehört mir (krankes Lachen)!
+//	AI_Output			(self, hero, "PAL_1029_HALTTHORA_06_04"); //Gut du kannst passieren!
+	AI_Output			(self, hero, "PAL_1029_HALTTHORA_06_04"); //Dobře, můžete projít!
+//	AI_Output			(self, hero, "PAL_1029_HALTTHORA_06_05"); //Ach nochwas...
+	AI_Output			(self, hero, "PAL_1029_HALTTHORA_06_05"); //Ještě jedna věc...
+//	AI_Output			(hero, self, "PAL_1029_HALTTHORA_15_06"); //Was?
+	AI_Output			(hero, self, "PAL_1029_HALTTHORA_15_06"); //Co?
+//	AI_Output			(self, hero, "PAL_1029_HALTTHORA_06_07"); //(leise) Nur das das klar ist. Finger weg von Thora, sie gehört mir (krankes Lachen)!
+	AI_Output			(self, hero, "PAL_1029_HALTTHORA_06_07"); //(tiše) Jen aby bylo jasno. Drže se od thory dál, patří mně (dýchavičný smích)!
 
  	// Wachen auf "Passieren" schalten
 	self.aivar[AIV_PASSGATE] = TRUE;
@@ -397,7 +429,8 @@ instance PAL_1029_Osraed_FODDER		(C_INFO)
 	important	 = 	FALSE;
 	permanent	 = 	FALSE;
 
-	description	 = 	"Ihr seid also das billige Orkfutter der Paladine?";
+//	description	 = 	"Ihr seid also das billige Orkfutter der Paladine?";
+	description	 = 	"Vy jste také levné paladinské žrádlo pro skřety?";
 };
 
 func int PAL_1029_Osraed_FODDER_Condition ()
@@ -410,14 +443,17 @@ func int PAL_1029_Osraed_FODDER_Condition ()
 
 func void PAL_1029_Osraed_FODDER_Info ()
 {
-	AI_Output			(hero, self, "PAL_1029_FODDER_15_01"); //Ihr seid also das billige Orkfutter der Paladine?
+//	AI_Output			(hero, self, "PAL_1029_FODDER_15_01"); //Ihr seid also das billige Orkfutter der Paladine?
+	AI_Output			(hero, self, "PAL_1029_FODDER_15_01"); //Vy jste také levné žrádlo pro skřety paladinů?
 	if	B_NpcIsNear(hero, AMZ_900_Thora)
 	{
-		AI_Output		(self, hero, "PAL_1029_FODDER_06_02"); //(gepresst) Wenn du nicht mit Thora hier angekommen wärst, dann würde ich dich jetzt einen Kopf kürzer machen.
+//		AI_Output		(self, hero, "PAL_1029_FODDER_06_02"); //(gepresst) Wenn du nicht mit Thora hier angekommen wärst, dann würde ich dich jetzt einen Kopf kürzer machen.
+		AI_Output		(self, hero, "PAL_1029_FODDER_06_02"); //(přidušeně) Kdybys tu nebyl s Thorou udělal bych tě o hlavu kratšího!
 	}
 	else
 	{
-		AI_Output			(self, hero, "PAL_1029_FODDER_06_03"); //Na warte, diese Beleidigung wirst du mit Deinem Leben bezahlen!
+//		AI_Output			(self, hero, "PAL_1029_FODDER_06_03"); //Na warte, diese Beleidigung wirst du mit Deinem Leben bezahlen!
+		AI_Output			(self, hero, "PAL_1029_FODDER_06_03"); //Jen počkej, za tuhle urážku zaplatíš životem!
 		B_SetAttitude			(self, ATT_HOSTILE);
 	};
 

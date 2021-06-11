@@ -47,7 +47,6 @@ func void KDF_1103_Nereus_WELCOME_Info ()
 {
 //	AI_Output			(self, hero, "KDF_1103_Nereus_WELCOME_00_01"); //Störe mich nicht bei meinen Untersuchungen.
 	AI_Output			(self, hero, "KDF_1103_Nereus_WELCOME_00_01"); //Neruš mě při mém bádání. 
-
 };
 
 	
