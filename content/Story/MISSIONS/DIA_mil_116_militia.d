@@ -21,7 +21,8 @@ func int MIL_116_Militia_WAIT_Condition ()
 
 func void MIL_116_Militia_WAIT_Info ()
 {
-	AI_Output			(self, hero, "MIL_116_WAIT_06_01"); //Hey, wo willst du hin?
+//	AI_Output			(self, hero, "MIL_116_WAIT_06_01"); //Hey, wo willst du hin?
+	AI_Output			(self, hero, "MIL_116_WAIT_06_01"); //Hej, kam to jdeš?
 
 //	Info_AddChoice		(MIL_116_Militia_WAIT, "Ich suche meinen alten Freund Diego."	, MIL_116_Militia_WAIT_TROUBLE );
 	Info_AddChoice		(MIL_116_Militia_WAIT, "Hledám Diega, svého starého známého."	, MIL_116_Militia_WAIT_TROUBLE );
