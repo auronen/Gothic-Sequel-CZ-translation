@@ -260,7 +260,7 @@ func void MIL_100_Halvor_SNAF_Info ()
 //	AI_Output			(hero, self, "MIL_100_SNAF_15_01"); //Den Leuten schmeckt es hier wohl besser als bei Snaf, was?
 	AI_Output			(hero, self, "MIL_100_SNAF_15_01"); //Lidem to tu chutná o dost lépe než u Snafa, že?
 //	AI_Output			(self, hero, "MIL_100_SNAF_00_02"); //Snaf's jämmerliche Suppe wäre nicht mal was für den Schweinetrog meines Vetters in Khorinis.
-	AI_Output			(self, hero, "MIL_100_SNAF_00_02"); //Ty Snafova děsná polévka by nežrala ani prasata mého bratrance v Khorinidu.
+	AI_Output			(self, hero, "MIL_100_SNAF_00_02"); //Tu Snafovu děsnou polévku by nežrala ani prasata mého bratrance v Khorinisu.
 //	AI_Output			(self, hero, "MIL_100_SNAF_00_03"); //HA... dieser armseelige Nichtsnutz sollte sich mal so langsam was überlegen, wenn er im Geschäft bleiben will.
 	AI_Output			(self, hero, "MIL_100_SNAF_00_03"); //HA... ten ubohý ničema by se měl nad sebou pomalu zamyslet, jestli se chce udržet v obchodu.
 //	AI_Output			(self, hero, "MIL_100_SNAF_00_04"); //Meine neues Rezept kommt sehr gut an. Die Leute können garnicht genug davon bekommen.
