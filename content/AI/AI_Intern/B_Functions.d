@@ -938,25 +938,29 @@ func void B_SetAttitude (VAR C_NPC slf, VAR INT att)
 	if (att == ATT_FRIENDLY )
 	{
 		string_ScreenText	=	slf.name;
-		string_ScreenText	=	ConcatStrings (string_ScreenText, " ist freundlich.");
+//		string_ScreenText	=	ConcatStrings (string_ScreenText, " ist freundlich.");
+		string_ScreenText	=	ConcatStrings (string_ScreenText, " je přítel.");
 		PrintScreenColored	(string_ScreenText, -1,_YPOS_MESSAGE_GIVEN+2,FONT_OLD_SMALL,_TIME_MESSAGE_CHANGEATTITUDE,TEXT_COLOR_GREEN);
 	};
 	if (att == ATT_NEUTRAL )
 	{
 		string_ScreenText	=	slf.name;
-		string_ScreenText	=	ConcatStrings (string_ScreenText, " ist neutral.");
+//		string_ScreenText	=	ConcatStrings (string_ScreenText, " ist neutral.");
+		string_ScreenText	=	ConcatStrings (string_ScreenText, " je neutrální.");
 		PrintScreenColored	(string_ScreenText, -1,_YPOS_MESSAGE_GIVEN+2,FONT_OLD_SMALL,_TIME_MESSAGE_CHANGEATTITUDE,TEXT_COLOR_WHITE);
 	};
 	if (att == ATT_ANGRY )
 	{
 		string_ScreenText	=	slf.name;
-		string_ScreenText	=	ConcatStrings (string_ScreenText, " ist verärgert.");
+//		string_ScreenText	=	ConcatStrings (string_ScreenText, " ist verärgert.");
+		string_ScreenText	=	ConcatStrings (string_ScreenText, " je naštvaný.");
 		PrintScreenColored	(string_ScreenText, -1,_YPOS_MESSAGE_GIVEN+2,FONT_OLD_SMALL,_TIME_MESSAGE_CHANGEATTITUDE,TEXT_COLOR_YELLOW);
 	};
 	if (att == ATT_HOSTILE )
 	{
 		string_ScreenText	=	slf.name;
-		string_ScreenText	=	ConcatStrings (string_ScreenText, " ist feindlich.");
+//		string_ScreenText	=	ConcatStrings (string_ScreenText, " ist feindlich.");
+		string_ScreenText	=	ConcatStrings (string_ScreenText, " je rozzuřený.");
 		PrintScreenColored	(string_ScreenText, -1,_YPOS_MESSAGE_GIVEN+2,FONT_OLD_SMALL,_TIME_MESSAGE_CHANGEATTITUDE,TEXT_COLOR_RED);
 	};
 };
