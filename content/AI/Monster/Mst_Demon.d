@@ -4,7 +4,8 @@
 
 PROTOTYPE Mst_Default_Demon(C_Npc)			
 {
-	name							=	"Flammendämon";
+//	name							=	"Flammendämon";
+	name							=	"Ohnivý démon";
 	guild							=	GIL_DEMON;
 	aivar[AIV_MM_REAL_ID]			= 	ID_DEMON;
 	level							=	50;

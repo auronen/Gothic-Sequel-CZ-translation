@@ -4,7 +4,8 @@
 
 PROTOTYPE Mst_Default_Bloodfly(C_Npc)			
 {
-	name							=	"Blutfliege";
+//	name							=	"Blutfliege";
+	name							=	"Krvavá moucha";
 	guild							=	GIL_BLOODFLY;
 	aivar[AIV_MM_REAL_ID]			= 	ID_BLOODFLY;
 	level							=	7;
@@ -84,5 +85,6 @@ INSTANCE HelpBrothers_Bloodfly (Mst_Default_Bloodfly)
 
 	CreateInvItems (self, ItAt_BloodflyWings, 2);	// 2 Flügel
 		
-	name							=	"aggressive Blutfliege";
+//	name							=	"aggressive Blutfliege";
+	name							=	"Agresivní krvavá moucha";
 };

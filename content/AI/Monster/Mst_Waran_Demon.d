@@ -4,7 +4,8 @@
 
 PROTOTYPE Mst_Default_WaranDemon(C_Npc)			
 {
-	name							=	"Waran-Dämon";
+//	name							=	"Waran-Dämon";
+	name							=	"Démonický ještěr";
 	guild							=	GIL_WARAN;
 	aivar[AIV_MM_REAL_ID]			= 	ID_FIREWARAN;
 	level							=	50;

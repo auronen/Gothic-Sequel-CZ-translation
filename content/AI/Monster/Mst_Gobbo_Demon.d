@@ -4,7 +4,8 @@
 
 PROTOTYPE Mst_Default_GobboDemon(C_NPC)
 {
-	name							=	"untoter Goblin";
+//	name							=	"untoter Goblin";
+	name							=	"Nemrtvý goblin";
 	guild							=	GIL_GOBBO;
 	aivar[AIV_MM_REAL_ID]			= 	ID_BLACKGOBBO;
 	level							=	12;

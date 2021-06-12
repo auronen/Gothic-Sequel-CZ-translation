@@ -4,7 +4,8 @@
 
 PROTOTYPE Mst_Default_Shadowbeast(C_Npc)
 {
-	name							=	"Schattenläufer";
+//	name							=	"Schattenläufer";
+	name							=	"Stínová šelma";
 	guild							=	GIL_SHADOWBEAST;
 	aivar[AIV_MM_REAL_ID]			= 	ID_SHADOWBEAST;
 	level							=	40;

@@ -4,7 +4,8 @@
 
 PROTOTYPE Mst_Default_Wolf(C_Npc)			
 {
-	name							=	"Wolf";
+//	name							=	"Wolf";
+	name							=	"Vlk";
 	guild							=	GIL_WOLF;
 	aivar[AIV_MM_REAL_ID]			= 	ID_WOLF;
 	level							=	9;

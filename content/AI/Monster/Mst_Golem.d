@@ -82,7 +82,8 @@ func void Set_IceGolem_Visuals()
 
 INSTANCE StoneGolem	(Mst_Default_Golem)
 {
-	name	=	"Stein Golem";
+//	name	=	"Stein Golem";
+	name	=	"Kamenný golem";
 	aivar[AIV_MM_REAL_ID]			= 	ID_STONEGOLEM;
 	protection	[PROT_BLUNT]		=	75;
 //--------------------------------------------
@@ -121,7 +122,8 @@ INSTANCE SummonedByPC_StoneGolem (Mst_Default_Golem)
 INSTANCE SummonedByNPC_StoneGolem (Mst_Default_Golem)
 {
 	//-------- general --------
-	name	=	"Stein Golem";
+//	name	=	"Stein Golem";
+	name	=	"Kamenný golem";
 	aivar[AIV_MM_REAL_ID]			= 	ID_STONEGOLEM;
 
 	//-------- visual --------
@@ -142,7 +144,8 @@ INSTANCE SummonedByNPC_StoneGolem (Mst_Default_Golem)
 INSTANCE FireGolem	(Mst_Default_Golem)
 {
 	//-------- general --------
-	name	=	"Feuer Golem";
+//	name	=	"Feuer Golem";
+	name	=	"Ohnivý golem";
 	aivar		[AIV_MM_REAL_ID]	= 	ID_FIREGOLEM;
 
 	//-------- visual --------
@@ -169,7 +172,8 @@ INSTANCE FireGolem	(Mst_Default_Golem)
 INSTANCE IceGolem	(Mst_Default_Golem)
 {
 	//-------- general --------
-	name	=	"Eis Golem";
+//	name	=	"Eis Golem";
+	name	=	"Ledový golem";
 	aivar[AIV_MM_REAL_ID]			= 	ID_ICEGOLEM;
 
 	//-------- visual --------

@@ -4,7 +4,8 @@
 
 PROTOTYPE Mst_Default_WolfDemon(C_Npc)			
 {
-	name							=	"Wolf-Dämon";
+//	name							=	"Wolf-Dämon";
+	name							=	"Démonický démon";
 	guild							=	GIL_WOLF;
 	aivar[AIV_MM_REAL_ID]			= 	ID_WOLF;
 	level							=	9;

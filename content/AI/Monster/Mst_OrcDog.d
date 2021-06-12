@@ -4,7 +4,8 @@
 
 PROTOTYPE Mst_Default_OrcDog(C_Npc)			
 {
-	name							=	"Orc-Hund";
+//	name							=	"Orc-Hund";
+	name							=	"Skřetí pes";
 	guild							=	GIL_ORCDOG;
 	aivar[AIV_MM_REAL_ID]			= 	ID_BLACKWOLF;
 	level							=	12;		//SN 11.01.01.: geändert, da zu schwach

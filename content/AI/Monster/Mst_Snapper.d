@@ -4,7 +4,8 @@
 
 PROTOTYPE Mst_Default_Snapper(C_Npc)			
 {
-	name							=	"Snapper";
+//	name							=	"Snapper";
+	name							=	"Chňapavec";
 	guild							=	GIL_SNAPPER;
 	aivar[AIV_MM_REAL_ID]			= 	ID_SNAPPER;
 	level							=	22;

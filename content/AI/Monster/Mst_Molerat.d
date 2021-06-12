@@ -4,7 +4,8 @@
 
 PROTOTYPE Mst_Default_Molerat(C_Npc)
 {
-	name							=	"Molerat";
+//	name							=	"Molerat";
+	name							=	"Krysokrt";
 	guild							=	GIL_MOLERAT;
 	aivar[AIV_MM_REAL_ID]			= 	ID_MOLERAT;
 	level							=	5;
@@ -81,7 +82,8 @@ INSTANCE Molerat	(Mst_Default_Molerat)
 
 INSTANCE YMolerat	(Mst_Default_Molerat)
 {
-	name							=	"junge Molerat";
+//	name							=	"junge Molerat";
+	name							=	"Mladý krysokrt";
 	level							=	4;
 
 	attribute	[ATR_STRENGTH]		=	5;

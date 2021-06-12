@@ -4,7 +4,8 @@
 
 PROTOTYPE Mst_Default_Waran(C_Npc)			
 {
-	name							=	"Waran";
+//	name							=	"Waran";
+	name							=	"Ještěr";
 	guild							=	GIL_WARAN;
 	aivar[AIV_MM_REAL_ID]			= 	ID_WARAN;
 	level							=	8;

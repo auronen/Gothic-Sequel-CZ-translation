@@ -4,7 +4,8 @@
 
 PROTOTYPE Mst_Default_Lurker(C_Npc)			
 {
-	name							=	"Lurker";
+//	name							=	"Lurker";
+	name							=	"Číhavec";
 	guild							=	GIL_LURKER;
 	aivar[AIV_MM_REAL_ID]			= 	ID_LURKER;
 	level							=	17;

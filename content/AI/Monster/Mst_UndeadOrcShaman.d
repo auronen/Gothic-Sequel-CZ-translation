@@ -4,7 +4,8 @@
 
 PROTOTYPE Mst_Default_UndeadOrcShaman (C_Npc)			
 {
-	name							=	"Hohepriester";
+//	name							=	"Hohepriester";
+	name							=	"Vysoce postavený kněz";
 	guild							=	GIL_UNDEADORC;
 	aivar[AIV_MM_REAL_ID]			= 	ID_UNDEADORCSHAMAN;
 	level							=	30;

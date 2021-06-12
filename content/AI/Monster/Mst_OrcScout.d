@@ -4,7 +4,8 @@
 
 PROTOTYPE Mst_Default_OrcScout(C_Npc)
 {
-	name							=	"Orc Jäger";
+//	name							=	"Orc Jäger";
+	name							=	"Skřetí lovec";
 	guild							=	GIL_ORCSCOUT;
 	npctype							=	NPCTYPE_GUARD;
 	voice							=	17;
@@ -104,7 +105,8 @@ INSTANCE OrcPeasantEatAndDrink (Mst_Default_OrcScout)
 
 INSTANCE OrcScoutGYD (Mst_Default_OrcScout)
 {
-	name						=	"Orc Späher";
+//	name						=	"Orc Späher";
+	name						=	"Skřetí zvěd";
 	level						=	18;
 
 	attribute[ATR_STRENGTH]		=	30;	// SN: reguläre OrcScouts wären an dieser Stelle noch zu heftig!

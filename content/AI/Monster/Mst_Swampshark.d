@@ -4,7 +4,8 @@
 
 PROTOTYPE Mst_Default_Swampshark(C_Npc)			
 {
-	name							=	"Sumpfhai";
+//	name							=	"Sumpfhai";
+	name							=	"Močálový žralok";
 	guild							=	GIL_SWAMPSHARK;
 	aivar[AIV_MM_REAL_ID]			= 	ID_SWAMPSHARK;
 	level							=	40;
@@ -77,7 +78,8 @@ INSTANCE Swampshark	(Mst_Default_Swampshark)
 
 INSTANCE HurtSwampshark(Mst_Default_Swampshark)
 {
-	name							=	"verletzter Sumpfhai";
+//	name							=	"verletzter Sumpfhai";
+	name							=	"Zranený močálový žralok";
 	attribute	[ATR_HITPOINTS]		=	20;
 
 	Set_Swampshark_Visuals();

@@ -4,7 +4,8 @@
 
 PROTOTYPE Mst_Default_ScavengerDemon(C_Npc)
 {
-	name							=	"dämonischer Scavenger";
+//	name							=	"dämonischer Scavenger";
+	name							=	"Démonický mrchožrout";
 	guild							=	GIL_SCAVENGER;
 	aivar[AIV_MM_REAL_ID]			= 	ID_SCAVENGER;
 	level							=	15;

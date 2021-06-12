@@ -4,7 +4,8 @@
 
 PROTOTYPE Mst_Default_OrcShaman(C_Npc)			
 {
-	name							=	"Ork Schamane";
+//	name							=	"Ork Schamane";
+	name							=	"Skřetí šaman";
 	guild							=	GIL_ORCSHAMAN;
 	npctype							=	NPCTYPE_GUARD;
 	level							=	50;

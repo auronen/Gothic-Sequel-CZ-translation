@@ -4,7 +4,8 @@
 
 PROTOTYPE Mst_Default_Meatbug(C_Npc)
 {
-	name							=	"Fleischwanze";
+//	name							=	"Fleischwanze";
+	name							=	"Žravá štěnice";
 	guild							=	GIL_MEATBUG;
 	aivar[AIV_MM_REAL_ID]			= 	ID_MEATBUG;
 	level							=	1;

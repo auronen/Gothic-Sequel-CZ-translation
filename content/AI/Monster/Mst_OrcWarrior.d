@@ -4,7 +4,8 @@
 
 PROTOTYPE Mst_Default_OrcWarrior(C_Npc)
 {
-	name							=	"Ork Krieger";
+//	name							=	"Ork Krieger";
+	name							=	"Skřetí válečník";
 	guild							=	GIL_ORCWARRIOR;
 	npctype							=	NPCTYPE_GUARD;
 	voice							=	17;
@@ -66,7 +67,8 @@ func void Set_OrcWarrior_Visuals()
 INSTANCE OrcWarrior1	(Mst_Default_OrcWarrior)
 {
 	//-------- general --------
-	name							=	"Ork Kämpfer";
+//	name							=	"Ork Kämpfer";
+	name							=	"Skřetí bojovník";
 	level							=	25;
 
 	//-------- visual --------
@@ -93,7 +95,8 @@ INSTANCE OrcWarrior1	(Mst_Default_OrcWarrior)
 INSTANCE OrcWarrior2	(Mst_Default_OrcWarrior)
 {
 	//-------- general --------
-	name							=	"Ork Krieger";
+//	name							=	"Ork Krieger";
+	name							=	"Skřetí válečník";
 	level							=	30;
 
 	//-------- visual --------
@@ -120,7 +123,8 @@ INSTANCE OrcWarrior2	(Mst_Default_OrcWarrior)
 INSTANCE OrcWarrior3	(Mst_Default_OrcWarrior)
 {
 	//-------- general --------
-	name							=	"Ork Klankrieger";
+//	name							=	"Ork Klankrieger";
+	name							=	"Skřetí řadový bojovník";
 	level							=	35;
 
 	//-------- visual --------
@@ -147,7 +151,8 @@ INSTANCE OrcWarrior3	(Mst_Default_OrcWarrior)
 INSTANCE OrcWarrior4	(Mst_Default_OrcWarrior)
 {
 	//-------- general --------
-	name							=	"Ork Tempelkrieger";
+//	name							=	"Ork Tempelkrieger";
+	name							=	"Skřetí chrámový bojovník";
 	level							=	40;
 
 	//-------- visual --------

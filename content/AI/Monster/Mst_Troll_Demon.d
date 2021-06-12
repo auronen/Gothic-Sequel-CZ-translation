@@ -4,7 +4,8 @@
 
 PROTOTYPE Mst_Default_TrollDemon(C_Npc)			
 {
-	name							=	"Troll-Dämon";
+//	name							=	"Troll-Dämon";
+	name							=	"Démonický troll";
 	guild							=	GIL_TROLL;
 	aivar[AIV_MM_REAL_ID]			= 	ID_TROLL;
 	level							=	200;

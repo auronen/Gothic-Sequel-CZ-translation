@@ -4,7 +4,7 @@
 
 PROTOTYPE Mst_Default_RazorDemon(C_Npc)			
 {
-	name							=	"Razor-Dämon";
+	name							=	"Démonická břitva";
 	guild							=	GIL_SNAPPER;
 	aivar[AIV_MM_REAL_ID]			= 	ID_RAZOR;
 	level							=	20;

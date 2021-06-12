@@ -4,7 +4,8 @@
 
 PROTOTYPE Mst_Default_Scavenger(C_Npc)			
 {
-	name							=	"Scavenger";
+//	name							=	"Scavenger";
+	name							=	"Mrchožrout";
 	guild							=	GIL_SCAVENGER;
 	aivar[AIV_MM_REAL_ID]			= 	ID_SCAVENGER;
 	level							=	5;
@@ -84,7 +85,8 @@ INSTANCE Scavenger	(Mst_Default_Scavenger)
 
 INSTANCE YScavenger	(Mst_Default_Scavenger)
 {
-	name							=	"junger Scavenger";
+//	name							=	"junger Scavenger";
+	name							=	"Mladý mrchožrout";
 	level							=	4;
 
 	attribute	[ATR_STRENGTH]		=	6;

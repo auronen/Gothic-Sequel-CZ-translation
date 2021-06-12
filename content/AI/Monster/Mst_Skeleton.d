@@ -4,7 +4,8 @@
 
 PROTOTYPE Mst_Default_Skeleton(C_Npc)
 {
-	name							=	"Skelett";
+//	name							=	"Skelett";
+	name							=	"Kostlivec";
 	guild							=	GIL_SKELETON;
 	//REAL ID IN INSTANZEN!
 	level							=	25;
@@ -133,7 +134,8 @@ INSTANCE SkeletonSH			(Mst_Default_Skeleton)
 
 INSTANCE SkeletonScout		(Mst_Default_Skeleton)
 {
-	name							=	"Skelett Späher";
+//	name							=	"Skelett Späher";
+	name							=	"Kostlivý zvěd";
 	aivar[AIV_MM_REAL_ID]			= 	ID_SKELETONSCOUT;
 	Set_SkeletonScout_Visuals();
 	Npc_SetToFightMode		(self, ItMw_Scythe);
@@ -148,7 +150,8 @@ INSTANCE SkeletonScout		(Mst_Default_Skeleton)
 
 INSTANCE SkeletonWarrior	(Mst_Default_Skeleton)
 {
-	name							=	"Skelett Krieger";
+//	name							=	"Skelett Krieger";
+	name							=	"Kostlivý válečník";
 	Set_SkeletonWarrior_Visuals();
 	level							=	30;
 	attribute	[ATR_STRENGTH]		=	120;
@@ -167,7 +170,8 @@ INSTANCE SkeletonMage		(Mst_Default_Skeleton)
 {
 	aivar[AIV_MM_REAL_ID]	= 	ID_SKELETONMAGE;
 	Set_SkeletonMage_Visuals();
-	name					=	"Skelett Magier";
+//	name					=	"Skelett Magier";
+	name					=	"Kostlivý mág";
 	guild					=	GIL_DEMON;	// "fliegende" Gilde nötig, damit es nicht Watet/Schwimmt/... !
 	level					=	50;
 
@@ -225,7 +229,8 @@ INSTANCE SummonedByNPC_Skeleton	(Mst_Default_Skeleton)
 
 INSTANCE SummonedByPC_SkeletonWarrior (Mst_Default_Skeleton)
 {
-	name							=	"Skelett Krieger";
+//	name							=	"Skelett Krieger";
+	name							=	"Kostlivý válečník";
 	level							=	30;
 	attribute	[ATR_STRENGTH]		=	120;
 	senses						= SENSE_HEAR | SENSE_SEE;
@@ -244,7 +249,8 @@ INSTANCE SummonedByPC_SkeletonWarrior (Mst_Default_Skeleton)
 
 INSTANCE SummonedByNPC_SkeletonWarrior (Mst_Default_Skeleton)
 {
-	name							=	"Skelett Krieger";
+//	name							=	"Skelett Krieger";
+	name							=	"Kostlivý válečník";
 	level							=	30;
 	attribute	[ATR_STRENGTH]		=	120;
 	aivar[AIV_MM_REAL_ID]			= 	ID_SKELETONWARRIOR;
