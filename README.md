@@ -30,7 +30,7 @@ func void WRK_203_Bromor_TROPHYS_Info ()
 
 ## Stav projektu
 - [x] Menu
-- [ ] Dialogy - `Content\Story\Missions`
+- [x] Dialogy - `Content\Story\Missions`
 - [x] Předměty - `Content\Items`
 - [x] Ostatní - soubor `Content\Story\Text.d`
 - [x] Fonty
@@ -43,4 +43,4 @@ func void WRK_203_Bromor_TROPHYS_Info ()
 ![hlavní nabídka](https://github.com/auronen/Gothic-Sequel-CZ-translation/blob/main/screenshots/Sequel_titulek.png?raw=true)
 
 ## Předpokládaný čas vydání
-Až to bude, tak to bude™
+Už to skoro bude™
