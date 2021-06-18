@@ -72,6 +72,10 @@ FUNC INT CzH_Plants_Condition()
 	if (!Knows_Nightshade)
 	{
 		return TRUE;
+	}
+	else 
+	{
+		return FALSE;
 	};
 };
 
@@ -110,6 +114,10 @@ FUNC INT CzH_Weapons_Condition()
 	if (!Knows_Shortsword)
 	{
 		return TRUE;
+	}
+	else 
+	{
+		return FALSE;
 	};
 };
 
@@ -155,6 +163,10 @@ FUNC INT CzH_Potions_Condition()
 	if (!Knows_HealingPotions)
 	{
 		return TRUE;
+	}
+	else 
+	{
+		return FALSE;
 	};
 };
 
@@ -186,6 +198,10 @@ func VOID CzH_FixGerion_Info()
 {
 	CreateInvItem(hero,	ItRi_Fire_01);
     LearnPickpocket_1 = LOG_RUNNING;
+	
+	Log_CreateTopic		(CH1_Arena,LOG_MISSION);
+	Log_SetTopicStatus	(CH1_Arena,LOG_RUNNING);
+	B_LogEntry	(CH1_Arena,	"Aréna má přísná pravidla.\nPravidlo 1:\nV aréně se nesmí zabíjet.\nPravidlo 2:\nLuky, kuše a magie jsou zakázané.\nPravidlo 3:\nDrž se dál od zbraně tvého protivníka.\nPravidlo 4:\nKdokoliv poruší pravidla prohraje souboj a nedostane zaplaceno!");
 	AI_StopProcessInfos	(self);
 };
 
