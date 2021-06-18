@@ -249,7 +249,7 @@ func void PAL_1030_Auxiliary_HALTTHORA_Info ()
 //	AI_Output			(self, hero, "PAL_1030_HALTTHORA_07_01"); //HEH DU DA!
 	AI_Output			(self, hero, "PAL_1030_HALTTHORA_07_01"); //HEJ, TY TAM!
 //	AI_Output			(self, hero, "PAL_1030_HALTTHORA_07_02"); //(misstrauisch) Thoras Kamerad, wie?
-	AI_Output			(self, hero, "PAL_1030_HALTTHORA_07_02"); //(nedůvěřivě) Thořin kamarád, tak?
+	AI_Output			(self, hero, "PAL_1030_HALTTHORA_07_02"); //(nedůvěřivě) Thořin kamarád, že?
 //	AI_Output			(self, hero, "PAL_1030_HALTTHORA_07_03"); //OK, kannst passieren!
 	AI_Output			(self, hero, "PAL_1030_HALTTHORA_07_03"); //OK, můžeš dál!
 	AI_StopProcessInfos	(self);

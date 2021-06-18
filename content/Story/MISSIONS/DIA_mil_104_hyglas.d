@@ -74,7 +74,7 @@ func void MIL_104_Hyglas_HI_DONTKNOW ()
 //	AI_Output			(hero, self, "MIL_104_HI_DONTKNOW_15_01"); //Das interessiert mich nicht.
 	AI_Output			(hero, self, "MIL_104_HI_DONTKNOW_15_01"); //Mě to nezajímá.
 //	AI_Output			(self, hero, "MIL_104_HI_DONTKNOW_08_02"); //Oh, ... na dann steck deinen Kopf in den Sand und verharre solange, bis du stirbst
-	AI_Output			(self, hero, "MIL_104_HI_DONTKNOW_08_02"); //Oh,... no, tak schovej hlavu do písku a nevyndavej ji, dokud nazemřeš.
+	AI_Output			(self, hero, "MIL_104_HI_DONTKNOW_08_02"); //Oh,... no, tak schovej hlavu do písku a nevyndavej ji, dokud nezemřeš.
 	AI_StopProcessInfos (self);
 };
 

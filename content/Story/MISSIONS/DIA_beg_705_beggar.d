@@ -77,7 +77,7 @@ func void BEG_705_BEGGAR_BEG_NO ()
 func void BEG_705_BEGGAR_BEG_FIVE ()
 {
 //	AI_Output			(hero, self, "BEG_700_BEG_FIVE_15_01"); //Hier, nimm diese 5 Silberstücke.
-	AI_Output			(hero, self, "BEG_700_BEG_FIVE_15_01"); //Na, vem si 5 stříbrných.
+	AI_Output			(hero, self, "BEG_700_BEG_FIVE_15_01"); //Na, vezmi si 5 stříbrných.
 	B_GiveInvItems		(hero, self, ITMI_Silver,5);
 //	AI_Output			(self, hero, "BEG_700_BEG_FIVE_00_02"); //Danke Mann, vielleicht können wir Bettler dir ja auch mal helfen...
 	AI_Output			(self, hero, "BEG_700_BEG_FIVE_00_02"); //Díky, snad bychom ti my, žebráci, mohli taky někdy pomoct...
@@ -98,7 +98,7 @@ func void BEG_705_BEGGAR_BEG_SORRY ()
 func void BEG_705_BEGGAR_BEG_ONE ()
 {
 //	AI_Output			(hero, self, "BEG_700_BEG_ONE_15_01"); //Hier, nimm dieses Silberstück.
-	AI_Output			(hero, self, "BEG_700_BEG_ONE_15_01"); //Na, vem si tenhle stříbrný.
+	AI_Output			(hero, self, "BEG_700_BEG_ONE_15_01"); //Na, vezmi si tenhle stříbrný.
 	B_GiveInvItems		(hero, self, ITMI_Silver,1);
 //	AI_Output			(self, hero, "BEG_700_BEG_ONE_00_02"); //Damit hast du mir wirklich geholfen.
 	AI_Output			(self, hero, "BEG_700_BEG_ONE_00_02"); //Tím jsi mi opravdu pomohl.

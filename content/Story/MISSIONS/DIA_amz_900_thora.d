@@ -173,7 +173,7 @@ FUNC VOID AMZ_900_Thora_WHO_WHATELSE()
 //	AI_Output (other, self,"AMZ_900_Thora_WHO_WHATELSE_Info_15_01"); //Ich will ins Lager.
 	AI_Output (other, self,"AMZ_900_Thora_WHO_WHATELSE_Info_15_01"); //Chci do tábora.
 //	AI_Output (self, other,"AMZ_900_Thora_WHO_WHATELSE_Info_16_02"); //Das hast du schon fast geschafft. Da hinten ist es.
-	AI_Output (self, other,"AMZ_900_Thora_WHO_WHATELSE_Info_16_02"); //To už se ti skoro povedlo. Je támhle vzadu
+	AI_Output (self, other,"AMZ_900_Thora_WHO_WHATELSE_Info_16_02"); //To už se ti skoro povedlo. Je támhle vzadu.
 	Info_ClearChoices	(AMZ_900_Thora_WHO);
 };
 
@@ -386,7 +386,7 @@ func void AMZ_900_Thora_WHERENIGHT_Info ()
 //	AI_Output			(hero, self, "AMZ_900_WHERENIGHT_15_01"); //Und wo bist du... nachts?
 	AI_Output			(hero, self, "AMZ_900_WHERENIGHT_15_01"); //A kde jsi... přes noc?
 //	AI_Output			(self, hero, "AMZ_900_WHERENIGHT_16_02"); //(Lacht) Du bist zwar schlecht in Form, aber dafür ganz schön dreist!
-	AI_Output			(self, hero, "AMZ_900_WHERENIGHT_16_02"); //(Směje se) Ty sice vůbec nejseš ve formě, ale jseš na to docela drzej!
+	AI_Output			(self, hero, "AMZ_900_WHERENIGHT_16_02"); //(Směje se) Ty sice vůbec nejsi ve formě, ale jsi na to docela drzý!
 
 	AI_StopProcessInfos		(self);
 };
@@ -875,7 +875,7 @@ func void	AMZ_900_Thora_CHALLENGE_Info()
 //		AI_Output		(self, hero, "AMZ_900_CHALLENGE_16_04"); //Du hast Mist gebaut, in der Arena.
 		AI_Output		(self, hero, "AMZ_900_CHALLENGE_16_04"); //Udělal jsi v aréně pěknou kravinu.
 //		AI_Output		(self, hero, "AMZ_900_CHALLENGE_16_05"); //Klär das mit dem Arenameister, sonst kann ich nicht gegen dich kämpfen!
-		AI_Output		(self, hero, "AMZ_900_CHALLENGE_16_05"); //Ujasni si to vedoucím arény, jinak proti tobě nemůžu bojovat!
+		AI_Output		(self, hero, "AMZ_900_CHALLENGE_16_05"); //Vyřiď si to s mistrem arény, jinak proti tobě nemůžu bojovat!
 		AI_StopProcessInfos	(self);
 	}
 	else
@@ -1016,7 +1016,7 @@ func int AMZ_900_Thora_TEACHNOW_Info ()
 	if	(B_Arena_GetGladiatorRanking(PC_Hero) == 1)
 	{
 //		AI_Output		(self, hero, "AMZ_900_TEACHNOW_16_02"); //Du hast mich in der Arena besiegt, aber vielleicht hast du nur Glück gehabt.
-		AI_Output		(self, hero, "AMZ_900_TEACHNOW_16_02"); //Porzail jsi mě v aréně, ale to jsi měl možná jen štěstí.
+		AI_Output		(self, hero, "AMZ_900_TEACHNOW_16_02"); //Porazil jsi mě v aréně, ale to jsi měl možná jen štěstí.
 //		AI_Output		(self, hero, "AMZ_900_TEACHNOW_16_03"); //Wenn du es schaffst, mich als Champion abzulösen, werde dich in die Kunst des Kampfstabes einführen.
 		AI_Output		(self, hero, "AMZ_900_TEACHNOW_16_03"); //Pokud se ti podaří mě jako šampionku nahradit, uvedu tě do umění boje s holí.
 	}
@@ -1094,7 +1094,7 @@ func void AMZ_900_Thora_NEEDTOFORTRESS_NEAR ()
 //	AI_Output			(self, hero, "AMZ_900_NEEDTOFORTRESS_NEAR_16_02"); //Scheint sich ja mittlerweile herumgesprochen zu haben.
 	AI_Output			(self, hero, "AMZ_900_NEEDTOFORTRESS_NEAR_16_02"); //Vypadá to, že už se to stihlo rozkřiknout.
 //	AI_Output			(self, hero, "AMZ_900_NEEDTOFORTRESS_NEAR_16_03"); //Aber warum sollte ich dich zur Bergfestung bringen?
-	AI_Output			(self, hero, "AMZ_900_NEEDTOFORTRESS_NEAR_16_03"); //Ale proč bych tě měla brát do Skalní pevnosti?
+	AI_Output			(self, hero, "AMZ_900_NEEDTOFORTRESS_NEAR_16_03"); //Ale proč bych tě měla brát do Horské pevnosti?
 //	AI_Output			(hero, self, "AMZ_900_NEEDTOFORTRESS_NEAR_15_04"); //Es ist von grösster Wichtigkeit. Ich habe Informationen über die dämonische Bedrohung nach der die Feuermagier forschen.
 	AI_Output			(hero, self, "AMZ_900_NEEDTOFORTRESS_NEAR_15_04"); //Je to mimořádně důležité. Mám informace o démoní hrozbě, po které se ohniví mágové pídí.
 	AI_StandUp			(self);
@@ -1107,7 +1107,7 @@ func void AMZ_900_Thora_NEEDTOFORTRESS_NEAR ()
 //	AI_Output			(self, hero, "AMZ_900_NEEDTOFORTRESS_NEAR_16_07"); //Nun gut, ich werde dich an den Wachen vorbeibringen, aber ich kann dir nicht alle Türen öffnen. Du wirst allerhand Überzeugungsarbeit leisten müssen.
 	AI_Output			(self, hero, "AMZ_900_NEEDTOFORTRESS_NEAR_16_07"); //No dobře, dostanu tě přes stráže, ale všude ti otevřít nemohu. Budeš muset každopádně muset hodně přesvědčovat.
 //	B_LogEntry			(CH1_DemonThreat, "Ich konnte Thora dazu bringen, mich zur Bergfestung zu führen. Allerdings wird sie mich nur an den ersten Wachen vorbeibringen. Danach bin ich auf mich allein gestellt.");
-	B_LogEntry			(CH1_DemonThreat, "Dokázal jsem Thoru přesvědčit, aby mě vzala do Skalní pevnosti. Každopádně mě dostane jen přes první strážné. Potom se už musím spolehnout na sebe.");
+	B_LogEntry			(CH1_DemonThreat, "Dokázal jsem Thoru přesvědčit, aby mě vzala do Horské pevnosti. Každopádně mě dostane jen přes první strážné. Potom se už musím spolehnout na sebe.");
 	subChapter			= CH2_THORA_CONVINCED;
 };
 
@@ -1178,7 +1178,7 @@ func void AMZ_900_Thora_LETSGO_Info ()
 //	AI_Output			(hero, self, "AMZ_900_LETSGO_15_04"); //An der Arena! Klar!
 	AI_Output			(hero, self, "AMZ_900_LETSGO_15_04"); //U arény! Jasné!
 //	AI_Output			(self, hero, "AMZ_900_LETSGO_16_05"); //Dann folge mir, wenn du es schaffst an mir dranzubleiben.
-	AI_Output			(self, hero, "AMZ_900_LETSGO_16_05"); //Tak pojď za mnou, jestli teda dokážeš se mnou držet krok.
+	AI_Output			(self, hero, "AMZ_900_LETSGO_16_05"); //Tak pojď za mnou, jestli tedy dokážeš se mnou držet krok.
 //	B_LogEntry			(CH1_DemonThreat, "Sollte wir auf dem Weg in die Bergfestung getrennt werden, treffen wir uns an der Arena im Alten Lager wieder.");
 	B_LogEntry			(CH1_DemonThreat, "Kdybychom se na cestě do Skalní pevnosti rozdělili, potkáme se znovu u arény ve Starém táboře..");
 
@@ -1453,127 +1453,3 @@ func void AMZ_900_Thora_SQUARE_Info ()
 	B_LeavePC			(self, "ReportToGarwog");
 	B_ExchangeRoutine	(PAL_1003_Garwog, "ReportFromThora");
 };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

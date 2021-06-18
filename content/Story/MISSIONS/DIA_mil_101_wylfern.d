@@ -51,7 +51,7 @@ func void MIL_101_Wylfern_NEUTRAL_Info ()
 //	AI_Output			(self, hero, "MIL_101_NEUTRAL_08_03"); //Als angehender Milizsoldat hat man immer viel zu tun. Wenn man nicht gerade Wache hält, muss man trainieren.
 	AI_Output			(self, hero, "MIL_101_NEUTRAL_08_03"); //Jako budoucí voják domobrany toho máš vždy hodně na práci. Pokud zrovna nestojíš na stráži, musíš trénovat.
 //	AI_Output			(self, hero, "MIL_101_NEUTRAL_08_04"); //Wir kümmern uns um alles, was für die anderen zu gefährlich ist.
-	AI_Output			(self, hero, "MIL_101_NEUTRAL_08_04"); //Staráme se o všechno, co je pro ostaní moc nebezpečné.
+	AI_Output			(self, hero, "MIL_101_NEUTRAL_08_04"); //Staráme se o všechno, co je pro ostatní moc nebezpečné.
 //	AI_Output			(self, hero, "MIL_101_NEUTRAL_08_05"); //Ja, es ist ganz schön hart, aber ich bin stolz dabeisein zu dürfen!
 	AI_Output			(self, hero, "MIL_101_NEUTRAL_08_05"); //Ano, je to pěkně tvrdé, ale já jsem pyšný, že u toho mohu být!
 };
@@ -92,7 +92,7 @@ func void MIL_101_Wylfern_HI_Info ()
 //	AI_Output			(self, hero, "MIL_101_HI_08_04"); //Wir haben uns auf den Weg gemacht, aus Vorsicht sind wir Nachts gegangen.
 	AI_Output			(self, hero, "MIL_101_HI_08_04"); //Vydali jsme se na cestu a pro jistotu jsme nechodili v noci.
 //	AI_Output			(self, hero, "MIL_101_HI_08_05"); //Kurz vor dem Lager haben uns die Orks überfallen. Sie kamen wie aus dem Nichts,... wir hatten keine Chance.
-	AI_Output			(self, hero, "MIL_101_HI_08_05"); //Krátce před táborem nás přepadli skřeti. Vynořili se jako by odnikud,... něměli jsme šanci.
+	AI_Output			(self, hero, "MIL_101_HI_08_05"); //Krátce před táborem nás přepadli skřeti. Vynořili se jako by odnikud,... neměli jsme šanci.
 //	AI_Output			(self, hero, "MIL_101_HI_08_06"); //Nur Sylvester und ich konnten uns retten. Aber Pedro haben sie erwischt.
 	AI_Output			(self, hero, "MIL_101_HI_08_06"); //Jen já a Sylvester jsme se dokázali zachránit. Ale Pedra dostali.
 };
@@ -139,7 +139,7 @@ func void MIL_101_Wylfern_RUSH_Info ()
 //	Info_AddChoice		(MIL_101_Wylfern_RUSH, "Dann beschreib mir wenigstens den Weg", MIL_101_Wylfern_RUSH_WAY );
 	Info_AddChoice		(MIL_101_Wylfern_RUSH, "Tak mi aspoň popiš cestu.", MIL_101_Wylfern_RUSH_WAY );
 //	Info_AddChoice		(MIL_101_Wylfern_RUSH, "Du bist halt ein Feigling...",			MIL_101_Wylfern_RUSH_FEAR );
-	Info_AddChoice		(MIL_101_Wylfern_RUSH, "Holt jseš strašpytel...",			MIL_101_Wylfern_RUSH_FEAR );
+	Info_AddChoice		(MIL_101_Wylfern_RUSH, "Holt jsi strašpytel...",			MIL_101_Wylfern_RUSH_FEAR );
 //	Info_AddChoice		(MIL_101_Wylfern_RUSH, "Ich zahl dir dreissig Silberstücke",	MIL_101_Wylfern_RUSH_30 );
 	Info_AddChoice		(MIL_101_Wylfern_RUSH, "Zaplatím ti třicet stříbrných.",	MIL_101_Wylfern_RUSH_30 );
 //	Info_AddChoice		(MIL_101_Wylfern_RUSH, "Ich zahl dir zehn Silberstücke",		MIL_101_Wylfern_RUSH_10 );
@@ -170,7 +170,7 @@ func void MIL_101_Wylfern_RUSH_30 ()
 func void MIL_101_Wylfern_RUSH_FEAR ()
 {
 //	AI_Output			(hero, self, "MIL_101_RUSH_FEAR_15_01"); //Du bist halt ein Feigling...
-	AI_Output			(hero, self, "MIL_101_RUSH_FEAR_15_01"); //Holt jseš strašpytel...
+	AI_Output			(hero, self, "MIL_101_RUSH_FEAR_15_01"); //Holt jsi strašpytel...
 //	AI_Output			(self, hero, "MIL_101_RUSH_FEAR_08_02"); //Was, du nennst mich einen Feigling? Ich bin Rekrut der Miliz. Ich bin nicht feige!
 	AI_Output			(self, hero, "MIL_101_RUSH_FEAR_08_02"); //Co, ty mi říkáš strašpytel? Já jsem rekrut domobrany. Nejsem zbabělý!
 //	AI_Output			(hero, self, "MIL_101_RUSH_FEAR_15_03"); //Dann bring mich zum Ort des Überfalls!
@@ -338,7 +338,7 @@ func int MIL_101_Wylfern_SILVERGUIDE_Condition ()
 func void MIL_101_Wylfern_SILVERGUIDE_Info ()
 {
 //	AI_Output			(hero, self, "MIL_101_SILVERGUIDE_15_01"); //Lass uns zum Ort des Überfalls gehen. Ich habe das Silber.
-	AI_Output			(hero, self, "MIL_101_SILVERGUIDE_15_01"); //Pojďme na místo přepadení. Mám to stříro.
+	AI_Output			(hero, self, "MIL_101_SILVERGUIDE_15_01"); //Pojďme na místo přepadení. Mám to stříbro.
 	if	(Npc_HasItems (hero, ITMI_Silver) >= 30)
 	{
 //		AI_Output			(self, hero, "MIL_101_SILVERGUIDE_08_02"); //Alles klar, aber ich werde dich nur hinbringen, nichts weiter.

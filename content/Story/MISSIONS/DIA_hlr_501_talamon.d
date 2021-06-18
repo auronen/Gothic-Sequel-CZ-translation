@@ -475,7 +475,7 @@ func void HLR_501_Talamon_WHEREHEALREGS_Info ()
 	AI_Output			(self, hero, "HLR_501_WHEREHEALREGS_08_05"); //Taky má na skladě spoustu rostlinných reagentů, takže si nejspíš můžeš ušetřit ty namáhavé túry.
 
 //	B_LogEntry			(CH1_LearnAlchemy, "Die nötigen Reagenzien für den einfachen Heiltrank sind reiner Alkohol, Bergmoos und Orkblatt. All das kann ich beim Heiler Isgar im Händlerviertel erwerben.");
-	B_LogEntry			(CH1_LearnAlchemy, "Potřebnými reagenty na jednoduchý léčivý lektvar jsou čistý alkohol, horský mech a skřetí list. To vše můžu koupit od léčitele Isgara v obchodní čtvrti.");
+	B_LogEntry			(CH1_LearnAlchemy, "Potřebnými reagenty na jednoduchý léčivý lektvar jsou čistý alkohol, Horský mech a Skřetí list. To vše můžu koupit od léčitele Isgara v obchodní čtvrti.");
 
 	B_LearnMountainMoss	();
 	B_LearnOrcLeaf		();

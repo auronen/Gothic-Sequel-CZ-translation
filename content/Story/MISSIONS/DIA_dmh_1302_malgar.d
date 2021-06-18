@@ -411,7 +411,7 @@ func void	DMH_1302_Malgar_CHALLENGE_Info()
 //		AI_Output		(self, hero, "DMH_1302_CHALLENGE_11_13"); //Gut!
 		AI_Output		(self, hero, "DMH_1302_CHALLENGE_11_13"); //Dobře!
 //		AI_Output		(self, hero, "DMH_1302_CHALLENGE_11_14"); //Geh zum Arenameister!
-		AI_Output		(self, hero, "DMH_1302_CHALLENGE_11_14"); //Bež za mistrem arény!
+		AI_Output		(self, hero, "DMH_1302_CHALLENGE_11_14"); //Běž za mistrem arény!
 
 		Malgar_Challenged = TRUE;
 	};

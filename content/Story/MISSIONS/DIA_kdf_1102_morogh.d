@@ -195,7 +195,7 @@ FUNC VOID KDF_1102_Morogh_MISSION_COOl()
 //	AI_Output			(self, hero, "KDF_1102_MISSION_COOL_14_02"); //So, dann weißt du ja wie aufwendig weiterführende Forschungen sind.
 	AI_Output			(self, hero, "KDF_1102_MISSION_COOL_14_02"); //Pak víš, jak pracný je další výzkum.
 //	AI_Output			(self, hero, "KDF_1102_MISSION_COOL_14_03"); //Wie du eben richtig bemerkt hast, versuche ich die Konzentration von magsichen Tränken zu erhöhen. 
-	AI_Output			(self, hero, "KDF_1102_MISSION_COOL_14_03"); //Jak sis správně všimnul, snažím se zvýšit koncentraci magických lektvarů
+	AI_Output			(self, hero, "KDF_1102_MISSION_COOL_14_03"); //Jak sis správně všiml, snažím se zvýšit koncentraci magických lektvarů
 //	AI_Output			(self, hero, "KDF_1102_MISSION_COOL_14_04"); //Jedoch fehlen mir noch einige Zutaten. Denn bedauerlicherweise ist mein Lieferant längst überfällig.
 	AI_Output			(self, hero, "KDF_1102_MISSION_COOL_14_04"); //Ale chybí mi nějaké přísady. Bohužel má můj dodavatel už velké zpoždění.
 //	AI_Output			(self, hero, "KDF_1102_MISSION_COOL_14_05"); //Wenn du mir die benötigten Zutaten bringst, wäre ich einen großen Schritt weiter.
@@ -214,7 +214,7 @@ FUNC VOID KDF_1102_Morogh_MISSION_PARTNER()
 //	AI_Output			(self, hero, "KDF_1102_MISSION_PARTNER_14_04"); //Und nun, da ich kurz vor dem Ziel bin, fehlen mir nur noch ein paar Zutaten. Aber mein Lieferant ist längst überfällig.
 	AI_Output			(self, hero, "KDF_1102_MISSION_PARTNER_14_04"); //A teď, když už jsem tak blízko cíle, mi chybí ještě pár přísad. Ale můj dodavatel už má velké zpoždění. 
 //	AI_Output			(self, hero, "KDF_1102_MISSION_PARTNER_14_05"); //Also würde ich vorschlagen, so von 'Kollege zu Kollege' das du mir stattdessen dei Zutaten besorgst. 
-	AI_Output			(self, hero, "KDF_1102_MISSION_PARTNER_14_05"); //Navrhnul bych tedy, jako 'kolega kolegovi', abys mi ty přísady obstaral místo něj. 
+	AI_Output			(self, hero, "KDF_1102_MISSION_PARTNER_14_05"); //Navrhl bych tedy, jako 'kolega kolegovi', abys mi ty přísady obstaral místo něj. 
 	
 	Info_ClearChoices (KDF_1102_Morogh_MISSION);
 };

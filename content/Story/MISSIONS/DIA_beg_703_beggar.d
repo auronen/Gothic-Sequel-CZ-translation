@@ -99,7 +99,7 @@ func void BEG_703_BEGGAR_BEG_SORRY ()
 func void BEG_703_BEGGAR_BEG_ONE ()
 {
 //	AI_Output			(hero, self, "BEG_703_BEG_ONE_15_01"); //Nimm erstmal dieses Silberstück.
-	AI_Output			(hero, self, "BEG_703_BEG_ONE_15_01"); //Vem si zatím tenhle stříbrňák.
+	AI_Output			(hero, self, "BEG_703_BEG_ONE_15_01"); //Vezmi si zatím tenhle stříbrňák.
 	B_GiveInvItems		(hero,self,ITMI_Silver,1);
 //	AI_Output			(self, hero, "BEG_703_BEG_ONE_00_02"); //Wer ein Silber nicht ehrt..jaja ich kenne die Sprüche. // Ale já to rčení neznám, tak nevím, jestli by to nešlo přeložit líp.
 	AI_Output			(self, hero, "BEG_703_BEG_ONE_00_02"); //Kdo nectí stříbro...ano, znám to rčení.

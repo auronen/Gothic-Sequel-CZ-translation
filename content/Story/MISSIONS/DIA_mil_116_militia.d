@@ -56,7 +56,7 @@ func void MIL_116_Militia_WAIT_TROUBLE ()
 //	AI_Output			(hero, self, "MIL_116_WAIT_TROUBLE_15_04"); //Und wo finde ich nun ...euren Boss?
 	AI_Output			(hero, self, "MIL_116_WAIT_TROUBLE_15_04"); //A kde najdu ...vašeho šéfa?
 //	AI_Output			(self, hero, "MIL_116_WAIT_TROUBLE_06_05"); //Er hält Rat im alten Erzbaronhaus innerhalb der Burg. Und nun zieh Leine!
-	AI_Output			(self, hero, "MIL_116_WAIT_TROUBLE_06_05"); //Má poradu ve starém rudobaronském domě uvnitř hradu. A teď vypadni.
+	AI_Output			(self, hero, "MIL_116_WAIT_TROUBLE_06_05"); //Má poradu ve starém domě rudobaronů uvnitř hradu. A teď vypadni.
 
 	subChapter			= CH1_ARRIVED_AT_OC;
 

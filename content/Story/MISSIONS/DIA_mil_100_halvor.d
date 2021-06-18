@@ -129,7 +129,7 @@ func void	MIL_100_Halvor_TRADE_MEAL (var int amount, var int itemInstance, var i
 		B_GiveInvItems	(self, hero, itemInstance,	amount);
 
 //		AI_Output		(self, hero, "MIL_100_TRADE_MEAL_00_01"); //Silber gegen Ware, so gefällt mir das!
-		AI_Output		(self, hero, "MIL_100_TRADE_MEAL_00_01"); //Za zaboží stříbro, tak se mi to líbí!
+		AI_Output		(self, hero, "MIL_100_TRADE_MEAL_00_01"); //Za zboží stříbro, tak se mi to líbí!
 
 		Halvor_BoughtMeatStew = TRUE;
 	}
@@ -224,7 +224,7 @@ func int MIL_100_Halvor_FEWCHOICES_Condition ()
 func void MIL_100_Halvor_FEWCHOICES_Info ()
 {
 //	AI_Output			(hero, self, "MIL_100_FEWCHOICES_15_01"); //Deine Auswahl ist ja nicht gerade berauschend!
-	AI_Output			(hero, self, "MIL_100_FEWCHOICES_15_01"); //Tvoje nabídka teda není dvakrát lákavá!
+	AI_Output			(hero, self, "MIL_100_FEWCHOICES_15_01"); //Tvoje nabídka tedy není dvakrát lákavá!
 //	AI_Output			(self, hero, "MIL_100_FEWCHOICES_00_02"); //Wenn es dir nicht passt, kannst du ja den Schweinefrass von diesem Versager Snaf essen!
 	AI_Output			(self, hero, "MIL_100_FEWCHOICES_00_02"); //Pokud ti to nesedí, můžeš si jíst šlichtu od toho nemehla Snafa!
 };
@@ -329,7 +329,7 @@ func void MIL_100_Halvor_WANTRECIPE_Info ()
 //	AI_Output			(hero, self, "MIL_100_WANTRECIPE_15_01"); //Verkaufst du mir das Rezept?
 	AI_Output			(hero, self, "MIL_100_WANTRECIPE_15_01"); //Prodáš mi ten recept?
 //	AI_Output			(self, hero, "MIL_100_WANTRECIPE_00_02"); //HA... HA... du musst mich ja für völlig verblödet halten.
-	AI_Output			(self, hero, "MIL_100_WANTRECIPE_00_02"); //HA... HA... ty mě asi máš za naprostýho blázna.
+	AI_Output			(self, hero, "MIL_100_WANTRECIPE_00_02"); //HA... HA... ty mě asi máš za naprostého blázna.
 //	AI_Output			(self, hero, "MIL_100_WANTRECIPE_00_03"); //Das Rezept bleibt schön da wo es ist. In meiner gut verschlossenen Truhe.
 	AI_Output			(self, hero, "MIL_100_WANTRECIPE_00_03"); //Recept zůstane hezky tam, kde je. V mojí dobře uzamčené truhle.
 //	AI_Output			(hero, self, "MIL_100_WANTRECIPE_15_04"); //Verstehe!

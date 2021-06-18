@@ -26,7 +26,7 @@ func int MIL_141_Militia_TALAMONSRECIPEHINT_Condition ()
 func void MIL_141_Militia_TALAMONSRECIPEHINT_Info ()
 {
 //	AI_Output			(self, hero, "MIL_141_TALAMONSRECIPEHINT_00_01"); //Du siehst so aus, als ob Du was suchst
-	AI_Output			(self, hero, "MIL_141_TALAMONSRECIPEHINT_00_01"); //Vypadáš, jakobys něco hledal
+	AI_Output			(self, hero, "MIL_141_TALAMONSRECIPEHINT_00_01"); //Vypadáš, jako bys něco hledal
 //	AI_Output			(hero, self, "MIL_141_TALAMONSRECIPEHINT_15_02"); //Und ...
 	AI_Output			(hero, self, "MIL_141_TALAMONSRECIPEHINT_15_02"); //A ...
 	

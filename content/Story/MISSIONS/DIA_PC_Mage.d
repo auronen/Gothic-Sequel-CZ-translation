@@ -49,9 +49,9 @@ func void PC_Mage_WELCOME_Info ()
 //	AI_Output			(hero, self, "PC_Mage_WELCOME_15_02"); //Da bist du nicht der einzige. 
 	AI_Output			(hero, self, "PC_Mage_WELCOME_15_02"); //Tak to nejsi první. 
 //	AI_Output			(self, hero, "PC_Mage_WELCOME_02_03"); //Wie ist es dir seit unserem letzten Treffen ergangen? 
-	AI_Output			(self, hero, "PC_Mage_WELCOME_02_03"); //Jak se ti daří od doby, co jsme se naposedly setkali?
+	AI_Output			(self, hero, "PC_Mage_WELCOME_02_03"); //Jak se ti daří od doby, co jsme se naposledy setkali?
 //	AI_Output			(hero, self, "PC_Mage_WELCOME_15_04"); //Naja, ich hab den Schläfer verbannt, lag ein halbes Jahr unter Felstrümmern begraben, 
-	AI_Output			(hero, self, "PC_Mage_WELCOME_15_04"); //Nojo... vyhnal jsem Spáče a ležel sjem půl roku pod kamením,
+	AI_Output			(hero, self, "PC_Mage_WELCOME_15_04"); //Nojo... vyhnal jsem Spáče a ležel jsem půl roku pod kamením,
 // 	AI_Output			(hero, self, "PC_Mage_WELCOME_15_05"); //und als ich schliesslich gerettet werde, erfahre ich, das wir von Orks umzingelt sind und Dämonen unterwegs sind. 
  	AI_Output			(hero, self, "PC_Mage_WELCOME_15_05"); //a když jsme byl konečně zachráněn, tjistil jsem, že jsem obleženi skřety a že démoni jsou na cestě.
 //	AI_Output			(self, hero, "PC_Mage_WELCOME_02_06"); //Du steckst mal wieder mittendrin. 
@@ -91,7 +91,7 @@ func void PC_Mage_DEMONS_Info ()
 //	AI_Output			(hero, self, "PC_Mage_DEMONS_15_01"); //Was weißt du über die Dämonen?
 	AI_Output			(hero, self, "PC_Mage_DEMONS_15_01"); //Co víš o démonech?
 //	AI_Output			(self, hero, "PC_Mage_DEMONS_02_02"); //Nun, sie können sich an jedem Ort im Tal manifestieren. 
-	AI_Output			(self, hero, "PC_Mage_DEMONS_02_02"); //No, mohou se v údolí zjevit na jekémkoliv místě.
+	AI_Output			(self, hero, "PC_Mage_DEMONS_02_02"); //No, mohou se v údolí zjevit na jakémkoliv místě.
 //	AI_Output			(hero, self, "PC_Mage_DEMONS_15_03"); //Was noch?
 	AI_Output			(hero, self, "PC_Mage_DEMONS_15_03"); //Víš ještě něco jiného?
 //	AI_Output			(self, hero, "PC_Mage_DEMONS_02_04"); //Hmmm... sie sind weitaus stärker als ihre natürlichen Abbilder.  
@@ -242,7 +242,7 @@ FUNC VOID PC_Mage_TODO_Alchemy ()
 FUNC VOID PC_Mage_TODO_THAUMATURGY ()
 {
 //	AI_Output			(hero, self, "PC_Mage_TODO_THAUMATURGY_15_01"); //Ich kann Runen herstellen. 
-	AI_Output			(hero, self, "PC_Mage_TODO_THAUMATURGY_15_01"); //Umím vyrábět megické runy.
+	AI_Output			(hero, self, "PC_Mage_TODO_THAUMATURGY_15_01"); //Umím vyrábět magické runy.
 //	AI_Output			(self, hero, "PC_Mage_TODO_THAUMATURGY_02_02"); //Ausgezeichnet. Damit verdienst du ihren Respekt.  
 	AI_Output			(self, hero, "PC_Mage_TODO_THAUMATURGY_02_02"); //Vynikající! Tím si určitě získáš jejich respekt.
 	

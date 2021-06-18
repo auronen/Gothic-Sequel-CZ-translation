@@ -123,7 +123,7 @@ func void Mil_119_Cassian_WHYSTR_Info ()
 //	AI_Output			(hero, self, "Mil_119_WHYSTR_15_01"); //Wofür benötige ich Stärke?
 	AI_Output			(hero, self, "Mil_119_WHYSTR_15_01"); //K čemu potřebuji sílu?
 //	AI_Output			(self, hero, "Mil_119_WHYSTR_08_02"); //Je stärker du bist, desto tiefere Wunden verursachst du mit Nahkampfwaffen.
-	AI_Output			(self, hero, "Mil_119_WHYSTR_08_02"); //Čím silnejší budeš, tím hlubší rány způsobíš při souboji na blízko.
+	AI_Output			(self, hero, "Mil_119_WHYSTR_08_02"); //Čím silnější budeš, tím hlubší rány způsobíš při souboji na blízko.
 //	AI_Output			(self, hero, "Mil_119_WHYSTR_08_03"); //Wenn dir erst einmal ein gut gerüsteter Ork gegenübersteht, dann wirst du ihn nur mit grosser Stärke verwunden können.
 	AI_Output			(self, hero, "Mil_119_WHYSTR_08_03"); //Až budeš čelit dobře obrněnému skřetovi, zraníš ho jenom s velkou silou.	
 //	AI_Output			(self, hero, "Mil_119_WHYSTR_08_04"); //Dazu kommt, dass vor allem die grösseren Nahkampfwaffen so schwer sind, dass du sie nur mit hoher Stärke schwingen kannst.
@@ -423,7 +423,7 @@ instance  Mil_119_Cassian_AGONSSILVER (C_INFO)
 	important		= 0;
 	permanent		= 0;
 //	description		= "Agon hat sein Silber wieder";
-	description		= "Agon má zase svoje stříbror";
+	description		= "Agon má zase svoje stříbro";
 };
 
 FUNC int Mil_119_Cassian_AGONSSILVER_Condition()

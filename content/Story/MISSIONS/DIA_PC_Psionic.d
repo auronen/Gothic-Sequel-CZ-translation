@@ -1059,7 +1059,7 @@ func void PC_Psionic_TOGETHER_Info ()
 //	AI_Output			(hero, self, "PC_Psionic_TOGETHER_15_01"); //Lass uns die Herstellung der weiteren Runen gemeinsam angehen.
 	AI_Output			(hero, self, "PC_Psionic_TOGETHER_15_01"); //Co kdybychom pokračovali ve výrobě run společně?
 //	AI_Output			(self, hero, "PC_Psionic_TOGETHER_23_02"); //Gut, zusammen werden wir schneller und besser vorankommen.
-	AI_Output			(self, hero, "PC_Psionic_TOGETHER_23_02"); //Dobře. Společně můžeme pokračovat ryhleji a lépe.
+	AI_Output			(self, hero, "PC_Psionic_TOGETHER_23_02"); //Dobře. Společně můžeme pokračovat rychleji a lépe.
 };
 
 ///////////////////////////////////////////////////////////////////////
@@ -1475,7 +1475,7 @@ func void PC_Psionic_SEARCHRECIPE_Info ()
 //	AI_Output			(hero, self, "PC_Psionic_SEARCHRECIPE_15_01"); //Ich suche nach einer Rezeptur für ein Mittel gegen Wahnsinn.
 	AI_Output			(hero, self, "PC_Psionic_SEARCHRECIPE_15_01"); //Hledám recept na prostředek proti šílenství.
 //	AI_Output			(hero, self, "PC_Psionic_SEARCHRECIPE_15_02"); //Die Feuermagier sollen eine solche Rezeptur erforscht haben, aber ich kann hier im Magierhaus nichts finden!
-	AI_Output			(hero, self, "PC_Psionic_SEARCHRECIPE_15_02"); //Mágové Ohně museli nějaký takový recpt mít, ale nemůžu tady v Domě mágů nic najít!
+	AI_Output			(hero, self, "PC_Psionic_SEARCHRECIPE_15_02"); //Mágové Ohně museli nějaký takový recept mít, ale nemůžu tady v Domě mágů nic najít!
 //	AI_Output			(self, hero, "PC_Psionic_SEARCHRECIPE_23_03"); //Hmmm... ich kann mich dunkel an eine solche Rezeptur erinnern.
 	AI_Output			(self, hero, "PC_Psionic_SEARCHRECIPE_23_03"); //Hmmm... matně si na takový recept vzpomínám.
 //	AI_Output			(self, hero, "PC_Psionic_SEARCHRECIPE_23_04"); //Aber ich habe sie nicht mehr.

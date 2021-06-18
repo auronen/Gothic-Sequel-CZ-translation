@@ -111,7 +111,7 @@ func void PC_Thief_FLEE_Info ()
 //	AI_Output			(hero, self, "PC_Thief_FLEE_15_04"); //...kann er den Krieg gegen die Orcs nicht gewinnen.
 	AI_Output			(hero, self, "PC_Thief_FLEE_15_04"); //...nemůže vyhrát válku proti skřetům.
 //	AI_Output			(self, hero, "PC_Thief_FLEE_11_05"); //Du sagst es. Die Orks ziehen seitdem plündernd durchs Königreich.
-	AI_Output			(self, hero, "PC_Thief_FLEE_11_05"); //Jak říkáš. Skřeti od pádu táhnou královstvím a pludnrují jej.
+	AI_Output			(self, hero, "PC_Thief_FLEE_11_05"); //Jak říkáš. Skřeti od pádu táhnou královstvím a plundrují jej.
 //	AI_Output			(self, hero, "PC_Thief_FLEE_11_06"); //Die Minenkolonie haben sie komplett umstellt.
 	AI_Output			(self, hero, "PC_Thief_FLEE_11_06"); //Trestaneckou kolonii dočista obklopili.
 };

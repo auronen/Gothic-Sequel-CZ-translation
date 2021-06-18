@@ -554,7 +554,7 @@ func void	MIL_121_Brutus_VICTORIES_Info()
 //	AI_Output			(hero, self, "MIL_121_VICTORIES_15_04"); //(zu sich selbst) Was ein Arsch!
 	AI_Output			(hero, self, "MIL_121_VICTORIES_15_04"); //(sám k sobě) To je sráč!
 //	AI_Output			(self, hero, "MIL_121_VICTORIES_06_05"); //Das hab ich gehört, Kleiner!
-	AI_Output			(self, hero, "MIL_121_VICTORIES_06_05"); //Já to slyšel, maličký!
+	AI_Output			(self, hero, "MIL_121_VICTORIES_06_05"); //Já to slyšel, prcku!
 
 	AI_StopProcessInfos	(self);
 };

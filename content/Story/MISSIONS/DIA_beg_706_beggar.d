@@ -97,7 +97,7 @@ func void BEG_706_BEGGAR_BEG_SORRY ()
 func void BEG_706_BEGGAR_BEG_ONE ()
 {
 //	AI_Output			(hero, self, "BEG_706_BEG_ONE_15_01"); //Hier, nimm dieses Silberstück.
-	AI_Output			(hero, self, "BEG_706_BEG_ONE_15_01"); //Na, vem si tento stříbrňák.
+	AI_Output			(hero, self, "BEG_706_BEG_ONE_15_01"); //Na, vezmi si tento stříbrňák.
 	B_GiveInvItems		(hero, self, ITMI_Silver,1);
 //	AI_Output			(self, hero, "BEG_706_BEG_ONE_00_02"); //Danke. Vielleicht bekomme ich dafür sogar etwas zu Essen...
 	AI_Output			(self, hero, "BEG_706_BEG_ONE_00_02"); //Díky. Snad za to dostanu něco k jídlu...
