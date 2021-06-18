@@ -418,9 +418,12 @@ CONST INT LOG_NOTE										= 1						;
 //
 //	TRADE MANAGER
 //
-const string STR_INFO_TRADE_ACCEPT						= "Annehmen"			;
-const string STR_INFO_TRADE_RESET						= "Ablehnen"			;
-const string STR_INFO_TRADE_EXIT						= "Zurück"				;
+//const string STR_INFO_TRADE_ACCEPT						= "Annehmen"			;
+const string STR_INFO_TRADE_ACCEPT						= "Přijmout"			;
+//const string STR_INFO_TRADE_RESET						= "Ablehnen"			;
+const string STR_INFO_TRADE_RESET						= "Zamítnout"			;
+//const string STR_INFO_TRADE_EXIT						= "Zurück"				;
+const string STR_INFO_TRADE_EXIT						= "Zpět"				;
 
 //
 //	OTHER CONSTANTS
