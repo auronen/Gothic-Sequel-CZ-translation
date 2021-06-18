@@ -286,7 +286,7 @@ func void WRK_225_Agon_AGAINSILVER_SILVER ()
 //	AI_Output			(self, hero, "WRK_225_AGAINSILVER_SILVER_00_02"); //Das wird ja immer besser! Jetzt willst du mir drohen? Das ist ja wohl das letzte!
 	AI_Output			(self, hero, "WRK_225_AGAINSILVER_SILVER_00_02"); //Však to taky bude lepší! Teď mi chceš ještě vyhrožovat? To už by byl vrchol!
 //	AI_Output			(self, hero, "WRK_225_AGAINSILVER_SILVER_00_03"); //Ich glaube ich rede mal ein paar Takte mit Cassian!
-	AI_Output			(self, hero, "WRK_225_AGAINSILVER_SILVER_00_03"); //Řekl bych, že tohole si budu muset vyříkat s Cassianem!
+	AI_Output			(self, hero, "WRK_225_AGAINSILVER_SILVER_00_03"); //Řekl bych, že tohle si budu muset vyříkat s Cassianem!
 
 	Info_ClearChoices (WRK_225_Agon_AGAINSILVER);
 //	Info_AddChoice	(WRK_225_Agon_AGAINSILVER, "Schon gut. Reg dich nicht auf!", WRK_225_Agon_AGAINSILVER_CALMDOWN );
@@ -493,7 +493,7 @@ func void WRK_225_Agon_HAVERECIPE_GIVE ()
 		Agon_BoughtFormula = TRUE;
 
 //		B_LogEntry			(CH1_LearnAlchemy, "Ich konnte die Rezeptur dem Händler Agon für sehr viel Silber abkaufen. Ich hoffe sie ist es wert.");
-		B_LogEntry			(CH1_LearnAlchemy, "Můžu si ten recpet koupit u obchodníka Agona za opravdu hodně stříbra. Doufám, že za to bude stát.");
+		B_LogEntry			(CH1_LearnAlchemy, "Můžu si ten recept koupit u obchodníka Agona za opravdu hodně stříbra. Doufám, že za to bude stát.");
 
 		AI_StopProcessInfos(self);
 	};

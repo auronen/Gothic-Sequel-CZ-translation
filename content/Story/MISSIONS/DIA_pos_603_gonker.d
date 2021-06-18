@@ -119,7 +119,7 @@ func void Pos_603_Gonker_CRAZY_Info ()
 	if Gonker_Crazy == 4 
 	{
 //		AI_Output			(self, hero, "Pos_603_CRAZY_00_09"); //Sie machen schreckliche Dinge mit dir. Sie qäulen dich. 
-		AI_Output			(self, hero, "Pos_603_CRAZY_00_09"); //Dělajá vám hrozné věci. Trápí vás.
+		AI_Output			(self, hero, "Pos_603_CRAZY_00_09"); //Dělají vám hrozné věci. Trápí vás.
 		Gonker_Crazy = 0; 
 		AI_PlayAni (self,"T_IGETYOU");
 		AI_StopProcessInfos	( self );
@@ -145,7 +145,7 @@ func void Pos_603_Gonker_CRAZY_Info ()
 	if Gonker_Crazy == 4 
 	{
 //		AI_Output			(self, hero, "Pos_603_CRAZY_00_12"); //Es sind viele. sie sind überall und sie beobachten alles.
-		AI_Output			(self, hero, "Pos_603_CRAZY_00_12"); //Je jeich mnoho, jsou všude! A všechno sledují.
+		AI_Output			(self, hero, "Pos_603_CRAZY_00_12"); //Je jejich mnoho, jsou všude! A všechno sledují.
 		Gonker_Crazy = 0; 
 		AI_PlayAni (self,"T_NO");
 		AI_StopProcessInfos	( self );

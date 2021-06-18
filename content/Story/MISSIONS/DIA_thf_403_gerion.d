@@ -49,11 +49,11 @@ func void THF_403_Gerion_23_Info ()
 //	AI_Output			(hero, self, "THF_403_23_15_01"); //Was machst du hier?
 	AI_Output			(hero, self, "THF_403_23_15_01"); //Co tady děláš?
 //	AI_Output			(self, hero, "THF_403_23_11_02"); //Ich bin Gerion aus Khorinis. Vor einigen Wochen habe ich die Stadt verlassen.
-	AI_Output			(self, hero, "THF_403_23_11_02"); //Já jsem Gerion z Khorinisu. Před týdenm jsem město opustil.
+	AI_Output			(self, hero, "THF_403_23_11_02"); //Já jsem Gerion z Khorinisu. Před týdenem jsem město opustil.
 //	AI_Output			(self, hero, "THF_403_23_11_03"); //Was eine gute Entscheidung war, denn kurz darauf kamen die Orks.
-	AI_Output			(self, hero, "THF_403_23_11_03"); //A bylo to dobré rozhdnutí, krátce na to přišli skřeti.
+	AI_Output			(self, hero, "THF_403_23_11_03"); //A bylo to dobré rozhodnutí, krátce na to přišli skřeti.
 //	AI_Output			(self, hero, "THF_403_23_11_04"); //Jetzt bin ich hier. Aber ich weiß nicht, ob das auch ne gute Entscheidung war, denn hier haben die Orks alles abgeriegelt.
-	AI_Output			(self, hero, "THF_403_23_11_04"); //A teď jsem tady. Ale nevím, jestli to bylo dobřé rozhodnutí, skřeti to tu celé obklíčili.
+	AI_Output			(self, hero, "THF_403_23_11_04"); //A teď jsem tady. Ale nevím, jestli to bylo dobré rozhodnutí, skřeti to tu celé obklíčili.
 };
 
  ///////////////////////////////////////////////////////////////////////
@@ -142,7 +142,7 @@ instance THF_403_Gerion_TELLDIEGO2		(C_INFO)
 	permanent	 = 	FALSE;
 
 //	description	 = 	"Ich könnte Diego von deinen Raubzügen erzählen!";
-	description	 = 	"Mohl bych Diegovi povyprávět o tvých loupžích!";
+	description	 = 	"Mohl bych Diegovi povyprávět o tvých loupežích!";
 };
 
 func int THF_403_Gerion_TELLDIEGO2_Condition ()
@@ -158,7 +158,7 @@ func int THF_403_Gerion_TELLDIEGO2_Condition ()
 func void THF_403_Gerion_TELLDIEGO2_Info ()
 {
 //	AI_Output			(hero, self, "THF_403_Gerion_TELLDIEGO2_15_01"); //Ich könnte Diego von deinen kleinen Raubzügen erzählen!
-	AI_Output			(hero, self, "THF_403_Gerion_TELLDIEGO2_15_01"); //Mohl bych Diegovi povyprávět o tvých loupžích!
+	AI_Output			(hero, self, "THF_403_Gerion_TELLDIEGO2_15_01"); //Mohl bych Diegovi povyprávět o tvých loupežích!
 //	AI_Output			(self, hero, "THF_403_Gerion_TELLDIEGO2_11_02"); //Ich schlag dir ein Geschäft vor!
 	AI_Output			(self, hero, "THF_403_Gerion_TELLDIEGO2_11_02"); //Navrhuji ti dohodu!
 //	AI_Output			(self, hero, "THF_403_Gerion_TELLDIEGO2_11_03"); //Du behältst das für dich und dafür zeige ich dir die Talente der Diebe.
@@ -263,7 +263,7 @@ func void THF_403_Gerion_LEARNSNEAK_Info ()
 		Log_CreateTopic (CH1_TrainSneak,LOG_MISSION);
 		Log_SetTopicStatus  (CH1_TrainSneak,LOG_RUNNING);
 //		B_LogEntry (CH1_TrainSneak,"Gerion will einen Schlüssel aus dem Obergeschoß des Erzbaronhauses haben. Ich muß mich an Osbert vorbeischleichen, der den Raum bewacht.");
-		B_LogEntry (CH1_TrainSneak,"Gerion chce klíč z ložnice z druhého patra budovy Rudobaronů. Musím se proplížit kolem Osberta, který před dvěřmi stojí stráž.");
+		B_LogEntry (CH1_TrainSneak,"Gerion chce klíč z ložnice z druhého patra budovy Rudobaronů. Musím se proplížit kolem Osberta, který před dveřmi stojí stráž.");
 
 		THF_403_Gerion_LEARNSNEAK.permanent = FALSE;
 		LearnSneak = LOG_RUNNING;
@@ -499,7 +499,7 @@ func void THF_403_Gerion_PICKPOCKET_1_Info ()
 //		AI_Output			(self, hero, "THF_403_PICKPOCKET_1_11_02"); //Die hohe Kunst der Diebe! Es ist viel riskanter einen Menschen zu bestehlen, als eine Truhe zu knacken.
 		AI_Output			(self, hero, "THF_403_PICKPOCKET_1_11_02"); //To nejvyšší zlodějské umění! Je mnohem riskantnější okrást člověka, než mu vykrást truhlu.
 //		AI_Output			(self, hero, "THF_403_PICKPOCKET_1_11_03"); //Du musst dich anschleichen, damit dein Opfer dich nicht bemerkt.
-		AI_Output			(self, hero, "THF_403_PICKPOCKET_1_11_03"); //Musíš si dát pozor, aby tě tvá obět nezpozorovala.
+		AI_Output			(self, hero, "THF_403_PICKPOCKET_1_11_03"); //Musíš si dát pozor, aby tě tvá oběť nezpozorovala.
 //		AI_Output			(self, hero, "THF_403_PICKPOCKET_1_11_04"); //Und paß auf, daß dich niemand beobachtet! Such dir jemanden aus, der alleine ist oder schläft.
 		AI_Output			(self, hero, "THF_403_PICKPOCKET_1_11_04"); //A také si dej pozor, aby tě nikdo nesledoval! Vyber si někoho, kdo je samotě nebo spí.
 
@@ -512,7 +512,7 @@ func void THF_403_Gerion_PICKPOCKET_1_Info ()
 //			AI_Output			(self, hero, "THF_403_PICKPOCKET_1_11_05"); //jetzt kannst du ja versuchen, Osbert den Schlüssel aus der Tasche zu nehmen.
 			AI_Output			(self, hero, "THF_403_PICKPOCKET_1_11_05"); //Nyní si to můžeš vyzkoušet. Vytáhni Osbertovi z kapsy ten klíč!
 //			AI_Output			(self, hero, "THF_403_PICKPOCKET_1_11_06"); //Es wäre schlau es bei dem Schlüssel zu belassen. Je mehr du ihm wegnimmst, desto größer ist die Wahrscheinlichkeit, daß er dich erwischt!
-			AI_Output			(self, hero, "THF_403_PICKPOCKET_1_11_06"); //Bude rozumné vzít jen ten klíč. Čím věcí vezmeš, tím větší šance, že tě tvá obět přistihne!
+			AI_Output			(self, hero, "THF_403_PICKPOCKET_1_11_06"); //Bude rozumné vzít jen ten klíč. Čím věcí vezmeš, tím větší šance, že tě tvá oběť přistihne!
 
 //			B_LogEntry (CH1_TrainSneak,"Gerion hat mir das Talent des Taschendiebstahls gezeigt. Jetzt kann ich Osbert den Schlüssel unbemerkt abnehmen");
 			B_LogEntry (CH1_TrainSneak,"Gerion mi ukázal jak vybírat kapsy. Teď mohu Osbertovi nepozorovaně sebrat ten klíč.");
@@ -814,7 +814,7 @@ func void THF_403_Gerion_GOTHERB_Info ()
 //	AI_Output			(hero, self, "THF_403_GOTHERB_15_01"); //Ich habe das Sumpfkraut!
 	AI_Output			(hero, self, "THF_403_GOTHERB_15_01"); //Mám trávu z bažin!
 //	AI_Output			(self, hero, "THF_403_GOTHERB_11_02"); //Gut gemacht! Bring es zu Isgar, dem Heiler.
-	AI_Output			(self, hero, "THF_403_GOTHERB_11_02"); //Dobrá práce! Dones ji Isgarovi, tomu lečiteli.
+	AI_Output			(self, hero, "THF_403_GOTHERB_11_02"); //Dobrá práce! Dones ji Isgarovi, tomu léčiteli.
 //	AI_Output			(self, hero, "THF_403_GOTHERB_11_03"); //Sag ihm du willst den Wein abholen. Diesen Wein bringst du mir. Verstanden?
 	AI_Output			(self, hero, "THF_403_GOTHERB_11_03"); //Řekni mu, že si chceš vyzvednout víno. To víno mi potom přines, jasný?
 //	AI_Output			(hero, self, "THF_403_GOTHERB_15_04"); //Klar. Was ist das besondere an dem Wein?

@@ -161,7 +161,7 @@ func void	Info_Odo_KEY_Info()
 	AI_Output			(self, hero,"Info_Odo_KEY_00_03"); //Bartok ho už nebude potřebovat.
 
 //	B_LogEntry			(CH1_Bartok,	"Der Pfleger Odo gab mir den Schlüssel zu Bartok's Kiste. Einfach so!!! Es geschehen noch Zeichen und Wunder.");
-	B_LogEntry			(CH1_Bartok,	"Odo, ošetřeovatel, mi dal klíč k Bartokově truhlici. Jen tak!!! Stále existují zátraky a znamení.");
+	B_LogEntry			(CH1_Bartok,	"Odo, ošetřovatel, mi dal klíč k Bartokově truhlici. Jen tak!!! Stále existují zázraky a znamení.");
 	Log_SetTopicStatus	(CH1_Bartok,	LOG_SUCCESS);
 
 	AI_StopProcessInfos	(self);

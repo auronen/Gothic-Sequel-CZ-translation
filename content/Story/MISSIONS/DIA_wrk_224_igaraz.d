@@ -79,7 +79,7 @@ func void Wrk_224_Igaraz_VISITE_Info ()
 //	AI_Output			(hero, self, "Wrk_224_VISITE_15_01"); //Dann zeig mir mal das Lager.
 	AI_Output			(hero, self, "Wrk_224_VISITE_15_01"); //Tak mi ukaž tábor.
 //	AI_Output			(self, hero, "Wrk_224_VISITE_02_02"); //Das kostet dich allerdings 'ne Kleinigkeit... 20 Silberstücke.
-	AI_Output			(self, hero, "Wrk_224_VISITE_02_02"); //To tě bude ale každopádně stát jistou maličkoust... 20 stříbrných.
+	AI_Output			(self, hero, "Wrk_224_VISITE_02_02"); //To tě bude ale každopádně stát jistou maličkost... 20 stříbrných.
 //	AI_Output			(self, hero, "Wrk_224_VISITE_02_03"); //Sag mir Bescheid, wenn du bereit bist.
 	AI_Output			(self, hero, "Wrk_224_VISITE_02_03"); //Jen mi řekni, až budeš připraven.
 };
@@ -342,9 +342,9 @@ func void Wrk_224_Igaraz_ARENA_Info ()
 //	AI_Output			(self, hero, "Wrk_224_ARENA_02_02"); //Hier gibt es allabendlich gute  Kämpfe  zu sehen.
 	AI_Output			(self, hero, "Wrk_224_ARENA_02_02"); //Každý večer tu jsou k vidění zajímavé souboje.
 //	AI_Output			(self, hero, "Wrk_224_ARENA_02_03"); //Der beste Arenakämpfer ist übrigens eine fremde Schönheit namens Thora.
-	AI_Output			(self, hero, "Wrk_224_ARENA_02_03"); //Nejlepším arénním bojovníkem je mimochodem kráska z ciziny jménem Thora.
+	AI_Output			(self, hero, "Wrk_224_ARENA_02_03"); //Nejlepším gladiátorem je mimochodem kráska z ciziny jménem Thora.
 //	AI_Output			(self, hero, "Wrk_224_ARENA_02_04"); //Die Frau haut alle anderen Gladiatoren aus den Latschen (hihi)
-	AI_Output			(self, hero, "Wrk_224_ARENA_02_04"); //Ta ženská stáhne všechny ostaní gladiátory z kůže (hihi)
+	AI_Output			(self, hero, "Wrk_224_ARENA_02_04"); //Ta ženská stáhne všechny ostatní gladiátory z kůže. (hihi)
 //	AI_Output			(self, hero, "Wrk_224_ARENA_02_05"); //Wenn du mich wieder brauchst, ich bin am Haupteingang.
 	AI_Output			(self, hero, "Wrk_224_ARENA_02_05"); //Až mě budeš znovu potřebovat, budu u hlavního vchodu.
 
@@ -379,7 +379,7 @@ func void Wrk_224_Igaraz_TRADER_Info ()
 //	AI_Output			(self, hero, "Wrk_224_TRADER_02_01"); //Hier sind wir bei den Händlern. Alle Händler arbeiten für Agon.
 	AI_Output			(self, hero, "Wrk_224_TRADER_02_01"); //Tady jsme u obchodníků. Každý z nich pracuje pro Agona.
 //	AI_Output			(self, hero, "Wrk_224_TRADER_02_02"); //Ruga, der Rüstungsmacher, Gordian der Schreiber, Helvegor der Rüstungsmacher, sie alle beziehen ihre Waren von Agon.
-	AI_Output			(self, hero, "Wrk_224_TRADER_02_02"); //Zbrojíř Ruga, písař Gordian, klempíř Helvegor, ti všichni berou své zboží od Agona.
+	AI_Output			(self, hero, "Wrk_224_TRADER_02_02"); //Zbrojíř Ruga, písař Gordian, lukař Helvegor, ti všichni berou své zboží od Agona.
 //	AI_Output			(self, hero, "Wrk_224_TRADER_02_03"); //Und dafür zahlen sie hohe Preise.
 //	AI_Output			(self, hero, "Wrk_224_TRADER_02_04"); //Wenn du mich wieder brauchst, ich bin am Haupteingang.
 	AI_Output			(self, hero, "Wrk_224_TRADER_02_03"); //A platí za to vysoké ceny.

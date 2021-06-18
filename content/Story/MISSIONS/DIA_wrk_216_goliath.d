@@ -379,7 +379,7 @@ func void	WRK_216_Goliath_CHALLENGE_Info()
 //			AI_Output	(self, hero,"WRK_216_Goliath_CHALLENGE_09_05"); //Du brauchst etwas Erfahrung in der Arena. Es wäre unfair von mir, jetzt schon gegen dich zu kämpfen.
 			AI_Output	(self, hero,"WRK_216_Goliath_CHALLENGE_09_05"); //Potřebuješ nějaké zkušenosti v aréně. Bylo by ode mě nefér proti tobě právě teď bojovat.
 //			AI_Output	(self, hero,"WRK_216_Goliath_CHALLENGE_09_06"); //Wenn du Grim besiegst, nehme ich deine Herausforderung an.
-			AI_Output	(self, hero,"WRK_216_Goliath_CHALLENGE_09_06"); //Až porazič Grima, přijmou tvou výzvu.
+			AI_Output	(self, hero,"WRK_216_Goliath_CHALLENGE_09_06"); //Až porazíš Grima, přijmou tvou výzvu.
 
 			return;
 		};

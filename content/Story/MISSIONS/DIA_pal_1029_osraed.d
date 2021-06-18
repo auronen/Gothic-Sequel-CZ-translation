@@ -49,7 +49,7 @@ FUNC VOID PAL_1029_FirstWarn_Info()
 //	AI_Output (hero, self,"PAL_1029_FirstWarn_Info_15_02"); //Was ist?
 	AI_Output (hero, self,"PAL_1029_FirstWarn_Info_15_02"); //Co je?
 //	AI_Output (self, hero,"PAL_1029_FirstWarn_Info_06_03"); //Hier dürfen nur Gefolgsleute des Königs passieren!
-	AI_Output (self, hero,"PAL_1029_FirstWarn_Info_06_03"); //Tudy smí projít pouz následovníci krále!
+	AI_Output (self, hero,"PAL_1029_FirstWarn_Info_06_03"); //Tudy smí projít pouze následovníci krále!
 //	AI_Output (self, hero,"PAL_1029_FirstWarn_Info_06_04"); //Also verschwinde!
 	AI_Output (self, hero,"PAL_1029_FirstWarn_Info_06_04"); //Takže vypadni!
 
@@ -409,7 +409,7 @@ func void PAL_1029_Osraed_HALTTHORA_Info ()
 //	AI_Output			(hero, self, "PAL_1029_HALTTHORA_15_06"); //Was?
 	AI_Output			(hero, self, "PAL_1029_HALTTHORA_15_06"); //Co?
 //	AI_Output			(self, hero, "PAL_1029_HALTTHORA_06_07"); //(leise) Nur das das klar ist. Finger weg von Thora, sie gehört mir (krankes Lachen)!
-	AI_Output			(self, hero, "PAL_1029_HALTTHORA_06_07"); //(tiše) Jen aby bylo jasno. Drže se od thory dál, patří mně (dýchavičný smích)!
+	AI_Output			(self, hero, "PAL_1029_HALTTHORA_06_07"); //(tiše) Jen aby bylo jasno. Drže se od Thory dál, patří mně (dýchavičný smích)!
 
  	// Wachen auf "Passieren" schalten
 	self.aivar[AIV_PASSGATE] = TRUE;

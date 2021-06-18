@@ -259,7 +259,7 @@ func void	Info_Sylvester_PICKCOSTNOSILVER ()
 	AI_Output			(self, hero,"Info_Sylvester_PICKCOSTNOSILVER_03_03"); //Tady je můj krumpáč.
 	B_GiveInvItems		(self, hero, ItMw_Pickaxe, 1);
 //	AI_Output			(self, hero,"Info_Sylvester_PICKCOSTNOSILVER_03_04"); //Nun führe mich wie abgemacht zur Erzader, dort bekommst du dann das Silber.
-	AI_Output			(self, hero,"Info_Sylvester_PICKCOSTNOSILVER_03_04"); //A teď mě zaveď k té rundé žíle, tam dostaneš to stříbro.
+	AI_Output			(self, hero,"Info_Sylvester_PICKCOSTNOSILVER_03_04"); //A teď mě zaveď k té rudné žíle, tam dostaneš to stříbro.
 
 	Sylvester_Blackmailer = TRUE;
 	B_AddDarkPoints		(1);
@@ -354,14 +354,14 @@ func void	Info_Sylvester_CAVE_Info ()
 //		AI_Output			(self, hero,"Info_Sylvester_CAVE_03_02"); //Danke nochmal. Leute wie dich gibt es hier sehr wenige.
 		AI_Output			(self, hero,"Info_Sylvester_CAVE_03_02"); //JEště jednou děkuji. Lidí, jako jsi ty, tu máme málo.
 //		AI_Output			(self, hero,"Info_Sylvester_CAVE_03_03"); //Wenn du etwas Erz brauchst, komm vorbei. Ich kann bestimmt mal ein paar Brocken abzweigen.
-		AI_Output			(self, hero,"Info_Sylvester_CAVE_03_03"); //Pokud budeš potřebovat trochu rudy, klidně si přijď. Určitě budu moci pár kouksů postrádat.
+		AI_Output			(self, hero,"Info_Sylvester_CAVE_03_03"); //Pokud budeš potřebovat trochu rudy, klidně si přijď. Určitě budu moci pár kousků postrádat.
 
 		B_SetAttitude		(self, ATT_FRIENDLY);
 		Sylvester_LastOre	= Wld_GetDay()-1;
 		B_AddFame			(1);
 		B_GiveXP			(XP_Sylvester_OreCave_Friendly);
 //		B_LogEntry			(CH1_LearnSmith,	"Sylvester war dankbar, dass ich ihn zur Erzader geführt habe. Ich kann mir ab heute täglich etwas Erz bei ihm abholen.");
-		B_LogEntry			(CH1_LearnSmith,	"Sylvester byl vděčný, že jsem ho dovedl k rundé žíle. Od dnešního dne si u něj budu moci každý den vyzvednout trošku rudy.");
+		B_LogEntry			(CH1_LearnSmith,	"Sylvester byl vděčný, že jsem ho dovedl k rudné žíle. Od dnešního dne si u něj budu moci každý den vyzvednout trošku rudy.");
 	}
 	else
 	{
@@ -422,7 +422,7 @@ func void	Info_Sylvester_GIVEORE_Info ()
 	if	(Sylvester_LastOre != Wld_GetDay())
 	{
 //		AI_Output			(self, hero,"Info_Sylvester_GIVEORE_03_02"); //Klar. Kannst ein paar Brocken haben, hier!
-		AI_Output			(self, hero,"Info_Sylvester_GIVEORE_03_02"); //Jasně. Můžeš vzít pár kouksů, tady!
+		AI_Output			(self, hero,"Info_Sylvester_GIVEORE_03_02"); //Jasně. Můžeš vzít pár kousků, tady!
 
 		B_GiveInvItems		(self, hero,	ItMi_OreNugget,	SYLVESTER_DAILYORE);
 		Sylvester_LastOre = Wld_GetDay();

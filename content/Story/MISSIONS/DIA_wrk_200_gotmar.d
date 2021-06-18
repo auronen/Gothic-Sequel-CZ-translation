@@ -483,7 +483,7 @@ func void	Info_Gotmar_PICK2_Info()
 //	AI_Output			(hero, self,"Info_Gotmar_PICK2_15_01"); //Kannst du mir ne Spitzhacke geben?
 	AI_Output			(hero, self,"Info_Gotmar_PICK2_15_01"); //Neměl bys pro mě krumpáč?
 //	AI_Output			(self, hero,"Info_Gotmar_PICK2_04_02"); //Ich bin Schmied und kein Erzschürfer.
-	AI_Output			(self, hero,"Info_Gotmar_PICK2_04_02"); //Já jsem kovař, ne nějaký rudař.
+	AI_Output			(self, hero,"Info_Gotmar_PICK2_04_02"); //Já jsem kovář, ne nějaký rudař.
 //	AI_Output			(self, hero,"Info_Gotmar_PICK2_04_03"); //Frag die Schürfer am Arenaplatz.
 	AI_Output			(self, hero,"Info_Gotmar_PICK2_04_03"); //Zeptej se rudařů kolem arény.
 //	AI_Output			(self, hero,"Info_Gotmar_PICK2_04_04"); //Ich könnte mir vorstellen, daß Sylvester seine Hacke verkauft.
@@ -1015,7 +1015,7 @@ func void	Info_Gotmar_SWORDBLADE_Info()
 //	AI_Output			(self, hero,"Info_Gotmar_SWORDBLADE_04_04"); //Aber das Eisen ist noch zu weich. Du musst es härten.
 	AI_Output			(self, hero,"Info_Gotmar_SWORDBLADE_04_04"); //Ale to železo je pořád moc měkké. Musíš ho zakalit.
 //	AI_Output			(self, hero,"Info_Gotmar_SWORDBLADE_04_05"); //Steck die glühende Schwertklinge in den Wassereimer dort drüben.
-	AI_Output			(self, hero,"Info_Gotmar_SWORDBLADE_04_05"); //Strč rozžhavenou čepel do vědra s vodou támhle.
+	AI_Output			(self, hero,"Info_Gotmar_SWORDBLADE_04_05"); //Strč rozžhavenou čepel támhle do vědra s vodou.
 //	AI_Output			(self, hero,"Info_Gotmar_SWORDBLADE_04_06"); //Das kühlt die Waffe ab, und gibt ihr die nötige Härte!
 	AI_Output			(self, hero,"Info_Gotmar_SWORDBLADE_04_06"); //To tu zbraň zchladí a dá jí nutnou tvrdost!
 
@@ -1445,7 +1445,7 @@ func void WRK_200_Gotmar_WHATFAVOUR_Info ()
 //	AI_Output			(self, hero, "WRK_200_WHATFAVOUR_04_04"); //Genau, Mann! Goliath ist sein Name.
 	AI_Output			(self, hero, "WRK_200_WHATFAVOUR_04_04"); //Správně, chlape! Jmenuje se Goliáš.
 //	AI_Output			(self, hero, "WRK_200_WHATFAVOUR_04_05"); //Die Arbeit hier wächst mir über den Kopf. Ich brauche Goliath dringend wieder zurück.
-	AI_Output			(self, hero, "WRK_200_WHATFAVOUR_04_05"); //Ta práce tady mi už přerůstá přes hlavu. Potřebuju sem Goláše znovu dostat.
+	AI_Output			(self, hero, "WRK_200_WHATFAVOUR_04_05"); //Ta práce tady mi už přerůstá přes hlavu. Potřebuju sem Goliáše znovu dostat.
 
 };
 
@@ -1515,7 +1515,7 @@ func void WRK_200_Gotmar_IFETCHGOLIATH_Info ()
 	AI_Output			(hero, self, "WRK_200_IFETCHGOLIATH_15_01"); //Ich werde mit Goliath sprechen!
 
 //	B_LogEntry			(CH1_LearnSmith, "Gotmar hat eingewilligt, mir zu zeigen, wie man Breitschwerter herstellt. Allerdings soll ich ihm einen Gefallen tun und seinen ehemaligen Schmiedegehilfen Goliath dazu überreden, die Arbeit in der Schmiede wieder aufzunehmen!");
-	B_LogEntry			(CH1_LearnSmith, "Gotmar vyjádřil přání ukázat mi, jak se ková široký meč. K tomu je ale potřeba, abych přemluvl jeho bývalého pomocníka Goliatha, aby se vrátil ke kovářskému řemeslu.");
+	B_LogEntry			(CH1_LearnSmith, "Gotmar vyjádřil přání ukázat mi, jak se ková široký meč. K tomu je ale potřeba, abych přemluvil jeho bývalého pomocníka Goliáše, aby se vrátil ke kovářskému řemeslu.");
 };
 
 ///////////////////////////////////////////////////////////////////////
@@ -1590,10 +1590,10 @@ func void	Info_Gotmar_BROADSWORD_Info()
 //		AI_Output				(self, hero,"Info_Gotmar_BROADSWORD_04_02"); //Breitschwerter verursachen ihren Schaden durch die enorm wuchtige Klinge.
 		AI_Output				(self, hero,"Info_Gotmar_BROADSWORD_04_02"); //Široké meče způsobují zranění díky enormně silné čepeli.
 //		AI_Output				(self, hero,"Info_Gotmar_BROADSWORD_04_03"); //Deshalb darfst du die Klinge weder an Länge, noch an Breite kürzen.
-		AI_Output				(self, hero,"Info_Gotmar_BROADSWORD_04_03"); //Proto nemsíš čepel zkrátit ani na délce ani na šířce.
-//		AI_Output				(self, hero,"OUMULTI_Training_04_00");		//Versuch es mal! Übung macht den Meister.
+		AI_Output				(self, hero,"Info_Gotmar_BROADSWORD_04_03"); //Proto nesmíš čepel zkrátit ani na délce ani na šířce.
+//		AI_Output				(self, hero,"OUMULTI_Training_04_00");		 //Versuch es mal! Übung macht den Meister.
 		AI_Output				(self, hero,"OUMULTI_Training_04_00");		 //Vyzkoušej si to! Cvičení dělá mistra.
-//		AI_Output				(self, hero,"OUMULTI_BackToWork_04_00");	//Ich muß zurück an die Arbeit.
+//		AI_Output				(self, hero,"OUMULTI_BackToWork_04_00");	 //Ich muß zurück an die Arbeit.
 		AI_Output				(self, hero,"OUMULTI_BackToWork_04_00");	 //Já se musím vrátit ke své práci.
 
 		B_LearnBroadsword		();
@@ -1690,7 +1690,7 @@ func void	Info_Gotmar_BASTARDSWORD_Info()
 //		AI_Output				(self, hero,"Info_Gotmar_BASTARDSWORD_04_04"); //Bastardschwerter verursachen ihren Schaden durch die enorm wuchtige Klinge.
 		AI_Output				(self, hero,"Info_Gotmar_BASTARDSWORD_04_04"); //Bastardské meče způsobují svoji škodu skrze enormně masivní čepel.
 //		AI_Output				(self, hero,"Info_Gotmar_BASTARDSWORD_04_05"); //Am besten du versuchst mal eine solche Waffe herzustellen. Übung macht den Meister.
-		AI_Output				(self, hero,"Info_Gotmar_BASTARDSWORD_04_05"); //Nejlepší bude, když zkušíš jednu takovou zbraň vyrobit. Cvičení dělá mistra.
+		AI_Output				(self, hero,"Info_Gotmar_BASTARDSWORD_04_05"); //Nejlepší bude, když zkusíš jednu takovou zbraň vyrobit. Cvičení dělá mistra.
 //		AI_Output				(self, hero,"Info_Gotmar_BASTARDSWORD_04_06"); //So, ich muß wieder zurück an die Arbeit.
 		AI_Output				(self, hero,"Info_Gotmar_BASTARDSWORD_04_06"); //Tak, musím zpátky do práce.
 
@@ -1776,7 +1776,7 @@ func void WRK_200_Gotmar_ROCKFORTRESS_Info ()
 //	AI_Output			(self, hero, "WRK_200_ROCKFORTRESS_04_02"); //Keine Ahnung, Mann.
 	AI_Output			(self, hero, "WRK_200_ROCKFORTRESS_04_02"); //Nemám tušení, chlape.
 //	AI_Output			(self, hero, "WRK_200_ROCKFORTRESS_04_03"); //Bin noch nie aus diesem gottverfluchten Lager herausgekommen, seit ich hier bin!
-	AI_Output			(self, hero, "WRK_200_ROCKFORTRESS_04_03"); //Ještě jsem z tohodle tábora nevylezl, co tu jsem!
+	AI_Output			(self, hero, "WRK_200_ROCKFORTRESS_04_03"); //Ještě jsem z tohohle tábora nevylezl, co tu jsem!
 };
 
 
@@ -1819,7 +1819,7 @@ func void WRK_200_Gotmar_NEEDBLOODORE_Info ()
 	AI_Output			(self, hero, "WRK_200_NEEDBLOODORE_04_05"); //Je to jeden z rekrutů v domobraně a obvykle se pohybuje někde na vnitřním nádvoří hradu.
 
 //	B_LogEntry			(CH1_Bloodore, "Auch Wylfern, ein Rekrut der Miliz könnte über etwas Bluterz verfügen. Er hält sich im Innenhof der Burg auf.");
-	B_LogEntry			(CH1_Bloodore, "Také Wylfern, rektut od domobrany, může pomoci s krvavou rudou. Zdržuje se na vnitřním nádvoří hradu.");
+	B_LogEntry			(CH1_Bloodore, "Také Wylfern, rekrut od domobrany, může pomoci s krvavou rudou. Zdržuje se na vnitřním nádvoří hradu.");
 };
 
 

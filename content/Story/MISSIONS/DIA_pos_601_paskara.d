@@ -74,7 +74,7 @@ func void POS_601_Paskara_CRAZY_Info ()
 	if (Paskara_Crazy == 3)
 	{
 //		AI_Output			(self, hero, "POS_601_CRAZY_00_04"); //Dasein des Schmerzes    Tot geborener Mensch
-		AI_Output			(self, hero, "POS_601_CRAZY_00_04"); //Exitence bolesti    Narození zemřelého
+		AI_Output			(self, hero, "POS_601_CRAZY_00_04"); //Existence bolesti    Narození zemřelého
 		Paskara_Crazy = 4;
 		AI_StopProcessInfos	( self );
 		return;

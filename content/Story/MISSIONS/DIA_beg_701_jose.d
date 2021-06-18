@@ -50,7 +50,7 @@ func void BEG_701_Jose_HI_Info ()
 //	AI_Output			(hero, self, "BEG_701_HI_15_01"); //Was machst du hier?
 	AI_Output			(hero, self, "BEG_701_HI_15_01"); //Co tu děláš?
 //	AI_Output			(self, hero, "BEG_701_HI_02_02"); //Ich schau mir an wer hier ein und ausgeht. Die Soldaten achten nicht auf alles. Ich schon. 
-	AI_Output			(self, hero, "BEG_701_HI_02_02"); //Dívám se, kdo sem přihcází a odchází. Vojáci nedávají pozor na všechno, já ano.
+	AI_Output			(self, hero, "BEG_701_HI_02_02"); //Dívám se, kdo sem přichází a odchází. Vojáci nedávají pozor na všechno, já ano.
 //	AI_Output			(hero, self, "BEG_701_HI_15_03"); //Und warum?
 	AI_Output			(hero, self, "BEG_701_HI_15_03"); //A proč?
 //	AI_Output			(self, hero, "BEG_701_HI_02_04"); //Es gibt immer jemanden der bereit ist, für Neuigkeiten zu bezahlen. 

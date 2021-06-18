@@ -197,7 +197,8 @@ instance Wrk_201_Gordian_WRITEBOOK		(C_INFO)
 	important	 = 	FALSE;
 	permanent	 = 	TRUE;
 
-	description	 = 	"Ich brauche eine Abschrift dieses Buches";
+//	description	 = 	"Ich brauche eine Abschrift dieses Buches";
+	description	 = 	"Potřebuji kopii této knihy.";
 };
 
 func int Wrk_201_Gordian_WRITEBOOK_Condition ()
@@ -212,27 +213,34 @@ func int Wrk_201_Gordian_WRITEBOOK_Condition ()
 
 func void Wrk_201_Gordian_WRITEBOOK_Info ()
 {
-	AI_Output			(hero, self, "Wrk_201_WRITEBOOK_15_01"); //Ich brauche eine Abschrift dieses Buches.
-	AI_Output			(self, hero, "Wrk_201_WRITEBOOK_09_02"); //Kein Problem. Das kostet 15 Silber.
+//	AI_Output			(hero, self, "Wrk_201_WRITEBOOK_15_01"); //Ich brauche eine Abschrift dieses Buches.
+	AI_Output			(hero, self, "Wrk_201_WRITEBOOK_15_01"); //Potřebuji kopii této knihy.
+//	AI_Output			(self, hero, "Wrk_201_WRITEBOOK_09_02"); //Kein Problem. Das kostet 15 Silber.
+	AI_Output			(self, hero, "Wrk_201_WRITEBOOK_09_02"); //Žádný problém, stojí to 15 stříbrných.
 	Info_ClearChoices	(Wrk_201_Gordian_WRITEBOOK);
-	Info_AddChoice		(Wrk_201_Gordian_WRITEBOOK, "(15 Silber geben)", Wrk_201_Gordian_WRITEBOOK_Yes );
-	Info_AddChoice		(Wrk_201_Gordian_WRITEBOOK, "Ich überleg's mir.", Wrk_201_Gordian_WRITEBOOK_No );
+//	Info_AddChoice		(Wrk_201_Gordian_WRITEBOOK, "(15 Silber geben)", Wrk_201_Gordian_WRITEBOOK_Yes );
+	Info_AddChoice		(Wrk_201_Gordian_WRITEBOOK, "(zaplatit 15 stříbrných)", Wrk_201_Gordian_WRITEBOOK_Yes );
+//	Info_AddChoice		(Wrk_201_Gordian_WRITEBOOK, "Ich überleg's mir.", Wrk_201_Gordian_WRITEBOOK_No );
+	Info_AddChoice		(Wrk_201_Gordian_WRITEBOOK, "Budu o tom přemýšlet.", Wrk_201_Gordian_WRITEBOOK_No );
 };
 func void Wrk_201_Gordian_WRITEBOOK_No ()
 {
-	AI_Output			(hero, self, "Wrk_201_WRITEBOOK_No_15_01"); //Ich überleg's mir.
+//	AI_Output			(hero, self, "Wrk_201_WRITEBOOK_No_15_01"); //Ich überleg's mir.
+	AI_Output			(hero, self, "Wrk_201_WRITEBOOK_No_15_01"); //Budu o tom přemýšlet.
 	AI_StopProcessInfos	(self);
 };
 
 func void Wrk_201_Gordian_WRITEBOOK_Yes ()
 {
-	AI_Output			(hero, self, "Wrk_201_WRITEBOOK__15_01"); //Der Preis klingt angemessen.
+//	AI_Output			(hero, self, "Wrk_201_WRITEBOOK__15_01"); //Der Preis klingt angemessen.
+	AI_Output			(hero, self, "Wrk_201_WRITEBOOK__15_01"); //To je přiměřená cena.
 
 	if (Npc_HasItems	(hero,ItMi_Silver)	>= 15)
 	{
 		if (Npc_HasItems	(hero, ItWr_Book_HealingPotions) >= 1)
 		{
-			AI_Output			(self, hero, "Wrk_201_WRITEBOOK__09_02"); //Hier ist deine Abschrift.
+//			AI_Output			(self, hero, "Wrk_201_WRITEBOOK__09_02"); //Hier ist deine Abschrift.
+			AI_Output			(self, hero, "Wrk_201_WRITEBOOK__09_02"); //Tady je ten opis, co jsi chtěl.
 			int_BookWritten	= TRUE;
 			CreateInvItem	(self,ItWr_Book_HealingPotions);
 			B_GiveInvItems	(hero,self,ItMi_Silver,15);
@@ -240,12 +248,14 @@ func void Wrk_201_Gordian_WRITEBOOK_Yes ()
 		}
 		else
 		{
-			AI_Output		(self, hero, "Wrk_201_WRITEBOOK_09_03"); //Wenn Du kein Buch hast, kann ich auch keine Abschrift anfertigen.
+//			AI_Output		(self, hero, "Wrk_201_WRITEBOOK_09_03"); //Wenn Du kein Buch hast, kann ich auch keine Abschrift anfertigen.
+			AI_Output		(self, hero, "Wrk_201_WRITEBOOK_09_03"); //Pokud tu knihu nemáš, nemohu ji opsat.
 		};
 	}
 	else
 	{
-		AI_Output			(self, hero, "Wrk_201_WRITEBOOK_09_04"); //Komm wieder, wenn Du genug Geld hast
+//		AI_Output			(self, hero, "Wrk_201_WRITEBOOK_09_04"); //Komm wieder, wenn Du genug Geld hast
+		AI_Output			(self, hero, "Wrk_201_WRITEBOOK_09_04"); //Vrať se, až budeš mít dost peněz.
 	};
 	AI_StopProcessInfos	(self);
 

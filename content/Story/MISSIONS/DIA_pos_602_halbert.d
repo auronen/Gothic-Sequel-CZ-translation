@@ -49,7 +49,7 @@ func void POS_602_Halbert_CRAZY_Info ()
 	&&   Wld_IsTime			(04, 00, 20, 00)    
 	{
 //		AI_Output			(self, hero, "POS_602_CRAZY_00_01"); //Des Tages Licht ist meine Agonie.
-		AI_Output			(self, hero, "POS_602_CRAZY_00_01"); //Dënní světlo je má agonie.
+		AI_Output			(self, hero, "POS_602_CRAZY_00_01"); //Denní světlo je má agonie.
 		Halbert_Crazy = 1;
 		AI_StopProcessInfos	( self );
 		return; 

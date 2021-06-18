@@ -114,7 +114,7 @@ func void MIL_103_Berengar_KING_Info ()
 //	AI_Output			(self, hero, "MIL_103_KING_08_02"); //(laut) Du willst was über den König wissen?...VON MIR?
 	AI_Output			(self, hero, "MIL_103_KING_08_02"); //(hlasitě) Ty se chceš něco dozvědět o králi?...ODE MĚ?
 //	AI_Output			(self, hero, "MIL_103_KING_08_03"); //Dann will ich dir was über den König sagen.
-	AI_Output			(self, hero, "MIL_103_KING_08_03"); //Pak ti teda o králi něco řeknu.
+	AI_Output			(self, hero, "MIL_103_KING_08_03"); //Pak ti tedy o králi něco řeknu.
 //	AI_Output			(self, hero, "MIL_103_KING_08_04"); //Der taucht hier mit seinen gestriegelten Affen auf und steckt seinen Kopf mitsamt seiner Krone ganz tief in den Sand!
 	AI_Output			(self, hero, "MIL_103_KING_08_04"); //Objevil se tu se svými naparáděnými gorilami a strčil hlavu, i se svou korunou, hluboko do písku!  
 //	AI_Output			(self, hero, "MIL_103_KING_08_05"); //Der soll mir mal im Dunkeln begegnen, der König! Den werde ich noch ganz woanders reinstecken den König!

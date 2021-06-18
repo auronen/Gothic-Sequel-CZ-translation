@@ -46,11 +46,11 @@ func void WRK_228_Horatio_HELLO_Info ()
 //	AI_Output			(self, hero, "WRK_228_HELLO_09_01"); //Ich glaube meine müden Augen lassen mich im Stich, bist du es wirklich?
 	AI_Output			(self, hero, "WRK_228_HELLO_09_01"); //Mě snad klamou moje unavené oči, jsi to skutečně ty?
 //	AI_Output			(hero, self, "WRK_228_HELLO_15_02"); //Wie geht es diesem Reislord und seinem Handlanger Lefty?
-	AI_Output			(hero, self, "WRK_228_HELLO_15_02"); //Jak se daří tomu Rýžovému lordovi a jeho přisluhovačí Leftymu?
+	AI_Output			(hero, self, "WRK_228_HELLO_15_02"); //Jak se daří tomu Rýžovému lordovi a jeho přisluhovači Leftymu?
 //	AI_Output			(self, hero, "WRK_228_HELLO_09_03"); //Keine Ahnung, aber du hast ihnen ja damals gezeigt, wo der Hammer hängt.
 	AI_Output			(self, hero, "WRK_228_HELLO_09_03"); //Nemám tušení, ale ty už jsi jim tehdy ukázal, kde je jejich místo.
 //	AI_Output			(self, hero, "WRK_228_HELLO_09_04"); //Seit dem Zusammenbruch der Barriere habe ich sie allerdings beide nicht mehr gesehen.
-	AI_Output			(self, hero, "WRK_228_HELLO_09_04"); //Od zhroucení Bariéty jsem už ani jednoho z nich neviděl.
+	AI_Output			(self, hero, "WRK_228_HELLO_09_04"); //Od zhroucení Bariéry jsem už ani jednoho z nich neviděl.
 };
 
 ///////////////////////////////////////////////////////////////////////

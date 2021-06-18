@@ -163,7 +163,7 @@ instance THF_401_Huldrych_TOOSLOW		(C_INFO)
 	permanent	 = 	FALSE;
 
 //	description	 = 	"Du hast Agon hundert Silberstücke gestohlen!";
-	description	 = 	"Ukradl jsem Agonovi sto stříbrňáků!";
+	description	 = 	"Ukradl jsem Agonovi sto stříbrných!";
 };
 
 func int THF_401_Huldrych_TOOSLOW_Condition ()
@@ -177,9 +177,9 @@ func int THF_401_Huldrych_TOOSLOW_Condition ()
 func void THF_401_Huldrych_TOOSLOW_Info ()
 {
 //	AI_Output			(hero, self, "THF_401_TOOSLOW_15_01"); //Du hast Agon hundert Silberstücke gestohlen!
-	AI_Output			(hero, self, "THF_401_TOOSLOW_15_01"); //Ukradl jsem Agonovi sto stříbrňáků!
+	AI_Output			(hero, self, "THF_401_TOOSLOW_15_01"); //Ukradl jsem Agonovi sto stříbrných!
 //	AI_Output			(self, hero, "THF_401_TOOSLOW_05_02"); //Wie willst du das beweisen? Selbst wenn ich das Silber hätte, glaubst du ich trage es mit mir herum?
-	AI_Output			(self, hero, "THF_401_TOOSLOW_05_02"); //Jak to cheš dokázat? I kdybych to stříbro měl, myslš si, že ho budu nosit u sebe?
+	AI_Output			(self, hero, "THF_401_TOOSLOW_05_02"); //Jak to chceš dokázat? I kdybych to stříbro měl, myslíš si, že ho budu nosit u sebe?
 //	AI_Output			(self, hero, "THF_401_TOOSLOW_05_03"); //Also geh mir nicht auf den Sack!
 	AI_Output			(self, hero, "THF_401_TOOSLOW_05_03"); //Přestaň mě tedy otravovat!
 	AI_TurnAway 		(hero, self);
@@ -260,7 +260,7 @@ func void THF_401_Huldrych_GIVEMESILVER_Info ()
 //	AI_Output			(self, hero, "THF_401_GIVEMESILVER_05_04"); //Meine Schulden bei verschiedenen Leuten bezahlt. Willst du mich jetzt nochmal schlagen?
 	AI_Output			(self, hero, "THF_401_GIVEMESILVER_05_04"); //Splatil jsem své dluhy různým lidem. Chceš mě teď znovu zmlátit?
 //	AI_Output			(hero, self, "THF_401_GIVEMESILVER_15_05"); //Wenn du noch mal jemanden beklaust, komme ich wieder.
-	AI_Output			(hero, self, "THF_401_GIVEMESILVER_15_05"); //Pokud ještě někoho okradeš, příjdu znovu.
+	AI_Output			(hero, self, "THF_401_GIVEMESILVER_15_05"); //Pokud ještě někoho okradeš, přijdu znovu.
 //	AI_Output			(self, hero, "THF_401_GIVEMESILVER_05_06"); //OK, OK. Ich habs kapiert! Aber lass mich jetzt bitte in Ruhe.
 	AI_Output			(self, hero, "THF_401_GIVEMESILVER_05_06"); //OK, OK. Pochopil jsem to! Ale nech mě teď prosím na pokoji.
 };
@@ -298,7 +298,7 @@ func int THF_401_Huldrych_INSPECTOR_Condition ()
 func void THF_401_Huldrych_INSPECTOR_Info ()
 {
 //	AI_Output			(hero, self, "THF_401_INSPECTOR_15_01"); //Agon wurden hundert Silberstücke gestohlen!
-	AI_Output			(hero, self, "THF_401_INSPECTOR_15_01"); //Agonovi někdo ukrad sto stříbrných!
+	AI_Output			(hero, self, "THF_401_INSPECTOR_15_01"); //Agonovi někdo ukradl sto stříbrných!
 //	AI_Output			(self, hero, "THF_401_INSPECTOR_05_02"); //Was habe ich damit zu tun?
 	AI_Output			(self, hero, "THF_401_INSPECTOR_05_02"); //Co já s tím mám dělat?
 //	AI_Output			(hero, self, "THF_401_INSPECTOR_15_03"); //DU hast sie gestohlen.
@@ -340,7 +340,7 @@ func void THF_401_Huldrych_INSPECTOR_SHARE ()
 	if	(Npc_HasItems (self,ItMi_Silver) >= HULDRYCH_STOLENSILVER)
 	{
 //		AI_Output			(self, hero, "THF_401_INSPECTOR_SHARE_05_04"); //hmm...fünfzig Silberstücke für dich...
-		AI_Output			(self, hero, "THF_401_INSPECTOR_SHARE_05_04"); //Hmm... padesát stříbrňáků pro tebe...
+		AI_Output			(self, hero, "THF_401_INSPECTOR_SHARE_05_04"); //Hmm... padesát stříbrných pro tebe...
 		B_GiveInvItems		(self, hero, ItMi_Silver,HULDRYCH_STOLENSILVER/2);
 //		AI_Output			(self, hero, "THF_401_INSPECTOR_SHARE_05_05"); //Und du sorgst dafür, das Agon und die Miliz mich nicht mehr belästigen!
 		AI_Output			(self, hero, "THF_401_INSPECTOR_SHARE_05_05"); //A zařiď, ať mě Agon a milice neobtěžuje!

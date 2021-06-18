@@ -69,7 +69,7 @@ func void DMC_800_Xardas_BACK_Info ()
 //	AI_Output			(hero, self, "DMC_800_BACK_15_02"); //Du warst doch auch im Tempel, als ich gegen den Schläfer kämpfte.
 	AI_Output			(hero, self, "DMC_800_BACK_15_02"); //Když jsem bojoval se Spáčem, byl jsi také v chrámu.
 //	AI_Output			(self, hero, "DMC_800_BACK_14_03"); //Ich konnte mit letzter Kraft entkommen, bevor der Tempel einstürzte.
-	AI_Output			(self, hero, "DMC_800_BACK_14_03"); //S vypjetím posledních sil se mi podařilo uniknout předtím, než se chrám zhroutil.
+	AI_Output			(self, hero, "DMC_800_BACK_14_03"); //S vypětím posledních sil se mi podařilo uniknout předtím, než se chrám zhroutil.
 //	AI_Output			(self, hero, "DMC_800_BACK_14_04"); //Seitdem habe ich nach dir gesucht.
 	AI_Output			(self, hero, "DMC_800_BACK_14_04"); //Od té doby jsem tě hledal.
 

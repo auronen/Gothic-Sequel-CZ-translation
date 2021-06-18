@@ -129,7 +129,7 @@ func void Info_Edo_ORESTOLENYOU ()
 	AI_Output			(self, hero,"Info_Edo_ORESTOLENYOU_00_02"); //HA, HA, HA,..... ty se mi líbíš. Nejsi padlý na hlavu.
 	B_RemoveWeapon		(self);
 //	AI_Output			(self, hero,"Info_Edo_ORESTOLENYOU_00_03"); //(leiser) So ganz unter uns: Dieb zu sein ist eine Ehre, nur reagieren die anderen hier etwas allergisch auf dieses Thema.
-	AI_Output			(self, hero,"Info_Edo_ORESTOLENYOU_00_03"); //(potichu) Jen tak mezi námi: Bt zlodějem je velká čest, jen ostatní na to tady v táboře reagují celkem alergicky.
+	AI_Output			(self, hero,"Info_Edo_ORESTOLENYOU_00_03"); //(potichu) Jen tak mezi námi: Být zlodějem je velká čest, jen ostatní na to tady v táboře reagují celkem alergicky.
 //	AI_Output			(self, hero,"Info_Edo_ORESTOLENYOU_00_04"); //Also behalt ich das lieber für mich. Die meisten streberhaften Handwerker hier verstehen einfach nicht, wie man WIRKLICH lebt.
 	AI_Output			(self, hero,"Info_Edo_ORESTOLENYOU_00_04"); //TAkže si to raději nechávám pro sebe. Většina zdejších hloupých řemeslníků nechápe, jak se dá SKUTEČNĚ žít.
 //	AI_Output			(self, hero,"Info_Edo_ORESTOLENYOU_00_05"); //Haben immer nur arbeiten im Kopf.
@@ -322,7 +322,7 @@ func void	Info_Edo_DEFEAT_Info()
 //	AI_Output			(self, hero,"Info_Edo_DEFEAT_00_02"); //Du hast ganz schön Mut mich DA-nach wieder anzusprechen, ha, ha, ha!
 	AI_Output			(self, hero,"Info_Edo_DEFEAT_00_02"); //Máš hodně odvahy, po tom všem se mnou mluvit, ha, ha, ha!
 //	AI_Output			(self, hero,"Info_Edo_DEFEAT_00_03"); //(leiser) Pass auf, ich kann dir alle möglichen Waren verkaufen.
-	AI_Output			(self, hero,"Info_Edo_DEFEAT_00_03"); //(tiše) Poslouchej, mohu ti pordat všechny možné druhy zboží.
+	AI_Output			(self, hero,"Info_Edo_DEFEAT_00_03"); //(tiše) Poslouchej, mohu ti prodat všechny možné druhy zboží.
 //	AI_Output			(self, hero,"Info_Edo_DEFEAT_00_04"); //Hab sozusagen ein gutes Sortiment auf Lager.
 	AI_Output			(self, hero,"Info_Edo_DEFEAT_00_04"); //Mám celkem široký výběr.
 //	AI_Output			(self, hero,"Info_Edo_DEFEAT_00_05"); //Alles Dinge, die ich irgendwo mal ...gefunden... habe. Deshalb sind sie auch so preiswert.

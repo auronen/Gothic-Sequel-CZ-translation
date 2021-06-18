@@ -47,7 +47,7 @@ func void WRK_222_Helvegor_HI_Info ()
 //	AI_Output			(hero, self, "WRK_222_HI_15_01"); //Du bist der Bogenmacher?
 	AI_Output			(hero, self, "WRK_222_HI_15_01"); //Ty vyrábíš luky?
 //	AI_Output			(self, hero, "WRK_222_HI_00_02"); //Ja. Bei mir bekommst du die besten Bögen im Lager - und die einzigen...
-	AI_Output			(self, hero, "WRK_222_HI_00_02"); //Ano. U mě dostenš ty nejlepší luky v 
+	AI_Output			(self, hero, "WRK_222_HI_00_02"); //Ano. U mě dostaneš ty nejlepší luky v táboře - a jediné...
 
 	Log_CreateTopic		(GE_TraderOC, LOG_NOTE);
 //	B_LogEntry			(GE_TraderOC,"Helvegor stellt BÖGEN her und verkauft sie zusammen mit den PFEILEN von Osric. Dieses seltsame 'Paar' hat seinen Stand im Händlerviertel.");

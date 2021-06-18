@@ -196,7 +196,7 @@ func void WRK_227_Snaf_SMELLSGOOD_Info ()
 //	AI_Output			(self, hero, "WRK_227_SMELLSGOOD_09_04"); //Die ist sehr nahrhaft und hat sogar heilsame Wirkung!
 	AI_Output			(self, hero, "WRK_227_SMELLSGOOD_09_04"); //Je velmi výživná a má dokonce léčivé účinky!
 //	AI_Output			(self, hero, "WRK_227_SMELLSGOOD_09_05"); //Ist bei den Arenakämpfern sehr beliebt. Die Jungs müssen ständig Schnitte und Beulen auskurieren.
-	AI_Output			(self, hero, "WRK_227_SMELLSGOOD_09_05"); //Velmi oblíbená mezi arénními bojovníky. Chlapci si musí neustále léčit šrámy a boule.
+	AI_Output			(self, hero, "WRK_227_SMELLSGOOD_09_05"); //Velmi oblíbená mezi gladiátory. Chlapci si musí neustále léčit šrámy a boule.
 };
 
 ///////////////////////////////////////////////////////////////////////
@@ -449,7 +449,7 @@ func void WRK_227_Snaf_NOTHINGNEW_Info ()
 //	AI_Output			(self, hero, "WRK_227_NOTHINGNEW_09_01"); //Bitte, du musst dich um mein Problem kümmern!
 	AI_Output			(self, hero, "WRK_227_NOTHINGNEW_09_01"); //Prosím, musíš se postarat o můj problém!
 //	AI_Output			(self, hero, "WRK_227_NOTHINGNEW_09_02"); //Frag doch mal bei den Milizsoldaten vor Halvor's Küche herum!
-	AI_Output			(self, hero, "WRK_227_NOTHINGNEW_09_02"); //Poptej se domobránců před Halvorovou kuchyní!
+	AI_Output			(self, hero, "WRK_227_NOTHINGNEW_09_02"); //Poptej se členů milice před Halvorovou kuchyní!
 	AI_StopProcessInfos	(self);
 };
 
@@ -592,7 +592,7 @@ func void WRK_227_Snaf_NEWCUSTOMERS_Info ()
 //	AI_Output		(self, hero, "WRK_227_NEWCUSTOMERS_09_01"); //Hey, da bist du ja wieder!
 //	AI_Output		(self, hero, "WRK_227_NEWCUSTOMERS_09_02"); //Ich weiss nicht WAS du gemacht hast, aber viele der Milizsoldaten essen wieder bei mir, statt bei Halvor!
 	AI_Output		(self, hero, "WRK_227_NEWCUSTOMERS_09_01"); //Hej, tady tě zas mám! 
-	AI_Output		(self, hero, "WRK_227_NEWCUSTOMERS_09_02"); //Nevím, co jsi udělal, ale mnozí domobránci teď jedí znovu u mě namísto u Halvora!
+	AI_Output		(self, hero, "WRK_227_NEWCUSTOMERS_09_02"); //Nevím, co jsi udělal, ale mnozí členové milice teď jedí znovu u mě namísto u Halvora!
 
 //	AI_Output		(self, hero, "WRK_227_NEWCUSTOMERS_09_03"); //Sie stehen sogar wieder Schlange!
 	AI_Output		(self, hero, "WRK_227_NEWCUSTOMERS_09_03"); //Už tu dokonce znovu stojí fronty!
@@ -749,7 +749,7 @@ func void WRK_227_Snaf_WHEREBUGS_Info ()
 //	AI_Output			(hero, self, "WRK_227_WHEREBUGS_15_01"); //Wo finde ich solche Fleischwanzen?
 	AI_Output			(hero, self, "WRK_227_WHEREBUGS_15_01"); //Kde najdu nějaké žravé štěnice?
 //	AI_Output			(self, hero, "WRK_227_WHEREBUGS_09_02"); //Dieses kleine Krabbelgetier liebt Müll. Einfach unglaublich, dass sie so hervorragend schmecken!
-	AI_Output			(self, hero, "WRK_227_WHEREBUGS_09_02"); //Tohle malé lezoucí zviřátko miluje odpad. Jednoduše neuvěřtelné, že je jejich maso tak chutné!
+	AI_Output			(self, hero, "WRK_227_WHEREBUGS_09_02"); //Tohle malé lezoucí zvířátka miluje odpad. Jednoduše neuvěřitelné, že je jejich maso tak chutné!
 //	AI_Output			(self, hero, "WRK_227_WHEREBUGS_09_03"); //Es gibt hier im Lager zwei Müllberge, dort findest du eigentlich immer ein paar von den Biestern!
 	AI_Output			(self, hero, "WRK_227_WHEREBUGS_09_03"); //Tady v táboře najdeš dvě skládky. Na každé bude vždycky trochu těch potvor!
 };

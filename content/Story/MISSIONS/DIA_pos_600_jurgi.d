@@ -53,7 +53,7 @@ func void POS_600_Jurgi_CRAZY_Info ()
 //		AI_Output			(self, hero, "POS_600_CRAZY_00_02"); //Wahrlich ich sage dir ein Mann der ein Haus baut  ist ein Mann der...äh...Dinge hat,
 		AI_Output			(self, hero, "POS_600_CRAZY_00_02"); //Opravdu ti říkám, muž, který staví důl je muž který... ah... má věci,
 //		AI_Output			(self, hero, "POS_600_CRAZY_00_03"); //die er braucht, er braucht diese Dinge, denn ohne diese Dinge äh...hat er sie nicht.
-		AI_Output			(self, hero, "POS_600_CRAZY_00_03"); //které potřebuje, on ty věci ptořebuje, pootm bez těch věcí... ah.. je nemá.
+		AI_Output			(self, hero, "POS_600_CRAZY_00_03"); //které potřebuje, on ty věci potřebuje, potom bez těch věcí... ah.. je nemá.
 		Jurgi_Crazy = 2;
 		AI_StopProcessInfos	( self );
 		return;
@@ -71,7 +71,7 @@ func void POS_600_Jurgi_CRAZY_Info ()
 	if (Jurgi_Crazy == 3)
 	{
 //		AI_Output			(self, hero, "POS_600_CRAZY_00_06"); //Und sie hatten kleine Truhen mit noch kleineren Schachteln, in denen die winzigkleinen ...
-		AI_Output			(self, hero, "POS_600_CRAZY_00_06"); //A měli malé truhly s ještě menšími krabičkami, ve kteých byly malé...
+		AI_Output			(self, hero, "POS_600_CRAZY_00_06"); //A měli malé truhly s ještě menšími krabičkami, ve kterých byly malé...
 //		AI_Output			(self, hero, "POS_600_CRAZY_00_07"); //wirklich wirklich winzigkleinen Dinge lagen, mit denen eigentlich niemand so recht wußte...
 		AI_Output			(self, hero, "POS_600_CRAZY_00_07"); //opravdu opravdu maličkaté věcičky, o kterých opravdu nikdo nevěděl...
 //		AI_Output			(self, hero, "POS_600_CRAZY_00_08"); //was er sagen wollte...äh...sie waren sehr klein - Winzig.
@@ -95,7 +95,7 @@ func void POS_600_Jurgi_CRAZY_Info ()
 //		AI_Output			(self, hero, "POS_600_CRAZY_00_11"); //Wahrlich ich frage dich : Was nützt ein Brunnen ohne Wasser? Was ist ein Vogel der nicht fliegt?
 		AI_Output			(self, hero, "POS_600_CRAZY_00_11"); //Opravdu se tě ptám: K čemu je studna bez vody? Co je pták, který nelítá?
 //		AI_Output			(self, hero, "POS_600_CRAZY_00_12"); //Aha! Also frage dich selber warum und vor allem  WAS in diesen kleinen Truhen ist...äh....
-		AI_Output			(self, hero, "POS_600_CRAZY_00_12"); //Aha! Takže se zeptaj sám sebe, proč a především CO je v těch malých truhlách... ah...
+		AI_Output			(self, hero, "POS_600_CRAZY_00_12"); //Aha! Takže se zeptej sám sebe, proč a především CO je v těch malých truhlách... ah...
 		Jurgi_Crazy = 0;
 		AI_StopProcessInfos	( self );
 		return;
