@@ -1,39 +1,8 @@
 # Gothic-Sequel-CZ-translation
-Originální německé skripty poskytl VaanaCZ, moc děkujeme!
+Amatérský český překlad nevydaného rozšíření Gothic Sequel.
 
-## Překlad 
-Protože překládáme z originálu, tedy z němčiny :de:, doporučil bych zachovat ve skritpech původní německé texty, pro kontrolu. A to tak, že se původní řádek zkopíruje a zakomentuje - na začátek řádku se vloží `//`. Ukázka:
-```c++
-instance WRK_203_Bromor_TROPHYS		(C_INFO)
-{
-	npc		 	 = 	WRK_203_Bromor;
-	nr		 	 = 	23;
-	condition	 = 	WRK_203_Bromor_TROPHYS_Condition;
-	information	 = 	WRK_203_Bromor_TROPHYS_Info;
-	important	 = 	FALSE;
-	permanent	 = 	FALSE;
-
-//	description	 = 	"Ich hörte, du sammelst Trophäen?";
-	description	 = 	"Slyšel jsem, že sbíráš trofeje..?";
-};
-
-func void WRK_203_Bromor_TROPHYS_Info ()
-{
-//	AI_Output (hero, self, "WRK_203_TROPHYS_15_01"); //Ich hörte, du sammelst Trophäen?
-	AI_Output (hero, self, "WRK_203_TROPHYS_15_01"); //Slyšel jsem, že sbíráš trofeje..?
-//	AI_Output (self, hero, "WRK_203_TROPHYS_09_02"); //Das stimmt. Aber nicht dieses Wolfs- und Scavenger Zeug. Davon habe ich schon genug.
-	AI_Output (self, hero, "WRK_203_TROPHYS_09_02"); //Ano, tak. Ale ne tyhle cetky z vlků nebo mrchožroutů. Těch už mám až dost.
-//	AI_Output (self, hero, "WRK_203_TROPHYS_09_03"); //Aber wenn du mir ein SchattenläuferHorn oder -Fell bringst, dafür zahle ich hundert Silberstücke!
-	AI_Output (self, hero, "WRK_203_TROPHYS_09_03"); //Ale kdybys mi přinesl roh nebo kůži stínové šelmy, dal bych ti za ně sto stříbrných!
-};
-```
-
-## Stav projektu
-- [x] Menu
-- [x] Dialogy - `Content\Story\Missions`
-- [x] Předměty - `Content\Items`
-- [x] Ostatní - soubor `Content\Story\Text.d`
-- [x] Fonty
+## Instalace
+Stáhněte poslední verzi ze sekce [__Releases__](https://github.com/auronen/Gothic-Sequel-CZ-translation/releases) a rozbalte ji do složky s Gothic Sequelem.
 
 ## Snímky ze hry
 ### Menu
@@ -42,5 +11,13 @@ func void WRK_203_Bromor_TROPHYS_Info ()
 ### Titulky
 ![hlavní nabídka](https://github.com/auronen/Gothic-Sequel-CZ-translation/blob/main/screenshots/Sequel_titulek.png?raw=true)
 
-## Předpokládaný čas vydání
-Už to skoro bude™
+## Kontakt
+Kontaktovat náš tým můžete na jednom z těchto dvou discord serverů [GothicCZ.net](https://discord.gg/TbkwNcjkWs) nebo [Chugothicz.net](https://discord.gg/dV8wAVUBeM).
+
+## Poděkování
+Děkujeme všem, kteří se na tomto projektu podíleli
+__VaanaCZ__ - technické záležitosti & německé skripty
+__Fawkes__ - asistence při opravě bugů a ostatních technických vrtochů
+__ZerculePoirot__ - překlad
+__Vojta1122__ - překlad
+a ostatním členům české Gothic komunity, kteří přispěli komentáři a všemožně nás při překladu podpořili. Děkujeme moc!
