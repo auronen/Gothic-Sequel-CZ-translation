@@ -347,12 +347,12 @@ func void	Info_Sylvester_CAVE_Info ()
 	AI_GotoNpc				(self, hero);
 
 //	AI_Output				(self, hero,"Info_Sylvester_CAVE_03_01"); //Unglaublich, hier gibt es tatsächlich Erz.
-	AI_Output				(self, hero,"Info_Sylvester_CAVE_03_01"); //Neuvěřetlné, ta ruda tu skutečně je!
+	AI_Output				(self, hero,"Info_Sylvester_CAVE_03_01"); //Neuvěřitelné, ta ruda tu skutečně je!
 
 	if	Sylvester_Friend
 	{
 //		AI_Output			(self, hero,"Info_Sylvester_CAVE_03_02"); //Danke nochmal. Leute wie dich gibt es hier sehr wenige.
-		AI_Output			(self, hero,"Info_Sylvester_CAVE_03_02"); //JEště jednou děkuji. Lidí, jako jsi ty, tu máme málo.
+		AI_Output			(self, hero,"Info_Sylvester_CAVE_03_02"); //Ještě jednou děkuji. Lidí, jako jsi ty, tu máme málo.
 //		AI_Output			(self, hero,"Info_Sylvester_CAVE_03_03"); //Wenn du etwas Erz brauchst, komm vorbei. Ich kann bestimmt mal ein paar Brocken abzweigen.
 		AI_Output			(self, hero,"Info_Sylvester_CAVE_03_03"); //Pokud budeš potřebovat trochu rudy, klidně si přijď. Určitě budu moci pár kousků postrádat.
 

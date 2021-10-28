@@ -166,7 +166,7 @@ func void THF_403_Gerion_TELLDIEGO2_Info ()
 //	AI_Output			(hero, self, "THF_403_Gerion_TELLDIEGO2_15_04"); //Ich wußte, das wir uns verstehen würden.
 	AI_Output			(hero, self, "THF_403_Gerion_TELLDIEGO2_15_04"); //Já věděl, že si budeme rozumět.
 //	AI_Output			(self, hero, "THF_403_Gerion_TELLDIEGO2_11_05"); //Als erstes musst Du lernen, dich lautlos zu bewegen.
-	AI_Output			(self, hero, "THF_403_Gerion_TELLDIEGO2_11_05"); //První co se musíš naučit je tiše se pohybovat.
+	AI_Output			(self, hero, "THF_403_Gerion_TELLDIEGO2_11_05"); //První, co se musíš naučit, je tiše se pohybovat.
 //	AI_Output			(self, hero, "THF_403_Gerion_TELLDIEGO2_11_06"); //Sag mir Bescheid, wenn du bereit bist.
 	AI_Output			(self, hero, "THF_403_Gerion_TELLDIEGO2_11_06"); //Až budeš připraven, dej mi vědět.
 
@@ -200,9 +200,9 @@ func void THF_403_Gerion_INSIDER_Info ()
 //	AI_Output			(hero, self, "THF_403_INSIDER_15_02"); //Nämlich?
 	AI_Output			(hero, self, "THF_403_INSIDER_15_02"); //A to?
 //	AI_Output			(self, hero, "THF_403_INSIDER_11_03"); //Du verpfeifst mich nicht und dafür zeige ich dir die Talente der Diebe.
-	AI_Output			(self, hero, "THF_403_INSIDER_11_03"); //Ty mě nevyprášíš a já tě naučím zlodějské dovednosti.
+	AI_Output			(self, hero, "THF_403_INSIDER_11_03"); //Ty mě nenaprášíš a já tě naučím zlodějské dovednosti.
 //	AI_Output			(hero, self, "THF_403_INSIDER_15_04"); //Ich wußte das wir uns verstehen würden.
-	AI_Output			(hero, self, "THF_403_INSIDER_15_04"); //Já jsem věděl, že si budeme rozumět.
+	AI_Output			(hero, self, "THF_403_INSIDER_15_04"); //Já věděl, že si budeme rozumět.
 //	AI_Output			(self, hero, "THF_403_INSIDER_11_05"); //Als erstes musst Du lernen, dich lautlos zu bewegen.
 	AI_Output			(self, hero, "THF_403_INSIDER_11_05"); //První co se musíš naučit je tiše se pohybovat.
 //	AI_Output			(self, hero, "THF_403_INSIDER_11_06"); //Sag mir Bescheid, wenn du bereit bist.
@@ -246,7 +246,7 @@ func void THF_403_Gerion_LEARNSNEAK_Info ()
 //		AI_Output			(self, hero, "THF_403_LEARNSNEAK_11_02"); //Das wichtigste ist, sein Körpergewicht optimal zu verteilen.
 		AI_Output			(self, hero, "THF_403_LEARNSNEAK_11_02"); //Nejdůležitější je optimální rozložení tělesné váhy.
 //		AI_Output			(self, hero, "THF_403_LEARNSNEAK_11_03"); //Dann hast du den Boden besser im Blick und deinen Körper besser unter Kontrolle.
-		AI_Output			(self, hero, "THF_403_LEARNSNEAK_11_03"); //Tak máš lepší výhled na zem a máš své tělo lépe pod kontrolou.
+		AI_Output			(self, hero, "THF_403_LEARNSNEAK_11_03"); //Máš pak lepší výhled na zem a máš své tělo lépe pod kontrolou.
 //		AI_Output			(self, hero, "THF_403_LEARNSNEAK_11_04"); //Wenn du schleichst hört dich zwar niemand, aber du bist nicht unsichtbar. Paß auf, daß dich keiner beobachtet.
 		AI_Output			(self, hero, "THF_403_LEARNSNEAK_11_04"); //Když se plížíš, nikdo tě neslyší, ale nejsi neviditelný! Ujisti se, že tě nikdo nesleduje.
 //		AI_Output			(self, hero, "THF_403_LEARNSNEAK_11_05"); //Wenn jemand dich herumschleichen sieht, wird er dich im Auge behalten!
@@ -254,7 +254,7 @@ func void THF_403_Gerion_LEARNSNEAK_Info ()
 //		AI_Output			(self, hero, "THF_403_LEARNSNEAK_11_06"); //Ich hab 'ne kleine Aufgabe für dich.
 		AI_Output			(self, hero, "THF_403_LEARNSNEAK_11_06"); //Mám pro tebe malý úkol.
 //		AI_Output			(self, hero, "THF_403_LEARNSNEAK_11_07"); //Im Haus der Erzbarone, im Obergeschoß gibt es einen Schlafraum. Dort liegt irgendwo ein Schlüssel. Den brauche ich.
-		AI_Output			(self, hero, "THF_403_LEARNSNEAK_11_07"); //V budově Rudobaronů, v horním patře, je ložnice. Někde v té ložnici leží klíč. Ten potřebuji!
+		AI_Output			(self, hero, "THF_403_LEARNSNEAK_11_07"); //V budově Rudobaronů, v horním patře, je ložnice. Někde v té ložnici je klíč. Ten klíč potřebuji!
 //		AI_Output			(hero, self, "THF_403_LEARNSNEAK_15_08"); //Klingt einfach.
 		AI_Output			(hero, self, "THF_403_LEARNSNEAK_15_08"); //To zní docela snadně.
 //		AI_Output			(self, hero, "THF_403_LEARNSNEAK_11_09"); //Ist es auch! Osbert bewacht zwar den Raum, aber du weisst ja jetzt, wie du unbemerkt an ihm vorbeikommst.
@@ -512,7 +512,7 @@ func void THF_403_Gerion_PICKPOCKET_1_Info ()
 //			AI_Output			(self, hero, "THF_403_PICKPOCKET_1_11_05"); //jetzt kannst du ja versuchen, Osbert den Schlüssel aus der Tasche zu nehmen.
 			AI_Output			(self, hero, "THF_403_PICKPOCKET_1_11_05"); //Nyní si to můžeš vyzkoušet. Vytáhni Osbertovi z kapsy ten klíč!
 //			AI_Output			(self, hero, "THF_403_PICKPOCKET_1_11_06"); //Es wäre schlau es bei dem Schlüssel zu belassen. Je mehr du ihm wegnimmst, desto größer ist die Wahrscheinlichkeit, daß er dich erwischt!
-			AI_Output			(self, hero, "THF_403_PICKPOCKET_1_11_06"); //Bude rozumné vzít jen ten klíč. Čím věcí vezmeš, tím větší šance, že tě tvá oběť přistihne!
+			AI_Output			(self, hero, "THF_403_PICKPOCKET_1_11_06"); //Bude rozumné vzít jen ten klíč. Čím víc věcí vezmeš, tím větší šance, že tě tvá oběť přistihne!
 
 //			B_LogEntry (CH1_TrainSneak,"Gerion hat mir das Talent des Taschendiebstahls gezeigt. Jetzt kann ich Osbert den Schlüssel unbemerkt abnehmen");
 			B_LogEntry (CH1_TrainSneak,"Gerion mi ukázal jak vybírat kapsy. Teď mohu Osbertovi nepozorovaně sebrat ten klíč.");
@@ -798,7 +798,7 @@ instance THF_403_Gerion_GOTHERB		(C_INFO)
 	permanent	 = 	FALSE;
 
 //	description	 = 	"Ich habe das Sumpfkraut!";
-	description	 = 	"Mám trávu z bažin!";
+	description	 = 	"Mám tu trávu z bažin!";
 };
 
 func int THF_403_Gerion_GOTHERB_Condition ()
@@ -812,7 +812,7 @@ func int THF_403_Gerion_GOTHERB_Condition ()
 func void THF_403_Gerion_GOTHERB_Info ()
 {
 //	AI_Output			(hero, self, "THF_403_GOTHERB_15_01"); //Ich habe das Sumpfkraut!
-	AI_Output			(hero, self, "THF_403_GOTHERB_15_01"); //Mám trávu z bažin!
+	AI_Output			(hero, self, "THF_403_GOTHERB_15_01"); //Mám tu trávu z bažin!
 //	AI_Output			(self, hero, "THF_403_GOTHERB_11_02"); //Gut gemacht! Bring es zu Isgar, dem Heiler.
 	AI_Output			(self, hero, "THF_403_GOTHERB_11_02"); //Dobrá práce! Dones ji Isgarovi, tomu léčiteli.
 //	AI_Output			(self, hero, "THF_403_GOTHERB_11_03"); //Sag ihm du willst den Wein abholen. Diesen Wein bringst du mir. Verstanden?
@@ -951,7 +951,7 @@ func void THF_403_Gerion_ALLIKNOW_Info ()
 
 	Log_CreateTopic		(GE_TeacherOC,	LOG_NOTE);
 //	B_LogEntry			(GE_TeacherOC,	"Gerion hat kann mir alles beigebracht, was er über die Diebeskünste weiss. Wenn ich noch mehr lernen will, muss ich mir einen anderen Lehrer suchen.");
-	B_LogEntry			(GE_TeacherOC,	"Gerion mě naučil vše, co o zlodějských dovednostech ví. Pokud se chci naučit víc, musím najít zkušenějšího učitele");
+	B_LogEntry			(GE_TeacherOC,	"Gerion mě naučil vše, co o zlodějských dovednostech ví. Pokud se chci naučit víc, musím najít zkušenějšího učitele.");
 };
 
 ///////////////////////////////////////////////////////////////////////

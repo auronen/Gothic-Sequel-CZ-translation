@@ -25,11 +25,11 @@ instance DMC_801_Demonic (C_NPC)
 	protection[PROT_MAGIC]	=       0;
 
 	//-------- visuals --------
-	Mdl_SetVisual			(self,	"humans.mds");			// basic animation file
-	Mdl_ApplyOverlayMds		(self,	"humans_mage.mds");		// overlay animation file
-	Mdl_SetVisualBody        (self,    "hum_body_naked0",        0,1,"Hum_Head_Bald",82,1,DMC_ARMOR);
-	B_Scale 				(self);							// body width according to strength of character
-	Mdl_SetModelFatness 	(self, 0);						// limb fatness
+	Mdl_SetVisual			(self,		"humans.mds");			// basic animation file
+	Mdl_ApplyOverlayMds		(self,		"humans_mage.mds");		// overlay animation file
+	Mdl_SetVisualBody       (self,    	"hum_body_naked0", 0, 1, "Hum_Head_Bald", 82, 1, DMC_ARMOR);
+	B_Scale 				(self);								// body width according to strength of character
+	Mdl_SetModelFatness 	(self, 0);							// limb fatness
 
 	//-------- talents --------
 	Npc_SetTalentSkill		(self, NPC_TALENT_2H,2);

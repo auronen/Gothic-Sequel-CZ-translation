@@ -1,7 +1,8 @@
 instance WRK_216_Goliath (C_NPC)
 {
 	//-------- primary data	--------
-	name						=	"Goliath";
+	// name						=	"Goliath";
+	name						=	"Goliáš";
 	guild						=	GIL_WORKER;// VORSICHT:	Muß	auch in	der	B_Arena_UnselectFight()	geändert werden!!!
 	npctype						=	NPCTYPE_MAIN;
 	level						=	15;

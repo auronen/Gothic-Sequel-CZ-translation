@@ -945,7 +945,7 @@ instance PC_Psionic_HAVESCROLL		(C_INFO)
 	permanent	 = 	FALSE;
 
 //	description	 = 	"Ich habe eine Spruchrolle!";
-	description	 = 	"Ich habe eine Spruchrolle!";
+	description	 = 	"Mám svitek!";
 };
 
 func int PC_Psionic_HAVESCROLL_Condition ()

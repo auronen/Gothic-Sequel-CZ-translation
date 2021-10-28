@@ -35,7 +35,8 @@ instance  Thief_ANGRY (C_INFO)
 	nr				=  10;
 	condition		= Thief_ANGRY_Condition;
 	information		= Thief_ANGRY_Info;
-	description		= "Dreckiger Dieb";
+//	description		= "Dreckiger Dieb";
+	description		= "Zatracený zloději!";
 	permanent		= TRUE;
 	IMPORTANT		= TRUE;
 };
@@ -64,11 +65,14 @@ FUNC void  Thief_ANGRY_Info()
 
 	var string string_buildChoice;
 
-	string_buildChoice = ConcatStrings ("Tut mir leid! (", B_SilverAmountToSatisfy_String ());
-	string_buildChoice = ConcatStrings (string_buildChoice,"Silber geben)");
+//	string_buildChoice = ConcatStrings ("Tut mir leid! (", B_SilverAmountToSatisfy_String ());
+	string_buildChoice = ConcatStrings ("Mrzí mě to! (dát ", B_SilverAmountToSatisfy_String ());
+//	string_buildChoice = ConcatStrings (string_buildChoice,"Silber geben)");
+	string_buildChoice = ConcatStrings (string_buildChoice," stříbra)");
 
 	Info_AddChoice (Thief_Angry, string_buildChoice, Thief_Angry_Lieb);
-	Info_AddChoice (Thief_Angry,"(ignorieren)"	,Thief_Angry_HauAb);
+//	Info_AddChoice (Thief_Angry,"(ignorieren)"	,Thief_Angry_HauAb);
+	Info_AddChoice (Thief_Angry,"(ignorovat)"	,Thief_Angry_HauAb);
 };
 
 
@@ -97,7 +101,8 @@ func void Thief_Angry_Lieb ()
 	else
 	{
 		var string string_choice;
-		string_choice = ConcatStrings ("Nicht genug Silber, ich will ",B_SilverAmountToSatisfy_String ());
+//		string_choice = ConcatStrings ("Nicht genug Silber, ich will ",B_SilverAmountToSatisfy_String ());
+		string_choice = ConcatStrings ("To není dostatek stříbra, chci ",B_SilverAmountToSatisfy_String ());
 		PrintScreen	(string_choice, -1,_YPOS_MESSAGE_GIVEN,FONT_OLD_SMALL,_TIME_MESSAGE_GIVEN);
 	};
 	AI_StopProcessInfos (self);

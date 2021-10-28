@@ -3,7 +3,8 @@ instance PAL_1046_Prinzessin		(C_NPC)
 
 
 		//-------- primary data --------
-		name								=	"Prinzessin";
+		// name								=	"Prinzessin";
+		name								=	"Princezna";
 		guild								=	GIL_PALADIN;
 		npctype								=	NPCTYPE_FEMALE;
 		level								=	35;

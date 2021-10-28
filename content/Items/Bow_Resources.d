@@ -44,11 +44,11 @@ const int		VAlue_Book_Bow		= 10;
 
 //const string 	NAME_ItWr_LongBow	= "Buch der Langbögen";
 const string 	NAME_ItWr_LongBow	= "Kniha dlouhých luků";
-const int		VAlue_Book_LongBow		= 10;
+const int		VAlue_Book_LongBow	= 10;
 
 //const string 	NAME_ItWr_CrossBow	= "Buch der Armbrüste";
 const string 	NAME_ItWr_CrossBow	= "Kniha kuší";
-const int		VAlue_Book_CrossBow		= 10;
+const int		VAlue_Book_CrossBow	= 10;
 
 /******************************************************************************************/
 

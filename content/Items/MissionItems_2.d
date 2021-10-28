@@ -21,7 +21,7 @@ INSTANCE ItWr_Morogh_List(C_Item)
 //	TEXT[0]				=	"Liste mit Zutaten ";
 //	TEXT[1]				=	"die Morogh benötigt";
 //	TEXT[3]				=	"";
-	TEXT[0]				=	"Seznam přísad ";
+	TEXT[0]				=	"Seznam přísad, ";
 	TEXT[1]				=	"které potřebuje Morogh";
 	TEXT[3]				=	"";
 };

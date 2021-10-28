@@ -139,7 +139,7 @@ func void B_LearnBastardsword()
 
 		Log_CreateTopic	(GE_SmithWeapons, LOG_NOTE);
 //		B_LogEntry		(GE_SmithWeapons, "BASTARDSCHWERT: Wer diese vier Fuß lange, gewaltige Klinge einhändig in den Kampf führen kann, gehört zur Elite unter den Schwertkämpfern. Die Verbindung von Klinge, Parierstange und Griff muß besonders robust ausgeführt werden, um die Wucht der Schläge auch dauerhaft unbeschadet zu überstehen.");
-		B_LogEntry		(GE_SmithWeapons, "MEČ BASTARD: Ten, kdo dokáže tutou čtyři stopy dlouhou zbraň vést jednou rukou, patří mezi šermířskou elitu. Spojení čepele, záštity a rukojeti musí být obzvláště robustní, aby vydrželo sílu úderů a zabránilo tak trvalému poškození.");
+		B_LogEntry		(GE_SmithWeapons, "MEČ BASTARD: Ten, kdo dokáže tuto čtyři stopy dlouhou zbraň vést jednou rukou, patří mezi šermířskou elitu. Spojení čepele, záštity a rukojeti musí být obzvláště robustní, aby vydrželo sílu úderů a zabránilo tak trvalému poškození.");
 	};
 };
 
@@ -181,7 +181,7 @@ func void B_LearnHatchet()
 
 		Log_CreateTopic	(GE_SmithWeapons, LOG_NOTE);
 //		B_LogEntry		(GE_SmithWeapons, "BEIL: Ein kleines Axtblatt und ein anderthalb Fuß messender Schaft bilden das ideale Werkzeug des Waldläufers. Ob Brennholz geschlagen oder die kleineren Raubtiere des Waldes abgewehrt werden sollen, das Beil ist ein zuverlässiger Begleiter.");
-		B_LogEntry		(GE_SmithWeapons, "BEIL: Ein kleines Axtblatt und ein anderthalb Fuß messender Schaft bilden das ideale Werkzeug des Waldläufers. Ob Brennholz geschlagen oder die kleineren Raubtiere des Waldes abgewehrt werden sollen, das Beil ist ein zuverlässiger Begleiter.");
+		B_LogEntry		(GE_SmithWeapons, "SEKERA: Malá sekera a stopu a půl dlouhé topůrko tvoří tento ideální nástroj pro dobrodruhy. Ať už potřebujete připravit dřevo na oheň, nebo odhánět malá divoká  lesní zvířata, sekera je spolehlivým společníkem.");
 	};
 };
 
@@ -251,7 +251,7 @@ func void B_LearnIronclub()
 
 		Log_CreateTopic	(GE_SmithWeapons, LOG_NOTE);
 //		B_LogEntry		(GE_SmithWeapons, "EISENKEULE: Ein eiserner Schaft, der an seinem Ende etwas verdickt ist, um mehr Wucht hinter den Schlag zu setzen. Diese metallene Variante des Holzknüppels ist die ideale Ergänzung für eine Kneipenschlägerei und das blose Tragen eines solchen Gegenstandes vermeidet oft unangenehme nächtliche Begegnungen.");
-		B_LogEntry		(GE_SmithWeapons, "ŽELEZNÝ KYJ: Železná tyč se na koneci mírně rozšiřuje, aby při úderu zpsůobila větší poškození. Tato železná varinta dřevěné hole je ideální nástroj pro hospodskou rvačku. Nošením této zbraně se člověk často vyhne nepříjemným nočním setkáním.");
+		B_LogEntry		(GE_SmithWeapons, "ŽELEZNÝ KYJ: Železná tyč se na konci mírně rozšiřuje, aby při úderu způsobila větší poškození. Tato železná varianta dřevěné hole je ideální nástroj pro hospodskou rvačku. Nošením této zbraně se člověk často vyhne nepříjemným nočním setkáním.");
 	};
 };
 
@@ -293,7 +293,7 @@ func void B_LearnWarhammer()
 
 		Log_CreateTopic	(GE_SmithWeapons, LOG_NOTE);
 //		B_LogEntry		(GE_SmithWeapons, "KRIEGSHAMMER: Was aus einem glühenden Stück Eisen ein Schwertklinge formen kann, zermalmt auch den härtesten Gegner. Der große Bruder des Schmiedehammers muß allerdings beidhändig geführt werden, wiegt doch alleine der massive Hammerkopf mehr als ein ganzer Kochkessel. Die größte Genugtung bereitet aber immer noch das Zerbersten der Steingolems, die das Unglück haben, mit diesem Erdbeben von Waffe Bekanntschaft zu machen.");
-		B_LogEntry		(GE_SmithWeapons, "VÁLEČNÉ KLADIVO: To, co dokáže ze žhnoucího železa vykotvarovat čepel, rozdrtí i toho nejtvrdšího rpotivníka. Velký bratr kovářského kladiva však musí být používán oběma rukama, protože celá hlavice váží víc, než velký kotel na vaření. Největším uspokojením je roztříštění kamenných golemů, kteří mají tu smůlu, že se měli šanci seznámit s touto mohutnou zbraní.");
+		B_LogEntry		(GE_SmithWeapons, "VÁLEČNÉ KLADIVO: To, co dokáže ze žhnoucího železa vytvarovat čepel, rozdrtí i toho nejtvrdšího protivníka. Velký bratr kovářského kladiva však musí být používán oběma rukama, protože celá hlavice váží víc, než velký kotel na vaření. Největším uspokojením je roztříštění kamenných golemů, kteří mají tu smůlu, že se měli šanci seznámit s touto mohutnou zbraní.");
 	};
 };
 
@@ -307,7 +307,7 @@ func void B_LearnOrcHammer()
 
 		Log_CreateTopic	(GE_SmithWeapons, LOG_NOTE);
 //		B_LogEntry		(GE_SmithWeapons, "KRUSH KARROK: Bisher war nicht bekannt, daß Orks auch mit riesigen Hämmern kämpfen, doch scheint dies vor vielen Jahrhunderten tatsächlich der Fall gewesen zu sein. Diese Apokalypse von Waffe besteht aus einem mannsgroßen Eisenschaft, der von einem enorm wuchtigen und doch sehr scharfkantigen Hammerkopf gekrönt wird. Wo dieses Monstrum aufschlägt, wächst kein Gras mehr. Mit einer solchen Waffe werden die meisten gegnerischen Rüstungen reine Formsache.");
-		B_LogEntry		(GE_SmithWeapons, "KRUSH KARROK: Dříve nebylo známo, že skřeti také používají válečná kladiva, ale zdá se, že tomu tak je už po mnohá staletí. Tato apokalyptická zbraň se skládá z ze železného topůrka délky dospělého člověka, které je korunováno těžkou, ale velice ostrou hlavou kladiva. Kde toto monstrum uděří, tam už tráva neroste. S takovouto zbraní nejsou nepřátelská brnění překážkou.");
+		B_LogEntry		(GE_SmithWeapons, "KRUSH KARROK: Dříve nebylo známo, že skřeti také používají válečná kladiva, ale zdá se, že tomu tak je už po mnohá staletí. Tato apokalyptická zbraň se skládá z ze železného topůrka délky dospělého člověka, které je korunováno těžkou, ale velice ostrou hlavou kladiva. Kde toto monstrum udeří, tam už tráva neroste. S takovouto zbraní nejsou nepřátelská brnění překážkou.");
 	};
 };
 
@@ -618,7 +618,7 @@ func int B_LearnTrollberry ()
 		PrintScreen		(_STR_MESSAGE_LEARNPLANTS, -1,_YPOS_MESSAGE_LEARN,FONT_OLD_BIG,_TIME_MESSAGE_LEARN);
 		Log_CreateTopic	(GE_Plants, LOG_NOTE);
 //		B_LogEntry		(GE_Plants , "TROLLKIRSCHEN sind eine extrem seltene Unterart der Waldbeeren. Sie scheinen im Gegensatz zu ihren Verwandten äusserst giftig zu sein und wachsen ausschliesslich in Trollhorten.");
-		B_LogEntry		(GE_Plants , "TROLLÍ BOBULE jsou extrémně vzácný poddruh borůvek. Narozdíl od jejich příbuzných jsou trollí bobule velice jedovaté a rostou pouze trollím trusu.");
+		B_LogEntry		(GE_Plants , "TROLLÍ BOBULE jsou extrémně vzácný poddruh borůvek. Na rozdíl od jejich příbuzných jsou trollí bobule velice jedovaté a rostou pouze trollím trusu.");
 	};
 };
 
@@ -642,7 +642,7 @@ func int B_LearnMountainMoss ()
 		PrintScreen		(_STR_MESSAGE_LEARNPLANTS, -1,_YPOS_MESSAGE_LEARN,FONT_OLD_BIG,_TIME_MESSAGE_LEARN);
 		Log_CreateTopic	(GE_Plants, LOG_NOTE);
 //		B_LogEntry		(GE_Plants , "BERGMOOS mag die dünne Luft hoch in den Bergen oder Felsen. Oft muss ein Fundort mühevoll erklettert werden.");
-		B_LogEntry		(GE_Plants , "HORSKÝ MECH má rád řídký horský vzduch. Roste vysoko ve skalách a horách. Často se do těcho míst musí vyšplhat.");
+		B_LogEntry		(GE_Plants , "HORSKÝ MECH má rád řídký horský vzduch. Roste vysoko ve skalách a horách. Často se do těchto míst musí vyšplhat.");
 	};
 };
 
@@ -763,7 +763,7 @@ func void B_LearnRecipeLongBow()
 	var string		string_Amnt;
 	string_Amnt				=	IntToString	(Amnt_LongBow);
 //	string_ConcatLongBow	= ConcatStrings	("Langbögen jeder Bauart sind vom Bauplan her bekannt. Für den Langbogen werden ", string_Amnt);
-	string_ConcatLongBow	= ConcatStrings	("Dlouhé luky všeho druhu jsou známe z nákresů.\nNa výrobu DLOUHÉHO LUKU spotřebuji", string_Amnt);
+	string_ConcatLongBow	= ConcatStrings	("Dlouhé luky všeho druhu jsou známe z nákresů.\nNa výrobu DLOUHÉHO LUKU spotřebuji ", string_Amnt);
 //	string_ConcatLongBow	= ConcatStrings	(string_ConcatLongBow, " Holz benötigt. ");
 	string_ConcatLongBow	= ConcatStrings	(string_ConcatLongBow, " kusů dřeva. ");
 

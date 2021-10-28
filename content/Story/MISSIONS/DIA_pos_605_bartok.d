@@ -47,32 +47,40 @@ func void POS_605_Bartok_CRAZY_Info ()
 {
 	if Bartok_Crazy == 0
 	{
-		AI_Output			(self, hero, "POS_605_CRAZY_02_01"); //Glühende Funkengischt erhellt die Nacht, die Funken tanzen in den Himmel,
-		AI_Output			(self, hero, "POS_605_CRAZY_02_02"); //stählerner Stab zu tödlichen Instrument geformt im Feuer des Lebens.
+//		AI_Output			(self, hero, "POS_605_CRAZY_02_01"); //Glühende Funkengischt erhellt die Nacht, die Funken tanzen in den Himmel,
+		AI_Output			(self, hero, "POS_605_CRAZY_02_01"); //Zářící jiskry osvětlují noc, jiskry tancuje na nebi,
+//		AI_Output			(self, hero, "POS_605_CRAZY_02_02"); //stählerner Stab zu tödlichen Instrument geformt im Feuer des Lebens.
+		AI_Output			(self, hero, "POS_605_CRAZY_02_02"); //ocelová tyč se v ohni života zformovala do smrtícího nástroje.
 		Bartok_Crazy = 1;
 		AI_StopProcessInfos	( self );
 		return;
 	};
 	if Bartok_Crazy == 1
 	{
-		AI_Output			(self, hero, "POS_605_CRAZY_02_03"); //Blitzende Klinge schlitzt Bäuche, trennt Köpfe, zerteilt Leiber. Im Namen eines Grafen, eines Hauptmanns, eines Rates.
-		AI_Output			(self, hero, "POS_605_CRAZY_02_04"); //Im Namen eines Gottes...
+//		AI_Output			(self, hero, "POS_605_CRAZY_02_03"); //Blitzende Klinge schlitzt Bäuche, trennt Köpfe, zerteilt Leiber. Im Namen eines Grafen, eines Hauptmanns, eines Rates.
+		AI_Output			(self, hero, "POS_605_CRAZY_02_03"); //Blyštící se čepel protne břicho, kosí hlavy, rozřízne těla. Ve jménu hraběte, kapitána, rady.
+//		AI_Output			(self, hero, "POS_605_CRAZY_02_04"); //Im Namen eines Gottes...
+		AI_Output			(self, hero, "POS_605_CRAZY_02_04"); //Ve jménu boha...
 		Bartok_Crazy = 2;
 		AI_StopProcessInfos	( self );
 		return;
 	};
 	if Bartok_Crazy == 2
 	{
-		AI_Output			(self, hero, "POS_605_CRAZY_02_05"); //Faulender Körper tausendfach Gestank. Würmer kriechen durch knochige Höhlen,
-		AI_Output			(self, hero, "POS_605_CRAZY_02_06"); //wo Geier die leckeren Augen stibizt haben, mit ihren krummen Schnäbeln.
+//		AI_Output			(self, hero, "POS_605_CRAZY_02_05"); //Faulender Körper tausendfach Gestank. Würmer kriechen durch knochige Höhlen,
+		AI_Output			(self, hero, "POS_605_CRAZY_02_05"); //Rozkládající se těla, tisícinásobný zápach. Červi se plazí kostnatými jeskyněmi,
+//		AI_Output			(self, hero, "POS_605_CRAZY_02_06"); //wo Geier die leckeren Augen stibizt haben, mit ihren krummen Schnäbeln.
+		AI_Output			(self, hero, "POS_605_CRAZY_02_06"); //kde jim supi, svými zobáky, vyklovali lahodné oči.
 		Bartok_Crazy = 3;
 		AI_StopProcessInfos	( self );
 		return;
 	};
 	if Bartok_Crazy == 3
 	{
-		AI_Output			(self, hero, "POS_605_CRAZY_02_07"); //Siegesfeier ohne Freude. Gelächter hohl und leer. Der Wein schmeckt nach geronnenem Blut.
-		AI_Output			(self, hero, "POS_605_CRAZY_02_08"); //Wenn der Hass triumphiert, ertrinkt die Liebe in ihren eigenen Tränen.
+//		AI_Output			(self, hero, "POS_605_CRAZY_02_07"); //Siegesfeier ohne Freude. Gelächter hohl und leer. Der Wein schmeckt nach geronnenem Blut.
+		AI_Output			(self, hero, "POS_605_CRAZY_02_07"); //Oslava vítězství bez radosti. Smích nicotný a prázdný. Víno chutná po sražené krvi.
+//		AI_Output			(self, hero, "POS_605_CRAZY_02_08"); //Wenn der Hass triumphiert, ertrinkt die Liebe in ihren eigenen Tränen.
+		AI_Output			(self, hero, "POS_605_CRAZY_02_08"); //Když vítězí nenávist, láska se topí ve vlastních slzách.
 		Bartok_Crazy = 0;
 		AI_StopProcessInfos	( self );
 		return;

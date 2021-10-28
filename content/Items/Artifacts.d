@@ -365,7 +365,7 @@ INSTANCE ItAr_RuneTeleport3 (C_Item)
 //	TEXT	[3]			=	"Diese Rune teleportiert direkt in den";
 //	TEXT	[4]			=	"Turm von Xardas dem Dämonenbeschwörer.";
 	TEXT	[3]			=	"Tato runa teleportuje mága přímo";
-	TEXT	[4]			=	"do věže nekromancera - Xardase.";
+	TEXT	[4]			=	"do věže nekromancera Xardase.";
 };
 
 INSTANCE ItAr_ScrollTeleport3 (C_Item)

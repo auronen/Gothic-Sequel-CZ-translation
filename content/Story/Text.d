@@ -253,7 +253,7 @@ const STRING TXT_SPELLS	[MAX_SPELL]	=
 	"Strach",						// SPL_FEAR			=	3;
 	"Léčení",						// SPL_HEAL			=	4;
 	"n/a",							// SPL_LIGHTNING	=	5;
-	"Vyvolání démnoa",				// SPL_SUMMONDEMON	=	6;
+	"Vyvolání démona",				// SPL_SUMMONDEMON	=	6;
 	"Vyvolání kostlivce",			// SPL_SUMMONSKELETON=	7;
 	"n/a",							// SPL_FORGET		=	8;
 	"Větrná pěst",					// SPL_WINDFIST		=	9;
@@ -287,7 +287,7 @@ const STRING TXT_SPELLS	[MAX_SPELL]	=
 	"Proměna v chňapavce",			// SPL_TRF_SNAPPER	=	37;
 	"Proměna v ještěrku",			// SPL_TRF_WARAN	=	38;
 	"Proměna ve vlka",				// SPL_TRF_WOLF		=	39;
-	"Blesek",						// SPL_CHAINLIGHTNING=	40;
+	"Blesk",						// SPL_CHAINLIGHTNING=	40;
 	"Ledový šíp",					// SPL_THUNDERBOLT	=	41;
 	"Kulový blesk",					// SPL_THUNDERBALL	=	42;
 	"Ledový blok",					// SPL_ICECUBE		=	43;
@@ -320,7 +320,7 @@ const string	NAME_Transform		=   "n/a";							// SPL_TRANSFORM	=	2;
 const string	NAME_Fear			=	"Strach";						// SPL_FEAR			=	3;
 const string	NAME_Heal			=	"Léčení";						// SPL_HEAL			=	4;
 const string	NAME_Lightning		=   "n/a";							// SPL_LIGHTNING	=	5;
-const string	NAME_Summondemon	=   "Vyvolání démnoa";				// SPL_SUMMONDEMON	=	6;
+const string	NAME_Summondemon	=   "Vyvolání démona";				// SPL_SUMMONDEMON	=	6;
 const string	NAME_Summonskeleton	=   "Vyvolání kostlivce";			// SPL_SUMMONSKELETON=	7;
 const string	NAME_Forget			=   "n/a";							// SPL_FORGET		=	8;
 const string	NAME_Windfist		=	"Větrná pěst";					// SPL_WINDFIST		=	9;
@@ -390,7 +390,7 @@ CONST STRING TXT_TALENTS [NPC_TALENT_MAX] =
 //	"Bogen",                    // NPC_TALENT_BOW
 	"Luky",                     // NPC_TALENT_BOW
 //	"Armbrust",                 // NPC_TALENT_CROSSBOW
-	"Luš",                      // NPC_TALENT_CROSSBOW
+	"Kuš",                      // NPC_TALENT_CROSSBOW
 //	"Schloss knacken",	        // NPC_TALENT_PICKLOCK
 	"Otevírání zámků",	        // NPC_TALENT_PICKLOCK
 //	"Diebstahl",        		// NPC_TALENT_PICKPOCKET
@@ -956,7 +956,7 @@ const string	NAME_Nimrod					=	"Myslivecký luk"; // Opět podle G1.
 //const string	NAME_OrkHunter				=	"Orkhetzer";
 const string	NAME_OrkHunter				=	"Lovec skřetů";
 //const string	NAME_DemonBow				=	"Dämonenbogen";
-const string	NAME_DemonBow				=	"Démonský luk";
+const string	NAME_DemonBow				=	"Luk démona";
 //const string	NAME_DeathBringer			=	"Todbringer";
 const string	NAME_DeathBringer			=	"Smrtící luk"; // Opět podle G1, ale šlo by být i kreativní...
 
@@ -1012,15 +1012,15 @@ const string	NAME_BloodOre				=	" z krvavé rudy";
 const string	NAME_DarkOre				=	" z tmavé rudy";
 
 //const string	NAME_Smith_Melter			=	" einschmelzen";
-const string	NAME_Smith_Melter			=	" taví se";
+const string	NAME_Smith_Melter			=	" roztavit";
 //const string	NAME_Smith_Fire				=	" erhitzen";
-const string	NAME_Smith_Fire				=	" žhaví se";
+const string	NAME_Smith_Fire				=	" nažhavit";
 //const string	NAME_Smith_Anvil			=	" schmieden";
-const string	NAME_Smith_Anvil			=	" kovám";
+const string	NAME_Smith_Anvil			=	" ukovat";
 //const string	NAME_Smith_Cool				=	" abkühlen";
-const string	NAME_Smith_Cool				=	" kalí se";
+const string	NAME_Smith_Cool				=	" zakalit";
 //const string	NAME_Smith_Sharp			=	" schleifen";
-const string	NAME_Smith_Sharp			=	" brousím";
+const string	NAME_Smith_Sharp			=	" nabrousit";
 
 //const string	NAME_Smith_Ore_Done			=	" geschürft";
 const string	NAME_Smith_Ore_Done			=	" vytěženo";
@@ -1148,7 +1148,7 @@ const string	NAME_ManaPotion2			=	"Extrakt magické energie";
 //const string	NAME_ManaPotion3			=	"Elixier der Magie";
 const string	NAME_ManaPotion3			=	"Elixír magické energie";
 //const string	NAME_ManaPotionAll			=	"Trank der Magiewiderherstellung";
-const string	NAME_ManaPotionAll			=	"Letvar obnovy magické energie";
+const string	NAME_ManaPotionAll			=	"Lektvar obnovy magické energie";
 //const string	NAME_SpeedPotion1			=	"Essenz der Eile";
 const string	NAME_SpeedPotion1			=	"Esence spěchu";
 //const string	NAME_SpeedPotion2			=	"Extrakt der Eile";
@@ -1202,11 +1202,11 @@ const string	NAME_BookSpeedPotions		=	"Recepty na lektvary rychlosti";
 // Runen erschaffen
 // ***************************************************************************************
 //const string	NAME_BlankRune				=	"leere Rune";
-const string	NAME_BlankRune				=	"prázdná runa";
+const string	NAME_BlankRune				=	"čistá runa";
 //const string	NAME_BlankBloodRune			=	"leere Blutrune";
-const string	NAME_BlankBloodRune			=	"prázdná krvavá runa";
+const string	NAME_BlankBloodRune			=	"čistá krvavá runa";
 //const string	NAME_BlankDarkRune			=	"leere Dunkelrune";
-const string	NAME_BlankDarkRune			=	"prázdná tmavá runa";
+const string	NAME_BlankDarkRune			=	"čistá tmavá runa";
 //const string	NAME_RunePostfix			=	"-Rune";
 const string	NAME_RunePostfix			=	"-runa";
 
@@ -1378,7 +1378,7 @@ const string _STR_MESSAGE_MOBSI_COOL_MAT		=	"Žádný žhavý polotovar zbraně 
 //const string _STR_MESSAGE_MOBSI_SHARP_TAL		=	"Talent SCHMIEDEN nicht ausreichend!";
 const string _STR_MESSAGE_MOBSI_SHARP_TAL		=	"Nedostatečná úroveň kovářství!";
 //const string _STR_MESSAGE_MOBSI_SHARP_MAT		=	"kein abgekühlter Waffenrohling vorhanden!";
-const string _STR_MESSAGE_MOBSI_SHARP_MAT		=	"Žádný schlazený polotovar zbraně k dispozici!";
+const string _STR_MESSAGE_MOBSI_SHARP_MAT		=	"Žádný zchlazený polotovar zbraně k dispozici!";
 //const string _STR_MESSAGE_MOBSI_PAN_MAT			=	"kein Fleisch mehr vorhanden";
 const string _STR_MESSAGE_MOBSI_PAN_MAT			=	"Už žádné maso k dispozici";
 
@@ -1683,9 +1683,9 @@ const string NAME_LearnAlchemy_1	=	"Alchymie - Úroveň 1";
 const string NAME_LearnAlchemy_2	=	"Alchymie - Úroveň 2";
 const string NAME_LearnAlchemy_3	=	"Alchymie - Úroveň 3";
 
-const string NAME_LearnThaumaturgy_1=	"Výroba run -  Úroveň 1";
-const string NAME_LearnThaumaturgy_2=	"Výroba run -  Úroveň 2";
-const string NAME_LearnThaumaturgy_3=	"Výroba run -  Úroveň 3";
+const string NAME_LearnThaumaturgy_1=	"Výroba run - Úroveň 1";
+const string NAME_LearnThaumaturgy_2=	"Výroba run - Úroveň 2";
+const string NAME_LearnThaumaturgy_3=	"Výroba run - Úroveň 3";
 
 const string NAME_LearnBowmaker_1	=	"Výroba luků - Úroveň 1";
 const string NAME_LearnBowmaker_2	=	"Výroba luků - Úroveň 2";

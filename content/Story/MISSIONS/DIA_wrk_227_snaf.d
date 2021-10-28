@@ -117,7 +117,7 @@ instance WRK_227_Snaf_DAILYRAGOUT		(C_INFO)
 	permanent	 = 	TRUE;
 
 //	description	 = 	"Hast du etwas von der Fleischwanzensuppe für mich?";
-	description	 = 	"Neměl bys pro mě trochu polévky ze štěnic?";
+	description	 = 	"Neměl bys pro mě trochu polévky ze žravých štěnic?";
 };
 
 func int WRK_227_Snaf_DAILYRAGOUT_Condition ()
@@ -131,7 +131,7 @@ func int WRK_227_Snaf_DAILYRAGOUT_Condition ()
 func void WRK_227_Snaf_DAILYRAGOUT_Info ()
 {
 //	AI_Output			(hero, self, "WRK_227_DAILYRAGOUT_15_01"); //Hast du etwas Fleischwanzensuppe für mich?
-	AI_Output			(hero, self, "WRK_227_DAILYRAGOUT_15_01"); //Neměl bys pro mě trochu polévky ze štěnic?
+	AI_Output			(hero, self, "WRK_227_DAILYRAGOUT_15_01"); //Neměl bys pro mě trochu polévky ze žravých štěnic?
 
 	if	(Npc_GetTalentSkill(hero, NPC_TALENT_COOK) >= 1)
 	&&	Knows_RecipeMeatbug
@@ -333,7 +333,7 @@ func void WRK_227_Snaf_WHYNOTYOU_Info ()
 //	AI_Output			(self, hero, "WRK_227_WHYNOTYOU_09_02"); //Der Mistkerl lässt mich nichtmal in die Nähe seiner Küche!
 	AI_Output			(self, hero, "WRK_227_WHYNOTYOU_09_02"); //Ten parchant mi nedovolí se k jeho kuchyni ani přiblížit!
 //	AI_Output			(self, hero, "WRK_227_WHYNOTYOU_09_03"); //Aber wenn du mein Problem löst, zeig ich dir, wie man Fleischwanzensuppe zubereitet!
-	AI_Output			(self, hero, "WRK_227_WHYNOTYOU_09_03"); //Ale když můj problém vyřešíš, ukážu ti, jak připravovat polévku ze žravých štenic!
+	AI_Output			(self, hero, "WRK_227_WHYNOTYOU_09_03"); //Ale když můj problém vyřešíš, ukážu ti, jak připravovat polévku ze žravých štěnic!
 //	AI_Output			(hero, self, "WRK_227_WHYNOTYOU_15_04"); //Verstehe!
 	AI_Output			(hero, self, "WRK_227_WHYNOTYOU_15_04"); //Rozumím!
 };	
@@ -821,7 +821,7 @@ func void WRK_227_Snaf_HOWDY_Info ()
 //		AI_Output		(self, hero, "WRK_227_HOWDY_09_02"); //Das neue Rezept ist ein voller Erfolg. Für den Fleisch-Eintopf stehen sie sogar wieder Schlange.
 		AI_Output		(self, hero, "WRK_227_HOWDY_09_02"); //Nový recept má naprostý úspěch. Pro masnou polévku se už zase dokonce stojí fronty.
 //		AI_Output		(self, hero, "WRK_227_HOWDY_09_03"); //Danke nochmal für deine Hilfe, obwohl du mir bis heute nicht erzählt hast, WIE du an Halvor's Kochbuch gekommen bist!
-		AI_Output		(self, hero, "WRK_227_HOWDY_09_03"); //Ještě jednou ti děkuji za pomoc, ačkoliv jsi mi dodneška nevysvětlil, JAK jsi se dostal k Halvorově kuchařce!
+		AI_Output		(self, hero, "WRK_227_HOWDY_09_03"); //Ještě jednou ti děkuji za pomoc, ačkoliv jsi mi dodneška nevysvětlil, JAK ses dostal k Halvorově kuchařce!
 	}
 	else
 	{

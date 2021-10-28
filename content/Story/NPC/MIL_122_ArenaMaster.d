@@ -2,7 +2,7 @@ INSTANCE MIL_122_Arenamaster (C_NPC)
 // PlayerInstanz
 {
 	//-------- primary data	--------
-	name						=	"Arenameister";
+	name						=	"Mistr arény";
 	Npctype						=	NPCTYPE_MAIN;
 	guild						=	GIL_MILITIA;
 	level						=	35;

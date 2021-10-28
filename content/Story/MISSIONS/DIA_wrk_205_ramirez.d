@@ -96,7 +96,7 @@ func void Wrk_205_Ramirez_MISUNDERSTOOD_Info ()
 //	AI_Output			(hero, self, "WRK_205_MISUNDERSTOOD_15_04"); //Hmmm... kein Wunder das sie dich aus dem Weg haben wollten.
 	AI_Output			(hero, self, "WRK_205_MISUNDERSTOOD_15_04"); //Hmmm... to nepřekvapí, že tě chtěli odklidit z cesty.
 //	AI_Output			(self, hero, "WRK_205_MISUNDERSTOOD_09_05"); //Glücklicherwiese bin ich abgehauen, bevor sie zu mir gekommen sind.
-	AI_Output			(self, hero, "WRK_205_MISUNDERSTOOD_09_05"); //Naštěstí jsem jim unikl, než stihli ke mně přijít.
+	AI_Output			(self, hero, "WRK_205_MISUNDERSTOOD_09_05"); //Naštěstí jsem jim utekl, než ke mně stihli přijít.
 //	AI_Output			(self, hero, "WRK_205_MISUNDERSTOOD_09_06"); //Wenn du schlau bist, meidest du das Lager. Halte dich fern von diesem Rattennest.
 	AI_Output			(self, hero, "WRK_205_MISUNDERSTOOD_09_06"); //Kdo je chytrý, ten se táboru vyhýbá. Drž se dál od toho krysího hnízda.
 };
@@ -152,7 +152,7 @@ func void Wrk_205_Ramirez_CAMP_YES ()
 //	AI_Output			(self, hero, "WRK_205_CAMP_YES_09_02"); //Du weißt ja , wo du mich findest. Ach, noch eine Sache,...
 	AI_Output			(self, hero, "WRK_205_CAMP_YES_09_02"); //Víš, kde mě najdeš. Ach, ještě jedna věc,...
 //	AI_Output			(self, hero, "WRK_205_CAMP_YES_09_03"); //...wenn du wieder im Lager bist: Traue niemandem !!
-	AI_Output			(self, hero, "WRK_205_CAMP_YES_09_03"); //...až budeš v táboře: nikomu nevěř !!
+	AI_Output			(self, hero, "WRK_205_CAMP_YES_09_03"); //...až budeš v táboře: nikomu nevěř!!
 	Info_ClearChoices (Wrk_205_Ramirez_CAMP);
 };
 
@@ -226,7 +226,7 @@ func void Wrk_205_Ramirez_TRADE_Info ()
 	{
 
 //		Info_AddChoice	(Wrk_205_Ramirez_TRADE, " 5 Pfeile geben für 10 Stück Fleisch", Wrk_205_Ramirez_TRADE_5 );
-		Info_AddChoice	(Wrk_205_Ramirez_TRADE, " 5 Pfeile geben für 10 Stück Fleisch", Wrk_205_Ramirez_TRADE_5 );
+		Info_AddChoice	(Wrk_205_Ramirez_TRADE, " Dát 5 šípů za 10 kusů masa", Wrk_205_Ramirez_TRADE_5 );
 	};
 
 };
@@ -315,7 +315,7 @@ func void Wrk_205_Ramirez_TRADE_50 ()
 //		AI_Output			(hero, self, "WRK_205_TRADE_50_15_01"); //Hier habe ich fünfzig Pfeile für dich.
 //		AI_Output			(self, hero, "WRK_205_TRADE_50_09_02"); //Gut, ich gebe dir hundert Stücke Fleisch dafür.
 		AI_Output			(hero, self, "WRK_205_TRADE_50_15_01"); //Tady pro tebe mám padesát šípů.
-		AI_Output			(self, hero, "WRK_205_TRADE_50_09_02"); // Dobře, dám ti za to sto kusů masa.
+		AI_Output			(self, hero, "WRK_205_TRADE_50_09_02"); //Dobře, dám ti za to sto kusů masa.
 		B_Ramirez_ProceedTrade (NumArrows);
 	};
 	if (B_Ramirez_TradeCheck(NumArrows)== 2)
@@ -365,5 +365,5 @@ func void Wrk_205_Ramirez_NEWS_Info ()
 //	AI_Output			(hero, self, "Wrk_205_NEWS_15_01"); //Gibt's was Neues?
 	AI_Output			(hero, self, "Wrk_205_NEWS_15_01"); //Je něco nového?
 //	AI_Output			(self, hero, "Wrk_205_NEWS_00_02"); //Es gibt noch genug Wild zum Jagen und von den Orks ist weit und breit niemand zu sehen.
-	AI_Output			(self, hero, "Wrk_205_NEWS_00_02"); //V divočině je pořád co lovit a po skřetovi široko daleko ani stopy.
+	AI_Output			(self, hero, "Wrk_205_NEWS_00_02"); //V divočině je pořád co lovit a po skřetech široko daleko ani stopy.
 };

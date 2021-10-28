@@ -75,20 +75,20 @@ func void MIN_306_Grim_MYWEAPON_Info ()
 	AI_SetWalkmode		(self, NPC_RUN);
 	AI_GotoNpc			(self, hero);
 //	AI_Output			(self, hero, "MIN_306_Grim_MYWEAPON_Info_10_01"); //Hey, du hast dir meine Spitzhacke gekrallt!
-	AI_Output			(self, hero, "MIN_306_Grim_MYWEAPON_Info_10_01"); //Hej, ty jsi mi ukradl můj krumpáč!
+	AI_Output			(self, hero, "MIN_306_Grim_MYWEAPON_Info_10_01"); //Hej, tys mi ukradl můj krumpáč!
 
 	Info_ClearChoices	(MIN_306_Grim_MYWEAPON);
 //	Info_AddChoice		(MIN_306_Grim_MYWEAPON, "Du hast sie fallen gelassen, jetzt gehört sie mir!",	MIN_306_Grim_MYWEAPON_TAKEN );
-	Info_AddChoice		(MIN_306_Grim_MYWEAPON, "Upustil jsi ho a teď je můj!",					MIN_306_Grim_MYWEAPON_TAKEN );
-//	Info_AddChoice		(MIN_306_Grim_MYWEAPON, "Hier hast du sie zurück.",						MIN_306_Grim_MYWEAPON_GIVEBACK );
-	Info_AddChoice		(MIN_306_Grim_MYWEAPON, "Tady ho máš zpátky.",							MIN_306_Grim_MYWEAPON_GIVEBACK );
+	Info_AddChoice		(MIN_306_Grim_MYWEAPON, "Upustil jsi ho a teď je můj!",							MIN_306_Grim_MYWEAPON_TAKEN );
+//	Info_AddChoice		(MIN_306_Grim_MYWEAPON, "Hier hast du sie zurück.",								MIN_306_Grim_MYWEAPON_GIVEBACK );
+	Info_AddChoice		(MIN_306_Grim_MYWEAPON, "Tady ho máš.",											MIN_306_Grim_MYWEAPON_GIVEBACK );
 };
 
 func void MIN_306_Grim_MYWEAPON_GIVEBACK ()
 {
 	Info_ClearChoices		(MIN_306_Grim_MYWEAPON);
 //	AI_Output				(hero, self, "MIN_306_Grim_MYWEAPON_GIVEBACK_15_01"); //Hier hast du sie zurück.
-	AI_Output				(hero, self, "MIN_306_Grim_MYWEAPON_GIVEBACK_15_01"); //Tady ho máš zpátky.
+	AI_Output				(hero, self, "MIN_306_Grim_MYWEAPON_GIVEBACK_15_01"); //Tady ho máš.
 	B_GiveInvItems			(hero, self, ItMw_Grim_Pickaxe, 1);
 //	AI_Output				(self, hero, "MIN_306_Grim_MYWEAPON_GIVEBACK_10_02"); //(säuerlich) Dann kann es ja weitergehen!
 	AI_Output				(self, hero, "MIN_306_Grim_MYWEAPON_GIVEBACK_10_02"); //(kysele) Tak to tedy můžeme pokračovat!
@@ -331,7 +331,7 @@ instance	Info_Grim_CHALLENGE (C_INFO)
 	important		= FALSE;
 	permanent		= TRUE;
 //	description		= "Ich will in der Arena gegen dich kämpfen!";
-	description		= "Chtěl bych se proti tobě utkat v aréně!";
+	description		= "Chtěl bych se s tebou utkat v aréně!";
 };
 
 func int	Info_Grim_CHALLENGE_Condition()
@@ -352,7 +352,7 @@ func int	Info_Grim_CHALLENGE_Condition()
 func void	Info_Grim_CHALLENGE_Info()
 {
 //	AI_Output			(hero, self,"Info_Grim_CHALLENGE_15_01"); //Ich will in der Arena gegen dich kämpfen!
-	AI_Output			(hero, self,"Info_Grim_CHALLENGE_15_01"); //Chtěl bych se proti tobě utkat v aréně!
+	AI_Output			(hero, self,"Info_Grim_CHALLENGE_15_01"); //Chtěl bych se s tebou utkat v aréně!
 
 	if	!Npc_HasItems(self, ItMw_Grim_Pickaxe)
 	{
@@ -491,7 +491,7 @@ func void	Info_Grim_WEAPON_Info()
 		AI_ReadyMeleeWeapon(self);
 	};
 //	AI_Output			(self, hero,"Info_Grim_WEAPON_10_02"); //Mit dieser Spitzhacke habe ich jahrelang Erz geschürft, die ist quasi mit meinem Körper verwachsen.
-	AI_Output			(self, hero,"Info_Grim_WEAPON_10_02"); //Tímto krumpáčem jsem roku kutal rudu, téměř jsem s ním srostl!
+	AI_Output			(self, hero,"Info_Grim_WEAPON_10_02"); //Tímto krumpáčem jsem roky kutal rudu, téměř jsem s ním srostl!
 	if	Npc_HasItems	(self, ItMw_Grim_Pickaxe)
 	{
 		AI_RemoveWeapon	(self);

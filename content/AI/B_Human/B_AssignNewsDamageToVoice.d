@@ -62,11 +62,14 @@ FUNC void  Attacker_ANGRY_Info()
 
 	var string string_buildChoice;
 
-	string_buildChoice = ConcatStrings ("Tut mir leid! (", B_SilverAmountToSatisfy_String ());
-	string_buildChoice = ConcatStrings (string_buildChoice,"Silber geben)");
+//	string_buildChoice = ConcatStrings ("Tut mir leid! (", B_SilverAmountToSatisfy_String ());
+	string_buildChoice = ConcatStrings ("To mě mrzí! (dát", B_SilverAmountToSatisfy_String ());
+//	string_buildChoice = ConcatStrings (string_buildChoice,"Silber geben)");
+	string_buildChoice = ConcatStrings (string_buildChoice," stříbra)");
 
 	Info_AddChoice (Attacker_Angry, string_buildChoice, Attacker_Angry_Lieb);
-	Info_AddChoice (Attacker_Angry,"(ignorieren)"	,Attacker_Angry_HauAb);
+//	Info_AddChoice (Attacker_Angry,"(ignorieren)"	,Attacker_Angry_HauAb);
+	Info_AddChoice (Attacker_Angry,"(ignorovat)"	,Attacker_Angry_HauAb);
 };
 
 
@@ -94,7 +97,8 @@ func void Attacker_Angry_Lieb ()
 	else
 	{
 		var string string_choice;
-		string_choice = ConcatStrings ("Nicht genug Silber, ich will ",B_SilverAmountToSatisfy_String ());
+//		string_choice = ConcatStrings ("Nicht genug Silber, ich will ",B_SilverAmountToSatisfy_String ());
+		string_choice = ConcatStrings ("Nemáš dost stříbra, chci ",B_SilverAmountToSatisfy_String ());
 		PrintScreen	(string_choice, -1,_YPOS_MESSAGE_GIVEN,FONT_OLD_SMALL,_TIME_MESSAGE_GIVEN);
 	};
 

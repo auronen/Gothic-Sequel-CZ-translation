@@ -53,7 +53,7 @@ func void PC_Mage_WELCOME_Info ()
 //	AI_Output			(hero, self, "PC_Mage_WELCOME_15_04"); //Naja, ich hab den Schläfer verbannt, lag ein halbes Jahr unter Felstrümmern begraben, 
 	AI_Output			(hero, self, "PC_Mage_WELCOME_15_04"); //Nojo... vyhnal jsem Spáče a ležel jsem půl roku pod kamením,
 // 	AI_Output			(hero, self, "PC_Mage_WELCOME_15_05"); //und als ich schliesslich gerettet werde, erfahre ich, das wir von Orks umzingelt sind und Dämonen unterwegs sind. 
- 	AI_Output			(hero, self, "PC_Mage_WELCOME_15_05"); //a když jsme byl konečně zachráněn, tjistil jsem, že jsem obleženi skřety a že démoni jsou na cestě.
+ 	AI_Output			(hero, self, "PC_Mage_WELCOME_15_05"); //a když jsme byl konečně zachráněn, zjistil jsem, že jsme obleženi skřety a že démoni jsou na cestě.
 //	AI_Output			(self, hero, "PC_Mage_WELCOME_02_06"); //Du steckst mal wieder mittendrin. 
 	AI_Output			(self, hero, "PC_Mage_WELCOME_02_06"); //Už jsi zase v tom, že?
 //	AI_Output			(hero, self, "PC_Mage_WELCOME_15_07"); //So sieht's aus. Und jetzt brauche ich deine Hilfe.
@@ -140,7 +140,7 @@ func void PC_Mage_KDF_Info ()
 //	AI_Output			(hero, self, "PC_Mage_KDF_15_05"); //Genau deshalb will ich mit ihnen sprechen. Ich muss wissen was sie planen.
 	AI_Output			(hero, self, "PC_Mage_KDF_15_05"); //Přesně proto s nimi chci mluvit. Musím vědět, co plánují.
 //	AI_Output			(self, hero, "PC_Mage_KDF_02_06"); //Dann solltest du mit Catmaol sprechen, dem Berater des Königs. Er hält sich im Thronsaal auf. 
-	AI_Output			(self, hero, "PC_Mage_KDF_02_06"); //Pak by sis měl promluvit s Catmaolem, královým rádcemZdržuje se v trůnním sále.
+	AI_Output			(self, hero, "PC_Mage_KDF_02_06"); //Pak by sis měl promluvit s Catmaolem, královým rádcem. Zdržuje se v trůnním sále.
 //	AI_Output			(self, hero, "PC_Mage_KDF_02_07"); //Aber nur wer sich als loyal und fähig erwiesen hat, bekommt das Recht den Thronsaal zu betreten. 
 	AI_Output			(self, hero, "PC_Mage_KDF_02_07"); //Do trůnního sálu ale smí pouze ti, co se prokázali jako schopní a loajální.
 

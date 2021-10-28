@@ -55,13 +55,13 @@ FUNC void Use_Xardas_Letter()
 				Doc_PrintLine	(nDocID,  0, "Diego");
 				Doc_PrintLine	(nDocID,  0, "");
 //				Doc_PrintLines	(nDocID,  0, "Die dämonischen Mächte bereiten die Rückkehr des Schläfers vor! Verschanzt in der Bergfeste, mit den Paladinen und dem König, wollen die Feuermagier die Gefahr abzuwenden. Doch sie haben nichts bewirkt. Grenzenloser Hochmut macht sie blind.");
-				Doc_PrintLines	(nDocID,  0, "Mocnosti zla připravují Spáčův návrat! Mágové ohně, kteří sídlí v Horské pevnosti, společně s paladiny a králem, se snaží toto nebezpečí odvrátit. Doteď ale nic nepodnikli. Jejich neomezená pýcha je zaslepila!");
+				Doc_PrintLines	(nDocID,  0, "Mocnosti zla připravují Spáčův návrat! Mágové ohně, kteří sídlí v Horské pevnosti, společně s paladiny a králem, se snaží toto nebezpečí odvrátit. Doteď ale nic nepodnikli. Jsou zaslepeni svou neomezenou pýchou!");
 				Doc_PrintLine	(nDocID,  0, "");
 //				Doc_PrintLines	(nDocID,  0, "Wie du siehst, ist der Zerstörer der Barriere nicht tot. Er war im Tempel verschüttet, ohne Bewusstsein, lange Zeit. Schwach und untrainiert habe ich ihn zu dir geschickt. Ein Schatten seiner selbst. Doch ist er unsere einzige Hoffnung den Schläfer endgültig zu vernichten!");
-				Doc_PrintLines	(nDocID,  0, "Jak vidíš, ten, který strhnul Bariéru není mrtev. Byl dlouho v bezvědomí, pohřben ve skřetím chrámu. Posílám ho k tobě slabého a netrénovaného. Je pouze stínem svého dřívejšího já, ale je naše jediná naděje, jak zničit Spáče!");
+				Doc_PrintLines	(nDocID,  0, "Jak vidíš, ten, který strhnul Bariéru není mrtev. Byl dlouho v bezvědomí, pohřben ve skřetím chrámu. Posílám ho k tobě slabého a netrénovaného. Je pouze stínem svého dřívějšího já, ale je naše jediná naděje, jak zničit Spáče!");
 				Doc_PrintLine	(nDocID,  0, "");
 //				Doc_PrintLines	(nDocID,  0, "Schicke ihn mit dieser Nachricht zu den Feuermagiern, sobald er bereit ist. Er wird ihnen helfen, den richtigen Weg zu erkennen!");
-				Doc_PrintLines	(nDocID,  0, "Pošli ho s tímto listem k Mágům ohně do Hroské pevnosti. Pomůže jim najít správný způsob, jak zapudit spáče nadobro!");
+				Doc_PrintLines	(nDocID,  0, "Pošli ho s tímto listem k Mágům ohně do Horské pevnosti. Pomůže jim najít správný způsob, jak zapudit spáče nadobro!");
 				Doc_PrintLine	(nDocID,  0, "");
 				Doc_PrintLine	(nDocID,  0, "               Xardas");
 				Doc_Show		(nDocID);
@@ -498,8 +498,8 @@ INSTANCE ItWr_HalvorRecipe (C_Item)
 //	TEXT[2]					= "Reihe schmackhafter Rezepte";
 //	TEXT[3]					= "aus Fleisch.";
 	TEXT[1]					= "Halvorova kuchařka s celou";
-	TEXT[2]					= "řadou výtečných receptů";
-	TEXT[3]					= "z masa.";
+	TEXT[2]					= "řadou výtečných masových receptů.";
+//	TEXT[3]					= "z masa.";
 	TEXT[5]					= NAME_Value;
 	COUNT[5]				= value;
 	on_state[0]				= UseItWr_Recipe_Meat;
@@ -793,7 +793,7 @@ INSTANCE ItWr_Phoenix1(C_Item)
 					Doc_PrintLines	(nDocID,  0, "Bouře se blíží. Vím to a přesto s ní nemohu bojovat. Sám jsem jí pomohl k moci a sám jsem se v její kráse vyhříval. Nyní se však smlouva s bouří stala smlouvou s ďáblem a moje duše je zatracena!");
 					Doc_PrintLine	(nDocID,  0, "");
 //					Doc_PrintLines	(nDocID,  0, "Doch das Feuer wird weiterbestehen, muss weiterbestehen. Sein  Wissen wird sich erheben wie ein Phoenix aus der Asche. Derjenige, der gewillt ist, der Spur des Phoenix zu folgen, wird die Wiederauferstehung des Wissens über das Feuer erleben.");
-					Doc_PrintLines	(nDocID,  0, "Ale Oheň bude planout dál, musí! Jeho znalosti poastnou jako Fénix z popela. Ten, kdo je ochcoten následovat stopu Fénixe, zažije vzkříšení poznání Ohně.");
+					Doc_PrintLines	(nDocID,  0, "Ale Oheň bude planout dál, musí! Jeho znalosti povstanou jako Fénix z popela. Ten, kdo je ochoten následovat stopu Fénixe, zažije vzkříšení poznání Ohně.");
 
 					//2.Seite
 					Doc_SetMargins	(nDocID, -1, 30, 20, 275, 20, 1  		);  //  0 -> margins are in pixels (Position des Textes von den Ränder des TGAs aus, links,oben,rechts,unten)
@@ -807,7 +807,7 @@ INSTANCE ItWr_Phoenix1(C_Item)
 					Doc_PrintLine	(nDocID,  1, "");
 					Doc_PrintLine	(nDocID,  1, "");
 //					Doc_PrintLines	(nDocID,  1, "Die Spur des Phoenix beginnt in den tiefsten Tiefen seines runden Hortes. Dort, wo der Bund mit dem Sturm begann liegt die Asche des Phoenix begraben.");
-					Doc_PrintLines	(nDocID,  1, "Fénixova pouť začíná v nejhlubších hlubinách jeho kulatého útočiště. Tam, kde začla smouva s bouří, leží pohřben Popel Fénixe.");
+					Doc_PrintLines	(nDocID,  1, "Fénixova pouť začíná v nejhlubších hlubinách jeho kulatého útočiště. Tam, kde začala smlouva s bouří, leží pohřben Popel Fénixe.");
 					Doc_Show		(nDocID );
 
 		if (Phoenix_State == 0)
@@ -815,7 +815,7 @@ INSTANCE ItWr_Phoenix1(C_Item)
 			Log_CreateTopic			(CH1_Phoenix,		LOG_MISSION);
 			Log_SetTopicStatus		(CH1_Phoenix,		LOG_RUNNING);
 //			B_LogEntry				(CH1_Phoenix,		"Offensichtlich ahnte der oberste Feuermagier Corristo, dass ihm übles wiederfahren wird, und hat eine rätselhafte 'Spur des Phoenix' gelegt. Am Ende dieser Spur soll das 'Wissen des Feuers' zu finden sein, was immer der ermordete Zauberer auch damit meinte.");
-			B_LogEntry				(CH1_Phoenix,		"Je zřejmé, že nejvyyší mág Ohně Corristo měl podezření, že se mu něco špatného přihodí a připravil záhadnou 'Fénixovu pouť'. Na konci cesty by měla být k nalezení 'znalost Ohně', ať tím zavražděný mág myslel cokoliv.");
+			B_LogEntry				(CH1_Phoenix,		"Je zřejmé, že nejvyšší mág Ohně Corristo měl podezření, že se mu něco špatného přihodí a připravil záhadnou 'Fénixovu pouť'. Na konci cesty by měla být k nalezení 'znalost Ohně', ať tím zavražděný mág myslel cokoliv.");
 			Wld_InsertItem			(ItWr_Phoenix2,		"FP_SPAWN_PHOENIX_2");
 
 			Phoenix_State = 1;
@@ -869,10 +869,10 @@ INSTANCE ItWr_Phoenix2(C_Item)
 					Doc_SetFont 	( nDocID, -1, FONT_BOOK_SMALL	 		); 	// -1 -> all pages
 					Doc_PrintLine	( nDocID,  0, "");
 //					Doc_PrintLines	( nDocID,  0, "Einst, als ich den Kindern des Sturmes zur Macht verhalf, fegten sie ihre Unterdrücker hinweg. Doch ihre Grausamkeit stand der, der Unterdrücker in nichts nach.");
-					Doc_PrintLines	( nDocID,  0, "Jednou, když jsem pomohl dětem bouře k moci, smetly své utiskovatele. Jejich krutost vša nebyla větší než krutost jejich utlačovatelů.");
+					Doc_PrintLines	( nDocID,  0, "Jednou, když jsem pomohl dětem bouře k moci, smetly své utiskovatele. Jejich krutost však nebyla větší než krutost jejich utlačovatelů.");
 					Doc_PrintLine	( nDocID,  0, "");
 //					Doc_PrintLines	( nDocID,  0, "Sie raubten, mordeten und trieben die Schwachen zu unwürdiger Arbeit.");
-					Doc_PrintLines	( nDocID,  0, "Okrádali, vraždili a hnali slabé k nedůstojné práci.");
+					Doc_PrintLines	( nDocID,  0, "Okrádaly, vraždily a hnaly slabé k nedůstojné práci.");
 
 
 
@@ -947,7 +947,7 @@ INSTANCE ItWr_Phoenix3(C_Item)
 					Doc_SetFont 	( nDocID, -1, FONT_BOOK_SMALL	 		); 	// -1 -> all pages
 					Doc_PrintLine	( nDocID,  0, "");
 //					Doc_PrintLines	( nDocID,  0, "Die Kinder des Sturms wurden zu den neuen Unterdrückern und die Macht des Feuers stärkte sie. Nichts war vor der Gier des Sturms sicher.");
-					Doc_PrintLines	( nDocID,  0, "Děti bouře se stali novými utiskovateli a moc Ohně je posilovala. Před chamtivostí bouře nebylo nic v bezpečí.");
+					Doc_PrintLines	( nDocID,  0, "Děti bouře se staly novými utiskovateli a moc Ohně je posilovala. Před chamtivostí bouře nebylo nic v bezpečí.");
 					Doc_PrintLine	( nDocID,  0, "");
 //					Doc_PrintLines	( nDocID,  0, "Schon bald versammelten sich die Unzufriedenen und verliessen den Hort. Sie wurden von der Weisheit des Wassers hinfortgetragen und von seiner Macht beschützt.");
 					Doc_PrintLines	( nDocID,  0, "Nespokojení se brzy shromáždili a opustili útočiště. Byli ovlivněni moudrostí Vody a chráněni její silou.");
@@ -1028,10 +1028,10 @@ INSTANCE ItWr_Phoenix4(C_Item)
 					Doc_SetFont 	( nDocID, -1, FONT_BOOK_SMALL	 		); 	// -1 -> all pages
 					Doc_PrintLine	( nDocID,  0, "");
 //					Doc_PrintLines	( nDocID,  0, "So errichteten Die Kinder des Sturmes um sich herum hohe Dämme um sich vor den Wogen des Wassers zu schützen. Sie hielten Ausschau nach ihren einstigen Leidensgenossen und trieben die Verbliebenen erbarmungslos zu harter Arbeit.");
-					Doc_PrintLines	( nDocID,  0, "Tak si děti bouře kolem sebe vystavěly vysoké přehrady, aby se ochránili před vlnami Vody. Dohlíželi na své bývalé druhy a nemilosrdně hnali ty, kteří zůstali, do tvrdé práce.");
+					Doc_PrintLines	( nDocID,  0, "Tak si děti bouře kolem sebe vystavěly vysoké přehrady, aby se ochránily před vlnami Vody. Dohlíželi na své bývalé druhy a nemilosrdně hnaly ty, kteří zůstali, do tvrdé práce.");
 					Doc_PrintLine	( nDocID,  0, "");
 //					Doc_PrintLines	( nDocID,  0, "Der anfänglich so reine Sturm der Gerechtigkeit wandelte sein Gesicht und wurde schlimmer als das, was er einst ersetzte.");
-					Doc_PrintLines	( nDocID,  0, "Bouře spravedlnosti, která byla zpočátku tak čistá, změnila tvář a stala se horší než to, co nahradila");
+					Doc_PrintLines	( nDocID,  0, "Bouře spravedlnosti, která byla zpočátku tak čistá, změnila tvář a stala se horší než to, co nahradila.");
 
 
 
@@ -1054,7 +1054,7 @@ INSTANCE ItWr_Phoenix4(C_Item)
 		{
 			B_GiveXP			(XP_Phoenix4);
 //			B_LogEntry			(CH1_Phoenix,		"Das vierte Buch von der 'Spur des Phoenix' wird immer rätselhafter. Es spricht davon, dass man auf einem Damm Ausschau halten soll, um die 'Sehnsucht des Phoenix' erblicken zu können.");
-			B_LogEntry			(CH1_Phoenix,		"Čtvrtá kniha Fénixovy touhy je ještě záhadnější. Píše se tam, že se člověk musí podívat na přehradu, abyc viděl Fénicovu touhu.");
+			B_LogEntry			(CH1_Phoenix,		"Čtvrtá kniha Fénixovy touhy je ještě záhadnější. Píše se tam, že se člověk musí podívat na přehradu, aby viděl Fénixovu touhu.");
 			Wld_InsertItem		(ItWr_Phoenix5,		"FP_SPAWN_PHOENIX_5");
 
 			Phoenix_State = 4;
@@ -1107,7 +1107,7 @@ INSTANCE ItWr_Phoenix5(C_Item)
 					Doc_SetFont 	( nDocID, -1, FONT_BOOK_SMALL	 		); 	// -1 -> all pages
 					Doc_PrintLine	( nDocID,  0, "");
 //					Doc_PrintLines	( nDocID,  0, "Zuerst versteckten sich die Kinder des Wassers, die aus dem Hort flohen. Sie suchten Zuflucht in versteckten Höhlen, doch schon bald fanden sie einen eigenen Hort, der sie vor dem Zorn des Sturms schützte. ");
-					Doc_PrintLines	( nDocID,  0, "Nejprve se schovaly děti Vody, kteří odešli z útočiště. Hledali útočiště v ukrytých jeskyních, než si našli vlastní útočiště, které by je chránilo před hněvem bouře.");
+					Doc_PrintLines	( nDocID,  0, "Nejprve se schovaly děti Vody, které odešly z útočiště. Hledaly útočiště v ukrytých jeskyních, než si našly vlastní útočiště, které by je chránilo před hněvem bouře.");
 
 
 
@@ -1121,7 +1121,7 @@ INSTANCE ItWr_Phoenix5(C_Item)
 					Doc_PrintLine	( nDocID,  1, "");
 					Doc_PrintLine	( nDocID,  1, "");
 //					Doc_PrintLines	( nDocID,  1, "Nicht alle Höhlen kann man trockenen Fusses betreten. Doch genau diese Höhlen sind oft die besten Verstecke. Der feurige Phoenix hasst solche Höhlen, hat er doch Angst vor dem fliessenden Element. Solche Höhlen sind der Alptraum des Phoenix.");
-					Doc_PrintLines	( nDocID,  1, "Do všechn jeskyní nelze vstoupit suchou nohou. Ale právě tyto jeskyně jsou nejčastěji nejlepšími úkryty. Ohnivý Fénix takové jeskyně nenívidí protože se bojí tekoucího živlu. Takové jeskyně jsou Fénixovou noční můrou. ");
+					Doc_PrintLines	( nDocID,  1, "Ne do všech jeskyní lze vstoupit suchou nohou. Ale právě tyto jeskyně jsou nejčastěji nejlepšími úkryty. Ohnivý Fénix takové jeskyně nenávidí protože se bojí tekoucího živlu. Takové jeskyně jsou Fénixovou noční můrou. ");
 					Doc_Show		( nDocID );
 
 		if (Phoenix_State == 4)
@@ -1182,7 +1182,7 @@ INSTANCE ItWr_Phoenix6(C_Item)
 					Doc_SetFont 	( nDocID, -1, FONT_BOOK_SMALL	 		); 	// -1 -> all pages
 					Doc_PrintLine	( nDocID,  0, "");
 //					Doc_PrintLines	( nDocID,  0, "Schon bald riss der Schnabel des Sturmes aufs neue Fleisch aus seiner eigenen Seite und dieses Fleisch wurde zu den Kindern des Geistes. Sie versteckten sich in felsigen Höhlen, bevor sie ein eigenen Hort inmitten von Schlamm und Ungeziefer gründeten.");
-					Doc_PrintLines	( nDocID,  0, "Již brzy vytrhne zobák bouře nový kousek masa se svých vlastních řad. Z těchto se stanou děti Ducha. Budou se schovávají ve skalních jeskyních a poté si mezi bahnem a hmyzem najdou vlastní útočiště.");
+					Doc_PrintLines	( nDocID,  0, "Již brzy vytrhne zobák bouře nový kousek masa se svých vlastních řad. Z těchto se stanou děti Ducha. Schovávají ve skalních jeskyních a poté si mezi bahnem a hmyzem najdou vlastní útočiště.");
 					Doc_PrintLine	( nDocID,  0, "");
 //					Doc_PrintLines	( nDocID,  0, "Dies war die Geburts- stunde unseres eigenen Untergangs, denn die Macht des Geistes erschütterte das Gefüge der Welt.");
 					Doc_PrintLines	( nDocID,  0, "To byla hodina našeho vlastního pádu, protože síla Ducha otřásla samotnou magickou strukturou světa.");
@@ -1202,14 +1202,14 @@ INSTANCE ItWr_Phoenix6(C_Item)
 					Doc_PrintLine	( nDocID,  1, "");
 					Doc_PrintLine	( nDocID,  1, "");
 //					Doc_PrintLines	( nDocID,  1, "Der Phoenix zieht seine Jungen in einem Felsennest in luftiger Höhe auf. Dort wo kein Weg hinführt, brennt das feurige Nest des Phoenix.");
-					Doc_PrintLines	( nDocID,  1, "Fénix vychovává svá mláďata ve sklaním hnízdě v nesmírných výškách. Tam, kde není žádná cesta, hoří ohnivé hnízdo Fénixe.");
+					Doc_PrintLines	( nDocID,  1, "Fénix vychovává svá mláďata ve skalním hnízdě v nesmírných výškách. Tam, kde není žádná cesta, hoří ohnivé hnízdo Fénixe.");
 					Doc_Show		( nDocID );
 
 		if (Phoenix_State == 5)
 		{
 			B_GiveXP				(XP_Phoenix6);
 //			B_LogEntry				(CH1_Phoenix,		"Das sechste Buch von der 'Spur des Phoenix' spricht von einem 'brennenden Felsennest in luftiger Höhe', dem Nest des Phoenix.");
-			B_LogEntry				(CH1_Phoenix,		"Šestá kniha 'Feniovy pouti' hovoří o hořícím sklaním hnízdu v nesmírné výšce, o Hnízdu Fénixe.");
+			B_LogEntry				(CH1_Phoenix,		"Šestá kniha 'Fénixovy pouti' hovoří o hořícím skalním hnízdě v nesmírné výšce, o Hnízdu Fénixe.");
 
 			Wld_InsertItem			(ItWr_Phoenix7,		"FP_SPAWN_PHOENIX_7");
 			Wld_SetObjectRoutine 	(00,00,"FIRE_OW_PHOENIX_NEST",1);
@@ -1284,7 +1284,7 @@ INSTANCE ItWr_Phoenix7(C_Item)
 					Doc_PrintLine	( nDocID,  1, "");
 					Doc_PrintLine	( nDocID,  1, "");
 //					Doc_PrintLines	( nDocID,  1, "Neigen sich die Tage eines Phoenix seinem Ende, so lässt er sich am höchsten Ort seines Hortes nieder und erwartet das Unausweichliche. Er erwartet dort den Tod des Phoenix.");
-					Doc_PrintLines	( nDocID,  1, "Když se blíží Fénoxovy poslední dny, usadí se na nejvyšším místě svého útočiště a čeká na nevyhnutelné. Čeká tam na Smrt Fénixe.");
+					Doc_PrintLines	( nDocID,  1, "Když se blíží Fénixovy poslední dny, usadí se na nejvyšším místě svého útočiště a čeká na nevyhnutelné. Čeká tam na Smrt Fénixe.");
 					Doc_Show		( nDocID );
 
 		if (Phoenix_State == 6)
@@ -1345,10 +1345,10 @@ INSTANCE ItWr_Phoenix8(C_Item)
 					Doc_SetFont 	( nDocID, -1, FONT_BOOK_SMALL	 		); 	// -1 -> all pages
 					Doc_PrintLine	( nDocID,  0, "");
 //					Doc_PrintLines	( nDocID,  0, "Das Gefüge der Welt bebte. Erst langsam und schwach, dann immer öfter und immer heftiger. Das Ende ist nah, dessen bin ich mir sicher. Weder Sturm noch Wasser noch Geist erkennen es. Doch das Feuer weiss um die Wahrheit.");
-					Doc_PrintLines	( nDocID,  0, "MAgická struktura světa se otřísla. Nejprve pomalu a slabě a potom stále častěji a silněji. Konec je blízko, jsem si tím jist. Ani bouře, ani voda, ani duch to nerozeznali.");
+					Doc_PrintLines	( nDocID,  0, "Magická struktura světa se otřásla. Nejprve pomalu a slabě a potom stále častěji a silněji. Konec je blízko, jsem si tím jist. Ani Bouře, ani Voda, ani Duch to nerozeznali.");
 					Doc_PrintLine	( nDocID,  0, "");
 //					Doc_PrintLines	( nDocID,  0, "Es muss weiterbestehen. Es war immer so. Es wird immer so sein.");
-					Doc_PrintLines	( nDocID,  0, "Musí to pokračovat, vždy to tak bylo, vžy to tak bude.");
+					Doc_PrintLines	( nDocID,  0, "Musí to pokračovat, vždy to tak bylo, vždy to tak bude.");
 
 
 
@@ -1364,14 +1364,14 @@ INSTANCE ItWr_Phoenix8(C_Item)
 					Doc_PrintLine	( nDocID,  1, "");
 					Doc_PrintLine	( nDocID,  1, "");
 //					Doc_PrintLines	( nDocID,  1, "Das Leben des Phoenix ist ein immerwährender Kreislauf. Er kehrt stets dorthin zurück, wo er einst begonnen hat, um sich aus der Asche wieder zu neuem Leben zu erheben. Dies ist die Auferstehung des Phoenix.");
-					Doc_PrintLines	( nDocID,  1, "Život Fénixe je nekonečný cyklus. Vždy se vrací tam, kde to začalo, aby povstal z popela do nového života. Toto je vzkříšení Fénixe.");
+					Doc_PrintLines	( nDocID,  1, "Život Fénixe je nekonečný cyklus. Vždy se vrací tam, kde to začalo, aby povstal z popela do nového života. Toto je Vzkříšení Fénixe.");
 					Doc_Show		( nDocID );
 
 		if (Phoenix_State == 7)
 		{
 			B_GiveXP			(XP_Phoenix8);
 //			B_LogEntry			(CH1_Phoenix,		"Das achte Buch klingt wie der Abschluss der 'Spur des Phoenix'. Nur ist dieser Hinweis der rätselhafteste von allen.");
-			B_LogEntry			(CH1_Phoenix,		"Vypadá to, že osmá kniha je záverem 'Fénixovy pouti'. Tato nápověda je ze všech nejzáhadnější.");
+			B_LogEntry			(CH1_Phoenix,		"Vypadá to, že osmá kniha je závěrem 'Fénixovy pouti'. Tato hádanka je ze všech nejzáhadnější.");
 
 			Phoenix_State = 8;
 		};
@@ -1423,7 +1423,7 @@ INSTANCE ItWr_PhoenixCheat(C_Item)
 					Doc_SetFont 	( nDocID, -1, FONT_BOOK_SMALL	 		); 	// -1 -> all pages
 					Doc_PrintLine	( nDocID,  0, "");
 //					Doc_PrintLines	( nDocID,  0, "Wer keine Lust hat, nach allen 8 Phoenix-Büchern zu suchen, der muss es auch nicht.");
-					Doc_PrintLines	( nDocID,  0, "Kdo nemá chuť hledat všech osm Fénixových knich, nemusí.");
+					Doc_PrintLines	( nDocID,  0, "Kdo nemá chuť hledat všech osm Fénixových knih, nemusí.");
 					Doc_PrintLine	( nDocID,  0, "");
 //					Doc_PrintLines	( nDocID,  0, "Dieses Buch schaltet die Geheime Kammer auch sofort frei.");
 					Doc_PrintLines	( nDocID,  0, "Tato kniha okamžitě odemkne tajnou komnatu.");
@@ -1503,7 +1503,7 @@ INSTANCE ItFo_Placebo(C_Item)
 //	TEXT[2]			=	"zutrauen könnte.";
 	TEXT[0]			=	"Tahle tekutina je tak čistá a jasná,";
 	TEXT[1]			=	"že by jeden mohl uvěřit, ";
-	TEXT[2]			=	"že má všechny možné schopnosti.";
+	TEXT[2]			=	"že má všelijaké možné schopnosti.";
 };
 
 //---------------------------------------------------------------------
@@ -1635,7 +1635,7 @@ INSTANCE ItWr_Gods(C_Item)
 
 	description			=	name;
 //	TEXT[1]				=	"Sieht aus, wie eine Abschrift aus einem Buch";
-	TEXT[1]				=	"Vypadá to jako opis nějaké knihy.";
+	TEXT[1]				=	"Vypadá to jako kopie stránky z nějaké knihy.";
 
 };
 
@@ -1720,7 +1720,7 @@ FUNC void Use_ItWr_Palgur()
 //				Doc_PrintLines	(nDocID,  0, "Die Tränke habe ich dort versteckt, wo viele hergehen, aber niemand bleibt.");
 				Doc_PrintLines	(nDocID,  0, "Lektvary jsem ukryl tam, kam hodně lidí chodí, ale nikdo nezůstává.");
 //				Doc_PrintLines	(nDocID,  0, "Nur als reine Vorsichtsmassnahme. Wer weiß denn schon, was uns noch alles bevorsteht.");
-				Doc_PrintLines	(nDocID,  0, "Čistě jen jako preventinvní opatření. Kdo ví, co máme ještě před sebou.");
+				Doc_PrintLines	(nDocID,  0, "Čistě jen jako preventivní opatření. Kdo ví, co máme ještě před sebou.");
 //				Doc_PrintLines	(nDocID,  0, "Talamon ist viel zu sehr mit seinen Forschungen beschäftigt, und Isgar ist nur darauf aus Silber zu kassieren, ");
 				Doc_PrintLines	(nDocID,  0, "Talmon je příliš zabraný do svého výzkumu a Isgar je tu jen proto, aby inkasoval stříbro, ");
 //				Doc_PrintLines	(nDocID,  0, " als das sie an Massnahmen für den Fall eines Angriffes denken.");
@@ -1777,7 +1777,7 @@ FUNC void Use_ItWr_Worker()
 //				Doc_PrintLines	(nDocID,  0, "Innos sei Dank, zumindest haben wir es ins Lager geschafft. Der König ist ebenfalls hier im Tal. Das gibt vielen hier Mut und Kraft. ");
 				Doc_PrintLines	(nDocID,  0, "Díky bohu jsme to se včas dostali do tábora. Král je také tady v údolí. To dává mnohým naději a sílu.");
 //				Doc_PrintLines	(nDocID,  0, "Aber es gibt noch viel zu tun. Wir müssen den Wall wieder aufbauen, um uns vor den Orks zu schützen.");
-				Doc_PrintLines	(nDocID,  0, "Stále je vša třeba hodně udělat. Musíme znovu postavit zeď, abychom se mohli skřetům ubránit.");
+				Doc_PrintLines	(nDocID,  0, "Stále je však třeba hodně udělat. Musíme znovu postavit zeď, abychom se mohli skřetům ubránit.");
 				Doc_PrintLines	(nDocID,  0, "");
 
 				Doc_Show		(nDocID);

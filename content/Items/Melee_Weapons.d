@@ -1365,8 +1365,8 @@ INSTANCE ItMw_Diego_Sword	(C_Item)
 	description			=	name;
 //	TEXT[0]				=	"Diego's Langschert ist schlicht aber";
 //	TEXT[1]				=	"präzise. Die Waffe eines Meisters.";
-	TEXT[0]				=	"Diegův dlouhý meč je jednoduchý, ale velice ";
-	TEXT[1]				=	"precizně vyhotovený meč. Zbraň mistra!";
+	TEXT[0]				=	"Diegův dlouhý meč je jednoduchá, ale velice ";
+	TEXT[1]				=	"precizně vyhotovená zbraň. Zbraň mistra!";
 	TEXT[2]				=	NAME_TypeOneHanded;
 	TEXT[3]				=	NAME_Damage;				COUNT[3]	= damageTotal;
 	TEXT[4]				=	NAME_Str_needed;			COUNT[4]	= cond_value[0];

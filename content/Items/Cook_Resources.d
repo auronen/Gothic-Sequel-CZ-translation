@@ -522,7 +522,7 @@ instance ItWr_Recipe_Meatbug (C_Item)
 					Doc_PrintLine	( nDocID,  1, NAME_MeatbugStew);
 					Doc_PrintLine	( nDocID,  1, "------------------");
 //					Doc_PrintLines	( nDocID,  1, "Anstelle des Brotes verschafft ein ordentliches Stück Käse dem ganzen Eintopf so richtig Geschmack.");
-					Doc_PrintLines	( nDocID,  1, "Místo chleba přidá kus pořádného sýra guláši tu pravou chuť.");
+					Doc_PrintLines	( nDocID,  1, "Nahrazením chleba pořádným kusem sýra dodáme guláši tu pravou chuť.");
 					Doc_PrintLine	( nDocID,  1, "");
 					Doc_PrintLine	( nDocID,  1, NAME_MeatbugPie);
 					Doc_PrintLine	( nDocID,  1, "-----------------");
@@ -663,7 +663,7 @@ INSTANCE ItWr_Recipe_Herb (C_Item)
 					Doc_PrintLine	( nDocID,  1, NAME_HerbPie);
 					Doc_PrintLine	( nDocID,  1, "--------------");
 //					Doc_PrintLines	( nDocID,  1, "Nichts geht über ein Stück Schinken, das auch dem Sumpfkraut den edelsten Geschmack verleiht. Das Salzen nicht vergessen!");
-					Doc_PrintLines	( nDocID,  1, "Nic nepředčí kousek šunky naložený v trávě z bažin. Nezpomeňte přidat sůl!");
+					Doc_PrintLines	( nDocID,  1, "Nic nepředčí kousek šunky naložený v trávě z bažin. Nezapomeňte přidat sůl!");
 					Doc_Show		( nDocID );
 	};
 
@@ -729,7 +729,7 @@ INSTANCE ItWr_Recipe_Mushroom (C_Item)
 					Doc_PrintLine	( nDocID,  1, NAME_MushroomPie);
 					Doc_PrintLine	( nDocID,  1, "-------------");
 //					Doc_PrintLines	( nDocID,  1, "Die Krönung der Pilzgerichte wird mit einem Stück Schinken zubereitet. So entsteht mit Pilzen und einer Prise Salz ein schmackhaftes Ragout.");
-					Doc_PrintLines	( nDocID,  1, "Vrchol všech pokrmů s houbami připravíme s kouskem šunky. S houbami a špetkou soli vznikne tak chutné houbové ragú.");
+					Doc_PrintLines	( nDocID,  1, "Vrchol všech pokrmů s houbami připravíme s kouskem šunky. S houbami a špetkou soli vznikne chutné houbové ragú.");
 					Doc_Show		( nDocID );
 	};
 
@@ -789,12 +789,12 @@ INSTANCE ItWr_Recipe_Meat (C_Item)
 					Doc_PrintLine	( nDocID,  1, NAME_MeatSoup);
 					Doc_PrintLine	( nDocID,  1, "---------------");
 //					Doc_PrintLines	( nDocID,  1, "Ein Stück vorgebratenes Fleisch kann zusammen mit etwas Brot und einer Prise Salz zu einer schmackhaften Suppe zubereitet werden.");
-					Doc_PrintLines	( nDocID,  1, "Z kouksu předsmaženého masa můžeme společně s kouksem chleba a špetkou soli uvařít výbornou polévku.");
+					Doc_PrintLines	( nDocID,  1, "Z kousku předsmaženého masa můžeme společně s krajícem chleba a špetkou soli uvařit výbornou polévku.");
 					Doc_PrintLine	( nDocID,  1,  "" );
 					Doc_PrintLine	( nDocID,  1, NAME_MeatStew);
 					Doc_PrintLine	( nDocID,  1, "-----------------");
 //					Doc_PrintLines	( nDocID,  1, "Besser als das Brot eignet sich ein Stück Käse. So wird aus der Suppe ein Eintopf.");
-					Doc_PrintLines	( nDocID,  1, "Lépe než chléb chutná kousek sýra. Tak z polévky uděláme guláš.");
+					Doc_PrintLines	( nDocID,  1, "Lépe než chléb chutná kousek sýra. Tím polévku zahustíme na guláš.");
 					Doc_PrintLine	( nDocID,  1, "");
 					Doc_PrintLine	( nDocID,  1, NAME_MeatPie);
 					Doc_PrintLine	( nDocID,  1, "----------------");

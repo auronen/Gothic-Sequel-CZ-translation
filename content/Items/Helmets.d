@@ -1,6 +1,7 @@
 INSTANCE HELMET(C_ITEM)
 {
-	name 					=	"Test Helm";
+	// name 					=	"Test Helm";
+	name 					=	"Testovací helma";
 
 	mainflag 				=	ITEM_KAT_ARMOR;
 	flags 					=	ITEM_AMULET;
