@@ -130,7 +130,7 @@ INSTANCE ItArScrollTeleport4 (C_Item)
 };
 
 // Buch der Diebe: Schlösser
-	INSTANCE ItWr_Book_Thief_01 (C_Item)
+INSTANCE ItWr_Book_Thief_01 (C_Item)
 {
 //	name 					=	"Diebeskunst";
 	name 					=	"Zlodějské umění";
@@ -145,8 +145,9 @@ INSTANCE ItArScrollTeleport4 (C_Item)
 
 	scemeName				=	"MAP";
 //	description				= 	"Über Schlösser und Mechanismen";
-	description				= 	"Zámky a mechanismy";
+	description				= 	name;
 
+	TEXT[3]					=	"O zámcích a mechanismech";
 	//TEXT[5]				= ;
 	//COUNT[5]				= ;
 	on_state[0]				=	UseItWr_Book_Thief_01;
@@ -179,14 +180,14 @@ INSTANCE ItArScrollTeleport4 (C_Item)
 					Doc_PrintLine	( nDocID,  0, "posledních 5 let");
 					Doc_PrintLine	( nDocID,  0, "---------------");
 //					Doc_PrintLines	( nDocID,  0, "Derweil werden verschiedene Mechaniken, ausgeklügelte Systematiken und raffinierte Kombinatorik verwendet, um Schlösser sicher zu machen gegen fremden Eingriff. Eine der immer noch gängigsten Methoden der Kombinatorik ist die Multimechanik. Besonders bekannt bei Türen und Truhen, sorgen sie mit offensichtlich simplem System dafür, das der Zugang nur dem gestattet ist, der auch rechtmäßigen Zugang besitzt. ");
-					Doc_PrintLines	( nDocID,  0, "Derweil werden verschiedene Mechaniken, ausgeklügelte Systematiken und raffinierte Kombinatorik verwendet, um Schlösser sicher zu machen gegen fremden Eingriff. Eine der immer noch gängigsten Methoden der Kombinatorik ist die Multimechanik. Besonders bekannt bei Türen und Truhen, sorgen sie mit offensichtlich simplem System dafür, das der Zugang nur dem gestattet ist, der auch rechtmäßigen Zugang besitzt. ");
+					Doc_PrintLines	( nDocID,  0, "Toho času se používají různé mechanismy, chytré systémy a rafinovaná kombinatorika k tomu, aby byly zámky zabezpečeny proti neoprávněnému otevření. Jednou z nejoblíbenějších metod kombinatoriky je multimechanika. Dveře a truhlice jsou nejčastěji zabezpečeny jednoduchým systémem, aby byl přístup povolen pouze těm, kteří mají správný klíč.");
 
 
 					//2.Seite
 					Doc_SetMargins	( nDocID, -1, 30, 20, 275, 20, 1   		);  //  0 -> margins are in pixels (Position des Textes von den Ränder des TGAs aus, links,oben,rechts,unten)
 
 //					Doc_PrintLines	( nDocID,  1, "Während die Öffnung durch ein Links/Rechts System verschlossen ist, dem sich der entsprechende Schüssel automatisch anpasst, so sorgen Gewinde, Fassungen und kleine Rädchen dafür, das ein fremder Gegenstand bei einer Bewegung in die falsche Richtung abbricht. Eine solche Rechts/Links Kombiantion besteht in der Regel aus entweder vier, sechs, acht oder sogar zehn Richtungsbewegungen. Nur ein guter Dieb wird seine Dietriche bewahren. Weniger gute Diebe bleiben jedoch immer auf der Suche nach neuen Dietrichen, weil durch ihre fehlerhafte Arbeit immer wieder Dietriche abbrechen. ");
-					Doc_PrintLines	( nDocID,  1, "Während die Öffnung durch ein Links/Rechts System verschlossen ist, dem sich der entsprechende Schüssel automatisch anpasst, so sorgen Gewinde, Fassungen und kleine Rädchen dafür, das ein fremder Gegenstand bei einer Bewegung in die falsche Richtung abbricht. Eine solche Rechts/Links Kombiantion besteht in der Regel aus entweder vier, sechs, acht oder sogar zehn Richtungsbewegungen. Nur ein guter Dieb wird seine Dietriche bewahren. Weniger gute Diebe bleiben jedoch immer auf der Suche nach neuen Dietrichen, weil durch ihre fehlerhafte Arbeit immer wieder Dietriche abbrechen. ");
+					Doc_PrintLines	( nDocID,  1, "Zatímco správný klíč projede do otvoru zámku bez potíží, závity, objímky a ozubená kolečka brání pohybu cizímu předmětu a při nesprávném pohybu jej zlomí. Kombinace správných pohybů se skládá ze čtyř, šesti, osmi nebo dokonce deseti pohybů. Pouze zkušený zloděj dokáže použít své šperháky bez poškození. Méně zkušený zloděj vždy shání nové šperháky, které díky nedostatku zkušeností opět zláme.");
 					Doc_Show		( nDocID );
 	};
 
