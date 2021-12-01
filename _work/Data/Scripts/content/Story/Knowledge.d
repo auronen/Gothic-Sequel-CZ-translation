@@ -540,7 +540,7 @@ func void B_LearnRecipeHealingPotions()
 
 		var string string_logEntry;
 //		string_logEntry =	B_BuildAlchemieRecipeString	("Die Herstellung von HEILTRÄNKEN erfordert folgende Reagenzien: ", NAME_MountainMoss);
-		string_logEntry =	B_BuildAlchemieRecipeString	("Příprava LÉČIVÝCH lektvarů vyžaduje následující ingerdience: ", NAME_MountainMoss);
+		string_logEntry =	B_BuildAlchemieRecipeString	("Příprava LÉČIVÝCH lektvarů vyžaduje následující ingredience: ", NAME_MountainMoss);
 		B_LogEntry		(GE_AlchemieRecipies , string_logEntry);
 	};
 };
@@ -574,7 +574,7 @@ func void B_LearnRecipeSpeedPotions()
 
 		var string string_logEntry;
 //		string_logEntry =	B_BuildAlchemieRecipeString	("Tränke der SCHNELLIGKEIT sind werden aus folgenden Reagenzien hergestellt: ", NAME_BloodThistle);
-		string_logEntry =	B_BuildAlchemieRecipeString	("Lektvary RYCHLOSTI se připravuji z následujícíh přísad: ", NAME_BloodThistle);
+		string_logEntry =	B_BuildAlchemieRecipeString	("Lektvary RYCHLOSTI se připravuji z následujících přísad: ", NAME_BloodThistle);
 		B_LogEntry		(GE_AlchemieRecipies , string_logEntry);
 	};
 };
@@ -618,7 +618,7 @@ func int B_LearnTrollberry ()
 		PrintScreen		(_STR_MESSAGE_LEARNPLANTS, -1,_YPOS_MESSAGE_LEARN,FONT_OLD_BIG,_TIME_MESSAGE_LEARN);
 		Log_CreateTopic	(GE_Plants, LOG_NOTE);
 //		B_LogEntry		(GE_Plants , "TROLLKIRSCHEN sind eine extrem seltene Unterart der Waldbeeren. Sie scheinen im Gegensatz zu ihren Verwandten äusserst giftig zu sein und wachsen ausschliesslich in Trollhorten.");
-		B_LogEntry		(GE_Plants , "TROLLÍ BOBULE jsou extrémně vzácný poddruh borůvek. Na rozdíl od jejich příbuzných jsou trollí bobule velice jedovaté a rostou pouze trollím trusu.");
+		B_LogEntry		(GE_Plants , "TROLLÍ BOBULE jsou extrémně vzácný poddruh borůvek. Na rozdíl od jejich příbuzných jsou trollí bobule velice jedovaté a rostou pouze v trollím trusu.");
 	};
 };
 
@@ -642,7 +642,7 @@ func int B_LearnMountainMoss ()
 		PrintScreen		(_STR_MESSAGE_LEARNPLANTS, -1,_YPOS_MESSAGE_LEARN,FONT_OLD_BIG,_TIME_MESSAGE_LEARN);
 		Log_CreateTopic	(GE_Plants, LOG_NOTE);
 //		B_LogEntry		(GE_Plants , "BERGMOOS mag die dünne Luft hoch in den Bergen oder Felsen. Oft muss ein Fundort mühevoll erklettert werden.");
-		B_LogEntry		(GE_Plants , "HORSKÝ MECH má rád řídký horský vzduch. Roste vysoko ve skalách a horách. Často se do těchto míst musí vyšplhat.");
+		B_LogEntry		(GE_Plants , "HORSKÝ MECH má rád řídký horský vzduch. Roste vysoko ve skalách a na horách. Často se do těchto míst musí vyšplhat.");
 	};
 };
 
