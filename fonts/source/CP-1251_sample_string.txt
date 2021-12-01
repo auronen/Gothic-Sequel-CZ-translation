@@ -1,0 +1,3 @@
+ABCDEFGHIJKLM NOPQRSTUVWXYZ abcdefghijklm nopqrstuvwxyz !"#$%&()+,-./:;<=>?@ \_{|}~‚„‘a’a“a”–™§©®    ЊЉЌЋљќћБИЙ МНПТУШЩЪЭб иймнптушщъэюя
+
+// Tento řetězec znaků obsahuje všechny důležité znaky, slouží k testování zobrazení znaků v softwaru FNTedit
