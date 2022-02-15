@@ -147,7 +147,7 @@ instance  Infos_Mil_9_STORY (C_INFO)
 	information		= Infos_Mil_9_STORY_Info;
 	permanent 		= TRUE;
 //	description		= "Erzähl mir was über die Orks";
-	description		= "";
+	description		= "Řekni mi něco o skřetech.";
 };
 
 FUNC int  Infos_Mil_9_STORY_Condition()
