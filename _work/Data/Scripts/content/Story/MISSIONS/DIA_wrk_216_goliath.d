@@ -79,8 +79,10 @@ func int WRK_216_Goliath_MYWEAPON_Info ()
 	AI_Output				(self, hero, "WRK_216_Goliath_MYWEAPON_Info_09_01"); //Vrať mi moje kladivo!
 
 	Info_ClearChoices		(WRK_216_Goliath_MYWEAPON);
-	Info_AddChoice			(WRK_216_Goliath_MYWEAPON, "Ich behalte ihn!",						WRK_216_Goliath_MYWEAPON_TAKEN );
-	Info_AddChoice			(WRK_216_Goliath_MYWEAPON, "Hier hast du ihn zurück.",	WRK_216_Goliath_MYWEAPON_GIVEBACK );
+//	Info_AddChoice			(WRK_216_Goliath_MYWEAPON, "Ich behalte ihn!",						WRK_216_Goliath_MYWEAPON_TAKEN );
+	Info_AddChoice			(WRK_216_Goliath_MYWEAPON, "Nechám si ho!",							WRK_216_Goliath_MYWEAPON_TAKEN );
+//	Info_AddChoice			(WRK_216_Goliath_MYWEAPON, "Hier hast du ihn zurück.",	WRK_216_Goliath_MYWEAPON_GIVEBACK );
+	Info_AddChoice			(WRK_216_Goliath_MYWEAPON, "Tady ho máš.",				WRK_216_Goliath_MYWEAPON_GIVEBACK );
 };
 
 func void WRK_216_Goliath_MYWEAPON_GIVEBACK ()
