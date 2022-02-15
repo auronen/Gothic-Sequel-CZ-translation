@@ -1810,7 +1810,7 @@ func void WRK_200_Gotmar_NEEDBLOODORE_Info ()
 //	AI_Output			(hero, self, "WRK_200_NEEDBLOODORE_15_01"); //Ich brauche Bluterz.
 	AI_Output			(hero, self, "WRK_200_NEEDBLOODORE_15_01"); //Potřebuju krvavou rudu.
 //	AI_Output			(self, hero, "WRK_200_NEEDBLOODORE_04_02"); //Bluterz ist 'ne seltene Sache. Ich selber besitze nur ein paar Brocken. Die kannst du kaufen.
-	AI_Output			(self, hero, "WRK_200_NEEDBLOODORE_04_02"); //Krvavá ruda je vzácná záležitost. Sám jí mám jen pár hrudek. Ty si může koupit.
+	AI_Output			(self, hero, "WRK_200_NEEDBLOODORE_04_02"); //Krvavá ruda je vzácná záležitost. Sám jí mám jen pár hrudek. Tu si můžeš koupit.
 //	AI_Output			(self, hero, "WRK_200_NEEDBLOODORE_04_03"); //Wenn du mehr brauchst, dann solltest du vielleicht mal mit Wylfern reden. Er war bis vor kurzem noch in der Mine.
 	AI_Output			(self, hero, "WRK_200_NEEDBLOODORE_04_03"); //Kdybys potřeboval víc, možná by sis měl promluvit s Wylfernem. Před nedávnem byl ještě v dole.
 //	AI_Output			(hero, self, "WRK_200_NEEDBLOODORE_15_04"); //Wo finde ich diesen Wylfern?
