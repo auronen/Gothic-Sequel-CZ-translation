@@ -118,7 +118,7 @@ func void MIL_103_Berengar_KING_Info ()
 //	AI_Output			(self, hero, "MIL_103_KING_08_04"); //Der taucht hier mit seinen gestriegelten Affen auf und steckt seinen Kopf mitsamt seiner Krone ganz tief in den Sand!
 	AI_Output			(self, hero, "MIL_103_KING_08_04"); //Objevil se tu se svými naparáděnými gorilami a strčil hlavu, i se svou korunou, hluboko do písku!  
 //	AI_Output			(self, hero, "MIL_103_KING_08_05"); //Der soll mir mal im Dunkeln begegnen, der König! Den werde ich noch ganz woanders reinstecken den König!
-	AI_Output			(self, hero, "MIL_103_KING_08_05"); //Král by mě měl někde ve tmě potkat! TOHLE NEUMIM PRELOZIT
+	AI_Output			(self, hero, "MIL_103_KING_08_05"); //Král by mě měl někde ve tmě potkat! Pak bych krále strčil někam jinam!
 
 };
 
