@@ -1177,7 +1177,7 @@ func void PC_Psionic_FOUNDTHUNDERBOLTSCROLL_Info ()
 //	Info_AddChoice		(PC_Psionic_FOUNDTHUNDERBOLTSCROLL, "Vielleicht später...", PC_Psionic_FOUNDTHUNDERBOLTSCROLL_NO );
 	Info_AddChoice		(PC_Psionic_FOUNDTHUNDERBOLTSCROLL, "Možná později...", PC_Psionic_FOUNDTHUNDERBOLTSCROLL_NO );
 //	Info_AddChoice		(PC_Psionic_FOUNDTHUNDERBOLTSCROLL, "Hier nimm!", PC_Psionic_FOUNDTHUNDERBOLTSCROLL_YES );
-	Info_AddChoice		(PC_Psionic_FOUNDTHUNDERBOLTSCROLL, "Hier nimm!", PC_Psionic_FOUNDTHUNDERBOLTSCROLL_YES );
+	Info_AddChoice		(PC_Psionic_FOUNDTHUNDERBOLTSCROLL, "Tady je!", PC_Psionic_FOUNDTHUNDERBOLTSCROLL_YES );
 };
 func void PC_Psionic_FOUNDTHUNDERBOLTSCROLL_YES ()
 {
@@ -1399,7 +1399,7 @@ instance PC_Psionic_FINDBLOODORE		(C_INFO)
 	permanent	 = 	FALSE;
 
 //	description	 = 	"Wo kann ich solches Bluterz finden?";
-	description	 = 	"Wo kann ich solches Bluterz finden?";
+	description	 = 	"Kde mohu najít nějakou krvavou rudu?";
 };
 
 func int PC_Psionic_FINDBLOODORE_Condition ()
