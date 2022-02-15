@@ -131,7 +131,7 @@ func void Info_Edo_ORESTOLENYOU ()
 //	AI_Output			(self, hero,"Info_Edo_ORESTOLENYOU_00_03"); //(leiser) So ganz unter uns: Dieb zu sein ist eine Ehre, nur reagieren die anderen hier etwas allergisch auf dieses Thema.
 	AI_Output			(self, hero,"Info_Edo_ORESTOLENYOU_00_03"); //(potichu) Jen tak mezi námi: Být zlodějem je velká čest, jen ostatní na to tady v táboře reagují celkem alergicky.
 //	AI_Output			(self, hero,"Info_Edo_ORESTOLENYOU_00_04"); //Also behalt ich das lieber für mich. Die meisten streberhaften Handwerker hier verstehen einfach nicht, wie man WIRKLICH lebt.
-	AI_Output			(self, hero,"Info_Edo_ORESTOLENYOU_00_04"); //TAkže si to raději nechávám pro sebe. Většina zdejších hloupých řemeslníků nechápe, jak se dá SKUTEČNĚ žít.
+	AI_Output			(self, hero,"Info_Edo_ORESTOLENYOU_00_04"); //Takže si to raději nechávám pro sebe. Většina zdejších hloupých řemeslníků nechápe, jak se dá SKUTEČNĚ žít.
 //	AI_Output			(self, hero,"Info_Edo_ORESTOLENYOU_00_05"); //Haben immer nur arbeiten im Kopf.
 	AI_Output			(self, hero,"Info_Edo_ORESTOLENYOU_00_05"); //Pořád myslí jen na práci.
 //	AI_Output			(self, hero,"Info_Edo_ORESTOLENYOU_00_06"); //Ich verrat dir was: Wenn Du an billige Waren kommen willst, dann frage mich danach. Ich habe eine große Auswahl an Dingen aller Art.
