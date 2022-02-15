@@ -3,8 +3,8 @@ INSTANCE PC_Hero(C_NPC)
 
 {
 	//-------- primary data --------
-//	name 			= "Já";
-	name 			= "Ich";
+//	name 			= "Ich";
+	name 			= "Já";
 	Npctype			= NPCTYPE_MAIN;
 	guild			= GIL_NONE;
 	level			= 0;
