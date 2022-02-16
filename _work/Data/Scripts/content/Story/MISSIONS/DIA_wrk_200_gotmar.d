@@ -1512,7 +1512,8 @@ func int WRK_200_Gotmar_IFETCHGOLIATH_Condition ()
 
 func void WRK_200_Gotmar_IFETCHGOLIATH_Info ()
 {
-	AI_Output			(hero, self, "WRK_200_IFETCHGOLIATH_15_01"); //Ich werde mit Goliath sprechen!
+//	AI_Output			(hero, self, "WRK_200_IFETCHGOLIATH_15_01"); //Ich werde mit Goliath sprechen!
+	AI_Output			(hero, self, "WRK_200_IFETCHGOLIATH_15_01"); //Promluvím si s Goliášem!
 
 //	B_LogEntry			(CH1_LearnSmith, "Gotmar hat eingewilligt, mir zu zeigen, wie man Breitschwerter herstellt. Allerdings soll ich ihm einen Gefallen tun und seinen ehemaligen Schmiedegehilfen Goliath dazu überreden, die Arbeit in der Schmiede wieder aufzunehmen!");
 	B_LogEntry			(CH1_LearnSmith, "Gotmar vyjádřil přání ukázat mi, jak se ková široký meč. K tomu je ale potřeba, abych přemluvil jeho bývalého pomocníka Goliáše, aby se vrátil ke kovářskému řemeslu.");
