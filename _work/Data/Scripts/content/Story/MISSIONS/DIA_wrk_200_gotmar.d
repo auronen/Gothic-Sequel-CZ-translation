@@ -1694,7 +1694,9 @@ func void	Info_Gotmar_BASTARDSWORD_Info()
 //		AI_Output				(self, hero,"Info_Gotmar_BASTARDSWORD_04_06"); //So, ich muß wieder zurück an die Arbeit.
 		AI_Output				(self, hero,"Info_Gotmar_BASTARDSWORD_04_06"); //Tak, musím zpátky do práce.
 
-		B_LearnBroadsword		();
+//		B_LearnBroadsword		();
+// Auronen: learn the correct sword
+		B_LearnBastardsword		();
 		hero.lp -= LPCOST_KNOWLEDGE_BASTARDSWORD;
 
 		AI_StopProcessInfos		(self);
