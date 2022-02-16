@@ -1375,7 +1375,7 @@ instance	Info_Gotmar_WANTBROADSWORD (C_INFO)
 
 func int	Info_Gotmar_WANTBROADSWORD_Condition()
 {
-	if	Knows_Longsword
+	if	Knows_Longsword && !Gotmar_LearnBroadsword
 	{
 		return TRUE;
 	};
