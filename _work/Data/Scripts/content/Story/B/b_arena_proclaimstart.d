@@ -23,7 +23,7 @@ func void B_Arena_ProclaimStart (var C_NPC arenamaster)
 //	AI_Output		(arenamaster, target, "MIL_122_ProclaimStart_12_02"); //KAMPFT NACH DEN REGELN UND KÄMPFT GUT!
 	AI_Output		(arenamaster, target, "MIL_122_ProclaimStart_12_02"); //BOJUJTE PODLE PRAVIDEL A BOJUJTE DOBŘE!
 //	AI_Output		(arenamaster, target, "MIL_122_ProclaimStart_12_03"); //MÖGE DER BESSERE GEWINNEN!
-	AI_Output		(arenamaster, target, "MIL_122_ProclaimStart_12_03"); //NECHŤ VYHRAJE TEN NEJLEPŠÍ
+	AI_Output		(arenamaster, target, "MIL_122_ProclaimStart_12_03"); //NECHŤ VYHRAJE TEN NEJLEPŠÍ!
 };
 
 
