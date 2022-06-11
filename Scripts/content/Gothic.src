@@ -94,6 +94,10 @@ items\missionitems_2.d
 items\plants.d
 items\helmets.d
 items\written.d
+
+//;èeské testování fontù
+items\Font_books.d
+
 ai\ai_intern\c_zsinit.d
 ai\b_human\b_murderteller.d
 ai\b_human\b_scale.d
