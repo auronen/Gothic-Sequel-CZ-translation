@@ -71,7 +71,7 @@ instance THF_409_Pyro		(C_NPC)
 
 func void Rtn_start_409		()
 {
-		TA_SitCampfire						(08, 00, ARENAEND_H, ARENAEND_M, "OCR_CAMPFIRE_1_3");
+		TA_SitCampfire						(08, 00, ARENAEND_H, ARENAEND_M, "OCR_CAMPFIRE_I_3");
 		TA_Sleep							(ARENAEND_H, ARENAEND_M, 08, 00, "OCR_HUT_28");
 };
 
