@@ -6,14 +6,14 @@ Stáhněte poslední verzi ze sekce [__Releases__](https://github.com/auronen/Go
 
 ## Snímky ze hry
 ### Menu
-<p align="center">
+
 ![hlavní nabídka](https://github.com/auronen/Gothic-Sequel-CZ-translation/blob/main/assets/screenshots/Sequel_menu_cz.png?raw=true)
-</p>
+
 
 ### Titulky
-<p align="center">
+
 ![hlavní nabídka](https://github.com/auronen/Gothic-Sequel-CZ-translation/blob/main/assets/screenshots/Sequel_titulek.png?raw=true)
-</p>
+
 
 ## Kontakt
 Náš překladatelský tým můžete kontaktovat na discord serveru [Chugothicz.net](https://discord.gg/htnmscAhfF).
