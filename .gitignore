@@ -1,4 +1,4 @@
-fonts/source/*.png
-fonts/source/*.fnt
-fonts/source/*.tga
-fonts/source/*.tex
+*.[pP][nN][gG]
+*.[fF][nN][tT]
+*.[tT][gG][aA]
+*.[tT][eE][xX]
