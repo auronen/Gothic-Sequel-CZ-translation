@@ -66,7 +66,7 @@ FUNC VOID B_AssignAmbientInfos(var c_NPC amb_self)
 			};
 		
 		};
-	}
+	};
 	if ( (amb_self.npctype == NPCTYPE_MINE_AMBIENT)
 	||   (amb_self.npctype == NPCTYPE_MINE_GUARD) ) //Alle Ambient-NPCs in den Minen
 	{	
@@ -100,7 +100,7 @@ FUNC VOID B_AssignAmbientInfos(var c_NPC amb_self)
 				B_AssignAmbientInfos_Mine_Mil_8(amb_self);
 			};
 		};
-	}
+	};
 	if  (amb_self.npctype == NPCTYPE_OW_AMBIENT) // versteckte Flüchtlinge in der Oberwelt, bisher nur GIL_WORKER , andere Planung?? M.F.
 	{	
 		if (amb_self.guild == GIL_WORKER)

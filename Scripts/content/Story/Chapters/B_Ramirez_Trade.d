@@ -15,7 +15,7 @@ FUNC INT B_Ramirez_Tradecheck (var int Num_Arrows)
 	&& (Npc_HasItems (Ramirez, ItFo_MuttonRaw) >= (Num_Arrows*2))
 	{
 		return 0; // Handel durchführen
-	}
+	};
 	if (Npc_HasItems (hero, ItAm_Arrow) < Num_Arrows)
 	{
 		return 1; // Spieler hat nicht ausreichend Pfeile

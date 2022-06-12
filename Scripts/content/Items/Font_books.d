@@ -1,6 +1,7 @@
 /*****************************************************************************************
  * 
  * Tento dopis testuje nové fonty s diakritikou 
+ * This letter tests new czech fonts
  * "font_old_20_white.tga"
  * "font_old_10_white.tga"
  * 

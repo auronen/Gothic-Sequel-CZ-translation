@@ -396,7 +396,7 @@ func void	Info_Arenamaster_BANNED_Info()
 		AI_Output			(self, hero, "Info_Arenamaster_BANNED_12_08"); //Už tě do žádného souboje nenasadím.
 //		AI_Output			(self, hero, "Info_Arenamaster_BANNED_12_09"); //Du	hast deine Chance vertan!
 		AI_Output			(self, hero, "Info_Arenamaster_BANNED_12_09"); //Promarnil jsi svojí šanci!
-	}
+	};
 
 	if	Arena_PlayerStoleWeapon
 	{

@@ -113,28 +113,28 @@ func void ZS_ProclaimAndPunish_End ()
 		{
 			PrintDebugNpc		(PD_ZS_CHECK,	"...SC hat Durchgang durchbrochen!" );	
 			B_SayOverlay		(self,	hero,	"$NowWaitIntruder");
-		}
+		};
 	
 		//-------- SC hat Arenakampf unterbrochen ! --------
 		if (C_GetAttackReason(self) == AIV_AR_DISTURBEDARENA)
 		{
 			PrintDebugNpc		(PD_ZS_CHECK,	"...SC hat Arenakampf unterbrochen !" );	
 			B_SayOverlay		(self,	hero,	"$YouDisturbedArenaFight");
-		}
+		};
 	
 		//-------- SC hat in Arena gemordet ! --------
 		if (C_GetAttackReason(self) == AIV_AR_MURDEREDINARENA)
 		{
 			PrintDebugNpc		(PD_ZS_CHECK,	"...SC hat in Arena gemordet !" );	
 			B_SayOverlay		(self,	hero,	"$YouMurderedInArena");
-		}
+		};
 	
 		//-------- SC kämpft in Arena mit Fernkampfwaffe! --------
 		if (C_GetAttackReason(self) == AIV_AR_ARENABOW)
 		{
 			PrintDebugNpc		(PD_ZS_CHECK,	"...SC kämpft in Arena mit Fernkampfwaffe!" );	
 			B_SayOverlay		(self,	hero,	"$NoBowInArena");
-		}
+		};
 	
 		//-------- SC kämpft in Arena mit Magie! --------
 		if (C_GetAttackReason(self) == AIV_AR_ARENAMAGIC)
