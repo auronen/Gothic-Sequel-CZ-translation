@@ -1,7 +1,3 @@
-// This variable is a workaround for a bug -> function Npc_KnowsInfo() doesn't work on permanent = TRUE dialogues
-// BF_ prefix is used on all newly introduced variables
-const int BF_Mil_6_Boss = FALSE; 
-
 ///////////////////////////////////////////////////////////////////////
 //	Info EXIT
 ///////////////////////////////////////////////////////////////////////
@@ -260,8 +256,6 @@ FUNC void  Infos_Mil_6_BOSS_Info()
 
 	var C_NPC Cassian; Cassian 	 = Hlp_GetNpc (MIL_119_Cassian);
 	Cassian.aivar[AIV_FINDABLE] = TRUE;
-
-	BF_Mil_6_Boss = TRUE;
 };
 
 

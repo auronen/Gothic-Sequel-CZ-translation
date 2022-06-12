@@ -1,6 +1,3 @@
-// This variable is a workaround for a bug -> function Npc_KnowsInfo() doesn't work on permanent = TRUE dialogues
-// BF_ prefix is used on all newly introduced variables
-const int BF_Gerion_LOCKPICK_1 = FALSE; 
 ///////////////////////////////////////////////////////////////////////
 //	Info EXIT
 ///////////////////////////////////////////////////////////////////////
@@ -674,8 +671,7 @@ func void THF_403_Gerion_LOCKPICK_1_Info ()
 		LearnPicklock_1		= LOG_RUNNING;
 
 // This does nothing
-//		THF_403_Gerion_LOCKPICK_1.permanent = FALSE;
-		BF_Gerion_LOCKPICK_1 = TRUE;
+		THF_403_Gerion_LOCKPICK_1.permanent = FALSE;
 	};
 
 };
@@ -697,8 +693,7 @@ instance THF_403_Gerion_WHEREHUT		(C_INFO)
 
 func int THF_403_Gerion_WHEREHUT_Condition ()
 {
-//	if	Npc_KnowsInfo (hero,THF_403_Gerion_LOCKPICK_1)
-	if	Npc_KnowsInfo (hero,BF_Gerion_LOCKPICK_1)
+	if	Npc_KnowsInfo (hero,THF_403_Gerion_LOCKPICK_1)
 	{
 		return TRUE;
 	};

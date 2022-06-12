@@ -1,7 +1,3 @@
-// This variable is a workaround for a bug -> function Npc_KnowsInfo() doesn't work on permanent = TRUE dialogues
-// BF_ prefix is used on all newly introduced variables
-const int BF_Jose_Knows = FALSE; 
-
 ///////////////////////////////////////////////////////////////////////
 //	Info EXIT 
 ///////////////////////////////////////////////////////////////////////
@@ -55,8 +51,6 @@ func void BEG_701_Jose_HI_Info ()
 	AI_Output			(hero, self, "BEG_701_HI_15_03"); //A proč?
 //	AI_Output			(self, hero, "BEG_701_HI_02_04"); //Es gibt immer jemanden der bereit ist, für Neuigkeiten zu bezahlen. 
 	AI_Output			(self, hero, "BEG_701_HI_02_04"); //Vždycky se najde někdo, kdo je ochoten za novinky zaplatit.
-	
-	BF_Jose_Knows = TRUE;
 };
 
 ///////////////////////////////////////////////////////////////////////
@@ -72,15 +66,14 @@ instance BEG_701_Jose_NEWS		(C_INFO)
 	permanent	 = 	FALSE;
 
 //	description	 = 	"Und, gibt's was Neues?";
-	description	 = 	"A, co je nového?";
+	description	 = 	"A, něco nového?";
 };
 
 func int BEG_701_Jose_NEWS_Condition ()
 {	
-//	if Npc_KnowsInfo (hero, BEG_701_Jose_HI 
-//	&& (Beggars_Secrets >= 3) ) 
-	if (BF_Jose_Knows //a bug fix introduced by the czech translation team
+	if Npc_KnowsInfo (hero, BEG_701_Jose_HI 
 	&& (Beggars_Secrets >= 3) ) 
+
 	{
 		return TRUE;
 	};
@@ -88,7 +81,7 @@ func int BEG_701_Jose_NEWS_Condition ()
 func void BEG_701_Jose_NEWS_Info ()
 {
 //	AI_Output			(hero, self, "BEG_701_NEWS_15_01"); //Und, gibt's was Neues?
-	AI_Output			(hero, self, "BEG_701_NEWS_15_01"); //A, co je nového?
+	AI_Output			(hero, self, "BEG_701_NEWS_15_01"); //A, něco nového?
 //	AI_Output			(self, hero, "BEG_701_NEWS_02_02"); //Es gibt immer was Neues. Bei so viel Verrückten hier...
 	AI_Output			(self, hero, "BEG_701_NEWS_02_02"); //Tady je pořád něco nového. S tolika šílenými lidmi tady všude kolem....
 //	AI_Output			(hero, self, "BEG_701_NEWS_15_03"); //Wie meinst du das?

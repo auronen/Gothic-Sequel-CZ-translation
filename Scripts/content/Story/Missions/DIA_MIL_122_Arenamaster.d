@@ -1,7 +1,3 @@
-// This variable is a workaround for a bug -> function Npc_KnowsInfo() doesn't work on permanent = TRUE dialogues
-// BF_ prefix is used on all newly introduced variables
-const int BF_Arenamaster_Askagain = FALSE; 
-
 ///////////////////////////////////////////////////////////////////////
 //	Info EXIT
 ///////////////////////////////////////////////////////////////////////
@@ -269,9 +265,7 @@ func int	Info_Arenamaster_SOUNDSGOOD_Condition()
 	var int	niceFight;
 	niceFight = Info_Arenamaster_NICEFIGHT_Condition();
 
-	if	(	(Arenamaster_Teased && !niceFight)
-//			||	Npc_KnowsInfo(hero,MIL_122_Arenamaster_ASKAGAIN)				)
-			||	BF_Arenamaster_Askagain	)
+	if	(	(Arenamaster_Teased && !niceFight) || Npc_KnowsInfo(hero,MIL_122_Arenamaster_ASKAGAIN))
 	&&	!Arenamaster_Accepted
 	{
 		return TRUE;
@@ -339,9 +333,6 @@ func void MIL_122_Arenamaster_ASKAGAIN_Info	()
 
 		AI_StopProcessInfos	(self);
 	};
-	
-	BF_Arenamaster_Askagain = TRUE;
-
 };
 
 ///////////////////////////////////////////////////////////////////////

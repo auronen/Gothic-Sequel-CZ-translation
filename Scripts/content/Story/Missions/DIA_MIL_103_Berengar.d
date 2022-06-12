@@ -1,7 +1,3 @@
-// This variable is a workaround for a bug -> function Npc_KnowsInfo() doesn't work on permanent = TRUE dialogues
-// BF_ prefix is used on all newly introduced variables
-const int BF_Berengar_About = FALSE; 
-
 instance  MIL_103_Berengar_Exit (C_INFO)
 {
 	npc			=  MIL_103_Berengar;
@@ -154,8 +150,6 @@ func void MIL_103_Berengar_ABOUT_Info ()
 	AI_Output			(self, hero, "MIL_103_ABOUT_08_02"); //(hlasitě) NE, jsem zaneprázdněný, copak to nevidíš?
 //	AI_Output			(self, hero, "MIL_103_ABOUT_08_03"); //Besorg dir eine Waffe und wende dich an Cassian. Er kümmert sich um Typen wie dich!
 	AI_Output			(self, hero, "MIL_103_ABOUT_08_03"); //Obstarej si zbraň a hlas se u Cassiana. On se stará o lidi, jako jsi ty!
-	
-	BF_Berengar_About = TRUE;
 };
 
 ///////////////////////////////////////////////////////////////////////
@@ -175,8 +169,7 @@ instance MIL_103_Berengar_WHERECASSIAN		(C_INFO)
 
 func int MIL_103_Berengar_WHERECASSIAN_Condition ()
 {
-//	if	Npc_KnowsInfo(hero, MIL_103_Berengar_ABOUT)
-	if	(BF_Berengar_About
+	if	(Npc_KnowsInfo(hero, MIL_103_Berengar_ABOUT)
 	&&	!Npc_KnowsInfo(hero, Mil_119_Cassian_HI))
 	{
 		return TRUE;
