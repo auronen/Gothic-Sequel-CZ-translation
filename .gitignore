@@ -13,3 +13,5 @@ Scripts/_Compiled/
 Scripts/Generated/
 Video/
 Worlds/
+.vscode/
+Game.src
