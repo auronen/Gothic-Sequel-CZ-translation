@@ -1,0 +1,23 @@
+// Authors: Auronen & Fawkes
+//     This patch fixes a bug that is present in ZenGin from G1 onwards. oCInfo instances hold a `told` member variable
+//     that indicates, if that oCInfo instance has been told by an NPC/heard by the hero. And the getter method has a
+//     condition, that always returns false if the C_INFO is set to `permanent == true`. This is wrong (probably a remnant
+//     from the times when ZenGin had multiplayer support) and prevents quite a few dialogues to be played.
+
+#engine [G1, G1A, G2, G2A]
+	#patch [Fix NPC_KnowsInfo]
+        // address in the external function implementation
+        INT address = ZenDef(0x0064f4aa, 0x00677e0a, 0x0067f875, 0x006dc785)
+
+        // function address oCInfo* GetInformation
+        INT getInfoAddress = ZenDef(0x00664A00, 0x00691c80, 0x006A4E80, 0x00702910)
+
+		#assembler [address]
+            CALL    $getInfoAddress               ; oCInfo* GetInformation( /* oCInfoManager* this */ ,int instance)
+            MOV     EDI, EAX                      ; move previous function return value (EAX register) to the EDI register
+            MOV     EAX, dword ptr [EDI + 0x4C]   ; move oCInfo.told to EAX - the rest is handled by the original functions
+		#/assembler
+
+	#/patch
+    
+#/engine
