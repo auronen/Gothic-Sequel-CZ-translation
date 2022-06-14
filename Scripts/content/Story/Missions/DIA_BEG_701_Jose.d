@@ -71,8 +71,8 @@ instance BEG_701_Jose_NEWS		(C_INFO)
 
 func int BEG_701_Jose_NEWS_Condition ()
 {	
-	if Npc_KnowsInfo (hero, BEG_701_Jose_HI 
-	&& (Beggars_Secrets >= 3) ) 
+	if Npc_KnowsInfo (hero, BEG_701_Jose_HI)
+	&& (Beggars_Secrets >= 3) 
 
 	{
 		return TRUE;
