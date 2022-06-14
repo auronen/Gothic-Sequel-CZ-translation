@@ -253,8 +253,8 @@ const STRING TXT_SPELLS	[MAX_SPELL]	=
 	"Strach",						// SPL_FEAR			=	3;
 	"Léčení",						// SPL_HEAL			=	4;
 	"n/a",							// SPL_LIGHTNING	=	5;
-	"Vyvolání démona",				// SPL_SUMMONDEMON	=	6;
-	"Vyvolání kostlivce",			// SPL_SUMMONSKELETON=	7;
+	"Vyvolat démona",				// SPL_SUMMONDEMON	=	6;
+	"Vyvolat kostlivce",			// SPL_SUMMONSKELETON=	7;
 	"n/a",							// SPL_FORGET		=	8;
 	"Větrná pěst",					// SPL_WINDFIST		=	9;
 	"Telekineze",					// SPL_TELEKINESIS	=	10;
@@ -292,7 +292,7 @@ const STRING TXT_SPELLS	[MAX_SPELL]	=
 	"Kulový blesk",					// SPL_THUNDERBALL	=	42;
 	"Ledový blok",					// SPL_ICECUBE		=	43;
 	"Ledová vlna",					// SPL_ICEWAVE		=	44;
-	"Vyvolání golema",				// SPL_SUMMONGOLEM	=	45;
+	"Vyvolat golema",				// SPL_SUMMONGOLEM	=	45;
 	"Armáda temnot",				// SPL_ARMYOFDARKNESS=	46;
 	"Větrná pěst",					// SPL_STORMFIST	=	47;
 	"n/a",							// SPL_TELEKINESIS2	=	48;
@@ -320,8 +320,8 @@ const string	NAME_Transform		=   "n/a";							// SPL_TRANSFORM	=	2;
 const string	NAME_Fear			=	"Strach";						// SPL_FEAR			=	3;
 const string	NAME_Heal			=	"Léčení";						// SPL_HEAL			=	4;
 const string	NAME_Lightning		=   "n/a";							// SPL_LIGHTNING	=	5;
-const string	NAME_Summondemon	=   "Vyvolání démona";				// SPL_SUMMONDEMON	=	6;
-const string	NAME_Summonskeleton	=   "Vyvolání kostlivce";			// SPL_SUMMONSKELETON=	7;
+const string	NAME_Summondemon	=   "Vyvolat démona";				// SPL_SUMMONDEMON	=	6;
+const string	NAME_Summonskeleton	=   "Vyvolat kostlivce";			// SPL_SUMMONSKELETON=	7;
 const string	NAME_Forget			=   "n/a";							// SPL_FORGET		=	8;
 const string	NAME_Windfist		=	"Větrná pěst";					// SPL_WINDFIST		=	9;
 const string	NAME_Telekinesis	=   "Telekineze";					// SPL_TELEKINESIS	=	10;
@@ -359,7 +359,7 @@ const string	NAME_Thunderbolt	=   "Ledový šíp";					// SPL_THUNDERBOLT	=	41;
 const string	NAME_Thunderball	=   "Kulový blesk";					// SPL_THUNDERBALL	=	42;
 const string	NAME_Icecube		=   "Ledový blok";					// SPL_ICECUBE		=	43;
 const string	NAME_Icewave		=   "Ledová vlna";					// SPL_ICEWAVE		=	44;
-const string	NAME_Summongolem	=   "Vyvolání golema";				// SPL_SUMMONGOLEM	=	45;
+const string	NAME_Summongolem	=   "Vyvolat golema";				// SPL_SUMMONGOLEM	=	45;
 const string	NAME_Armyofdarkness	=   "Armáda temnot";				// SPL_ARMYOFDARKNESS=	46;
 const string	NAME_Stormfist		=   "Větrná pěst";					// SPL_STORMFIST	=	47;
 const string	NAME_Telekinesis2	=	"n/a";							// SPL_TELEKINESIS2	=	48;
@@ -390,7 +390,7 @@ CONST STRING TXT_TALENTS [NPC_TALENT_MAX] =
 //	"Bogen",                    // NPC_TALENT_BOW
 	"Luky",                     // NPC_TALENT_BOW
 //	"Armbrust",                 // NPC_TALENT_CROSSBOW
-	"Kuš",                      // NPC_TALENT_CROSSBOW
+	"Kuše",                      // NPC_TALENT_CROSSBOW
 //	"Schloss knacken",	        // NPC_TALENT_PICKLOCK
 	"Otevírání zámků",	        // NPC_TALENT_PICKLOCK
 //	"Diebstahl",        		// NPC_TALENT_PICKPOCKET
@@ -656,7 +656,7 @@ const string NAME_TypeStaff			= "Typ: Bojová hůl";
 //const string NAME_TypeBow			= "Waffentyp: Bogen";
 const string NAME_TypeBow			= "Typ: Luk";
 //const string NAME_TypeCrossbow	= "Waffentyp: Armbrust";
-const string NAME_TypeCrossbow		= "Typ: Kuš";
+const string NAME_TypeCrossbow		= "Typ: Kuše";
 
 // ***************************************************************************************
 // sonstige Bildschirmausgaben
@@ -794,9 +794,9 @@ const string	NAME_LurkerClaw	 	  		=	"Drápy číhavce";
 //const string	NAME_LurkerSkin         	=	"Lurkerhaut";
 const string	NAME_LurkerSkin         	=	"Kůže číhavce";
 //const string	NAME_TrollTeeth 	       	=	"Trollhauer";
-const string	NAME_TrollTeeth 	       	=	"Trollí tesák";
+const string	NAME_TrollTeeth 	       	=	"Trolí tesák";
 //const string	NAME_TrollFur	         	=	"Trollfell";
-const string	NAME_TrollFur	         	=	"Trollí kůže";
+const string	NAME_TrollFur	         	=	"Trolí kůže";
 //const string	NAME_SwampsharkSkin 		=	"Sumpfhaihaut";
 const string	NAME_SwampsharkSkin 		=	"Kůže močálového žraloka";
 //const string	NAME_SwampsharkTeeth		=	"Sumpfhaizähne";
@@ -904,7 +904,7 @@ const string	NAME_FakeScroll			 	=	"Dopis";
 //const string	NAME_AlarmHorn 				=	"Horn";
 const string	NAME_AlarmHorn 				=	"Roh";
 //const string	NAME_WorldMap				=	"Karte der Kolonie";
-const string	NAME_WorldMap				=	"Mapa kolonie";
+const string	NAME_WorldMap				=	"Mapa Kolonie";
 //const string	NAME_StinkingSalt			=	"Müffelsalz";
 const string	NAME_StinkingSalt			=	"Smrdutá sůl"; // Tak tady fakt netuším. Chápu správně, že je to nějaká špatná sůl, kterou se dá otrávit nějaké jídlo?
 
@@ -934,13 +934,13 @@ const string	NAME_WarBow					=	"Válečný luk";
 const string	NAME_StormBow				=	"Útočný luk"; // Opět podle G1, i když to není přesný překlad.
 
 //const string	NAME_LightCrossBow 		    =	"Leichte Armbrust";
-const string	NAME_LightCrossBow 		    =	"Lehká kuš";
+const string	NAME_LightCrossBow 		    =	"Lehká kuše";
 //const string	NAME_CrossBow				=	"Armbrust";
-const string	NAME_CrossBow				=	"Kuš";
+const string	NAME_CrossBow				=	"Kuše";
 //const string	NAME_HeavyCrossBow 			=	"Schwere Armbrust";
-const string	NAME_HeavyCrossBow 			=	"Těžká kuš";
+const string	NAME_HeavyCrossBow 			=	"Těžká kuše";
 //const string	NAME_WarCrossBow			=	"Kriegs-Armbrust";
-const string	NAME_WarCrossBow			=	"Válečná kuš";
+const string	NAME_WarCrossBow			=	"Válečná kuše";
 
 //const string	NAME_Arrow 				    =	"Pfeil";
 const string	NAME_Arrow 				    =	"Šíp";
@@ -948,7 +948,7 @@ const string	NAME_Arrow 				    =	"Šíp";
 const string	NAME_Bolt				 	=	"Šipka";
 
 //const string	NAME_WolfBow			 	=	"Wolfsfetzer";
-const string	NAME_WolfBow			 	=	"Vlčí luk"; // Pokud to teda není Wolfův luk?
+const string	NAME_WolfBow			 	=	"Vlkodav"; // Pokud to teda není Wolfův luk?
 //const string	NAME_WindBreaker 			=	"Windbrecher";
 const string	NAME_WindBreaker 			=	"Větrolam";
 //const string	NAME_Nimrod					=	"Nimroder";
@@ -1125,7 +1125,7 @@ const string 	NAME_Woodberry				=	"Borůvky"; // známe z G1
 //const string 	NAME_Flameberry				=	"Flammbeeren";
 const string 	NAME_Flameberry				=	"Ohnivý trn";
 //const string 	NAME_Trollberry				=	"Trollkirsche";
-const string 	NAME_Trollberry				=	"Trollí bobule";
+const string 	NAME_Trollberry				=	"Trolí bobule";
 
 // ***************************************************************************************
 // Alchemie
@@ -1653,8 +1653,8 @@ const string NAME_LearnStaff_2		=	"Boj s holí - Úroveň 2";
 
 const string NAME_LearnBow_1		=	"Luk - Úroveň 1";
 const string NAME_LearnBow_2		=	"Luk - Úroveň 2";
-const string NAME_LearnCrossbow_1	=	"Kuš - Úroveň 1";
-const string NAME_LearnCrossbow_2	=	"Kuš - Úroveň 2";
+const string NAME_LearnCrossbow_1	=	"Kuše - Úroveň 1";
+const string NAME_LearnCrossbow_2	=	"Kuše - Úroveň 2";
 
 const string NAME_LearnMage_1		=	"1. Kruh magie";
 const string NAME_LearnMage_2		=	"2. Kruh magie";
