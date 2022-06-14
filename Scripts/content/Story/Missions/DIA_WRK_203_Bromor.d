@@ -126,6 +126,7 @@ func int WRK_203_Bromor_TROPHYS_Condition ()
 		return TRUE;
 	};
 };
+
 func void WRK_203_Bromor_TROPHYS_Info ()
 {
 //	AI_Output			(hero, self, "WRK_203_TROPHYS_15_01"); //Ich hörte, du sammelst Trophäen?
@@ -135,6 +136,7 @@ func void WRK_203_Bromor_TROPHYS_Info ()
 //	AI_Output			(self, hero, "WRK_203_TROPHYS_09_03"); //Aber wenn du mir ein SchattenläuferHorn oder -Fell bringst, dafür zahle ich hundert Silberstücke!
 	AI_Output			(self, hero, "WRK_203_TROPHYS_09_03"); //Ale kdybys mi přinesl roh nebo kůži stínové šelmy, dal bych ti za ně sto stříbrných!
 };
+
 ///////////////////////////////////////////////////////////////////////
 //	Info TRADE
 ///////////////////////////////////////////////////////////////////////
@@ -225,6 +227,7 @@ func int WRK_203_Bromor_RASSMUSON_Condition ()
 		return TRUE;
 	};
 };
+
 func void WRK_203_Bromor_RASSMUSON_Info ()
 {
 //	AI_Output			(hero, self, "WRK_203_RASSMUSON_15_01"); //Rassmuson will abhauen!
