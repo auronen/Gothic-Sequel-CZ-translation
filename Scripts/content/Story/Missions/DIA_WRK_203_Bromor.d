@@ -116,7 +116,7 @@ instance WRK_203_Bromor_TROPHYS		(C_INFO)
 	permanent	 = 	FALSE;
 
 //	description	 = 	"Ich hörte, du sammelst Trophäen?";
-	description	 = 	"Slyšel jsem, že sbíráš trofeje..?";
+	description	 = 	"Slyšel jsem, že sbíráš trofeje?";
 };
 
 func int WRK_203_Bromor_TROPHYS_Condition ()
@@ -129,7 +129,7 @@ func int WRK_203_Bromor_TROPHYS_Condition ()
 func void WRK_203_Bromor_TROPHYS_Info ()
 {
 //	AI_Output			(hero, self, "WRK_203_TROPHYS_15_01"); //Ich hörte, du sammelst Trophäen?
-	AI_Output			(hero, self, "WRK_203_TROPHYS_15_01"); //Slyšel jsem, že sbíráš trofeje..?
+	AI_Output			(hero, self, "WRK_203_TROPHYS_15_01"); //Slyšel jsem, že sbíráš trofeje?
 //	AI_Output			(self, hero, "WRK_203_TROPHYS_09_02"); //Das stimmt. Aber nicht dieses Wolfs- und Scavenger Zeug. Davon habe ich schon genug.
 	AI_Output			(self, hero, "WRK_203_TROPHYS_09_02"); //Ano, tak. Ale ne tyhle cetky z vlků nebo mrchožroutů. Těch už mám až dost.
 //	AI_Output			(self, hero, "WRK_203_TROPHYS_09_03"); //Aber wenn du mir ein SchattenläuferHorn oder -Fell bringst, dafür zahle ich hundert Silberstücke!
@@ -160,6 +160,7 @@ func int WRK_203_Bromor_TRADE_Condition ()
 		return TRUE;
 	};
 };
+
 func void WRK_203_Bromor_TRADE_Info ()
 {
 //	AI_Output			(hero, self, "WRK_203_TRADE_15_01"); //Ich habe hier was für dich.
@@ -175,6 +176,7 @@ func void WRK_203_Bromor_TRADE_Info ()
 	};
 
 };
+
 func void WRK_203_Bromor_TRADE_HORN ()
 {
 //	AI_Output			(hero, self, "WRK_203_TRADE_HORN_15_01"); //Hier ist das Horn eines Schattenläufers.
