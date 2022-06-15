@@ -2,7 +2,10 @@
 Amatérský český překlad nevydaného rozšíření Gothic Sequel.
 
 ## Instalace
-Stáhněte poslední verzi ze sekce [__Releases__](https://github.com/auronen/Gothic-Sequel-CZ-translation/releases) a rozbalte ji do složky s Gothic Sequelem.
+Aby vám Sequel fungoval, je nutné na hru nejdříve aplikovat patch Union.
+1. Nainstalujte Sequel
+2. Nainstalujte aktuální verzi [Unionu](https://worldofplayers.ru/threads/40376/) 
+3. Stáhněte poslední verzi ze sekce [__Releases__](https://github.com/auronen/Gothic-Sequel-CZ-translation/releases) a rozbalte ji do adresáře `Sequel/Data/`
 
 ## Snímky ze hry
 ### Menu
