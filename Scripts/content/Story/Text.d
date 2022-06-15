@@ -3,9 +3,13 @@
 // *****************************************************************************************
 
 const string MOBNAME_BACKPACK_1		= "";
+//const string MOBNAME_CRATE		= "Kiste";
 const string MOBNAME_CRATE			= "Bedna";
+//const string MOBNAME_CHEST		= "Truhe";
 const string MOBNAME_CHEST			= "Truhla";
+//const string MOBNAME_BED			= "Bett";
 const string MOBNAME_BED			= "Lůžko";
+//const string MOBNAME_DOOR			= "Tür";
 const string MOBNAME_DOOR			= "Dveře";
 const string MOBNAME_CAMP			= "";
 const string MOBNAME_TORCH			= "";
@@ -13,43 +17,68 @@ const string MOBNAME_TORCHHOLDER	= "";
 const string MOBNAME_BARBQ_SCAV		= "";
 const string MOBNAME_BARRELO_OC		= "";
 const string MOBNAME_BENCH			= "";
+//const string MOBNAME_ANVIL		= "Amboss";
 const string MOBNAME_ANVIL			= "Kovadlina";
+//const string MOBNAME_BUCKET		= "Wassereimer";
 const string MOBNAME_BUCKET			= "Vědro s vodou";
+//const string MOBNAME_FORGE		= "Schmiedefeuer";
 const string MOBNAME_FORGE			= "Výheň";
+//const string MOBNAME_GRINDSTONE	= "Schleifstein";
 const string MOBNAME_GRINDSTONE		= "Brus";
+//const string MOBNAME_MELTER		= "Schmelzofen";
 const string MOBNAME_MELTER			= "Tavící pec";
+//const string MOBNAME_WHEEL		= "Winde";
 const string MOBNAME_WHEEL			= "Naviják";
+//const string MOBNAME_LAB			= "Alchemietisch";
 const string MOBNAME_LAB			= "Alchymistický stůl";
+//const string MOBNAME_BOOK			= "Foliant";
 const string MOBNAME_BOOK			= "Stojan na knihy";
 const string MOBNAME_CHAIR			= "";
+//const string MOBNAME_CAULDRON		= "Kessel";
 const string MOBNAME_CAULDRON		= "Kotlík";
 const string MOBNAME_THRONE			= "";
+//const string MOBNAME_PAN			= "Pfanne";
 const string MOBNAME_PAN			= "Pánev";
 const string MOBNAME_REPAIR			= "";
+//const string MOBNAME_WATERPIPE	= "Wasserpfeife";
 const string MOBNAME_WATERPIPE		= "Vodní dýmka";
+//const string MOBNAME_LADDER		= "Leiter";
 const string MOBNAME_LADDER			= "Žebřík";
+//const string MOBNAME_SWITCH		= "Schalter";
 const string MOBNAME_SWITCH			= "Spínač";
+//const string MOBNAME_LEVER		= "Hebel";
 const string MOBNAME_LEVER			= "Páka";
 const string MOBNAME_BARONSTHRONE	= "";
-const string MOBNAME_ORE			= "Magický nuget";
+//const string MOBNAME_ORE			= "Erzader";
+const string MOBNAME_ORE			= "Žíla magické rudy";
 const string MOBNAME_ROPEWAY		= "";
 const string MOBNAME_STOMPER		= "";
 const string MOBNAME_STONEMILL		= "";
 const string MOBNAME_ORC_MUMMY		= "Mumie";
+//const string MOBNAME_PILLAR		= "Säule";
 const string MOBNAME_PILLAR			= "Sloup";
 const string MOBNAME_BASKET_RICE	= "";
 const string MOBNAME_DRUM			= "";
 const string MOBNAME_GROUND_SLOT	= "n/a";
-const string MOBNAME_HERB_PSI		= "Tlouček";
+//const string MOBNAME_HERB_PSI		= "Krautstampfer";
+const string MOBNAME_HERB_PSI		= "Hmoždíř";
+//const string MOBNAME_IDOL			= "Statuette";
 const string MOBNAME_IDOL			= "Figurka";
 const string MOBNAME_LEAN_WALL		= "";
 const string MOBNAME_ORCDRUM		= "";
+//const string MOBNAME_TARGETSTONE	= "Zielscheibe";
 const string MOBNAME_TARGETSTONE	= "Terč";
+//const string MOBNAME_SHRINE		= "Orkischer Herzschrein";
 const string MOBNAME_SHRINE			= "Skřetí relikviář";
+//const string MOBNAME_SWORDSTONE	= "Sonderbarer Stein";
 const string MOBNAME_SWORDSTONE		= "Podivný kámen";
+//const string MOBNAME_RUNEMELTER	= "Runenschmelzer";
 const string MOBNAME_RUNEMELTER		= "Pec na tavení run";
+//const string MOBNAME_RUNEMAKER	= "Runenkreisel";
 const string MOBNAME_RUNEMAKER		= "Stůl na výrobu run";
+//const string MOBNAME_PHOENIX9		= "!!! DIE WIDERAUFERSTEHUNG DES PHOENIX !!!";
 const string MOBNAME_PHOENIX9		= "!!! Znovuzrození fénixe !!!";
+
 
 // ********************************************************************************
 //	Schemanamen für Mobsis 
@@ -270,7 +299,7 @@ const STRING TXT_SPELLS	[MAX_SPELL]	=
 	"n/a",							// SPL_SPEED		=	20;
 	"Podivný teleport",				// SPL_TELEPORT1	=	21;
 	"Teleport k mágům Vody",		// SPL_TELEPORT2	=	22;
-	"Teleport k nekromancerovi",	// SPL_TELEPORT3	=	23;
+	"Teleport k nekromantovi",	    // SPL_TELEPORT3	=	23;
 	"Teleport do Starého tábora",	// SPL_TELEPORT4	=	24;
 	"Teleport do tábora v bažinách",// SPL_TELEPORT5	=	25;
 	"Proměna v krvavou mouchu",		// SPL_TRF_BLOODFLY	=	26;
@@ -337,7 +366,7 @@ const string	NAME_Firerain		=	"Ohnivý déšť";					// SPL_FIRERAIN		=	19;
 const string	NAME_Speed			=   "n/a";							// SPL_SPEED		=	20;
 const string	NAME_Teleport1		=   "Podivný teleport";				// SPL_TELEPORT1	=	21;
 const string	NAME_Teleport2		=   "Teleport k mágům Vody";		// SPL_TELEPORT2	=	22;
-const string	NAME_Teleport3		=   "Teleport k nekromancerovi";	// SPL_TELEPORT3	=	23;
+const string	NAME_Teleport3		=   "Teleport k nekromantovi";	    // SPL_TELEPORT3	=	23;
 const string	NAME_Teleport4		=   "Teleport do Starého tábora";	// SPL_TELEPORT4	=	24;
 const string	NAME_Teleport5		=   "Teleport do tábora v bažinách";// SPL_TELEPORT5	=	25;
 const string	NAME_Trf_Bloodfly	=	"Proměna v krvavou mouchu";		// SPL_TRF_BLOODFLY	=	26;
@@ -1478,13 +1507,20 @@ const string _STR_MESSAGE_ADDDARKPOINTS		=	"Tvoje temná stránka sílí!";
 //const string _STR_MESSAGE_ADDFAME			=	"deine Bekanntheit wächst!";
 const string _STR_MESSAGE_ADDFAME			=	"Tvoje proslulost roste!";
 
-const string _STR_MESSAGE_ARENARANK			=	"Místo ";
-const string _STR_MESSAGE_ARENAVICTORY		=	" Vítězství";
-const string _STR_MESSAGE_ARENAVICTORIES	=	" Vítězství";
-const string _STR_MESSAGE_ARENAPENALTY1		=	"Postih!";
-const string _STR_MESSAGE_ARENAPENALTY2		=	"(Protivník není připraven)";
-const string _STR_MESSAGE_ARENAPLAYERVICTORY=	"Vyhrál jsi!";
-const string _STR_MESSAGE_ARENAPLAYERDEFEAT =	"Byl jsi poražen!";
+const string _STR_MESSAGE_ARENARANK				=	"Místo ";
+//const string _STR_MESSAGE_ARENARANK			=	"Platz ";
+const string _STR_MESSAGE_ARENAVICTORY			=	" Vítězství";
+//const string _STR_MESSAGE_ARENAVICTORY		=	" Sieg";
+const string _STR_MESSAGE_ARENAVICTORIES		=	" Vítězství";
+//const string _STR_MESSAGE_ARENAVICTORIES		=	" Siege";
+const string _STR_MESSAGE_ARENAPENALTY1			=	"Postih!";
+//const string _STR_MESSAGE_ARENAPENALTY1		=	"Punktabzug!";
+const string _STR_MESSAGE_ARENAPENALTY2			=	"(Protivník není připraven)";
+//const string _STR_MESSAGE_ARENAPENALTY2		=	"(Gegner noch nicht bereit)";
+const string _STR_MESSAGE_ARENAPLAYERVICTORY	=	"Vyhrál jsi!";
+//const string _STR_MESSAGE_ARENAPLAYERVICTORY	=	"SIEG !!!";
+const string _STR_MESSAGE_ARENAPLAYERDEFEAT 	=	"Byl jsi poražen!";
+//const string _STR_MESSAGE_ARENAPLAYERDEFEAT 	=	"NIEDERLAGE !!!";
 
 //const string _STR_MESSAGE_EXPLO				=	"Verborgener Ort entdeckt !";
 const string _STR_MESSAGE_EXPLO				=	"Objeveno skryté místo!";
@@ -1620,84 +1656,150 @@ const string _SOUND_PICKLOCK_BROKEN		= "PICKLOCK_BROKEN"									;
 // Zusammenbauen von Info_AddChoice()-Strings beim Kaufen/Lernen
 // ***************************************************************************************
 const string NAME_BuyPrefix			=	" koupit (";
+//const string NAME_BuyPrefix		=	" kaufen (";
 const string NAME_BuyPostfix		=	" stříbra)";
+//const string NAME_BuyPostfix		=	" Silber)";
 const string NAME_BuyArmorPrefix	=	" (";
+//const string NAME_BuyArmorPrefix	=	" (";
 const string NAME_BuyArmorPostfix	=	" stříbra)";
+//const string NAME_BuyArmorPostfix	=	" Silber)";
 const string NAME_PrizePostfix		=	" stříbra";
+//const string NAME_PrizePostfix	=	" Silber";
 const string NAME_LearnPrefix		=	" (";
+//const string NAME_LearnPrefix		=	" (";
 const string NAME_LearnMidfix		=	" stříbra, ";
+//const string NAME_LearnMidfix		=	" Silber, ";
 const string NAME_LearnPostfixS		=	" Vědomostní bod)";
+//const string NAME_LearnPostfixS	=	" Lernpunkt)";
 const string NAME_LearnPostfixP		=	" Vědomostních bodů)";
+//const string NAME_LearnPostfixP	=	" Lernpunkte)";
 
-const string NAME_LearnStrength_1	=	"Síla +1";
-const string NAME_LearnStrength_5	=	"Síla +5";
-const string NAME_LearnStrength_10	=	"Síla +10";
-const string NAME_LearnStrength_20	=	"Síla +20";
+//const string NAME_LearnStrength_1		=	"Stärke +1";
+const string NAME_LearnStrength_1		=	"Síla +1";
+//const string NAME_LearnStrength_5		=	"Stärke +5";
+const string NAME_LearnStrength_5		=	"Síla +5";
+//const string NAME_LearnStrength_10	=	"Stärke +10";
+const string NAME_LearnStrength_10		=	"Síla +10";
+//const string NAME_LearnStrength_20	=	"Stärke +20";
+const string NAME_LearnStrength_20		=	"Síla +20";
 
-const string NAME_LearnDexterity_1	=	"Obratnost +1";
-const string NAME_LearnDexterity_5	=	"Obratnost +5";
-const string NAME_LearnDexterity_10	=	"Obratnost +10";
-const string NAME_LearnDexterity_20	=	"Obratnost +20";
 
+//const string NAME_LearnDexterity_1	=	"Geschick +1";
+const string NAME_LearnDexterity_1		=	"Obratnost +1";
+//const string NAME_LearnDexterity_5	=	"Geschick +5";
+const string NAME_LearnDexterity_5		=	"Obratnost +5";
+//const string NAME_LearnDexterity_10	=	"Geschick +10";
+const string NAME_LearnDexterity_10		=	"Obratnost +10";
+//const string NAME_LearnDexterity_20	=	"Geschick +20";
+const string NAME_LearnDexterity_20		=	"Obratnost +20";
+
+//const string NAME_LearnMana_1		=	"Mana +1";
 const string NAME_LearnMana_1		=	"Mana +1";
+//const string NAME_LearnMana_5		=	"Mana +5";
 const string NAME_LearnMana_5		=	"Mana +5";
+//const string NAME_LearnMana_10	=	"Mana +10";
 const string NAME_LearnMana_10		=	"Mana +10";
+//const string NAME_LearnMana_20	=	"Mana +20";
 const string NAME_LearnMana_20		=	"Mana +20";
 
+//const string NAME_Learn1h_1		=	"Einhänder - Stufe 1";
 const string NAME_Learn1h_1			=	"Jednoruční zbraň - Úroveň 1";
+//const string NAME_Learn1h_2		=	"Einhänder - Stufe 2";
 const string NAME_Learn1h_2			=	"Jednoruční zbraň - Úroveň 2";
+
+//const string NAME_Learn2h_1		=	"Zweihänder - Stufe 1";
 const string NAME_Learn2h_1			=	"Obouruční zbraň - Úroveň 1";
+//const string NAME_Learn2h_2		=	"Zweihänder - Stufe 2";
 const string NAME_Learn2h_2			=	"Obouruční zbraň - Úroveň 2";
+
+//const string NAME_LearnStaff_1	=	"Kampfstab - Stufe 1";
 const string NAME_LearnStaff_1		=	"Boj s holí - Úroveň 1";
+//const string NAME_LearnStaff_2	=	"Kampfstab - Stufe 2";
 const string NAME_LearnStaff_2		=	"Boj s holí - Úroveň 2";
 
+//const string NAME_LearnBow_1		=	"Bogen - Stufe 1";
 const string NAME_LearnBow_1		=	"Luk - Úroveň 1";
+//const string NAME_LearnBow_2		=	"Bogen - Stufe 2";
 const string NAME_LearnBow_2		=	"Luk - Úroveň 2";
+
+//const string NAME_LearnCrossbow_1	=	"Armbrust - Stufe 1";
 const string NAME_LearnCrossbow_1	=	"Kuše - Úroveň 1";
+//const string NAME_LearnCrossbow_2	=	"Armbrust - Stufe 2";
 const string NAME_LearnCrossbow_2	=	"Kuše - Úroveň 2";
 
+//const string NAME_LearnMage_1		=	"1. Kreis der Magie";
 const string NAME_LearnMage_1		=	"1. Kruh magie";
+//const string NAME_LearnMage_2		=	"2. Kreis der Magie";
 const string NAME_LearnMage_2		=	"2. Kruh magie";
+//const string NAME_LearnMage_3		=	"3. Kreis der Magie";
 const string NAME_LearnMage_3		=	"3. Kruh magie";
+//const string NAME_LearnMage_4		=	"4. Kreis der Magie";
 const string NAME_LearnMage_4		=	"4. Kruh magie";
+//const string NAME_LearnMage_5		=	"5. Kreis der Magie";
 const string NAME_LearnMage_5		=	"5. Kruh magie";
+//const string NAME_LearnMage_6		=	"6. Kreis der Magie";
 const string NAME_LearnMage_6		=	"6. Kruh magie";
 
+//const string NAME_LearnPickpocket_1	=	"Taschendiebstahl - Stufe 1";
 const string NAME_LearnPickpocket_1	=	"Vybírání kapes - Úroveň 1";
+//const string NAME_LearnPickpocket_2	=	"Taschendiebstahl - Stufe 2";
 const string NAME_LearnPickpocket_2	=	"Vybírání kapes - Úroveň 2";
+//const string NAME_LearnPicklock_1	=	"Schlösser knacken - Stufe 1";
 const string NAME_LearnPicklock_1	=	"Otevírání zámků - Úroveň 1";
+//const string NAME_LearnPicklock_2	=	"Schlösser knacken - Stufe 2";
 const string NAME_LearnPicklock_2	=	"Otevírání zámků - Úroveň 2";
 
+//const string NAME_LearnAcrobat		=	"Akrobatik";
 const string NAME_LearnAcrobat		=	"Akrobacie";
+//const string NAME_LearnSneak		=	"Schleichen";
 const string NAME_LearnSneak		=	"Plížení";
 
+//const string NAME_LearnSmith_1		=	"Schmieden - Stufe 1";
 const string NAME_LearnSmith_1		=	"Kovářství - Úroveň 1";
+//const string NAME_LearnSmith_2		=	"Schmieden - Stufe 2";
 const string NAME_LearnSmith_2		=	"Kovářství - Úroveň 2";
+//const string NAME_LearnSmith_3		=	"Schmieden - Stufe 3";
 const string NAME_LearnSmith_3		=	"Kovářství - Úroveň 3";
 
+//const string NAME_LearnCook_1		=	"Kochen - Stufe 1";
 const string NAME_LearnCook_1		=	"Vaření - Úroveň 1";
+//const string NAME_LearnCook_2		=	"Kochen - Stufe 2";
 const string NAME_LearnCook_2		=	"Vaření - Úroveň 2";
+//const string NAME_LearnCook_3		=	"Kochen - Stufe 3";
 const string NAME_LearnCook_3		=	"Vaření - Úroveň 3";
 
+//const string NAME_LearnAlchemy_1	=	"Alchemie - Stufe 1";
 const string NAME_LearnAlchemy_1	=	"Alchymie - Úroveň 1";
+//const string NAME_LearnAlchemy_2	=	"Alchemie - Stufe 2";
 const string NAME_LearnAlchemy_2	=	"Alchymie - Úroveň 2";
+//const string NAME_LearnAlchemy_3	=	"Alchemie - Stufe 3";
 const string NAME_LearnAlchemy_3	=	"Alchymie - Úroveň 3";
 
-const string NAME_LearnThaumaturgy_1=	"Výroba run - Úroveň 1";
-const string NAME_LearnThaumaturgy_2=	"Výroba run - Úroveň 2";
-const string NAME_LearnThaumaturgy_3=	"Výroba run - Úroveň 3";
+//const string NAME_LearnThaumaturgy_1	=	"Runen erschaffen -  Stufe 1";
+const string NAME_LearnThaumaturgy_1	=	"Výroba run - Úroveň 1";
+//const string NAME_LearnThaumaturgy_2	=	"Runen erschaffen -  Stufe 2";
+const string NAME_LearnThaumaturgy_2	=	"Výroba run - Úroveň 2";
+//const string NAME_LearnThaumaturgy_3	=	"Runen erschaffen -  Stufe 3";
+const string NAME_LearnThaumaturgy_3	=	"Výroba run - Úroveň 3";
 
+//const string NAME_LearnBowmaker_1	=	"Bogenmachen - Stufe 1";
 const string NAME_LearnBowmaker_1	=	"Výroba luků - Úroveň 1";
+//const string NAME_LearnBowmaker_2	=	"Bogenmachen - Stufe 2";
 const string NAME_LearnBowmaker_2	=	"Výroba luků - Úroveň 2";
+//const string NAME_LearnBowmaker_3	=	"Bogenmachen - Stufe 3";
 const string NAME_LearnBowmaker_3	=	"Výroba luků - Úroveň 3";
 
 
+//const string NAME_RaiseStrength		=	"Stärke +";
 const string NAME_RaiseStrength		=	"Síla +";
+//const string NAME_RaiseDexterity	=	"Geschick +";
 const string NAME_RaiseDexterity	=	"Obratnost +";
+//const string NAME_RaiseStrDex		=	"Stärke und Geschick +";
 const string NAME_RaiseStrDex		=	"Síla a obratnost +";
+//const string NAME_RaiseManaMax	=	"maximale Mana +";
 const string NAME_RaiseManaMax		=	"Maximum magické energie +";
+//const string NAME_RaiseHealthMax	=	"maximale Lebensenergie +";
 const string NAME_RaiseHealthMax	=	"Maximum zdraví +";
-
 
 // ***************************************************************************************
 // Menuetext-Konstanten
@@ -1708,6 +1810,7 @@ const string MENU_TEXT_NEEDS_APPLY		= "";
 
 // Text, der erscheint, wenn ein Restart des Spiels notwendig ist (Grafikkartebauswahl).
 // Maximal ca. 60 Zeichen, da nur eine Zeile Platz!
+//const string MENU_TEXT_NEEDS_RESTART	= "Einige Einstellungen werden erst nach einem Neustart aktiv";
 const string MENU_TEXT_NEEDS_RESTART	= "Některé změny v nastavení se projeví až po dalším spuštění hry.";
 
 // ***************************************************************************************
