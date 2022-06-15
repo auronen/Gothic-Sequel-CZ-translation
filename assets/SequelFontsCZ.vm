@@ -1,0 +1,11 @@
+[BEGINVDF]
+Comment=Èeské fonty pro Gothic Sequel%%NVíce informací: https://github.com/auronen/Gothic-Sequel-CZ-translation
+BaseDir=C:\GOG Games\Gothic Sequel - Union
+VDFName=C:\GOG Games\Gothic Sequel - Union\Data\fonts_cz.vdf
+[FILES]
+_work\DATA\TEXTURES\_COMPILED\FONT_*.FNT -r
+_work\DATA\TEXTURES\_COMPILED\FONT_*.TEX -r
+_work\DATA\TEXTURES\Fonts\NOMIP\FONT_*.TGA -r
+[EXCLUDE]
+[INCLUDE]
+[ENDVDF]

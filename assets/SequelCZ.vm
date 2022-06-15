@@ -1,0 +1,12 @@
+[BEGINVDF]
+Comment=Èeština pro Gothic Sequel%%NVíce informací: https://github.com/auronen/Gothic-Sequel-CZ-translation
+BaseDir=C:\GOG Games\Gothic Sequel - Union
+VDFName=C:\GOG Games\Gothic Sequel - Union\Data\Sequel_cz.vdf
+[FILES]
+_Work\Data\Scripts\_Compiled\*.dat -r
+_Work\Data\Scripts\Content\Cutscene\OU.BIN -r
+_Work\Data\TEXTURES\_COMPILED\LOADING-C.TEX -r
+_Work\Data\Textures\_COMPILED\SAVING-C.TEX -r
+[EXCLUDE]
+[INCLUDE]
+[ENDVDF]
