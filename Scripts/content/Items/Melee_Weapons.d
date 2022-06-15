@@ -830,7 +830,7 @@ INSTANCE ItMw_RustySword (C_Item)
 	TEXT[0]				= NAME_TypeOneHanded;
 	TEXT[2]				= NAME_Damage;					COUNT[2]	= damageTotal;
 	TEXT[3] 			= NAME_Str_needed;				COUNT[3]	= cond_value[0];
-	TEXT[4] 			= NAME_TypeOneHanded;
+
 	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
 };
 
@@ -857,10 +857,10 @@ INSTANCE ItMw_Nailmace (C_Item)
 	visual 				=	"ItMw_1H_Nailmace_01.3DS";
 
 	description			= name;
-	TEXT[0]				=	NAME_TypeOneHanded;
+	TEXT[0]				= NAME_TypeOneHanded;
 	TEXT[2]				= NAME_Damage;					COUNT[2]	= damageTotal;
 	TEXT[3] 			= NAME_Str_needed;				COUNT[3]	= cond_value[0];
-	TEXT[4] 			= NAME_TypeOneHanded;
+
 	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
 };
 
@@ -887,10 +887,10 @@ instance ItMw_WitheredAxe (C_Item)
 	visual 				=	"ItMw_1H_Axe_Old_01.3DS";
 
 	description			= name;
-	TEXT[0]				=	NAME_TypeOneHanded;
+	TEXT[0]				= NAME_TypeOneHanded;
 	TEXT[2]				= NAME_Damage;					COUNT[2]	= damageTotal;
 	TEXT[3] 			= NAME_Str_needed;				COUNT[3]	= cond_value[0];
-	TEXT[4] 			= NAME_TypeOneHanded;
+
 	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
 };
 
@@ -917,10 +917,10 @@ INSTANCE ItMw_NotchedMace (C_Item)
 	visual 				=	"ItMw_1H_Mace_01.3DS";
 
 	description			= name;
-	TEXT[0]				=	NAME_TypeOneHanded;
+	TEXT[0]				= NAME_TypeOneHanded;
 	TEXT[2]				= NAME_Damage;					COUNT[2]	= damageTotal;
 	TEXT[3] 			= NAME_Str_needed;				COUNT[3]	= cond_value[0];
-	TEXT[4] 			= NAME_TypeOneHanded;
+
 	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
 };
 
