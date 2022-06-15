@@ -51,7 +51,7 @@ FUNC void Use_test_text1()
 				Doc_PrintLines	(nDocID,  0, "PŘÍLIŠ ŽLUŤOUČKÝ KŮŇ ÚPĚL ĎÁBELSKÉ ÓDY.");
 				Doc_PrintLines	(nDocID,  0, "1234567890!#$%&()+,-./:;<=>?@ \_{|}~‚„‘a’a“a”–™§©®");
 				Doc_PrintLine	(nDocID,  0, "");
-				Doc_PrintLine	(nDocID,  0, "         VaanaCZ & Auronen & Tým™");
+				Doc_PrintLine	(nDocID,  0, "         VaanaCZ & Auronen & Vojta1122 & Zero");
 				Doc_Show		(nDocID);
 
 	Diego_LetterRead = TRUE;
