@@ -32,6 +32,6 @@
 	#patch [Fix NPC_KnowsInfo]
 		#assembler [0x007031c8]
 			JMP 	0x007031d4
-		#%assembler
+		#/assembler
 	#/patch   
 #/engine
