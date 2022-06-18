@@ -14,7 +14,6 @@ source: [Ikarus](https://forum.worldofplayers.de/forum/threads/1299679-Skriptpak
 
 ## Bug fix list
 - BEG_701_Jose.d - fixed Npc_KnowsInfo() bug
-- WRK_227_Snaf.d - fixed attribute save persistency
 - THF_403_Gerion.d - fixed a bug with Wylfern's ring, Npc_KnowsInfo() bug
 - B_AssignAmbientInfos_MIL_4.d - fixed Npc_KnowsInfo() bug
 - B_AssignAmbientInfos_MIL_6.d - fixed Npc_KnowsInfo() bug
@@ -23,8 +22,10 @@ source: [Ikarus](https://forum.worldofplayers.de/forum/threads/1299679-Skriptpak
 - B_FindNpx_MIL.d - fixed Npc_KnowsInfo() bug
 - MIL_103_BERENGAR - fixed Npc_KnowsInfo() bug
 - MIL_122_ARENAMASTER - fixed Npc_KnowsInfo() bug
+- WRK_227_Snaf.d - fixed attribute save persistency
 - Mst_Molerat.d - added DMolerat instance for Diegos quest - these molerats drop meat now
 - DIA_PC_Thief.d - quest spawns molerats with meat
 - Chests.d - uncommented some lines, to add some books to those chests
 - DIA_wrk_200_gotmar.d - fixed Broad sword/Bastar sword bug
 - DIA_wrk_200_gotmar.d - fixed attribute save persistency
+- THF_409_Pyro.d - fixed Pyro not appearing - wrong waypoint 
