@@ -375,7 +375,7 @@ instance THF_401_Huldrych_NOWFIGHT		(C_INFO)
 	condition	 = 	THF_401_Huldrych_NOWFIGHT_Condition;
 	information	 = 	THF_401_Huldrych_NOWFIGHT_Info;
 	important	 = 	TRUE;
-	permanent	 = 	TRUE;
+	permanent	 = 	FALSE;
 };
 
 func int THF_401_Huldrych_NOWFIGHT_Condition ()
