@@ -72,7 +72,7 @@ instance	Info_Gotmar_TIRESOME (C_INFO)
 	important		= FALSE;
 	permanent		= FALSE;
 //	description		= "Sieht sehr anstrengend aus, deine Arbeit!";
-	description		= "Vypadá to nebezpečně, ta tvoje práce!";
+	description		= "Vypadá to namáhavě, ta tvoje práce!";
 };
 
 func int	Info_Gotmar_TIRESOME_Condition()
@@ -86,7 +86,7 @@ func int	Info_Gotmar_TIRESOME_Condition()
 func void	Info_Gotmar_TIRESOME_Info()
 {
 //	AI_Output			(hero, self,"Info_Gotmar_TIRESOME_15_01"); //Sieht anstrengend aus, deine Arbeit!
-	AI_Output			(hero, self,"Info_Gotmar_TIRESOME_15_01"); //Vypadá to nebezpečně, ta tvoje práce!
+	AI_Output			(hero, self,"Info_Gotmar_TIRESOME_15_01"); //Vypadá to namáhavě, ta tvoje práce!
 //	AI_Output			(self, hero,"Info_Gotmar_TIRESOME_04_02"); //Und es ist ehrliche Arbeit! Das kann nicht jeder hier von seinem Beruf behaupten.
 	AI_Output			(self, hero,"Info_Gotmar_TIRESOME_04_02"); //A je to skutečná práce! Taková práce tady rozhodně není pro každého.
 //	AI_Output			(hero, self,"Info_Gotmar_TIRESOME_15_03"); //Wie meinst du das?
