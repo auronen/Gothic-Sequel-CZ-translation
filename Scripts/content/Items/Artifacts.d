@@ -22,9 +22,7 @@ INSTANCE ItAr_RuneLight (C_Item)
 	description			=	NAME_Light;
 	TEXT	[0]			=	NAME_Mag_Circle;		COUNT	[0]		=	mag_circle;
 	TEXT	[1]			=	NAME_Manakosten;		COUNT	[1]		=	SPL_SENDCAST_LIGHT;
-	//TEXT	[2]			=	"";						COUNT	[2]		=	;
-	//TEXT	[3] 		=	"";						COUNT	[3]		=	;
-	//TEXT	[4]			=	"";						COUNT	[4]		=	;
+
 	TEXT	[5]			=	NAME_Value;				COUNT	[5]		=	value;
 };
 
@@ -45,11 +43,10 @@ INSTANCE ItAr_ScrollLight (C_Item)
 	cond_value[2]  		= 	SPL_SENDCAST_LIGHT;
 
 	description			=	NAME_Light;
-	//TEXT	[0]			=	NAME_Mag_Circle;			COUNT	[0]		=	mag_circle;
+
 	TEXT	[1]			=	NAME_Manakosten;		COUNT	[1]		=	SPL_SENDCAST_LIGHT;
-	//TEXT	[2]			=	"";						COUNT	[2]		=	;
-	//TEXT	[3] 		=	"";						COUNT	[3]		=	;
-	//TEXT	[4]			=	"";						COUNT	[4]		=	;
+
+
 	TEXT	[5]			=	NAME_Value;				COUNT	[5]		=	value;
 };
 
@@ -75,8 +72,7 @@ INSTANCE ItAr_RuneFirebolt (C_Item)
 	TEXT	[0]			=	NAME_Mag_Circle;		COUNT	[0]		=	mag_circle;
 	TEXT	[1]			=	NAME_Manakosten;		COUNT	[1]		=	SPL_SENDCAST_FIREBOLT;
 	TEXT	[2]			=	NAME_Dam_Fire;			COUNT	[2]		=	SPL_DAMAGE_FIREBOLT;
-	//TEXT	[3] 		=	"";						COUNT	[3]		=	;
-	//TEXT	[4]			=	"";						COUNT	[4]		=	;
+
 	TEXT	[5]			=	NAME_Value;				COUNT	[5]		=	value;
 };
 
@@ -97,11 +93,10 @@ INSTANCE ItAr_ScrollFirebolt (C_Item)
 	cond_value[2]  		= 	SPL_SENDCAST_FIREBOLT;
 
 	description			=	NAME_Firebolt;
-	//TEXT	[0]			=	NAME_Mag_Circle;		COUNT	[0]		=	mag_circle;
+
 	TEXT	[1]			=	NAME_Manakosten;		COUNT	[1]		=	SPL_SENDCAST_FIREBOLT;
 	TEXT	[2]			=	NAME_Dam_Fire;			COUNT	[2]		=	SPL_DAMAGE_FIREBOLT;
-	//TEXT	[3] 		=	"";						COUNT	[3]		=	;
-	//TEXT	[4]			=	"";						COUNT	[4]		=	;
+
 	TEXT	[5]			=	NAME_Value;				COUNT	[5]		=	value;
 };
 
@@ -127,7 +122,7 @@ INSTANCE ItAr_RuneFireball (C_Item)
 	TEXT	[0]			=	NAME_Mag_Circle;							COUNT	[0]		=	mag_circle;
 	TEXT	[1]			=	NAME_ManakostenMax;							COUNT	[1]		=	SPL_SENDCAST_FIREBALL;
 	TEXT	[2]			=	ConcatStrings(NAME_Dam_Fire,NAME_PerMana);	COUNT	[2]		=	SPL_DAMAGE_FIREBALL;
-	//TEXT	[3] 		=	"";											COUNT	[3]		=	;
+
 	TEXT	[4]			=	NAME_Spell_Load;
 	TEXT	[5]			=	NAME_Value;									COUNT	[5]		=	value;
 };
@@ -149,10 +144,10 @@ INSTANCE ItAr_ScrollFireball (C_Item)
 	cond_value[2]  		= 	SPL_SENDCAST_FIREBALL;
 
 	description			= 	NAME_Fireball;
-	//TEXT	[0]			=	NAME_Mag_Circle;							COUNT	[0]		=	mag_circle;
+
 	TEXT	[1]			=	NAME_ManakostenMax;							COUNT	[1]		=	SPL_SENDCAST_FIREBALL;
 	TEXT	[2]			=	ConcatStrings(NAME_Dam_Fire,NAME_PerMana);	COUNT	[2]		=	SPL_DAMAGE_FIREBALL;
-	//TEXT	[3] 		=	"";											COUNT	[3]		=	;
+
 	TEXT	[4]			=	NAME_Spell_Load;
 	TEXT	[5]			=	NAME_Value;									COUNT	[5]		=	value;
 };
@@ -179,7 +174,7 @@ INSTANCE ItAr_RuneFirestorm (C_Item)
 	TEXT	[0]			=	NAME_Mag_Circle;							COUNT	[0]		=	mag_circle;
 	TEXT	[1]			=	NAME_ManakostenMax;							COUNT	[1]		=	SPL_SENDCAST_FIRESTORM;
 	TEXT	[2]			=	ConcatStrings(NAME_Dam_Fire,NAME_PerMana);	COUNT	[2]		=	SPL_DAMAGE_FIRESTORM;
-	//TEXT	[3] 		=	"";											COUNT	[3]		=	;
+
 	TEXT	[4]			=	NAME_Spell_Load;
 	TEXT	[5]			=	NAME_Value;									COUNT	[5]		=	value;
 };
@@ -201,10 +196,10 @@ INSTANCE ItAr_ScrollFirestorm (C_Item)
 	cond_value[2]  		= 	SPL_SENDCAST_FIRESTORM;
 
 	description			= 	NAME_Firestorm;
-	//TEXT	[0]			=	NAME_Mag_Circle;							COUNT	[0]		=	mag_circle;
+
 	TEXT	[1]			=	NAME_ManakostenMax;							COUNT	[1]		=	SPL_SENDCAST_FIRESTORM;
 	TEXT	[2]			=	ConcatStrings(NAME_Dam_Fire,NAME_PerMana);	COUNT	[2]		=	SPL_DAMAGE_FIRESTORM;
-	//TEXT	[3] 		=	"";											COUNT	[3]		=	;
+
 	TEXT	[4]			=	NAME_Spell_Load;
 	TEXT	[5]			=	NAME_Value;									COUNT	[5]		=	value;
 };
@@ -231,8 +226,8 @@ INSTANCE ItAr_RuneFireRain (C_Item)
 	TEXT	[0]			=	NAME_Mag_Circle;			COUNT	[0]		=	mag_circle;
 	TEXT	[1]			=	NAME_Manakosten;			COUNT	[1]		=	SPL_SENDCAST_FIRERAIN;
 	TEXT	[2]			=	NAME_Dam_Fire;				COUNT	[2]		=	SPL_DAMAGE_FIRERAIN;
-	//TEXT	[3] 		=	"";							COUNT	[3]		=	;
-	//TEXT	[4]			=	"";
+
+
 	TEXT	[5]			=	NAME_Value;					COUNT	[5]		=	value;
 };
 
@@ -253,11 +248,11 @@ INSTANCE ItAr_ScrollFireRain (C_Item)
 	cond_value[2]  		= 	SPL_SENDCAST_FIRERAIN;
 
 	description			=	NAME_Firerain;
-	//TEXT	[0]			=	NAME_Mag_Circle;			COUNT	[0]		=	mag_circle;
+
 	TEXT	[1]			=	NAME_Manakosten;			COUNT	[1]		=	SPL_SENDCAST_FIRERAIN;
 	TEXT	[2]			=	NAME_Dam_Fire;				COUNT	[2]		=	SPL_DAMAGE_FIRERAIN;
-	//TEXT	[3] 		=	"";							COUNT	[3]		=	;
-	//TEXT	[4]			=	"";
+
+
 	TEXT	[5]			=	NAME_Value;					COUNT	[5]		=	value;
 };
 
@@ -298,8 +293,8 @@ INSTANCE ItAr_ScrollTeleport1 (C_Item)
 	description			= 	NAME_Teleport1;
 	TEXT	[0]			=	NAME_Manakosten;			COUNT	[1]		=	SPL_SENDCAST_TELEPORT;
 //	TEXT	[2]			=	"Dieser Teleportzauber ist nicht wie andere.";
-//	TEXT	[3]			=	"Er scheint mehr als nur Mana zu benötigen!";
 	TEXT	[2]			=	"Toto teleportační kouzlo je jiné než ta ostatní.";
+//	TEXT	[3]			=	"Er scheint mehr als nur Mana zu benötigen!";
 	TEXT	[3]			=	"Vypadá to, že vyžaduje něco víc než jen manu!";
 };
 
@@ -339,7 +334,7 @@ INSTANCE ItAr_ScrollTeleport2 (C_Item)
 	cond_value[2]  		= 	SPL_SENDCAST_TELEPORT;
 
 	description			= 	NAME_Teleport2;
-	//TEXT	[0]			=	NAME_Mag_Circle;			COUNT	[0]		=	mag_circle;
+
 	TEXT	[1]			=	NAME_Manakosten;			COUNT	[1]		=	SPL_SENDCAST_TELEPORT;
 };
 
@@ -363,8 +358,8 @@ INSTANCE ItAr_RuneTeleport3 (C_Item)
 	TEXT	[0]			=	NAME_Mag_Circle;			COUNT	[0]		=	mag_circle;
 	TEXT	[1]			=	NAME_Manakosten;			COUNT	[1]		=	SPL_SENDCAST_TELEPORT;
 //	TEXT	[3]			=	"Diese Rune teleportiert direkt in den";
-//	TEXT	[4]			=	"Turm von Xardas dem Dämonenbeschwörer.";
 	TEXT	[3]			=	"Tato runa teleportuje mága přímo";
+//	TEXT	[4]			=	"Turm von Xardas dem Dämonenbeschwörer.";
 	TEXT	[4]			=	"do věže nekromanta Xardase.";
 };
 
@@ -383,7 +378,7 @@ INSTANCE ItAr_ScrollTeleport3 (C_Item)
 	cond_value[2]  		= 	SPL_SENDCAST_TELEPORT;
 
 	description			=	NAME_Teleport3;
-	//TEXT	[0]			=	NAME_Mag_Circle;			COUNT	[0]		=	mag_circle;
+
 	TEXT	[1]			=	NAME_Manakosten;			COUNT	[1]		=	SPL_SENDCAST_TELEPORT;
 };
 
@@ -427,7 +422,7 @@ INSTANCE ItAr_ScrollTeleport5 (C_Item)
 	cond_value[2]  		= 	SPL_SENDCAST_TELEPORT;
 
 	description			=	NAME_Teleport4;
-	//TEXT	[0]			=	NAME_Mag_Circle;			COUNT	[0]		=	mag_circle;
+
 	TEXT	[1]			=	NAME_Manakosten;			COUNT	[1]		=	SPL_SENDCAST_TELEPORT;
 };
 
@@ -455,10 +450,9 @@ INSTANCE ItAr_RuneHeal (C_Item)
 
 	description			=	NAME_Heal;
 	TEXT	[0]			=	NAME_Mag_Circle;			COUNT	[0]		=	mag_circle;
-//	TEXT	[1]			=	"Heilung pro Mana";			COUNT	[1]		=	SPL_HEALING_HP_PER_MP;
+
 	TEXT	[1]			=	NAME_HealPerMana;			COUNT	[1]		=	SPL_HEALING_HP_PER_MP;
-	//TEXT	[2]			=	"";							COUNT	[2]		=	;
-	//TEXT	[3] 		=	"";							COUNT	[3]		=	;
+
 	TEXT	[4]			=	NAME_Spell_Invest;
 	TEXT	[5]			=	NAME_Value;					COUNT	[5]		=	value;
 };
@@ -481,11 +475,11 @@ INSTANCE ItAr_ScrollHeal (C_Item)
 	cond_value[2]  		= 	SPL_HEALING_HP_PER_MP;
 
 	description			=	NAME_Heal;
-	//TEXT	[0]			=	NAME_Mag_Circle;			COUNT	[0]		=	mag_circle;
-//	TEXT	[1]			=	"Heilung pro Mana";			COUNT	[1]		=	SPL_HEALING_HP_PER_MP;
+
+
 	TEXT	[1]			=	NAME_HealPerMana;			COUNT	[1]		=	SPL_HEALING_HP_PER_MP;
 	TEXT	[2]			=	NAME_Mana_needed;			COUNT	[2]		=	SPL_HEALING_HP_PER_MP;
-	//TEXT	[3] 		=	"";							COUNT	[3]		=	;
+
 	TEXT	[4]			=	NAME_Spell_Invest;
 	TEXT	[5]			=	NAME_Value;					COUNT	[5]		=	value;
 };
@@ -512,11 +506,9 @@ INSTANCE ItAr_ScrollTrfBloodfly (C_Item)
 	cond_value[2]  		= 	SPL_SENDCAST_TRF_BLOODFLY;
 
 	description			=	NAME_Trf_Bloodfly;
-	//TEXT	[0]			=	NAME_Mag_Circle;			COUNT	[0]		=	mag_circle;
+
 	TEXT	[1]			=	NAME_Manakosten;			COUNT	[1]		=	SPL_SENDCAST_TRF_BLOODFLY;
-	//TEXT	[2]			=	"";							COUNT	[2]		=	;
-	//TEXT	[3] 		=	"";							COUNT	[3]		=	;
-	//TEXT	[4]			=	"";							COUNT	[4]		=	;
+
 	TEXT	[5]			=	NAME_Value;					COUNT	[5]		=	value;
 };
 
@@ -537,11 +529,9 @@ INSTANCE ItAr_ScrollTrfCrawler (C_Item)
 	cond_value[2]  		=	SPL_SENDCAST_TRF_CRAWLER;
 
 	description			=	NAME_Trf_Crawler;
-	//TEXT	[0]			=	NAME_Mag_Circle;			COUNT	[0]		=	mag_circle;
+
 	TEXT	[1]			=	NAME_Manakosten;			COUNT	[1]		=	SPL_SENDCAST_TRF_CRAWLER;
-	//TEXT	[2]			=	"";							COUNT	[2]		=	;
-	//TEXT	[3] 		=	"";							COUNT	[3]		=	;
-	//TEXT	[4]			=	"";							COUNT	[4]		=	;
+
 	TEXT	[5]			=	NAME_Value;					COUNT	[5]		=	value;
 };
 
@@ -562,11 +552,9 @@ INSTANCE ItAr_ScrollTrfLurker (C_Item)
 	cond_value[2]  		=	SPL_SENDCAST_TRF_LURKER;
 
 	description			=	NAME_Trf_Lurker;
-	//TEXT	[0]			=	NAME_Mag_Circle;			COUNT	[0]		=	mag_circle;
+
 	TEXT	[1]			=	NAME_Manakosten;			COUNT	[1]		=	SPL_SENDCAST_TRF_LURKER;
-	//TEXT	[2]			=	"";							COUNT	[2]		=	;
-	//TEXT	[3] 		=	"";							COUNT	[3]		=	;
-	//TEXT	[4]			=	"";							COUNT	[4]		=	;
+
 	TEXT	[5]			=	NAME_Value;					COUNT	[5]		=	value;
 };
 
@@ -587,11 +575,9 @@ INSTANCE ItAr_ScrollTrfMeatbug (C_Item)
 	cond_value[2]  		=	SPL_SENDCAST_TRF_MEATBUG;
 
 	description			=	NAME_Trf_Meatbug;
-	//TEXT	[0]			=	NAME_Mag_Circle;			COUNT	[0]		=	mag_circle;
+
 	TEXT	[1]			=	NAME_Manakosten;			COUNT	[1]		=	SPL_SENDCAST_TRF_MEATBUG;
-	//TEXT	[2]			=	"";							COUNT	[2]		=	;
-	//TEXT	[3] 		=	"";							COUNT	[3]		=	;
-	//TEXT	[4]			=	"";							COUNT	[4]		=	;
+
 	TEXT	[5]			=	NAME_Value;					COUNT	[5]		=	value;
 };
 
@@ -612,11 +598,9 @@ INSTANCE ItAr_ScrollTrfMolerat (C_Item)
 	cond_value[2]  		=	SPL_SENDCAST_TRF_MOLERAT;
 
 	description			=	NAME_Trf_Molerat;
-	//TEXT	[0]			=	NAME_Mag_Circle;			COUNT	[0]		=	mag_circle;
+
 	TEXT	[1]			=	NAME_Manakosten;			COUNT	[1]		=	SPL_SENDCAST_TRF_MOLERAT;
-	//TEXT	[2]			=	"";							COUNT	[2]		=	;
-	//TEXT	[3] 		=	"";							COUNT	[3]		=	;
-	//TEXT	[4]			=	"";							COUNT	[4]		=	;
+
 	TEXT	[5]			=	NAME_Value;					COUNT	[5]		=	value;
 };
 
@@ -637,11 +621,9 @@ INSTANCE ItAr_ScrollTrfOrcdog (C_Item)
 	cond_value[2]  		=	SPL_SENDCAST_TRF_ORCDOG;
 
 	description			=	NAME_Trf_Orcdog;
-	//TEXT	[0]			=	NAME_Mag_Circle;			COUNT	[0]		=	mag_circle;
+
 	TEXT	[1]			=	NAME_Manakosten;			COUNT	[1]		=	SPL_SENDCAST_TRF_ORCDOG;
-	//TEXT	[2]			=	"";							COUNT	[2]		=	;
-	//TEXT	[3] 		=	"";							COUNT	[3]		=	;
-	//TEXT	[4]			=	"";							COUNT	[4]		=	;
+
 	TEXT	[5]			=	NAME_Value;					COUNT	[5]		=	value;
 };
 
@@ -662,11 +644,9 @@ INSTANCE ItAr_ScrollTrfScavenger (C_Item)
 	cond_value[2]  		=	SPL_SENDCAST_TRF_SCAVENGER;
 
 	description			=	NAME_Trf_Scavenger;
-	//TEXT	[0]			=	NAME_Mag_Circle;			COUNT	[0]		=	mag_circle;
+
 	TEXT	[1]			=	NAME_Manakosten;			COUNT	[1]		=	SPL_SENDCAST_TRF_SCAVENGER;
-	//TEXT	[2]			=	"";							COUNT	[2]		=	;
-	//TEXT	[3] 		=	"";							COUNT	[3]		=	;
-	//TEXT	[4]			=	"";							COUNT	[4]		=	;
+
 	TEXT	[5]			=	NAME_Value;					COUNT	[5]		=	value;
 };
 
@@ -687,11 +667,9 @@ INSTANCE ItAr_ScrollTrfShadowbeast (C_Item)
 	cond_value[2]  		=	SPL_SENDCAST_TRF_SHADOWBEAST;
 
 	description			=	NAME_Trf_Shadowbeast;
-	//TEXT	[0]			=	NAME_Mag_Circle;			COUNT	[0]		=	mag_circle;
+
 	TEXT	[1]			=	NAME_Manakosten;			COUNT	[1]		=	SPL_SENDCAST_TRF_SHADOWBEAST;
-	//TEXT	[2]			=	"";							COUNT	[2]		=	;
-	//TEXT	[3] 		=	"";							COUNT	[3]		=	;
-	//TEXT	[4]			=	"";							COUNT	[4]		=	;
+
 	TEXT	[5]			=	NAME_Value;					COUNT	[5]		=	value;
 };
 
@@ -712,11 +690,9 @@ INSTANCE ItAr_ScrollTrfSnapper (C_Item)
 	cond_value[2]  		=	SPL_SENDCAST_TRF_SNAPPER;
 
 	description			=	NAME_Trf_Snapper;
-	//TEXT	[0]			=	NAME_Mag_Circle;			COUNT	[0]		=	mag_circle;
+
 	TEXT	[1]			=	NAME_Manakosten;			COUNT	[1]		=	SPL_SENDCAST_TRF_SNAPPER;
-	//TEXT	[2]			=	"";							COUNT	[2]		=	;
-	//TEXT	[3] 		=	"";							COUNT	[3]		=	;
-	//TEXT	[4]			=	"";							COUNT	[4]		=	;
+
 	TEXT	[5]			=	NAME_Value;					COUNT	[5]		=	value;
 };
 
@@ -737,11 +713,9 @@ INSTANCE ItAr_ScrollTrfWaran (C_Item)
 	cond_value[2]  		=	SPL_SENDCAST_TRF_WARAN;
 
 	description			=	NAME_Trf_Waran;
-	//TEXT	[0]			=	NAME_Mag_Circle;			COUNT	[0]		=	mag_circle;
+
 	TEXT	[1]			=	NAME_Manakosten;			COUNT	[1]		=	SPL_SENDCAST_TRF_WARAN;
-	//TEXT	[2]			=	"";							COUNT	[2]		=	;
-	//TEXT	[3] 		=	"";							COUNT	[3]		=	;
-	//TEXT	[4]			=	"";							COUNT	[4]		=	;
+
 	TEXT	[5]			=	NAME_Value;					COUNT	[5]		=	value;
 };
 
@@ -762,11 +736,9 @@ INSTANCE ItAr_ScrollTrfWolf (C_Item)
 	cond_value[2]  		=	SPL_SENDCAST_TRF_WOLF;
 
 	description			=	NAME_Trf_Wolf;
-	//TEXT	[0]			=	NAME_Mag_Circle;			COUNT	[0]		=	mag_circle;
+
 	TEXT	[1]			=	NAME_Manakosten;			COUNT	[1]		=	SPL_SENDCAST_TRF_WOLF;
-	//TEXT	[2]			=	"";							COUNT	[2]		=	;
-	//TEXT	[3] 		=	"";							COUNT	[3]		=	;
-	//TEXT	[4]			=	"";							COUNT	[4]		=	;
+
 	TEXT	[5]			=	NAME_Value;					COUNT	[5]		=	value;
 };
 
@@ -792,8 +764,7 @@ INSTANCE ItAr_RuneChainLightning (C_Item)
 	description			=	NAME_Chainlightning;
 	TEXT	[0]			=	NAME_Mag_Circle;			COUNT	[0]		=	mag_circle;
 	TEXT	[1]			=	NAME_DamagePerSec;			COUNT	[1]		=	SPL_ZAPPED_DAMAGE_PER_SEC;
-	//TEXT	[2]			=	"";							COUNT	[2]		=	;
-	//TEXT	[3] 		=	"";							COUNT	[3]		=	;
+
 	TEXT	[4]			=	NAME_Spell_Invest;
 	TEXT	[5]			=	NAME_Value;					COUNT	[5]		=	value;
 };
@@ -814,10 +785,10 @@ INSTANCE ItAr_ScrollChainLightning (C_Item)
 	//mag_circle 			=	3;
 
 	description			=	NAME_Chainlightning;
-	//TEXT	[0]			=	NAME_Mag_Circle;			COUNT	[0]		=	mag_circle;
+
 	TEXT	[1]			=	NAME_DamagePerSec;			COUNT	[1]		=	SPL_ZAPPED_DAMAGE_PER_SEC;
-	//TEXT	[2]			=	"";							COUNT	[2]		=	;
-	//TEXT	[3] 		=	"";							COUNT	[3]		=	;
+
+
 	TEXT	[4]			=	NAME_Spell_Invest;
 	TEXT	[5]			=	NAME_Value;					COUNT	[5]		=	value;
 };
@@ -846,8 +817,8 @@ INSTANCE ItAr_RuneThunderbolt (C_Item)
 	TEXT	[0]			=	NAME_Mag_Circle;			COUNT	[0]		=	mag_circle;
 	TEXT	[1]			=	NAME_Manakosten;			COUNT	[1]		=	SPL_SENDCAST_THUNDERBOLT;
 	TEXT	[2]			=	NAME_Dam_Magic;				COUNT	[2]		=	SPL_DAMAGE_THUNDERBOLT;
-	//TEXT	[3] 		=	"";							COUNT	[3]		=	;
-	//TEXT	[4]			=	"";							COUNT	[4]		=	;
+
+							COUNT	[4]		=	;
 	TEXT	[5]			=	NAME_Value;					COUNT	[5]		=	value;
 };
 
@@ -868,11 +839,11 @@ INSTANCE ItAr_ScrollThunderbolt (C_Item)
 	cond_value[2]  		=	SPL_SENDCAST_THUNDERBOLT;
 
 	description			=	NAME_Thunderbolt;
-	//TEXT	[0]			=	NAME_Mag_Circle;			COUNT	[0]		=	mag_circle;
+
 	TEXT	[1]			=	NAME_Manakosten;			COUNT	[1]		=	SPL_SENDCAST_THUNDERBOLT;
 	TEXT	[2]			=	NAME_Dam_Magic;				COUNT	[2]		=	SPL_DAMAGE_THUNDERBOLT;
-	//TEXT	[3] 		=	"";							COUNT	[3]		=	;
-	//TEXT	[4]			=	"";							COUNT	[4]		=	;
+
+							COUNT	[4]		=	;
 	TEXT	[5]			=	NAME_Value;					COUNT	[5]		=	value;
 };
 
@@ -899,7 +870,7 @@ INSTANCE ItAr_RuneThunderball (C_Item)
 	TEXT	[0]			=	NAME_Mag_Circle;							COUNT	[0]		=	mag_circle;
 	TEXT	[1]			=	NAME_ManakostenMax;							COUNT	[1]		=	SPL_SENDCAST_THUNDERBALL;
 	TEXT	[2]			=	ConcatStrings(NAME_Dam_Magic,NAME_PerMana);	COUNT	[2]		=	SPL_DAMAGE_THUNDERBALL;
-	//TEXT	[3] 		=	"";											COUNT	[3]		=	;
+
 	TEXT	[4]			=	NAME_Spell_Load;
 	TEXT	[5]			=	NAME_Value;									COUNT	[5]		=	value;
 };
@@ -922,10 +893,10 @@ INSTANCE ItAr_ScrollThunderball (C_Item)
 	cond_value[2]  		=	SPL_SENDCAST_THUNDERBALL;
 
 	description			=	NAME_Thunderball;
-	//TEXT	[0]			=	NAME_Mag_Circle;							COUNT	[0]		=	mag_circle;
+
 	TEXT	[1]			=	NAME_ManakostenMax;							COUNT	[1]		=	SPL_SENDCAST_THUNDERBALL;
 	TEXT	[2]			=	ConcatStrings(NAME_Dam_Magic,NAME_PerMana);	COUNT	[2]		=	SPL_DAMAGE_THUNDERBALL;
-	//TEXT	[3] 		=	"";											COUNT	[3]		=	;
+
 	TEXT	[4]			=	NAME_Spell_Load;
 	TEXT	[5]			=	NAME_Value;									COUNT	[5]		=	value;
 };
@@ -951,10 +922,10 @@ INSTANCE ItAr_RuneIceCube (C_Item)
 	description			=	NAME_Icecube;
 	TEXT	[0]			=	NAME_Mag_Circle;			COUNT	[0]		=	mag_circle;
 	TEXT	[1]			=	NAME_Manakosten;			COUNT	[1]		=	SPL_SENDCAST_ICECUBE;
-//	TEXT	[2]			=	"Schaden";					COUNT	[2]		=	SPL_FREEZE_DAMAGE;
+
 	TEXT	[2]			=	NAME_Damage;				COUNT	[2]		=	SPL_FREEZE_DAMAGE;
-	//TEXT	[3] 		=	"";							COUNT	[3]		=	;
-	//TEXT	[4]			=	"";
+
+
 	TEXT	[5]			=	NAME_Value;					COUNT	[5]		=	value;
 };
 
@@ -975,12 +946,12 @@ INSTANCE ItAr_ScrollIceCube (C_Item)
 	cond_value[2]  		=	SPL_SENDCAST_ICECUBE;
 
 	description			=	NAME_Icecube;
-	//TEXT	[0]			=	NAME_Mag_Circle;			COUNT	[0]		=	mag_circle;
+
 	TEXT	[1]			=	NAME_Manakosten;			COUNT	[1]		=	SPL_SENDCAST_ICECUBE;
-//	TEXT	[2]			=	"Schaden";					COUNT	[2]		=	SPL_FREEZE_DAMAGE;
+
 	TEXT	[2]			=	NAME_Damage;				COUNT	[2]		=	SPL_FREEZE_DAMAGE;
-	//TEXT	[3] 		=	"";							COUNT	[3]		=	;
-	//TEXT	[4]			=	"";
+
+
 	TEXT	[5]			=	NAME_Value;					COUNT	[5]		=	value;
 };
 
@@ -1006,10 +977,10 @@ INSTANCE ItAr_RuneIceWave (C_Item)
 	description			=	NAME_Icewave;
 	TEXT	[0]			=	NAME_Mag_Circle;			COUNT	[0]		=	mag_circle;
 	TEXT	[1]			=	NAME_Manakosten;			COUNT	[1]		=	SPL_SENDCAST_ICEWAVE;
-//	TEXT	[2]			=	"Schaden";					COUNT	[2]		=	SPL_FREEZE_DAMAGE;
+
 	TEXT	[2]			=	NAME_Damage;				COUNT	[2]		=	SPL_FREEZE_DAMAGE;
-	//TEXT	[3] 		=	"";							COUNT	[3]		=	;
-	//TEXT	[4]			=	"";
+
+
 	TEXT	[5]			=	NAME_Value;					COUNT	[5]		=	value;
 };
 
@@ -1030,12 +1001,12 @@ INSTANCE ItAr_ScrollIceWave (C_Item)
 	cond_value[2]  		=	SPL_SENDCAST_ICEWAVE;
 
 	description			=	NAME_Icewave;
-	//TEXT	[0]			=	NAME_Mag_Circle;			COUNT	[0]		=	mag_circle;
+
 	TEXT	[1]			=	NAME_Manakosten;			COUNT	[1]		=	SPL_SENDCAST_ICEWAVE;
-//	TEXT	[2]			=	"Schaden";					COUNT	[2]		=	SPL_FREEZE_DAMAGE;
+
 	TEXT	[2]			=	NAME_Damage;				COUNT	[2]		=	SPL_FREEZE_DAMAGE;
-	//TEXT	[3] 		=	"";							COUNT	[3]		=	;
-	//TEXT	[4]			=	"";
+
+
 	TEXT	[5]			=	NAME_Value;					COUNT	[5]		=	value;
 };
 
@@ -1063,11 +1034,9 @@ INSTANCE ItAr_ScrollSummonDemon (C_Item)
 	cond_value[2]  		=	SPL_SENDCAST_SUMMONDEMON;
 
 	description			=	NAME_SummonDemon;
-	//TEXT	[0]			=	NAME_Mag_Circle;			COUNT	[0]		=	mag_circle;
+
 	TEXT	[1]			=	NAME_Manakosten;			COUNT	[1]		=	SPL_SENDCAST_SUMMONDEMON;
-	//TEXT	[2]			=	"";							COUNT	[2]		=	;
-	//TEXT	[3] 		=	"";							COUNT	[3]		=	;
-	//TEXT	[4]			=	"";							COUNT	[4]		=	;
+
 	TEXT	[5]			=	NAME_Value;					COUNT	[5]		=	value;
 };
 
@@ -1091,11 +1060,9 @@ INSTANCE ItAr_ScrollSummonSkeletons (C_Item)
 	cond_value[2]  		=	SPL_SENDCAST_SUMMONSKELETON;
 
 	description			=	NAME_SummonSkeleton;
-	//TEXT	[0]			=	NAME_Mag_Circle;			COUNT	[0]		=	mag_circle;
+
 	TEXT	[1]			=	NAME_Manakosten;			COUNT	[1]		=	SPL_SENDCAST_SUMMONSKELETON;
-	//TEXT	[2]			=	"";							COUNT	[2]		=	;
-	//TEXT	[3] 		=	"";							COUNT	[3]		=	;
-	//TEXT	[4]			=	"";							COUNT	[4]		=	;
+
 	TEXT	[5]			=	NAME_Value;					COUNT	[5]		=	value;
 };
 
@@ -1119,11 +1086,9 @@ INSTANCE ItAr_ScrollSummonGolem (C_Item)
 	cond_value[2]  		=	SPL_SENDCAST_SUMMONGOLEM;
 
 	description			=	NAME_SummonGolem;
-	//TEXT	[0]			=	NAME_Mag_Circle;			COUNT	[0]		=	mag_circle;
+
 	TEXT	[1]			=	NAME_Manakosten;			COUNT	[1]		=	SPL_SENDCAST_SUMMONGOLEM;
-	//TEXT	[2]			=	"";							COUNT	[2]		=	;
-	//TEXT	[3] 		=	"";							COUNT	[3]		=	;
-	//TEXT	[4]			=	"";							COUNT	[4]		=	;
+
 	TEXT	[5]			=	NAME_Value;					COUNT	[5]		=	value;
 };
 
@@ -1147,11 +1112,9 @@ INSTANCE ItAr_ScrollArmyOfDarkness (C_Item)
 	cond_value[2]  		=	SPL_SENDCAST_ARMYOFDARKNESS;
 
 	description			=	NAME_ArmyOfDarkness;
-	//TEXT	[0]			=	NAME_Mag_Circle;			COUNT	[0]		=	mag_circle;
+
 	TEXT	[1]			=	NAME_Manakosten;			COUNT	[1]		=	SPL_SENDCAST_ARMYOFDARKNESS;
-	//TEXT	[2]			=	"";							COUNT	[2]		=	;
-	//TEXT	[3] 		=	"";							COUNT	[3]		=	;
-	//TEXT	[4]			=	"";							COUNT	[4]		=	;
+
 	TEXT	[5]			=	NAME_Value;					COUNT	[5]		=	value;
 };
 
@@ -1177,8 +1140,8 @@ INSTANCE ItAr_RuneDestroyUndead (C_Item)
 	TEXT	[0]			=	NAME_Mag_Circle;			COUNT	[0]		=	mag_circle;
 	TEXT	[1]			=	NAME_Manakosten;			COUNT	[1]		=	SPL_SENDCAST_DESTROYUNDEAD;
 	TEXT	[2]			=	NAME_Dam_Magic;				COUNT	[2]		=	SPL_DAMAGE_DESTROYUNDEAD;
-	//TEXT	[3] 		=	"";							COUNT	[3]		=	;
-	//TEXT	[4]			=	"";
+
+
 	TEXT	[5]			=	NAME_Value;					COUNT	[5]		=	value;
 };
 
@@ -1202,8 +1165,8 @@ INSTANCE ItAr_ScrollDestroyUndead (C_Item)
 	TEXT	[0]			=	NAME_Mag_Circle;			COUNT	[0]		=	mag_circle;
 	TEXT	[1]			=	NAME_Manakosten;			COUNT	[1]		=	SPL_SENDCAST_DESTROYUNDEAD;
 	TEXT	[2]			=	NAME_Dam_Magic;				COUNT	[2]		=	SPL_DAMAGE_DESTROYUNDEAD;
-	//TEXT	[3] 		=	"";							COUNT	[3]		=	;
-	//TEXT	[4]			=	"";
+
+
 	TEXT	[5]			=	NAME_Value;					COUNT	[5]		=	value;
 };
 
@@ -1233,7 +1196,7 @@ INSTANCE ItAr_RuneWindfist (C_Item)
 	TEXT	[0]			=	NAME_Mag_Circle;							COUNT	[0]		=	mag_circle;
 	TEXT	[1]			=	NAME_ManakostenMax;							COUNT	[1]		=	SPL_SENDCAST_WINDFIST;
 	TEXT	[2]			=	ConcatStrings(NAME_Dam_Fly,NAME_PerMana);	COUNT	[2]		=	SPL_DAMAGE_WINDFIST;
-	//TEXT	[3] 		=	"";											COUNT	[3]		=	;
+
 	TEXT	[4]			=	NAME_Spell_Load;
 	TEXT	[5]			=	NAME_Value;									COUNT	[5]		=	value;
 };
@@ -1255,10 +1218,10 @@ INSTANCE ItAr_ScrollWindfist (C_Item)
 	cond_value[2]  		=	SPL_SENDCAST_WINDFIST;
 
 	description			=	NAME_Windfist;
-	//TEXT	[0]			=	NAME_Mag_Circle;							COUNT	[0]		=	mag_circle;
+
 	TEXT	[1]			=	NAME_ManakostenMax;							COUNT	[1]		=	SPL_SENDCAST_WINDFIST;
 	TEXT	[2]			=	ConcatStrings(NAME_Dam_Fly,NAME_PerMana);	COUNT	[2]		=	SPL_DAMAGE_WINDFIST;
-	//TEXT	[3] 		=	"";											COUNT	[3]		=	;
+
 	TEXT	[4]			=	NAME_Spell_Load;
 	TEXT	[5]			=	NAME_Value;									COUNT	[5]		=	value;
 };
@@ -1285,7 +1248,7 @@ INSTANCE ItAr_RuneStormfist (C_Item)
 	TEXT	[0]			=	NAME_Mag_Circle;							COUNT	[0]		=	mag_circle;
 	TEXT	[1]			=	NAME_ManakostenMax;							COUNT	[1]		=	SPL_SENDCAST_STORMFIST;
 	TEXT	[2]			=	ConcatStrings(NAME_Dam_Fly,NAME_PerMana);	COUNT	[2]		=	SPL_DAMAGE_STORMFIST;
-	//TEXT	[3] 		=	"";											COUNT	[3]		=	;
+
 	TEXT	[4]			=	NAME_Spell_Load;
 	TEXT	[5]			=	NAME_Value;									COUNT	[5]		=	value;
 };
@@ -1307,10 +1270,10 @@ INSTANCE ItAr_ScrollStormfist (C_Item)
 	cond_value[2]  		=	SPL_SENDCAST_STORMFIST;
 
 	description			=	NAME_Stormfist;
-	//TEXT	[0]			=	NAME_Mag_Circle;							COUNT	[0]		=	mag_circle;
+
 	TEXT	[1]			=	NAME_ManakostenMax;							COUNT	[1]		=	SPL_SENDCAST_STORMFIST;
 	TEXT	[2]			=	ConcatStrings(NAME_Dam_Fly,NAME_PerMana);	COUNT	[2]		=	SPL_DAMAGE_STORMFIST;
-	//TEXT	[3] 		=	"";											COUNT	[3]		=	;
+
 	TEXT	[4]			=	NAME_Spell_Load;
 	TEXT	[5]			=	NAME_Value;									COUNT	[5]		=	value;
 };
@@ -1337,8 +1300,8 @@ INSTANCE ItAr_RuneTelekinesis (C_Item)
 	description			=	NAME_Telekinesis;
 	TEXT	[0]			=	NAME_Mag_Circle;			COUNT	[0]		=	mag_circle;
 	TEXT	[1]			=	NAME_ManaPerSec;			COUNT	[1]		=	1;
-	//TEXT	[2]			=	"";							COUNT	[2]		=	;
-	//TEXT	[3] 		=	"";							COUNT	[3]		=	;
+
+
 	TEXT	[4]			=	NAME_Spell_Invest;
 	TEXT	[5]			=	NAME_Value;					COUNT	[5]		=	value;
 
@@ -1361,10 +1324,10 @@ INSTANCE ItAr_ScrollTelekinesis (C_Item)
 	cond_value[2]  		=	10;
 
 	description			=	NAME_Telekinesis;
-	//TEXT	[0]			=	NAME_Mag_Circle;			COUNT	[0]		=	mag_circle;
+
 	TEXT	[1]			=	NAME_ManaPerSec;			COUNT	[1]		=	1;
 	TEXT	[2]			=	NAME_Mana_needed;			COUNT	[2]		=	cond_value[2];
-	//TEXT	[3] 		=	"";							COUNT	[3]		=	;
+
 	TEXT	[4]			=	NAME_Spell_Invest;
 	TEXT	[5]			=	NAME_Value;					COUNT	[5]		=	value;
 };
@@ -1390,9 +1353,7 @@ INSTANCE ItAr_RuneCharm (C_Item)
 	description			=	NAME_Charm;
 	TEXT	[0]			=	NAME_Mag_Circle;			COUNT	[0]		=	mag_circle;
 	TEXT	[1]			=	NAME_Manakosten;			COUNT	[1]		=	SPL_SENDCAST_CHARM;
-	//TEXT	[2]			=	"";							COUNT	[2]		=	;
-	//TEXT	[3] 		=	"";							COUNT	[3]		=	;
-	//TEXT	[4]			=	"";							COUNT	[4]		=	;
+
 	TEXT	[5]			=	NAME_Value;					COUNT	[5]		=	value;
 };
 
@@ -1413,11 +1374,9 @@ INSTANCE ItAr_ScrollCharm (C_Item)
 	cond_value[2]  		=	SPL_SENDCAST_CHARM;
 
 	description			=	NAME_Charm;
-	//TEXT	[0]			=	NAME_Mag_Circle;			COUNT	[0]		=	mag_circle;
+
 	TEXT	[1]			=	NAME_Manakosten;			COUNT	[1]		=	SPL_SENDCAST_CHARM;
-	//TEXT	[2]			=	"";							COUNT	[2]		=	;
-	//TEXT	[3] 		=	"";							COUNT	[3]		=	;
-	//TEXT	[4]			=	"";							COUNT	[4]		=	;
+
 	TEXT	[5]			=	NAME_Value;					COUNT	[5]		=	value;
 };
 
@@ -1442,9 +1401,7 @@ INSTANCE ItAr_RuneSleep (C_Item)
 	description			=	NAME_Sleep;
 	TEXT	[0]			=	NAME_Mag_Circle;			COUNT	[0]		=	mag_circle;
 	TEXT	[1]			=	NAME_Manakosten;			COUNT	[1]		=	SPL_SENDCAST_SLEEP;
-	//TEXT	[2]			=	"";							COUNT	[2]		=	;
-	//TEXT	[3] 		=	"";							COUNT	[3]		=	;
-	//TEXT	[4]			=	"";							COUNT	[4]		=	;
+
 	TEXT	[5]			=	NAME_Value;					COUNT	[5]		=	value;
 };
 
@@ -1465,11 +1422,9 @@ INSTANCE ItAr_ScrollSleep (C_Item)
 	cond_value[2]  		=	SPL_SENDCAST_SLEEP;
 
 	description			=	NAME_Sleep;
-	//TEXT	[0]			=	NAME_Mag_Circle;			COUNT	[0]		=	mag_circle;
+
 	TEXT	[1]			=	NAME_Manakosten;			COUNT	[1]		=	SPL_SENDCAST_SLEEP;
-	//TEXT	[2]			=	"";							COUNT	[2]		=	;
-	//TEXT	[3] 		=	"";							COUNT	[3]		=	;
-	//TEXT	[4]			=	"";							COUNT	[4]		=	;
+
 	TEXT	[5]			=	NAME_Value;					COUNT	[5]		=	value;
 };
 
@@ -1494,8 +1449,8 @@ INSTANCE ItAr_RunePyrokinesis (C_Item)
 	description			=	NAME_Pyrokinesis;
 	TEXT	[0]			=	NAME_Mag_Circle;			COUNT	[0]		=	mag_circle;
 	TEXT	[1]			=	NAME_DamagePerSec;			COUNT	[1]		=	SPL_PYRO_DAMAGE_PER_SEC;
-	//TEXT	[2]			=	"";							COUNT	[2]		=	;
-	//TEXT	[3] 		=	"";							COUNT	[3]		=	;
+
+
 	TEXT	[4]			=	NAME_Spell_Invest;
 	TEXT	[5]			=	NAME_Value;					COUNT	[5]		=	value;
 };
@@ -1517,10 +1472,10 @@ INSTANCE ItAr_ScrollPyrokinesis (C_Item)
 	cond_value[2]  		=	10;
 
 	description			=	NAME_Pyrokinesis;
-	//TEXT	[0]			=	NAME_Mag_Circle;			COUNT	[0]		=	mag_circle;
+
 	TEXT	[1]			=	NAME_DamagePerSec;			COUNT	[1]		=	SPL_PYRO_DAMAGE_PER_SEC;
-	//TEXT	[2]			=	"";							COUNT	[2]		=	;
-	//TEXT	[3] 		=	"";							COUNT	[3]		=	;
+
+
 	TEXT	[4]			=	NAME_Spell_Invest;
 	TEXT	[5]			=	NAME_Value;					COUNT	[5]		=	value;
 };
@@ -1545,10 +1500,7 @@ INSTANCE ItAr_RuneControl (C_Item)
 
 	description			=	NAME_Control;
 	TEXT	[0]			=	NAME_Mag_Circle;			COUNT	[0]		=	mag_circle;
-	//TEXT	[1]			=	NAME_Manakosten;			COUNT	[1]		=	SPL_SENDCAST_SLEEP;
-	//TEXT	[2]			=	"";							COUNT	[2]		=	;
-	//TEXT	[3] 		=	"";							COUNT	[3]		=	;
-	//TEXT	[4]			=	"";							COUNT	[4]		=	;
+
 	TEXT	[5]			=	NAME_Value;					COUNT	[5]		=	value;
 };
 
@@ -1569,11 +1521,7 @@ INSTANCE ItAr_ScrollControl (C_Item)
 	cond_value[2]  		=	30;
 
 	description			=	NAME_Control;
-	//TEXT	[0]			=	NAME_Mag_Circle;			COUNT	[0]		=	mag_circle;
-	//TEXT	[1]			=	NAME_Manakosten;			COUNT	[1]		=	;
-	//TEXT	[2]			=	"";							COUNT	[2]		=	;
-	//TEXT	[3] 		=	"";							COUNT	[3]		=	;
-	//TEXT	[4]			=	"";							COUNT	[4]		=	;
+
 	TEXT	[5]			=	NAME_Value;					COUNT	[5]		=	value;
 };
 
@@ -1597,11 +1545,9 @@ INSTANCE ItAr_ScrollFear (C_Item)
 	cond_value[2]  		=	SPL_SENDCAST_FEAR;
 
 	description			=	NAME_Fear;
-	//TEXT	[0]			=	NAME_Mag_Circle;			COUNT	[0]		=	mag_circle;
+
 	TEXT	[1]			=	NAME_Manakosten;			COUNT	[1]		=	SPL_SENDCAST_FEAR;
-	//TEXT	[2]			=	"";							COUNT	[2]		=	;
-	//TEXT	[3] 		=	"";							COUNT	[3]		=	;
-	//TEXT	[4]			=	"";							COUNT	[4]		=	;
+
 	TEXT	[5]			=	NAME_Value;					COUNT	[5]		=	value;
 };
 
@@ -1625,11 +1571,9 @@ INSTANCE ItAr_ScrollBerzerk (C_Item)
 	cond_value[2]  		=	SPL_SENDCAST_BERZERK;
 
 	description			=	NAME_Berzerk;
-	//TEXT	[0]			=	NAME_Mag_Circle;			COUNT	[0]		=	mag_circle;
+
 	TEXT	[1]			=	NAME_Manakosten;			COUNT	[1]		=	SPL_SENDCAST_BERZERK;
-	//TEXT	[2]			=	"";							COUNT	[2]		=	;
-	//TEXT	[3] 		=	"";							COUNT	[3]		=	;
-	//TEXT	[4]			=	"";							COUNT	[4]		=	;
+
 	TEXT	[5]			=	NAME_Value;					COUNT	[5]		=	value;
 };
 
@@ -1655,8 +1599,8 @@ INSTANCE ItAr_RuneBreathOfDeath (C_Item)
 	TEXT	[0]			=	NAME_Mag_Circle;			COUNT	[0]		=	mag_circle;
 	TEXT	[1]			=	NAME_Manakosten;			COUNT	[1]		=	SPL_SENDCAST_BREATHOFDEATH;
 	TEXT	[2]			=	NAME_Dam_Magic;				COUNT	[2]		=	SPL_DAMAGE_BREATHOFDEATH;
-	//TEXT	[3] 		=	"";							COUNT	[3]		=	;
-	//TEXT	[4]			=	"";							COUNT	[4]		=	;
+
+							COUNT	[4]		=	;
 	TEXT	[5]			=	NAME_Value;					COUNT	[5]		=	value;
 };
 
@@ -1677,11 +1621,9 @@ INSTANCE ItAr_ScrollBreathOfDeath (C_Item)
 	cond_value[2]  		=	SPL_SENDCAST_BREATHOFDEATH;
 
 	description			=	NAME_BreathOfDeath;
-	//TEXT	[0]			=	NAME_Mag_Circle;			COUNT	[0]		=	mag_circle;
+
 	TEXT	[1]			=	NAME_Manakosten;			COUNT	[1]		=	SPL_SENDCAST_BERZERK;
-	//TEXT	[2]			=	"";							COUNT	[2]		=	;
-	//TEXT	[3] 		=	"";							COUNT	[3]		=	;
-	//TEXT	[4]			=	"";							COUNT	[4]		=	;
+
 	TEXT	[5]			=	NAME_Value;					COUNT	[5]		=	value;
 };
 /*******************************************************************************************/
@@ -1704,11 +1646,9 @@ INSTANCE ItAr_ScrollShrink (C_Item)
 	cond_value[2]  		=	SPL_SENDCAST_SHRINK;
 
 	description			=	NAME_Shrink;
-	//TEXT	[0]			=	NAME_Mag_Circle;			COUNT	[0]		=	mag_circle;
+
 	TEXT	[1]			=	NAME_Manakosten;			COUNT	[1]		=	SPL_SENDCAST_SHRINK;
-	//TEXT	[2]			=	"";							COUNT	[2]		=	;
-	//TEXT	[3] 		=	"";							COUNT	[3]		=	;
-	//TEXT	[4]			=	"";							COUNT	[4]		=	;
+
 	TEXT	[5]			=	NAME_Value;					COUNT	[5]		=	value;
 };
 

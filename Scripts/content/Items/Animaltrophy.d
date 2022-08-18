@@ -412,6 +412,7 @@ INSTANCE ItAt_BloodflySting (C_Item)
 	material 			=	MAT_LEATHER;
 
 	description			= name;
+
 	TEXT[4]				= NAME_Value;					COUNT[4]	= value;
 };
 
@@ -429,11 +430,12 @@ INSTANCE ItAt_DemonSting (C_Item)
 	material 			=	MAT_LEATHER;
 
 	description			=	name;
+
 //	TEXT[0]				=	"Diese messerscharfen Dornen";
-//	TEXT[1]				=	"sind auf allen von Dämonen";
-//	TEXT[2]				=	"besessenen Tieren zu finden.";
 	TEXT[0]				=	"Tyto ostny, ostré jako břitva,";
+//	TEXT[1]				=	"sind auf allen von Dämonen";
 	TEXT[1]				=	"jsou k nalezení na všech";
+//	TEXT[2]				=	"besessenen Tieren zu finden.";
 	TEXT[2]				=	"posedlých zvířatech.";
 
 	TEXT[4]				=	NAME_Value;					COUNT[4]	= value;
@@ -456,13 +458,14 @@ INSTANCE ItAt_StoneGolemHeart (C_Item)
 	material 			=	MAT_STONE;
 
 	description			= name;
+
 //	TEXT[0]				= "Dieses Herz stammt aus den Überresten";
-//	TEXT[1]				= "eines besiegten Steingolems.";
-//	TEXT[2]				= "Es hat die Kraft, einen Gegner";
-//	TEXT[3]				= "durch die Luft zu schleudern.";
 	TEXT[0]				= "Toto je srdce vyjmuté ze zbytků";
+//	TEXT[1]				= "eines besiegten Steingolems.";
 	TEXT[1]				= "poraženého kamenného golema.";
+//	TEXT[2]				= "Es hat die Kraft, einen Gegner";
 	TEXT[2]				= "Má moc odmrštit nepřátele";
+//	TEXT[3]				= "durch die Luft zu schleudern.";
 	TEXT[3]				= "do vzduchu.";
 	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
 };
@@ -482,13 +485,15 @@ INSTANCE ItAt_FireGolemHeart (C_Item)
 	material 			=	MAT_STONE;
 
 	description			= name;
+
 //	TEXT[0]				= "Dieses Herz stammt aus den Überresten";
-//	TEXT[1]				= "eines besiegten Feuergolems.";
-//	TEXT[2]				= "Es hat die Kraft, einen Gegner";
-//	TEXT[3]				= "in Flammen aufgehen zu lassen.";
 	TEXT[0]				= "Toto je srdce vyjmuté ze zbytků";
+//	TEXT[1]				= "eines besiegten Feuergolems.";
 	TEXT[1]				= "poraženého ohnivého golema.";
+//	TEXT[2]				= "Es hat die Kraft, einen Gegner";
 	TEXT[2]				= "Má moc zapálit nepřítele.";
+//	TEXT[3]				= "in Flammen aufgehen zu lassen.";
+	TEXT[3]				= "";
 
 	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
 };
@@ -508,13 +513,15 @@ INSTANCE ItAt_IceGolemHeart (C_Item)
 	material 			=	MAT_STONE;
 
 	description			= name;
+
 //	TEXT[0]				= "Dieses Herz stammt aus den Überresten";
-//	TEXT[1]				= "eines besiegten Eisgolems.";
-//	TEXT[2]				= "Es hat die Kraft, einen Gegner";
-//	TEXT[3]				= "zu Eis erstarren zu lassen.";
 	TEXT[0]				= "Toto je srdce vyjmuté ze zbytků";
+//	TEXT[1]				= "eines besiegten Eisgolems.";
 	TEXT[1]				= "poraženého ledového golema.";
+//	TEXT[2]				= "Es hat die Kraft, einen Gegner";
 	TEXT[2]				= "Má moc zmrazit nepřítele.";
+//	TEXT[3]				= "zu Eis erstarren zu lassen.";
+	TEXT[3]				= "";
 
 	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
 };
@@ -536,9 +543,11 @@ INSTANCE ItAt_IceGolemPiece (C_Item)
 	material 			=	MAT_STONE;
 
 	description			= name;
+
 //	TEXT[0]				= "Dieses Stück stammt aus den Überresten";
-//	TEXT[1]				= "eines besiegten Eisgolems.";
 	TEXT[0]				= "Toto je kousek";
+//	TEXT[1]				= "eines besiegten Eisgolems.";
 	TEXT[1]				= "poraženého ledového golema.";
+	
 	TEXT[4]				= NAME_Value;					COUNT[4]	= value;
 };

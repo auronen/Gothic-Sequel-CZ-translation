@@ -54,21 +54,18 @@ INSTANCE ItWr_Book_Circle_01(C_Item)
 					//2.Seite
 					Doc_SetMargins	( nDocID, -1, 30, 20, 275, 20, 1   		);  //  0 -> margins are in pixels (Position des Textes von den Ränder des TGAs aus, links,oben,rechts,unten)
 					Doc_PrintLine	( nDocID,  1, "");
-//					Doc_PrintLine	( nDocID,  1, "Licht" );
 					Doc_PrintLine	( nDocID,  1, NAME_Light );
 					Doc_PrintLine	( nDocID,  1, "---------------");
 //					Doc_PrintLines	( nDocID,  1, "Das erste Geschenk Innos an die Menschen.Eine hell strahlende Kugel wird über dem Magier erzeugt.");
 					Doc_PrintLines	( nDocID,  1, "První Innosův dar lidstvu. Nad mágem se objeví zářící koule.");
 					Doc_PrintLine	( nDocID,  1,  Text);
 					Doc_PrintLine	( nDocID,  1,  "" );
-//					Doc_PrintLine	( nDocID,  1, "Eispfeil");
 					Doc_PrintLine	( nDocID,  1, NAME_Thunderbolt);
 					Doc_PrintLine	( nDocID,  1, "---------------");
 //					Doc_PrintLines	( nDocID,  1, "Ein Geschoss aus magischer Energie.");
 					Doc_PrintLines	( nDocID,  1, "Střela magické energie");
 					Doc_PrintLine	( nDocID,  1,  Text_1);
 					Doc_PrintLine	( nDocID,  1, "");
-//					Doc_PrintLine	( nDocID,  1, "Feuerpfeil");
 					Doc_PrintLine	( nDocID,  1, NAME_Firebolt);
 					Doc_PrintLine	( nDocID,  1, "---------------");
 //					Doc_PrintLines	( nDocID,  1, "Ein Geschoss aus magischem Feuer.");
@@ -138,7 +135,6 @@ INSTANCE ItWr_Book_Circle_02(C_Item)
 					//2.Seite
 					Doc_SetMargins	( nDocID, -1, 30, 20, 275, 20, 1   		);  //  0 -> margins are in pixels (Position des Textes von den Ränder des TGAs aus, links,oben,rechts,unten)
 					Doc_PrintLine	( nDocID,  1, "");
-//					Doc_PrintLine	( nDocID,  1, "Heilung");
 					Doc_PrintLine	( nDocID,  1, NAME_Heal);
 					Doc_PrintLine	( nDocID,  1, "---------------");
 //					Doc_PrintLines	( nDocID,  1, "Adanos sah, das die Menschen starben und das es der Wille Beliars war.Und er sprach:Stelle ich mich auch nicht gegen den Willen Beliars,gebe ich den Menschen jedoch die Macht der Heilung." );
@@ -147,7 +143,6 @@ INSTANCE ItWr_Book_Circle_02(C_Item)
 					Doc_PrintLine	( nDocID,  1, "");
 //					Doc_PrintLines	( nDocID,  1, "Dieser Zauber birgt die Macht, den Magier zu heilen.");
 					Doc_PrintLines	( nDocID,  1, "Toto kouzlo poskytuje mágovi schopnost se uzdravit.");
-//					Doc_PrintLine	( nDocID,  1, "Investierungszauber");
 					Doc_PrintLine	( nDocID,  1, NAME_Spell_Invest);
 					Doc_PrintLine	( nDocID,  1, Text_1);
 					Doc_PrintLine	( nDocID,  1, "");
@@ -216,16 +211,13 @@ INSTANCE ItWr_Book_Circle_03 (C_Item)
 					//2.Seite
 					Doc_SetMargins	( nDocID, -1, 30, 20, 275, 20, 1   		);  //  0 -> margins are in pixels (Position des Textes von den Ränder des TGAs aus, links,oben,rechts,unten)
 					Doc_PrintLine	( nDocID,  1, "");
-//					Doc_PrintLine	( nDocID,  1, "Feuerball");
 					Doc_PrintLine	( nDocID,  1, NAME_Fireball);
 					Doc_PrintLine	( nDocID,  1, "---------------");
 //					Doc_PrintLines	( nDocID,  1, "Das zweite Geschenk Innos an die Kinder des Feuers. Ein Ball aus Feuer, der sein Opfer verbrennt");
 					Doc_PrintLines	( nDocID,  1, "Druhý dar, který dal Innos dětem ohně. Ohnivou kouli, která zapálí své oběti.");
-//					Doc_PrintLine	( nDocID,  1, "Auladbarer Zauber");
 					Doc_PrintLine	( nDocID,  1, NAME_Spell_Load);
 					Doc_PrintLine	( nDocID,  1, Text);
 					Doc_PrintLine	( nDocID,  1, "");
-//					Doc_PrintLine	( nDocID,  1, "Eisblock");
 					Doc_PrintLine	( nDocID,  1, NAME_Icecube);
 					Doc_PrintLine	( nDocID,  1, "---------------");
 //					Doc_PrintLines	( nDocID,  1, "Das Opfer wird in einen Eisblock eingefroren. Ein Zauber aus dem Tempel der Wassermagier");
@@ -233,7 +225,6 @@ INSTANCE ItWr_Book_Circle_03 (C_Item)
 					Doc_PrintLine	( nDocID,  1, "");
 					Doc_PrintLine	( nDocID,  1, Text_1);
 					Doc_PrintLine	( nDocID,  1, "");
-//					Doc_PrintLine	( nDocID,  1, "Kugelblitz");
 					Doc_PrintLine	( nDocID,  1, NAME_Thunderball);
 					Doc_PrintLine	( nDocID,  1, "---------------");
 //					Doc_PrintLines	( nDocID,  1, "Eine Kugel, geschaffen aus magischer Energie.");
@@ -312,18 +303,15 @@ INSTANCE ItWr_Book_Circle_04 (C_Item)
 					Doc_PrintLine	( nDocID,  1, "---------------");
 //					Doc_PrintLines	( nDocID,  1, "Ähnlich dem Feuerball wirkt dieser Zauber auf einen Gegner, springt von dort aus jedoch auf weitere Gegner über.");
 					Doc_PrintLines	( nDocID,  1, "Stejně jako ohnivá koule, toto kouzlo může udeřit jen jednoho protivníka, pak však může přejít na další.");
-//					Doc_PrintLine	( nDocID,  1, "Aufladbarer Zauber");
 					Doc_PrintLine	( nDocID,  1, NAME_Spell_Load);
 					Doc_PrintLine	( nDocID,  1, "");
 					Doc_PrintLine	( nDocID,  1, Text);
-//					Doc_PrintLine	( nDocID,  1, "Blitz");
 					Doc_PrintLine	( nDocID,  1, NAME_Chainlightning);
 					Doc_PrintLine	( nDocID,  1, "---------------");
 //					Doc_PrintLines	( nDocID,  1, " Der Zauber springt auf mehrere Opfer über. Die Kraft des Blitzes ist schwer zu kontrollieren, so das der Magier selbst Opfer werden kann");
 					Doc_PrintLines	( nDocID,  1, "Toto kouzlo zasahuje více cílů. Sílu blesků lze obtížně ovládat. Proto se i sám mág může stát jeho obětí.");
 					Doc_PrintLine	( nDocID,  1,  Text_1);
 					Doc_PrintLine	( nDocID,  1, "");
-//					Doc_PrintLine	( nDocID,  1, "Untote vernichten");
 					Doc_PrintLine	( nDocID,  1, NAME_Destroyundead);
 					Doc_PrintLine	( nDocID,  1, "---------------");
 //					Doc_PrintLines	( nDocID,  1, "Die Geschöpfe der Finsternis werden mit diesem Zauber verbannt.");
@@ -380,7 +368,6 @@ INSTANCE  ItWr_Book_Circle_05(C_Item)
 					Doc_SetFont 	( nDocID, -1, FONT_BOOK_SMALL	   			); 	// -1 -> all pages
 					Doc_PrintLine	( nDocID,  0, "");
 					Doc_PrintLine	( nDocID,  0, "");
-//					Doc_PrintLine	( nDocID,  0, "Feuerregen");
 					Doc_PrintLine	( nDocID,  0, NAME_Firerain);
 					Doc_PrintLine	( nDocID,  0, "---------------");
 //					Doc_PrintLines	( nDocID,  0, "Die Macht des göttlichen Feuers trifft jedes Lebewesen im Wirkungsbreich des Magiers.");
@@ -391,7 +378,6 @@ INSTANCE  ItWr_Book_Circle_05(C_Item)
 					//2.Seite
 					Doc_SetMargins	( nDocID, -1, 30, 20, 275, 20, 1   		);  //  0 -> margins are in pixels (Position des Textes von den Ränder des TGAs aus, links,oben,rechts,unten)
 					Doc_PrintLine	( nDocID,  1, "");
-//					Doc_PrintLine	( nDocID,  1, "Eiswelle	");
 					Doc_PrintLine	( nDocID,  1, NAME_Icewave);
 					Doc_PrintLine	( nDocID,  1, "---------------");
 //					Doc_PrintLines	( nDocID,  1, "Ein Feld aus magischem Eis erstreckt sich über alle Gegner und friert diese für einen kurzen Zeitraum ein. Während dieser Zeit sind die Opfer bewegungsunfähig und erleiden Schaden. ");
@@ -449,7 +435,6 @@ INSTANCE  ItWr_Book_Circle_06(C_Item)
 					Doc_PrintLine	( nDocID,  0, "");
 					Doc_PrintLine	( nDocID,  0, "");
 					Doc_PrintLine	( nDocID,  0, "");
-//					Doc_PrintLine	( nDocID,  0, "Todeshauch");
 					Doc_PrintLine	( nDocID,  0, NAME_Breathofdeath);
 					Doc_PrintLine	( nDocID,  0, "---------------");
 //					Doc_PrintLines	( nDocID,  0, "Der Atem Beliars. Eine Wolke aus Lebenverschlingendem Nichts, die jedes Wesen augenblicklich töten kann.");
@@ -462,7 +447,6 @@ INSTANCE  ItWr_Book_Circle_06(C_Item)
 					Doc_SetMargins	( nDocID, -1, 30, 20, 275, 20, 1   		);  //  0 -> margins are in pixels (Position des Textes von den Ränder des TGAs aus, links,oben,rechts,unten)
 					Doc_PrintLine	( nDocID,  1, "");
 					Doc_PrintLine	( nDocID,  1, "");
-//					Doc_PrintLine	( nDocID,  1, "Todesring");
 					Doc_PrintLine	( nDocID,  1, NAME_Massdeath);
 					Doc_PrintLine	( nDocID,  1, "---------------");
 //					Doc_PrintLines	( nDocID,  1, "Nicht viel ist überliefert über die Rune mit der Macht von URIZIEL ");

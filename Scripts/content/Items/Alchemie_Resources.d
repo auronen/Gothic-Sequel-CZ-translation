@@ -134,12 +134,12 @@ instance ItWr_Book_HealingPotions(C_Item)
 	description		=	name;
 
 //	TEXT[0]			=	"Dieser Foliant enthält Rezepturen";
-//	TEXT[1]			=	"mit welchen ein Alchemist alle";
-//	TEXT[2]			=	"möglichen Sorten von Heiltränken";
-//	TEXT[3]			=	"herstellen kann.";
 	TEXT[0]			=	"Tato kniha obsahuje recepty";
+//	TEXT[1]			=	"mit welchen ein Alchemist alle";
 	TEXT[1]			=	"s pomocí kterých může alchymista";
+//	TEXT[2]			=	"möglichen Sorten von Heiltränken";
 	TEXT[2]			=	"vyrobit všechny druhy";
+//	TEXT[3]			=	"herstellen kann.";
 	TEXT[3]			=	"léčivých lektvarů.";
 	TEXT[5]			=	NAME_Value;				COUNT[5]			=	value;
 	on_state[0]		=	UseItWr_Book_HealingPotions;
@@ -239,12 +239,12 @@ INSTANCE ItWr_Book_ManaPotions(C_Item)
 	description		=	name;
 
 //	TEXT[0]			=	"Dieser Foliant enthält Rezepturen";
-//	TEXT[1]			=	"mit welchen ein Alchemist alle";
-//	TEXT[2]			=	"möglichen Sorten von Manatränken";
-//	TEXT[3]			=	"herstellen kann.";
 	TEXT[0]			=	"Tato kniha obsahuje recepty";
+//	TEXT[1]			=	"mit welchen ein Alchemist alle";
 	TEXT[1]			=	"s pomocí kterých může alchymista";
+//	TEXT[2]			=	"möglichen Sorten von Manatränken";
 	TEXT[2]			=	"vyrobit všechny druhy";
+//	TEXT[3]			=	"herstellen kann.";
 	TEXT[3]			=	"lektvarů many.";
 	TEXT[5]			=	NAME_Value;				COUNT[5]		=	value;
 	on_state[0]		=	UseItWr_Book_ManaPotions;
@@ -340,12 +340,12 @@ INSTANCE ItWr_Book_SpeedPotions(C_Item)
 	description		=	name;
 
 //	TEXT[0]			=	"Dieser Foliant enthält Rezepturen";
-//	TEXT[1]			=	"für alchemistische Tränke, welche";
-//	TEXT[2]			=	"die Spurtgeschwindigkeit gewaltig";
-//	TEXT[3]			=	"anheben.";
 	TEXT[0]			=	"Tato kniha obsahuje recepty";
+//	TEXT[1]			=	"für alchemistische Tränke, welche";
 	TEXT[1]			=	"s pomocí kterých může alchymista";
+//	TEXT[2]			=	"die Spurtgeschwindigkeit gewaltig";
 	TEXT[2]			=	"vyrobit všechny druhy";
+//	TEXT[3]			=	"anheben.";
 	TEXT[3]			=	"lektvarů rychlosti.";
 	TEXT[5]			=	NAME_Value;				COUNT[5]			=	value;
 	on_state[0]		=	UseItWr_Book_SpeedPotions;

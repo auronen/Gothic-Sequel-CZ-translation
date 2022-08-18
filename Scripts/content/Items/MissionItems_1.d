@@ -36,10 +36,10 @@ INSTANCE ItWr_Xardas_Letter_Sealed(C_Item)
 
 	description			=	name;
 //	TEXT[0]				=	"Dies ist die Borschaft, die mir Xardas";
-//	TEXT[1]				=	"für Diego mitgab.";
-//	TEXT[3]				=	"Sie ist versiegelt!";
 	TEXT[0]				=	"Toto je zpráva, kterou mi Xardas";
+//	TEXT[1]				=	"für Diego mitgab.";
 	TEXT[1]				=	"dal pro Diega.";
+//	TEXT[3]				=	"Sie ist versiegelt!";
 	TEXT[3]				=	"Je zapečetěna!";
 };
 
@@ -97,10 +97,10 @@ INSTANCE ItWr_Xardas_Letter(C_Item)
 
 	description			=	name;
 //	TEXT[0]				=	"Dies ist die Borschaft, die mir Xardas";
-//	TEXT[1]				=	"für Diego mitgab.";
-//	TEXT[3]				=	"Das Siegel ist gebrochen!";
 	TEXT[0]				=	"Toto je zpráva, kterou mi Xardas";
+//	TEXT[1]				=	"für Diego mitgab.";
 	TEXT[1]				=	"dal pro Diega.";
+//	TEXT[3]				=	"Das Siegel ist gebrochen!";
 	TEXT[3]				=	"Pečeť je rozlomena!";
 };
 
@@ -144,12 +144,12 @@ INSTANCE ItWr_Book_Thief_01 (C_Item)
 	material 				=	MAT_LEATHER;
 
 	scemeName				=	"MAP";
-//	description				= 	"Über Schlösser und Mechanismen";
+
 	description				= 	name;
 
+//	TEXT[3]					=	"Über Schlösser und Mechanismen";
 	TEXT[3]					=	"O zámcích a mechanismech";
-	//TEXT[5]				= ;
-	//COUNT[5]				= ;
+
 	on_state[0]				=	UseItWr_Book_Thief_01;
 
 
@@ -176,8 +176,7 @@ INSTANCE ItWr_Book_Thief_01 (C_Item)
 //					Doc_PrintLine	( nDocID,  0, "Von M. Fingers ");
 					Doc_PrintLine	( nDocID,  0, "Od M. Fingerse");
 //					Doc_PrintLine	( nDocID,  0, "5 Jahre Meister der Diebesgilde");
-					Doc_PrintLine	( nDocID,  0, "Mistr zlodějské gildy - ");
-					Doc_PrintLine	( nDocID,  0, "posledních 5 let");
+					Doc_PrintLines	( nDocID,  0, "Mistr zlodějské gildy - posledních 5 let");
 					Doc_PrintLine	( nDocID,  0, "---------------");
 //					Doc_PrintLines	( nDocID,  0, "Derweil werden verschiedene Mechaniken, ausgeklügelte Systematiken und raffinierte Kombinatorik verwendet, um Schlösser sicher zu machen gegen fremden Eingriff. Eine der immer noch gängigsten Methoden der Kombinatorik ist die Multimechanik. Besonders bekannt bei Türen und Truhen, sorgen sie mit offensichtlich simplem System dafür, das der Zugang nur dem gestattet ist, der auch rechtmäßigen Zugang besitzt. ");
 					Doc_PrintLines	( nDocID,  0, "Toho času se používají různé mechanismy, chytré systémy a rafinovaná kombinatorika k tomu, aby byly zámky zabezpečeny proti neoprávněnému otevření. Jednou z nejoblíbenějších metod kombinatoriky je multimechanika. Dveře a truhlice jsou nejčastěji zabezpečeny jednoduchým systémem, aby byl přístup povolen pouze těm, kteří mají správný klíč.");
@@ -227,12 +226,13 @@ INSTANCE ItWr_RECIPE_01(C_Item)
 
 	description			=	name;
 //	TEXT[1]				=	"Rezept";
-//	TEXT[2]				=	"zur Herstellung";
-//	TEXT[3]				=	"heilender und kräftigender";
-//	TEXT[4]				=	"Essenzen";
 	TEXT[1]				=	"Recepty k přípravě";
+//	TEXT[2]				=	"zur Herstellung";
 	TEXT[2]				=	"léčivých a posilňujícíh";
+//	TEXT[3]				=	"heilender und kräftigender";
 	TEXT[3]				=	"lektvarů";
+//	TEXT[4]				=	"Essenzen";
+	TEXT[4]				=	"";
 };
 INSTANCE ItWr_Smith_Art_01(C_Item)
 {
@@ -252,10 +252,10 @@ INSTANCE ItWr_Smith_Art_01(C_Item)
 
 	description			=	name;
 //	TEXT[1]				=	"Ein Buch über";
-//	TEXT[2]				=	" die Kunst des Schmiedens ";
-//	TEXT[3]				=	"von H. Mer";
 	TEXT[1]				=	"Kniha o umění";
+//	TEXT[2]				=	"die Kunst des Schmiedens ";
 	TEXT[2]				=	"mistrů kovářů";
+//	TEXT[3]				=	"von H. Mer";
 	TEXT[3]				=	"od H. Mera";
 
 };
@@ -294,8 +294,7 @@ instance ItWr_Book_Thief_02 (C_Item)
 //	description				= 	"Geheimnisse der Nacht";
 	description				= 	"Tajemství noci";
 
-	//TEXT[5]				= ;
-	//COUNT[5]				= ;
+
 	on_state[0]				=	UseItWr_Book_Thief_02;
 
 
@@ -316,8 +315,8 @@ instance ItWr_Book_Thief_02 (C_Item)
   					Doc_SetFont 	( nDocID, -1, FONT_BOOK_SMALL	   			); 	// -1 -> all pages
   					Doc_SetMargins	( nDocID,  0,  275, 20, 30, 20, 1   		);  //  0 -> margins are in pixels
 //					Doc_PrintLine	( nDocID,  0, "Geheimnisse der Nacht "		);
-					Doc_PrintLine	( nDocID,  0, ""							);
 					Doc_PrintLine	( nDocID,  0, "Tajemství noci "				);
+					Doc_PrintLine	( nDocID,  0, ""							);
 					 			 	// -1 -> all pages
 
 					Doc_PrintLine	( nDocID,  0, "");
@@ -379,8 +378,8 @@ INSTANCE ItKe_Edo(C_Item)
 
 	description			=	name;
 //	TEXT[0]				=	"Dieser Schlüssel öffnet die Truhe in";
-//	TEXT[1]				=	"Edo's Hütte.";
 	TEXT[0]				=	"Tento klíč otevírá";
+//	TEXT[1]				=	"Edo's Hütte.";
 	TEXT[1]				=	"truhlu v Edově chatrči.";
 	TEXT[4]				=	NAME_Value;					COUNT[4]	= value;
 };
@@ -401,8 +400,8 @@ INSTANCE ItKe_Bartok(C_Item)
 
 	description			=	name;
 //	TEXT[0]				=	"Dieser Schlüssel öffnet die große Truhe";
-//	TEXT[1]				=	"in der Burgschmiede des Alten Lagers.";
 	TEXT[0]				=	"Tento klíč otevírá velkou truhlici";
+//	TEXT[1]				=	"in der Burgschmiede des Alten Lagers.";
 	TEXT[1]				=	"v hradní kovárně Starého tábora.";
 	TEXT[4]				=	NAME_Value;					COUNT[4]	= value;
 };
@@ -426,11 +425,10 @@ INSTANCE ItAr_ScrollHeal_Copy (C_Item)
 	on_state[0]			=	UseItAr_ScrollHeal_Copy;
 //	description			=	"Heilung";
 	description			=	"Léčení";
-	//TEXT	[0]			=	NAME_Mag_Circle;			COUNT	[0]		=	mag_circle;
-//	TEXT	[1]			=	"Heilung pro Mana";			COUNT	[1]		=	SPL_HEALING_HP_PER_MP;
+
 	TEXT	[1]			=	NAME_HealPerMana;			COUNT	[1]		=	SPL_HEALING_HP_PER_MP;
 	TEXT	[2]			=	NAME_Mana_needed;			COUNT	[2]		=	SPL_HEALING_HP_PER_MP;
-	//TEXT	[3] 		=	"";							COUNT	[3]		=	;
+
 	TEXT	[4]			=	NAME_Spell_Invest;
 	TEXT	[5]			=	NAME_Value;					COUNT	[5]		=	value;
 };
@@ -459,11 +457,9 @@ INSTANCE ItAr_ScrollLight_Copy (C_Item)
 	on_state[0]			=	UseItAr_ScrollLight_Copy;
 //	description			=	"Licht";
 	description			=	"Světlo";
-	//TEXT	[0]			=	NAME_Mag_Circle;			COUNT	[0]		=	mag_circle;
+
 	TEXT	[1]			=	NAME_Manakosten;		COUNT	[1]		=	SPL_SENDCAST_LIGHT;
-	//TEXT	[2]			=	"";						COUNT	[2]		=	;
-	//TEXT	[3] 		=	"";						COUNT	[3]		=	;
-	//TEXT	[4]			=	"";						COUNT	[4]		=	;
+
 	TEXT	[5]			=	NAME_Value;				COUNT	[5]		=	value;
 };
 
@@ -496,11 +492,11 @@ INSTANCE ItWr_HalvorRecipe (C_Item)
 	description				= name;
 
 //	TEXT[1]					= "Halvor's Kochbuch mit einer";
-//	TEXT[2]					= "Reihe schmackhafter Rezepte";
-//	TEXT[3]					= "aus Fleisch.";
 	TEXT[1]					= "Halvorova kuchařka s celou";
+//	TEXT[2]					= "Reihe schmackhafter Rezepte";
 	TEXT[2]					= "řadou výtečných masových receptů.";
-//	TEXT[3]					= "z masa.";
+//	TEXT[3]					= "aus Fleisch.";
+	TEXT[3]					= "";
 	TEXT[5]					= NAME_Value;
 	COUNT[5]				= value;
 	on_state[0]				= UseItWr_Recipe_Meat;
@@ -522,8 +518,8 @@ INSTANCE ItKe_Halvor(C_Item)
 
 	description			=	name;
 //	TEXT[0]				=	"Dieser Schlüssel öffnet die Zutatentruhe in";
-//	TEXT[1]				=	"Halvor's Küche.";
 	TEXT[0]				=	"Tento klíč otevírá truhlu";
+//	TEXT[1]				=	"Halvor's Küche.";
 	TEXT[1]				=	"s přísadami v Halvorově kuchyni";
 	TEXT[4]				=	NAME_Value;					COUNT[4]	= value;
 };
@@ -544,8 +540,9 @@ INSTANCE ItKe_Jail(C_Item)
 
 	description			=	name;
 //	TEXT[0]				=	"Der Schlüssel für die ";
-//	TEXT[1]				=	"Kerkerzellen ";
 	TEXT[0]				=	"Klíč k vězeňským celám";
+//	TEXT[1]				=	"Kerkerzellen ";
+	TEXT[1]				=	"";
 
 	TEXT[4]				=	NAME_Value;					COUNT[4]	= value;
 };
@@ -570,8 +567,8 @@ INSTANCE ItMi_StinkingSalt(C_Item)
 
 	description			=	name;
 //	TEXT[0]				=	"Ein wirklich übelriechendes";
-//	TEXT[1]				=	"bräunliches Salz.";
 	TEXT[0]				=	"Neuvěřitelně páchnoucí";
+//	TEXT[1]				=	"bräunliches Salz.";
 	TEXT[1]				=	"hnědá sůl";
 	TEXT[4]				=	NAME_Value;					COUNT[4]	= value;
 };
@@ -596,14 +593,15 @@ INSTANCE ItAr_ScrollHealPossessed (C_Item)
 
 //	description			=	"versiegelte Schriftrolle";
 	description			=	"Zapečetěný svitek";
+
 //	TEXT	[0]			=	"Sie ist versiegelt, aber";
-//	TEXT	[1]			=	"es scheint die Rezeptur zu";
-//	TEXT	[2]			=	"sein die Talamon sucht";
 	TEXT	[0]			=	"Je zapečetěný, ale zdá se,";
+//	TEXT	[1]			=	"es scheint die Rezeptur zu";
 	TEXT	[1]			=	"že se jedná o recepturu,";
+//	TEXT	[2]			=	"sein die Talamon sucht";
 	TEXT	[2]			=	"kterou hledá Talmon";
-	//TEXT	[3] 		=	"";						COUNT	[3]		=	;
-	//TEXT	[4]			=	"";						COUNT	[4]		=	;
+
+
 	TEXT	[5]			=	NAME_Value;				COUNT	[5]		=	value;
 };
 
@@ -656,12 +654,12 @@ INSTANCE ItWr_Nefarius_Diary(C_Item)
 
 	description			=	name;
 //	TEXT[1]				=	"Eine stark verwitterte Seite, deren Schrift man";
-//	TEXT[2]				=	"kaum noch entziffern kann.";
-//	TEXT[3]				=	"Der ehemalige Besitzer scheint Nefarius der";
-//	TEXT[4]				=	"Wassermagier gewesen zu sein.";
 	TEXT[1]				=	"Silně zvětralá stránka, ";
+//	TEXT[2]				=	"kaum noch entziffern kann.";
 	TEXT[2]				=	"text lze rozluštit jen stěží. ";
+//	TEXT[3]				=	"Der ehemalige Besitzer scheint Nefarius der";
 	TEXT[3]				=	"Zdá se, že majitel ";
+//	TEXT[4]				=	"Wassermagier gewesen zu sein.";
 	TEXT[4]				=	"byl mág Vody Nefarius.";
 };
 
@@ -717,12 +715,12 @@ INSTANCE ItWr_Bullit_Note(C_Item)
 
 	description			=	name;
 //	TEXT[1]				=	"Eine stark verwitterte Seite, deren Schrift man";
-//	TEXT[2]				=	"kaum noch entziffern kann.";
-//	TEXT[3]				=	"Der ehemalige Besitzer scheint ein Gardist";
-//	TEXT[4]				=	"Namens Bullit gewesen zu sein.";
 	TEXT[1]				=	"Silně zašlá stránka,";
+//	TEXT[2]				=	"kaum noch entziffern kann.";
 	TEXT[2]				=	"text lze rozluštit jen stěží. ";
+//	TEXT[3]				=	"Der ehemalige Besitzer scheint ein Gardist";
 	TEXT[3]				=	"Zdá se, že patřila ";
+//	TEXT[4]				=	"Namens Bullit gewesen zu sein.";
 	TEXT[4]				=	"bývalému strážci Bullitovi.";
 };
 
@@ -767,10 +765,10 @@ INSTANCE ItWr_Phoenix1(C_Item)
 
 	description		=	name;
 //	TEXT	[1]		=	"Ein vergilbtes Buch mit brüchigen Seiten.";
-//	TEXT	[2]		=	"Sein Verfasser scheint ein Feuermagier";
-//	TEXT	[3]		=	"mit Namen Corristo gewesen zu sein.";
 	TEXT	[1]		=	"Stará kniha se zažloutlými stránkami.";
+//	TEXT	[2]		=	"Sein Verfasser scheint ein Feuermagier";
 	TEXT	[2]		=	"Vypadá to, že ji sepsal mág Ohně";
+//	TEXT	[3]		=	"mit Namen Corristo gewesen zu sein.";
 	TEXT	[3]		=	"jménem Corristo.";
 };
 
@@ -844,10 +842,10 @@ INSTANCE ItWr_Phoenix2(C_Item)
 
 	description		=	name;
 //	TEXT	[1]		=	"Dies ist der zweite Teil der";
-//	TEXT	[2]		=	"rätselhaften Spur des Phoenix";
-//	TEXT	[3]		=	"die Corristo verfasst hat.";
 	TEXT	[1]		=	"Druhý díl záhadné 'Fénixovy pouti',";
+//	TEXT	[2]		=	"rätselhaften Spur des Phoenix";
 	TEXT	[2]		=	"kterou napsal nejvyšší mág Ohně";
+//	TEXT	[3]		=	"die Corristo verfasst hat.";
 	TEXT	[3]		=	"Corristo.";
 };
 
@@ -866,6 +864,7 @@ INSTANCE ItWr_Phoenix2(C_Item)
 //					Doc_PrintLine	( nDocID,  0, "Die Asche des"				);
 					Doc_PrintLine	( nDocID,  0, "Popel Fénixe"				);
 //					Doc_PrintLine	( nDocID,  0, "Phoenix"						);
+					Doc_PrintLine	( nDocID,  0, ""						);
 					Doc_PrintLine	( nDocID,  0, "---------------"				);
 					Doc_SetFont 	( nDocID, -1, FONT_BOOK_SMALL	 		); 	// -1 -> all pages
 					Doc_PrintLine	( nDocID,  0, "");
@@ -922,10 +921,10 @@ INSTANCE ItWr_Phoenix3(C_Item)
 
 	description		=	name;
 //	TEXT	[1]		=	"Der dritte Teil der Spur des";
-//	TEXT	[2]		=	"Phoenix von Corristo dem";
-//	TEXT	[3]		=	"obersten Feuermagier.";
 	TEXT	[1]		=	"Třetí díl záhadné 'Fénixovy pouti',";
+//	TEXT	[2]		=	"Phoenix von Corristo dem";
 	TEXT	[2]		=	"kterou napsal nejvyšší mág Ohně";
+//	TEXT	[3]		=	"obersten Feuermagier.";
 	TEXT	[3]		=	"Corristo.";
 };
 
@@ -944,6 +943,7 @@ INSTANCE ItWr_Phoenix3(C_Item)
 //					Doc_PrintLine	( nDocID,  0, "Die Feder des"				);
 					Doc_PrintLine	( nDocID,  0, "Fénixovo pero"				);
 //					Doc_PrintLine	( nDocID,  0, "Phoenix"						);
+					Doc_PrintLine	( nDocID,  0, ""						);
 					Doc_PrintLine	( nDocID,  0, "---------------"		);
 					Doc_SetFont 	( nDocID, -1, FONT_BOOK_SMALL	 		); 	// -1 -> all pages
 					Doc_PrintLine	( nDocID,  0, "");
@@ -1003,10 +1003,10 @@ INSTANCE ItWr_Phoenix4(C_Item)
 
 	description		=	name;
 //	TEXT	[1]		=	"Der vierte Teil der Spur des";
-//	TEXT	[2]		=	"Phoenix von Corristo dem";
-//	TEXT	[3]		=	"obersten Feuermagier.";
 	TEXT	[1]		=	"Čtvrtý díl záhadné 'Fénixovy pouti',";
+//	TEXT	[2]		=	"Phoenix von Corristo dem";
 	TEXT	[2]		=	"kterou napsal nejvyšší mág Ohně";
+//	TEXT	[3]		=	"obersten Feuermagier.";
 	TEXT	[3]		=	"Corristo.";
 };
 
@@ -1083,9 +1083,10 @@ INSTANCE ItWr_Phoenix5(C_Item)
 
 	description		=	name;
 //	TEXT	[1]		=	"Der fünfte Teil der Spur des";
-//	TEXT	[2]		=	"Phoenix verfasst von Corristo.";
 	TEXT	[1]		=	"Pátý díl záhadné 'Fénixovy pouti',";
+//	TEXT	[2]		=	"Phoenix verfasst von Corristo.";
 	TEXT	[2]		=	"kterou napsal nejvyšší mág Ohně";
+//	TEXT    [3]		=	"";
 	TEXT    [3]		=	"Corristo.";
 };
 
@@ -1104,6 +1105,7 @@ INSTANCE ItWr_Phoenix5(C_Item)
 //					Doc_PrintLine	( nDocID,  0, "Die Sehnsucht"				);
 					Doc_PrintLine	( nDocID,  0, "Fénixova touha"				);
 //					Doc_PrintLine	( nDocID,  0, "des Phoenix"					);
+					Doc_PrintLine	( nDocID,  0, ""					);
 					Doc_PrintLine	( nDocID,  0, "---------------"			);
 					Doc_SetFont 	( nDocID, -1, FONT_BOOK_SMALL	 		); 	// -1 -> all pages
 					Doc_PrintLine	( nDocID,  0, "");
@@ -1157,9 +1159,10 @@ INSTANCE ItWr_Phoenix6(C_Item)
 
 	description		=	name;
 //	TEXT	[1]		=	"Der sechste Teil der Spur des";
-//	TEXT	[2]		=	"Phoenix verfasst von Corristo.";
 	TEXT	[1]		=	"Šestá kniha záhadné 'Fénixovy pouti',";
+//	TEXT	[2]		=	"Phoenix verfasst von Corristo.";
 	TEXT	[2]		=	"kterou napsal nejvyšší mág Ohně";
+//	TEXT    [3]		=	"";
 	TEXT    [3]		=	"Corristo.";
 };
 
@@ -1241,9 +1244,10 @@ INSTANCE ItWr_Phoenix7(C_Item)
 
 	description		=	name;
 //	TEXT	[1]		=	"Der siebente Teil der Spur des";
-//	TEXT	[2]		=	"Phoenix verfasst von Corristo.";
 	TEXT	[1]		=	"Sedmá kniha záhadné 'Fénixovy pouti',";
+//	TEXT	[2]		=	"Phoenix verfasst von Corristo.";
 	TEXT	[2]		=	"kterou napsal nejvyšší mág Ohně";
+//	TEXT    [3]		=	"";
 	TEXT    [3]		=	"Corristo.";
 };
 
@@ -1262,6 +1266,7 @@ INSTANCE ItWr_Phoenix7(C_Item)
 //					Doc_PrintLine	( nDocID,  0, "Das Nest"					);
 					Doc_PrintLine	( nDocID,  0, "Hnízdo Fénixe"					);
 //					Doc_PrintLine	( nDocID,  0, "des Phoenix"					);
+					Doc_PrintLine	( nDocID,  0, ""					);
 					Doc_PrintLine	( nDocID,  0, "-------------"				);
 					Doc_SetFont 	( nDocID, -1, FONT_BOOK_SMALL	 		); 	// -1 -> all pages
 					Doc_PrintLine	( nDocID,  0, "");
@@ -1321,9 +1326,10 @@ INSTANCE ItWr_Phoenix8(C_Item)
 
 	description		=	name;
 //	TEXT	[1]		=	"Der achte Teil der Spur des";
-//	TEXT	[2]		=	"Phoenix verfasst von Corristo.";
 	TEXT	[1]		=	"Osmá kniha záhadné 'Fénixovy pouti',";
+//	TEXT	[2]		=	"Phoenix verfasst von Corristo.";
 	TEXT	[2]		=	"kterou napsal nejvyšší mág Ohně";
+//	TEXT    [3]		=	"";
 	TEXT    [3]		=	"Corristo.";
 };
 
@@ -1399,9 +1405,10 @@ INSTANCE ItWr_PhoenixCheat(C_Item)
 
 	description		=	name;
 //	TEXT	[1]		=	"Der achte Teil der Spur des";
-//	TEXT	[2]		=	"Phoenix verfasst von Corristo.";
 	TEXT	[1]		=	"Osmá kniha záhadné 'Fénixovy pouti',";
+//	TEXT	[2]		=	"Phoenix verfasst von Corristo.";
 	TEXT	[2]		=	"kterou napsal nejvyšší mág Ohně";
+//	TEXT    [3]		=	"";
 	TEXT    [3]		=	"Corristo.";
 };
 
@@ -1420,6 +1427,7 @@ INSTANCE ItWr_PhoenixCheat(C_Item)
 //					Doc_PrintLine	( nDocID,  0, "Der Cheat"					);
 					Doc_PrintLine	( nDocID,  0, "Fénixův cheat"					);
 //					Doc_PrintLine	( nDocID,  0, "des Phoenix"					);
+					Doc_PrintLine	( nDocID,  0, ""					);
 					Doc_PrintLine	( nDocID,  0, "-------------"				);
 					Doc_SetFont 	( nDocID, -1, FONT_BOOK_SMALL	 		); 	// -1 -> all pages
 					Doc_PrintLine	( nDocID,  0, "");
@@ -1466,14 +1474,14 @@ INSTANCE ItPo_ElexirOfMind(C_Item)
 	scemeName		=	"POTIONFAST";
 
 //	description		= "ELIXIER DES GEISTES";
-//	TEXT[0]			= "Dies ist das Elixier, das Xardas benötigt";
-//	TEXT[1]			= "Ich weiss nicht wie es genau wirkt, aber";
-//	TEXT[2]			= "ich sollte es auf KEINEN Fall trinken";
-//	TEXT[3]			= "bevor ich mit Xardas gesprochen habe!";
 	description		= "ELIXÍR DUCHA";
+//	TEXT[0]			= "Dies ist das Elixier, das Xardas benötigt";
 	TEXT[0]			= "Toto je elixír, který potřebuje Xardas.";
+//	TEXT[1]			= "Ich weiss nicht wie es genau wirkt, aber";
 	TEXT[1]			= "Nevím, jak přesně funguje, ale";
+//	TEXT[2]			= "ich sollte es auf KEINEN Fall trinken";
 	TEXT[2]			= "v každém případě bych ho NEMĚL pít";
+//	TEXT[3]			= "bevor ich mit Xardas gesprochen habe!";
 	TEXT[3]			= "předtím, než si o něm promluvím s Xardasem!";
 };
 
@@ -1500,10 +1508,10 @@ INSTANCE ItFo_Placebo(C_Item)
 
 	description		=	name;
 //	TEXT[0]			=	"Diese flüssige Substanz ist so rein und klar";
-//	TEXT[1]			=	"dass man ihr alle möglichen Fähigkeiten";
-//	TEXT[2]			=	"zutrauen könnte.";
 	TEXT[0]			=	"Tahle tekutina je tak čistá a jasná,";
+//	TEXT[1]			=	"dass man ihr alle möglichen Fähigkeiten";
 	TEXT[1]			=	"že by jeden mohl uvěřit, ";
+//	TEXT[2]			=	"zutrauen könnte.";
 	TEXT[2]			=	"že má všelijaké možné schopnosti.";
 };
 
@@ -1528,8 +1536,8 @@ INSTANCE ItWr_BloodThistle(C_Item)
 
 	description			=	name;
 //	TEXT[1]				=	"Eine stark verwitterte Seite, deren Schrift man";
-//	TEXT[2]				=	"noch erstaunlich gut entziffern kann.";
 	TEXT[1]				=	"Silně zašlá stránka. Text je";
+//	TEXT[2]				=	"noch erstaunlich gut entziffern kann.";
 	TEXT[2]				=	"překvapivě dobře zachován.";
 
 
@@ -1754,8 +1762,8 @@ INSTANCE ItWr_Worker(C_Item)
 
 	description			=	name;
 //	TEXT[1]				=	"Ein Teil eines Briefes";
-//	TEXT[2]				=	"ohne erkennbaren Anfang oder Ende";
 	TEXT[1]				=	"Část dopisu";
+//	TEXT[2]				=	"ohne erkennbaren Anfang oder Ende";
 	TEXT[2]				=	"bez zjevného začátku nebo konce";
 
 

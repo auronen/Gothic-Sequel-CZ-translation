@@ -1,6 +1,6 @@
 INSTANCE HELMET(C_ITEM)
 {
-	// name 					=	"Test Helm";
+//  name 					=	"Test Helm";
 	name 					=	"Testovací helma";
 
 	mainflag 				=	ITEM_KAT_ARMOR;
@@ -12,7 +12,9 @@ INSTANCE HELMET(C_ITEM)
 
 // Fixme: INV-Visual muß noch erstellt werden
 	visual 					=	"ItHe_EbrHelmet.3ds";
+
 	//visual_change 			=	"Hum_DHTS_ARMOR.asc";
+	
 	visual_skin 			=	0;
 	material 				=	MAT_METAL;
 	
@@ -20,7 +22,7 @@ INSTANCE HELMET(C_ITEM)
 	on_unequip		=	UnEquip_TestHelmet;
 
 	description				=	name;
-	//TEXT[0]				=	"";
+
 	TEXT[1]					=	NAME_Prot_Edge;			COUNT[1]	= protection	[PROT_EDGE];
 	TEXT[2]					=	NAME_Prot_Point;		COUNT[2]	= protection	[PROT_POINT];
 	TEXT[3] 				=	NAME_Prot_Fire;			COUNT[3]	= protection	[PROT_FIRE];

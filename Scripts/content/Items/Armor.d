@@ -83,7 +83,7 @@ INSTANCE KNG_ARMOR(C_ITEM)
 	material 				=	MAT_METAL;
 
 	description				=	name;
-	//TEXT[0]				=	"";
+
 	TEXT[1]					=	NAME_Prot_Edge;			COUNT[1]	= protection	[PROT_EDGE];
 	TEXT[2]					=	NAME_Prot_Point;		COUNT[2]	= protection	[PROT_POINT];
 	TEXT[3] 				=	NAME_Prot_Fire;			COUNT[3]	= protection	[PROT_FIRE];
@@ -133,7 +133,7 @@ INSTANCE DHTS_ARMOR(C_ITEM)
 	material 				=	MAT_METAL;
 
 	description				=	name;
-	//TEXT[0]				=	"";
+
 	TEXT[1]					=	NAME_Prot_Edge;			COUNT[1]	= protection	[PROT_EDGE];
 	TEXT[2]					=	NAME_Prot_Point;		COUNT[2]	= protection	[PROT_POINT];
 	TEXT[3] 				=	NAME_Prot_Fire;			COUNT[3]	= protection	[PROT_FIRE];
@@ -168,7 +168,7 @@ INSTANCE DHTM_ARMOR(C_ITEM)
 	material 				=	MAT_METAL;
 
 	description				=	name;
-	//TEXT[0]				=	"";
+
 	TEXT[1]					=	NAME_Prot_Edge;			COUNT[1]	= protection	[PROT_EDGE];
 	TEXT[2]					=	NAME_Prot_Point;		COUNT[2]	= protection	[PROT_POINT];
 	TEXT[3] 				=	NAME_Prot_Fire;			COUNT[3]	= protection	[PROT_FIRE];
@@ -204,7 +204,7 @@ INSTANCE DHTL_ARMOR(C_ITEM)
 	material 				=	MAT_METAL;
 
 	description				=	name;
-	//TEXT[0]				=	"";
+
 	TEXT[1]					=	NAME_Prot_Edge;			COUNT[1]	= protection	[PROT_EDGE];
 	TEXT[2]					=	NAME_Prot_Point;		COUNT[2]	= protection	[PROT_POINT];
 	TEXT[3] 				=	NAME_Prot_Fire;			COUNT[3]	= protection	[PROT_FIRE];
@@ -239,7 +239,7 @@ INSTANCE DHT2S_ARMOR(C_ITEM)
 	material 				=	MAT_METAL;
 
 	description				=	name;
-	//TEXT[0]				=	"";
+
 	TEXT[1]					=	NAME_Prot_Edge;			COUNT[1]	= protection	[PROT_EDGE];
 	TEXT[2]					=	NAME_Prot_Point;		COUNT[2]	= protection	[PROT_POINT];
 	TEXT[3] 				=	NAME_Prot_Fire;			COUNT[3]	= protection	[PROT_FIRE];
@@ -274,7 +274,7 @@ INSTANCE DHT2M_ARMOR(C_ITEM)
 	material 				=	MAT_METAL;
 
 	description				=	name;
-	//TEXT[0]				=	"";
+
 	TEXT[1]					=	NAME_Prot_Edge;			COUNT[1]	= protection	[PROT_EDGE];
 	TEXT[2]					=	NAME_Prot_Point;		COUNT[2]	= protection	[PROT_POINT];
 	TEXT[3] 				=	NAME_Prot_Fire;			COUNT[3]	= protection	[PROT_FIRE];
@@ -310,7 +310,7 @@ INSTANCE PALS_ARMOR(C_ITEM)
 	material 				=	MAT_METAL;
 
 	description				=	name;
-	//TEXT[0]				=	"";
+
 	TEXT[1]					=	NAME_Prot_Edge;			COUNT[1]	= protection	[PROT_EDGE];
 	TEXT[2]					=	NAME_Prot_Point;		COUNT[2]	= protection	[PROT_POINT];
 	TEXT[3] 				=	NAME_Prot_Fire;			COUNT[3]	= protection	[PROT_FIRE];
@@ -346,7 +346,7 @@ INSTANCE PALM_ARMOR(C_ITEM)
 	material 				=	MAT_METAL;
 
 	description				=	name;
-	//TEXT[0]				=	"";
+
 	TEXT[1]					=	NAME_Prot_Edge;			COUNT[1]	= protection	[PROT_EDGE];
 	TEXT[2]					=	NAME_Prot_Point;		COUNT[2]	= protection	[PROT_POINT];
 	TEXT[3] 				=	NAME_Prot_Fire;			COUNT[3]	= protection	[PROT_FIRE];
@@ -382,7 +382,7 @@ INSTANCE PALL_ARMOR(C_ITEM)
 	material 				=	MAT_METAL;
 
 	description				=	name;
-	//TEXT[0]				=	"";
+
 	TEXT[1]					=	NAME_Prot_Edge;			COUNT[1]	= protection	[PROT_EDGE];
 	TEXT[2]					=	NAME_Prot_Point;		COUNT[2]	= protection	[PROT_POINT];
 	TEXT[3] 				=	NAME_Prot_Fire;			COUNT[3]	= protection	[PROT_FIRE];
@@ -418,7 +418,7 @@ INSTANCE HLRS_ARMOR(C_ITEM)
 	material 				=	MAT_LEATHER;
 
 	description				=	name;
-	//TEXT[0]				=	"";
+
 	TEXT[1]					=	NAME_Prot_Edge;			COUNT[1]	= protection	[PROT_EDGE];
 	TEXT[2]					=	NAME_Prot_Point;		COUNT[2]	= protection	[PROT_POINT];
 	TEXT[3] 				=	NAME_Prot_Fire;			COUNT[3]	= protection	[PROT_FIRE];
@@ -454,7 +454,7 @@ INSTANCE HLRM_ARMOR(C_ITEM)
 	material 				=	MAT_LEATHER;
 
 	description				=	name;
-	//TEXT[0]				=	"";
+
 	TEXT[1]					=	NAME_Prot_Edge;			COUNT[1]	= protection	[PROT_EDGE];
 	TEXT[2]					=	NAME_Prot_Point;		COUNT[2]	= protection	[PROT_POINT];
 	TEXT[3] 				=	NAME_Prot_Fire;			COUNT[3]	= protection	[PROT_FIRE];
@@ -490,7 +490,7 @@ INSTANCE DMC_ARMOR(C_ITEM)
 	material 				=	MAT_LEATHER;
 
 	description				=	name;
-	//TEXT[0]				=	"";
+
 	TEXT[1]					=	NAME_Prot_Edge;			COUNT[1]	= protection	[PROT_EDGE];
 	TEXT[2]					=	NAME_Prot_Point;		COUNT[2]	= protection	[PROT_POINT];
 	TEXT[3] 				=	NAME_Prot_Fire;			COUNT[3]	= protection	[PROT_FIRE];
@@ -526,7 +526,7 @@ INSTANCE BEG_ARMOR(C_ITEM)
 	material 				=	MAT_LEATHER;
 
 	description				=	name;
-	//TEXT[0]				=	"";
+
 	TEXT[1]					=	NAME_Prot_Edge;			COUNT[1]	= protection	[PROT_EDGE];
 	TEXT[2]					=	NAME_Prot_Point;		COUNT[2]	= protection	[PROT_POINT];
 	TEXT[3] 				=	NAME_Prot_Fire;			COUNT[3]	= protection	[PROT_FIRE];
@@ -573,7 +573,7 @@ INSTANCE VLK_ARMOR_L(C_Item)
 	material 				=	MAT_LEATHER;
 
 	description				=	name;
-	//TEXT[0]				=	"";
+
 	TEXT[1]					=	NAME_Prot_Edge;			COUNT[1]	= protection	[PROT_EDGE];
 	TEXT[2]					=	NAME_Prot_Point;		COUNT[2]	= protection	[PROT_POINT];
 	TEXT[3] 				=	NAME_Prot_Fire;			COUNT[3]	= protection	[PROT_FIRE];
@@ -605,7 +605,7 @@ INSTANCE VLK_ARMOR_M(C_Item)
 	material 				=	MAT_LEATHER;
 
 	description				=	name;
-	//TEXT[0]				=	"";
+
 	TEXT[1]					=	NAME_Prot_Edge;			COUNT[1]	= protection	[PROT_EDGE];
 	TEXT[2]					=	NAME_Prot_Point;		COUNT[2]	= protection	[PROT_POINT];
 	TEXT[3] 				=	NAME_Prot_Fire;			COUNT[3]	= protection	[PROT_FIRE];
@@ -640,7 +640,7 @@ INSTANCE STT_ARMOR_M(C_Item)
 	material 				=	MAT_LEATHER;
 
 	description				=	name;
-	//TEXT[0]				=	"";
+
 	TEXT[1]					=	NAME_Prot_Edge;			COUNT[1]	= protection	[PROT_EDGE];
 	TEXT[2]					=	NAME_Prot_Point;		COUNT[2]	= protection	[PROT_POINT];
 	TEXT[3] 				=	NAME_Prot_Fire;			COUNT[3]	= protection	[PROT_FIRE];
@@ -652,7 +652,7 @@ INSTANCE STT_ARMOR_M(C_Item)
 INSTANCE STT_ARMOR_H(C_Item)
 {
 //	name 					=	"Schattenrüstung";
-	name 					=	"Zbroj Stínů";
+	name 					=	"Zbroj Stína";
 
 	mainflag 				=	ITEM_KAT_ARMOR;
 	flags 					=	0;
@@ -673,7 +673,7 @@ INSTANCE STT_ARMOR_H(C_Item)
 	material 				=	MAT_LEATHER;
 
 	description				=	name;
-	//TEXT[0]				=	"";
+
 	TEXT[1]					=	NAME_Prot_Edge;			COUNT[1]	= protection	[PROT_EDGE];
 	TEXT[2]					=	NAME_Prot_Point;		COUNT[2]	= protection	[PROT_POINT];
 	TEXT[3] 				=	NAME_Prot_Fire;			COUNT[3]	= protection	[PROT_FIRE];
@@ -708,7 +708,7 @@ INSTANCE GRD_ARMOR_L(C_Item)
 	material 				=	MAT_LEATHER;
 
 	description				=	name;
-	//TEXT[0]				=	"";
+
 	TEXT[1]					=	NAME_Prot_Edge;			COUNT[1]	= protection	[PROT_EDGE];
 	TEXT[2]					=	NAME_Prot_Point;		COUNT[2]	= protection	[PROT_POINT];
 	TEXT[3] 				=	NAME_Prot_Fire;			COUNT[3]	= protection	[PROT_FIRE];
@@ -741,7 +741,7 @@ INSTANCE GRD_ARMOR_M(C_Item)
 	material 				=	MAT_LEATHER;
 
 	description				=	name;
-	//TEXT[0]				=	"";
+
 	TEXT[1]					=	NAME_Prot_Edge;			COUNT[1]	= protection	[PROT_EDGE];
 	TEXT[2]					=	NAME_Prot_Point;		COUNT[2]	= protection	[PROT_POINT];
 	TEXT[3] 				=	NAME_Prot_Fire;			COUNT[3]	= protection	[PROT_FIRE];
@@ -774,7 +774,7 @@ INSTANCE GRD_ARMOR_H(C_Item)
 	material 				=	MAT_METAL;
 
 	description				=	name;
-	//TEXT[0]				=	"";
+
 	TEXT[1]					=	NAME_Prot_Edge;			COUNT[1]	= protection	[PROT_EDGE];
 	TEXT[2]					=	NAME_Prot_Point;		COUNT[2]	= protection	[PROT_POINT];
 	TEXT[3] 				=	NAME_Prot_Fire;			COUNT[3]	= protection	[PROT_FIRE];
@@ -810,7 +810,7 @@ INSTANCE EBR_ARMOR_M(C_Item)
 	material 				=	MAT_LEATHER;
 
 	description				=	name;
-	//TEXT[0]				=	"";
+
 	TEXT[1]					=	NAME_Prot_Edge;			COUNT[1]	= protection	[PROT_EDGE];
 	TEXT[2]					=	NAME_Prot_Point;		COUNT[2]	= protection	[PROT_POINT];
 	TEXT[3] 				=	NAME_Prot_Fire;			COUNT[3]	= protection	[PROT_FIRE];
@@ -845,7 +845,7 @@ INSTANCE EBR_ARMOR_H(C_Item)
 	material 				=	MAT_METAL;
 
 	description				=	name;
-	//TEXT[0]				=	"";
+
 	TEXT[1]					=	NAME_Prot_Edge;			COUNT[1]	= protection	[PROT_EDGE];
 	TEXT[2]					=	NAME_Prot_Point;		COUNT[2]	= protection	[PROT_POINT];
 	TEXT[3] 				=	NAME_Prot_Fire;			COUNT[3]	= protection	[PROT_FIRE];
@@ -878,7 +878,7 @@ INSTANCE EBR_ARMOR_H2(C_Item)
 	material 				=	MAT_METAL;
 
 	description				=	name;
-	//TEXT[0]				=	"";
+
 	TEXT[1]					=	NAME_Prot_Edge;			COUNT[1]	= protection	[PROT_EDGE];
 	TEXT[2]					=	NAME_Prot_Point;		COUNT[2]	= protection	[PROT_POINT];
 	TEXT[3] 				=	NAME_Prot_Fire;			COUNT[3]	= protection	[PROT_FIRE];
@@ -917,7 +917,7 @@ instance SFB_ARMOR_L(C_Item)
 	material 				=	MAT_LEATHER;
 
 	description				=	name;
-	//TEXT[0]				=	"";
+
 	TEXT[1]					=	NAME_Prot_Edge;			COUNT[1]	= protection	[PROT_EDGE];
 	TEXT[2]					=	NAME_Prot_Point;		COUNT[2]	= protection	[PROT_POINT];
 	TEXT[3] 				=	NAME_Prot_Fire;			COUNT[3]	= protection	[PROT_FIRE];
@@ -952,7 +952,7 @@ INSTANCE ORG_ARMOR_L(C_Item)
 	material 				=	MAT_LEATHER;
 
 	description				=	name;
-	//TEXT[0]				=	"";
+
 	TEXT[1]					=	NAME_Prot_Edge;			COUNT[1]	= protection	[PROT_EDGE];
 	TEXT[2]					=	NAME_Prot_Point;		COUNT[2]	= protection	[PROT_POINT];
 	TEXT[3] 				=	NAME_Prot_Fire;			COUNT[3]	= protection	[PROT_FIRE];
@@ -985,7 +985,7 @@ INSTANCE ORG_ARMOR_M(C_Item)
 	material 				=	MAT_LEATHER;
 
 	description				=	name;
-	//TEXT[0]				=	"";
+
 	TEXT[1]					=	NAME_Prot_Edge;			COUNT[1]	= protection	[PROT_EDGE];
 	TEXT[2]					=	NAME_Prot_Point;		COUNT[2]	= protection	[PROT_POINT];
 	TEXT[3] 				=	NAME_Prot_Fire;			COUNT[3]	= protection	[PROT_FIRE];
@@ -1018,7 +1018,7 @@ INSTANCE ORG_ARMOR_H(C_Item)
 	material 				=	MAT_LEATHER;
 
 	description				=	name;
-	//TEXT[0]				=	"";
+
 	TEXT[1]					=	NAME_Prot_Edge;			COUNT[1]	= protection	[PROT_EDGE];
 	TEXT[2]					=	NAME_Prot_Point;		COUNT[2]	= protection	[PROT_POINT];
 	TEXT[3] 				=	NAME_Prot_Fire;			COUNT[3]	= protection	[PROT_FIRE];
@@ -1051,7 +1051,7 @@ INSTANCE SLD_ARMOR_L(C_Item)
 	material 				=	MAT_LEATHER;
 
 	description				=	name;
-	//TEXT[0]				=	"";
+
 	TEXT[1]					=	NAME_Prot_Edge;			COUNT[1]	= protection	[PROT_EDGE];
 	TEXT[2]					=	NAME_Prot_Point;		COUNT[2]	= protection	[PROT_POINT];
 	TEXT[3] 				=	NAME_Prot_Fire;			COUNT[3]	= protection	[PROT_FIRE];
@@ -1084,7 +1084,7 @@ instance SLD_ARMOR_M(C_Item)
 	material 				=	MAT_LEATHER;
 
 	description				=	name;
-	//TEXT[0]				=	"";
+
 	TEXT[1]					=	NAME_Prot_Edge;			COUNT[1]	= protection	[PROT_EDGE];
 	TEXT[2]					=	NAME_Prot_Point;		COUNT[2]	= protection	[PROT_POINT];
 	TEXT[3] 				=	NAME_Prot_Fire;			COUNT[3]	= protection	[PROT_FIRE];
@@ -1117,7 +1117,7 @@ INSTANCE SLD_ARMOR_H(C_Item)
 	material 				=	MAT_LEATHER;
 
 	description				=	name;
-	//TEXT[0]				=	"";
+
 	TEXT[1]					=	NAME_Prot_Edge;			COUNT[1]	= protection	[PROT_EDGE];
 	TEXT[2]					=	NAME_Prot_Point;		COUNT[2]	= protection	[PROT_POINT];
 	TEXT[3] 				=	NAME_Prot_Fire;			COUNT[3]	= protection	[PROT_FIRE];
@@ -1157,7 +1157,7 @@ INSTANCE NOV_ARMOR_L(C_Item)
 	material 				=	MAT_LEATHER;
 
 	description				=	name;
-	//TEXT[0]				=	"";
+
 	TEXT[1]					=	NAME_Prot_Edge;			COUNT[1]	= protection	[PROT_EDGE];
 	TEXT[2]					=	NAME_Prot_Point;		COUNT[2]	= protection	[PROT_POINT];
 	TEXT[3] 				=	NAME_Prot_Fire;			COUNT[3]	= protection	[PROT_FIRE];
@@ -1190,7 +1190,7 @@ INSTANCE NOV_ARMOR_M(C_Item)
 	material 				=	MAT_LEATHER;
 
 	description				=	name;
-	//TEXT[0]				=	"";
+
 	TEXT[1]					=	NAME_Prot_Edge;			COUNT[1]	= protection	[PROT_EDGE];
 	TEXT[2]					=	NAME_Prot_Point;		COUNT[2]	= protection	[PROT_POINT];
 	TEXT[3] 				=	NAME_Prot_Fire;			COUNT[3]	= protection	[PROT_FIRE];
@@ -1223,7 +1223,7 @@ INSTANCE NOV_ARMOR_H(C_Item)
 	material 				=	MAT_LEATHER;
 
 	description				=	name;
-	//TEXT[0]				=	"";
+
 	TEXT[1]					=	NAME_Prot_Edge;			COUNT[1]	= protection	[PROT_EDGE];
 	TEXT[2]					=	NAME_Prot_Point;		COUNT[2]	= protection	[PROT_POINT];
 	TEXT[3] 				=	NAME_Prot_Fire;			COUNT[3]	= protection	[PROT_FIRE];
@@ -1258,7 +1258,7 @@ INSTANCE TPL_ARMOR_L(C_Item)
 	material 				=	MAT_LEATHER;
 
 	description				=	name;
-	//TEXT[0]				=	"";
+
 	TEXT[1]					=	NAME_Prot_Edge;			COUNT[1]	= protection	[PROT_EDGE];
 	TEXT[2]					=	NAME_Prot_Point;		COUNT[2]	= protection	[PROT_POINT];
 	TEXT[3] 				=	NAME_Prot_Fire;			COUNT[3]	= protection	[PROT_FIRE];
@@ -1291,7 +1291,7 @@ INSTANCE TPL_ARMOR_M(C_Item)
 	material 				=	MAT_LEATHER;
 
 	description				=	name;
-	//TEXT[0]				=	"";
+
 	TEXT[1]					=	NAME_Prot_Edge;			COUNT[1]	= protection	[PROT_EDGE];
 	TEXT[2]					=	NAME_Prot_Point;		COUNT[2]	= protection	[PROT_POINT];
 	TEXT[3] 				=	NAME_Prot_Fire;			COUNT[3]	= protection	[PROT_FIRE];
@@ -1324,7 +1324,7 @@ INSTANCE TPL_ARMOR_H(C_Item)
 	material 				=	MAT_LEATHER;
 
 	description				=	name;
-	//TEXT[0]				=	"";
+
 	TEXT[1]					=	NAME_Prot_Edge;			COUNT[1]	= protection	[PROT_EDGE];
 	TEXT[2]					=	NAME_Prot_Point;		COUNT[2]	= protection	[PROT_POINT];
 	TEXT[3] 				=	NAME_Prot_Fire;			COUNT[3]	= protection	[PROT_FIRE];
@@ -1359,7 +1359,7 @@ INSTANCE GUR_ARMOR_M(C_Item)
 	material 				=	MAT_LEATHER;
 
 	description				=	name;
-	//TEXT[0]				=	"";
+
 	TEXT[1]					=	NAME_Prot_Edge;			COUNT[1]	= protection	[PROT_EDGE];
 	TEXT[2]					=	NAME_Prot_Point;		COUNT[2]	= protection	[PROT_POINT];
 	TEXT[3] 				=	NAME_Prot_Fire;			COUNT[3]	= protection	[PROT_FIRE];
@@ -1391,7 +1391,7 @@ INSTANCE GUR_ARMOR_H(C_Item)
 	material 				=	MAT_LEATHER;
 
 	description				=	name;
-	//TEXT[0]				=	"";
+
 	TEXT[1]					=	NAME_Prot_Edge;			COUNT[1]	= protection	[PROT_EDGE];
 	TEXT[2]					=	NAME_Prot_Point;		COUNT[2]	= protection	[PROT_POINT];
 	TEXT[3] 				=	NAME_Prot_Fire;			COUNT[3]	= protection	[PROT_FIRE];
@@ -1430,7 +1430,7 @@ INSTANCE KDF_ARMOR_L(C_Item)
 	material 				=	MAT_LEATHER;
 
 	description				=	name;
-	//TEXT[0]				=	"";
+
 	TEXT[1]					=	NAME_Prot_Edge;			COUNT[1]	= protection	[PROT_EDGE];
 	TEXT[2]					=	NAME_Prot_Point;		COUNT[2]	= protection	[PROT_POINT];
 	TEXT[3] 				=	NAME_Prot_Fire;			COUNT[3]	= protection	[PROT_FIRE];
@@ -1462,7 +1462,7 @@ INSTANCE KDF_ARMOR_H(C_Item)
 	material 				=	MAT_LEATHER;
 
 	description				=	name;
-	//TEXT[0]				=	"";
+
 	TEXT[1]					=	NAME_Prot_Edge;			COUNT[1]	= protection	[PROT_EDGE];
 	TEXT[2]					=	NAME_Prot_Point;		COUNT[2]	= protection	[PROT_POINT];
 	TEXT[3] 				=	NAME_Prot_Fire;			COUNT[3]	= protection	[PROT_FIRE];
@@ -1497,7 +1497,7 @@ INSTANCE KDW_ARMOR_L(C_Item)
 	material 				=	MAT_LEATHER;
 
 	description				=	name;
-	//TEXT[0]				=	"";
+
 	TEXT[1]					=	NAME_Prot_Edge;			COUNT[1]	= protection	[PROT_EDGE];
 	TEXT[2]					=	NAME_Prot_Point;		COUNT[2]	= protection	[PROT_POINT];
 	TEXT[3] 				=	NAME_Prot_Fire;			COUNT[3]	= protection	[PROT_FIRE];
@@ -1529,7 +1529,7 @@ INSTANCE KDW_ARMOR_H(C_Item)
 	material 				=	MAT_LEATHER;
 
 	description				=	name;
-	//TEXT[0]				=	"";
+
 	TEXT[1]					=	NAME_Prot_Edge;			COUNT[1]	= protection	[PROT_EDGE];
 	TEXT[2]					=	NAME_Prot_Point;		COUNT[2]	= protection	[PROT_POINT];
 	TEXT[3] 				=	NAME_Prot_Fire;			COUNT[3]	= protection	[PROT_FIRE];
@@ -1565,7 +1565,7 @@ INSTANCE DMB_ARMOR_M(C_Item)
 	material 				=	MAT_LEATHER;
 
 	description				=	name;
-	//TEXT[0]				=	"";
+
 	TEXT[1]					=	NAME_Prot_Edge;			COUNT[1]	= protection	[PROT_EDGE];
 	TEXT[2]					=	NAME_Prot_Point;		COUNT[2]	= protection	[PROT_POINT];
 	TEXT[3] 				=	NAME_Prot_Fire;			COUNT[3]	= protection	[PROT_FIRE];
@@ -1605,7 +1605,7 @@ INSTANCE CRW_ARMOR_H(C_Item)
 	material 				=	MAT_WOOD;
 
 	description				=	name;
-	//TEXT[0]				=	"";
+
 	TEXT[1]					=	NAME_Prot_Edge;			COUNT[1]	= protection	[PROT_EDGE];
 	TEXT[2]					=	NAME_Prot_Point;		COUNT[2]	= protection	[PROT_POINT];
 	TEXT[3] 				=	NAME_Prot_Fire;			COUNT[3]	= protection	[PROT_FIRE];
@@ -1713,7 +1713,7 @@ INSTANCE LAW_ARMOR (C_Item)
 	material 				=	MAT_LEATHER;
 
 	description				=	name;
-	//TEXT[0]				=	"";
+
 	TEXT[1]					=	NAME_Prot_Edge;			COUNT[1]	= protection	[PROT_EDGE];
 	TEXT[2]					=	NAME_Prot_Point;		COUNT[2]	= protection	[PROT_POINT];
 	TEXT[3] 				=	NAME_Prot_Fire;			COUNT[3]	= protection	[PROT_FIRE];
@@ -1753,7 +1753,7 @@ INSTANCE GRD_ARMOR_I(C_Item)
 	material 				=	MAT_LEATHER;
 
 	description				=	name;
-	//TEXT[0]				=	"";
+
 	TEXT[1]					=	NAME_Prot_Edge;			COUNT[1]	= protection	[PROT_EDGE];
 	TEXT[2]					=	NAME_Prot_Point;		COUNT[2]	= protection	[PROT_POINT];
 	TEXT[3] 				=	NAME_Prot_Fire;			COUNT[3]	= protection	[PROT_FIRE];

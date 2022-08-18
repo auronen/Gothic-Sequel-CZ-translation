@@ -17,15 +17,10 @@
 
 //	description				= " Flammenschutzring";
 	description				= "Prsten plamenné ochrany";
-	//TEXT[0]				= "";
-	//TEXT[1]				= "";
-	////COUNT[1]			= ;
+
 	TEXT[2]					= NAME_Prot_Fire;
 	COUNT[2]				= 3;
-	//TEXT[3] 				= "";
-	////COUNT[3]			= ;
-	//TEXT[4]				= "";
-	////COUNT[4]			= ;
+
 	TEXT[5]					= NAME_Value;
 	COUNT[5]				= value;
 };
@@ -59,15 +54,10 @@
 
 //	description				= "Schutz vor Feuer";
 	description				= "Ochrana před ohněm";
-	//TEXT[0]				= "";
-	//TEXT[1]				= "";
-	////COUNT[1]			= ;
+
 	TEXT[2]					= NAME_Prot_Fire;
 	COUNT[2]				= 5;
-	//TEXT[3] 				= "";
-	////COUNT[3]			= ;
-	//TEXT[4]				= "";
-	////COUNT[4]			= ;
+
 	TEXT[5]					= NAME_Value;
 	COUNT[5]				= value;
 };
@@ -101,15 +91,10 @@
 
 //	description				= "Ring der Holzhaut";
 	description				= "Prsten dřevěné kůže";
-	//TEXT[0]				= "";
-	//TEXT[1]				= "";
-	////COUNT[1]			= ;
+
 	TEXT[2]					= NAME_Prot_Point;
 	COUNT[2]				= 5;
-	//TEXT[3] 				= "";
-	////COUNT[3]			= ;
-	//TEXT[4]				= "";
-	////COUNT[4]			= ;
+
 	TEXT[5]					= NAME_Value;
 	COUNT[5]				= value;
 };
@@ -143,15 +128,10 @@
 
 //	description				= "Ring der Steinhaut";
 	description				= "Prsten kamenné kůže";
-	//TEXT[0]				= "";
-	//TEXT[1]				= "";
-	////COUNT[1]			= ;
+
 	TEXT[2]					= NAME_Prot_Point;
 	COUNT[2]				= 10;
-	//TEXT[3] 				= "";
-	////COUNT[3]			= ;
-	//TEXT[4]				= "";
-	////COUNT[4]			= ;
+
 	TEXT[5]					= NAME_Value;	
 	COUNT[5]				= value;
 };
@@ -185,15 +165,10 @@
 
 //	description				= "Ring der Eisenhaut";
 	description				= "Prsten železné kůže";
-	//TEXT[0]				= "";
-	//TEXT[1]				= "";
-	////COUNT[1]			= ;
+
 	TEXT[2]					= NAME_Prot_Edge;
 	COUNT[2]				= 5;
-	//TEXT[3] 				= "";
-	////COUNT[3]			= ;
-	//TEXT[4]				= "";
-	////COUNT[4]			= ;
+
 	TEXT[5]					= NAME_Value;
 	COUNT[5]				= value;
 };
@@ -229,15 +204,10 @@
 
 //	description				= "Ring der Erzhaut";
 	description				= "Prsten kůže z magické rudy";
-	//TEXT[0]				= "";
-	//TEXT[1]				= "";
-	////COUNT[1]			= ;
+
 	TEXT[2]					= NAME_Prot_Edge;
 	COUNT[2]				= 10;
-	//TEXT[3] 				= "";
-	////COUNT[3]			= ;
-	//TEXT[4]				= "";
-	////COUNT[4]			= ;
+
 	TEXT[5]					= NAME_Value;
 	COUNT[5]				= value;
 };
@@ -273,15 +243,10 @@
 
 //	description					= "Ring der Geisteskraft";
 	description					= "Prsten duchovní síly";
-	//TEXT[0]					= "";
-	//TEXT[1]					= "";
-	////COUNT[1]				= ;
+
 	TEXT[2]						= NAME_Prot_Magic;
 	COUNT[2]					= 1;
-	//TEXT[3] 					= "";
-	////COUNT[3]				= ;
-	//TEXT[4]					= "";
-	////COUNT[4]				= ;
+
 	TEXT[5]						= NAME_Value;
 	COUNT[5]					= value;
 };
@@ -316,15 +281,10 @@
 
 //	description				= "Ring der Verteidigung";
 	description				= "Prsten obrany";
-	//TEXT[0]				= "";
-	//TEXT[1]				= "";
-	////COUNT[1]			= ;
+
 	TEXT[2]					= NAME_Prot_Edge;
 	COUNT[2]				= 3;
-	//TEXT[3] 				= "";
-	////COUNT[3]			= ;
-	//TEXT[4]				= "";
-	////COUNT[4]			= ;
+
 	TEXT[5]					= NAME_Value;
 	COUNT[5]				= value;
 };
@@ -360,15 +320,12 @@
 
 //	description				= "Ring der Läuterung";
 	description				= "Prsten očisty";
-	//TEXT[0]				= "";
-	//TEXT[1]				= "";
-	////COUNT[1]			= ;
+
 	TEXT[2]					= NAME_Prot_Magic;
 	COUNT[2]				= 1;
 	TEXT[3] 				= NAME_Prot_Fire;
 	COUNT[3]				= 3;
-	//TEXT[4]				= "";
-	////COUNT[4]			= ;
+
 	TEXT[5]					= NAME_Value;
 	COUNT[5]				= value;
 };
@@ -404,15 +361,12 @@
 
 //	description				= "Ring der Unbezwingbarkeit";
 	description				= "Prsten nepřemožitelnosti";
-	//TEXT[0]				= "";
-	//TEXT[1]				= "";
-	////COUNT[1]			= ;
+
 	TEXT[2]					= NAME_Prot_Magic;
 	COUNT[2]				= 3;
 	TEXT[3] 				= NAME_Prot_Fire;
 	COUNT[3]				= 5;
-	//TEXT[4]				= "";
-	////COUNT[4]			= ;
+
 	TEXT[5]					= NAME_Value;
 	COUNT[5]				= value;
 };
@@ -448,15 +402,12 @@
 
 //	description				= "Ring der Standhaftigkeit";
 	description				= "Prsten vytrvalosti";
-	//TEXT[0]				= "";
-	//TEXT[1]				= "";
-	////COUNT[1]			= ;
+
 	TEXT[2]					= NAME_Prot_Edge;
 	COUNT[2]				= 5;
 	TEXT[3] 				= NAME_Prot_Point;
 	COUNT[3]				= 5;
-	//TEXT[4]				= "";
-	////COUNT[4]			= ;
+
 	TEXT[5]					= NAME_Value;
 	COUNT[5]				= value;
 };
@@ -494,15 +445,12 @@
 
 //	description				= "Ring der Unantastbarkeit";
 	description				= "Prsten nezranitelnosti";
-	//TEXT[0]				= "";
-	//TEXT[1]				= "";
-	////COUNT[1]			= ;
+
 	TEXT[2]					= NAME_Prot_Edge;
 	COUNT[2]				= 10;
 	TEXT[3] 				= NAME_Prot_Point;
 	COUNT[3]				= 10;
-	//TEXT[4]				= "";
-	////COUNT[4]			= ;
+
 	TEXT[5]					= NAME_Value;
 	COUNT[5]				= value;
 };
@@ -540,7 +488,7 @@
 
 //	description				= "Ring der Unbezwingbarkeit";
 	description				= "Prsten menší nepřemožitelnosti";
-	//TEXT[0]				= "";
+
 	TEXT[1]					= NAME_Prot_Magic;
 	COUNT[1]				= 1;
 	TEXT[2]					= NAME_Prot_Fire;
@@ -590,7 +538,7 @@
 
 //	description				= "Ring der Unbesiegbarkeit";
 	description				= "Prsten větší nepřemožitelnosti";
-	//TEXT[0]				= "";
+
 	TEXT[1]					= NAME_Prot_Magic;
 	COUNT[1]				= 3;
 	TEXT[2]					= NAME_Prot_Fire;
@@ -640,15 +588,10 @@
 
 //	description				= "Ring der Gewandtheit";
 	description				= "Prsten menší obratnosti";
-	//TEXT[0]				= "";
-	//TEXT[1]				= "";
-	////COUNT[1]			= ;
+
 	TEXT[2]					= NAME_Bonus_Dex;
 	COUNT[2]				= 5;
-	//TEXT[3] 				= "";
-	////COUNT[3]			= ;
-	//TEXT[4]				= "";
-	////COUNT[4]			= ;
+
 	TEXT[5]					= NAME_Value;
 	COUNT[5]				= value;
 };
@@ -683,15 +626,10 @@
 
 //	description				= "Ring der Geschicklichkeit";
 	description				= "Prsten větší obratnosti";
-	//TEXT[0]				= "";
-	//TEXT[1]				= "";
-	////COUNT[1]			= ;
+
 	TEXT[2]					= NAME_Bonus_Dex;
 	COUNT[2]				= 10;
-	//TEXT[3] 				= "";
-	////COUNT[3]			= ;
-	//TEXT[4]				= "";
-	////COUNT[4]			= ;
+
 	TEXT[5]					= NAME_Value;
 	COUNT[5]				= value;
 };
@@ -725,15 +663,10 @@
 	on_unequip				=	UnEquip_Ring_des_Lebens;
 
 	description				= "Prsten zdraví";
-	//TEXT[0]				= "";
-	//TEXT[1]				= "";
-	////COUNT[1]			= ;
+
 	TEXT[2]					= NAME_Bonus_HP;
 	COUNT[2]				= 10;
-	//TEXT[3] 				= "";
-	////COUNT[3]			= ;
-	//TEXT[4]				= "";
-	////COUNT[4]			= ;
+
 	TEXT[5]					= NAME_Value;
 	COUNT[5]				= value;
 };
@@ -775,15 +708,10 @@
 	on_unequip				=	UnEquip_Ring_des_Lebens2;
 //	description				= "Ring des Lebendigkeit";
 	description				= "Prsten života";
-	//TEXT[0]				= "";
-	//TEXT[1]				= "";
-	////COUNT[1]			= ;
+
 	TEXT[2]					= NAME_Bonus_HP;
 	COUNT[2]				= 20;
-	//TEXT[3] 				= "";
-	////COUNT[3]			= ;
-	//TEXT[4]				= "";
-	////COUNT[4]			= ;
+
 	TEXT[5]					= NAME_Value;
 	COUNT[5]				= value;
 };
@@ -827,15 +755,10 @@
 
 //	description				= "Ring der Kraft";
 	description				= "Prsten síly";
-	//TEXT[0]				= "";
-	//TEXT[1]				= "";
-	////COUNT[1]			= ;
+
 	TEXT[2]					= NAME_Bonus_Str;
 	COUNT[2]				= 5;
-	//TEXT[3] 				= "";
-	////COUNT[3]			= ;
-	//TEXT[4]				= "";
-	////COUNT[4]			= ;
+
 	TEXT[5]					= NAME_Value;
 	COUNT[5]				= value;
 };
@@ -870,15 +793,10 @@
 
 //	description				= "Ring der Stärke";
 	description				= "Prsten větší síly";
-	//TEXT[0]				= "";
-	//TEXT[1]				= "";
-	////COUNT[1]			= ;
+
 	TEXT[2]					= NAME_Bonus_Str;
 	COUNT[2]				= 10;
-	//TEXT[3] 				= "";
-	////COUNT[3]			= ;
-	//TEXT[4]				= "";
-	////COUNT[4]			= ;
+
 	TEXT[5]					= NAME_Value;
 	COUNT[5]				= value;
 };
@@ -912,15 +830,10 @@
 
 //	description				= "Ring der Magie";
 	description				= "Prsten magie";
-	//TEXT[0]				= "";
-	//TEXT[1]				= "";
-	////COUNT[1]			= ;
+
 	TEXT[2]					= NAME_Bonus_Mana;
 	COUNT[2]				= 10;
-	//TEXT[3] 				= "";
-	////COUNT[3]			= ;
-	//TEXT[4]				= "";
-	////COUNT[4]			= ;
+
 	TEXT[5]					= NAME_Value;
 	COUNT[5]				= value;
 };
@@ -957,15 +870,12 @@
 
 //	description				= "Ring der Erleuchtung";
 	description				= "Prsten osvícení";
-	//TEXT[0]				= "";
-	//TEXT[1]				= "";
-	////COUNT[1]			= ;
+
 	TEXT[2]					= NAME_Bonus_Mana;
 	COUNT[2]				= 15;
 	TEXT[3] 				= NAME_Bonus_HP;
 	COUNT[3]				= 15;
-	//TEXT[4]				= "";
-	////COUNT[4]			= ;
+
 	TEXT[5]					= NAME_Value;
 	COUNT[5]				= value;
 };
@@ -1016,15 +926,12 @@
 
 //	description				= "Ring der Macht";
 	description				= "Prsten moci";
-	//TEXT[0]				= "";
-	//TEXT[1]				= "";
-	////COUNT[1]			= ;
+
 	TEXT[2]					= NAME_Bonus_Str;
 	COUNT[2]				= 4;
 	TEXT[3] 				= NAME_Bonus_Dex;
 	COUNT[3]				= 4;
-	//TEXT[4]				= "";
-	////COUNT[4]			= ;
+
 	TEXT[5]					= NAME_Value;
 	COUNT[5]				= value;
 };

@@ -403,11 +403,7 @@ INSTANCE ItAm_Arrow(C_Item)
 	material 			=	MAT_WOOD;
 
 	description			= name;
-	//TEXT[0]			= "";					COUNT[0]	= ;
-	//TEXT[1]			= "";					COUNT[1]	= ;
-	//TEXT[2]			= NAME_Damage;			COUNT[2]	= damageTotal;
-	//TEXT[3] 			= NAME_Dex_needed;		COUNT[3]	= cond_value[0];
-	//TEXT[4]			= ""; 					COUNT[4]	= ;
+
 	TEXT[5]				= NAME_Value;			COUNT[5]	= value;
 };
 
@@ -425,11 +421,7 @@ INSTANCE ItAm_Bolt(C_Item)
 	material 			=	MAT_WOOD;
 
 	description			= name;
-	//TEXT[0]			= "";					COUNT[0]	= ;
-	//TEXT[1]			= "";					COUNT[1]	= ;
-	//TEXT[2]			= NAME_Damage;			COUNT[2]	= damageTotal;
-	//TEXT[3] 			= NAME_Dex_needed;		COUNT[3]	= cond_value[0];
-	//TEXT[4]			= ""; 					COUNT[4]	= ;
+
 	TEXT[5]				= NAME_Value;			COUNT[5]	= value;
 };
 
@@ -451,11 +443,7 @@ INSTANCE ItRwOrcstaff (C_Item)
 	visual 				=	"ItRw_2H_Orcstaff_01.3DS";
 
 	description			= name;
-	//TEXT[0]			= "";					COUNT[0]	= ;
-	//TEXT[1]			= "";					COUNT[1]	= ;
-	//TEXT[2]			= NAME_Damage;			COUNT[2]	= damageTotal;
-	//TEXT[3] 			= NAME_Dex_needed;		COUNT[3]	= cond_value[0];
-	//TEXT[4]			= ""; 					COUNT[4]	= ;
+
 	TEXT[5]				= NAME_Value;			COUNT[5]	= value;
 };
 
@@ -477,10 +465,6 @@ INSTANCE ItRwUdOrcstaff (C_Item)
 	visual 				=	"ItRw_2H_Orcstaff_01.3DS";
 
 	description			= name;
-	//TEXT[0]			= "";					COUNT[0]	= ;
-	//TEXT[1]			= "";					COUNT[1]	= ;
-	//TEXT[2]			= NAME_Damage;			COUNT[2]	= damageTotal;
-	//TEXT[3] 			= NAME_Dex_needed;		COUNT[3]	= cond_value[0];
-	//TEXT[4]			= ""; 					COUNT[4]	= ;
+
 	TEXT[5]				= NAME_Value;			COUNT[5]	= value;
 };

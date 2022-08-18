@@ -731,7 +731,7 @@ func int AMZ_900_Thora_GLADIATOR_Info ()
 //		AI_Output		(self, hero, "AMZ_900_GLADIATOR_16_04"); //Du glaubst wohl immer noch, daß nur Männer mit Waffen umgehen können!
 		AI_Output		(self, hero, "AMZ_900_GLADIATOR_16_04"); //Ty pořád ještě věřím tomu, že se zbraněmi to umí jen muži.
 //		AI_Output		(self, hero, "AMZ_900_GLADIATOR_16_05"); //Ich kann dir beweisen, daß das nicht stimmt!
-//		AI_Output		(self, hero, "AMZ_900_GLADIATOR_16_05"); //Můžu ti dokázat, že tomu tak není!
+		AI_Output		(self, hero, "AMZ_900_GLADIATOR_16_05"); //Můžu ti dokázat, že tomu tak není!
 	};
 
 };

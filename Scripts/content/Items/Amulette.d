@@ -15,10 +15,10 @@ INSTANCE ItMi_Amulet_Psi(C_Item)
 	material 		=	MAT_METAL;
 
 //	description		= "Zeichen der Bruderschaft";
-//	TEXT[0]			= "Dieses alte Amulett war ein Erkennungszeichen";
-//	TEXT[1]			= "aus den Tagen der Barriere.";
 	description		= "Znak Bratrstva";
+//	TEXT[0]			= "Dieses alte Amulett war ein Erkennungszeichen";
 	TEXT[0]			= "Tento starý amulet byl znakem Bratrstva";
+//	TEXT[1]			= "aus den Tagen der Barriere.";
 	TEXT[1]			= "z dob, kdy údolí uzavírala Bariéra.";
 
 	TEXT[5]			= NAME_Value;
@@ -44,11 +44,10 @@ INSTANCE  Schutzamulett_Feuer(C_Item)
 
 //	description		= "Amulett der Flammen";
 	description		= "Amulet plamenů";
-	//TEXT[0]			= "";
+
 	TEXT[2]			= NAME_Prot_Fire;
 	COUNT[2]		= 10;
-	//TEXT[3] 		= "";
-	////COUNT[3]		= ;
+
 	TEXT[5]			= NAME_Value;
 	COUNT[5]		= value;
 };
@@ -83,11 +82,10 @@ INSTANCE  Schutzamulett_Feuer(C_Item)
 
 //	description		= "Harnischamulett";
 	description		= "Amulet zbroje";
-	//TEXT[0]			= "";
+
 	TEXT[2]			= NAME_Prot_Edge;
 	COUNT[2]		= 15;
-	//TEXT[3] 		= "";
-	////COUNT[3]		= ;
+
 	TEXT[5]			= NAME_Value;
 	COUNT[5]		= value;
 };
@@ -124,11 +122,10 @@ INSTANCE  Schutzamulett_Feuer(C_Item)
 
 //	description		= "Amulett der Eichenhaut";
 	description		= "Amulet dubové kůže";
-	//TEXT[0]			= "";
+
 	TEXT[2]			= NAME_Prot_Point;
 	COUNT[2]		= 15;
-	//TEXT[3] 		= "";
-	////COUNT[3]		= ;
+
 	TEXT[5]			= NAME_Value;
 	COUNT[5]		= value;
 };
@@ -163,11 +160,10 @@ INSTANCE  Schutzamulett_Feuer(C_Item)
 
 //	description		= "Amulett der Geisteskraft";
 	description		= "Amulet duchovní síly";
-	//TEXT[0]			= "";
+
 	TEXT[2]			= NAME_Prot_Magic;
 	COUNT[2]		= 8;
-	//TEXT[3] 		= "";
-	////COUNT[3]		= ;
+
 	TEXT[5]			= NAME_Value;
 	COUNT[5]		= value;
 };
@@ -201,7 +197,7 @@ INSTANCE  Schutzamulett_Feuer(C_Item)
 
 //	description		= "Amulett der Läuterung";
 	description		= "Amulet očisty";
-	//TEXT[0]			= "";
+
 	TEXT[2]			= NAME_Prot_Fire;
 	COUNT[2]		= 10;
 	TEXT[3] 		= NAME_Prot_Magic;
@@ -243,7 +239,7 @@ INSTANCE  Schutzamulett_Feuer(C_Item)
 
 //	description		= "Amulett der Steinhaut";
 	description		= "Amulet kamenné kůže";
-	//TEXT[0]			= "";
+
 	TEXT[2]			= NAME_Prot_Edge;
 	COUNT[2]		= 15;
 	TEXT[3] 		= NAME_Prot_Point;
@@ -285,7 +281,7 @@ INSTANCE  Schutzamulett_Feuer(C_Item)
 
 //	description		= "Amulett der Erzhaut";
 	description		= "Amulet kůže z magické rudy";
-	//TEXT[0]			= "";
+
 	TEXT[1]			= NAME_Prot_Fire;
 	COUNT[1]		= 10;
 	TEXT[2]			= NAME_Prot_Magic;
@@ -336,15 +332,10 @@ INSTANCE  Schutzamulett_Feuer(C_Item)
 
 //	description		= "Amulett der Wendigkeit";
 	description		= "Amulet čilosti";
-	//TEXT[0]			= "";
-	//TEXT[1]			= "";
-	////COUNT[1]		= ;
+
 	TEXT[2]			= NAME_Bonus_Dex;
 	COUNT[2]		= 10;
-	//TEXT[3] 		= "";
-	////COUNT[3]		= ;
-	//TEXT[4]			= "";
-	////COUNT[4]		= ;
+
 	TEXT[5]			= NAME_Value;
 	COUNT[5]		= value;
 };
@@ -379,15 +370,10 @@ INSTANCE  Schutzamulett_Feuer(C_Item)
 
 //	description		= "Amulett der Geschicklichkeit";
 	description		= "Amulet obratnosti";
-	//TEXT[0]			= "";
-	//TEXT[1]			= "";
-	////COUNT[1]		= ;
+
 	TEXT[2]			= NAME_Bonus_Dex;
 	COUNT[2]		= 20;
-	//TEXT[3] 		= "";
-	////COUNT[3]		= ;
-	//TEXT[4]			= "";
-	////COUNT[4]		= ;
+
 	TEXT[5]			= NAME_Value;
 	COUNT[5]		= value;
 };
@@ -421,15 +407,12 @@ INSTANCE  Schutzamulett_Feuer(C_Item)
 
 //	description		= "Amulett der Kraft";
 	description		= "Amulet moci";
-	//TEXT[0]			= "";
-	//TEXT[1]			= "";
-	////COUNT[1]		= ;
+
+
 	TEXT[2]			= NAME_Bonus_Str;
 	COUNT[2]		= 10;
-	//TEXT[3] 		= "";
-	////COUNT[3]		= ;
-	//TEXT[4]			= "";
-	////COUNT[4]		= ;
+
+
 	TEXT[5]			= NAME_Value;
 	COUNT[5]		= value;
 };
@@ -463,15 +446,12 @@ INSTANCE  Schutzamulett_Feuer(C_Item)
 
 //	description		= "Amulett der Stärke";
 	description		= "Amulet síly";
-	//TEXT[0]			= "";
-	//TEXT[1]			= "";
-	////COUNT[1]		= ;
+
+
 	TEXT[2]			= NAME_Bonus_Str;
 	COUNT[2]		= 20;
-	//TEXT[3] 		= "";
-	////COUNT[3]		= ;
-	//TEXT[4]			= "";
-	////COUNT[4]		= ;
+
+
 	TEXT[5]			= NAME_Value;
 	COUNT[5]		= value;
 };
@@ -506,15 +486,12 @@ INSTANCE  Schutzamulett_Feuer(C_Item)
 
 //	description		= "Amulett der Lebenskraft";
 	description		= "Amulet života";
-	//TEXT[0]			= "";
-	//TEXT[1]			= "";
-	////COUNT[1]		= ;
+
+
 	TEXT[2]			= NAME_Bonus_HP;
 	COUNT[2]		= 30;
-	//TEXT[3] 		= "";
-	////COUNT[3]		= ;
-	//TEXT[4]			= "";
-	////COUNT[4]		= ;
+
+
 	TEXT[5]			= NAME_Value;
 	COUNT[5]		= value;
 };
@@ -559,15 +536,12 @@ INSTANCE  Schutzamulett_Feuer(C_Item)
 
 //	description		= "Amulett der Magie";
 	description		= "Amulet magie";
-	//TEXT[0]			= "";
-	//TEXT[1]			= "";
-	////COUNT[1]		= ;
+
+
 	TEXT[2]			= NAME_Bonus_Mana;
 	COUNT[2]		= 10;
-	//TEXT[3] 		= "";
-	////COUNT[3]		= ;
-	//TEXT[4]			= "";
-	////COUNT[4]		= ;
+
+
 	TEXT[5]			= NAME_Value;
 	COUNT[5]		= value;
 };
@@ -604,15 +578,13 @@ INSTANCE  Schutzamulett_Feuer(C_Item)
 
 //	description		= "Amulett der Macht";
 	description		= "Amulet moci";
-	//TEXT[0]			= "";
-	//TEXT[1]			= "";
-	////COUNT[1]		= ;
+
+
 	TEXT[2]			= NAME_Bonus_Dex;
 	COUNT[2]		= 7;
 	TEXT[3] 		= NAME_Bonus_Str;
 	COUNT[3]		= 7;
-	//TEXT[4]			= "";
-	////COUNT[4]		= ;
+
 	TEXT[5]			= NAME_Value;
 	COUNT[5]		= value;
 };
@@ -650,15 +622,13 @@ INSTANCE  Schutzamulett_Feuer(C_Item)
 
 //	description		= "Amulett der Erleuchtung";
 	description		= "Amulet osvícení";
-	//TEXT[0]			= "";
-	//TEXT[1]			= "";
-	////COUNT[1]		= ;
+
+
 	TEXT[2]			= NAME_Bonus_HP;
 	COUNT[2]		= 25;
 	TEXT[3] 		= NAME_Bonus_Mana;
 	COUNT[3]		= 25;
-	//TEXT[4]			= "";
-	////COUNT[4]		= ;
+
 	TEXT[5]			= NAME_Value;
 	COUNT[5]		= value;
 };
@@ -709,21 +679,18 @@ INSTANCE  Beschwörungsamulett(C_Item)
 	material 		=	MAT_METAL;
 	on_equip		=	Equip_Beschwörungsamulett;
 	on_unequip		=	UnEquip_Beschwörungsamulett;
+
 //	description		= "Dämonenbeschwörung";
 	description		= "Amulet vyvolání démona";
 //	TEXT[0]			= "Schwarz wie die Seele";
 	TEXT[0]			= "Černý jako duše,";
 //	TEXT[1]			= "Schwarz wie die Nacht";
 	TEXT[1]			= "černý jako noc";
-	////COUNT[1]		= ;
 //	TEXT[2]			= "Schwarz wie das Böse";
 	TEXT[2]			= "černý jako zloba,";
-	////COUNT[2]		= ;
 //	TEXT[3] 		= "Schwarz verheisst Macht";
 	TEXT[3] 		= "černá slibuje moc.";
-	////COUNT[3]		= ;
-	//TEXT[4]			= "";
-	////COUNT[4]		= ;
+
 	TEXT[5]			= NAME_Value;
 	COUNT[5]		= value;
 };

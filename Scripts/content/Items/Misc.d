@@ -455,7 +455,6 @@ INSTANCE ItLsTorchburning(C_Item)
 	material 			=	MAT_WOOD;
 
 	description			= name;
-	//	TEXT[4]				= NAME_Value;					COUNT[4]	= Value_Schlüssel;
 };
 
 /******************************************************************************************/
@@ -472,7 +471,6 @@ INSTANCE ItLsTorchburned(C_Item)
 	material 			=	MAT_WOOD;
 
 	description			= name;
-	//	TEXT[4]				= NAME_Value;					COUNT[4]	= Value_Schlüssel;
 };
 
 
@@ -525,16 +523,7 @@ INSTANCE ItMi_Alarmhorn (C_Item)
 	scemeName			=	"HORN";
 
 	description			= name;
-	//TEXT[0]			= "";
-	////COUNT[0]		= ;
-	//TEXT[1]			= "";
-	////COUNT[1]		= ;
-	//TEXT[2]			= "";
-	//COUNT[2]			= ;
-	//TEXT[3] 			= "";
-	//COUNT[3]			= ;
-	//TEXT[4]			= "";
-	////COUNT[4]		= ;
+
 	TEXT[5]				= NAME_Value;
 	COUNT[5]			= value;
 };
@@ -556,8 +545,8 @@ INSTANCE ItWr_Worldmap(C_Item)
 
 	description				= name;
 //	TEXT[0]					= "Leider fehlt darauf ein großes Gebiet";
-//	TEXT[1]					= "im Südwesten.";
 	TEXT[0]					= "Bohužel, velká oblast na jihozápadě";
+//	TEXT[1]					= "im Südwesten.";
 	TEXT[1]					= "je prázdná.";
 	TEXT[5]					= NAME_Value;
 	COUNT[5]				= value;

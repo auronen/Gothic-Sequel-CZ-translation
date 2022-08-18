@@ -136,7 +136,7 @@ func void OccupiedPerception ()
 	Npc_PercEnable  	(self,	PERC_DRAWWEAPON			, 	B_AssessFighter				);
 	Npc_PercEnable  	(self, 	PERC_ASSESSMAGIC		,	B_AssessMagic				);
 	Npc_PercEnable  	(self, 	PERC_ASSESSCASTER		,	B_AssessCaster 				);
-//	Npc_PercEnable		(self,  PERC_ASSESSSTOPMAGIC	,   ZS_AssessStopMagic			);
+	//Npc_PercEnable		(self,  PERC_ASSESSSTOPMAGIC	,   ZS_AssessStopMagic			);
 	Npc_PercEnable  	(self,	PERC_ASSESSWARN			, 	B_AssessWarn 				);
 	Npc_PercEnable  	(self, 	PERC_ASSESSMURDER		,	ZS_AssessMurder				);
 	Npc_PercEnable  	(self, 	PERC_ASSESSDEFEAT		,	ZS_AssessDefeat				);
